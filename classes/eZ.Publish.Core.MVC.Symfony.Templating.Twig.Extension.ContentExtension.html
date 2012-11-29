@@ -1,0 +1,523 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \eZ\Publish\Core\MVC\Symfony\Templating\Twig\Extension\ContentExtension</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#getFilters" title="getFilters :: Returns a list of filters to add to the existing list"><span class="description">Returns a list of filters to add to the existing list</span><pre>getFilters()</pre></a></li>
+<li class="method public "><a href="#getFunctions" title="getFunctions :: Returns a list of functions to add to the existing list."><span class="description">Returns a list of functions to add to the existing list.</span><pre>getFunctions()</pre></a></li>
+<li class="method public "><a href="#getGlobals" title="getGlobals :: "><span class="description">getGlobals()
+        </span><pre>getGlobals()</pre></a></li>
+<li class="method public "><a href="#getImageVariation" title="getImageVariation :: Returns the image variant object for $field/$versionInfo"><span class="description">Returns the image variant object for $field/$versionInfo</span><pre>getImageVariation()</pre></a></li>
+<li class="method public "><a href="#getName" title="getName :: Returns the name of the extension."><span class="description">Returns the name of the extension.</span><pre>getName()</pre></a></li>
+<li class="method public "><a href="#getNodeVisitors" title="getNodeVisitors :: "><span class="description">getNodeVisitors()
+        </span><pre>getNodeVisitors()</pre></a></li>
+<li class="method public "><a href="#getOperators" title="getOperators :: "><span class="description">getOperators()
+        </span><pre>getOperators()</pre></a></li>
+<li class="method public "><a href="#getTests" title="getTests :: "><span class="description">getTests()
+        </span><pre>getTests()</pre></a></li>
+<li class="method public "><a href="#getTokenParsers" title="getTokenParsers :: "><span class="description">getTokenParsers()
+        </span><pre>getTokenParsers()</pre></a></li>
+<li class="method public "><a href="#initRuntime" title="initRuntime :: Initializes the template runtime (aka Twig environment)."><span class="description">Initializes the template runtime (aka Twig environment).</span><pre>initRuntime()</pre></a></li>
+<li class="method public "><a href="#renderField" title="renderField :: Renders the HTML for a given field."><span class="description">Renders the HTML for a given field.</span><pre>renderField()</pre></a></li>
+<li class="method public "><a href="#xmltextToHtml5" title='xmltextToHtml5 :: Implements the "xmltext_to_html5" filter'><span class="description">Implements the "xmltext_to_html5" filter</span><pre>xmltextToHtml5()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#getBlocksByField" title="getBlocksByField :: Returns template blocks for $field."><span class="description">Returns template blocks for $field.</span><pre>getBlocksByField()</pre></a></li>
+<li class="method protected "><a href="#getEditMetadata" title="getEditMetadata :: Returns metadata needed for edition while using the editorial interface."><span class="description">Returns metadata needed for edition while using the editorial interface.</span><pre>getEditMetadata()</pre></a></li>
+<li class="method protected "><a href="#getFieldBlockName" title="getFieldBlockName :: Returns expected block name for $field, attached in $content."><span class="description">Returns expected block name for $field, attached in $content.</span><pre>getFieldBlockName()</pre></a></li>
+<li class="method protected "><a href="#getFieldTypeIdentifier" title="getFieldTypeIdentifier :: Returns the field type identifier for $field"><span class="description">Returns the field type identifier for $field</span><pre>getFieldTypeIdentifier()</pre></a></li>
+<li class="method protected "><a href="#getXmlTextConverter" title="getXmlTextConverter :: "><span class="description">getXmlTextConverter()
+        </span><pre>getXmlTextConverter()</pre></a></li>
+<li class="method protected "><a href="#isInEditMode" title="isInEditMode :: Checks if we are in edit mode or not (editorial interface)."><span class="description">Checks if we are in edit mode or not (editorial interface).</span><pre>isInEditMode()</pre></a></li>
+<li class="method protected "><a href="#searchBlock" title="searchBlock :: Returns the block named $blockName in the given template."><span class="description">Returns the block named $blockName in the given template.</span><pre>searchBlock()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24blocks" title="$blocks :: Template blocks, by field"><span class="description">Template blocks, by field</span><pre>$blocks</pre></a></li>
+<li class="property protected "><a href="#%24container" title="$container :: "><span class="description">$container</span><pre>$container</pre></a></li>
+<li class="property protected "><a href="#%24environment" title="$environment :: The Twig environment"><span class="description">The Twig environment</span><pre>$environment</pre></a></li>
+<li class="property protected "><a href="#%24fieldTypeIdentifiers" title="$fieldTypeIdentifiers :: Hash of field type identifiers (i.e."><span class="description">Hash of field type identifiers (i.e.</span><pre>$fieldTypeIdentifiers</pre></a></li>
+<li class="property protected "><a href="#%24imageVariationService" title="$imageVariationService :: "><span class="description">$imageVariationService</span><pre>$imageVariationService</pre></a></li>
+<li class="property protected "><a href="#%24resources" title="$resources :: Array of Twig template resources."><span class="description">Array of Twig template resources.</span><pre>$resources</pre></a></li>
+<li class="property protected "><a href="#%24template" title="$template :: A \Twig_Template instance used to render template blocks."><span class="description">A \Twig_Template instance used to render template blocks.</span><pre>$template</pre></a></li>
+<li class="property protected "><a href="#%24xmlTextConverter" title="$xmlTextConverter :: Converter used to transform XmlText content in HTML5"><span class="description">Converter used to transform XmlText content in HTML5</span><pre>$xmlTextConverter</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CeZ%5CPublish%5CCore%5CMVC%5CSymfony%5CTemplating%5CTwig%5CExtension%5CContentExtension" id="\eZ\Publish\Core\MVC\Symfony\Templating\Twig\Extension\ContentExtension"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.MVC.html">MVC</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.MVC.Symfony.html">Symfony</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.MVC.Symfony.Templating.html">Templating</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.MVC.Symfony.Templating.Twig.html">Twig</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.MVC.Symfony.Templating.Twig.Extension.html">Extension</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/eZ.Publish.Core.MVC.Symfony.Templating.Twig.Extension.ContentExtension.html">ContentExtension</a>
+</li>
+</ul>
+<div href="../classes/eZ.Publish.Core.MVC.Symfony.Templating.Twig.Extension.ContentExtension.html" class="element class">
+<p class="short_description">Twig content extension for eZ Publish specific usage.</p>
+<div class="details">
+<p class="long_description"><p>Exposes helpers to play with public API objects.</p></p>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct(\Symfony\Component\DependencyInjection\ContainerInterface $container, \eZ\Publish\Core\MVC\ConfigResolverInterface $resolver) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$container</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$resolver</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="getFilters" id="getFilters"></a><div class="element clickable method public getFilters" data-toggle="collapse" data-target=".getFilters .collapse">
+<h2>Returns a list of filters to add to the existing list</h2>
+<pre>getFilters() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="getFunctions" id="getFunctions"></a><div class="element clickable method public getFunctions" data-toggle="collapse" data-target=".getFunctions .collapse">
+<h2>Returns a list of functions to add to the existing list.</h2>
+<pre>getFunctions() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="getGlobals" id="getGlobals"></a><div class="element clickable method public getGlobals" data-toggle="collapse" data-target=".getGlobals .collapse">
+<h2>getGlobals()
+        </h2>
+<pre>getGlobals() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>Twig_Extension::getGlobals()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getImageVariation" id="getImageVariation"></a><div class="element clickable method public getImageVariation" data-toggle="collapse" data-target=".getImageVariation .collapse">
+<h2>Returns the image variant object for $field/$versionInfo</h2>
+<pre>getImageVariation(\eZ\Publish\API\Repository\Values\Content\Field $field, \eZ\Publish\API\Repository\Values\Content\VersionInfo $versionInfo, $variationName) : \eZ\Publish\API\Repository\Values\File\ImageVariant</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$field</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Field.html">\eZ\Publish\API\Repository\Values\Content\Field</a></code>
+</div>
+<div class="subelement argument">
+<h4>$versionInfo</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.VersionInfo.html">\eZ\Publish\API\Repository\Values\Content\VersionInfo</a></code>
+</div>
+<div class="subelement argument">
+<h4>$variationName</h4>
+<code></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\eZ\Publish\API\Repository\Values\File\ImageVariant</code></div>
+</div></div>
+</div>
+<a name="getName" id="getName"></a><div class="element clickable method public getName" data-toggle="collapse" data-target=".getName .collapse">
+<h2>Returns the name of the extension.</h2>
+<pre>getName() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The extension name</div>
+</div></div>
+</div>
+<a name="getNodeVisitors" id="getNodeVisitors"></a><div class="element clickable method public getNodeVisitors" data-toggle="collapse" data-target=".getNodeVisitors .collapse">
+<h2>getNodeVisitors()
+        </h2>
+<pre>getNodeVisitors() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>Twig_Extension::getNodeVisitors()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getOperators" id="getOperators"></a><div class="element clickable method public getOperators" data-toggle="collapse" data-target=".getOperators .collapse">
+<h2>getOperators()
+        </h2>
+<pre>getOperators() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>Twig_Extension::getOperators()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getTests" id="getTests"></a><div class="element clickable method public getTests" data-toggle="collapse" data-target=".getTests .collapse">
+<h2>getTests()
+        </h2>
+<pre>getTests() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>Twig_Extension::getTests()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getTokenParsers" id="getTokenParsers"></a><div class="element clickable method public getTokenParsers" data-toggle="collapse" data-target=".getTokenParsers .collapse">
+<h2>getTokenParsers()
+        </h2>
+<pre>getTokenParsers() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>Twig_Extension::getTokenParsers()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="initRuntime" id="initRuntime"></a><div class="element clickable method public initRuntime" data-toggle="collapse" data-target=".initRuntime .collapse">
+<h2>Initializes the template runtime (aka Twig environment).</h2>
+<pre>initRuntime(\Twig_Environment $environment) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$environment</h4>
+<code>\Twig_Environment</code>
+</div>
+</div></div>
+</div>
+<a name="renderField" id="renderField"></a><div class="element clickable method public renderField" data-toggle="collapse" data-target=".renderField .collapse">
+<h2>Renders the HTML for a given field.</h2>
+<pre>renderField(\eZ\Publish\Core\Repository\Values\Content\Content $content, string $fieldIdentifier, \array $params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.Core.Repository.Values.Content.Content.html">\eZ\Publish\Core\Repository\Values\Content\Content</a></code>
+</div>
+<div class="subelement argument">
+<h4>$fieldIdentifier</h4>
+<code>string</code><p>Identifier for the field we want to render</p></div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>An array of parameters to pass to the field view</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td>If $fieldIdentifier is invalid in $content</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The HTML markup</div>
+</div></div>
+</div>
+<a name="xmltextToHtml5" id="xmltextToHtml5"></a><div class="element clickable method public xmltextToHtml5" data-toggle="collapse" data-target=".xmltextToHtml5 .collapse">
+<h2>Implements the "xmltext_to_html5" filter</h2>
+<pre>xmltextToHtml5(string $xmlData) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$xmlData</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getBlocksByField" id="getBlocksByField"></a><div class="element clickable method protected getBlocksByField" data-toggle="collapse" data-target=".getBlocksByField .collapse">
+<h2>Returns template blocks for $field.</h2>
+<pre>getBlocksByField(\eZ\Publish\Core\Repository\Values\Content\Content $content, \eZ\Publish\API\Repository\Values\Content\Field $field, null | string $localTemplate) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>First check in the $localTemplate if
+it's provided.
+Template block convention name is <fieldTypeIdentifier>_field
+Example: 'ezstring_field' will be relevant for a full view of ezstring field type</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.Core.Repository.Values.Content.Content.html">\eZ\Publish\Core\Repository\Values\Content\Content</a></code>
+</div>
+<div class="subelement argument">
+<h4>$field</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Field.html">\eZ\Publish\API\Repository\Values\Content\Field</a></code>
+</div>
+<div class="subelement argument">
+<h4>$localTemplate</h4>
+<code>nullstring</code><p>a file where to look for the block first</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.logicexception.php">\LogicException</a></code></th>
+<td>If no template block can be found for $field</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="getEditMetadata" id="getEditMetadata"></a><div class="element clickable method protected getEditMetadata" data-toggle="collapse" data-target=".getEditMetadata .collapse">
+<h2>Returns metadata needed for edition while using the editorial interface.</h2>
+<pre>getEditMetadata(\eZ\Publish\Core\Repository\Values\Content\Content $content, \eZ\Publish\API\Repository\Values\Content\Field $field) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>These will basically be rendered as HTML data attributes, prefixed by "data-ez".
+Example: data-ez-field-id="12345"</p></p>
+<table class="table table-bordered"><tr>
+<th>todo</th>
+<td>It would make sense to also ask for additional metadata supported by the field type</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.Core.Repository.Values.Content.Content.html">\eZ\Publish\Core\Repository\Values\Content\Content</a></code>
+</div>
+<div class="subelement argument">
+<h4>$field</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Field.html">\eZ\Publish\API\Repository\Values\Content\Field</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="getFieldBlockName" id="getFieldBlockName"></a><div class="element clickable method protected getFieldBlockName" data-toggle="collapse" data-target=".getFieldBlockName .collapse">
+<h2>Returns expected block name for $field, attached in $content.</h2>
+<pre>getFieldBlockName(\eZ\Publish\Core\Repository\Values\Content\Content $content, \eZ\Publish\API\Repository\Values\Content\Field $field) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.Core.Repository.Values.Content.Content.html">\eZ\Publish\Core\Repository\Values\Content\Content</a></code>
+</div>
+<div class="subelement argument">
+<h4>$field</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Field.html">\eZ\Publish\API\Repository\Values\Content\Field</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getFieldTypeIdentifier" id="getFieldTypeIdentifier"></a><div class="element clickable method protected getFieldTypeIdentifier" data-toggle="collapse" data-target=".getFieldTypeIdentifier .collapse">
+<h2>Returns the field type identifier for $field</h2>
+<pre>getFieldTypeIdentifier(\eZ\Publish\Core\Repository\Values\Content\Content $content, \eZ\Publish\API\Repository\Values\Content\Field $field) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.Core.Repository.Values.Content.Content.html">\eZ\Publish\Core\Repository\Values\Content\Content</a></code>
+</div>
+<div class="subelement argument">
+<h4>$field</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Field.html">\eZ\Publish\API\Repository\Values\Content\Field</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getXmlTextConverter" id="getXmlTextConverter"></a><div class="element clickable method protected getXmlTextConverter" data-toggle="collapse" data-target=".getXmlTextConverter .collapse">
+<h2>getXmlTextConverter()
+        </h2>
+<pre>getXmlTextConverter() : \eZ\Publish\Core\MVC\Symfony\Templating\Twig\Extension\eZ\Publish\Core\FieldType\XmlText\Converter\Html5</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>\eZ\Publish\Core\MVC\Symfony\Templating\Twig\Extension\eZ\Publish\Core\FieldType\XmlText\Converter\Html5</code></div>
+</div></div>
+</div>
+<a name="isInEditMode" id="isInEditMode"></a><div class="element clickable method protected isInEditMode" data-toggle="collapse" data-target=".isInEditMode .collapse">
+<h2>Checks if we are in edit mode or not (editorial interface).</h2>
+<pre>isInEditMode() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>todo</th>
+<td>Needs to check in the session and via the API if current user has access to edit mode</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="searchBlock" id="searchBlock"></a><div class="element clickable method protected searchBlock" data-toggle="collapse" data-target=".searchBlock .collapse">
+<h2>Returns the block named $blockName in the given template.</h2>
+<pre>searchBlock(string $blockName, \Twig_Template $tpl) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>If it's not
+found, returns null.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$blockName</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$tpl</h4>
+<code>\Twig_Template</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24blocks" id="$blocks"> </a><div class="element clickable property protected $blocks" data-toggle="collapse" data-target=".$blocks .collapse">
+<h2>Template blocks, by field</h2>
+<pre>$blocks : <a href="http://php.net/manual/en/class.splobjectstorage.php">\SplObjectStorage</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24container" id="$container"> </a><div class="element clickable property protected $container" data-toggle="collapse" data-target=".$container .collapse">
+<h2>$container</h2>
+<pre>$container : \Symfony\Component\DependencyInjection\ContainerInterface</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24environment" id="$environment"> </a><div class="element clickable property protected $environment" data-toggle="collapse" data-target=".$environment .collapse">
+<h2>The Twig environment</h2>
+<pre>$environment : \Twig_Environment</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24fieldTypeIdentifiers" id="$fieldTypeIdentifiers"> </a><div class="element clickable property protected $fieldTypeIdentifiers" data-toggle="collapse" data-target=".$fieldTypeIdentifiers .collapse">
+<h2>Hash of field type identifiers (i.e.</h2>
+<pre>$fieldTypeIdentifiers : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"><p>"ezstring"), indexed by field definition identifier</p></p></div></div>
+</div>
+<a name="%24imageVariationService" id="$imageVariationService"> </a><div class="element clickable property protected $imageVariationService" data-toggle="collapse" data-target=".$imageVariationService .collapse">
+<h2>$imageVariationService</h2>
+<pre>$imageVariationService : <a href="../classes/eZ.Publish.SPI.Variation.VariationHandler.html">\eZ\Publish\SPI\Variation\VariationHandler</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24resources" id="$resources"> </a><div class="element clickable property protected $resources" data-toggle="collapse" data-target=".$resources .collapse">
+<h2>Array of Twig template resources.</h2>
+<pre>$resources : array | \Twig_Template[]</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"><p>Either the path to each template and its priority in a hash or its
+\Twig_Template (compiled) counterpart</p></p></div></div>
+</div>
+<a name="%24template" id="$template"> </a><div class="element clickable property protected $template" data-toggle="collapse" data-target=".$template .collapse">
+<h2>A \Twig_Template instance used to render template blocks.</h2>
+<pre>$template : \Twig_Template</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24xmlTextConverter" id="$xmlTextConverter"> </a><div class="element clickable property protected $xmlTextConverter" data-toggle="collapse" data-target=".$xmlTextConverter .collapse">
+<h2>Converter used to transform XmlText content in HTML5</h2>
+<pre>$xmlTextConverter : \eZ\Publish\Core\MVC\Symfony\Templating\Twig\Extension\eZ\Publish\Core\FieldType\XmlText\Converter\Html5</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:53:12+01:00.<br></footer></div>
+</div>
+</body>
+</html>

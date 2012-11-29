@@ -1,0 +1,241 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » eZ\Publish\API\Repository\Values\Content\Query</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/eZ.Publish.API.Repository.Values.Content.Query.html" title="Query"><i class="icon-folder-open"></i>Query</a><ul class="nav nav-list nav-packages"><li>
+<span class="empty-package"><i class="icon-folder-close"></i>FacetBuilder</span><ul class="nav nav-list nav-packages"></ul>
+</li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-interface"></i> Interfaces</li>
+<li><a href="#CriterionInterface" title="Base interface for Criterion implementations">CriterionInterface</a></li>
+<li class="nav-header">
+<i class="icon-custom icon-class"></i> Classes</li>
+<li><a href="#Criterion" title="">Criterion</a></li>
+<li><a href="#SortClause" title="This class is the base for SortClause classes, used to set sorting of content queries">SortClause</a></li>
+<li><a href="#Specifications" title="This class is used by Criteria to describe which operators they support">Specifications</a></li>
+<li><a href="#Operator" title="Operators struct">Operator</a></li>
+<li><a href="#Target" title="Struct that stores extra target informations for a SortClause object">Target</a></li>
+<li><a href="#FieldTarget" title="Struct that stores extra target informations for a SortClause object">FieldTarget</a></li>
+<li><a href="#FieldFacetBuilder" title="Build a field term facet.">FieldFacetBuilder</a></li>
+<li><a href="#FieldRangeFacetBuilder" title="Build a field range facet.">FieldRangeFacetBuilder</a></li>
+<li><a href="#UserFacetBuilder" title="Build a user facet">UserFacetBuilder</a></li>
+<li><a href="#DateRangeFacetBuilder" title="Build a date range facet">DateRangeFacetBuilder</a></li>
+<li><a href="#TermFacetBuilder" title="Build a term facet.">TermFacetBuilder</a></li>
+<li><a href="#ContentTypeFacetBuilder" title="Building a content type facet.">ContentTypeFacetBuilder</a></li>
+<li><a href="#LocationFacetBuilder" title="Build a Subtree facet">LocationFacetBuilder</a></li>
+<li><a href="#CritierionFacetBuilder" title="Build a cirterion facet.">CritierionFacetBuilder</a></li>
+<li><a href="#SectionFacetBuilder" title="Build a section facet.">SectionFacetBuilder</a></li>
+<li><a href="#FacetBuilder" title="This class is the base class for facet builders">FacetBuilder</a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../packages/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../packages/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../packages/eZ.Publish.API.html">API</a></li>
+<span class="divider">\</span><li><a href="../packages/eZ.Publish.API.Repository.html">Repository</a></li>
+<span class="divider">\</span><li><a href="../packages/eZ.Publish.API.Repository.Values.html">Values</a></li>
+<span class="divider">\</span><li><a href="../packages/eZ.Publish.API.Repository.Values.Content.html">Content</a></li>
+<span class="divider">\</span><li class="active"><a href="../packages/eZ.Publish.API.Repository.Values.Content.Query.html">Query</a></li>
+</ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="CriterionInterface" id="CriterionInterface"></a><div class="element ajax clickable interface" href="../classes/eZ.Publish.API.Repository.Values.Content.Query.CriterionInterface.html">
+<h1>CriterionInterface<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.CriterionInterface.html">¶</a>
+</h1>
+<p class="short_description">Base interface for Criterion implementations</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.CriterionInterface.html" class="more">« More »</a>
+</div>
+<a name="Criterion" id="Criterion"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.API.Repository.Values.Content.Query.Criterion.html">
+<h1>Criterion<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.Criterion.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.Criterion.html" class="more">« More »</a>
+</div>
+<a name="Operator" id="Operator"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.API.Repository.Values.Content.Query.Criterion.Operator.html">
+<h1>Operator<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.Criterion.Operator.html">¶</a>
+</h1>
+<p class="short_description">Operators struct</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.Criterion.Operator.html" class="more">« More »</a>
+</div>
+<a name="Specifications" id="Specifications"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.API.Repository.Values.Content.Query.Criterion.Operator.Specifications.html">
+<h1>Specifications<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.Criterion.Operator.Specifications.html">¶</a>
+</h1>
+<p class="short_description">This class is used by Criteria to describe which operators they support</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.Criterion.Operator.Specifications.html" class="more">« More »</a>
+</div>
+<a name="FacetBuilder" id="FacetBuilder"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.html">
+<h1>FacetBuilder<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.html">¶</a>
+</h1>
+<p class="short_description">This class is the base class for facet builders</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.html" class="more">« More »</a>
+</div>
+<a name="ContentTypeFacetBuilder" id="ContentTypeFacetBuilder"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.ContentTypeFacetBuilder.html">
+<h1>ContentTypeFacetBuilder<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.ContentTypeFacetBuilder.html">¶</a>
+</h1>
+<p class="short_description">Building a content type facet.</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.ContentTypeFacetBuilder.html" class="more">« More »</a>
+</div>
+<a name="CritierionFacetBuilder" id="CritierionFacetBuilder"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.CritierionFacetBuilder.html">
+<h1>CritierionFacetBuilder<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.CritierionFacetBuilder.html">¶</a>
+</h1>
+<p class="short_description">Build a cirterion facet.</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.CritierionFacetBuilder.html" class="more">« More »</a>
+</div>
+<a name="DateRangeFacetBuilder" id="DateRangeFacetBuilder"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.DateRangeFacetBuilder.html">
+<h1>DateRangeFacetBuilder<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.DateRangeFacetBuilder.html">¶</a>
+</h1>
+<p class="short_description">Build a date range facet</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.DateRangeFacetBuilder.html" class="more">« More »</a>
+</div>
+<a name="FieldFacetBuilder" id="FieldFacetBuilder"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.FieldFacetBuilder.html">
+<h1>FieldFacetBuilder<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.FieldFacetBuilder.html">¶</a>
+</h1>
+<p class="short_description">Build a field term facet.</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.FieldFacetBuilder.html" class="more">« More »</a>
+</div>
+<a name="FieldRangeFacetBuilder" id="FieldRangeFacetBuilder"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.FieldRangeFacetBuilder.html">
+<h1>FieldRangeFacetBuilder<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.FieldRangeFacetBuilder.html">¶</a>
+</h1>
+<p class="short_description">Build a field range facet.</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.FieldRangeFacetBuilder.html" class="more">« More »</a>
+</div>
+<a name="LocationFacetBuilder" id="LocationFacetBuilder"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.LocationFacetBuilder.html">
+<h1>LocationFacetBuilder<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.LocationFacetBuilder.html">¶</a>
+</h1>
+<p class="short_description">Build a Subtree facet</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.LocationFacetBuilder.html" class="more">« More »</a>
+</div>
+<a name="SectionFacetBuilder" id="SectionFacetBuilder"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.SectionFacetBuilder.html">
+<h1>SectionFacetBuilder<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.SectionFacetBuilder.html">¶</a>
+</h1>
+<p class="short_description">Build a section facet.</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.SectionFacetBuilder.html" class="more">« More »</a>
+</div>
+<a name="TermFacetBuilder" id="TermFacetBuilder"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.TermFacetBuilder.html">
+<h1>TermFacetBuilder<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.TermFacetBuilder.html">¶</a>
+</h1>
+<p class="short_description">Build a term facet.</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.TermFacetBuilder.html" class="more">« More »</a>
+</div>
+<a name="UserFacetBuilder" id="UserFacetBuilder"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.UserFacetBuilder.html">
+<h1>UserFacetBuilder<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.UserFacetBuilder.html">¶</a>
+</h1>
+<p class="short_description">Build a user facet</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.UserFacetBuilder.html" class="more">« More »</a>
+</div>
+<a name="SortClause" id="SortClause"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.API.Repository.Values.Content.Query.SortClause.html">
+<h1>SortClause<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.SortClause.html">¶</a>
+</h1>
+<p class="short_description">This class is the base for SortClause classes, used to set sorting of content queries</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.SortClause.html" class="more">« More »</a>
+</div>
+<a name="Target" id="Target"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.API.Repository.Values.Content.Query.SortClause.Target.html">
+<h1>Target<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.SortClause.Target.html">¶</a>
+</h1>
+<p class="short_description">Struct that stores extra target informations for a SortClause object</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.SortClause.Target.html" class="more">« More »</a>
+</div>
+<a name="FieldTarget" id="FieldTarget"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.API.Repository.Values.Content.Query.SortClause.Target.FieldTarget.html">
+<h1>FieldTarget<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.SortClause.Target.FieldTarget.html">¶</a>
+</h1>
+<p class="short_description">Struct that stores extra target informations for a SortClause object</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.SortClause.Target.FieldTarget.html" class="more">« More »</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:51:27+01:00.<br></footer></div>
+</div>
+</body>
+</html>

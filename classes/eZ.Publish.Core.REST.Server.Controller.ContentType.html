@@ -1,0 +1,601 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \eZ\Publish\Core\REST\Server\Controller\ContentType</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Construct controller"><span class="description">Construct controller</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#addFieldDefinition" title="addFieldDefinition :: Creates a new field definition for the given content type"><span class="description">Creates a new field definition for the given content type</span><pre>addFieldDefinition()</pre></a></li>
+<li class="method public "><a href="#copyContentType" title="copyContentType :: Copies a content type."><span class="description">Copies a content type.</span><pre>copyContentType()</pre></a></li>
+<li class="method public "><a href="#createContentType" title="createContentType :: Creates a new content type draft in the given content type group"><span class="description">Creates a new content type draft in the given content type group</span><pre>createContentType()</pre></a></li>
+<li class="method public "><a href="#createContentTypeDraft" title="createContentTypeDraft :: Creates a draft and updates it with the given data"><span class="description">Creates a draft and updates it with the given data</span><pre>createContentTypeDraft()</pre></a></li>
+<li class="method public "><a href="#createContentTypeGroup" title="createContentTypeGroup :: Creates a new content type group"><span class="description">Creates a new content type group</span><pre>createContentTypeGroup()</pre></a></li>
+<li class="method public "><a href="#deleteContentType" title="deleteContentType :: The given content type is deleted"><span class="description">The given content type is deleted</span><pre>deleteContentType()</pre></a></li>
+<li class="method public "><a href="#deleteContentTypeDraft" title="deleteContentTypeDraft :: The given content type draft is deleted"><span class="description">The given content type draft is deleted</span><pre>deleteContentTypeDraft()</pre></a></li>
+<li class="method public "><a href="#deleteContentTypeGroup" title="deleteContentTypeGroup :: The given content type group is deleted"><span class="description">The given content type group is deleted</span><pre>deleteContentTypeGroup()</pre></a></li>
+<li class="method public "><a href="#linkContentTypeToGroup" title="linkContentTypeToGroup :: Links a content type group to the content type and returns the updated group list"><span class="description">Links a content type group to the content type and returns the updated group list</span><pre>linkContentTypeToGroup()</pre></a></li>
+<li class="method public "><a href="#listContentTypes" title="listContentTypes :: Returns a list of content types"><span class="description">Returns a list of content types</span><pre>listContentTypes()</pre></a></li>
+<li class="method public "><a href="#listContentTypesForGroup" title="listContentTypesForGroup :: Returns a list of content types of the group"><span class="description">Returns a list of content types of the group</span><pre>listContentTypesForGroup()</pre></a></li>
+<li class="method public "><a href="#loadContentType" title="loadContentType :: Loads a content type"><span class="description">Loads a content type</span><pre>loadContentType()</pre></a></li>
+<li class="method public "><a href="#loadContentTypeByIdentifier" title="loadContentTypeByIdentifier :: Loads a content type by its identifier"><span class="description">Loads a content type by its identifier</span><pre>loadContentTypeByIdentifier()</pre></a></li>
+<li class="method public "><a href="#loadContentTypeByRemoteId" title="loadContentTypeByRemoteId :: Loads a content type by its remote ID"><span class="description">Loads a content type by its remote ID</span><pre>loadContentTypeByRemoteId()</pre></a></li>
+<li class="method public "><a href="#loadContentTypeDraft" title="loadContentTypeDraft :: Loads a content type draft"><span class="description">Loads a content type draft</span><pre>loadContentTypeDraft()</pre></a></li>
+<li class="method public "><a href="#loadContentTypeGroup" title="loadContentTypeGroup :: Returns the content type group given by id"><span class="description">Returns the content type group given by id</span><pre>loadContentTypeGroup()</pre></a></li>
+<li class="method public "><a href="#loadContentTypeGroupList" title="loadContentTypeGroupList :: Returns a list of all content type groups"><span class="description">Returns a list of all content type groups</span><pre>loadContentTypeGroupList()</pre></a></li>
+<li class="method public "><a href="#loadDraftFieldDefinition" title="loadDraftFieldDefinition :: Returns the draft field definition given by id"><span class="description">Returns the draft field definition given by id</span><pre>loadDraftFieldDefinition()</pre></a></li>
+<li class="method public "><a href="#loadDraftFieldDefinitionList" title="loadDraftFieldDefinitionList :: Loads field definitions for a given content type draft"><span class="description">Loads field definitions for a given content type draft</span><pre>loadDraftFieldDefinitionList()</pre></a></li>
+<li class="method public "><a href="#loadFieldDefinition" title="loadFieldDefinition :: Returns the field definition given by id"><span class="description">Returns the field definition given by id</span><pre>loadFieldDefinition()</pre></a></li>
+<li class="method public "><a href="#loadFieldDefinitionList" title="loadFieldDefinitionList :: Loads field definitions for a given content type"><span class="description">Loads field definitions for a given content type</span><pre>loadFieldDefinitionList()</pre></a></li>
+<li class="method public "><a href="#loadGroupsOfContentType" title="loadGroupsOfContentType :: Returns the content type groups the content type belongs to"><span class="description">Returns the content type groups the content type belongs to</span><pre>loadGroupsOfContentType()</pre></a></li>
+<li class="method public "><a href="#publishContentTypeDraft" title="publishContentTypeDraft :: Publishes a content type draft"><span class="description">Publishes a content type draft</span><pre>publishContentTypeDraft()</pre></a></li>
+<li class="method public "><a href="#removeFieldDefinition" title="removeFieldDefinition :: The given field definition is deleted"><span class="description">The given field definition is deleted</span><pre>removeFieldDefinition()</pre></a></li>
+<li class="method public inherited"><a href="#setContainer" title="setContainer :: "><span class="description">setContainer()
+        </span><pre>setContainer()</pre></a></li>
+<li class="method public inherited"><a href="#setInputDispatcher" title="setInputDispatcher :: "><span class="description">setInputDispatcher()
+        </span><pre>setInputDispatcher()</pre></a></li>
+<li class="method public inherited"><a href="#setRequest" title="setRequest :: "><span class="description">setRequest()
+        </span><pre>setRequest()</pre></a></li>
+<li class="method public inherited"><a href="#setUrlHandler" title="setUrlHandler :: "><span class="description">setUrlHandler()
+        </span><pre>setUrlHandler()</pre></a></li>
+<li class="method public "><a href="#unlinkContentTypeFromGroup" title="unlinkContentTypeFromGroup :: Removes the given group from the content type and returns the updated group list"><span class="description">Removes the given group from the content type and returns the updated group list</span><pre>unlinkContentTypeFromGroup()</pre></a></li>
+<li class="method public "><a href="#updateContentTypeDraft" title="updateContentTypeDraft :: Updates meta data of a draft."><span class="description">Updates meta data of a draft.</span><pre>updateContentTypeDraft()</pre></a></li>
+<li class="method public "><a href="#updateContentTypeGroup" title="updateContentTypeGroup :: Updates a content type group"><span class="description">Updates a content type group</span><pre>updateContentTypeGroup()</pre></a></li>
+<li class="method public "><a href="#updateFieldDefinition" title="updateFieldDefinition :: Updates the attributes of a field definition"><span class="description">Updates the attributes of a field definition</span><pre>updateFieldDefinition()</pre></a></li>
+<li class="nav-header private">» Private</li>
+<li class="method private "><a href="#getMediaType" title="getMediaType :: Extracts the requested media type from $request"><span class="description">Extracts the requested media type from $request</span><pre>getMediaType()</pre></a></li>
+<li class="method private "><a href="#mapToGroupUpdateStruct" title="mapToGroupUpdateStruct :: Converts the provided ContentTypeGroupCreateStruct to ContentTypeGroupUpdateStruct"><span class="description">Converts the provided ContentTypeGroupCreateStruct to ContentTypeGroupUpdateStruct</span><pre>mapToGroupUpdateStruct()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected inherited"><a href="#%24container" title="$container :: "><span class="description">$container</span><pre>$container</pre></a></li>
+<li class="property protected "><a href="#%24contentTypeService" title="$contentTypeService :: Content type service"><span class="description">Content type service</span><pre>$contentTypeService</pre></a></li>
+<li class="property protected inherited"><a href="#%24inputDispatcher" title="$inputDispatcher :: "><span class="description">$inputDispatcher</span><pre>$inputDispatcher</pre></a></li>
+<li class="property protected inherited"><a href="#%24request" title="$request :: "><span class="description">$request</span><pre>$request</pre></a></li>
+<li class="property protected inherited"><a href="#%24urlHandler" title="$urlHandler :: "><span class="description">$urlHandler</span><pre>$urlHandler</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CeZ%5CPublish%5CCore%5CREST%5CServer%5CController%5CContentType" id="\eZ\Publish\Core\REST\Server\Controller\ContentType"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.REST.html">REST</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.REST.Server.html">Server</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.REST.Server.Controller.html">Controller</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/eZ.Publish.Core.REST.Server.Controller.ContentType.html">ContentType</a>
+</li>
+</ul>
+<div href="../classes/eZ.Publish.Core.REST.Server.Controller.ContentType.html" class="element class">
+<p class="short_description">ContentType controller</p>
+<div class="details">
+<p class="long_description"></p>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Construct controller</h2>
+<pre>__construct(\eZ\Publish\API\Repository\ContentTypeService $contentTypeService) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeService</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.ContentTypeService.html">\eZ\Publish\API\Repository\ContentTypeService</a></code>
+</div>
+</div></div>
+</div>
+<a name="addFieldDefinition" id="addFieldDefinition"></a><div class="element clickable method public addFieldDefinition" data-toggle="collapse" data-target=".addFieldDefinition .collapse">
+<h2>Creates a new field definition for the given content type</h2>
+<pre>addFieldDefinition() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.CreatedFieldDefinition.html">\eZ\Publish\Core\REST\Server\Values\CreatedFieldDefinition</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.CreatedFieldDefinition.html">\eZ\Publish\Core\REST\Server\Values\CreatedFieldDefinition</a></code></div>
+</div></div>
+</div>
+<a name="copyContentType" id="copyContentType"></a><div class="element clickable method public copyContentType" data-toggle="collapse" data-target=".copyContentType .collapse">
+<h2>Copies a content type.</h2>
+<pre>copyContentType() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.ResourceCreated.html">\eZ\Publish\Core\REST\Server\Values\ResourceCreated</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>The identifier of the copy
+is changed to copy_of_<identifier> and a new remoteId is generated.</p></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.ResourceCreated.html">\eZ\Publish\Core\REST\Server\Values\ResourceCreated</a></code></div>
+</div></div>
+</div>
+<a name="createContentType" id="createContentType"></a><div class="element clickable method public createContentType" data-toggle="collapse" data-target=".createContentType .collapse">
+<h2>Creates a new content type draft in the given content type group</h2>
+<pre>createContentType() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.CreatedContentType.html">\eZ\Publish\Core\REST\Server\Values\CreatedContentType</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.CreatedContentType.html">\eZ\Publish\Core\REST\Server\Values\CreatedContentType</a></code></div>
+</div></div>
+</div>
+<a name="createContentTypeDraft" id="createContentTypeDraft"></a><div class="element clickable method public createContentTypeDraft" data-toggle="collapse" data-target=".createContentTypeDraft .collapse">
+<h2>Creates a draft and updates it with the given data</h2>
+<pre>createContentTypeDraft() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.CreatedContentType.html">\eZ\Publish\Core\REST\Server\Values\CreatedContentType</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.CreatedContentType.html">\eZ\Publish\Core\REST\Server\Values\CreatedContentType</a></code></div>
+</div></div>
+</div>
+<a name="createContentTypeGroup" id="createContentTypeGroup"></a><div class="element clickable method public createContentTypeGroup" data-toggle="collapse" data-target=".createContentTypeGroup .collapse">
+<h2>Creates a new content type group</h2>
+<pre>createContentTypeGroup() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.CreatedContentTypeGroup.html">\eZ\Publish\Core\REST\Server\Values\CreatedContentTypeGroup</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.CreatedContentTypeGroup.html">\eZ\Publish\Core\REST\Server\Values\CreatedContentTypeGroup</a></code></div>
+</div></div>
+</div>
+<a name="deleteContentType" id="deleteContentType"></a><div class="element clickable method public deleteContentType" data-toggle="collapse" data-target=".deleteContentType .collapse">
+<h2>The given content type is deleted</h2>
+<pre>deleteContentType() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.NoContent.html">\eZ\Publish\Core\REST\Server\Values\NoContent</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.NoContent.html">\eZ\Publish\Core\REST\Server\Values\NoContent</a></code></div>
+</div></div>
+</div>
+<a name="deleteContentTypeDraft" id="deleteContentTypeDraft"></a><div class="element clickable method public deleteContentTypeDraft" data-toggle="collapse" data-target=".deleteContentTypeDraft .collapse">
+<h2>The given content type draft is deleted</h2>
+<pre>deleteContentTypeDraft() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.NoContent.html">\eZ\Publish\Core\REST\Server\Values\NoContent</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.NoContent.html">\eZ\Publish\Core\REST\Server\Values\NoContent</a></code></div>
+</div></div>
+</div>
+<a name="deleteContentTypeGroup" id="deleteContentTypeGroup"></a><div class="element clickable method public deleteContentTypeGroup" data-toggle="collapse" data-target=".deleteContentTypeGroup .collapse">
+<h2>The given content type group is deleted</h2>
+<pre>deleteContentTypeGroup() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.NoContent.html">\eZ\Publish\Core\REST\Server\Values\NoContent</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.NoContent.html">\eZ\Publish\Core\REST\Server\Values\NoContent</a></code></div>
+</div></div>
+</div>
+<a name="linkContentTypeToGroup" id="linkContentTypeToGroup"></a><div class="element clickable method public linkContentTypeToGroup" data-toggle="collapse" data-target=".linkContentTypeToGroup .collapse">
+<h2>Links a content type group to the content type and returns the updated group list</h2>
+<pre>linkContentTypeToGroup() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.ContentTypeGroupRefList.html">\eZ\Publish\Core\REST\Server\Values\ContentTypeGroupRefList</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.ContentTypeGroupRefList.html">\eZ\Publish\Core\REST\Server\Values\ContentTypeGroupRefList</a></code></div>
+</div></div>
+</div>
+<a name="listContentTypes" id="listContentTypes"></a><div class="element clickable method public listContentTypes" data-toggle="collapse" data-target=".listContentTypes .collapse">
+<h2>Returns a list of content types</h2>
+<pre>listContentTypes() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.ContentTypeList.html">\eZ\Publish\Core\REST\Server\Values\ContentTypeList</a> | <a href="../classes/eZ.Publish.Core.REST.Server.Values.ContentTypeInfoList.html">\eZ\Publish\Core\REST\Server\Values\ContentTypeInfoList</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/eZ.Publish.Core.REST.Server.Values.ContentTypeList.html">\eZ\Publish\Core\REST\Server\Values\ContentTypeList</a></code><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.ContentTypeInfoList.html">\eZ\Publish\Core\REST\Server\Values\ContentTypeInfoList</a></code>
+</div>
+</div></div>
+</div>
+<a name="listContentTypesForGroup" id="listContentTypesForGroup"></a><div class="element clickable method public listContentTypesForGroup" data-toggle="collapse" data-target=".listContentTypesForGroup .collapse">
+<h2>Returns a list of content types of the group</h2>
+<pre>listContentTypesForGroup() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.ContentTypeList.html">\eZ\Publish\Core\REST\Server\Values\ContentTypeList</a> | <a href="../classes/eZ.Publish.Core.REST.Server.Values.ContentTypeInfoList.html">\eZ\Publish\Core\REST\Server\Values\ContentTypeInfoList</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/eZ.Publish.Core.REST.Server.Values.ContentTypeList.html">\eZ\Publish\Core\REST\Server\Values\ContentTypeList</a></code><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.ContentTypeInfoList.html">\eZ\Publish\Core\REST\Server\Values\ContentTypeInfoList</a></code>
+</div>
+</div></div>
+</div>
+<a name="loadContentType" id="loadContentType"></a><div class="element clickable method public loadContentType" data-toggle="collapse" data-target=".loadContentType .collapse">
+<h2>Loads a content type</h2>
+<pre>loadContentType() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.RestContentType.html">\eZ\Publish\Core\REST\Server\Values\RestContentType</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.RestContentType.html">\eZ\Publish\Core\REST\Server\Values\RestContentType</a></code></div>
+</div></div>
+</div>
+<a name="loadContentTypeByIdentifier" id="loadContentTypeByIdentifier"></a><div class="element clickable method public loadContentTypeByIdentifier" data-toggle="collapse" data-target=".loadContentTypeByIdentifier .collapse">
+<h2>Loads a content type by its identifier</h2>
+<pre>loadContentTypeByIdentifier() : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></code></div>
+</div></div>
+</div>
+<a name="loadContentTypeByRemoteId" id="loadContentTypeByRemoteId"></a><div class="element clickable method public loadContentTypeByRemoteId" data-toggle="collapse" data-target=".loadContentTypeByRemoteId .collapse">
+<h2>Loads a content type by its remote ID</h2>
+<pre>loadContentTypeByRemoteId() : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></code></div>
+</div></div>
+</div>
+<a name="loadContentTypeDraft" id="loadContentTypeDraft"></a><div class="element clickable method public loadContentTypeDraft" data-toggle="collapse" data-target=".loadContentTypeDraft .collapse">
+<h2>Loads a content type draft</h2>
+<pre>loadContentTypeDraft() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.RestContentType.html">\eZ\Publish\Core\REST\Server\Values\RestContentType</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.RestContentType.html">\eZ\Publish\Core\REST\Server\Values\RestContentType</a></code></div>
+</div></div>
+</div>
+<a name="loadContentTypeGroup" id="loadContentTypeGroup"></a><div class="element clickable method public loadContentTypeGroup" data-toggle="collapse" data-target=".loadContentTypeGroup .collapse">
+<h2>Returns the content type group given by id</h2>
+<pre>loadContentTypeGroup() : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroup.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroup.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup</a></code></div>
+</div></div>
+</div>
+<a name="loadContentTypeGroupList" id="loadContentTypeGroupList"></a><div class="element clickable method public loadContentTypeGroupList" data-toggle="collapse" data-target=".loadContentTypeGroupList .collapse">
+<h2>Returns a list of all content type groups</h2>
+<pre>loadContentTypeGroupList() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.ContentTypeGroupList.html">\eZ\Publish\Core\REST\Server\Values\ContentTypeGroupList</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.ContentTypeGroupList.html">\eZ\Publish\Core\REST\Server\Values\ContentTypeGroupList</a></code></div>
+</div></div>
+</div>
+<a name="loadDraftFieldDefinition" id="loadDraftFieldDefinition"></a><div class="element clickable method public loadDraftFieldDefinition" data-toggle="collapse" data-target=".loadDraftFieldDefinition .collapse">
+<h2>Returns the draft field definition given by id</h2>
+<pre>loadDraftFieldDefinition() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.RestFieldDefinition.html">\eZ\Publish\Core\REST\Server\Values\RestFieldDefinition</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.RestFieldDefinition.html">\eZ\Publish\Core\REST\Server\Values\RestFieldDefinition</a></code></div>
+</div></div>
+</div>
+<a name="loadDraftFieldDefinitionList" id="loadDraftFieldDefinitionList"></a><div class="element clickable method public loadDraftFieldDefinitionList" data-toggle="collapse" data-target=".loadDraftFieldDefinitionList .collapse">
+<h2>Loads field definitions for a given content type draft</h2>
+<pre>loadDraftFieldDefinitionList() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.FieldDefinitionList.html">\eZ\Publish\Core\REST\Server\Values\FieldDefinitionList</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.FieldDefinitionList.html">\eZ\Publish\Core\REST\Server\Values\FieldDefinitionList</a></code></div>
+</div></div>
+</div>
+<a name="loadFieldDefinition" id="loadFieldDefinition"></a><div class="element clickable method public loadFieldDefinition" data-toggle="collapse" data-target=".loadFieldDefinition .collapse">
+<h2>Returns the field definition given by id</h2>
+<pre>loadFieldDefinition() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.RestFieldDefinition.html">\eZ\Publish\Core\REST\Server\Values\RestFieldDefinition</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.RestFieldDefinition.html">\eZ\Publish\Core\REST\Server\Values\RestFieldDefinition</a></code></div>
+</div></div>
+</div>
+<a name="loadFieldDefinitionList" id="loadFieldDefinitionList"></a><div class="element clickable method public loadFieldDefinitionList" data-toggle="collapse" data-target=".loadFieldDefinitionList .collapse">
+<h2>Loads field definitions for a given content type</h2>
+<pre>loadFieldDefinitionList() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.FieldDefinitionList.html">\eZ\Publish\Core\REST\Server\Values\FieldDefinitionList</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.FieldDefinitionList.html">\eZ\Publish\Core\REST\Server\Values\FieldDefinitionList</a></code></div>
+</div></div>
+</div>
+<a name="loadGroupsOfContentType" id="loadGroupsOfContentType"></a><div class="element clickable method public loadGroupsOfContentType" data-toggle="collapse" data-target=".loadGroupsOfContentType .collapse">
+<h2>Returns the content type groups the content type belongs to</h2>
+<pre>loadGroupsOfContentType() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.ContentTypeGroupRefList.html">\eZ\Publish\Core\REST\Server\Values\ContentTypeGroupRefList</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.ContentTypeGroupRefList.html">\eZ\Publish\Core\REST\Server\Values\ContentTypeGroupRefList</a></code></div>
+</div></div>
+</div>
+<a name="publishContentTypeDraft" id="publishContentTypeDraft"></a><div class="element clickable method public publishContentTypeDraft" data-toggle="collapse" data-target=".publishContentTypeDraft .collapse">
+<h2>Publishes a content type draft</h2>
+<pre>publishContentTypeDraft() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.RestContentType.html">\eZ\Publish\Core\REST\Server\Values\RestContentType</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.RestContentType.html">\eZ\Publish\Core\REST\Server\Values\RestContentType</a></code></div>
+</div></div>
+</div>
+<a name="removeFieldDefinition" id="removeFieldDefinition"></a><div class="element clickable method public removeFieldDefinition" data-toggle="collapse" data-target=".removeFieldDefinition .collapse">
+<h2>The given field definition is deleted</h2>
+<pre>removeFieldDefinition() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.NoContent.html">\eZ\Publish\Core\REST\Server\Values\NoContent</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.NoContent.html">\eZ\Publish\Core\REST\Server\Values\NoContent</a></code></div>
+</div></div>
+</div>
+<a name="setContainer" id="setContainer"></a><div class="element clickable method public setContainer" data-toggle="collapse" data-target=".setContainer .collapse">
+<h2>setContainer()
+        </h2>
+<pre>setContainer(\Symfony\Component\DependencyInjection\ContainerInterface $container) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\REST\Server\Controller::setContainer()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$container</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="setInputDispatcher" id="setInputDispatcher"></a><div class="element clickable method public setInputDispatcher" data-toggle="collapse" data-target=".setInputDispatcher .collapse">
+<h2>setInputDispatcher()
+        </h2>
+<pre>setInputDispatcher(\eZ\Publish\Core\REST\Common\Input\Dispatcher $inputDispatcher) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\REST\Server\Controller::setInputDispatcher()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$inputDispatcher</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="setRequest" id="setRequest"></a><div class="element clickable method public setRequest" data-toggle="collapse" data-target=".setRequest .collapse">
+<h2>setRequest()
+        </h2>
+<pre>setRequest(\eZ\Publish\Core\REST\Server\Request $request) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\REST\Server\Controller::setRequest()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$request</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="setUrlHandler" id="setUrlHandler"></a><div class="element clickable method public setUrlHandler" data-toggle="collapse" data-target=".setUrlHandler .collapse">
+<h2>setUrlHandler()
+        </h2>
+<pre>setUrlHandler(\eZ\Publish\Core\REST\Common\UrlHandler\eZPublish $urlHandler) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\REST\Server\Controller::setUrlHandler()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$urlHandler</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="unlinkContentTypeFromGroup" id="unlinkContentTypeFromGroup"></a><div class="element clickable method public unlinkContentTypeFromGroup" data-toggle="collapse" data-target=".unlinkContentTypeFromGroup .collapse">
+<h2>Removes the given group from the content type and returns the updated group list</h2>
+<pre>unlinkContentTypeFromGroup() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.ContentTypeGroupRefList.html">\eZ\Publish\Core\REST\Server\Values\ContentTypeGroupRefList</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.ContentTypeGroupRefList.html">\eZ\Publish\Core\REST\Server\Values\ContentTypeGroupRefList</a></code></div>
+</div></div>
+</div>
+<a name="updateContentTypeDraft" id="updateContentTypeDraft"></a><div class="element clickable method public updateContentTypeDraft" data-toggle="collapse" data-target=".updateContentTypeDraft .collapse">
+<h2>Updates meta data of a draft.</h2>
+<pre>updateContentTypeDraft() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.RestContentType.html">\eZ\Publish\Core\REST\Server\Values\RestContentType</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This method does not handle field definitions</p></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.RestContentType.html">\eZ\Publish\Core\REST\Server\Values\RestContentType</a></code></div>
+</div></div>
+</div>
+<a name="updateContentTypeGroup" id="updateContentTypeGroup"></a><div class="element clickable method public updateContentTypeGroup" data-toggle="collapse" data-target=".updateContentTypeGroup .collapse">
+<h2>Updates a content type group</h2>
+<pre>updateContentTypeGroup() : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroup.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroup.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup</a></code></div>
+</div></div>
+</div>
+<a name="updateFieldDefinition" id="updateFieldDefinition"></a><div class="element clickable method public updateFieldDefinition" data-toggle="collapse" data-target=".updateFieldDefinition .collapse">
+<h2>Updates the attributes of a field definition</h2>
+<pre>updateFieldDefinition() : <a href="../classes/eZ.Publish.Core.REST.Server.Values.FieldDefinitionList.html">\eZ\Publish\Core\REST\Server\Values\FieldDefinitionList</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Server.Values.FieldDefinitionList.html">\eZ\Publish\Core\REST\Server\Values\FieldDefinitionList</a></code></div>
+</div></div>
+</div>
+<a name="getMediaType" id="getMediaType"></a><div class="element clickable method private getMediaType" data-toggle="collapse" data-target=".getMediaType .collapse">
+<h2>Extracts the requested media type from $request</h2>
+<pre>getMediaType() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="mapToGroupUpdateStruct" id="mapToGroupUpdateStruct"></a><div class="element clickable method private mapToGroupUpdateStruct" data-toggle="collapse" data-target=".mapToGroupUpdateStruct .collapse">
+<h2>Converts the provided ContentTypeGroupCreateStruct to ContentTypeGroupUpdateStruct</h2>
+<pre>mapToGroupUpdateStruct(\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupCreateStruct $createStruct) : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroupUpdateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupUpdateStruct</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$createStruct</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroupCreateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupCreateStruct</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroupUpdateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupUpdateStruct</a></code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24container" id="$container"> </a><div class="element clickable property protected $container" data-toggle="collapse" data-target=".$container .collapse">
+<h2>$container</h2>
+<pre>$container : \Symfony\Component\DependencyInjection\ContainerInterface</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\REST\Server\Controller::$$container</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24contentTypeService" id="$contentTypeService"> </a><div class="element clickable property protected $contentTypeService" data-toggle="collapse" data-target=".$contentTypeService .collapse">
+<h2>Content type service</h2>
+<pre>$contentTypeService : <a href="../classes/eZ.Publish.API.Repository.ContentTypeService.html">\eZ\Publish\API\Repository\ContentTypeService</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24inputDispatcher" id="$inputDispatcher"> </a><div class="element clickable property protected $inputDispatcher" data-toggle="collapse" data-target=".$inputDispatcher .collapse">
+<h2>$inputDispatcher</h2>
+<pre>$inputDispatcher : <a href="../classes/eZ.Publish.Core.REST.Common.Input.Dispatcher.html">\eZ\Publish\Core\REST\Common\Input\Dispatcher</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\REST\Server\Controller::$$inputDispatcher</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24request" id="$request"> </a><div class="element clickable property protected $request" data-toggle="collapse" data-target=".$request .collapse">
+<h2>$request</h2>
+<pre>$request : <a href="../classes/eZ.Publish.Core.REST.Server.Request.html">\eZ\Publish\Core\REST\Server\Request</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\REST\Server\Controller::$$request</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24urlHandler" id="$urlHandler"> </a><div class="element clickable property protected $urlHandler" data-toggle="collapse" data-target=".$urlHandler .collapse">
+<h2>$urlHandler</h2>
+<pre>$urlHandler : <a href="../classes/eZ.Publish.Core.REST.Common.UrlHandler.eZPublish.html">\eZ\Publish\Core\REST\Common\UrlHandler\eZPublish</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\REST\Server\Controller::$$urlHandler</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:52:40+01:00.<br></footer></div>
+</div>
+</body>
+</html>

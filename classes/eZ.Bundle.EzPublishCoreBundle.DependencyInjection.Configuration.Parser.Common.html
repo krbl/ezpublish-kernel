@@ -1,0 +1,337 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\Parser\Common</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#addSemanticConfig" title="addSemanticConfig :: Adds semantic configuration definition."><span class="description">Adds semantic configuration definition.</span><pre>addSemanticConfig()</pre></a></li>
+<li class="method public "><a href="#registerInternalConfig" title="registerInternalConfig :: Translates parsed semantic config values from $config to internal key/value pairs."><span class="description">Translates parsed semantic config values from $config to internal key/value pairs.</span><pre>registerInternalConfig()</pre></a></li>
+<li class="method public inherited"><a href="#setBaseKey" title="setBaseKey :: Sets the base key of this parser."><span class="description">Sets the base key of this parser.</span><pre>setBaseKey()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected inherited"><a href="#getContainerParameter" title="getContainerParameter :: Returns the value under the $id in the $container."><span class="description">Returns the value under the $id in the $container.</span><pre>getContainerParameter()</pre></a></li>
+<li class="method protected inherited"><a href="#groupsArraySetting" title="groupsArraySetting :: Merges setting array for a set of groups."><span class="description">Merges setting array for a set of groups.</span><pre>groupsArraySetting()</pre></a></li>
+<li class="method protected inherited"><a href="#registerGlobalConfigArray" title='registerGlobalConfigArray :: Make sure settings array defined in "global" siteaccess are registered
+in the internal global scope.'><span class="description">Make sure settings array defined in "global" siteaccess are registered
+in the internal global scope.</span><pre>registerGlobalConfigArray()</pre></a></li>
+<li class="method protected inherited"><a href="#registerInternalConfigArray" title="registerInternalConfigArray :: Registers the internal configuration."><span class="description">Registers the internal configuration.</span><pre>registerInternalConfigArray()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected inherited"><a href="#%24baseKey" title="$baseKey :: The base key where to look for the configuration."><span class="description">The base key where to look for the configuration.</span><pre>$baseKey</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  inherited"><a href="#MERGE_FROM_SECOND_LEVEL" title="MERGE_FROM_SECOND_LEVEL :: With this option, AbstractParser::registerInternalConfigArray() will
+merge the hashes from the second level."><span class="description">With this option, AbstractParser::registerInternalConfigArray() will
+merge the hashes from the second level.</span><pre>MERGE_FROM_SECOND_LEVEL</pre></a></li>
+<li class="constant  inherited"><a href="#UNIQUE" title="UNIQUE :: With this option, AbstractParser::registerInternalConfigArray() will
+call array_unique() at the end of the merge process."><span class="description">With this option, AbstractParser::registerInternalConfigArray() will
+call array_unique() at the end of the merge process.</span><pre>UNIQUE</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CeZ%5CBundle%5CEzPublishCoreBundle%5CDependencyInjection%5CConfiguration%5CParser%5CCommon" id="\eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\Parser\Common"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Bundle.html">Bundle</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Bundle.EzPublishCoreBundle.html">EzPublishCoreBundle</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Bundle.EzPublishCoreBundle.DependencyInjection.html">DependencyInjection</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Bundle.EzPublishCoreBundle.DependencyInjection.Configuration.html">Configuration</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Bundle.EzPublishCoreBundle.DependencyInjection.Configuration.Parser.html">Parser</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/eZ.Bundle.EzPublishCoreBundle.DependencyInjection.Configuration.Parser.Common.html">Common</a>
+</li>
+</ul>
+<div href="../classes/eZ.Bundle.EzPublishCoreBundle.DependencyInjection.Configuration.Parser.Common.html" class="element class">
+<p class="short_description">Configuration parser handling all basic configuration (aka "common")</p>
+<div class="details">
+<p class="long_description"><p>This abstract class mainly
+provides the registerInternalConfigArray() method to properly merge and
+register array settings defined at in several scopes:</p>
+
+<pre><code>    $this->registerInternalConfigArray( 'key', $config, $container );
+</code></pre>
+
+<p>This method will look for the 'key' array in the configuration provided in
+$config and will merge the arrays from default, group, siteaccess and global
+scopes in the correct order to compute the value for each siteaccess.</p></p>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="addSemanticConfig" id="addSemanticConfig"></a><div class="element clickable method public addSemanticConfig" data-toggle="collapse" data-target=".addSemanticConfig .collapse">
+<h2>Adds semantic configuration definition.</h2>
+<pre>addSemanticConfig(\Symfony\Component\Config\Definition\Builder\NodeBuilder $nodeBuilder) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$nodeBuilder</h4>
+<code>\Symfony\Component\Config\Definition\Builder\NodeBuilder</code><p>Node just under ezpublish.system.<siteaccess></p>
+</div>
+</div></div>
+</div>
+<a name="registerInternalConfig" id="registerInternalConfig"></a><div class="element clickable method public registerInternalConfig" data-toggle="collapse" data-target=".registerInternalConfig .collapse">
+<h2>Translates parsed semantic config values from $config to internal key/value pairs.</h2>
+<pre>registerInternalConfig(\array $config, \Symfony\Component\DependencyInjection\ContainerBuilder $container) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$config</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$container</h4>
+<code>\Symfony\Component\DependencyInjection\ContainerBuilder</code>
+</div>
+</div></div>
+</div>
+<a name="setBaseKey" id="setBaseKey"></a><div class="element clickable method public setBaseKey" data-toggle="collapse" data-target=".setBaseKey .collapse">
+<h2>Sets the base key of this parser.</h2>
+<pre>setBaseKey(string $key) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\AbstractParser::setBaseKey()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a name="getContainerParameter" id="getContainerParameter"></a><div class="element clickable method protected getContainerParameter" data-toggle="collapse" data-target=".getContainerParameter .collapse">
+<h2>Returns the value under the $id in the $container.</h2>
+<pre>getContainerParameter(\Symfony\Component\DependencyInjection\ContainerBuilder $container, string $id, mixed $default) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>if the container does
+not known this $id, returns $default</p></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\AbstractParser::getContainerParameter()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$container</h4>
+<code>\Symfony\Component\DependencyInjection\ContainerBuilder</code>
+</div>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="groupsArraySetting" id="groupsArraySetting"></a><div class="element clickable method protected groupsArraySetting" data-toggle="collapse" data-target=".groupsArraySetting .collapse">
+<h2>Merges setting array for a set of groups.</h2>
+<pre>groupsArraySetting(\array $groups, string $id, \array $config, int $options) : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\AbstractParser::groupsArraySetting()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$groups</h4>
+<code>array</code><p>array of group name</p></div>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code><p>id of the setting array under ezpublish.<base_key>.<group_name></p>
+</div>
+<div class="subelement argument">
+<h4>$config</h4>
+<code>array</code><p>the full configuration array</p></div>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>int</code><p>only self::MERGE_FROM_SECOND_LEVEL or self::UNIQUE are recognized</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="registerGlobalConfigArray" id="registerGlobalConfigArray"></a><div class="element clickable method protected registerGlobalConfigArray" data-toggle="collapse" data-target=".registerGlobalConfigArray .collapse">
+<h2>Make sure settings array defined in "global" siteaccess are registered
+in the internal global scope.</h2>
+<pre>registerGlobalConfigArray(string $id, \array $config, \Symfony\Component\DependencyInjection\ContainerBuilder $container) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\AbstractParser::registerGlobalConfigArray()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$config</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$container</h4>
+<code>\Symfony\Component\DependencyInjection\ContainerBuilder</code>
+</div>
+</div></div>
+</div>
+<a name="registerInternalConfigArray" id="registerInternalConfigArray"></a><div class="element clickable method protected registerInternalConfigArray" data-toggle="collapse" data-target=".registerInternalConfigArray .collapse">
+<h2>Registers the internal configuration.</h2>
+<pre>registerInternalConfigArray(string $id, \array $config, \Symfony\Component\DependencyInjection\ContainerBuilder $container, int $options) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>For array settings, we merge the
+arrays defined in scopes default, in the siteaccess groups, in the
+siteaccess itself and in the global scope. To calculate the precedence
+of siteaccess group, they are alphabetically sorted.</p></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\AbstractParser::registerInternalConfigArray()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code><p>id of the setting array to register</p></div>
+<div class="subelement argument">
+<h4>$config</h4>
+<code>array</code><p>the full configuration as an array</p></div>
+<div class="subelement argument">
+<h4>$container</h4>
+<code>\Symfony\Component\DependencyInjection\ContainerBuilder</code>
+</div>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>int</code><p>bit mask of options (@see constants of this class)</p>
+</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24baseKey" id="$baseKey"> </a><div class="element clickable property protected $baseKey" data-toggle="collapse" data-target=".$baseKey .collapse">
+<h2>The base key where to look for the configuration.</h2>
+<pre>$baseKey : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>'system' by default.</p></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\AbstractParser::$$baseKey</td>
+</tr></table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a name="MERGE_FROM_SECOND_LEVEL" id="MERGE_FROM_SECOND_LEVEL"> </a><div class="element clickable constant  MERGE_FROM_SECOND_LEVEL" data-toggle="collapse" data-target=".MERGE_FROM_SECOND_LEVEL .collapse">
+<h2>With this option, AbstractParser::registerInternalConfigArray() will
+merge the hashes from the second level.</h2>
+<pre>MERGE_FROM_SECOND_LEVEL </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>For instance:
+array( 'full' => array( 1, 2, 3 ) ) and array( 'full' => array( 4, 5 ) )
+will result in array( 'full' => array( 1, 2, 3, 4, 5 ) )</p></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\AbstractParser::MERGE_FROM_SECOND_LEVEL</td>
+</tr></table>
+</div></div>
+</div>
+<a name="UNIQUE" id="UNIQUE"> </a><div class="element clickable constant  UNIQUE" data-toggle="collapse" data-target=".UNIQUE .collapse">
+<h2>With this option, AbstractParser::registerInternalConfigArray() will
+call array_unique() at the end of the merge process.</h2>
+<pre>UNIQUE </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This will only work
+with normal arrays (ie not hashes) containing scalar values.</p></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\AbstractParser::UNIQUE</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:53:55+01:00.<br></footer></div>
+</div>
+</body>
+</html>

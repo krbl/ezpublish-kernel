@@ -1,0 +1,562 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \eZ\Publish\Core\MVC\Symfony\Routing\SimplifiedRequest</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public inherited"><a href="#__construct" title="__construct :: Construct object optionally with a set of properties"><span class="description">Construct object optionally with a set of properties</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#__get" title="__get :: Magic get function handling read to non public properties"><span class="description">Magic get function handling read to non public properties</span><pre>__get()</pre></a></li>
+<li class="method public inherited"><a href="#__isset" title="__isset :: Magic isset function handling isset() to non public properties"><span class="description">Magic isset function handling isset() to non public properties</span><pre>__isset()</pre></a></li>
+<li class="method public inherited"><a href="#__set" title="__set :: Magic set function handling writes to non public properties"><span class="description">Magic set function handling writes to non public properties</span><pre>__set()</pre></a></li>
+<li class="method public inherited"><a href="#__set_state" title="__set_state :: Returns a new instance of this class with the data specified by $array."><span class="description">Returns a new instance of this class with the data specified by $array.</span><pre>__set_state()</pre></a></li>
+<li class="method public inherited"><a href="#__unset" title="__unset :: Magic unset function handling unset() to non public properties"><span class="description">Magic unset function handling unset() to non public properties</span><pre>__unset()</pre></a></li>
+<li class="method public inherited"><a href="#attribute" title="attribute :: Internal function for Legacy template engine compatibility to get property value"><span class="description">Internal function for Legacy template engine compatibility to get property value</span><pre>attribute()</pre></a></li>
+<li class="method public inherited"><a href="#attributes" title="attributes :: Internal function for Legacy template engine compatibility to get properties"><span class="description">Internal function for Legacy template engine compatibility to get properties</span><pre>attributes()</pre></a></li>
+<li class="method public inherited"><a href="#hasAttribute" title="hasAttribute :: Internal function for Legacy template engine compatibility to check existence of property"><span class="description">Internal function for Legacy template engine compatibility to check existence of property</span><pre>hasAttribute()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected inherited"><a href="#getProperties" title="getProperties :: Function where list of properties are returned"><span class="description">Function where list of properties are returned</span><pre>getProperties()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="property public "><a href="#%24headers" title="$headers :: Hash of request headers"><span class="description">Hash of request headers</span><pre>$headers</pre></a></li>
+<li class="property public "><a href="#%24host" title="$host :: The host name"><span class="description">The host name</span><pre>$host</pre></a></li>
+<li class="property public "><a href="#%24languages" title="$languages :: List of languages acceptable by the client browser"><span class="description">List of languages acceptable by the client browser</span><pre>$languages</pre></a></li>
+<li class="property public "><a href="#%24pathinfo" title="$pathinfo :: The path being requested relative to the executed script"><span class="description">The path being requested relative to the executed script</span><pre>$pathinfo</pre></a></li>
+<li class="property public "><a href="#%24port" title="$port :: The port the request is made on"><span class="description">The port the request is made on</span><pre>$port</pre></a></li>
+<li class="property public "><a href="#%24queryParams" title="$queryParams :: Array of parameters extracted from the query string"><span class="description">Array of parameters extracted from the query string</span><pre>$queryParams</pre></a></li>
+<li class="property public "><a href="#%24scheme" title="$scheme :: The request scheme - http or https"><span class="description">The request scheme - http or https</span><pre>$scheme</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24headers" title="$headers :: Hash of request headers."><span class="description">Hash of request headers.</span><pre>$headers</pre></a></li>
+<li class="property protected "><a href="#%24host" title="$host :: The host name."><span class="description">The host name.</span><pre>$host</pre></a></li>
+<li class="property protected "><a href="#%24languages" title="$languages :: List of languages acceptable by the client browser."><span class="description">List of languages acceptable by the client browser.</span><pre>$languages</pre></a></li>
+<li class="property protected "><a href="#%24pathinfo" title="$pathinfo :: The path being requested relative to the executed script."><span class="description">The path being requested relative to the executed script.</span><pre>$pathinfo</pre></a></li>
+<li class="property protected "><a href="#%24port" title="$port :: The port the request is made on."><span class="description">The port the request is made on.</span><pre>$port</pre></a></li>
+<li class="property protected "><a href="#%24queryParams" title="$queryParams :: Array of parameters extracted from the query string."><span class="description">Array of parameters extracted from the query string.</span><pre>$queryParams</pre></a></li>
+<li class="property protected "><a href="#%24scheme" title="$scheme :: The request scheme (http or https)."><span class="description">The request scheme (http or https).</span><pre>$scheme</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CeZ%5CPublish%5CCore%5CMVC%5CSymfony%5CRouting%5CSimplifiedRequest" id="\eZ\Publish\Core\MVC\Symfony\Routing\SimplifiedRequest"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.MVC.html">MVC</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.MVC.Symfony.html">Symfony</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.MVC.Symfony.Routing.html">Routing</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/eZ.Publish.Core.MVC.Symfony.Routing.SimplifiedRequest.html">SimplifiedRequest</a>
+</li>
+</ul>
+<div href="../classes/eZ.Publish.Core.MVC.Symfony.Routing.SimplifiedRequest.html" class="element class">
+<p class="short_description">The base class for all value objects and structs</p>
+<div class="details">
+<p class="long_description"><p>Supports readonly properties by marking them as protected.
+In this case they will only be writable using constructor, and need to be documented
+using @property-read <type> <$var> in class doc in addition to inline property doc.
+Writable properties must be public and must be documented inline.</p></p>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">eZ\Publish\API\Repository\Values</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Construct object optionally with a set of properties</h2>
+<pre>__construct(\array $properties) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Readonly properties values must be set using $properties as they are not writable anymore
+after object has been created.</p></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::__construct()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$properties</h4>
+<code>array</code>
+</div>
+</div></div>
+</div>
+<a name="__get" id="__get"></a><div class="element clickable method public __get" data-toggle="collapse" data-target=".__get .collapse">
+<h2>Magic get function handling read to non public properties</h2>
+<pre>__get(string $property) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Returns value for all readonly (protected) properties.</p></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::__get()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code><p>Name of the property</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.PropertyNotFoundException.html">\eZ\Publish\API\Repository\Exceptions\PropertyNotFoundException</a></code></th>
+<td>exception on all reads to undefined properties so typos are not silently accepted.</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="__isset" id="__isset"></a><div class="element clickable method public __isset" data-toggle="collapse" data-target=".__isset .collapse">
+<h2>Magic isset function handling isset() to non public properties</h2>
+<pre>__isset(string $property) : boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Returns true for all (public/)protected/private properties.</p></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::__isset()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code><p>Name of the property</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="__set" id="__set"></a><div class="element clickable method public __set" data-toggle="collapse" data-target=".__set .collapse">
+<h2>Magic set function handling writes to non public properties</h2>
+<pre>__set(string $property, string $value) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::__set()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code><p>Name of the property</p></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.PropertyNotFoundException.html">\eZ\Publish\API\Repository\Exceptions\PropertyNotFoundException</a></code></th>
+<td>When property does not exist</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.PropertyReadOnlyException.html">\eZ\Publish\API\Repository\Exceptions\PropertyReadOnlyException</a></code></th>
+<td>When property is readonly (protected)</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="__set_state" id="__set_state"></a><div class="element clickable method public __set_state" data-toggle="collapse" data-target=".__set_state .collapse">
+<h2>Returns a new instance of this class with the data specified by $array.</h2>
+<pre>__set_state(\array $array) : <a href="../classes/eZ.Publish.API.Repository.Values.ValueObject.html">\eZ\Publish\API\Repository\Values\ValueObject</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>$array contains all the data members of this class in the form:
+array('member_name'=>value).</p>
+
+<p>__set_state makes this class exportable with var_export.
+var_export() generates code, that calls this method when it
+is parsed with PHP.</p></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::__set_state()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$array</h4>
+<code>mixed[]</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ValueObject.html">\eZ\Publish\API\Repository\Values\ValueObject</a></code></div>
+</div></div>
+</div>
+<a name="__unset" id="__unset"></a><div class="element clickable method public __unset" data-toggle="collapse" data-target=".__unset .collapse">
+<h2>Magic unset function handling unset() to non public properties</h2>
+<pre>__unset(string $property) : boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>uses</th>
+<td>\eZ\Publish\API\Repository\Values\__set()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::__unset()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code><p>Name of the property</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.PropertyNotFoundException.html">\eZ\Publish\API\Repository\Exceptions\PropertyNotFoundException</a></code></th>
+<td>exception on all writes to undefined properties so typos are not silently accepted and</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.PropertyReadOnlyException.html">\eZ\Publish\API\Repository\Exceptions\PropertyReadOnlyException</a></code></th>
+<td>exception on readonly (protected) properties.</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="attribute" id="attribute"></a><div class="element clickable method public attribute" data-toggle="collapse" data-target=".attribute .collapse">
+<h2>Internal function for Legacy template engine compatibility to get property value</h2>
+<pre>attribute($property) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\eZ\Publish\API\Repository\Values\__get()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::attribute()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="attributes" id="attributes"></a><div class="element clickable method public attributes" data-toggle="collapse" data-target=".attributes .collapse">
+<h2>Internal function for Legacy template engine compatibility to get properties</h2>
+<pre>attributes() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\eZ\Publish\API\Repository\Values\__isset()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::attributes()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="hasAttribute" id="hasAttribute"></a><div class="element clickable method public hasAttribute" data-toggle="collapse" data-target=".hasAttribute .collapse">
+<h2>Internal function for Legacy template engine compatibility to check existence of property</h2>
+<pre>hasAttribute($property) : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\eZ\Publish\API\Repository\Values\__isset()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::hasAttribute()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="getProperties" id="getProperties"></a><div class="element clickable method protected getProperties" data-toggle="collapse" data-target=".getProperties .collapse">
+<h2>Function where list of properties are returned</h2>
+<pre>getProperties(array $dynamicProperties) : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Used by {@see attributes()}, override to add dynamic properties</p></p>
+<table class="table table-bordered">
+<tr>
+<th>uses</th>
+<td>\eZ\Publish\API\Repository\Values\__isset()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::getProperties()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dynamicProperties</h4>
+<code>array</code><p>Additional dynamic properties exposed on the object</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24headers" id="$headers"> </a><div class="element clickable property public $headers" data-toggle="collapse" data-target=".$headers .collapse">
+<h2>Hash of request headers</h2>
+<pre>$headers : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>magic</th>
+<td></td>
+</tr>
+<tr>
+<th>property-read</th>
+<td>Hash of request headers</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24host" id="$host"> </a><div class="element clickable property public $host" data-toggle="collapse" data-target=".$host .collapse">
+<h2>The host name</h2>
+<pre>$host : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>magic</th>
+<td></td>
+</tr>
+<tr>
+<th>property-read</th>
+<td>The host name</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24languages" id="$languages"> </a><div class="element clickable property public $languages" data-toggle="collapse" data-target=".$languages .collapse">
+<h2>List of languages acceptable by the client browser</h2>
+<pre>$languages : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>magic</th>
+<td></td>
+</tr>
+<tr>
+<th>property-read</th>
+<td>List of languages acceptable by the client browser</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24pathinfo" id="$pathinfo"> </a><div class="element clickable property public $pathinfo" data-toggle="collapse" data-target=".$pathinfo .collapse">
+<h2>The path being requested relative to the executed script</h2>
+<pre>$pathinfo : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>magic</th>
+<td></td>
+</tr>
+<tr>
+<th>property-read</th>
+<td>The path being requested relative to the executed script</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24port" id="$port"> </a><div class="element clickable property public $port" data-toggle="collapse" data-target=".$port .collapse">
+<h2>The port the request is made on</h2>
+<pre>$port : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>magic</th>
+<td></td>
+</tr>
+<tr>
+<th>property-read</th>
+<td>The port the request is made on</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24queryParams" id="$queryParams"> </a><div class="element clickable property public $queryParams" data-toggle="collapse" data-target=".$queryParams .collapse">
+<h2>Array of parameters extracted from the query string</h2>
+<pre>$queryParams : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>magic</th>
+<td></td>
+</tr>
+<tr>
+<th>property-read</th>
+<td>Array of parameters extracted from the query string</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24scheme" id="$scheme"> </a><div class="element clickable property public $scheme" data-toggle="collapse" data-target=".$scheme .collapse">
+<h2>The request scheme - http or https</h2>
+<pre>$scheme : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>magic</th>
+<td></td>
+</tr>
+<tr>
+<th>property-read</th>
+<td>The request scheme - http or https</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24headers" id="$headers"> </a><div class="element clickable property protected $headers" data-toggle="collapse" data-target=".$headers .collapse">
+<h2>Hash of request headers.</h2>
+<pre>$headers : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24host" id="$host"> </a><div class="element clickable property protected $host" data-toggle="collapse" data-target=".$host .collapse">
+<h2>The host name.</h2>
+<pre>$host : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24languages" id="$languages"> </a><div class="element clickable property protected $languages" data-toggle="collapse" data-target=".$languages .collapse">
+<h2>List of languages acceptable by the client browser.</h2>
+<pre>$languages : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"><p>The languages are ordered in the user browser preferences.</p></p></div></div>
+</div>
+<a name="%24pathinfo" id="$pathinfo"> </a><div class="element clickable property protected $pathinfo" data-toggle="collapse" data-target=".$pathinfo .collapse">
+<h2>The path being requested relative to the executed script.</h2>
+<pre>$pathinfo : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"><p>The path info always starts with a /.</p></p></div></div>
+</div>
+<a name="%24port" id="$port"> </a><div class="element clickable property protected $port" data-toggle="collapse" data-target=".$port .collapse">
+<h2>The port the request is made on.</h2>
+<pre>$port : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24queryParams" id="$queryParams"> </a><div class="element clickable property protected $queryParams" data-toggle="collapse" data-target=".$queryParams .collapse">
+<h2>Array of parameters extracted from the query string.</h2>
+<pre>$queryParams : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24scheme" id="$scheme"> </a><div class="element clickable property protected $scheme" data-toggle="collapse" data-target=".$scheme .collapse">
+<h2>The request scheme (http or https).</h2>
+<pre>$scheme : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:53:11+01:00.<br></footer></div>
+</div>
+</body>
+</html>

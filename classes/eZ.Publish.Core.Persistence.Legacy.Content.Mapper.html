@@ -1,0 +1,416 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \eZ\Publish\Core\Persistence\Legacy\Content\Mapper</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Creates a new mapper."><span class="description">Creates a new mapper.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#convertToStorageValue" title="convertToStorageValue :: Converts value of $field to storage value"><span class="description">Converts value of $field to storage value</span><pre>convertToStorageValue()</pre></a></li>
+<li class="method public "><a href="#createCreateStructFromContent" title="createCreateStructFromContent :: Creates CreateStruct from $content"><span class="description">Creates CreateStruct from $content</span><pre>createCreateStructFromContent()</pre></a></li>
+<li class="method public "><a href="#createRelationFromCreateStruct" title="createRelationFromCreateStruct :: Creates a Content from the given $struct"><span class="description">Creates a Content from the given $struct</span><pre>createRelationFromCreateStruct()</pre></a></li>
+<li class="method public "><a href="#createVersionInfoForContent" title="createVersionInfoForContent :: Creates a new version for the given $content"><span class="description">Creates a new version for the given $content</span><pre>createVersionInfoForContent()</pre></a></li>
+<li class="method public "><a href="#createVersionInfoFromCreateStruct" title="createVersionInfoFromCreateStruct :: Creates a new version for the given $struct and $versionNo"><span class="description">Creates a new version for the given $struct and $versionNo</span><pre>createVersionInfoFromCreateStruct()</pre></a></li>
+<li class="method public "><a href="#extractContentFromRows" title="extractContentFromRows :: Extracts Content objects (and nested) from database result $rows"><span class="description">Extracts Content objects (and nested) from database result $rows</span><pre>extractContentFromRows()</pre></a></li>
+<li class="method public "><a href="#extractContentInfoFromRow" title="extractContentInfoFromRow :: Extracts a ContentInfo object from $row"><span class="description">Extracts a ContentInfo object from $row</span><pre>extractContentInfoFromRow()</pre></a></li>
+<li class="method public "><a href="#extractLanguageIdsFromMask" title="extractLanguageIdsFromMask :: "><span class="description">extractLanguageIdsFromMask()
+        </span><pre>extractLanguageIdsFromMask()</pre></a></li>
+<li class="method public "><a href="#extractRelationsFromRows" title="extractRelationsFromRows :: Extracts relation objects from $rows"><span class="description">Extracts relation objects from $rows</span><pre>extractRelationsFromRows()</pre></a></li>
+<li class="method public "><a href="#extractVersionInfoListFromRows" title="extractVersionInfoListFromRows :: Extracts a VersionInfo object from $row"><span class="description">Extracts a VersionInfo object from $row</span><pre>extractVersionInfoListFromRows()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#extractFieldFromRow" title="extractFieldFromRow :: Extracts a Field from $row"><span class="description">Extracts a Field from $row</span><pre>extractFieldFromRow()</pre></a></li>
+<li class="method protected "><a href="#extractFieldValueFromRow" title="extractFieldValueFromRow :: Extracts a FieldValue of $type from $row"><span class="description">Extracts a FieldValue of $type from $row</span><pre>extractFieldValueFromRow()</pre></a></li>
+<li class="method protected "><a href="#extractRelationFromRow" title="extractRelationFromRow :: Extracts a Relation object from a $row"><span class="description">Extracts a Relation object from a $row</span><pre>extractRelationFromRow()</pre></a></li>
+<li class="nav-header private">» Private</li>
+<li class="method private "><a href="#createContentInfoFromCreateStruct" title="createContentInfoFromCreateStruct :: Creates a Content from the given $struct and $currentVersionNo"><span class="description">Creates a Content from the given $struct and $currentVersionNo</span><pre>createContentInfoFromCreateStruct()</pre></a></li>
+<li class="method private "><a href="#extractVersionInfoFromRow" title="extractVersionInfoFromRow :: Extracts a VersionInfo object from $row."><span class="description">Extracts a VersionInfo object from $row.</span><pre>extractVersionInfoFromRow()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24converterRegistry" title="$converterRegistry :: FieldValue converter registry"><span class="description">FieldValue converter registry</span><pre>$converterRegistry</pre></a></li>
+<li class="property protected "><a href="#%24languageHandler" title="$languageHandler :: Caching language handler"><span class="description">Caching language handler</span><pre>$languageHandler</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CeZ%5CPublish%5CCore%5CPersistence%5CLegacy%5CContent%5CMapper" id="\eZ\Publish\Core\Persistence\Legacy\Content\Mapper"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Mapper.html">Mapper</a>
+</li>
+</ul>
+<div href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Mapper.html" class="element class">
+<p class="short_description">Mapper for Content Handler.</p>
+<div class="details">
+<p class="long_description"><p>Performs mapping of Content objects.</p></p>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Creates a new mapper.</h2>
+<pre>__construct(\eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry $converterRegistry, \eZ\Publish\SPI\Persistence\Content\Language\Handler $languageHandler) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$converterRegistry</h4>
+<code><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.FieldValue.ConverterRegistry.html">\eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry</a></code>
+</div>
+<div class="subelement argument">
+<h4>$languageHandler</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Language.Handler.html">\eZ\Publish\SPI\Persistence\Content\Language\Handler</a></code>
+</div>
+</div></div>
+</div>
+<a name="convertToStorageValue" id="convertToStorageValue"></a><div class="element clickable method public convertToStorageValue" data-toggle="collapse" data-target=".convertToStorageValue .collapse">
+<h2>Converts value of $field to storage value</h2>
+<pre>convertToStorageValue(\eZ\Publish\SPI\Persistence\Content\Field $field) : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.StorageFieldValue.html">\eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$field</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Field.html">\eZ\Publish\SPI\Persistence\Content\Field</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.StorageFieldValue.html">\eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue</a></code></div>
+</div></div>
+</div>
+<a name="createCreateStructFromContent" id="createCreateStructFromContent"></a><div class="element clickable method public createCreateStructFromContent" data-toggle="collapse" data-target=".createCreateStructFromContent .collapse">
+<h2>Creates CreateStruct from $content</h2>
+<pre>createCreateStructFromContent(\eZ\Publish\SPI\Persistence\Content $content) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.CreateStruct.html">\eZ\Publish\SPI\Persistence\Content\CreateStruct</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.CreateStruct.html">\eZ\Publish\SPI\Persistence\Content\CreateStruct</a></code></div>
+</div></div>
+</div>
+<a name="createRelationFromCreateStruct" id="createRelationFromCreateStruct"></a><div class="element clickable method public createRelationFromCreateStruct" data-toggle="collapse" data-target=".createRelationFromCreateStruct .collapse">
+<h2>Creates a Content from the given $struct</h2>
+<pre>createRelationFromCreateStruct(\eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct $struct) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Relation.html">\eZ\Publish\SPI\Persistence\Content\Relation</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$struct</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Relation.CreateStruct.html">\eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Relation.html">\eZ\Publish\SPI\Persistence\Content\Relation</a></code></div>
+</div></div>
+</div>
+<a name="createVersionInfoForContent" id="createVersionInfoForContent"></a><div class="element clickable method public createVersionInfoForContent" data-toggle="collapse" data-target=".createVersionInfoForContent .collapse">
+<h2>Creates a new version for the given $content</h2>
+<pre>createVersionInfoForContent(\eZ\Publish\SPI\Persistence\Content $content, mixed $versionNo, mixed $userId) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.VersionInfo.html">\eZ\Publish\SPI\Persistence\Content\VersionInfo</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></code>
+</div>
+<div class="subelement argument">
+<h4>$versionNo</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$userId</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.VersionInfo.html">\eZ\Publish\SPI\Persistence\Content\VersionInfo</a></code></div>
+</div></div>
+</div>
+<a name="createVersionInfoFromCreateStruct" id="createVersionInfoFromCreateStruct"></a><div class="element clickable method public createVersionInfoFromCreateStruct" data-toggle="collapse" data-target=".createVersionInfoFromCreateStruct .collapse">
+<h2>Creates a new version for the given $struct and $versionNo</h2>
+<pre>createVersionInfoFromCreateStruct(\eZ\Publish\SPI\Persistence\Content\CreateStruct $struct, mixed $versionNo) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.VersionInfo.html">\eZ\Publish\SPI\Persistence\Content\VersionInfo</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$struct</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.CreateStruct.html">\eZ\Publish\SPI\Persistence\Content\CreateStruct</a></code>
+</div>
+<div class="subelement argument">
+<h4>$versionNo</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.VersionInfo.html">\eZ\Publish\SPI\Persistence\Content\VersionInfo</a></code></div>
+</div></div>
+</div>
+<a name="extractContentFromRows" id="extractContentFromRows"></a><div class="element clickable method public extractContentFromRows" data-toggle="collapse" data-target=".extractContentFromRows .collapse">
+<h2>Extracts Content objects (and nested) from database result $rows</h2>
+<pre>extractContentFromRows(\array $rows) : <a href="Publish.SPI.Persistence.Content.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent">\eZ\Publish\SPI\Persistence\Content[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Expects database rows to be indexed by keys of the format</p>
+
+<pre><code> "$tableName_$columnName"
+</code></pre></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$rows</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.Content.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent">\eZ\Publish\SPI\Persistence\Content[]</a></code></div>
+</div></div>
+</div>
+<a name="extractContentInfoFromRow" id="extractContentInfoFromRow"></a><div class="element clickable method public extractContentInfoFromRow" data-toggle="collapse" data-target=".extractContentInfoFromRow .collapse">
+<h2>Extracts a ContentInfo object from $row</h2>
+<pre>extractContentInfoFromRow(\array $row, string $prefix) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.ContentInfo.html">\eZ\Publish\SPI\Persistence\Content\ContentInfo</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$row</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$prefix</h4>
+<code>string</code><p>Prefix for row keys, which are initially mapped by ezcontentobject fields</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.ContentInfo.html">\eZ\Publish\SPI\Persistence\Content\ContentInfo</a></code></div>
+</div></div>
+</div>
+<a name="extractLanguageIdsFromMask" id="extractLanguageIdsFromMask"></a><div class="element clickable method public extractLanguageIdsFromMask" data-toggle="collapse" data-target=".extractLanguageIdsFromMask .collapse">
+<h2>extractLanguageIdsFromMask()
+        </h2>
+<pre>extractLanguageIdsFromMask($languageMask) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>todo</th>
+<td>use langmask handler for this</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$languageMask</h4>
+<code></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="extractRelationsFromRows" id="extractRelationsFromRows"></a><div class="element clickable method public extractRelationsFromRows" data-toggle="collapse" data-target=".extractRelationsFromRows .collapse">
+<h2>Extracts relation objects from $rows</h2>
+<pre>extractRelationsFromRows(\array $rows) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$rows</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="extractVersionInfoListFromRows" id="extractVersionInfoListFromRows"></a><div class="element clickable method public extractVersionInfoListFromRows" data-toggle="collapse" data-target=".extractVersionInfoListFromRows .collapse">
+<h2>Extracts a VersionInfo object from $row</h2>
+<pre>extractVersionInfoListFromRows(\array $rows) : <a href="Publish.SPI.Persistence.Content.VersionInfo.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CVersionInfo">\eZ\Publish\SPI\Persistence\Content\VersionInfo[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$rows</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.Content.VersionInfo.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CVersionInfo">\eZ\Publish\SPI\Persistence\Content\VersionInfo[]</a></code></div>
+</div></div>
+</div>
+<a name="extractFieldFromRow" id="extractFieldFromRow"></a><div class="element clickable method protected extractFieldFromRow" data-toggle="collapse" data-target=".extractFieldFromRow .collapse">
+<h2>Extracts a Field from $row</h2>
+<pre>extractFieldFromRow(\array $row) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Field.html">\eZ\Publish\SPI\Persistence\Content\Field</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$row</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Field.html">\eZ\Publish\SPI\Persistence\Content\Field</a></code></div>
+</div></div>
+</div>
+<a name="extractFieldValueFromRow" id="extractFieldValueFromRow"></a><div class="element clickable method protected extractFieldValueFromRow" data-toggle="collapse" data-target=".extractFieldValueFromRow .collapse">
+<h2>Extracts a FieldValue of $type from $row</h2>
+<pre>extractFieldValueFromRow(\array $row, string $type) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.FieldValue.html">\eZ\Publish\SPI\Persistence\Content\FieldValue</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$row</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.FieldValue.Converter.Exception.NotFound.html">\eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\Exception\NotFound</a></code></th>
+<td>if the necessary converter for $type could not be found.</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.FieldValue.html">\eZ\Publish\SPI\Persistence\Content\FieldValue</a></code></div>
+</div></div>
+</div>
+<a name="extractRelationFromRow" id="extractRelationFromRow"></a><div class="element clickable method protected extractRelationFromRow" data-toggle="collapse" data-target=".extractRelationFromRow .collapse">
+<h2>Extracts a Relation object from a $row</h2>
+<pre>extractRelationFromRow(\array $row) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Relation.html">\eZ\Publish\SPI\Persistence\Content\Relation</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$row</h4>
+<code>array</code><p>Associative array representing a relation</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Relation.html">\eZ\Publish\SPI\Persistence\Content\Relation</a></code></div>
+</div></div>
+</div>
+<a name="createContentInfoFromCreateStruct" id="createContentInfoFromCreateStruct"></a><div class="element clickable method private createContentInfoFromCreateStruct" data-toggle="collapse" data-target=".createContentInfoFromCreateStruct .collapse">
+<h2>Creates a Content from the given $struct and $currentVersionNo</h2>
+<pre>createContentInfoFromCreateStruct(\eZ\Publish\SPI\Persistence\Content\CreateStruct $struct, mixed $currentVersionNo) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.ContentInfo.html">\eZ\Publish\SPI\Persistence\Content\ContentInfo</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$struct</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.CreateStruct.html">\eZ\Publish\SPI\Persistence\Content\CreateStruct</a></code>
+</div>
+<div class="subelement argument">
+<h4>$currentVersionNo</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.ContentInfo.html">\eZ\Publish\SPI\Persistence\Content\ContentInfo</a></code></div>
+</div></div>
+</div>
+<a name="extractVersionInfoFromRow" id="extractVersionInfoFromRow"></a><div class="element clickable method private extractVersionInfoFromRow" data-toggle="collapse" data-target=".extractVersionInfoFromRow .collapse">
+<h2>Extracts a VersionInfo object from $row.</h2>
+<pre>extractVersionInfoFromRow(\array $row) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.VersionInfo.html">\eZ\Publish\SPI\Persistence\Content\VersionInfo</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This method will return VersionInfo with incomplete data. It is intended to be used only by
+<a href="self::extractContentFromRows">self::extractContentFromRows</a> where missing data will be filled in.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$row</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.VersionInfo.html">\eZ\Publish\SPI\Persistence\Content\VersionInfo</a></code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24converterRegistry" id="$converterRegistry"> </a><div class="element clickable property protected $converterRegistry" data-toggle="collapse" data-target=".$converterRegistry .collapse">
+<h2>FieldValue converter registry</h2>
+<pre>$converterRegistry : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.FieldValue.ConverterRegistry.html">\eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24languageHandler" id="$languageHandler"> </a><div class="element clickable property protected $languageHandler" data-toggle="collapse" data-target=".$languageHandler .collapse">
+<h2>Caching language handler</h2>
+<pre>$languageHandler : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Language.Handler.html">\eZ\Publish\SPI\Persistence\Content\Language\Handler</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:53:33+01:00.<br></footer></div>
+</div>
+</body>
+</html>

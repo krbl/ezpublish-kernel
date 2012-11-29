@@ -1,0 +1,401 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \eZ\Publish\Core\MVC\Symfony\View\Manager</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#addContentViewProvider" title="addContentViewProvider :: Registers $viewProvider as a valid content view provider."><span class="description">Registers $viewProvider as a valid content view provider.</span><pre>addContentViewProvider()</pre></a></li>
+<li class="method public "><a href="#addLocationViewProvider" title="addLocationViewProvider :: Registers $viewProvider as a valid location view provider."><span class="description">Registers $viewProvider as a valid location view provider.</span><pre>addLocationViewProvider()</pre></a></li>
+<li class="method public "><a href="#getAllContentViewProviders" title="getAllContentViewProviders :: "><span class="description">getAllContentViewProviders()
+        </span><pre>getAllContentViewProviders()</pre></a></li>
+<li class="method public "><a href="#getAllLocationViewProviders" title="getAllLocationViewProviders :: "><span class="description">getAllLocationViewProviders()
+        </span><pre>getAllLocationViewProviders()</pre></a></li>
+<li class="method public "><a href="#renderContent" title="renderContent :: Renders $content by selecting the right template."><span class="description">Renders $content by selecting the right template.</span><pre>renderContent()</pre></a></li>
+<li class="method public "><a href="#renderContentView" title="renderContentView :: Renders passed ContentView object via the template engine."><span class="description">Renders passed ContentView object via the template engine.</span><pre>renderContentView()</pre></a></li>
+<li class="method public "><a href="#renderLocation" title="renderLocation :: Renders $location by selecting the right template for $viewType."><span class="description">Renders $location by selecting the right template for $viewType.</span><pre>renderLocation()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#sortViewProviders" title="sortViewProviders :: Sort the registered view providers by priority."><span class="description">Sort the registered view providers by priority.</span><pre>sortViewProviders()</pre></a></li>
+<li class="nav-header private">» Private</li>
+<li class="method private "><a href="#addViewProvider" title="addViewProvider :: Helper for {@see addContentViewProvider()} and {@see addLocationViewProvider()}"><span class="description">Helper for {@see addContentViewProvider()} and {@see addLocationViewProvider()}</span><pre>addViewProvider()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24contentViewProviders" title="$contentViewProviders :: "><span class="description">&lt;p&gt;Array indexed by priority. Each priority key is an array of Content View Provider objects having this priority. The highest priority number is the highest priority&lt;/p&gt;</span><pre>$contentViewProviders</pre></a></li>
+<li class="property protected "><a href="#%24eventDispatcher" title="$eventDispatcher :: "><span class="description">$eventDispatcher</span><pre>$eventDispatcher</pre></a></li>
+<li class="property protected "><a href="#%24locationViewProviders" title="$locationViewProviders :: "><span class="description">&lt;p&gt;Array indexed by priority. Each priority key is an array of Location View Provider objects having this priority. The highest priority number is the highest priority&lt;/p&gt;</span><pre>$locationViewProviders</pre></a></li>
+<li class="property protected "><a href="#%24logger" title="$logger :: "><span class="description">$logger</span><pre>$logger</pre></a></li>
+<li class="property protected "><a href="#%24repository" title="$repository :: "><span class="description">$repository</span><pre>$repository</pre></a></li>
+<li class="property protected "><a href="#%24sortedContentViewProviders" title="$sortedContentViewProviders :: "><span class="description">$sortedContentViewProviders</span><pre>$sortedContentViewProviders</pre></a></li>
+<li class="property protected "><a href="#%24sortedLocationViewProviders" title="$sortedLocationViewProviders :: "><span class="description">$sortedLocationViewProviders</span><pre>$sortedLocationViewProviders</pre></a></li>
+<li class="property protected "><a href="#%24templateEngine" title="$templateEngine :: "><span class="description">$templateEngine</span><pre>$templateEngine</pre></a></li>
+<li class="property protected "><a href="#%24viewBaseLayout" title="$viewBaseLayout :: The base layout template to use when the view is requested to be generated
+outside of the pagelayout."><span class="description">The base layout template to use when the view is requested to be generated
+outside of the pagelayout.</span><pre>$viewBaseLayout</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  "><a href="#VIEW_TYPE_FULL" title="VIEW_TYPE_FULL :: "><span class="description">VIEW_TYPE_FULL</span><pre>VIEW_TYPE_FULL</pre></a></li>
+<li class="constant  "><a href="#VIEW_TYPE_LINE" title="VIEW_TYPE_LINE :: "><span class="description">VIEW_TYPE_LINE</span><pre>VIEW_TYPE_LINE</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CeZ%5CPublish%5CCore%5CMVC%5CSymfony%5CView%5CManager" id="\eZ\Publish\Core\MVC\Symfony\View\Manager"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.MVC.html">MVC</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.MVC.Symfony.html">Symfony</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.MVC.Symfony.View.html">View</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/eZ.Publish.Core.MVC.Symfony.View.Manager.html">Manager</a>
+</li>
+</ul>
+<div href="../classes/eZ.Publish.Core.MVC.Symfony.View.Manager.html" class="element class"><div class="details">
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct(\Symfony\Component\Templating\EngineInterface $templateEngine, \Symfony\Component\EventDispatcher\EventDispatcherInterface $eventDispatcher, \eZ\Publish\API\Repository\Repository $repository, $viewBaseLayout, \Symfony\Component\HttpKernel\Log\LoggerInterface $logger) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$templateEngine</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$eventDispatcher</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$repository</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$viewBaseLayout</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$logger</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="addContentViewProvider" id="addContentViewProvider"></a><div class="element clickable method public addContentViewProvider" data-toggle="collapse" data-target=".addContentViewProvider .collapse">
+<h2>Registers $viewProvider as a valid content view provider.</h2>
+<pre>addContentViewProvider(\eZ\Publish\Core\MVC\Symfony\View\Provider\Content $viewProvider, int $priority) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>When this view provider will be called in the chain depends on $priority. The highest $priority is, the earliest the router will be called.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$viewProvider</h4>
+<code><a href="../classes/eZ.Publish.Core.MVC.Symfony.View.Provider.Content.html">\eZ\Publish\Core\MVC\Symfony\View\Provider\Content</a></code>
+</div>
+<div class="subelement argument">
+<h4>$priority</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="addLocationViewProvider" id="addLocationViewProvider"></a><div class="element clickable method public addLocationViewProvider" data-toggle="collapse" data-target=".addLocationViewProvider .collapse">
+<h2>Registers $viewProvider as a valid location view provider.</h2>
+<pre>addLocationViewProvider(\eZ\Publish\Core\MVC\Symfony\View\Provider\Location $viewProvider, int $priority) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>When this view provider will be called in the chain depends on $priority. The highest $priority is, the earliest the router will be called.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$viewProvider</h4>
+<code><a href="../classes/eZ.Publish.Core.MVC.Symfony.View.Provider.Location.html">\eZ\Publish\Core\MVC\Symfony\View\Provider\Location</a></code>
+</div>
+<div class="subelement argument">
+<h4>$priority</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="getAllContentViewProviders" id="getAllContentViewProviders"></a><div class="element clickable method public getAllContentViewProviders" data-toggle="collapse" data-target=".getAllContentViewProviders .collapse">
+<h2>getAllContentViewProviders()
+        </h2>
+<pre>getAllContentViewProviders() : <a href="Publish.Core.MVC.Symfony.View.Provider.Content.html#%5CeZ%5CPublish%5CCore%5CMVC%5CSymfony%5CView%5CProvider%5CContent">\eZ\Publish\Core\MVC\Symfony\View\Provider\Content[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.Core.MVC.Symfony.View.Provider.Content.html#%5CeZ%5CPublish%5CCore%5CMVC%5CSymfony%5CView%5CProvider%5CContent">\eZ\Publish\Core\MVC\Symfony\View\Provider\Content[]</a></code></div>
+</div></div>
+</div>
+<a name="getAllLocationViewProviders" id="getAllLocationViewProviders"></a><div class="element clickable method public getAllLocationViewProviders" data-toggle="collapse" data-target=".getAllLocationViewProviders .collapse">
+<h2>getAllLocationViewProviders()
+        </h2>
+<pre>getAllLocationViewProviders() : <a href="Publish.Core.MVC.Symfony.View.Provider.Location.html#%5CeZ%5CPublish%5CCore%5CMVC%5CSymfony%5CView%5CProvider%5CLocation">\eZ\Publish\Core\MVC\Symfony\View\Provider\Location[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.Core.MVC.Symfony.View.Provider.Location.html#%5CeZ%5CPublish%5CCore%5CMVC%5CSymfony%5CView%5CProvider%5CLocation">\eZ\Publish\Core\MVC\Symfony\View\Provider\Location[]</a></code></div>
+</div></div>
+</div>
+<a name="renderContent" id="renderContent"></a><div class="element clickable method public renderContent" data-toggle="collapse" data-target=".renderContent .collapse">
+<h2>Renders $content by selecting the right template.</h2>
+<pre>renderContent(\eZ\Publish\API\Repository\Values\Content\Content $content, string $viewType, array $parameters) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>$content will be injected in the selected template.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></code>
+</div>
+<div class="subelement argument">
+<h4>$viewType</h4>
+<code>string</code><p>Variation of display for your content. Default is 'full'.</p>
+</div>
+<div class="subelement argument">
+<h4>$parameters</h4>
+<code>array</code><p>Parameters to pass to the template called to render the view. By default, it's empty. 'content' entry is reserved for the Content that is rendered.</p>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="renderContentView" id="renderContentView"></a><div class="element clickable method public renderContentView" data-toggle="collapse" data-target=".renderContentView .collapse">
+<h2>Renders passed ContentView object via the template engine.</h2>
+<pre>renderContentView(\eZ\Publish\Core\MVC\Symfony\View\ContentViewInterface $view, \array $defaultParams) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>If $view's template identifier is a closure, then it is called directly and the result is returned as is.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$view</h4>
+<code><a href="../classes/eZ.Publish.Core.MVC.Symfony.View.ContentViewInterface.html">\eZ\Publish\Core\MVC\Symfony\View\ContentViewInterface</a></code>
+</div>
+<div class="subelement argument">
+<h4>$defaultParams</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="renderLocation" id="renderLocation"></a><div class="element clickable method public renderLocation" data-toggle="collapse" data-target=".renderLocation .collapse">
+<h2>Renders $location by selecting the right template for $viewType.</h2>
+<pre>renderLocation(\eZ\Publish\API\Repository\Values\Content\Location $location, string $viewType, array $parameters) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>$content and $location will be injected in the selected template.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$location</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code>
+</div>
+<div class="subelement argument">
+<h4>$viewType</h4>
+<code>string</code><p>Variation of display for your content. Default is 'full'.</p>
+</div>
+<div class="subelement argument">
+<h4>$parameters</h4>
+<code>array</code><p>Parameters to pass to the template called to render the view. By default, it's empty. 'location' and 'content' entries are reserved for the Location (and its Content) that is viewed.</p>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="sortViewProviders" id="sortViewProviders"></a><div class="element clickable method protected sortViewProviders" data-toggle="collapse" data-target=".sortViewProviders .collapse">
+<h2>Sort the registered view providers by priority.</h2>
+<pre>sortViewProviders($property) : <a href="Publish.Core.MVC.Symfony.View.Provider.Content.html#%5CeZ%5CPublish%5CCore%5CMVC%5CSymfony%5CView%5CProvider%5CContent">\eZ\Publish\Core\MVC\Symfony\View\Provider\Content[]</a> | <a href="Publish.Core.MVC.Symfony.View.Provider.Location.html#%5CeZ%5CPublish%5CCore%5CMVC%5CSymfony%5CView%5CProvider%5CLocation">\eZ\Publish\Core\MVC\Symfony\View\Provider\Location[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>The highest priority number is the highest priority (reverse sorting)</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="Publish.Core.MVC.Symfony.View.Provider.Content.html#%5CeZ%5CPublish%5CCore%5CMVC%5CSymfony%5CView%5CProvider%5CContent">\eZ\Publish\Core\MVC\Symfony\View\Provider\Content[]</a></code><code><a href="Publish.Core.MVC.Symfony.View.Provider.Location.html#%5CeZ%5CPublish%5CCore%5CMVC%5CSymfony%5CView%5CProvider%5CLocation">\eZ\Publish\Core\MVC\Symfony\View\Provider\Location[]</a></code>
+</div>
+</div></div>
+</div>
+<a name="addViewProvider" id="addViewProvider"></a><div class="element clickable method private addViewProvider" data-toggle="collapse" data-target=".addViewProvider .collapse">
+<h2>Helper for {@see addContentViewProvider()} and {@see addLocationViewProvider()}</h2>
+<pre>addViewProvider(array $property, <a href="../classes/eZ.Publish.Core.MVC.Symfony.View.Provider.Content.html">\eZ\Publish\Core\MVC\Symfony\View\Provider\Content</a> $viewProvider, int $priority) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$viewProvider</h4>
+<code><a href="../classes/eZ.Publish.Core.MVC.Symfony.View.Provider.Content.html">\eZ\Publish\Core\MVC\Symfony\View\Provider\Content</a></code>
+</div>
+<div class="subelement argument">
+<h4>$priority</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24contentViewProviders" id="$contentViewProviders"> </a><div class="element clickable property protected $contentViewProviders" data-toggle="collapse" data-target=".$contentViewProviders .collapse">
+<h2>&lt;p&gt;Array indexed by priority. Each priority key is an array of Content View Provider objects having this priority. The highest priority number is the highest priority&lt;/p&gt;</h2>
+<pre>$contentViewProviders : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24eventDispatcher" id="$eventDispatcher"> </a><div class="element clickable property protected $eventDispatcher" data-toggle="collapse" data-target=".$eventDispatcher .collapse">
+<h2>$eventDispatcher</h2>
+<pre>$eventDispatcher : \Symfony\Component\EventDispatcher\EventDispatcherInterface</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24locationViewProviders" id="$locationViewProviders"> </a><div class="element clickable property protected $locationViewProviders" data-toggle="collapse" data-target=".$locationViewProviders .collapse">
+<h2>&lt;p&gt;Array indexed by priority. Each priority key is an array of Location View Provider objects having this priority. The highest priority number is the highest priority&lt;/p&gt;</h2>
+<pre>$locationViewProviders : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24logger" id="$logger"> </a><div class="element clickable property protected $logger" data-toggle="collapse" data-target=".$logger .collapse">
+<h2>$logger</h2>
+<pre>$logger : \Symfony\Component\HttpKernel\Log\LoggerInterface</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24repository" id="$repository"> </a><div class="element clickable property protected $repository" data-toggle="collapse" data-target=".$repository .collapse">
+<h2>$repository</h2>
+<pre>$repository : <a href="../classes/eZ.Publish.API.Repository.Repository.html">\eZ\Publish\API\Repository\Repository</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24sortedContentViewProviders" id="$sortedContentViewProviders"> </a><div class="element clickable property protected $sortedContentViewProviders" data-toggle="collapse" data-target=".$sortedContentViewProviders .collapse">
+<h2>$sortedContentViewProviders</h2>
+<pre>$sortedContentViewProviders : <a href="Publish.Core.MVC.Symfony.View.Provider.Content.html#%5CeZ%5CPublish%5CCore%5CMVC%5CSymfony%5CView%5CProvider%5CContent">\eZ\Publish\Core\MVC\Symfony\View\Provider\Content[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24sortedLocationViewProviders" id="$sortedLocationViewProviders"> </a><div class="element clickable property protected $sortedLocationViewProviders" data-toggle="collapse" data-target=".$sortedLocationViewProviders .collapse">
+<h2>$sortedLocationViewProviders</h2>
+<pre>$sortedLocationViewProviders : <a href="Publish.Core.MVC.Symfony.View.Provider.Location.html#%5CeZ%5CPublish%5CCore%5CMVC%5CSymfony%5CView%5CProvider%5CLocation">\eZ\Publish\Core\MVC\Symfony\View\Provider\Location[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24templateEngine" id="$templateEngine"> </a><div class="element clickable property protected $templateEngine" data-toggle="collapse" data-target=".$templateEngine .collapse">
+<h2>$templateEngine</h2>
+<pre>$templateEngine : \Symfony\Component\Templating\EngineInterface</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24viewBaseLayout" id="$viewBaseLayout"> </a><div class="element clickable property protected $viewBaseLayout" data-toggle="collapse" data-target=".$viewBaseLayout .collapse">
+<h2>The base layout template to use when the view is requested to be generated
+outside of the pagelayout.</h2>
+<pre>$viewBaseLayout : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a name="VIEW_TYPE_FULL" id="VIEW_TYPE_FULL"> </a><div class="element clickable constant  VIEW_TYPE_FULL" data-toggle="collapse" data-target=".VIEW_TYPE_FULL .collapse">
+<h2>VIEW_TYPE_FULL</h2>
+<pre>VIEW_TYPE_FULL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="VIEW_TYPE_LINE" id="VIEW_TYPE_LINE"> </a><div class="element clickable constant  VIEW_TYPE_LINE" data-toggle="collapse" data-target=".VIEW_TYPE_LINE .collapse">
+<h2>VIEW_TYPE_LINE</h2>
+<pre>VIEW_TYPE_LINE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:53:15+01:00.<br></footer></div>
+</div>
+</body>
+</html>

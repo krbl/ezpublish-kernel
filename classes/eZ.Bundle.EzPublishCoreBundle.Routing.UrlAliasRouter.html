@@ -1,0 +1,464 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \eZ\Bundle\EzPublishCoreBundle\Routing\UrlAliasRouter</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public inherited"><a href="#__construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#generate" title="generate :: Generates a URL for a location, from the given parameters."><span class="description">Generates a URL for a location, from the given parameters.</span><pre>generate()</pre></a></li>
+<li class="method public inherited"><a href="#getContext" title="getContext :: "><span class="description">getContext()
+        </span><pre>getContext()</pre></a></li>
+<li class="method public inherited"><a href="#getRouteCollection" title="getRouteCollection :: Gets the RouteCollection instance associated with this Router."><span class="description">Gets the RouteCollection instance associated with this Router.</span><pre>getRouteCollection()</pre></a></li>
+<li class="method public inherited"><a href="#match" title="match :: Not supported."><span class="description">Not supported.</span><pre>match()</pre></a></li>
+<li class="method public "><a href="#matchRequest" title="matchRequest :: Tries to match a request with a set of routes."><span class="description">Tries to match a request with a set of routes.</span><pre>matchRequest()</pre></a></li>
+<li class="method public "><a href="#setContainer" title="setContainer :: "><span class="description">setContainer()
+        </span><pre>setContainer()</pre></a></li>
+<li class="method public inherited"><a href="#setContext" title="setContext :: "><span class="description">setContext()
+        </span><pre>setContext()</pre></a></li>
+<li class="method public inherited"><a href="#supports" title="supports :: Whether the router supports the thing in $name to generate a route."><span class="description">Whether the router supports the thing in $name to generate a route.</span><pre>supports()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#getConfigResolver" title="getConfigResolver :: "><span class="description">getConfigResolver()
+        </span><pre>getConfigResolver()</pre></a></li>
+<li class="method protected inherited"><a href="#getRepository" title="getRepository :: "><span class="description">getRepository()
+        </span><pre>getRepository()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24container" title="$container :: "><span class="description">$container</span><pre>$container</pre></a></li>
+<li class="property protected inherited"><a href="#%24generator" title="$generator :: "><span class="description">$generator</span><pre>$generator</pre></a></li>
+<li class="property protected inherited"><a href="#%24lazyRepository" title="$lazyRepository :: "><span class="description">$lazyRepository</span><pre>$lazyRepository</pre></a></li>
+<li class="property protected inherited"><a href="#%24logger" title="$logger :: "><span class="description">$logger</span><pre>$logger</pre></a></li>
+<li class="property protected inherited"><a href="#%24repository" title="$repository :: "><span class="description">$repository</span><pre>$repository</pre></a></li>
+<li class="property protected inherited"><a href="#%24requestContext" title="$requestContext :: "><span class="description">$requestContext</span><pre>$requestContext</pre></a></li>
+<li class="property protected inherited"><a href="#%24urlAliasService" title="$urlAliasService :: "><span class="description">$urlAliasService</span><pre>$urlAliasService</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  inherited"><a href="#URL_ALIAS_ROUTE_NAME" title="URL_ALIAS_ROUTE_NAME :: "><span class="description">URL_ALIAS_ROUTE_NAME</span><pre>URL_ALIAS_ROUTE_NAME</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CeZ%5CBundle%5CEzPublishCoreBundle%5CRouting%5CUrlAliasRouter" id="\eZ\Bundle\EzPublishCoreBundle\Routing\UrlAliasRouter"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Bundle.html">Bundle</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Bundle.EzPublishCoreBundle.html">EzPublishCoreBundle</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Bundle.EzPublishCoreBundle.Routing.html">Routing</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/eZ.Bundle.EzPublishCoreBundle.Routing.UrlAliasRouter.html">UrlAliasRouter</a>
+</li>
+</ul>
+<div href="../classes/eZ.Bundle.EzPublishCoreBundle.Routing.UrlAliasRouter.html" class="element class"><div class="details">
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct(\Closure $lazyRepository, \eZ\Publish\Core\MVC\Symfony\Routing\Generator\UrlAliasGenerator $generator, \Symfony\Component\Routing\RequestContext $requestContext, \Symfony\Component\HttpKernel\Log\LoggerInterface $logger) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\MVC\Symfony\Routing\UrlAliasRouter::__construct()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lazyRepository</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$generator</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$requestContext</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$logger</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="generate" id="generate"></a><div class="element clickable method public generate" data-toggle="collapse" data-target=".generate .collapse">
+<h2>Generates a URL for a location, from the given parameters.</h2>
+<pre>generate(string | <a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a> $name, mixed $parameters, bool $absolute) : string</pre>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>It is possible to directly pass a Location object as the route name, as the ChainRouter allows it through ChainedRouterInterface.</p>
+
+<p>If $name is a route name, the "location" key in $parameters must be set to a valid eZ\Publish\API\Repository\Values\Content\Location object.
+"locationId" can also be provided.</p>
+
+<p>If the generator is not able to generate the url, it must throw the RouteNotFoundException
+as documented below.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td>\eZ\Publish\Core\MVC\Symfony\Routing\UrlAliasRouter::supports()</td>
+</tr>
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\MVC\Symfony\Routing\UrlAliasRouter::generate()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string<a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code><p>The name of the route or a Location instance</p></div>
+<div class="subelement argument">
+<h4>$parameters</h4>
+<code>mixed</code><p>An array of parameters</p></div>
+<div class="subelement argument">
+<h4>$absolute</h4>
+<code>bool</code><p>Whether to generate an absolute URL</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="http://php.net/manual/en/class.logicexception.php">\LogicException</a></code></th>
+<td></td>
+</tr>
+<tr>
+<th><code>\Symfony\Component\Routing\Exception\RouteNotFoundException</code></th>
+<td></td>
+</tr>
+<tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td></td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The generated URL</div>
+</div></div>
+</div>
+<a name="getContext" id="getContext"></a><div class="element clickable method public getContext" data-toggle="collapse" data-target=".getContext .collapse">
+<h2>getContext()
+        </h2>
+<pre>getContext() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\MVC\Symfony\Routing\UrlAliasRouter::getContext()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getRouteCollection" id="getRouteCollection"></a><div class="element clickable method public getRouteCollection" data-toggle="collapse" data-target=".getRouteCollection .collapse">
+<h2>Gets the RouteCollection instance associated with this Router.</h2>
+<pre>getRouteCollection() : \Symfony\Component\Routing\RouteCollection</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\MVC\Symfony\Routing\UrlAliasRouter::getRouteCollection()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\Symfony\Component\Routing\RouteCollection</code>A RouteCollection instance</div>
+</div></div>
+</div>
+<a name="match" id="match"></a><div class="element clickable method public match" data-toggle="collapse" data-target=".match .collapse">
+<h2>Not supported.</h2>
+<pre>match($pathinfo) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Please use matchRequest() instead.</p></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\MVC\Symfony\Routing\UrlAliasRouter::match()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$pathinfo</h4>
+<code></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a name="matchRequest" id="matchRequest"></a><div class="element clickable method public matchRequest" data-toggle="collapse" data-target=".matchRequest .collapse">
+<h2>Tries to match a request with a set of routes.</h2>
+<pre>matchRequest(\Symfony\Component\HttpFoundation\Request $request) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>If the matcher can not find information, it must throw one of the exceptions documented
+below.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$request</h4>
+<code>\Symfony\Component\HttpFoundation\Request</code><p>The request to match</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code>\Symfony\Component\Routing\Exception\ResourceNotFoundException</code></th>
+<td>If no matching resource could be found</td>
+</tr>
+<tr>
+<th><code>\eZ\Publish\Core\MVC\Symfony\Routing\MethodNotAllowedException</code></th>
+<td>If a matching resource was found but the request method is not allowed</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An array of parameters</div>
+</div></div>
+</div>
+<a name="setContainer" id="setContainer"></a><div class="element clickable method public setContainer" data-toggle="collapse" data-target=".setContainer .collapse">
+<h2>setContainer()
+        </h2>
+<pre>setContainer(\Symfony\Component\DependencyInjection\ContainerInterface $container) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$container</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="setContext" id="setContext"></a><div class="element clickable method public setContext" data-toggle="collapse" data-target=".setContext .collapse">
+<h2>setContext()
+        </h2>
+<pre>setContext(\Symfony\Component\Routing\RequestContext $context) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\MVC\Symfony\Routing\UrlAliasRouter::setContext()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$context</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="supports" id="supports"></a><div class="element clickable method public supports" data-toggle="collapse" data-target=".supports .collapse">
+<h2>Whether the router supports the thing in $name to generate a route.</h2>
+<pre>supports(mixed $name) : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This check does not need to look if the specific instance can be
+resolved to a route, only whether the router can generate routes from
+objects of this class.</p></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\MVC\Symfony\Routing\UrlAliasRouter::supports()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>mixed</code><p>The route name or route object</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="getConfigResolver" id="getConfigResolver"></a><div class="element clickable method protected getConfigResolver" data-toggle="collapse" data-target=".getConfigResolver .collapse">
+<h2>getConfigResolver()
+        </h2>
+<pre>getConfigResolver() : <a href="../classes/eZ.Publish.Core.MVC.ConfigResolverInterface.html">\eZ\Publish\Core\MVC\ConfigResolverInterface</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.MVC.ConfigResolverInterface.html">\eZ\Publish\Core\MVC\ConfigResolverInterface</a></code></div>
+</div></div>
+</div>
+<a name="getRepository" id="getRepository"></a><div class="element clickable method protected getRepository" data-toggle="collapse" data-target=".getRepository .collapse">
+<h2>getRepository()
+        </h2>
+<pre>getRepository() : <a href="../classes/eZ.Publish.API.Repository.Repository.html">\eZ\Publish\API\Repository\Repository</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\MVC\Symfony\Routing\UrlAliasRouter::getRepository()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Repository.html">\eZ\Publish\API\Repository\Repository</a></code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24container" id="$container"> </a><div class="element clickable property protected $container" data-toggle="collapse" data-target=".$container .collapse">
+<h2>$container</h2>
+<pre>$container : \Symfony\Component\DependencyInjection\ContainerInterface</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24generator" id="$generator"> </a><div class="element clickable property protected $generator" data-toggle="collapse" data-target=".$generator .collapse">
+<h2>$generator</h2>
+<pre>$generator : <a href="../classes/eZ.Publish.Core.MVC.Symfony.Routing.Generator.UrlAliasGenerator.html">\eZ\Publish\Core\MVC\Symfony\Routing\Generator\UrlAliasGenerator</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\MVC\Symfony\Routing\UrlAliasRouter::$$generator</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24lazyRepository" id="$lazyRepository"> </a><div class="element clickable property protected $lazyRepository" data-toggle="collapse" data-target=".$lazyRepository .collapse">
+<h2>$lazyRepository</h2>
+<pre>$lazyRepository : <a href="http://php.net/manual/en/class.closure.php">\Closure</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\MVC\Symfony\Routing\UrlAliasRouter::$$lazyRepository</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24logger" id="$logger"> </a><div class="element clickable property protected $logger" data-toggle="collapse" data-target=".$logger .collapse">
+<h2>$logger</h2>
+<pre>$logger : \Symfony\Component\HttpKernel\Log\LoggerInterface</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\MVC\Symfony\Routing\UrlAliasRouter::$$logger</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24repository" id="$repository"> </a><div class="element clickable property protected $repository" data-toggle="collapse" data-target=".$repository .collapse">
+<h2>$repository</h2>
+<pre>$repository : <a href="../classes/eZ.Publish.API.Repository.Repository.html">\eZ\Publish\API\Repository\Repository</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\MVC\Symfony\Routing\UrlAliasRouter::$$repository</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24requestContext" id="$requestContext"> </a><div class="element clickable property protected $requestContext" data-toggle="collapse" data-target=".$requestContext .collapse">
+<h2>$requestContext</h2>
+<pre>$requestContext : <a href="http://php.net/manual/en/class.symfony%5Ccomponent%5Crouting%5Crequestcontext.php">\Symfony\Component\Routing\RequestContext</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\MVC\Symfony\Routing\UrlAliasRouter::$$requestContext</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24urlAliasService" id="$urlAliasService"> </a><div class="element clickable property protected $urlAliasService" data-toggle="collapse" data-target=".$urlAliasService .collapse">
+<h2>$urlAliasService</h2>
+<pre>$urlAliasService : <a href="../classes/eZ.Publish.API.Repository.URLAliasService.html">\eZ\Publish\API\Repository\URLAliasService</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\MVC\Symfony\Routing\UrlAliasRouter::$$urlAliasService</td>
+</tr></table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a name="URL_ALIAS_ROUTE_NAME" id="URL_ALIAS_ROUTE_NAME"> </a><div class="element clickable constant  URL_ALIAS_ROUTE_NAME" data-toggle="collapse" data-target=".URL_ALIAS_ROUTE_NAME .collapse">
+<h2>URL_ALIAS_ROUTE_NAME</h2>
+<pre>URL_ALIAS_ROUTE_NAME </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\Core\MVC\Symfony\Routing\UrlAliasRouter::URL_ALIAS_ROUTE_NAME</td>
+</tr></table>
+</div></div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:53:54+01:00.<br></footer></div>
+</div>
+</body>
+</html>

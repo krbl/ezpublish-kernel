@@ -1,0 +1,762 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \eZ\Publish\Core\Persistence\InMemory\LocationHandler</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Setups current handler instance with reference to Handler object that created it."><span class="description">Setups current handler instance with reference to Handler object that created it.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#changeMainLocation" title="changeMainLocation :: Changes main location of content identified by given $contentId to location identified by given $locationId"><span class="description">Changes main location of content identified by given $contentId to location identified by given $locationId</span><pre>changeMainLocation()</pre></a></li>
+<li class="method public "><a href="#copySubtree" title="copySubtree :: Copy location object identified by $sourceId, into destination identified by $destinationParentId."><span class="description">Copy location object identified by $sourceId, into destination identified by $destinationParentId.</span><pre>copySubtree()</pre></a></li>
+<li class="method public "><a href="#create" title="create :: Creates a new location rooted at $location-&gt;parentId."><span class="description">Creates a new location rooted at $location-&gt;parentId.</span><pre>create()</pre></a></li>
+<li class="method public "><a href="#createCustomUrlAlias" title="createCustomUrlAlias :: "><span class="description">createCustomUrlAlias()
+        </span><pre>createCustomUrlAlias()</pre></a></li>
+<li class="method public "><a href="#createUrlHistoryEntry" title="createUrlHistoryEntry :: "><span class="description">createUrlHistoryEntry()
+        </span><pre>createUrlHistoryEntry()</pre></a></li>
+<li class="method public "><a href="#delete" title="delete :: Removes a location from its $locationId (but not its descendants)
+Content which looses its main Location will get the first
+of its other Locations assigned as the new main Location."><span class="description">Removes a location from its $locationId (but not its descendants)
+Content which looses its main Location will get the first
+of its other Locations assigned as the new main Location.</span><pre>delete()</pre></a></li>
+<li class="method public "><a href="#getPath" title="getPath :: "><span class="description">getPath()
+        </span><pre>getPath()</pre></a></li>
+<li class="method public "><a href="#hide" title="hide :: Sets a location to be hidden, and it self + all children to invisible."><span class="description">Sets a location to be hidden, and it self + all children to invisible.</span><pre>hide()</pre></a></li>
+<li class="method public "><a href="#listUrlsForLocation" title="listUrlsForLocation :: "><span class="description">listUrlsForLocation()
+        </span><pre>listUrlsForLocation()</pre></a></li>
+<li class="method public "><a href="#load" title="load :: Loads the data for the location identified by $locationId."><span class="description">Loads the data for the location identified by $locationId.</span><pre>load()</pre></a></li>
+<li class="method public "><a href="#loadByParentId" title="loadByParentId :: Returns locations given a parent $locationId."><span class="description">Returns locations given a parent $locationId.</span><pre>loadByParentId()</pre></a></li>
+<li class="method public "><a href="#loadByRemoteId" title="loadByRemoteId :: Loads the data for the location identified by $remoteId."><span class="description">Loads the data for the location identified by $remoteId.</span><pre>loadByRemoteId()</pre></a></li>
+<li class="method public "><a href="#loadLocationsByContent" title="loadLocationsByContent :: Loads all locations for $contentId, optionally limited to a sub tree
+identified by $rootLocationId"><span class="description">Loads all locations for $contentId, optionally limited to a sub tree
+identified by $rootLocationId</span><pre>loadLocationsByContent()</pre></a></li>
+<li class="method public "><a href="#markSubtreeModified" title="markSubtreeModified :: Marks the given nodes and all ancestors as modified"><span class="description">Marks the given nodes and all ancestors as modified</span><pre>markSubtreeModified()</pre></a></li>
+<li class="method public "><a href="#move" title="move :: Moves location identified by $sourceId into new parent identified by $destinationParentId."><span class="description">Moves location identified by $sourceId into new parent identified by $destinationParentId.</span><pre>move()</pre></a></li>
+<li class="method public "><a href="#removeSubtree" title="removeSubtree :: Removes all Locations under and including $locationId."><span class="description">Removes all Locations under and including $locationId.</span><pre>removeSubtree()</pre></a></li>
+<li class="method public "><a href="#removeUrlsForLocation" title="removeUrlsForLocation :: "><span class="description">removeUrlsForLocation()
+        </span><pre>removeUrlsForLocation()</pre></a></li>
+<li class="method public "><a href="#setSectionForSubtree" title="setSectionForSubtree :: Set section on all content objects in the subtree."><span class="description">Set section on all content objects in the subtree.</span><pre>setSectionForSubtree()</pre></a></li>
+<li class="method public "><a href="#storeUrlAliasPath" title="storeUrlAliasPath :: "><span class="description">storeUrlAliasPath()
+        </span><pre>storeUrlAliasPath()</pre></a></li>
+<li class="method public "><a href="#swap" title="swap :: Swaps the content object being pointed to by a location object."><span class="description">Swaps the content object being pointed to by a location object.</span><pre>swap()</pre></a></li>
+<li class="method public "><a href="#unHide" title="unHide :: Sets a location to be unhidden, and self + children to visible unless a parent is hidding the tree."><span class="description">Sets a location to be unhidden, and self + children to visible unless a parent is hidding the tree.</span><pre>unHide()</pre></a></li>
+<li class="method public "><a href="#update" title="update :: Updates an existing location."><span class="description">Updates an existing location.</span><pre>update()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#getSubtreeLocations" title="getSubtreeLocations :: Get all subtree locations for the given location (including), sorted by path string"><span class="description">Get all subtree locations for the given location (including), sorted by path string</span><pre>getSubtreeLocations()</pre></a></li>
+<li class="nav-header private">» Private</li>
+<li class="method private "><a href="#getParentPathString" title="getParentPathString :: Returns parent path string for $pathString"><span class="description">Returns parent path string for $pathString</span><pre>getParentPathString()</pre></a></li>
+<li class="method private "><a href="#getPathIdentificationString" title="getPathIdentificationString :: Returns pathIdentificationString for provided location value object"><span class="description">Returns pathIdentificationString for provided location value object</span><pre>getPathIdentificationString()</pre></a></li>
+<li class="method private "><a href="#getStrippedContentName" title="getStrippedContentName :: Returns stripped content name from location value
+All downcase, special chars to underscores
+e.g."><span class="description">Returns stripped content name from location value
+All downcase, special chars to underscores
+e.g.</span><pre>getStrippedContentName()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24backend" title="$backend :: "><span class="description">$backend</span><pre>$backend</pre></a></li>
+<li class="property protected "><a href="#%24handler" title="$handler :: "><span class="description">$handler</span><pre>$handler</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  "><a href="#CHARS_ACCENT" title="CHARS_ACCENT :: "><span class="description">CHARS_ACCENT</span><pre>CHARS_ACCENT</pre></a></li>
+<li class="constant  "><a href="#CHARS_NOACCENT" title="CHARS_NOACCENT :: "><span class="description">CHARS_NOACCENT</span><pre>CHARS_NOACCENT</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CeZ%5CPublish%5CCore%5CPersistence%5CInMemory%5CLocationHandler" id="\eZ\Publish\Core\Persistence\InMemory\LocationHandler"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.InMemory.html">InMemory</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/eZ.Publish.Core.Persistence.InMemory.LocationHandler.html">LocationHandler</a>
+</li>
+</ul>
+<div href="../classes/eZ.Publish.Core.Persistence.InMemory.LocationHandler.html" class="element class">
+<p class="short_description"></p>
+<div class="details">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Setups current handler instance with reference to Handler object that created it.</h2>
+<pre>__construct(\eZ\Publish\Core\Persistence\InMemory\Handler $handler, \eZ\Publish\Core\Persistence\InMemory\Backend $backend) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$handler</h4>
+<code><a href="../classes/eZ.Publish.Core.Persistence.InMemory.Handler.html">\eZ\Publish\Core\Persistence\InMemory\Handler</a></code>
+</div>
+<div class="subelement argument">
+<h4>$backend</h4>
+<code><a href="../classes/eZ.Publish.Core.Persistence.InMemory.Backend.html">\eZ\Publish\Core\Persistence\InMemory\Backend</a></code><p>The storage engine backend</p></div>
+</div></div>
+</div>
+<a name="changeMainLocation" id="changeMainLocation"></a><div class="element clickable method public changeMainLocation" data-toggle="collapse" data-target=".changeMainLocation .collapse">
+<h2>Changes main location of content identified by given $contentId to location identified by given $locationId</h2>
+<pre>changeMainLocation(mixed $contentId, mixed $locationId) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$locationId</h4>
+<code>mixed</code>
+</div>
+</div></div>
+</div>
+<a name="copySubtree" id="copySubtree"></a><div class="element clickable method public copySubtree" data-toggle="collapse" data-target=".copySubtree .collapse">
+<h2>Copy location object identified by $sourceId, into destination identified by $destinationParentId.</h2>
+<pre>copySubtree(mixed $sourceId, mixed $destinationParentId) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Location.html">\eZ\Publish\SPI\Persistence\Content\Location</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Performs a deep copy of the location identified by $sourceId and all of
+its child locations, copying the most recent published content object
+for each location to a new content object without any additional version
+information. Relations are not copied. URLs are not touched at all.</p></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$sourceId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$destinationParentId</h4>
+<code>mixed</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If $sourceId or $destinationParentId are invalid</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Location.html">\eZ\Publish\SPI\Persistence\Content\Location</a></code>the newly created Location.</div>
+</div></div>
+</div>
+<a name="create" id="create"></a><div class="element clickable method public create" data-toggle="collapse" data-target=".create .collapse">
+<h2>Creates a new location rooted at $location-&gt;parentId.</h2>
+<pre>create(\eZ\Publish\SPI\Persistence\Content\Location\CreateStruct $locationStruct) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Location.html">\eZ\Publish\SPI\Persistence\Content\Location</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$locationStruct</h4>
+<code></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Location.html">\eZ\Publish\SPI\Persistence\Content\Location</a></code></div>
+</div></div>
+</div>
+<a name="createCustomUrlAlias" id="createCustomUrlAlias"></a><div class="element clickable method public createCustomUrlAlias" data-toggle="collapse" data-target=".createCustomUrlAlias .collapse">
+<h2>createCustomUrlAlias()
+        </h2>
+<pre>createCustomUrlAlias($alias, $locationId, $forwarding, $languageCode, $alwaysAvailable) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$alias</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$locationId</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$forwarding</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$languageCode</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$alwaysAvailable</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="createUrlHistoryEntry" id="createUrlHistoryEntry"></a><div class="element clickable method public createUrlHistoryEntry" data-toggle="collapse" data-target=".createUrlHistoryEntry .collapse">
+<h2>createUrlHistoryEntry()
+        </h2>
+<pre>createUrlHistoryEntry($historicUrl, $locationId) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$historicUrl</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$locationId</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="delete" id="delete"></a><div class="element clickable method public delete" data-toggle="collapse" data-target=".delete .collapse">
+<h2>Removes a location from its $locationId (but not its descendants)
+Content which looses its main Location will get the first
+of its other Locations assigned as the new main Location.</h2>
+<pre>delete(mixed $locationId) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>If content has no location left, it's removed from backend</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$locationId</h4>
+<code>mixed</code>
+</div>
+</div></div>
+</div>
+<a name="getPath" id="getPath"></a><div class="element clickable method public getPath" data-toggle="collapse" data-target=".getPath .collapse">
+<h2>getPath()
+        </h2>
+<pre>getPath($locationId, $language) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$locationId</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$language</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="hide" id="hide"></a><div class="element clickable method public hide" data-toggle="collapse" data-target=".hide .collapse">
+<h2>Sets a location to be hidden, and it self + all children to invisible.</h2>
+<pre>hide(mixed $id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>mixed</code><p>Location ID</p></div>
+</div></div>
+</div>
+<a name="listUrlsForLocation" id="listUrlsForLocation"></a><div class="element clickable method public listUrlsForLocation" data-toggle="collapse" data-target=".listUrlsForLocation .collapse">
+<h2>listUrlsForLocation()
+        </h2>
+<pre>listUrlsForLocation($locationId, $urlType) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$locationId</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$urlType</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="load" id="load"></a><div class="element clickable method public load" data-toggle="collapse" data-target=".load .collapse">
+<h2>Loads the data for the location identified by $locationId.</h2>
+<pre>load(int $locationId) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Location.html">\eZ\Publish\SPI\Persistence\Content\Location</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$locationId</h4>
+<code>int</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Location.html">\eZ\Publish\SPI\Persistence\Content\Location</a></code></div>
+</div></div>
+</div>
+<a name="loadByParentId" id="loadByParentId"></a><div class="element clickable method public loadByParentId" data-toggle="collapse" data-target=".loadByParentId .collapse">
+<h2>Returns locations given a parent $locationId.</h2>
+<pre>loadByParentId(mixed $locationId) : <a href="Publish.SPI.Persistence.Content.Location.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CLocation">\eZ\Publish\SPI\Persistence\Content\Location[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>todo</th>
+<td>Requires approbation</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$locationId</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.Content.Location.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CLocation">\eZ\Publish\SPI\Persistence\Content\Location[]</a></code></div>
+</div></div>
+</div>
+<a name="loadByRemoteId" id="loadByRemoteId"></a><div class="element clickable method public loadByRemoteId" data-toggle="collapse" data-target=".loadByRemoteId .collapse">
+<h2>Loads the data for the location identified by $remoteId.</h2>
+<pre>loadByRemoteId(string $remoteId) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Location.html">\eZ\Publish\SPI\Persistence\Content\Location</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$remoteId</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Location.html">\eZ\Publish\SPI\Persistence\Content\Location</a></code></div>
+</div></div>
+</div>
+<a name="loadLocationsByContent" id="loadLocationsByContent"></a><div class="element clickable method public loadLocationsByContent" data-toggle="collapse" data-target=".loadLocationsByContent .collapse">
+<h2>Loads all locations for $contentId, optionally limited to a sub tree
+identified by $rootLocationId</h2>
+<pre>loadLocationsByContent(int $contentId, int $rootLocationId) : <a href="Publish.SPI.Persistence.Content.Location.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CLocation">\eZ\Publish\SPI\Persistence\Content\Location[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>todo</th>
+<td>Add support for $rootLocationId when not child of node 1</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentId</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$rootLocationId</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.Content.Location.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CLocation">\eZ\Publish\SPI\Persistence\Content\Location[]</a></code></div>
+</div></div>
+</div>
+<a name="markSubtreeModified" id="markSubtreeModified"></a><div class="element clickable method public markSubtreeModified" data-toggle="collapse" data-target=".markSubtreeModified .collapse">
+<h2>Marks the given nodes and all ancestors as modified</h2>
+<pre>markSubtreeModified(int | string $locationId, int $timestamp) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Optionally a time stamp with the modification date may be specified,
+otherwise the current time is used.</p></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$locationId</h4>
+<code>intstring</code>
+</div>
+<div class="subelement argument">
+<h4>$timestamp</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="move" id="move"></a><div class="element clickable method public move" data-toggle="collapse" data-target=".move .collapse">
+<h2>Moves location identified by $sourceId into new parent identified by $destinationParentId.</h2>
+<pre>move(mixed $sourceId, mixed $destinationParentId) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Performs a full move of the location identified by $sourceId to a new
+destination, identified by $destinationParentId. Relations do not need
+to be updated, since they refer to Content. URLs are not touched.</p></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$sourceId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$destinationParentId</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="removeSubtree" id="removeSubtree"></a><div class="element clickable method public removeSubtree" data-toggle="collapse" data-target=".removeSubtree .collapse">
+<h2>Removes all Locations under and including $locationId.</h2>
+<pre>removeSubtree(mixed $locationId) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Performs a recursive delete on the location identified by $locationId,
+including all of its child locations. Content which is not referred to
+by any other location is automatically removed. Content which looses its
+main Location will get the first of its other Locations assigned as the
+new main Location.</p></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$locationId</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="removeUrlsForLocation" id="removeUrlsForLocation"></a><div class="element clickable method public removeUrlsForLocation" data-toggle="collapse" data-target=".removeUrlsForLocation .collapse">
+<h2>removeUrlsForLocation()
+        </h2>
+<pre>removeUrlsForLocation($locationId, \array $urlIdentifier) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$locationId</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$urlIdentifier</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="setSectionForSubtree" id="setSectionForSubtree"></a><div class="element clickable method public setSectionForSubtree" data-toggle="collapse" data-target=".setSectionForSubtree .collapse">
+<h2>Set section on all content objects in the subtree.</h2>
+<pre>setSectionForSubtree(mixed $locationId, mixed $sectionId) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Only main locations will be updated</p></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$locationId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$sectionId</h4>
+<code>mixed</code>
+</div>
+</div></div>
+</div>
+<a name="storeUrlAliasPath" id="storeUrlAliasPath"></a><div class="element clickable method public storeUrlAliasPath" data-toggle="collapse" data-target=".storeUrlAliasPath .collapse">
+<h2>storeUrlAliasPath()
+        </h2>
+<pre>storeUrlAliasPath($path, $locationId, $languageCode, $alwaysAvailable) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$path</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$locationId</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$languageCode</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$alwaysAvailable</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="swap" id="swap"></a><div class="element clickable method public swap" data-toggle="collapse" data-target=".swap .collapse">
+<h2>Swaps the content object being pointed to by a location object.</h2>
+<pre>swap(mixed $locationId1, mixed $locationId2) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Make the location identified by $locationId1 refer to the Content
+referred to by $locationId2 and vice versa.</p></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$locationId1</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$locationId2</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="unHide" id="unHide"></a><div class="element clickable method public unHide" data-toggle="collapse" data-target=".unHide .collapse">
+<h2>Sets a location to be unhidden, and self + children to visible unless a parent is hidding the tree.</h2>
+<pre>unHide(mixed $id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>If not make sure only children down to first hidden node is marked visible.</p></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>mixed</code>
+</div>
+</div></div>
+</div>
+<a name="update" id="update"></a><div class="element clickable method public update" data-toggle="collapse" data-target=".update .collapse">
+<h2>Updates an existing location.</h2>
+<pre>update(\eZ\Publish\SPI\Persistence\Content\Location\UpdateStruct $location, int $locationId) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\eZ\Publish\SPI\Persistence\Content\Location\Handler</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$location</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Location.UpdateStruct.html">\eZ\Publish\SPI\Persistence\Content\Location\UpdateStruct</a></code>
+</div>
+<div class="subelement argument">
+<h4>$locationId</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="getSubtreeLocations" id="getSubtreeLocations"></a><div class="element clickable method protected getSubtreeLocations" data-toggle="collapse" data-target=".getSubtreeLocations .collapse">
+<h2>Get all subtree locations for the given location (including), sorted by path string</h2>
+<pre>getSubtreeLocations($location, array $locations) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$location</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$locations</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="getParentPathString" id="getParentPathString"></a><div class="element clickable method private getParentPathString" data-toggle="collapse" data-target=".getParentPathString .collapse">
+<h2>Returns parent path string for $pathString</h2>
+<pre>getParentPathString(string $pathString) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$pathString</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getPathIdentificationString" id="getPathIdentificationString"></a><div class="element clickable method private getPathIdentificationString" data-toggle="collapse" data-target=".getPathIdentificationString .collapse">
+<h2>Returns pathIdentificationString for provided location value object</h2>
+<pre>getPathIdentificationString(\eZ\Publish\SPI\Persistence\Content\Location $vo) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$vo</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Location.html">\eZ\Publish\SPI\Persistence\Content\Location</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getStrippedContentName" id="getStrippedContentName"></a><div class="element clickable method private getStrippedContentName" data-toggle="collapse" data-target=".getStrippedContentName .collapse">
+<h2>Returns stripped content name from location value
+All downcase, special chars to underscores
+e.g.</h2>
+<pre>getStrippedContentName(\eZ\Publish\SPI\Persistence\Content\Location $vo) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>my_content_name</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$vo</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Location.html">\eZ\Publish\SPI\Persistence\Content\Location</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24backend" id="$backend"> </a><div class="element clickable property protected $backend" data-toggle="collapse" data-target=".$backend .collapse">
+<h2>$backend</h2>
+<pre>$backend : <a href="../classes/eZ.Publish.Core.Persistence.InMemory.Backend.html">\eZ\Publish\Core\Persistence\InMemory\Backend</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24handler" id="$handler"> </a><div class="element clickable property protected $handler" data-toggle="collapse" data-target=".$handler .collapse">
+<h2>$handler</h2>
+<pre>$handler : <a href="../classes/eZ.Publish.Core.Persistence.InMemory.Handler.html">\eZ\Publish\Core\Persistence\InMemory\Handler</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a name="CHARS_ACCENT" id="CHARS_ACCENT"> </a><div class="element clickable constant  CHARS_ACCENT" data-toggle="collapse" data-target=".CHARS_ACCENT .collapse">
+<h2>CHARS_ACCENT</h2>
+<pre>CHARS_ACCENT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="CHARS_NOACCENT" id="CHARS_NOACCENT"> </a><div class="element clickable constant  CHARS_NOACCENT" data-toggle="collapse" data-target=".CHARS_NOACCENT .collapse">
+<h2>CHARS_NOACCENT</h2>
+<pre>CHARS_NOACCENT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:53:39+01:00.<br></footer></div>
+</div>
+</body>
+</html>

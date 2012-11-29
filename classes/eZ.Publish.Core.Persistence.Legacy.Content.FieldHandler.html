@@ -1,0 +1,275 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \eZ\Publish\Core\Persistence\Legacy\Content\FieldHandler</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Creates a new Field Handler"><span class="description">Creates a new Field Handler</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#createExistingFieldInNewVersion" title="createExistingFieldInNewVersion :: Creates an existing field in a new version, no new ID is generated"><span class="description">Creates an existing field in a new version, no new ID is generated</span><pre>createExistingFieldInNewVersion()</pre></a></li>
+<li class="method public "><a href="#createExistingFieldsInNewVersion" title="createExistingFieldsInNewVersion :: Creates existing fields in a new version for $content"><span class="description">Creates existing fields in a new version for $content</span><pre>createExistingFieldsInNewVersion()</pre></a></li>
+<li class="method public "><a href="#createNewFields" title="createNewFields :: Creates new fields in the database from $content"><span class="description">Creates new fields in the database from $content</span><pre>createNewFields()</pre></a></li>
+<li class="method public "><a href="#deleteFields" title="deleteFields :: Deletes the fields for $contentId in $versionInfo from the database"><span class="description">Deletes the fields for $contentId in $versionInfo from the database</span><pre>deleteFields()</pre></a></li>
+<li class="method public "><a href="#loadExternalFieldData" title="loadExternalFieldData :: Performs external loads for the fields in $content"><span class="description">Performs external loads for the fields in $content</span><pre>loadExternalFieldData()</pre></a></li>
+<li class="method public "><a href="#updateFields" title="updateFields :: Updates the fields in for content identified by $contentId and $versionNo in the database in respect to $updateStruct"><span class="description">Updates the fields in for content identified by $contentId and $versionNo in the database in respect to $updateStruct</span><pre>updateFields()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#createNewField" title="createNewField :: Creates a new field in the database"><span class="description">Creates a new field in the database</span><pre>createNewField()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24contentGateway" title="$contentGateway :: Content Gateway"><span class="description">Content Gateway</span><pre>$contentGateway</pre></a></li>
+<li class="property protected "><a href="#%24mapper" title="$mapper :: Content Mapper"><span class="description">Content Mapper</span><pre>$mapper</pre></a></li>
+<li class="property protected "><a href="#%24storageHandler" title="$storageHandler :: Storage Handler"><span class="description">Storage Handler</span><pre>$storageHandler</pre></a></li>
+<li class="property protected "><a href="#%24typeGateway" title="$typeGateway :: Content Type Gateway"><span class="description">Content Type Gateway</span><pre>$typeGateway</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CeZ%5CPublish%5CCore%5CPersistence%5CLegacy%5CContent%5CFieldHandler" id="\eZ\Publish\Core\Persistence\Legacy\Content\FieldHandler"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.FieldHandler.html">FieldHandler</a>
+</li>
+</ul>
+<div href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.FieldHandler.html" class="element class">
+<p class="short_description">Field Handler.</p>
+<div class="details">
+<p class="long_description"></p>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Creates a new Field Handler</h2>
+<pre>__construct(\eZ\Publish\Core\Persistence\Legacy\Content\Gateway $contentGateway, \eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway $typeGateway, \eZ\Publish\Core\Persistence\Legacy\Content\Mapper $mapper, \eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler $storageHandler) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentGateway</h4>
+<code><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Gateway.html">\eZ\Publish\Core\Persistence\Legacy\Content\Gateway</a></code>
+</div>
+<div class="subelement argument">
+<h4>$typeGateway</h4>
+<code><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Type.Gateway.html">\eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway</a></code>
+</div>
+<div class="subelement argument">
+<h4>$mapper</h4>
+<code><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Mapper.html">\eZ\Publish\Core\Persistence\Legacy\Content\Mapper</a></code>
+</div>
+<div class="subelement argument">
+<h4>$storageHandler</h4>
+<code><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.StorageHandler.html">\eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler</a></code>
+</div>
+</div></div>
+</div>
+<a name="createExistingFieldInNewVersion" id="createExistingFieldInNewVersion"></a><div class="element clickable method public createExistingFieldInNewVersion" data-toggle="collapse" data-target=".createExistingFieldInNewVersion .collapse">
+<h2>Creates an existing field in a new version, no new ID is generated</h2>
+<pre>createExistingFieldInNewVersion(\eZ\Publish\SPI\Persistence\Content\Field $field, \eZ\Publish\SPI\Persistence\Content $content) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$field</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Field.html">\eZ\Publish\SPI\Persistence\Content\Field</a></code>
+</div>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></code>
+</div>
+</div></div>
+</div>
+<a name="createExistingFieldsInNewVersion" id="createExistingFieldsInNewVersion"></a><div class="element clickable method public createExistingFieldsInNewVersion" data-toggle="collapse" data-target=".createExistingFieldsInNewVersion .collapse">
+<h2>Creates existing fields in a new version for $content</h2>
+<pre>createExistingFieldsInNewVersion(\eZ\Publish\SPI\Persistence\Content $content) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></code>
+</div>
+</div></div>
+</div>
+<a name="createNewFields" id="createNewFields"></a><div class="element clickable method public createNewFields" data-toggle="collapse" data-target=".createNewFields .collapse">
+<h2>Creates new fields in the database from $content</h2>
+<pre>createNewFields(\eZ\Publish\SPI\Persistence\Content $content) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></code>
+</div>
+</div></div>
+</div>
+<a name="deleteFields" id="deleteFields"></a><div class="element clickable method public deleteFields" data-toggle="collapse" data-target=".deleteFields .collapse">
+<h2>Deletes the fields for $contentId in $versionInfo from the database</h2>
+<pre>deleteFields(int $contentId, \eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentId</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$versionInfo</h4>
+<code>\eZ\Publish\Core\Persistence\Legacy\Content\eZ\Publish\SPI\Persistence\Content\VersionInfo</code>
+</div>
+</div></div>
+</div>
+<a name="loadExternalFieldData" id="loadExternalFieldData"></a><div class="element clickable method public loadExternalFieldData" data-toggle="collapse" data-target=".loadExternalFieldData .collapse">
+<h2>Performs external loads for the fields in $content</h2>
+<pre>loadExternalFieldData(\eZ\Publish\SPI\Persistence\Content $content) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></code>
+</div>
+</div></div>
+</div>
+<a name="updateFields" id="updateFields"></a><div class="element clickable method public updateFields" data-toggle="collapse" data-target=".updateFields .collapse">
+<h2>Updates the fields in for content identified by $contentId and $versionNo in the database in respect to $updateStruct</h2>
+<pre>updateFields(<a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a> $content, \eZ\Publish\SPI\Persistence\Content\UpdateStruct $updateStruct) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></code>
+</div>
+<div class="subelement argument">
+<h4>$updateStruct</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.UpdateStruct.html">\eZ\Publish\SPI\Persistence\Content\UpdateStruct</a></code>
+</div>
+</div></div>
+</div>
+<a name="createNewField" id="createNewField"></a><div class="element clickable method protected createNewField" data-toggle="collapse" data-target=".createNewField .collapse">
+<h2>Creates a new field in the database</h2>
+<pre>createNewField(\eZ\Publish\SPI\Persistence\Content\Field $field, \eZ\Publish\SPI\Persistence\Content $content) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Used by self::createNewFields() and self::updateFields()</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$field</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Field.html">\eZ\Publish\SPI\Persistence\Content\Field</a></code>
+</div>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></code><p>return void</p></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24contentGateway" id="$contentGateway"> </a><div class="element clickable property protected $contentGateway" data-toggle="collapse" data-target=".$contentGateway .collapse">
+<h2>Content Gateway</h2>
+<pre>$contentGateway : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Gateway.html">\eZ\Publish\Core\Persistence\Legacy\Content\Gateway</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24mapper" id="$mapper"> </a><div class="element clickable property protected $mapper" data-toggle="collapse" data-target=".$mapper .collapse">
+<h2>Content Mapper</h2>
+<pre>$mapper : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Mapper.html">\eZ\Publish\Core\Persistence\Legacy\Content\Mapper</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24storageHandler" id="$storageHandler"> </a><div class="element clickable property protected $storageHandler" data-toggle="collapse" data-target=".$storageHandler .collapse">
+<h2>Storage Handler</h2>
+<pre>$storageHandler : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.StorageHandler.html">\eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24typeGateway" id="$typeGateway"> </a><div class="element clickable property protected $typeGateway" data-toggle="collapse" data-target=".$typeGateway .collapse">
+<h2>Content Type Gateway</h2>
+<pre>$typeGateway : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Type.Gateway.html">\eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:53:33+01:00.<br></footer></div>
+</div>
+</body>
+</html>

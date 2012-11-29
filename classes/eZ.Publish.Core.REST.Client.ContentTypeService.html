@@ -1,0 +1,864 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \eZ\Publish\Core\REST\Client\ContentTypeService</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#addFieldDefinition" title="addFieldDefinition :: Adds a new field definition to an existing content type."><span class="description">Adds a new field definition to an existing content type.</span><pre>addFieldDefinition()</pre></a></li>
+<li class="method public "><a href="#assignContentTypeGroup" title="assignContentTypeGroup :: assign a content type to a content type group."><span class="description">assign a content type to a content type group.</span><pre>assignContentTypeGroup()</pre></a></li>
+<li class="method public "><a href="#copyContentType" title="copyContentType :: Copy Type incl fields and groupIds to a new Type object"><span class="description">Copy Type incl fields and groupIds to a new Type object</span><pre>copyContentType()</pre></a></li>
+<li class="method public "><a href="#createContentType" title="createContentType :: Create a Content Type object."><span class="description">Create a Content Type object.</span><pre>createContentType()</pre></a></li>
+<li class="method public "><a href="#createContentTypeDraft" title="createContentTypeDraft :: Creates a draft from an existing content type."><span class="description">Creates a draft from an existing content type.</span><pre>createContentTypeDraft()</pre></a></li>
+<li class="method public "><a href="#createContentTypeGroup" title="createContentTypeGroup :: Create a Content Type Group object"><span class="description">Create a Content Type Group object</span><pre>createContentTypeGroup()</pre></a></li>
+<li class="method public "><a href="#deleteContentType" title="deleteContentType :: Delete a Content Type object."><span class="description">Delete a Content Type object.</span><pre>deleteContentType()</pre></a></li>
+<li class="method public "><a href="#deleteContentTypeGroup" title="deleteContentTypeGroup :: Delete a Content Type Group."><span class="description">Delete a Content Type Group.</span><pre>deleteContentTypeGroup()</pre></a></li>
+<li class="method public "><a href="#loadContentType" title="loadContentType :: Get a Content Type object by id"><span class="description">Get a Content Type object by id</span><pre>loadContentType()</pre></a></li>
+<li class="method public "><a href="#loadContentTypeByIdentifier" title="loadContentTypeByIdentifier :: Get a Content Type object by identifier"><span class="description">Get a Content Type object by identifier</span><pre>loadContentTypeByIdentifier()</pre></a></li>
+<li class="method public "><a href="#loadContentTypeByRemoteId" title="loadContentTypeByRemoteId :: Get a Content Type object by id"><span class="description">Get a Content Type object by id</span><pre>loadContentTypeByRemoteId()</pre></a></li>
+<li class="method public "><a href="#loadContentTypeDraft" title="loadContentTypeDraft :: Get a Content Type object draft by id"><span class="description">Get a Content Type object draft by id</span><pre>loadContentTypeDraft()</pre></a></li>
+<li class="method public "><a href="#loadContentTypeGroup" title="loadContentTypeGroup :: Get a Content Type Group object by id"><span class="description">Get a Content Type Group object by id</span><pre>loadContentTypeGroup()</pre></a></li>
+<li class="method public "><a href="#loadContentTypeGroupByIdentifier" title="loadContentTypeGroupByIdentifier :: Get a Content Type Group object by identifier"><span class="description">Get a Content Type Group object by identifier</span><pre>loadContentTypeGroupByIdentifier()</pre></a></li>
+<li class="method public "><a href="#loadContentTypeGroups" title="loadContentTypeGroups :: Get all Content Type Groups"><span class="description">Get all Content Type Groups</span><pre>loadContentTypeGroups()</pre></a></li>
+<li class="method public "><a href="#loadContentTypes" title="loadContentTypes :: Get Content Type objects which belong to the given content type group"><span class="description">Get Content Type objects which belong to the given content type group</span><pre>loadContentTypes()</pre></a></li>
+<li class="method public "><a href="#loadFieldDefinition" title="loadFieldDefinition :: Loads a single field definition by $fieldDefinitionId"><span class="description">Loads a single field definition by $fieldDefinitionId</span><pre>loadFieldDefinition()</pre></a></li>
+<li class="method public "><a href="#loadFieldDefinitionList" title="loadFieldDefinitionList :: Loads the FieldDefinitionList stored at $fieldDefinitionListReference"><span class="description">Loads the FieldDefinitionList stored at $fieldDefinitionListReference</span><pre>loadFieldDefinitionList()</pre></a></li>
+<li class="method public "><a href="#newContentTypeCreateStruct" title="newContentTypeCreateStruct :: instanciates a new content type create class"><span class="description">instanciates a new content type create class</span><pre>newContentTypeCreateStruct()</pre></a></li>
+<li class="method public "><a href="#newContentTypeGroupCreateStruct" title="newContentTypeGroupCreateStruct :: instanciates a new content type group create class"><span class="description">instanciates a new content type group create class</span><pre>newContentTypeGroupCreateStruct()</pre></a></li>
+<li class="method public "><a href="#newContentTypeGroupUpdateStruct" title="newContentTypeGroupUpdateStruct :: instanciates a new content type update struct"><span class="description">instanciates a new content type update struct</span><pre>newContentTypeGroupUpdateStruct()</pre></a></li>
+<li class="method public "><a href="#newContentTypeUpdateStruct" title="newContentTypeUpdateStruct :: instanciates a new content type update struct"><span class="description">instanciates a new content type update struct</span><pre>newContentTypeUpdateStruct()</pre></a></li>
+<li class="method public "><a href="#newFieldDefinitionCreateStruct" title="newFieldDefinitionCreateStruct :: instanciates a field definition create struct"><span class="description">instanciates a field definition create struct</span><pre>newFieldDefinitionCreateStruct()</pre></a></li>
+<li class="method public "><a href="#newFieldDefinitionUpdateStruct" title="newFieldDefinitionUpdateStruct :: instanciates a field definition update class"><span class="description">instanciates a field definition update class</span><pre>newFieldDefinitionUpdateStruct()</pre></a></li>
+<li class="method public "><a href="#publishContentTypeDraft" title="publishContentTypeDraft :: Publish the content type and update content objects."><span class="description">Publish the content type and update content objects.</span><pre>publishContentTypeDraft()</pre></a></li>
+<li class="method public "><a href="#removeFieldDefinition" title="removeFieldDefinition :: Remove a field definition from an existing Type."><span class="description">Remove a field definition from an existing Type.</span><pre>removeFieldDefinition()</pre></a></li>
+<li class="method public "><a href="#setSession" title="setSession :: Set session ID"><span class="description">Set session ID</span><pre>setSession()</pre></a></li>
+<li class="method public "><a href="#unassignContentTypeGroup" title="unassignContentTypeGroup :: Unassign a content type from a group."><span class="description">Unassign a content type from a group.</span><pre>unassignContentTypeGroup()</pre></a></li>
+<li class="method public "><a href="#updateContentTypeDraft" title="updateContentTypeDraft :: Update a Content Type object"><span class="description">Update a Content Type object</span><pre>updateContentTypeDraft()</pre></a></li>
+<li class="method public "><a href="#updateContentTypeGroup" title="updateContentTypeGroup :: Update a Content Type Group object"><span class="description">Update a Content Type Group object</span><pre>updateContentTypeGroup()</pre></a></li>
+<li class="method public "><a href="#updateFieldDefinition" title="updateFieldDefinition :: Update a field definition"><span class="description">Update a field definition</span><pre>updateFieldDefinition()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header private">» Private</li>
+<li class="property private "><a href="#%24client" title="$client :: "><span class="description">$client</span><pre>$client</pre></a></li>
+<li class="property private "><a href="#%24contentService" title="$contentService :: "><span class="description">$contentService</span><pre>$contentService</pre></a></li>
+<li class="property private "><a href="#%24inputDispatcher" title="$inputDispatcher :: "><span class="description">$inputDispatcher</span><pre>$inputDispatcher</pre></a></li>
+<li class="property private "><a href="#%24outputVisitor" title="$outputVisitor :: "><span class="description">$outputVisitor</span><pre>$outputVisitor</pre></a></li>
+<li class="property private "><a href="#%24urlHandler" title="$urlHandler :: "><span class="description">$urlHandler</span><pre>$urlHandler</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CeZ%5CPublish%5CCore%5CREST%5CClient%5CContentTypeService" id="\eZ\Publish\Core\REST\Client\ContentTypeService"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.REST.html">REST</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.REST.Client.html">Client</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/eZ.Publish.Core.REST.Client.ContentTypeService.html">ContentTypeService</a>
+</li>
+</ul>
+<div href="../classes/eZ.Publish.Core.REST.Client.ContentTypeService.html" class="element class">
+<p class="short_description"></p>
+<div class="details">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>example</th>
+<td>Examples/contenttype.php</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/eZ.Publish.API.Repository.html">eZ\Publish\API\Repository</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct(\eZ\Publish\Core\REST\Client\HttpClient $client, \eZ\Publish\Core\REST\Common\Input\Dispatcher $inputDispatcher, \eZ\Publish\Core\REST\Common\Output\Visitor $outputVisitor, \eZ\Publish\Core\REST\Common\UrlHandler $urlHandler) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$client</h4>
+<code><a href="../classes/eZ.Publish.Core.REST.Client.HttpClient.html">\eZ\Publish\Core\REST\Client\HttpClient</a></code>
+</div>
+<div class="subelement argument">
+<h4>$inputDispatcher</h4>
+<code><a href="../classes/eZ.Publish.Core.REST.Common.Input.Dispatcher.html">\eZ\Publish\Core\REST\Common\Input\Dispatcher</a></code>
+</div>
+<div class="subelement argument">
+<h4>$outputVisitor</h4>
+<code><a href="../classes/eZ.Publish.Core.REST.Common.Output.Visitor.html">\eZ\Publish\Core\REST\Common\Output\Visitor</a></code>
+</div>
+<div class="subelement argument">
+<h4>$urlHandler</h4>
+<code><a href="../classes/eZ.Publish.Core.REST.Common.UrlHandler.html">\eZ\Publish\Core\REST\Common\UrlHandler</a></code>
+</div>
+</div></div>
+</div>
+<a name="addFieldDefinition" id="addFieldDefinition"></a><div class="element clickable method public addFieldDefinition" data-toggle="collapse" data-target=".addFieldDefinition .collapse">
+<h2>Adds a new field definition to an existing content type.</h2>
+<pre>addFieldDefinition(\eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft $contentTypeDraft, \eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionCreateStruct $fieldDefinitionCreateStruct) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>The content type must be in state DRAFT.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeDraft</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeDraft.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft</a></code>
+</div>
+<div class="subelement argument">
+<h4>$fieldDefinitionCreateStruct</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.FieldDefinitionCreateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionCreateStruct</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
+<td>if the identifier in already exists in the content type</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>if the user is not allowed to edit a content type</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="assignContentTypeGroup" id="assignContentTypeGroup"></a><div class="element clickable method public assignContentTypeGroup" data-toggle="collapse" data-target=".assignContentTypeGroup .collapse">
+<h2>assign a content type to a content type group.</h2>
+<pre>assignContentTypeGroup(\eZ\Publish\API\Repository\Values\ContentType\ContentType $contentType, \eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup $contentTypeGroup) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentType</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></code>
+</div>
+<div class="subelement argument">
+<h4>$contentTypeGroup</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroup.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>if the user is not allowed to unlink a content type</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
+<td>If the content type is already assigned the given group</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="copyContentType" id="copyContentType"></a><div class="element clickable method public copyContentType" data-toggle="collapse" data-target=".copyContentType .collapse">
+<h2>Copy Type incl fields and groupIds to a new Type object</h2>
+<pre>copyContentType(\eZ\Publish\API\Repository\Values\ContentType\ContentType $contentType, \eZ\Publish\API\Repository\Values\User\User $user) : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>New Type will have $userId as creator / modifier, created / modified should be updated with current time,
+updated remoteId and identifier should be appended with '_' + unique string.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentType</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></code>
+</div>
+<div class="subelement argument">
+<h4>$user</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.User.User.html">\eZ\Publish\API\Repository\Values\User\User</a></code><p>if null the current user is used</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>if the user is not allowed to copy a content type</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></code></div>
+</div></div>
+</div>
+<a name="createContentType" id="createContentType"></a><div class="element clickable method public createContentType" data-toggle="collapse" data-target=".createContentType .collapse">
+<h2>Create a Content Type object.</h2>
+<pre>createContentType(\eZ\Publish\API\Repository\Values\ContentType\ContentTypeCreateStruct $contentTypeCreateStruct, \array $contentTypeGroups) : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeDraft.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>The content type is created in the state STATUS_DRAFT.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeCreateStruct</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeCreateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeCreateStruct</a></code>
+</div>
+<div class="subelement argument">
+<h4>$contentTypeGroups</h4>
+<code>array</code><p>Required array of {@link ContentTypeGroup} to link type with (must contain one)</p>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
+<td>If the identifier or remoteId in the content type create struct already exists or there is a dublicate field identifier</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeDraft.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft</a></code></div>
+</div></div>
+</div>
+<a name="createContentTypeDraft" id="createContentTypeDraft"></a><div class="element clickable method public createContentTypeDraft" data-toggle="collapse" data-target=".createContentTypeDraft .collapse">
+<h2>Creates a draft from an existing content type.</h2>
+<pre>createContentTypeDraft(\eZ\Publish\API\Repository\Values\ContentType\ContentType $contentType) : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeDraft.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This is a complete copy of the content
+type wiich has the state STATUS_DRAFT.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentType</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>if the user is not allowed to edit a content type</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.BadStateException.html">\eZ\Publish\API\Repository\Exceptions\BadStateException</a></code></th>
+<td>If there is already a draft assigned to another user</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeDraft.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft</a></code></div>
+</div></div>
+</div>
+<a name="createContentTypeGroup" id="createContentTypeGroup"></a><div class="element clickable method public createContentTypeGroup" data-toggle="collapse" data-target=".createContentTypeGroup .collapse">
+<h2>Create a Content Type Group object</h2>
+<pre>createContentTypeGroup(\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupCreateStruct $contentTypeGroupCreateStruct) : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroup.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeGroupCreateStruct</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroupCreateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupCreateStruct</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>if the user is not allowed to create a content type group</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
+<td>If a group with the same identifier already exists</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroup.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup</a></code></div>
+</div></div>
+</div>
+<a name="deleteContentType" id="deleteContentType"></a><div class="element clickable method public deleteContentType" data-toggle="collapse" data-target=".deleteContentType .collapse">
+<h2>Delete a Content Type object.</h2>
+<pre>deleteContentType(\eZ\Publish\API\Repository\Values\ContentType\ContentType $contentType) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Deletes a content type if it has no instances</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentType</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.BadStateException.html">\eZ\Publish\API\Repository\Exceptions\BadStateException</a></code></th>
+<td>If there exist content objects of this type</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>if the user is not allowed to delete a content type</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="deleteContentTypeGroup" id="deleteContentTypeGroup"></a><div class="element clickable method public deleteContentTypeGroup" data-toggle="collapse" data-target=".deleteContentTypeGroup .collapse">
+<h2>Delete a Content Type Group.</h2>
+<pre>deleteContentTypeGroup(\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup $contentTypeGroup) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This method only deletes an content type group which has content types without any content instances</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeGroup</h4>
+<code></code><p>\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup</p>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>if the user is not allowed to delete a content type group</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
+<td>If a to be deleted content type has instances</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="loadContentType" id="loadContentType"></a><div class="element clickable method public loadContentType" data-toggle="collapse" data-target=".loadContentType .collapse">
+<h2>Get a Content Type object by id</h2>
+<pre>loadContentType(int $contentTypeId) : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeId</h4>
+<code>int</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If a content type with the given id and status DEFINED can not be found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></code></div>
+</div></div>
+</div>
+<a name="loadContentTypeByIdentifier" id="loadContentTypeByIdentifier"></a><div class="element clickable method public loadContentTypeByIdentifier" data-toggle="collapse" data-target=".loadContentTypeByIdentifier .collapse">
+<h2>Get a Content Type object by identifier</h2>
+<pre>loadContentTypeByIdentifier(string $identifier) : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$identifier</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If content type with the given identifier and status DEFINED can not be found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></code></div>
+</div></div>
+</div>
+<a name="loadContentTypeByRemoteId" id="loadContentTypeByRemoteId"></a><div class="element clickable method public loadContentTypeByRemoteId" data-toggle="collapse" data-target=".loadContentTypeByRemoteId .collapse">
+<h2>Get a Content Type object by id</h2>
+<pre>loadContentTypeByRemoteId(string $remoteId) : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$remoteId</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If content type with the given remote id and status DEFINED can not be found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></code></div>
+</div></div>
+</div>
+<a name="loadContentTypeDraft" id="loadContentTypeDraft"></a><div class="element clickable method public loadContentTypeDraft" data-toggle="collapse" data-target=".loadContentTypeDraft .collapse">
+<h2>Get a Content Type object draft by id</h2>
+<pre>loadContentTypeDraft(int $contentTypeId) : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeDraft.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeId</h4>
+<code>int</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If the content type draft owned by the current user can not be found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeDraft.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft</a></code></div>
+</div></div>
+</div>
+<a name="loadContentTypeGroup" id="loadContentTypeGroup"></a><div class="element clickable method public loadContentTypeGroup" data-toggle="collapse" data-target=".loadContentTypeGroup .collapse">
+<h2>Get a Content Type Group object by id</h2>
+<pre>loadContentTypeGroup(int $contentTypeGroupId) : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroup.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeGroupId</h4>
+<code>int</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If group can not be found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroup.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup</a></code></div>
+</div></div>
+</div>
+<a name="loadContentTypeGroupByIdentifier" id="loadContentTypeGroupByIdentifier"></a><div class="element clickable method public loadContentTypeGroupByIdentifier" data-toggle="collapse" data-target=".loadContentTypeGroupByIdentifier .collapse">
+<h2>Get a Content Type Group object by identifier</h2>
+<pre>loadContentTypeGroupByIdentifier(string $contentTypeGroupIdentifier) : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroup.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeGroupIdentifier</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If group can not be found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroup.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup</a></code></div>
+</div></div>
+</div>
+<a name="loadContentTypeGroups" id="loadContentTypeGroups"></a><div class="element clickable method public loadContentTypeGroups" data-toggle="collapse" data-target=".loadContentTypeGroups .collapse">
+<h2>Get all Content Type Groups</h2>
+<pre>loadContentTypeGroups() : \eZ\Publish\Core\REST\Client\aray</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\eZ\Publish\Core\REST\Client\aray</code>an array of {@link ContentTypeGroup}</div>
+</div></div>
+</div>
+<a name="loadContentTypes" id="loadContentTypes"></a><div class="element clickable method public loadContentTypes" data-toggle="collapse" data-target=".loadContentTypes .collapse">
+<h2>Get Content Type objects which belong to the given content type group</h2>
+<pre>loadContentTypes(\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup $contentTypeGroup) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeGroup</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroup.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>an array of {@link ContentType} which have status DEFINED</div>
+</div></div>
+</div>
+<a name="loadFieldDefinition" id="loadFieldDefinition"></a><div class="element clickable method public loadFieldDefinition" data-toggle="collapse" data-target=".loadFieldDefinition .collapse">
+<h2>Loads a single field definition by $fieldDefinitionId</h2>
+<pre>loadFieldDefinition(string $fieldDefinitionId) : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.FieldDefinition.html">\eZ\Publish\API\Repository\Values\ContentType\FieldDefinition</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>ATTENTION: This is not an API method and only meant for internal use in
+the REST Client implementation.</p></p>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>protected</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$fieldDefinitionId</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.FieldDefinition.html">\eZ\Publish\API\Repository\Values\ContentType\FieldDefinition</a></code></div>
+</div></div>
+</div>
+<a name="loadFieldDefinitionList" id="loadFieldDefinitionList"></a><div class="element clickable method public loadFieldDefinitionList" data-toggle="collapse" data-target=".loadFieldDefinitionList .collapse">
+<h2>Loads the FieldDefinitionList stored at $fieldDefinitionListReference</h2>
+<pre>loadFieldDefinitionList(mixed $fieldDefinitionListReference) : \eZ\Publish\Core\REST\Client\FieldDefinitionList</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>ATTENTION: This is not an API method and only meant for internal use in
+the REST Client implementation.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$fieldDefinitionListReference</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\eZ\Publish\Core\REST\Client\FieldDefinitionList</code></div>
+</div></div>
+</div>
+<a name="newContentTypeCreateStruct" id="newContentTypeCreateStruct"></a><div class="element clickable method public newContentTypeCreateStruct" data-toggle="collapse" data-target=".newContentTypeCreateStruct .collapse">
+<h2>instanciates a new content type create class</h2>
+<pre>newContentTypeCreateStruct(string $identifier) : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeCreateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeCreateStruct</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$identifier</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeCreateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeCreateStruct</a></code></div>
+</div></div>
+</div>
+<a name="newContentTypeGroupCreateStruct" id="newContentTypeGroupCreateStruct"></a><div class="element clickable method public newContentTypeGroupCreateStruct" data-toggle="collapse" data-target=".newContentTypeGroupCreateStruct .collapse">
+<h2>instanciates a new content type group create class</h2>
+<pre>newContentTypeGroupCreateStruct(string $identifier) : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroupCreateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupCreateStruct</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$identifier</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroupCreateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupCreateStruct</a></code></div>
+</div></div>
+</div>
+<a name="newContentTypeGroupUpdateStruct" id="newContentTypeGroupUpdateStruct"></a><div class="element clickable method public newContentTypeGroupUpdateStruct" data-toggle="collapse" data-target=".newContentTypeGroupUpdateStruct .collapse">
+<h2>instanciates a new content type update struct</h2>
+<pre>newContentTypeGroupUpdateStruct() : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroupUpdateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupUpdateStruct</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroupUpdateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupUpdateStruct</a></code></div>
+</div></div>
+</div>
+<a name="newContentTypeUpdateStruct" id="newContentTypeUpdateStruct"></a><div class="element clickable method public newContentTypeUpdateStruct" data-toggle="collapse" data-target=".newContentTypeUpdateStruct .collapse">
+<h2>instanciates a new content type update struct</h2>
+<pre>newContentTypeUpdateStruct() : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeUpdateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeUpdateStruct</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeUpdateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeUpdateStruct</a></code></div>
+</div></div>
+</div>
+<a name="newFieldDefinitionCreateStruct" id="newFieldDefinitionCreateStruct"></a><div class="element clickable method public newFieldDefinitionCreateStruct" data-toggle="collapse" data-target=".newFieldDefinitionCreateStruct .collapse">
+<h2>instanciates a field definition create struct</h2>
+<pre>newFieldDefinitionCreateStruct(string $identifier, string $fieldTypeIdentifier) : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.FieldDefinitionCreateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionCreateStruct</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$identifier</h4>
+<code>string</code><p>the required identifier for the field definition</p></div>
+<div class="subelement argument">
+<h4>$fieldTypeIdentifier</h4>
+<code>string</code><p>the required field type identifier</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.FieldDefinitionCreateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionCreateStruct</a></code></div>
+</div></div>
+</div>
+<a name="newFieldDefinitionUpdateStruct" id="newFieldDefinitionUpdateStruct"></a><div class="element clickable method public newFieldDefinitionUpdateStruct" data-toggle="collapse" data-target=".newFieldDefinitionUpdateStruct .collapse">
+<h2>instanciates a field definition update class</h2>
+<pre>newFieldDefinitionUpdateStruct() : <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.FieldDefinitionUpdateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionUpdateStruct</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.FieldDefinitionUpdateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionUpdateStruct</a></code></div>
+</div></div>
+</div>
+<a name="publishContentTypeDraft" id="publishContentTypeDraft"></a><div class="element clickable method public publishContentTypeDraft" data-toggle="collapse" data-target=".publishContentTypeDraft .collapse">
+<h2>Publish the content type and update content objects.</h2>
+<pre>publishContentTypeDraft(\eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft $contentTypeDraft) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This method updates content objects, depending on the changed field definitions.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeDraft</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeDraft.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.BadStateException.html">\eZ\Publish\API\Repository\Exceptions\BadStateException</a></code></th>
+<td>If the content type has no draft</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>if the user is not allowed to publish a content type This method updates content objects, depending on the changed field definitions.</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="removeFieldDefinition" id="removeFieldDefinition"></a><div class="element clickable method public removeFieldDefinition" data-toggle="collapse" data-target=".removeFieldDefinition .collapse">
+<h2>Remove a field definition from an existing Type.</h2>
+<pre>removeFieldDefinition(\eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft $contentTypeDraft, \eZ\Publish\API\Repository\Values\ContentType\FieldDefinition $fieldDefinition) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeDraft</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeDraft.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft</a></code>
+</div>
+<div class="subelement argument">
+<h4>$fieldDefinition</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.FieldDefinition.html">\eZ\Publish\API\Repository\Values\ContentType\FieldDefinition</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
+<td>If the given field definition does not belong to the given type</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>if the user is not allowed to edit a content type</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="setSession" id="setSession"></a><div class="element clickable method public setSession" data-toggle="collapse" data-target=".setSession .collapse">
+<h2>Set session ID</h2>
+<pre>setSession(mixed $id) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Only for testing</p></p>
+<table class="table table-bordered"><tr>
+<th>private</th>
+<td></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>mixed</code><p>tringid</p></div>
+</div></div>
+</div>
+<a name="unassignContentTypeGroup" id="unassignContentTypeGroup"></a><div class="element clickable method public unassignContentTypeGroup" data-toggle="collapse" data-target=".unassignContentTypeGroup .collapse">
+<h2>Unassign a content type from a group.</h2>
+<pre>unassignContentTypeGroup(\eZ\Publish\API\Repository\Values\ContentType\ContentType $contentType, \eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup $contentTypeGroup) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentType</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></code>
+</div>
+<div class="subelement argument">
+<h4>$contentTypeGroup</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroup.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>if the user is not allowed to link a content type</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
+<td>If the content type is not assigned this the given group.</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.BadStateException.html">\eZ\Publish\API\Repository\Exceptions\BadStateException</a></code></th>
+<td>If $contentTypeGroup is the last group assigned to the content type</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="updateContentTypeDraft" id="updateContentTypeDraft"></a><div class="element clickable method public updateContentTypeDraft" data-toggle="collapse" data-target=".updateContentTypeDraft .collapse">
+<h2>Update a Content Type object</h2>
+<pre>updateContentTypeDraft(\eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft $contentTypeDraft, \eZ\Publish\API\Repository\Values\ContentType\ContentTypeUpdateStruct $contentTypeUpdateStruct) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Does not update fields (fieldDefinitions), use <a href="updateFieldDefinition()">updateFieldDefinition()</a> to update them.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeDraft</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeDraft.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft</a></code>
+</div>
+<div class="subelement argument">
+<h4>$contentTypeUpdateStruct</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeUpdateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeUpdateStruct</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>if the user is not allowed to update a content type</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
+<td>If the given identifier or remoteId already exists or there is no draft assigned to the authenticated user</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="updateContentTypeGroup" id="updateContentTypeGroup"></a><div class="element clickable method public updateContentTypeGroup" data-toggle="collapse" data-target=".updateContentTypeGroup .collapse">
+<h2>Update a Content Type Group object</h2>
+<pre>updateContentTypeGroup(\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup $contentTypeGroup, \eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupUpdateStruct $contentTypeGroupUpdateStruct) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeGroup</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroup.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup</a></code><p>the content type group to be updated</p></div>
+<div class="subelement argument">
+<h4>$contentTypeGroupUpdateStruct</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeGroupUpdateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupUpdateStruct</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>if the user is not allowed to create a content type group</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
+<td>If the given identifier (if set) already exists</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="updateFieldDefinition" id="updateFieldDefinition"></a><div class="element clickable method public updateFieldDefinition" data-toggle="collapse" data-target=".updateFieldDefinition .collapse">
+<h2>Update a field definition</h2>
+<pre>updateFieldDefinition(\eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft $contentTypeDraft, \eZ\Publish\API\Repository\Values\ContentType\FieldDefinition $fieldDefinition, \eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionUpdateStruct $fieldDefinitionUpdateStruct) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeDraft</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentTypeDraft.html">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft</a></code><p>the content type draft</p></div>
+<div class="subelement argument">
+<h4>$fieldDefinition</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.FieldDefinition.html">\eZ\Publish\API\Repository\Values\ContentType\FieldDefinition</a></code><p>the field definition which should be updated</p></div>
+<div class="subelement argument">
+<h4>$fieldDefinitionUpdateStruct</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.FieldDefinitionUpdateStruct.html">\eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionUpdateStruct</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
+<td>If the field id in the update struct is not found or does not belong to the content type</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>if the user is not allowed to edit a content type</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
+<td>If the given identifier is used in an existing field of the given content type</td>
+</tr>
+</table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24client" id="$client"> </a><div class="element clickable property private $client" data-toggle="collapse" data-target=".$client .collapse">
+<h2>$client</h2>
+<pre>$client : <a href="../classes/eZ.Publish.Core.REST.Client.HttpClient.html">\eZ\Publish\Core\REST\Client\HttpClient</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24contentService" id="$contentService"> </a><div class="element clickable property private $contentService" data-toggle="collapse" data-target=".$contentService .collapse">
+<h2>$contentService</h2>
+<pre>$contentService : <a href="../classes/eZ.Publish.Core.REST.Client.ContentService.html">\eZ\Publish\Core\REST\Client\ContentService</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24inputDispatcher" id="$inputDispatcher"> </a><div class="element clickable property private $inputDispatcher" data-toggle="collapse" data-target=".$inputDispatcher .collapse">
+<h2>$inputDispatcher</h2>
+<pre>$inputDispatcher : <a href="../classes/eZ.Publish.Core.REST.Common.Input.Dispatcher.html">\eZ\Publish\Core\REST\Common\Input\Dispatcher</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24outputVisitor" id="$outputVisitor"> </a><div class="element clickable property private $outputVisitor" data-toggle="collapse" data-target=".$outputVisitor .collapse">
+<h2>$outputVisitor</h2>
+<pre>$outputVisitor : <a href="../classes/eZ.Publish.Core.REST.Common.Output.Visitor.html">\eZ\Publish\Core\REST\Common\Output\Visitor</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24urlHandler" id="$urlHandler"> </a><div class="element clickable property private $urlHandler" data-toggle="collapse" data-target=".$urlHandler .collapse">
+<h2>$urlHandler</h2>
+<pre>$urlHandler : <a href="../classes/eZ.Publish.Core.REST.Common.UrlHandler.html">\eZ\Publish\Core\REST\Common\UrlHandler</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:52:05+01:00.<br></footer></div>
+</div>
+</body>
+</html>

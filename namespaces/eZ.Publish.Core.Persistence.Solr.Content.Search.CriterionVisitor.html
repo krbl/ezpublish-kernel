@@ -1,0 +1,318 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » eZ\Publish\Core\Persistence\Solr\Content\Search\CriterionVisitor</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Namespaces</li>
+<li>
+<a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.html" title="CriterionVisitor"><i class="icon-th"></i>CriterionVisitor</a><ul class="nav nav-list nav-namespaces">
+<li>
+<a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.DateMetadata.html" title="DateMetadata"><i class="icon-th"></i>DateMetadata</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.Field.html" title="Field"><i class="icon-th"></i>Field</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8 namespace-contents">
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.html">Solr</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.html">Content</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.Search.html">Search</a></li>
+<span class="divider">\</span><li class="active"><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.html">CriterionVisitor</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="Aggregate" id="Aggregate"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.Aggregate.html">
+<h1>Aggregate<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.Aggregate.html">¶</a>
+</h1>
+<p class="short_description">Visits the criterion tree into a Solr query</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.Aggregate.html" class="more">« More »</a>
+</div>
+<a name="ContentIdIn" id="ContentIdIn"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.ContentIdIn.html">
+<h1>ContentIdIn<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.ContentIdIn.html">¶</a>
+</h1>
+<p class="short_description">Visits the ContentId criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.ContentIdIn.html" class="more">« More »</a>
+</div>
+<a name="ContentTypeGroupIdIn" id="ContentTypeGroupIdIn"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.ContentTypeGroupIdIn.html">
+<h1>ContentTypeGroupIdIn<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.ContentTypeGroupIdIn.html">¶</a>
+</h1>
+<p class="short_description">Visits the ContentTypeGroupId criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.ContentTypeGroupIdIn.html" class="more">« More »</a>
+</div>
+<a name="ContentTypeIdIn" id="ContentTypeIdIn"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.ContentTypeIdIn.html">
+<h1>ContentTypeIdIn<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.ContentTypeIdIn.html">¶</a>
+</h1>
+<p class="short_description">Visits the ContentTypeId criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.ContentTypeIdIn.html" class="more">« More »</a>
+</div>
+<a name="DateMetadata" id="DateMetadata"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.DateMetadata.html">
+<h1>DateMetadata<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.DateMetadata.html">¶</a>
+</h1>
+<p class="short_description">Visits the DateMetadata criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.DateMetadata.html" class="more">« More »</a>
+</div>
+<a name="Field" id="Field"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.Field.html">
+<h1>Field<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.Field.html">¶</a>
+</h1>
+<p class="short_description">Visits the Field criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.Field.html" class="more">« More »</a>
+</div>
+<a name="FullText" id="FullText"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.FullText.html">
+<h1>FullText<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.FullText.html">¶</a>
+</h1>
+<p class="short_description">Visits the FullText criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.FullText.html" class="more">« More »</a>
+</div>
+<a name="LanguageCodeIn" id="LanguageCodeIn"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LanguageCodeIn.html">
+<h1>LanguageCodeIn<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LanguageCodeIn.html">¶</a>
+</h1>
+<p class="short_description">Visits the LanguageCode criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LanguageCodeIn.html" class="more">« More »</a>
+</div>
+<a name="LocationIdIn" id="LocationIdIn"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LocationIdIn.html">
+<h1>LocationIdIn<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LocationIdIn.html">¶</a>
+</h1>
+<p class="short_description">Visits the LocationId criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LocationIdIn.html" class="more">« More »</a>
+</div>
+<a name="LocationRemoteIdIn" id="LocationRemoteIdIn"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LocationRemoteIdIn.html">
+<h1>LocationRemoteIdIn<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LocationRemoteIdIn.html">¶</a>
+</h1>
+<p class="short_description">Visits the LocationRemoteId criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LocationRemoteIdIn.html" class="more">« More »</a>
+</div>
+<a name="LogicalAnd" id="LogicalAnd"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LogicalAnd.html">
+<h1>LogicalAnd<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LogicalAnd.html">¶</a>
+</h1>
+<p class="short_description">Visits the LogicalAnd criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LogicalAnd.html" class="more">« More »</a>
+</div>
+<a name="LogicalNot" id="LogicalNot"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LogicalNot.html">
+<h1>LogicalNot<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LogicalNot.html">¶</a>
+</h1>
+<p class="short_description">Visits the LogicalNot criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LogicalNot.html" class="more">« More »</a>
+</div>
+<a name="LogicalOr" id="LogicalOr"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LogicalOr.html">
+<h1>LogicalOr<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LogicalOr.html">¶</a>
+</h1>
+<p class="short_description">Visits the LogicalOr criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.LogicalOr.html" class="more">« More »</a>
+</div>
+<a name="ObjectStateIdIn" id="ObjectStateIdIn"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.ObjectStateIdIn.html">
+<h1>ObjectStateIdIn<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.ObjectStateIdIn.html">¶</a>
+</h1>
+<p class="short_description">Visits the ObjectStateId criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.ObjectStateIdIn.html" class="more">« More »</a>
+</div>
+<a name="ParentLocationIdIn" id="ParentLocationIdIn"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.ParentLocationIdIn.html">
+<h1>ParentLocationIdIn<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.ParentLocationIdIn.html">¶</a>
+</h1>
+<p class="short_description">Visits the ParentLocationId criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.ParentLocationIdIn.html" class="more">« More »</a>
+</div>
+<a name="RemoteIdIn" id="RemoteIdIn"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.RemoteIdIn.html">
+<h1>RemoteIdIn<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.RemoteIdIn.html">¶</a>
+</h1>
+<p class="short_description">Visits the RemoteId criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.RemoteIdIn.html" class="more">« More »</a>
+</div>
+<a name="SectionIn" id="SectionIn"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.SectionIn.html">
+<h1>SectionIn<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.SectionIn.html">¶</a>
+</h1>
+<p class="short_description">Visits the Section criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.SectionIn.html" class="more">« More »</a>
+</div>
+<a name="StatusIn" id="StatusIn"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.StatusIn.html">
+<h1>StatusIn<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.StatusIn.html">¶</a>
+</h1>
+<p class="short_description">Visits the Status criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.StatusIn.html" class="more">« More »</a>
+</div>
+<a name="SubtreeIn" id="SubtreeIn"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.SubtreeIn.html">
+<h1>SubtreeIn<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.SubtreeIn.html">¶</a>
+</h1>
+<p class="short_description">Visits the Subtree criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.SubtreeIn.html" class="more">« More »</a>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.html">Solr</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.html">Content</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.Search.html">Search</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.html">CriterionVisitor</a></li>
+<span class="divider">\</span><li class="active"><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.DateMetadata.html">DateMetadata</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="ModifiedBetween" id="ModifiedBetween"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.DateMetadata.ModifiedBetween.html">
+<h1>ModifiedBetween<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.DateMetadata.ModifiedBetween.html">¶</a>
+</h1>
+<p class="short_description">Visits the DateMetadata criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.DateMetadata.ModifiedBetween.html" class="more">« More »</a>
+</div>
+<a name="ModifiedIn" id="ModifiedIn"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.DateMetadata.ModifiedIn.html">
+<h1>ModifiedIn<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.DateMetadata.ModifiedIn.html">¶</a>
+</h1>
+<p class="short_description">Visits the DateMetadata criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.DateMetadata.ModifiedIn.html" class="more">« More »</a>
+</div>
+<a name="PublishedBetween" id="PublishedBetween"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.DateMetadata.PublishedBetween.html">
+<h1>PublishedBetween<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.DateMetadata.PublishedBetween.html">¶</a>
+</h1>
+<p class="short_description">Visits the DateMetadata criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.DateMetadata.PublishedBetween.html" class="more">« More »</a>
+</div>
+<a name="PublishedIn" id="PublishedIn"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.DateMetadata.PublishedIn.html">
+<h1>PublishedIn<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.DateMetadata.PublishedIn.html">¶</a>
+</h1>
+<p class="short_description">Visits the DateMetadata criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.DateMetadata.PublishedIn.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.html">Solr</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.html">Content</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.Search.html">Search</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.html">CriterionVisitor</a></li>
+<span class="divider">\</span><li class="active"><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.Field.html">Field</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="FieldIn" id="FieldIn"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.Field.FieldIn.html">
+<h1>FieldIn<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.Field.FieldIn.html">¶</a>
+</h1>
+<p class="short_description">Visits the Field criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.Field.FieldIn.html" class="more">« More »</a>
+</div>
+<a name="FieldRange" id="FieldRange"></a><div class="element ajax clickable class" href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.Field.FieldRange.html">
+<h1>FieldRange<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.Field.FieldRange.html">¶</a>
+</h1>
+<p class="short_description">Visits the Field criterion</p>
+<div class="details collapse"></div>
+<a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.CriterionVisitor.Field.FieldRange.html" class="more">« More »</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:51:16+01:00.<br></footer></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,628 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \eZ\Publish\Core\Persistence\InMemory\UserHandler</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Setups current handler instance with reference to Handler object that created it."><span class="description">Setups current handler instance with reference to Handler object that created it.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#addPolicy" title="addPolicy :: Adds a policy to a role"><span class="description">Adds a policy to a role</span><pre>addPolicy()</pre></a></li>
+<li class="method public "><a href="#assignRole" title="assignRole :: Assign role to a user or user group with given limitations"><span class="description">Assign role to a user or user group with given limitations</span><pre>assignRole()</pre></a></li>
+<li class="method public "><a href="#create" title="create :: Create a user"><span class="description">Create a user</span><pre>create()</pre></a></li>
+<li class="method public "><a href="#createRole" title="createRole :: Create new role"><span class="description">Create new role</span><pre>createRole()</pre></a></li>
+<li class="method public "><a href="#delete" title="delete :: Delete user with the given ID."><span class="description">Delete user with the given ID.</span><pre>delete()</pre></a></li>
+<li class="method public "><a href="#deleteRole" title="deleteRole :: Delete the specified role"><span class="description">Delete the specified role</span><pre>deleteRole()</pre></a></li>
+<li class="method public "><a href="#load" title="load :: Load user with user ID."><span class="description">Load user with user ID.</span><pre>load()</pre></a></li>
+<li class="method public "><a href="#loadByLogin" title="loadByLogin :: Load user with user login / email."><span class="description">Load user with user login / email.</span><pre>loadByLogin()</pre></a></li>
+<li class="method public "><a href="#loadPoliciesByUserId" title="loadPoliciesByUserId :: Returns the user policies associated with the user (including inherited policies from user groups)"><span class="description">Returns the user policies associated with the user (including inherited policies from user groups)</span><pre>loadPoliciesByUserId()</pre></a></li>
+<li class="method public "><a href="#loadRole" title="loadRole :: Load a specified role by id"><span class="description">Load a specified role by id</span><pre>loadRole()</pre></a></li>
+<li class="method public "><a href="#loadRoleAssignmentsByGroupId" title="loadRoleAssignmentsByGroupId :: Load roles assignments to a user/group"><span class="description">Load roles assignments to a user/group</span><pre>loadRoleAssignmentsByGroupId()</pre></a></li>
+<li class="method public "><a href="#loadRoleAssignmentsByRoleId" title="loadRoleAssignmentsByRoleId :: Load roles assignments Role"><span class="description">Load roles assignments Role</span><pre>loadRoleAssignmentsByRoleId()</pre></a></li>
+<li class="method public "><a href="#loadRoleByIdentifier" title="loadRoleByIdentifier :: Load a specified role by $identifier"><span class="description">Load a specified role by $identifier</span><pre>loadRoleByIdentifier()</pre></a></li>
+<li class="method public "><a href="#loadRoles" title="loadRoles :: Load all roles"><span class="description">Load all roles</span><pre>loadRoles()</pre></a></li>
+<li class="method public "><a href="#loadRolesByGroupId" title="loadRolesByGroupId :: Load roles assigned to a user/group"><span class="description">Load roles assigned to a user/group</span><pre>loadRolesByGroupId()</pre></a></li>
+<li class="method public "><a href="#removePolicy" title="removePolicy :: Removes a policy from a role"><span class="description">Removes a policy from a role</span><pre>removePolicy()</pre></a></li>
+<li class="method public "><a href="#unAssignRole" title="unAssignRole :: Un-assign a role"><span class="description">Un-assign a role</span><pre>unAssignRole()</pre></a></li>
+<li class="method public "><a href="#update" title="update :: Update the user information specified by the user struct"><span class="description">Update the user information specified by the user struct</span><pre>update()</pre></a></li>
+<li class="method public "><a href="#updatePolicy" title="updatePolicy :: Update a policy"><span class="description">Update a policy</span><pre>updatePolicy()</pre></a></li>
+<li class="method public "><a href="#updateRole" title="updateRole :: Update role"><span class="description">Update role</span><pre>updateRole()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#getPermissionsForObject" title="getPermissionsForObject :: "><span class="description">getPermissionsForObject()
+        </span><pre>getPermissionsForObject()</pre></a></li>
+<li class="method protected "><a href="#getRoleAssignmentForContent" title="getRoleAssignmentForContent :: "><span class="description">getRoleAssignmentForContent()
+        </span><pre>getRoleAssignmentForContent()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24backend" title="$backend :: "><span class="description">$backend</span><pre>$backend</pre></a></li>
+<li class="property protected "><a href="#%24handler" title="$handler :: "><span class="description">$handler</span><pre>$handler</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CeZ%5CPublish%5CCore%5CPersistence%5CInMemory%5CUserHandler" id="\eZ\Publish\Core\Persistence\InMemory\UserHandler"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.InMemory.html">InMemory</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/eZ.Publish.Core.Persistence.InMemory.UserHandler.html">UserHandler</a>
+</li>
+</ul>
+<div href="../classes/eZ.Publish.Core.Persistence.InMemory.UserHandler.html" class="element class">
+<p class="short_description">Storage Engine handler for user module</p>
+<div class="details">
+<p class="long_description"></p>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Setups current handler instance with reference to Handler object that created it.</h2>
+<pre>__construct(\eZ\Publish\Core\Persistence\InMemory\Handler $handler, \eZ\Publish\Core\Persistence\InMemory\Backend $backend) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$handler</h4>
+<code><a href="../classes/eZ.Publish.Core.Persistence.InMemory.Handler.html">\eZ\Publish\Core\Persistence\InMemory\Handler</a></code>
+</div>
+<div class="subelement argument">
+<h4>$backend</h4>
+<code><a href="../classes/eZ.Publish.Core.Persistence.InMemory.Backend.html">\eZ\Publish\Core\Persistence\InMemory\Backend</a></code><p>The storage engine backend</p></div>
+</div></div>
+</div>
+<a name="addPolicy" id="addPolicy"></a><div class="element clickable method public addPolicy" data-toggle="collapse" data-target=".addPolicy .collapse">
+<h2>Adds a policy to a role</h2>
+<pre>addPolicy(mixed $roleId, \eZ\Publish\SPI\Persistence\User\Policy $policy) : <a href="../classes/eZ.Publish.SPI.Persistence.User.Policy.html">\eZ\Publish\SPI\Persistence\User\Policy</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>todo</th>
+<td>Throw on invalid Role Id?</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$roleId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$policy</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.User.Policy.html">\eZ\Publish\SPI\Persistence\User\Policy</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.Core.Base.Exceptions.InvalidArgumentValue.html">\eZ\Publish\Core\Base\Exceptions\InvalidArgumentValue</a></code></th>
+<td>If $policy->limitation is empty (null, empty string/array..)</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.User.Policy.html">\eZ\Publish\SPI\Persistence\User\Policy</a></code></div>
+</div></div>
+</div>
+<a name="assignRole" id="assignRole"></a><div class="element clickable method public assignRole" data-toggle="collapse" data-target=".assignRole .collapse">
+<h2>Assign role to a user or user group with given limitations</h2>
+<pre>assignRole(mixed $contentId, mixed $roleId, \array $limitation) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>The limitation array looks like:</p>
+
+<pre><code> array(
+     'Subtree' => array(
+         '/1/2/',
+         '/1/4/',
+     ),
+     'Foo' => array( 'Bar' ),
+     …
+ )
+</code></pre>
+
+<p>Where the keys are the limitation identifiers, and the respective values
+are an array of limitation values. The limitation parameter is optional.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentId</h4>
+<code>mixed</code><p>The groupId or userId to assign the role to.</p></div>
+<div class="subelement argument">
+<h4>$roleId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$limitation</h4>
+<code>array</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If group or role is not found</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If group is not of user_group Content Type</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="create" id="create"></a><div class="element clickable method public create" data-toggle="collapse" data-target=".create .collapse">
+<h2>Create a user</h2>
+<pre>create(\eZ\Publish\SPI\Persistence\User $user) : <a href="../classes/eZ.Publish.SPI.Persistence.User.html">\eZ\Publish\SPI\Persistence\User</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>The User struct used to create the user will contain an ID which is used
+to reference the user.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.User.html">\eZ\Publish\SPI\Persistence\User</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.logicexception.php">\LogicException</a></code></th>
+<td>If no id was provided or if it already exists</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.User.html">\eZ\Publish\SPI\Persistence\User</a></code></div>
+</div></div>
+</div>
+<a name="createRole" id="createRole"></a><div class="element clickable method public createRole" data-toggle="collapse" data-target=".createRole .collapse">
+<h2>Create new role</h2>
+<pre>createRole(\eZ\Publish\SPI\Persistence\User\Role $role) : <a href="../classes/eZ.Publish.SPI.Persistence.User.Role.html">\eZ\Publish\SPI\Persistence\User\Role</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$role</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.User.Role.html">\eZ\Publish\SPI\Persistence\User\Role</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.User.Role.html">\eZ\Publish\SPI\Persistence\User\Role</a></code></div>
+</div></div>
+</div>
+<a name="delete" id="delete"></a><div class="element clickable method public delete" data-toggle="collapse" data-target=".delete .collapse">
+<h2>Delete user with the given ID.</h2>
+<pre>delete(mixed $userId) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>todo</th>
+<td>Throw on missing user?</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$userId</h4>
+<code>mixed</code>
+</div>
+</div></div>
+</div>
+<a name="deleteRole" id="deleteRole"></a><div class="element clickable method public deleteRole" data-toggle="collapse" data-target=".deleteRole .collapse">
+<h2>Delete the specified role</h2>
+<pre>deleteRole(mixed $roleId) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$roleId</h4>
+<code>mixed</code>
+</div>
+</div></div>
+</div>
+<a name="load" id="load"></a><div class="element clickable method public load" data-toggle="collapse" data-target=".load .collapse">
+<h2>Load user with user ID.</h2>
+<pre>load(mixed $userId) : <a href="../classes/eZ.Publish.SPI.Persistence.User.html">\eZ\Publish\SPI\Persistence\User</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$userId</h4>
+<code>mixed</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If user is not found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.User.html">\eZ\Publish\SPI\Persistence\User</a></code></div>
+</div></div>
+</div>
+<a name="loadByLogin" id="loadByLogin"></a><div class="element clickable method public loadByLogin" data-toggle="collapse" data-target=".loadByLogin .collapse">
+<h2>Load user with user login / email.</h2>
+<pre>loadByLogin(string $login, boolean $alsoMatchEmail) : <a href="Publish.SPI.Persistence.User.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser">\eZ\Publish\SPI\Persistence\User[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Optimized for login use (hence the possibility to match email and return several users).</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$login</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$alsoMatchEmail</h4>
+<code>boolean</code><p>Also match user email, caller must verify that $login is a valid email address.</p>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If no users are found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.User.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser">\eZ\Publish\SPI\Persistence\User[]</a></code></div>
+</div></div>
+</div>
+<a name="loadPoliciesByUserId" id="loadPoliciesByUserId"></a><div class="element clickable method public loadPoliciesByUserId" data-toggle="collapse" data-target=".loadPoliciesByUserId .collapse">
+<h2>Returns the user policies associated with the user (including inherited policies from user groups)</h2>
+<pre>loadPoliciesByUserId(mixed $userId) : <a href="Publish.SPI.Persistence.User.Policy.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CPolicy">\eZ\Publish\SPI\Persistence\User\Policy[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$userId</h4>
+<code>mixed</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If user (it's content object atm) is not found</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If user is not of user Content Type</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.User.Policy.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CPolicy">\eZ\Publish\SPI\Persistence\User\Policy[]</a></code></div>
+</div></div>
+</div>
+<a name="loadRole" id="loadRole"></a><div class="element clickable method public loadRole" data-toggle="collapse" data-target=".loadRole .collapse">
+<h2>Load a specified role by id</h2>
+<pre>loadRole(mixed $roleId) : <a href="../classes/eZ.Publish.SPI.Persistence.User.Role.html">\eZ\Publish\SPI\Persistence\User\Role</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$roleId</h4>
+<code>mixed</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If role is not found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.User.Role.html">\eZ\Publish\SPI\Persistence\User\Role</a></code></div>
+</div></div>
+</div>
+<a name="loadRoleAssignmentsByGroupId" id="loadRoleAssignmentsByGroupId"></a><div class="element clickable method public loadRoleAssignmentsByGroupId" data-toggle="collapse" data-target=".loadRoleAssignmentsByGroupId .collapse">
+<h2>Load roles assignments to a user/group</h2>
+<pre>loadRoleAssignmentsByGroupId(mixed $groupId, bool $inherit) : <a href="Publish.SPI.Persistence.User.RoleAssignment.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRoleAssignment">\eZ\Publish\SPI\Persistence\User\RoleAssignment[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Role Assignments with same roleId and limitationIdentifier will be merged together into one.</p></p>
+<table class="table table-bordered"><tr>
+<th>uses</th>
+<td>\eZ\Publish\Core\Persistence\InMemory\getRoleAssignmentForContent()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$groupId</h4>
+<code>mixed</code><p>In legacy storage engine this is the content object id roles are assigned to in ezuser_role. By the nature of legacy this can currently also be used to get by $userId.</p>
+</div>
+<div class="subelement argument">
+<h4>$inherit</h4>
+<code>bool</code><p>If true also return inherited role assigments from user groups.</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.logicexception.php">\LogicException</a></code></th>
+<td>Internal data corruption error</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.User.RoleAssignment.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRoleAssignment">\eZ\Publish\SPI\Persistence\User\RoleAssignment[]</a></code></div>
+</div></div>
+</div>
+<a name="loadRoleAssignmentsByRoleId" id="loadRoleAssignmentsByRoleId"></a><div class="element clickable method public loadRoleAssignmentsByRoleId" data-toggle="collapse" data-target=".loadRoleAssignmentsByRoleId .collapse">
+<h2>Load roles assignments Role</h2>
+<pre>loadRoleAssignmentsByRoleId(mixed $roleId) : <a href="Publish.SPI.Persistence.User.RoleAssignment.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRoleAssignment">\eZ\Publish\SPI\Persistence\User\RoleAssignment[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Role Assignments with same roleId and limitationIdentifier will be merged together into one.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$roleId</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.User.RoleAssignment.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRoleAssignment">\eZ\Publish\SPI\Persistence\User\RoleAssignment[]</a></code></div>
+</div></div>
+</div>
+<a name="loadRoleByIdentifier" id="loadRoleByIdentifier"></a><div class="element clickable method public loadRoleByIdentifier" data-toggle="collapse" data-target=".loadRoleByIdentifier .collapse">
+<h2>Load a specified role by $identifier</h2>
+<pre>loadRoleByIdentifier(string $identifier) : <a href="../classes/eZ.Publish.SPI.Persistence.User.Role.html">\eZ\Publish\SPI\Persistence\User\Role</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$identifier</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If role is not found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.User.Role.html">\eZ\Publish\SPI\Persistence\User\Role</a></code></div>
+</div></div>
+</div>
+<a name="loadRoles" id="loadRoles"></a><div class="element clickable method public loadRoles" data-toggle="collapse" data-target=".loadRoles .collapse">
+<h2>Load all roles</h2>
+<pre>loadRoles() : <a href="Publish.SPI.Persistence.User.Role.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRole">\eZ\Publish\SPI\Persistence\User\Role[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.User.Role.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRole">\eZ\Publish\SPI\Persistence\User\Role[]</a></code></div>
+</div></div>
+</div>
+<a name="loadRolesByGroupId" id="loadRolesByGroupId"></a><div class="element clickable method public loadRolesByGroupId" data-toggle="collapse" data-target=".loadRolesByGroupId .collapse">
+<h2>Load roles assigned to a user/group</h2>
+<pre>loadRolesByGroupId(mixed $groupId) : <a href="Publish.SPI.Persistence.User.Role.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRole">\eZ\Publish\SPI\Persistence\User\Role[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$groupId</h4>
+<code>mixed</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If user (it's content object atm) is not found</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If group is not of user_group Content Type</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.User.Role.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRole">\eZ\Publish\SPI\Persistence\User\Role[]</a></code></div>
+</div></div>
+</div>
+<a name="removePolicy" id="removePolicy"></a><div class="element clickable method public removePolicy" data-toggle="collapse" data-target=".removePolicy .collapse">
+<h2>Removes a policy from a role</h2>
+<pre>removePolicy(mixed $roleId, mixed $policyId) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>todo</th>
+<td>Throw exception on missing role / policy?</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$roleId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$policyId</h4>
+<code>mixed</code>
+</div>
+</div></div>
+</div>
+<a name="unAssignRole" id="unAssignRole"></a><div class="element clickable method public unAssignRole" data-toggle="collapse" data-target=".unAssignRole .collapse">
+<h2>Un-assign a role</h2>
+<pre>unAssignRole(mixed $contentId, mixed $roleId) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentId</h4>
+<code>mixed</code><p>The user or user group Id to un-assign the role from.</p>
+</div>
+<div class="subelement argument">
+<h4>$roleId</h4>
+<code>mixed</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If group or role is not found</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If group is not of user[_group] Content Type</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.Core.Base.Exceptions.InvalidArgumentValue.html">\eZ\Publish\Core\Base\Exceptions\InvalidArgumentValue</a></code></th>
+<td>If group does not contain role</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="update" id="update"></a><div class="element clickable method public update" data-toggle="collapse" data-target=".update .collapse">
+<h2>Update the user information specified by the user struct</h2>
+<pre>update(\eZ\Publish\SPI\Persistence\User $user) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.User.html">\eZ\Publish\SPI\Persistence\User</a></code>
+</div>
+</div></div>
+</div>
+<a name="updatePolicy" id="updatePolicy"></a><div class="element clickable method public updatePolicy" data-toggle="collapse" data-target=".updatePolicy .collapse">
+<h2>Update a policy</h2>
+<pre>updatePolicy(\eZ\Publish\SPI\Persistence\User\Policy $policy) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Replaces limitations values with new values.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$policy</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.User.Policy.html">\eZ\Publish\SPI\Persistence\User\Policy</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.Core.Base.Exceptions.InvalidArgumentValue.html">\eZ\Publish\Core\Base\Exceptions\InvalidArgumentValue</a></code></th>
+<td>If $policy->limitation is empty (null, empty string/array..)</td>
+</tr></table>
+</div></div>
+</div>
+<a name="updateRole" id="updateRole"></a><div class="element clickable method public updateRole" data-toggle="collapse" data-target=".updateRole .collapse">
+<h2>Update role</h2>
+<pre>updateRole(\eZ\Publish\SPI\Persistence\User\RoleUpdateStruct $role) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$role</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.User.RoleUpdateStruct.html">\eZ\Publish\SPI\Persistence\User\RoleUpdateStruct</a></code>
+</div>
+</div></div>
+</div>
+<a name="getPermissionsForObject" id="getPermissionsForObject"></a><div class="element clickable method protected getPermissionsForObject" data-toggle="collapse" data-target=".getPermissionsForObject .collapse">
+<h2>getPermissionsForObject()
+        </h2>
+<pre>getPermissionsForObject(\eZ\Publish\SPI\Persistence\Content $content, mixed $typeId, \array $policies) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></code>
+</div>
+<div class="subelement argument">
+<h4>$typeId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$policies</h4>
+<code>array</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If $content is not type $typeId</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getRoleAssignmentForContent" id="getRoleAssignmentForContent"></a><div class="element clickable method protected getRoleAssignmentForContent" data-toggle="collapse" data-target=".getRoleAssignmentForContent .collapse">
+<h2>getRoleAssignmentForContent()
+        </h2>
+<pre>getRoleAssignmentForContent(\array $contentIds) : <a href="Publish.SPI.Persistence.User.RoleAssignment.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRoleAssignment">\eZ\Publish\SPI\Persistence\User\RoleAssignment[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentIds</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.User.RoleAssignment.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRoleAssignment">\eZ\Publish\SPI\Persistence\User\RoleAssignment[]</a></code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24backend" id="$backend"> </a><div class="element clickable property protected $backend" data-toggle="collapse" data-target=".$backend .collapse">
+<h2>$backend</h2>
+<pre>$backend : <a href="../classes/eZ.Publish.Core.Persistence.InMemory.Backend.html">\eZ\Publish\Core\Persistence\InMemory\Backend</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24handler" id="$handler"> </a><div class="element clickable property protected $handler" data-toggle="collapse" data-target=".$handler .collapse">
+<h2>$handler</h2>
+<pre>$handler : <a href="../classes/eZ.Publish.Core.Persistence.InMemory.Handler.html">\eZ\Publish\Core\Persistence\InMemory\Handler</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:53:39+01:00.<br></footer></div>
+</div>
+</body>
+</html>

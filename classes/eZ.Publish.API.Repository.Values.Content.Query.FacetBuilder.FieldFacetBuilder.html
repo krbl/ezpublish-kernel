@@ -1,0 +1,548 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \eZ\Publish\API\Repository\Values\Content\Query\FacetBuilder\FieldFacetBuilder</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public inherited"><a href="#__construct" title="__construct :: Construct object optionally with a set of properties"><span class="description">Construct object optionally with a set of properties</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#__get" title="__get :: Magic get function handling read to non public properties"><span class="description">Magic get function handling read to non public properties</span><pre>__get()</pre></a></li>
+<li class="method public inherited"><a href="#__isset" title="__isset :: Magic isset function handling isset() to non public properties"><span class="description">Magic isset function handling isset() to non public properties</span><pre>__isset()</pre></a></li>
+<li class="method public inherited"><a href="#__set" title="__set :: Magic set function handling writes to non public properties"><span class="description">Magic set function handling writes to non public properties</span><pre>__set()</pre></a></li>
+<li class="method public inherited"><a href="#__set_state" title="__set_state :: Returns a new instance of this class with the data specified by $array."><span class="description">Returns a new instance of this class with the data specified by $array.</span><pre>__set_state()</pre></a></li>
+<li class="method public inherited"><a href="#__unset" title="__unset :: Magic unset function handling unset() to non public properties"><span class="description">Magic unset function handling unset() to non public properties</span><pre>__unset()</pre></a></li>
+<li class="method public inherited"><a href="#attribute" title="attribute :: Internal function for Legacy template engine compatibility to get property value"><span class="description">Internal function for Legacy template engine compatibility to get property value</span><pre>attribute()</pre></a></li>
+<li class="method public inherited"><a href="#attributes" title="attributes :: Internal function for Legacy template engine compatibility to get properties"><span class="description">Internal function for Legacy template engine compatibility to get properties</span><pre>attributes()</pre></a></li>
+<li class="method public inherited"><a href="#hasAttribute" title="hasAttribute :: Internal function for Legacy template engine compatibility to check existence of property"><span class="description">Internal function for Legacy template engine compatibility to check existence of property</span><pre>hasAttribute()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected inherited"><a href="#getProperties" title="getProperties :: Function where list of properties are returned"><span class="description">Function where list of properties are returned</span><pre>getProperties()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="property public "><a href="#%24fieldPaths" title="$fieldPaths :: The field paths starts with a field indentifier and a sub path (for complex types)"><span class="description">The field paths starts with a field indentifier and a sub path (for complex types)</span><pre>$fieldPaths</pre></a></li>
+<li class="property public inherited"><a href="#%24filter" title="$filter :: An additional facet filter that will further filter the documents the facet will be executed on"><span class="description">An additional facet filter that will further filter the documents the facet will be executed on</span><pre>$filter</pre></a></li>
+<li class="property public inherited"><a href="#%24global" title="$global :: If true the facet runs in a global mode not restricted by the query"><span class="description">If true the facet runs in a global mode not restricted by the query</span><pre>$global</pre></a></li>
+<li class="property public inherited"><a href="#%24limit" title="$limit :: Number of facets (terms) returned"><span class="description">Number of facets (terms) returned</span><pre>$limit</pre></a></li>
+<li class="property public inherited"><a href="#%24minCount" title="$minCount :: Specifies the minimum count."><span class="description">Specifies the minimum count.</span><pre>$minCount</pre></a></li>
+<li class="property public inherited"><a href="#%24name" title="$name :: The name of the facet"><span class="description">The name of the facet</span><pre>$name</pre></a></li>
+<li class="property public "><a href="#%24regex" title="$regex :: A regex filter for field values"><span class="description">A regex filter for field values</span><pre>$regex</pre></a></li>
+<li class="property public "><a href="#%24sort" title="$sort :: The sort order of the terms"><span class="description">The sort order of the terms</span><pre>$sort</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  "><a href="#COUNT_ASC" title="COUNT_ASC :: "><span class="description">COUNT_ASC</span><pre>COUNT_ASC</pre></a></li>
+<li class="constant  "><a href="#COUNT_DESC" title="COUNT_DESC :: "><span class="description">COUNT_DESC</span><pre>COUNT_DESC</pre></a></li>
+<li class="constant  "><a href="#TERM_ASC" title="TERM_ASC :: "><span class="description">TERM_ASC</span><pre>TERM_ASC</pre></a></li>
+<li class="constant  "><a href="#TERM_DESC" title="TERM_DESC :: "><span class="description">TERM_DESC</span><pre>TERM_DESC</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CQuery%5CFacetBuilder%5CFieldFacetBuilder" id="\eZ\Publish\API\Repository\Values\Content\Query\FacetBuilder\FieldFacetBuilder"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.API.html">API</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.API.Repository.html">Repository</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.API.Repository.Values.html">Values</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.API.Repository.Values.Content.html">Content</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.API.Repository.Values.Content.Query.html">Query</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.html">FacetBuilder</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.FieldFacetBuilder.html">FieldFacetBuilder</a>
+</li>
+</ul>
+<div href="../classes/eZ.Publish.API.Repository.Values.Content.Query.FacetBuilder.FieldFacetBuilder.html" class="element class">
+<p class="short_description">Build a field term facet.</p>
+<div class="details">
+<p class="long_description"><p>If provided the search service returns a FieldFacet for the provided field path.
+A field path starts with a field identifier and may contain a subpath in the case
+of complex field types (e.g. author/name)</p></p>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/eZ.Publish.API.Repository.Values.Content.Query.html">eZ\Publish\API\Repository\Values\Content\Query</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Construct object optionally with a set of properties</h2>
+<pre>__construct(\array $properties) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Readonly properties values must be set using $properties as they are not writable anymore
+after object has been created.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::__construct()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\Content\Query\FacetBuilder::__construct()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$properties</h4>
+<code>array</code>
+</div>
+</div></div>
+</div>
+<a name="__get" id="__get"></a><div class="element clickable method public __get" data-toggle="collapse" data-target=".__get .collapse">
+<h2>Magic get function handling read to non public properties</h2>
+<pre>__get(string $property) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Returns value for all readonly (protected) properties.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::__get()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\Content\Query\FacetBuilder::__get()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code><p>Name of the property</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.PropertyNotFoundException.html">\eZ\Publish\API\Repository\Exceptions\PropertyNotFoundException</a></code></th>
+<td>exception on all reads to undefined properties so typos are not silently accepted.</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="__isset" id="__isset"></a><div class="element clickable method public __isset" data-toggle="collapse" data-target=".__isset .collapse">
+<h2>Magic isset function handling isset() to non public properties</h2>
+<pre>__isset(string $property) : boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Returns true for all (public/)protected/private properties.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::__isset()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\Content\Query\FacetBuilder::__isset()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code><p>Name of the property</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="__set" id="__set"></a><div class="element clickable method public __set" data-toggle="collapse" data-target=".__set .collapse">
+<h2>Magic set function handling writes to non public properties</h2>
+<pre>__set(string $property, string $value) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::__set()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\Content\Query\FacetBuilder::__set()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code><p>Name of the property</p></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.PropertyNotFoundException.html">\eZ\Publish\API\Repository\Exceptions\PropertyNotFoundException</a></code></th>
+<td>When property does not exist</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.PropertyReadOnlyException.html">\eZ\Publish\API\Repository\Exceptions\PropertyReadOnlyException</a></code></th>
+<td>When property is readonly (protected)</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="__set_state" id="__set_state"></a><div class="element clickable method public __set_state" data-toggle="collapse" data-target=".__set_state .collapse">
+<h2>Returns a new instance of this class with the data specified by $array.</h2>
+<pre>__set_state(\array $array) : <a href="../classes/eZ.Publish.API.Repository.Values.ValueObject.html">\eZ\Publish\API\Repository\Values\ValueObject</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>$array contains all the data members of this class in the form:
+array('member_name'=>value).</p>
+
+<p>__set_state makes this class exportable with var_export.
+var_export() generates code, that calls this method when it
+is parsed with PHP.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::__set_state()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\Content\Query\FacetBuilder::__set_state()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$array</h4>
+<code>mixed[]</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ValueObject.html">\eZ\Publish\API\Repository\Values\ValueObject</a></code></div>
+</div></div>
+</div>
+<a name="__unset" id="__unset"></a><div class="element clickable method public __unset" data-toggle="collapse" data-target=".__unset .collapse">
+<h2>Magic unset function handling unset() to non public properties</h2>
+<pre>__unset(string $property) : boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>uses</th>
+<td>\eZ\Publish\API\Repository\Values\__set()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::__unset()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\Content\Query\FacetBuilder::__unset()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code>string</code><p>Name of the property</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.PropertyNotFoundException.html">\eZ\Publish\API\Repository\Exceptions\PropertyNotFoundException</a></code></th>
+<td>exception on all writes to undefined properties so typos are not silently accepted and</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.PropertyReadOnlyException.html">\eZ\Publish\API\Repository\Exceptions\PropertyReadOnlyException</a></code></th>
+<td>exception on readonly (protected) properties.</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="attribute" id="attribute"></a><div class="element clickable method public attribute" data-toggle="collapse" data-target=".attribute .collapse">
+<h2>Internal function for Legacy template engine compatibility to get property value</h2>
+<pre>attribute($property) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\eZ\Publish\API\Repository\Values\__get()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::attribute()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\Content\Query\FacetBuilder::attribute()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="attributes" id="attributes"></a><div class="element clickable method public attributes" data-toggle="collapse" data-target=".attributes .collapse">
+<h2>Internal function for Legacy template engine compatibility to get properties</h2>
+<pre>attributes() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\eZ\Publish\API\Repository\Values\__isset()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::attributes()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\Content\Query\FacetBuilder::attributes()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="hasAttribute" id="hasAttribute"></a><div class="element clickable method public hasAttribute" data-toggle="collapse" data-target=".hasAttribute .collapse">
+<h2>Internal function for Legacy template engine compatibility to check existence of property</h2>
+<pre>hasAttribute($property) : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\eZ\Publish\API\Repository\Values\__isset()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::hasAttribute()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\Content\Query\FacetBuilder::hasAttribute()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$property</h4>
+<code></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="getProperties" id="getProperties"></a><div class="element clickable method protected getProperties" data-toggle="collapse" data-target=".getProperties .collapse">
+<h2>Function where list of properties are returned</h2>
+<pre>getProperties(array $dynamicProperties) : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Used by {@see attributes()}, override to add dynamic properties</p></p>
+<table class="table table-bordered">
+<tr>
+<th>uses</th>
+<td>\eZ\Publish\API\Repository\Values\__isset()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\ValueObject::getProperties()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\Content\Query\FacetBuilder::getProperties()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dynamicProperties</h4>
+<code>array</code><p>Additional dynamic properties exposed on the object</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24fieldPaths" id="$fieldPaths"> </a><div class="element clickable property public $fieldPaths" data-toggle="collapse" data-target=".$fieldPaths .collapse">
+<h2>The field paths starts with a field indentifier and a sub path (for complex types)</h2>
+<pre>$fieldPaths : string[]</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24filter" id="$filter"> </a><div class="element clickable property public $filter" data-toggle="collapse" data-target=".$filter .collapse">
+<h2>An additional facet filter that will further filter the documents the facet will be executed on</h2>
+<pre>$filter : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.Criterion.html">\eZ\Publish\API\Repository\Values\Content\Query\Criterion</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\Content\Query\FacetBuilder::$$filter</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24global" id="$global"> </a><div class="element clickable property public $global" data-toggle="collapse" data-target=".$global .collapse">
+<h2>If true the facet runs in a global mode not restricted by the query</h2>
+<pre>$global : boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\Content\Query\FacetBuilder::$$global</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24limit" id="$limit"> </a><div class="element clickable property public $limit" data-toggle="collapse" data-target=".$limit .collapse">
+<h2>Number of facets (terms) returned</h2>
+<pre>$limit : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\Content\Query\FacetBuilder::$$limit</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24minCount" id="$minCount"> </a><div class="element clickable property public $minCount" data-toggle="collapse" data-target=".$minCount .collapse">
+<h2>Specifies the minimum count.</h2>
+<pre>$minCount : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Only facet groups with more or equal results are returned.</p></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\Content\Query\FacetBuilder::$$minCount</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24name" id="$name"> </a><div class="element clickable property public $name" data-toggle="collapse" data-target=".$name .collapse">
+<h2>The name of the facet</h2>
+<pre>$name : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\eZ\Publish\API\Repository\Values\Content\Query\FacetBuilder::$$name</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24regex" id="$regex"> </a><div class="element clickable property public $regex" data-toggle="collapse" data-target=".$regex .collapse">
+<h2>A regex filter for field values</h2>
+<pre>$regex : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24sort" id="$sort"> </a><div class="element clickable property public $sort" data-toggle="collapse" data-target=".$sort .collapse">
+<h2>The sort order of the terms</h2>
+<pre>$sort : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"><p>One of FieldFacetBuilder::COUNT_ASC, FieldFacetBuilder::COUNT_DESC, FieldFacetBuilder::TERM_ASC, FieldFacetBuilder::TERM_DESC</p></p></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a name="COUNT_ASC" id="COUNT_ASC"> </a><div class="element clickable constant  COUNT_ASC" data-toggle="collapse" data-target=".COUNT_ASC .collapse">
+<h2>COUNT_ASC</h2>
+<pre>COUNT_ASC </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="COUNT_DESC" id="COUNT_DESC"> </a><div class="element clickable constant  COUNT_DESC" data-toggle="collapse" data-target=".COUNT_DESC .collapse">
+<h2>COUNT_DESC</h2>
+<pre>COUNT_DESC </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="TERM_ASC" id="TERM_ASC"> </a><div class="element clickable constant  TERM_ASC" data-toggle="collapse" data-target=".TERM_ASC .collapse">
+<h2>TERM_ASC</h2>
+<pre>TERM_ASC </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="TERM_DESC" id="TERM_DESC"> </a><div class="element clickable constant  TERM_DESC" data-toggle="collapse" data-target=".TERM_DESC .collapse">
+<h2>TERM_DESC</h2>
+<pre>TERM_DESC </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:51:33+01:00.<br></footer></div>
+</div>
+</body>
+</html>

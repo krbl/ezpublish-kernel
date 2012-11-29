@@ -1,0 +1,618 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \eZ\Publish\Core\Repository\LocationService</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Setups service with reference to repository object that created it &amp; corresponding handler"><span class="description">Setups service with reference to repository object that created it &amp; corresponding handler</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#copySubtree" title="copySubtree :: Copies the subtree starting from $subtree as a new subtree of $targetLocation"><span class="description">Copies the subtree starting from $subtree as a new subtree of $targetLocation</span><pre>copySubtree()</pre></a></li>
+<li class="method public "><a href="#createLocation" title="createLocation :: Creates the new $location in the content repository for the given content"><span class="description">Creates the new $location in the content repository for the given content</span><pre>createLocation()</pre></a></li>
+<li class="method public "><a href="#deleteLocation" title="deleteLocation :: Deletes $location and all its descendants."><span class="description">Deletes $location and all its descendants.</span><pre>deleteLocation()</pre></a></li>
+<li class="method public "><a href="#getLocationChildCount" title="getLocationChildCount :: Returns the number of children which are readable by the current user of a location object"><span class="description">Returns the number of children which are readable by the current user of a location object</span><pre>getLocationChildCount()</pre></a></li>
+<li class="method public "><a href="#hideLocation" title="hideLocation :: Hides the $location and marks invisible all descendants of $location."><span class="description">Hides the $location and marks invisible all descendants of $location.</span><pre>hideLocation()</pre></a></li>
+<li class="method public "><a href="#loadLocation" title="loadLocation :: Loads a location object from its $locationId"><span class="description">Loads a location object from its $locationId</span><pre>loadLocation()</pre></a></li>
+<li class="method public "><a href="#loadLocationByRemoteId" title="loadLocationByRemoteId :: Loads a location object from its $remoteId"><span class="description">Loads a location object from its $remoteId</span><pre>loadLocationByRemoteId()</pre></a></li>
+<li class="method public "><a href="#loadLocationChildren" title="loadLocationChildren :: Load children which are readable by the current user of a location object sorted by sortField and sortOrder"><span class="description">Load children which are readable by the current user of a location object sorted by sortField and sortOrder</span><pre>loadLocationChildren()</pre></a></li>
+<li class="method public "><a href="#loadLocations" title="loadLocations :: Loads the locations for the given content object."><span class="description">Loads the locations for the given content object.</span><pre>loadLocations()</pre></a></li>
+<li class="method public "><a href="#moveSubtree" title="moveSubtree :: Moves the subtree to $newParentLocation"><span class="description">Moves the subtree to $newParentLocation</span><pre>moveSubtree()</pre></a></li>
+<li class="method public "><a href="#newLocationCreateStruct" title="newLocationCreateStruct :: Instantiates a new location create class"><span class="description">Instantiates a new location create class</span><pre>newLocationCreateStruct()</pre></a></li>
+<li class="method public "><a href="#newLocationUpdateStruct" title="newLocationUpdateStruct :: Instantiates a new location update class"><span class="description">Instantiates a new location update class</span><pre>newLocationUpdateStruct()</pre></a></li>
+<li class="method public "><a href="#swapLocation" title="swapLocation :: Swaps the contents held by $location1 and $location2"><span class="description">Swaps the contents held by $location1 and $location2</span><pre>swapLocation()</pre></a></li>
+<li class="method public "><a href="#unhideLocation" title="unhideLocation :: Unhides the $location."><span class="description">Unhides the $location.</span><pre>unhideLocation()</pre></a></li>
+<li class="method public "><a href="#updateLocation" title="updateLocation :: Updates $location in the content repository"><span class="description">Updates $location in the content repository</span><pre>updateLocation()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#buildDomainLocationObject" title="buildDomainLocationObject :: Builds domain location object from provided persistence location"><span class="description">Builds domain location object from provided persistence location</span><pre>buildDomainLocationObject()</pre></a></li>
+<li class="method protected "><a href="#getDateTime" title="getDateTime :: "><span class="description">getDateTime()
+        </span><pre>getDateTime()</pre></a></li>
+<li class="method protected "><a href="#getSortClauseBySortField" title="getSortClauseBySortField :: Instantiates a correct sort clause object based on provided location sort field and sort order"><span class="description">Instantiates a correct sort clause object based on provided location sort field and sort order</span><pre>getSortClauseBySortField()</pre></a></li>
+<li class="method protected "><a href="#searchChildrenLocations" title="searchChildrenLocations :: Searches children locations of the provided parent location id"><span class="description">Searches children locations of the provided parent location id</span><pre>searchChildrenLocations()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24persistenceHandler" title="$persistenceHandler :: "><span class="description">$persistenceHandler</span><pre>$persistenceHandler</pre></a></li>
+<li class="property protected "><a href="#%24repository" title="$repository :: "><span class="description">$repository</span><pre>$repository</pre></a></li>
+<li class="property protected "><a href="#%24settings" title="$settings :: "><span class="description">$settings</span><pre>$settings</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CeZ%5CPublish%5CCore%5CRepository%5CLocationService" id="\eZ\Publish\Core\Repository\LocationService"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Repository.html">Repository</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/eZ.Publish.Core.Repository.LocationService.html">LocationService</a>
+</li>
+</ul>
+<div href="../classes/eZ.Publish.Core.Repository.LocationService.html" class="element class">
+<p class="short_description">Location service, used for complex subtree operations</p>
+<div class="details">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>example</th>
+<td>Examples/location.php</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/eZ.Publish.Core.Repository.html">eZ\Publish\Core\Repository</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Setups service with reference to repository object that created it &amp; corresponding handler</h2>
+<pre>__construct(\eZ\Publish\API\Repository\Repository $repository, \eZ\Publish\SPI\Persistence\Handler $handler, \array $settings) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$repository</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Repository.html">\eZ\Publish\API\Repository\Repository</a></code>
+</div>
+<div class="subelement argument">
+<h4>$handler</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Handler.html">\eZ\Publish\SPI\Persistence\Handler</a></code>
+</div>
+<div class="subelement argument">
+<h4>$settings</h4>
+<code>array</code>
+</div>
+</div></div>
+</div>
+<a name="copySubtree" id="copySubtree"></a><div class="element clickable method public copySubtree" data-toggle="collapse" data-target=".copySubtree .collapse">
+<h2>Copies the subtree starting from $subtree as a new subtree of $targetLocation</h2>
+<pre>copySubtree(\eZ\Publish\API\Repository\Values\Content\Location $subtree, \eZ\Publish\API\Repository\Values\Content\Location $targetParentLocation) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Only the items on which the user has read access are copied.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$subtree</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code><ul>
+<li>the subtree denoted by the location to copy</li>
+</ul>
+</div>
+<div class="subelement argument">
+<h4>$targetParentLocation</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code><ul>
+<li>the target parent location for the copy operation</li>
+</ul>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>If the current user user is not allowed copy the subtree to the given parent location</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>If the current user user does not have read access to the whole source subtree</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
+<td>if the target location is a sub location of the given location</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code>The newly created location of the copied subtree</div>
+</div></div>
+</div>
+<a name="createLocation" id="createLocation"></a><div class="element clickable method public createLocation" data-toggle="collapse" data-target=".createLocation .collapse">
+<h2>Creates the new $location in the content repository for the given content</h2>
+<pre>createLocation(\eZ\Publish\API\Repository\Values\Content\ContentInfo $contentInfo, \eZ\Publish\API\Repository\Values\Content\LocationCreateStruct $locationCreateStruct) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentInfo</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.ContentInfo.html">\eZ\Publish\API\Repository\Values\Content\ContentInfo</a></code>
+</div>
+<div class="subelement argument">
+<h4>$locationCreateStruct</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.LocationCreateStruct.html">\eZ\Publish\API\Repository\Values\Content\LocationCreateStruct</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>If the current user user is not allowed to create this location</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
+<td>if the content is already below the specified parent or the parent is a sub location of the location of the content or if set the remoteId exists already</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code>the newly created Location</div>
+</div></div>
+</div>
+<a name="deleteLocation" id="deleteLocation"></a><div class="element clickable method public deleteLocation" data-toggle="collapse" data-target=".deleteLocation .collapse">
+<h2>Deletes $location and all its descendants.</h2>
+<pre>deleteLocation(\eZ\Publish\API\Repository\Values\Content\Location $location) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$location</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>If the current user is not allowed to delete this location or a descendant</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getLocationChildCount" id="getLocationChildCount"></a><div class="element clickable method public getLocationChildCount" data-toggle="collapse" data-target=".getLocationChildCount .collapse">
+<h2>Returns the number of children which are readable by the current user of a location object</h2>
+<pre>getLocationChildCount(\eZ\Publish\API\Repository\Values\Content\Location $location) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$location</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a name="hideLocation" id="hideLocation"></a><div class="element clickable method public hideLocation" data-toggle="collapse" data-target=".hideLocation .collapse">
+<h2>Hides the $location and marks invisible all descendants of $location.</h2>
+<pre>hideLocation(\eZ\Publish\API\Repository\Values\Content\Location $location) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$location</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>If the current user user is not allowed to hide this location</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code>$location, with updated hidden value</div>
+</div></div>
+</div>
+<a name="loadLocation" id="loadLocation"></a><div class="element clickable method public loadLocation" data-toggle="collapse" data-target=".loadLocation .collapse">
+<h2>Loads a location object from its $locationId</h2>
+<pre>loadLocation(integer $locationId) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$locationId</h4>
+<code>integer</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>If the current user user is not allowed to read this location</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If the specified location is not found</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code></div>
+</div></div>
+</div>
+<a name="loadLocationByRemoteId" id="loadLocationByRemoteId"></a><div class="element clickable method public loadLocationByRemoteId" data-toggle="collapse" data-target=".loadLocationByRemoteId .collapse">
+<h2>Loads a location object from its $remoteId</h2>
+<pre>loadLocationByRemoteId(string $remoteId) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$remoteId</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>If the current user user is not allowed to read this location</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.BadStateException.html">\eZ\Publish\API\Repository\Exceptions\BadStateException</a></code></th>
+<td>If more than one location with same remote ID was found</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If the specified location is not found</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code></div>
+</div></div>
+</div>
+<a name="loadLocationChildren" id="loadLocationChildren"></a><div class="element clickable method public loadLocationChildren" data-toggle="collapse" data-target=".loadLocationChildren .collapse">
+<h2>Load children which are readable by the current user of a location object sorted by sortField and sortOrder</h2>
+<pre>loadLocationChildren(\eZ\Publish\API\Repository\Values\Content\Location $location, int $offset, int $limit) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.LocationList.html">\eZ\Publish\API\Repository\Values\Content\LocationList</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$location</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code>
+</div>
+<div class="subelement argument">
+<h4>$offset</h4>
+<code>int</code><p>the start offset for paging</p></div>
+<div class="subelement argument">
+<h4>$limit</h4>
+<code>int</code><p>the number of locations returned. If $limit = -1 all children starting at $offset are returned</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.LocationList.html">\eZ\Publish\API\Repository\Values\Content\LocationList</a></code></div>
+</div></div>
+</div>
+<a name="loadLocations" id="loadLocations"></a><div class="element clickable method public loadLocations" data-toggle="collapse" data-target=".loadLocations .collapse">
+<h2>Loads the locations for the given content object.</h2>
+<pre>loadLocations(\eZ\Publish\API\Repository\Values\Content\ContentInfo $contentInfo, \eZ\Publish\API\Repository\Values\Content\Location $rootLocation) : <a href="Publish.API.Repository.Values.Content.Location.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CLocation">\eZ\Publish\API\Repository\Values\Content\Location[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>If a $rootLocation is given, only locations that belong to this location are returned.
+The location list is also filtered by permissions on reading locations.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentInfo</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.ContentInfo.html">\eZ\Publish\API\Repository\Values\Content\ContentInfo</a></code>
+</div>
+<div class="subelement argument">
+<h4>$rootLocation</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.BadStateException.html">\eZ\Publish\API\Repository\Exceptions\BadStateException</a></code></th>
+<td>if there is no published version yet</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="Publish.API.Repository.Values.Content.Location.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CLocation">\eZ\Publish\API\Repository\Values\Content\Location[]</a></code>An array of {@link Location}</div>
+</div></div>
+</div>
+<a name="moveSubtree" id="moveSubtree"></a><div class="element clickable method public moveSubtree" data-toggle="collapse" data-target=".moveSubtree .collapse">
+<h2>Moves the subtree to $newParentLocation</h2>
+<pre>moveSubtree(\eZ\Publish\API\Repository\Values\Content\Location $location, \eZ\Publish\API\Repository\Values\Content\Location $newParentLocation) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>If a user has the permission to move the location to a target location
+he can do it regardless of an existing descendant on which the user has no permission.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$location</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code>
+</div>
+<div class="subelement argument">
+<h4>$newParentLocation</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>If the current user user is not allowed to move this location to the target</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>If the current user user does not have read access to the whole source subtree</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="newLocationCreateStruct" id="newLocationCreateStruct"></a><div class="element clickable method public newLocationCreateStruct" data-toggle="collapse" data-target=".newLocationCreateStruct .collapse">
+<h2>Instantiates a new location create class</h2>
+<pre>newLocationCreateStruct(mixed $parentLocationId) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.LocationCreateStruct.html">\eZ\Publish\API\Repository\Values\Content\LocationCreateStruct</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$parentLocationId</h4>
+<code>mixed</code><p>the parent under which the new location should be created</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.LocationCreateStruct.html">\eZ\Publish\API\Repository\Values\Content\LocationCreateStruct</a></code></div>
+</div></div>
+</div>
+<a name="newLocationUpdateStruct" id="newLocationUpdateStruct"></a><div class="element clickable method public newLocationUpdateStruct" data-toggle="collapse" data-target=".newLocationUpdateStruct .collapse">
+<h2>Instantiates a new location update class</h2>
+<pre>newLocationUpdateStruct() : <a href="../classes/eZ.Publish.API.Repository.Values.Content.LocationUpdateStruct.html">\eZ\Publish\API\Repository\Values\Content\LocationUpdateStruct</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.LocationUpdateStruct.html">\eZ\Publish\API\Repository\Values\Content\LocationUpdateStruct</a></code></div>
+</div></div>
+</div>
+<a name="swapLocation" id="swapLocation"></a><div class="element clickable method public swapLocation" data-toggle="collapse" data-target=".swapLocation .collapse">
+<h2>Swaps the contents held by $location1 and $location2</h2>
+<pre>swapLocation(\eZ\Publish\API\Repository\Values\Content\Location $location1, \eZ\Publish\API\Repository\Values\Content\Location $location2) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$location1</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code>
+</div>
+<div class="subelement argument">
+<h4>$location2</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>If the current user user is not allowed to swap content</td>
+</tr></table>
+</div></div>
+</div>
+<a name="unhideLocation" id="unhideLocation"></a><div class="element clickable method public unhideLocation" data-toggle="collapse" data-target=".unhideLocation .collapse">
+<h2>Unhides the $location.</h2>
+<pre>unhideLocation(\eZ\Publish\API\Repository\Values\Content\Location $location) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This method and marks visible all descendants of $locations
+until a hidden location is found.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$location</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>If the current user user is not allowed to unhide this location</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code>$location, with updated hidden value</div>
+</div></div>
+</div>
+<a name="updateLocation" id="updateLocation"></a><div class="element clickable method public updateLocation" data-toggle="collapse" data-target=".updateLocation .collapse">
+<h2>Updates $location in the content repository</h2>
+<pre>updateLocation(\eZ\Publish\API\Repository\Values\Content\Location $location, \eZ\Publish\API\Repository\Values\Content\LocationUpdateStruct $locationUpdateStruct) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$location</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code>
+</div>
+<div class="subelement argument">
+<h4>$locationUpdateStruct</h4>
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.LocationUpdateStruct.html">\eZ\Publish\API\Repository\Values\Content\LocationUpdateStruct</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
+<td>If the current user user is not allowed to update this location</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
+<td>if if set the remoteId exists already</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code>the updated Location</div>
+</div></div>
+</div>
+<a name="buildDomainLocationObject" id="buildDomainLocationObject"></a><div class="element clickable method protected buildDomainLocationObject" data-toggle="collapse" data-target=".buildDomainLocationObject .collapse">
+<h2>Builds domain location object from provided persistence location</h2>
+<pre>buildDomainLocationObject(\eZ\Publish\SPI\Persistence\Content\Location $spiLocation) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$spiLocation</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Location.html">\eZ\Publish\SPI\Persistence\Content\Location</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Location.html">\eZ\Publish\API\Repository\Values\Content\Location</a></code></div>
+</div></div>
+</div>
+<a name="getDateTime" id="getDateTime"></a><div class="element clickable method protected getDateTime" data-toggle="collapse" data-target=".getDateTime .collapse">
+<h2>getDateTime()
+        </h2>
+<pre>getDateTime(int | null $timestamp) : <a href="http://php.net/manual/en/class.datetime.php">\DateTime</a> | null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$timestamp</h4>
+<code>intnull</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="http://php.net/manual/en/class.datetime.php">\DateTime</a></code><code>null</code>
+</div>
+</div></div>
+</div>
+<a name="getSortClauseBySortField" id="getSortClauseBySortField"></a><div class="element clickable method protected getSortClauseBySortField" data-toggle="collapse" data-target=".getSortClauseBySortField .collapse">
+<h2>Instantiates a correct sort clause object based on provided location sort field and sort order</h2>
+<pre>getSortClauseBySortField(int $sortField, int $sortOrder) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.SortClause.html">\eZ\Publish\API\Repository\Values\Content\Query\SortClause</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$sortField</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$sortOrder</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Query.SortClause.html">\eZ\Publish\API\Repository\Values\Content\Query\SortClause</a></code></div>
+</div></div>
+</div>
+<a name="searchChildrenLocations" id="searchChildrenLocations"></a><div class="element clickable method protected searchChildrenLocations" data-toggle="collapse" data-target=".searchChildrenLocations .collapse">
+<h2>Searches children locations of the provided parent location id</h2>
+<pre>searchChildrenLocations(int $parentLocationId, int $sortField, int $sortOrder, int $offset, int $limit) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Search.SearchResult.html">\eZ\Publish\API\Repository\Values\Content\Search\SearchResult</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$parentLocationId</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$sortField</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$sortOrder</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$offset</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$limit</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Search.SearchResult.html">\eZ\Publish\API\Repository\Values\Content\Search\SearchResult</a></code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24persistenceHandler" id="$persistenceHandler"> </a><div class="element clickable property protected $persistenceHandler" data-toggle="collapse" data-target=".$persistenceHandler .collapse">
+<h2>$persistenceHandler</h2>
+<pre>$persistenceHandler : <a href="../classes/eZ.Publish.SPI.Persistence.Handler.html">\eZ\Publish\SPI\Persistence\Handler</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24repository" id="$repository"> </a><div class="element clickable property protected $repository" data-toggle="collapse" data-target=".$repository .collapse">
+<h2>$repository</h2>
+<pre>$repository : <a href="../classes/eZ.Publish.API.Repository.Repository.html">\eZ\Publish\API\Repository\Repository</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24settings" id="$settings"> </a><div class="element clickable property protected $settings" data-toggle="collapse" data-target=".$settings .collapse">
+<h2>$settings</h2>
+<pre>$settings : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:51:56+01:00.<br></footer></div>
+</div>
+</body>
+</html>

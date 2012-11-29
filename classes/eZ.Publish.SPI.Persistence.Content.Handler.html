@@ -1,0 +1,493 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \eZ\Publish\SPI\Persistence\Content\Handler</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#addRelation" title="addRelation :: Creates a relation between $sourceContentId in $sourceContentVersionNo
+and $destinationContentId with a specific $type."><span class="description">Creates a relation between $sourceContentId in $sourceContentVersionNo
+and $destinationContentId with a specific $type.</span><pre>addRelation()</pre></a></li>
+<li class="method public "><a href="#copy" title="copy :: Copy Content with Fields and Versions from $contentId in $version."><span class="description">Copy Content with Fields and Versions from $contentId in $version.</span><pre>copy()</pre></a></li>
+<li class="method public "><a href="#create" title="create :: Creates a new Content entity in the storage engine."><span class="description">Creates a new Content entity in the storage engine.</span><pre>create()</pre></a></li>
+<li class="method public "><a href="#createDraftFromVersion" title="createDraftFromVersion :: Creates a new draft version from $contentId in $srcVersion number."><span class="description">Creates a new draft version from $contentId in $srcVersion number.</span><pre>createDraftFromVersion()</pre></a></li>
+<li class="method public "><a href="#deleteContent" title="deleteContent :: Deletes all versions and fields, all locations (subtree), and all relations."><span class="description">Deletes all versions and fields, all locations (subtree), and all relations.</span><pre>deleteContent()</pre></a></li>
+<li class="method public "><a href="#deleteVersion" title="deleteVersion :: Deletes given version, its fields, node assignment, relations and names."><span class="description">Deletes given version, its fields, node assignment, relations and names.</span><pre>deleteVersion()</pre></a></li>
+<li class="method public "><a href="#listVersions" title="listVersions :: Return the versions for $contentId"><span class="description">Return the versions for $contentId</span><pre>listVersions()</pre></a></li>
+<li class="method public "><a href="#load" title="load :: Returns the raw data of a content object identified by $id, in a struct."><span class="description">Returns the raw data of a content object identified by $id, in a struct.</span><pre>load()</pre></a></li>
+<li class="method public "><a href="#loadContentInfo" title="loadContentInfo :: Returns the metadata object for a content identified by $contentId."><span class="description">Returns the metadata object for a content identified by $contentId.</span><pre>loadContentInfo()</pre></a></li>
+<li class="method public "><a href="#loadDraftsForUser" title="loadDraftsForUser :: Returns all versions with draft status created by the given $userId"><span class="description">Returns all versions with draft status created by the given $userId</span><pre>loadDraftsForUser()</pre></a></li>
+<li class="method public "><a href="#loadRelations" title="loadRelations :: Loads relations from $sourceContentId."><span class="description">Loads relations from $sourceContentId.</span><pre>loadRelations()</pre></a></li>
+<li class="method public "><a href="#loadReverseRelations" title="loadReverseRelations :: Loads relations from $contentId."><span class="description">Loads relations from $contentId.</span><pre>loadReverseRelations()</pre></a></li>
+<li class="method public "><a href="#loadVersionInfo" title="loadVersionInfo :: Returns the version object for a content/version identified by $contentId and $versionNo"><span class="description">Returns the version object for a content/version identified by $contentId and $versionNo</span><pre>loadVersionInfo()</pre></a></li>
+<li class="method public "><a href="#publish" title="publish :: Performs the publishing operations required to set the version identified by $updateStruct-&gt;versionNo and
+$updateStruct-&gt;id as the published one."><span class="description">Performs the publishing operations required to set the version identified by $updateStruct-&gt;versionNo and
+$updateStruct-&gt;id as the published one.</span><pre>publish()</pre></a></li>
+<li class="method public "><a href="#removeRelation" title="removeRelation :: Removes a relation by relation Id."><span class="description">Removes a relation by relation Id.</span><pre>removeRelation()</pre></a></li>
+<li class="method public "><a href="#setStatus" title="setStatus :: Sets the status of object identified by $contentId and $version to $status."><span class="description">Sets the status of object identified by $contentId and $version to $status.</span><pre>setStatus()</pre></a></li>
+<li class="method public "><a href="#updateContent" title="updateContent :: Updates a content version, identified by $contentId and $versionNo"><span class="description">Updates a content version, identified by $contentId and $versionNo</span><pre>updateContent()</pre></a></li>
+<li class="method public "><a href="#updateMetadata" title="updateMetadata :: Updates a content object meta data, identified by $contentId"><span class="description">Updates a content object meta data, identified by $contentId</span><pre>updateMetadata()</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CHandler" id="\eZ\Publish\SPI\Persistence\Content\Handler"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.SPI.html">SPI</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.SPI.Persistence.html">Persistence</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.SPI.Persistence.Content.html">Content</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/eZ.Publish.SPI.Persistence.Content.Handler.html">Handler</a>
+</li>
+</ul>
+<div href="../classes/eZ.Publish.SPI.Persistence.Content.Handler.html" class="element interface">
+<p class="short_description">The Content Handler interface defines content operations on the storage engine.</p>
+<div class="details">
+<p class="long_description"><p>The basic operations which are performed on content objects are collected in
+this interface. Typically this interface would be used by a service managing
+business logic for content objects.</p></p>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="addRelation" id="addRelation"></a><div class="element clickable method public addRelation" data-toggle="collapse" data-target=".addRelation .collapse">
+<h2>Creates a relation between $sourceContentId in $sourceContentVersionNo
+and $destinationContentId with a specific $type.</h2>
+<pre>addRelation(\eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct $createStruct) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Relation.html">\eZ\Publish\SPI\Persistence\Content\Relation</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>todo</th>
+<td>Should the existence verifications happen here or is this supposed to be handled at a higher level?</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$createStruct</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Relation.CreateStruct.html">\eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Relation.html">\eZ\Publish\SPI\Persistence\Content\Relation</a></code></div>
+</div></div>
+</div>
+<a name="copy" id="copy"></a><div class="element clickable method public copy" data-toggle="collapse" data-target=".copy .collapse">
+<h2>Copy Content with Fields and Versions from $contentId in $version.</h2>
+<pre>copy(mixed $contentId, mixed | null $versionNo) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Copies all fields from $contentId in $version (or all versions if false)
+to a new object which is returned. Version numbers are maintained.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$versionNo</h4>
+<code>mixednull</code><p>Copy all versions if left null</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If content or version is not found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></code></div>
+</div></div>
+</div>
+<a name="create" id="create"></a><div class="element clickable method public create" data-toggle="collapse" data-target=".create .collapse">
+<h2>Creates a new Content entity in the storage engine.</h2>
+<pre>create(\eZ\Publish\SPI\Persistence\Content\CreateStruct $content) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>The values contained inside the $content will form the basis of stored
+entity.</p>
+
+<p>Will contain always a complete list of fields.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.CreateStruct.html">\eZ\Publish\SPI\Persistence\Content\CreateStruct</a></code><p>Content creation struct.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></code>Content value object</div>
+</div></div>
+</div>
+<a name="createDraftFromVersion" id="createDraftFromVersion"></a><div class="element clickable method public createDraftFromVersion" data-toggle="collapse" data-target=".createDraftFromVersion .collapse">
+<h2>Creates a new draft version from $contentId in $srcVersion number.</h2>
+<pre>createDraftFromVersion(mixed $contentId, mixed $srcVersion, mixed $userId) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Copies all fields from $contentId in $srcVersion and creates a new
+version of the referred Content from it.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$srcVersion</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$userId</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></code></div>
+</div></div>
+</div>
+<a name="deleteContent" id="deleteContent"></a><div class="element clickable method public deleteContent" data-toggle="collapse" data-target=".deleteContent .collapse">
+<h2>Deletes all versions and fields, all locations (subtree), and all relations.</h2>
+<pre>deleteContent(int $contentId) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Removes the relations, but not the related objects. All subtrees of the
+assigned nodes of this content objects are removed (recursively).</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentId</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="deleteVersion" id="deleteVersion"></a><div class="element clickable method public deleteVersion" data-toggle="collapse" data-target=".deleteVersion .collapse">
+<h2>Deletes given version, its fields, node assignment, relations and names.</h2>
+<pre>deleteVersion(int $contentId, int $versionNo) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Removes the relations, but not the related objects.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentId</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$versionNo</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="listVersions" id="listVersions"></a><div class="element clickable method public listVersions" data-toggle="collapse" data-target=".listVersions .collapse">
+<h2>Return the versions for $contentId</h2>
+<pre>listVersions(int $contentId) : <a href="Publish.SPI.Persistence.Content.VersionInfo.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CVersionInfo">\eZ\Publish\SPI\Persistence\Content\VersionInfo[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentId</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.Content.VersionInfo.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CVersionInfo">\eZ\Publish\SPI\Persistence\Content\VersionInfo[]</a></code></div>
+</div></div>
+</div>
+<a name="load" id="load"></a><div class="element clickable method public load" data-toggle="collapse" data-target=".load .collapse">
+<h2>Returns the raw data of a content object identified by $id, in a struct.</h2>
+<pre>load(int | string $id, int | string $version, string[] $translations) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>A version to load must be specified. If you want to load the current
+version of a content object use SearchHandler::findSingle() with the
+ContentId criterion.</p>
+
+<p>Optionally a translation filter may be specified. If specified only the
+translations with the listed language codes will be retrieved. If not,
+all translations will be retrieved.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>intstring</code>
+</div>
+<div class="subelement argument">
+<h4>$version</h4>
+<code>intstring</code>
+</div>
+<div class="subelement argument">
+<h4>$translations</h4>
+<code>string[]</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></code>Content value object</div>
+</div></div>
+</div>
+<a name="loadContentInfo" id="loadContentInfo"></a><div class="element clickable method public loadContentInfo" data-toggle="collapse" data-target=".loadContentInfo .collapse">
+<h2>Returns the metadata object for a content identified by $contentId.</h2>
+<pre>loadContentInfo(int | string $contentId) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.ContentInfo.html">\eZ\Publish\SPI\Persistence\Content\ContentInfo</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentId</h4>
+<code>intstring</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.ContentInfo.html">\eZ\Publish\SPI\Persistence\Content\ContentInfo</a></code></div>
+</div></div>
+</div>
+<a name="loadDraftsForUser" id="loadDraftsForUser"></a><div class="element clickable method public loadDraftsForUser" data-toggle="collapse" data-target=".loadDraftsForUser .collapse">
+<h2>Returns all versions with draft status created by the given $userId</h2>
+<pre>loadDraftsForUser($userId) : <a href="Publish.SPI.Persistence.Content.VersionInfo.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CVersionInfo">\eZ\Publish\SPI\Persistence\Content\VersionInfo[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$userId</h4>
+<code></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.Content.VersionInfo.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CVersionInfo">\eZ\Publish\SPI\Persistence\Content\VersionInfo[]</a></code></div>
+</div></div>
+</div>
+<a name="loadRelations" id="loadRelations"></a><div class="element clickable method public loadRelations" data-toggle="collapse" data-target=".loadRelations .collapse">
+<h2>Loads relations from $sourceContentId.</h2>
+<pre>loadRelations(mixed $sourceContentId, mixed | null $sourceContentVersionNo, int | null $type) : <a href="Publish.SPI.Persistence.Content.Relation.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CRelation">\eZ\Publish\SPI\Persistence\Content\Relation[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Optionally, loads only those with $type and $sourceContentVersionNo.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$sourceContentId</h4>
+<code>mixed</code><p>Source Content ID</p></div>
+<div class="subelement argument">
+<h4>$sourceContentVersionNo</h4>
+<code>mixednull</code><p>Source Content Version, null if not specified</p></div>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>intnull</code><p>{@see \eZ\Publish\API\Repository\Values\Content\Relation::COMMON, \eZ\Publish\API\Repository\Values\Content\Relation::EMBED, \eZ\Publish\API\Repository\Values\Content\Relation::LINK, \eZ\Publish\API\Repository\Values\Content\Relation::FIELD}</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.Content.Relation.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CRelation">\eZ\Publish\SPI\Persistence\Content\Relation[]</a></code></div>
+</div></div>
+</div>
+<a name="loadReverseRelations" id="loadReverseRelations"></a><div class="element clickable method public loadReverseRelations" data-toggle="collapse" data-target=".loadReverseRelations .collapse">
+<h2>Loads relations from $contentId.</h2>
+<pre>loadReverseRelations(mixed $destinationContentId, int | null $type) : <a href="Publish.SPI.Persistence.Content.Relation.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CRelation">\eZ\Publish\SPI\Persistence\Content\Relation[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Optionally, loads only those with $type.</p>
+
+<p>Only loads relations against published versions.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$destinationContentId</h4>
+<code>mixed</code><p>Destination Content ID</p></div>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>intnull</code><p>{@see \eZ\Publish\API\Repository\Values\Content\Relation::COMMON, \eZ\Publish\API\Repository\Values\Content\Relation::EMBED, \eZ\Publish\API\Repository\Values\Content\Relation::LINK, \eZ\Publish\API\Repository\Values\Content\Relation::FIELD}</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.Content.Relation.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CRelation">\eZ\Publish\SPI\Persistence\Content\Relation[]</a></code></div>
+</div></div>
+</div>
+<a name="loadVersionInfo" id="loadVersionInfo"></a><div class="element clickable method public loadVersionInfo" data-toggle="collapse" data-target=".loadVersionInfo .collapse">
+<h2>Returns the version object for a content/version identified by $contentId and $versionNo</h2>
+<pre>loadVersionInfo(int | string $contentId, int $versionNo) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.VersionInfo.html">\eZ\Publish\SPI\Persistence\Content\VersionInfo</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentId</h4>
+<code>intstring</code>
+</div>
+<div class="subelement argument">
+<h4>$versionNo</h4>
+<code>int</code><p>Version number to load</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If version is not found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.VersionInfo.html">\eZ\Publish\SPI\Persistence\Content\VersionInfo</a></code></div>
+</div></div>
+</div>
+<a name="publish" id="publish"></a><div class="element clickable method public publish" data-toggle="collapse" data-target=".publish .collapse">
+<h2>Performs the publishing operations required to set the version identified by $updateStruct-&gt;versionNo and
+$updateStruct-&gt;id as the published one.</h2>
+<pre>publish(int $contentId, int $versionNo, \eZ\Publish\SPI\Persistence\Content\MetadataUpdateStruct $metaDataUpdateStruct) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentId</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$versionNo</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$metaDataUpdateStruct</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.MetadataUpdateStruct.html">\eZ\Publish\SPI\Persistence\Content\MetadataUpdateStruct</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></code>The published Content</div>
+</div></div>
+</div>
+<a name="removeRelation" id="removeRelation"></a><div class="element clickable method public removeRelation" data-toggle="collapse" data-target=".removeRelation .collapse">
+<h2>Removes a relation by relation Id.</h2>
+<pre>removeRelation(mixed $relationId) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>todo</th>
+<td>Should the existence verifications happen here or is this supposed to be handled at a higher level?</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$relationId</h4>
+<code>mixed</code>
+</div>
+</div></div>
+</div>
+<a name="setStatus" id="setStatus"></a><div class="element clickable method public setStatus" data-toggle="collapse" data-target=".setStatus .collapse">
+<h2>Sets the status of object identified by $contentId and $version to $status.</h2>
+<pre>setStatus(int $contentId, int $status, int $version) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>The $status can be one of VersionInfo::STATUS_DRAFT, VersionInfo::STATUS_PUBLISHED, VersionInfo::STATUS_ARCHIVED
+When status is set to VersionInfo::STATUS_PUBLISHED content status is updated to ContentInfo::STATUS_PUBLISHED</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentId</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$status</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$version</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="updateContent" id="updateContent"></a><div class="element clickable method public updateContent" data-toggle="collapse" data-target=".updateContent .collapse">
+<h2>Updates a content version, identified by $contentId and $versionNo</h2>
+<pre>updateContent(int $contentId, int $versionNo, \eZ\Publish\SPI\Persistence\Content\UpdateStruct $content) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentId</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$versionNo</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.UpdateStruct.html">\eZ\Publish\SPI\Persistence\Content\UpdateStruct</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.html">\eZ\Publish\SPI\Persistence\Content</a></code></div>
+</div></div>
+</div>
+<a name="updateMetadata" id="updateMetadata"></a><div class="element clickable method public updateMetadata" data-toggle="collapse" data-target=".updateMetadata .collapse">
+<h2>Updates a content object meta data, identified by $contentId</h2>
+<pre>updateMetadata(int $contentId, \eZ\Publish\SPI\Persistence\Content\MetadataUpdateStruct $content) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.ContentInfo.html">\eZ\Publish\SPI\Persistence\Content\ContentInfo</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentId</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.MetadataUpdateStruct.html">\eZ\Publish\SPI\Persistence\Content\MetadataUpdateStruct</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.ContentInfo.html">\eZ\Publish\SPI\Persistence\Content\ContentInfo</a></code></div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:53:49+01:00.<br></footer></div>
+</div>
+</body>
+</html>

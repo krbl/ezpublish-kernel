@@ -1,0 +1,747 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \eZ\Publish\Core\Persistence\Legacy\Content\Type\Handler</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Creates a new content type handler."><span class="description">Creates a new content type handler.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#addFieldDefinition" title="addFieldDefinition :: Adds a new field definition to an existing Type."><span class="description">Adds a new field definition to an existing Type.</span><pre>addFieldDefinition()</pre></a></li>
+<li class="method public "><a href="#copy" title="copy :: Copy a Type incl fields and group-relations from a given status to a new Type with status {@link Type::STATUS_DRAFT}"><span class="description">Copy a Type incl fields and group-relations from a given status to a new Type with status {@link Type::STATUS_DRAFT}</span><pre>copy()</pre></a></li>
+<li class="method public "><a href="#create" title="create :: "><span class="description">create()
+        </span><pre>create()</pre></a></li>
+<li class="method public "><a href="#createDraft" title="createDraft :: Creates a draft of existing defined content type"><span class="description">Creates a draft of existing defined content type</span><pre>createDraft()</pre></a></li>
+<li class="method public "><a href="#createGroup" title="createGroup :: "><span class="description">createGroup()
+        </span><pre>createGroup()</pre></a></li>
+<li class="method public "><a href="#delete" title="delete :: "><span class="description">delete()
+        </span><pre>delete()</pre></a></li>
+<li class="method public "><a href="#deleteGroup" title="deleteGroup :: "><span class="description">deleteGroup()
+        </span><pre>deleteGroup()</pre></a></li>
+<li class="method public "><a href="#getFieldDefinition" title="getFieldDefinition :: Returns field definition for the given field definition id"><span class="description">Returns field definition for the given field definition id</span><pre>getFieldDefinition()</pre></a></li>
+<li class="method public "><a href="#link" title="link :: Link a content type group with a content type"><span class="description">Link a content type group with a content type</span><pre>link()</pre></a></li>
+<li class="method public "><a href="#load" title="load :: Load a content type by id and status"><span class="description">Load a content type by id and status</span><pre>load()</pre></a></li>
+<li class="method public "><a href="#loadAllGroups" title="loadAllGroups :: "><span class="description">loadAllGroups()
+        </span><pre>loadAllGroups()</pre></a></li>
+<li class="method public "><a href="#loadByIdentifier" title="loadByIdentifier :: Load a (defined) content type by identifier"><span class="description">Load a (defined) content type by identifier</span><pre>loadByIdentifier()</pre></a></li>
+<li class="method public "><a href="#loadByRemoteId" title="loadByRemoteId :: Load a (defined) content type by remote id"><span class="description">Load a (defined) content type by remote id</span><pre>loadByRemoteId()</pre></a></li>
+<li class="method public "><a href="#loadContentTypes" title="loadContentTypes :: "><span class="description">loadContentTypes()
+        </span><pre>loadContentTypes()</pre></a></li>
+<li class="method public "><a href="#loadGroup" title="loadGroup :: "><span class="description">loadGroup()
+        </span><pre>loadGroup()</pre></a></li>
+<li class="method public "><a href="#loadGroupByIdentifier" title="loadGroupByIdentifier :: Load Type Group by identifer"><span class="description">Load Type Group by identifer</span><pre>loadGroupByIdentifier()</pre></a></li>
+<li class="method public "><a href="#publish" title="publish :: Update content objects"><span class="description">Update content objects</span><pre>publish()</pre></a></li>
+<li class="method public "><a href="#removeFieldDefinition" title="removeFieldDefinition :: Removes a field definition from an existing Type."><span class="description">Removes a field definition from an existing Type.</span><pre>removeFieldDefinition()</pre></a></li>
+<li class="method public "><a href="#unlink" title="unlink :: Unlink a content type group from a content type"><span class="description">Unlink a content type group from a content type</span><pre>unlink()</pre></a></li>
+<li class="method public "><a href="#update" title="update :: "><span class="description">update()
+        </span><pre>update()</pre></a></li>
+<li class="method public "><a href="#updateFieldDefinition" title="updateFieldDefinition :: This method updates the given $fieldDefinition on a Type."><span class="description">This method updates the given $fieldDefinition on a Type.</span><pre>updateFieldDefinition()</pre></a></li>
+<li class="method public "><a href="#updateGroup" title="updateGroup :: "><span class="description">updateGroup()
+        </span><pre>updateGroup()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#internalCreate" title="internalCreate :: Internal method for creating ContentType"><span class="description">Internal method for creating ContentType</span><pre>internalCreate()</pre></a></li>
+<li class="method protected "><a href="#loadFromRows" title="loadFromRows :: Loads a single Type from $rows"><span class="description">Loads a single Type from $rows</span><pre>loadFromRows()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24contentTypeGateway" title="$contentTypeGateway :: "><span class="description">$contentTypeGateway</span><pre>$contentTypeGateway</pre></a></li>
+<li class="property protected "><a href="#%24mapper" title="$mapper :: Mappper for Type objects."><span class="description">Mappper for Type objects.</span><pre>$mapper</pre></a></li>
+<li class="property protected "><a href="#%24updateHandler" title="$updateHandler :: Content Type update handler"><span class="description">Content Type update handler</span><pre>$updateHandler</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CeZ%5CPublish%5CCore%5CPersistence%5CLegacy%5CContent%5CType%5CHandler" id="\eZ\Publish\Core\Persistence\Legacy\Content\Type\Handler"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.Type.html">Type</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Type.Handler.html">Handler</a>
+</li>
+</ul>
+<div href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Type.Handler.html" class="element class">
+<p class="short_description"></p>
+<div class="details">
+<p class="long_description"></p>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Creates a new content type handler.</h2>
+<pre>__construct(\eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway $contentTypeGateway, \eZ\Publish\Core\Persistence\Legacy\Content\Type\Mapper $mapper, \eZ\Publish\Core\Persistence\Legacy\Content\Type\Update\Handler $updateHandler) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeGateway</h4>
+<code><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Type.Gateway.html">\eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway</a></code>
+</div>
+<div class="subelement argument">
+<h4>$mapper</h4>
+<code><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Type.Mapper.html">\eZ\Publish\Core\Persistence\Legacy\Content\Type\Mapper</a></code>
+</div>
+<div class="subelement argument">
+<h4>$updateHandler</h4>
+<code><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Type.Update.Handler.html">\eZ\Publish\Core\Persistence\Legacy\Content\Type\Update\Handler</a></code>
+</div>
+</div></div>
+</div>
+<a name="addFieldDefinition" id="addFieldDefinition"></a><div class="element clickable method public addFieldDefinition" data-toggle="collapse" data-target=".addFieldDefinition .collapse">
+<h2>Adds a new field definition to an existing Type.</h2>
+<pre>addFieldDefinition(mixed $contentTypeId, int $status, \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDefinition) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This method creates a new status of the Type with the $fieldDefinition
+added. It does not update existing content objects depending on the
+field (default) values.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$status</h4>
+<code>int</code><p>One of Type::STATUS_DEFINED|Type::STATUS_DRAFT|Type::STATUS_MODIFIED</p></div>
+<div class="subelement argument">
+<h4>$fieldDefinition</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.FieldDefinition.html">\eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If type is not found</td>
+</tr></table>
+</div></div>
+</div>
+<a name="copy" id="copy"></a><div class="element clickable method public copy" data-toggle="collapse" data-target=".copy .collapse">
+<h2>Copy a Type incl fields and group-relations from a given status to a new Type with status {@link Type::STATUS_DRAFT}</h2>
+<pre>copy(mixed $userId, mixed $contentTypeId, int $status) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>New Content Type will have $userId as creator / modifier, created / modified should be updated, new remoteId created
+and identifier should be appended with '_' + the new remoteId or another unique number.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$userId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$contentTypeId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$status</h4>
+<code>int</code><p>One of Type::STATUS_DEFINED|Type::STATUS_DRAFT|Type::STATUS_MODIFIED</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If user or type with provided status is not found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></code></div>
+</div></div>
+</div>
+<a name="create" id="create"></a><div class="element clickable method public create" data-toggle="collapse" data-target=".create .collapse">
+<h2>create()
+        </h2>
+<pre>create(\eZ\Publish\SPI\Persistence\Content\Type\CreateStruct $createStruct) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$createStruct</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.CreateStruct.html">\eZ\Publish\SPI\Persistence\Content\Type\CreateStruct</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></code></div>
+</div></div>
+</div>
+<a name="createDraft" id="createDraft"></a><div class="element clickable method public createDraft" data-toggle="collapse" data-target=".createDraft .collapse">
+<h2>Creates a draft of existing defined content type</h2>
+<pre>createDraft(mixed $modifierId, mixed $contentTypeId) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Updates modified date, sets $modifierId and status to Type::STATUS_DRAFT on the new returned draft.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$modifierId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$contentTypeId</h4>
+<code>mixed</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If type with defined status is not found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></code></div>
+</div></div>
+</div>
+<a name="createGroup" id="createGroup"></a><div class="element clickable method public createGroup" data-toggle="collapse" data-target=".createGroup .collapse">
+<h2>createGroup()
+        </h2>
+<pre>createGroup(\eZ\Publish\SPI\Persistence\Content\Type\Group\CreateStruct $createStruct) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.Group.html">\eZ\Publish\SPI\Persistence\Content\Type\Group</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$createStruct</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.Group.CreateStruct.html">\eZ\Publish\SPI\Persistence\Content\Type\Group\CreateStruct</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.Group.html">\eZ\Publish\SPI\Persistence\Content\Type\Group</a></code></div>
+</div></div>
+</div>
+<a name="delete" id="delete"></a><div class="element clickable method public delete" data-toggle="collapse" data-target=".delete .collapse">
+<h2>delete()
+        </h2>
+<pre>delete(mixed $contentTypeId, int $status) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$status</h4>
+<code>int</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.BadStateException.html">\eZ\Publish\API\Repository\Exceptions\BadStateException</a></code></th>
+<td>If type is defined and still has content</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If type is not found</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="deleteGroup" id="deleteGroup"></a><div class="element clickable method public deleteGroup" data-toggle="collapse" data-target=".deleteGroup .collapse">
+<h2>deleteGroup()
+        </h2>
+<pre>deleteGroup(mixed $groupId) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$groupId</h4>
+<code>mixed</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.BadStateException.html">\eZ\Publish\API\Repository\Exceptions\BadStateException</a></code></th>
+<td>If type group contains types</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If type group with id is not found</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="getFieldDefinition" id="getFieldDefinition"></a><div class="element clickable method public getFieldDefinition" data-toggle="collapse" data-target=".getFieldDefinition .collapse">
+<h2>Returns field definition for the given field definition id</h2>
+<pre>getFieldDefinition(mixed $id, int $status) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.FieldDefinition.html">\eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$status</h4>
+<code>int</code><p>One of Type::STATUS_DEFINED|Type::STATUS_DRAFT|Type::STATUS_MODIFIED</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If field definition is not found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.FieldDefinition.html">\eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition</a></code></div>
+</div></div>
+</div>
+<a name="link" id="link"></a><div class="element clickable method public link" data-toggle="collapse" data-target=".link .collapse">
+<h2>Link a content type group with a content type</h2>
+<pre>link(mixed $groupId, mixed $contentTypeId, $status) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>todo</th>
+<td>Above throws are not implemented</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$groupId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$contentTypeId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$status</h4>
+<code></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If group or type with provided status is not found</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.BadStateException.html">\eZ\Publish\API\Repository\Exceptions\BadStateException</a></code></th>
+<td>If type is already part of group</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="load" id="load"></a><div class="element clickable method public load" data-toggle="collapse" data-target=".load .collapse">
+<h2>Load a content type by id and status</h2>
+<pre>load(int $contentTypeId, int $status) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeId</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$status</h4>
+<code>int</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If type with provided status is not found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></code></div>
+</div></div>
+</div>
+<a name="loadAllGroups" id="loadAllGroups"></a><div class="element clickable method public loadAllGroups" data-toggle="collapse" data-target=".loadAllGroups .collapse">
+<h2>loadAllGroups()
+        </h2>
+<pre>loadAllGroups() : <a href="Publish.SPI.Persistence.Content.Type.Group.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CType%5CGroup">\eZ\Publish\SPI\Persistence\Content\Type\Group[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.Content.Type.Group.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CType%5CGroup">\eZ\Publish\SPI\Persistence\Content\Type\Group[]</a></code></div>
+</div></div>
+</div>
+<a name="loadByIdentifier" id="loadByIdentifier"></a><div class="element clickable method public loadByIdentifier" data-toggle="collapse" data-target=".loadByIdentifier .collapse">
+<h2>Load a (defined) content type by identifier</h2>
+<pre>loadByIdentifier(string $identifier) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$identifier</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If defined type is not found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></code></div>
+</div></div>
+</div>
+<a name="loadByRemoteId" id="loadByRemoteId"></a><div class="element clickable method public loadByRemoteId" data-toggle="collapse" data-target=".loadByRemoteId .collapse">
+<h2>Load a (defined) content type by remote id</h2>
+<pre>loadByRemoteId(mixed $remoteId) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$remoteId</h4>
+<code>mixed</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If defined type is not found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></code></div>
+</div></div>
+</div>
+<a name="loadContentTypes" id="loadContentTypes"></a><div class="element clickable method public loadContentTypes" data-toggle="collapse" data-target=".loadContentTypes .collapse">
+<h2>loadContentTypes()
+        </h2>
+<pre>loadContentTypes(mixed $groupId, int $status) : <a href="Publish.SPI.Persistence.Content.Type.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CType">\eZ\Publish\SPI\Persistence\Content\Type[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$groupId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$status</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.Content.Type.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CType">\eZ\Publish\SPI\Persistence\Content\Type[]</a></code></div>
+</div></div>
+</div>
+<a name="loadGroup" id="loadGroup"></a><div class="element clickable method public loadGroup" data-toggle="collapse" data-target=".loadGroup .collapse">
+<h2>loadGroup()
+        </h2>
+<pre>loadGroup(mixed $groupId) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.Group.html">\eZ\Publish\SPI\Persistence\Content\Type\Group</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$groupId</h4>
+<code>mixed</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If type group with $groupId is not found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.Group.html">\eZ\Publish\SPI\Persistence\Content\Type\Group</a></code></div>
+</div></div>
+</div>
+<a name="loadGroupByIdentifier" id="loadGroupByIdentifier"></a><div class="element clickable method public loadGroupByIdentifier" data-toggle="collapse" data-target=".loadGroupByIdentifier .collapse">
+<h2>Load Type Group by identifer</h2>
+<pre>loadGroupByIdentifier(string $identifier) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.Group.html">\eZ\Publish\SPI\Persistence\Content\Type\Group</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Legacy note: Uses name for identifier.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$identifier</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If type group with $identifier is not found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.Group.html">\eZ\Publish\SPI\Persistence\Content\Type\Group</a></code></div>
+</div></div>
+</div>
+<a name="publish" id="publish"></a><div class="element clickable method public publish" data-toggle="collapse" data-target=".publish .collapse">
+<h2>Update content objects</h2>
+<pre>publish(mixed $contentTypeId) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Updates content objects, depending on the changed field definitions.</p>
+
+<p>A content type has a state which tells if its content objects yet have
+been adapted.</p>
+
+<p>Flags the content type as updated.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeId</h4>
+<code>mixed</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If type with $contentTypeId and Type::STATUS_DRAFT is not found</td>
+</tr></table>
+</div></div>
+</div>
+<a name="removeFieldDefinition" id="removeFieldDefinition"></a><div class="element clickable method public removeFieldDefinition" data-toggle="collapse" data-target=".removeFieldDefinition .collapse">
+<h2>Removes a field definition from an existing Type.</h2>
+<pre>removeFieldDefinition(mixed $contentTypeId, $status, mixed $fieldDefinitionId) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This method creates a new status of the Type with the field definition
+referred to by $fieldDefinitionId removed. It does not update existing
+content objects depending on the field (default) values.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$status</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$fieldDefinitionId</h4>
+<code>mixed</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If field is not found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="unlink" id="unlink"></a><div class="element clickable method public unlink" data-toggle="collapse" data-target=".unlink .collapse">
+<h2>Unlink a content type group from a content type</h2>
+<pre>unlink(mixed $groupId, mixed $contentTypeId, int $status) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>todo</th>
+<td>Add throws for NotFound and BadState when group is not assigned to type</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$groupId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$contentTypeId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$status</h4>
+<code>int</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If group or type with provided status is not found</td>
+</tr>
+<tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.BadStateException.html">\eZ\Publish\API\Repository\Exceptions\BadStateException</a></code></th>
+<td>If $groupId is last group on $contentTypeId or not a group assigned to type</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="update" id="update"></a><div class="element clickable method public update" data-toggle="collapse" data-target=".update .collapse">
+<h2>update()
+        </h2>
+<pre>update(mixed $typeId, int $status, \eZ\Publish\SPI\Persistence\Content\Type\UpdateStruct $contentType) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$typeId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$status</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$contentType</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.UpdateStruct.html">\eZ\Publish\SPI\Persistence\Content\Type\UpdateStruct</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></code></div>
+</div></div>
+</div>
+<a name="updateFieldDefinition" id="updateFieldDefinition"></a><div class="element clickable method public updateFieldDefinition" data-toggle="collapse" data-target=".updateFieldDefinition .collapse">
+<h2>This method updates the given $fieldDefinition on a Type.</h2>
+<pre>updateFieldDefinition(mixed $contentTypeId, $status, \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDefinition) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This method creates a new status of the Type with the updated
+$fieldDefinition. It does not update existing content objects depending
+on the
+field (default) values.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$contentTypeId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$status</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$fieldDefinition</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.FieldDefinition.html">\eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition</a></code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If field is not found</td>
+</tr></table>
+</div></div>
+</div>
+<a name="updateGroup" id="updateGroup"></a><div class="element clickable method public updateGroup" data-toggle="collapse" data-target=".updateGroup .collapse">
+<h2>updateGroup()
+        </h2>
+<pre>updateGroup(\eZ\Publish\SPI\Persistence\Content\Type\Group\UpdateStruct $struct) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.Group.html">\eZ\Publish\SPI\Persistence\Content\Type\Group</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$struct</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.Group.UpdateStruct.html">\eZ\Publish\SPI\Persistence\Content\Type\Group\UpdateStruct</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.Group.html">\eZ\Publish\SPI\Persistence\Content\Type\Group</a></code></div>
+</div></div>
+</div>
+<a name="internalCreate" id="internalCreate"></a><div class="element clickable method protected internalCreate" data-toggle="collapse" data-target=".internalCreate .collapse">
+<h2>Internal method for creating ContentType</h2>
+<pre>internalCreate(\eZ\Publish\SPI\Persistence\Content\Type\CreateStruct $createStruct, mixed | null $contentTypeId) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Used by self::create(), self::createDraft() and self::copy()</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$createStruct</h4>
+<code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.CreateStruct.html">\eZ\Publish\SPI\Persistence\Content\Type\CreateStruct</a></code>
+</div>
+<div class="subelement argument">
+<h4>$contentTypeId</h4>
+<code>mixednull</code><p>Used by self::createDraft() to retain ContentType id in the draft</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></code></div>
+</div></div>
+</div>
+<a name="loadFromRows" id="loadFromRows"></a><div class="element clickable method protected loadFromRows" data-toggle="collapse" data-target=".loadFromRows .collapse">
+<h2>Loads a single Type from $rows</h2>
+<pre>loadFromRows(\array $rows, mixed $typeIdentifier, int $status) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$rows</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$typeIdentifier</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$status</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Type.html">\eZ\Publish\SPI\Persistence\Content\Type</a></code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24contentTypeGateway" id="$contentTypeGateway"> </a><div class="element clickable property protected $contentTypeGateway" data-toggle="collapse" data-target=".$contentTypeGateway .collapse">
+<h2>$contentTypeGateway</h2>
+<pre>$contentTypeGateway : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Type.Gateway.html">\eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24mapper" id="$mapper"> </a><div class="element clickable property protected $mapper" data-toggle="collapse" data-target=".$mapper .collapse">
+<h2>Mappper for Type objects.</h2>
+<pre>$mapper : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Type.Mapper.html">\eZ\Publish\Core\Persistence\Legacy\Content\Type\Mapper</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24updateHandler" id="$updateHandler"> </a><div class="element clickable property protected $updateHandler" data-toggle="collapse" data-target=".$updateHandler .collapse">
+<h2>Content Type update handler</h2>
+<pre>$updateHandler : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Type.Update.Handler.html">\eZ\Publish\Core\Persistence\Legacy\Content\Type\Update\Handler</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:53:24+01:00.<br></footer></div>
+</div>
+</body>
+</html>

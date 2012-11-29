@@ -1,0 +1,309 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \eZ\Publish\Core\Persistence\Legacy\Content\Section\Handler</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
+<li><a href="../packages/eZ.html"><i class="icon-folder-open"></i> eZ</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">3441</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">162</span>
+</li>
+<li>fixme 
+                <span class="label label-info">10</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">10</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Creates a new Section Handler"><span class="description">Creates a new Section Handler</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#assign" title="assign :: Assign section to single content object"><span class="description">Assign section to single content object</span><pre>assign()</pre></a></li>
+<li class="method public "><a href="#assignmentsCount" title="assignmentsCount :: Number of content assignments a Section has"><span class="description">Number of content assignments a Section has</span><pre>assignmentsCount()</pre></a></li>
+<li class="method public "><a href="#create" title="create :: Create a new section"><span class="description">Create a new section</span><pre>create()</pre></a></li>
+<li class="method public "><a href="#delete" title="delete :: Delete a section"><span class="description">Delete a section</span><pre>delete()</pre></a></li>
+<li class="method public "><a href="#load" title="load :: Get section data"><span class="description">Get section data</span><pre>load()</pre></a></li>
+<li class="method public "><a href="#loadAll" title="loadAll :: Get all section data"><span class="description">Get all section data</span><pre>loadAll()</pre></a></li>
+<li class="method public "><a href="#loadByIdentifier" title="loadByIdentifier :: Get section data by identifier"><span class="description">Get section data by identifier</span><pre>loadByIdentifier()</pre></a></li>
+<li class="method public "><a href="#update" title="update :: Update name and identifier of a section"><span class="description">Update name and identifier of a section</span><pre>update()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#createSectionFromArray" title="createSectionFromArray :: Creates a Section from the given $data"><span class="description">Creates a Section from the given $data</span><pre>createSectionFromArray()</pre></a></li>
+<li class="method protected "><a href="#createSectionsFromArray" title="createSectionsFromArray :: Creates a Section from the given $data"><span class="description">Creates a Section from the given $data</span><pre>createSectionsFromArray()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24sectionGateway" title="$sectionGateway :: Section Gateway"><span class="description">Section Gateway</span><pre>$sectionGateway</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CeZ%5CPublish%5CCore%5CPersistence%5CLegacy%5CContent%5CSection%5CHandler" id="\eZ\Publish\Core\Persistence\Legacy\Content\Section\Handler"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/eZ.html">eZ</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a></li>
+<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.Section.html">Section</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Section.Handler.html">Handler</a>
+</li>
+</ul>
+<div href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Section.Handler.html" class="element class">
+<p class="short_description">Section Handler</p>
+<div class="details">
+<p class="long_description"></p>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Creates a new Section Handler</h2>
+<pre>__construct(\eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway $sectionGateway) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$sectionGateway</h4>
+<code><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Section.Gateway.html">\eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway</a></code>
+</div>
+</div></div>
+</div>
+<a name="assign" id="assign"></a><div class="element clickable method public assign" data-toggle="collapse" data-target=".assign .collapse">
+<h2>Assign section to single content object</h2>
+<pre>assign(mixed $sectionId, mixed $contentId) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$sectionId</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$contentId</h4>
+<code>mixed</code>
+</div>
+</div></div>
+</div>
+<a name="assignmentsCount" id="assignmentsCount"></a><div class="element clickable method public assignmentsCount" data-toggle="collapse" data-target=".assignmentsCount .collapse">
+<h2>Number of content assignments a Section has</h2>
+<pre>assignmentsCount(mixed $sectionId) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$sectionId</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a name="create" id="create"></a><div class="element clickable method public create" data-toggle="collapse" data-target=".create .collapse">
+<h2>Create a new section</h2>
+<pre>create(string $name, string $identifier) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Section.html">\eZ\Publish\SPI\Persistence\Content\Section</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$identifier</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Section.html">\eZ\Publish\SPI\Persistence\Content\Section</a></code></div>
+</div></div>
+</div>
+<a name="delete" id="delete"></a><div class="element clickable method public delete" data-toggle="collapse" data-target=".delete .collapse">
+<h2>Delete a section</h2>
+<pre>delete(mixed $id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Might throw an exception if the section is still associated with some
+content objects. Make sure that no content objects are associated with
+the section any more <em>before</em> calling this method.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>mixed</code>
+</div>
+</div></div>
+</div>
+<a name="load" id="load"></a><div class="element clickable method public load" data-toggle="collapse" data-target=".load .collapse">
+<h2>Get section data</h2>
+<pre>load(mixed $id) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Section.html">\eZ\Publish\SPI\Persistence\Content\Section</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>mixed</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If section is not found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Section.html">\eZ\Publish\SPI\Persistence\Content\Section</a></code></div>
+</div></div>
+</div>
+<a name="loadAll" id="loadAll"></a><div class="element clickable method public loadAll" data-toggle="collapse" data-target=".loadAll .collapse">
+<h2>Get all section data</h2>
+<pre>loadAll() : <a href="Publish.SPI.Persistence.Content.Section.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CSection">\eZ\Publish\SPI\Persistence\Content\Section[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.Content.Section.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CSection">\eZ\Publish\SPI\Persistence\Content\Section[]</a></code></div>
+</div></div>
+</div>
+<a name="loadByIdentifier" id="loadByIdentifier"></a><div class="element clickable method public loadByIdentifier" data-toggle="collapse" data-target=".loadByIdentifier .collapse">
+<h2>Get section data by identifier</h2>
+<pre>loadByIdentifier(string $identifier) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Section.html">\eZ\Publish\SPI\Persistence\Content\Section</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$identifier</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
+<td>If section is not found</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Section.html">\eZ\Publish\SPI\Persistence\Content\Section</a></code></div>
+</div></div>
+</div>
+<a name="update" id="update"></a><div class="element clickable method public update" data-toggle="collapse" data-target=".update .collapse">
+<h2>Update name and identifier of a section</h2>
+<pre>update(mixed $id, string $name, string $identifier) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Section.html">\eZ\Publish\SPI\Persistence\Content\Section</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$identifier</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Section.html">\eZ\Publish\SPI\Persistence\Content\Section</a></code></div>
+</div></div>
+</div>
+<a name="createSectionFromArray" id="createSectionFromArray"></a><div class="element clickable method protected createSectionFromArray" data-toggle="collapse" data-target=".createSectionFromArray .collapse">
+<h2>Creates a Section from the given $data</h2>
+<pre>createSectionFromArray(\array $data) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Section.html">\eZ\Publish\SPI\Persistence\Content\Section</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Section.html">\eZ\Publish\SPI\Persistence\Content\Section</a></code></div>
+</div></div>
+</div>
+<a name="createSectionsFromArray" id="createSectionsFromArray"></a><div class="element clickable method protected createSectionsFromArray" data-toggle="collapse" data-target=".createSectionsFromArray .collapse">
+<h2>Creates a Section from the given $data</h2>
+<pre>createSectionsFromArray(\array $data) : <a href="Publish.SPI.Persistence.Content.Section.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CSection">\eZ\Publish\SPI\Persistence\Content\Section[]</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="Publish.SPI.Persistence.Content.Section.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CSection">\eZ\Publish\SPI\Persistence\Content\Section[]</a></code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24sectionGateway" id="$sectionGateway"> </a><div class="element clickable property protected $sectionGateway" data-toggle="collapse" data-target=".$sectionGateway .collapse">
+<h2>Section Gateway</h2>
+<pre>$sectionGateway : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Section.Gateway.html">\eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
+            generated on 2012-11-29T14:53:36+01:00.<br></footer></div>
+</div>
+</body>
+</html>
