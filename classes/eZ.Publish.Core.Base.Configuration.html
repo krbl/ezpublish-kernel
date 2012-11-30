@@ -35,16 +35,11 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3441</span></a></li>
+                <span class="label label-info">3434</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
-                <ul>
-<li>todo 
-                <span class="label label-info">162</span>
-</li>
-<li>fixme 
-                <span class="label label-info">10</span>
-</li>
-</ul></a></li>
+                <ul><li>todo 
+                <span class="label label-info">178</span>
+</li></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
                 <span class="label label-info">10</span></a></li>
 </ul>
@@ -77,7 +72,7 @@ Triggers warning if section is not set and $fallBackValue is null"><span class="
 Triggers warning if section is not set and $fallBackValue is null</span><pre>getSection()</pre></a></li>
 <li class="method public "><a href="#has" title="has :: Checks if a configuration section and optionally key is set."><span class="description">Checks if a configuration section and optionally key is set.</span><pre>has()</pre></a></li>
 <li class="method public "><a href="#hasValue" title="hasValue :: Checks if a configuration section &amp; key is set and has a value."><span class="description">Checks if a configuration section &amp; key is set and has a value.</span><pre>hasValue()</pre></a></li>
-<li class="method public "><a href="#load" title="load :: Load the configuration from cache or from source (if $useCache is false or there is no cache)"><span class="description">Load the configuration from cache or from source (if $useCache is false or there is no cache)</span><pre>load()</pre></a></li>
+<li class="method public "><a href="#load" title="load :: Loads the configuration from cache or from source (if $useCache is false or there is no cache)"><span class="description">Loads the configuration from cache or from source (if $useCache is false or there is no cache)</span><pre>load()</pre></a></li>
 <li class="method public "><a href="#reload" title="reload :: Reload cache data conditionally if path hash has changed on current instance"><span class="description">Reload cache data conditionally if path hash has changed on current instance</span><pre>reload()</pre></a></li>
 <li class="method public "><a href="#set" title="set :: Gets a configuration value, or null if not set."><span class="description">Gets a configuration value, or null if not set.</span><pre>set()</pre></a></li>
 <li class="nav-header protected">» Protected</li>
@@ -86,7 +81,7 @@ Triggers warning if section is not set and $fallBackValue is null</span><pre>get
 <li class="method protected "><a href="#hasCache" title="hasCache :: Check if cache file exists."><span class="description">Check if cache file exists.</span><pre>hasCache()</pre></a></li>
 <li class="method protected "><a href="#parse" title="parse :: Parse configuration files"><span class="description">Parse configuration files</span><pre>parse()</pre></a></li>
 <li class="method protected "><a href="#pathsHash" title="pathsHash :: Get cache hash based on override dirs"><span class="description">Get cache hash based on override dirs</span><pre>pathsHash()</pre></a></li>
-<li class="method protected "><a href="#readCache" title="readCache :: Load cache file, use {@link hasCache()} to make sure it exists first!"><span class="description">Load cache file, use {@link hasCache()} to make sure it exists first!</span><pre>readCache()</pre></a></li>
+<li class="method protected "><a href="#readCache" title="readCache :: Loads cache file, use {@link hasCache()} to make sure it exists first!"><span class="description">Loads cache file, use {@link hasCache()} to make sure it exists first!</span><pre>readCache()</pre></a></li>
 <li class="method protected "><a href="#recursiveArrayClearing" title="recursiveArrayClearing :: Recursively clear array values"><span class="description">Recursively clear array values</span><pre>recursiveArrayClearing()</pre></a></li>
 <li class="method protected "><a href="#setGlobalConfig" title="setGlobalConfig :: Recursively set global configuration"><span class="description">Recursively set global configuration</span><pre>setGlobalConfig()</pre></a></li>
 <li class="method protected "><a href="#storeCache" title="storeCache :: Store cache file, overwrites any existing file"><span class="description">Store cache file, overwrites any existing file</span><pre>storeCache()</pre></a></li>
@@ -227,7 +222,7 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 </div>
 <a name="has" id="has"></a><div class="element clickable method public has" data-toggle="collapse" data-target=".has .collapse">
 <h2>Checks if a configuration section and optionally key is set.</h2>
-<pre>has(string $section, string $key) : bool</pre>
+<pre>has(string $section, string $key) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -241,12 +236,12 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 <code>string</code><p>Optional, only checks if section exists if null</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>bool</code>Return true if setting exist</div>
+<code>boolean</code>Return true if setting exist</div>
 </div></div>
 </div>
 <a name="hasValue" id="hasValue"></a><div class="element clickable method public hasValue" data-toggle="collapse" data-target=".hasValue .collapse">
 <h2>Checks if a configuration section &amp; key is set and has a value.</h2>
-<pre>hasValue(string $section, string $key) : bool</pre>
+<pre>hasValue(string $section, string $key) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"><p>(ie. a check using !empty())</p></p>
@@ -261,23 +256,23 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 </div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>bool</code>Return true if setting exist and has value</div>
+<code>boolean</code>Return true if setting exist and has value</div>
 </div></div>
 </div>
 <a name="load" id="load"></a><div class="element clickable method public load" data-toggle="collapse" data-target=".load .collapse">
-<h2>Load the configuration from cache or from source (if $useCache is false or there is no cache)</h2>
-<pre>load(bool | null $hasCache, bool $useCache) </pre>
+<h2>Loads the configuration from cache or from source (if $useCache is false or there is no cache)</h2>
+<pre>load(boolean | null $hasCache, boolean $useCache) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$hasCache</h4>
-<code>boolnull</code><p>Lets you specify if there is a cache file, will check if null and $useCache is true</p>
+<code>booleannull</code><p>Lets you specify if there is a cache file, will check if null and $useCache is true</p>
 </div>
 <div class="subelement argument">
 <h4>$useCache</h4>
-<code>bool</code><p>Will skip using cached config files (slow), when null depends on [ini]\use-cache setting</p>
+<code>boolean</code><p>Will skip using cached config files (slow), when null depends on [ini]\use-cache setting</p>
 </div>
 </div></div>
 </div>
@@ -289,7 +284,7 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 </div>
 <a name="set" id="set"></a><div class="element clickable method public set" data-toggle="collapse" data-target=".set .collapse">
 <h2>Gets a configuration value, or null if not set.</h2>
-<pre>set(string $section, string $key, mixed $value) : bool</pre>
+<pre>set(string $section, string $key, mixed $value) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -305,7 +300,7 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 <code>mixed</code><p>value to return if setting is not defined.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>bool</code>Return true if section existed and was overwritten</div>
+<code>boolean</code>Return true if section existed and was overwritten</div>
 </div></div>
 </div>
 <a name="createCacheName" id="createCacheName"></a><div class="element clickable method protected createCacheName" data-toggle="collapse" data-target=".createCacheName .collapse">
@@ -382,7 +377,7 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 </div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
-<th><code>\eZ\Publish\Core\Base\eZ\Publish\Core\Base\Exceptions\BadConfiguration</code></th>
+<th><code><a href="../classes/eZ.Publish.Core.Base.Exceptions.BadConfiguration.html">\eZ\Publish\Core\Base\Exceptions\BadConfiguration</a></code></th>
 <td>If no parser have been defined</td>
 </tr></table>
 <h3>Returns</h3>
@@ -402,7 +397,7 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 </div></div>
 </div>
 <a name="readCache" id="readCache"></a><div class="element clickable method protected readCache" data-toggle="collapse" data-target=".readCache .collapse">
-<h2>Load cache file, use {@link hasCache()} to make sure it exists first!</h2>
+<h2>Loads cache file, use {@link hasCache()} to make sure it exists first!</h2>
 <pre>readCache(string $cacheName) : array | null</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -540,7 +535,7 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-29T14:53:41+01:00.<br></footer></div>
+            generated on 2012-11-30T17:25:02+01:00.<br></footer></div>
 </div>
 </body>
 </html>

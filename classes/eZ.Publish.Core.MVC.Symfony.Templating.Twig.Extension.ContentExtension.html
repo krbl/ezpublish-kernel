@@ -35,16 +35,11 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3441</span></a></li>
+                <span class="label label-info">3434</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
-                <ul>
-<li>todo 
-                <span class="label label-info">162</span>
-</li>
-<li>fixme 
-                <span class="label label-info">10</span>
-</li>
-</ul></a></li>
+                <ul><li>todo 
+                <span class="label label-info">178</span>
+</li></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
                 <span class="label label-info">10</span></a></li>
 </ul>
@@ -183,7 +178,7 @@
 </div>
 <a name="getImageVariation" id="getImageVariation"></a><div class="element clickable method public getImageVariation" data-toggle="collapse" data-target=".getImageVariation .collapse">
 <h2>Returns the image variant object for $field/$versionInfo</h2>
-<pre>getImageVariation(\eZ\Publish\API\Repository\Values\Content\Field $field, \eZ\Publish\API\Repository\Values\Content\VersionInfo $versionInfo, $variationName) : \eZ\Publish\API\Repository\Values\File\ImageVariant</pre>
+<pre>getImageVariation(\eZ\Publish\API\Repository\Values\Content\Field $field, \eZ\Publish\API\Repository\Values\Content\VersionInfo $versionInfo, string $variationName) : \eZ\Publish\API\Repository\Values\File\ImageVariant</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -198,7 +193,7 @@
 </div>
 <div class="subelement argument">
 <h4>$variationName</h4>
-<code></code>
+<code>string</code>
 </div>
 <h3>Returns</h3>
 <div class="subelement response"><code>\eZ\Publish\API\Repository\Values\File\ImageVariant</code></div>
@@ -417,17 +412,17 @@ Example: data-ez-field-id="12345"</p></p>
 <a name="getXmlTextConverter" id="getXmlTextConverter"></a><div class="element clickable method protected getXmlTextConverter" data-toggle="collapse" data-target=".getXmlTextConverter .collapse">
 <h2>getXmlTextConverter()
         </h2>
-<pre>getXmlTextConverter() : \eZ\Publish\Core\MVC\Symfony\Templating\Twig\Extension\eZ\Publish\Core\FieldType\XmlText\Converter\Html5</pre>
+<pre>getXmlTextConverter() : <a href="../classes/eZ.Publish.Core.FieldType.XmlText.Converter.Html5.html">\eZ\Publish\Core\FieldType\XmlText\Converter\Html5</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
 <h3>Returns</h3>
-<div class="subelement response"><code>\eZ\Publish\Core\MVC\Symfony\Templating\Twig\Extension\eZ\Publish\Core\FieldType\XmlText\Converter\Html5</code></div>
+<div class="subelement response"><code><a href="../classes/eZ.Publish.Core.FieldType.XmlText.Converter.Html5.html">\eZ\Publish\Core\FieldType\XmlText\Converter\Html5</a></code></div>
 </div></div>
 </div>
 <a name="isInEditMode" id="isInEditMode"></a><div class="element clickable method protected isInEditMode" data-toggle="collapse" data-target=".isInEditMode .collapse">
 <h2>Checks if we are in edit mode or not (editorial interface).</h2>
-<pre>isInEditMode() : bool</pre>
+<pre>isInEditMode() : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -436,12 +431,12 @@ Example: data-ez-field-id="12345"</p></p>
 <td>Needs to check in the session and via the API if current user has access to edit mode</td>
 </tr></table>
 <h3>Returns</h3>
-<div class="subelement response"><code>bool</code></div>
+<div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
 <a name="searchBlock" id="searchBlock"></a><div class="element clickable method protected searchBlock" data-toggle="collapse" data-target=".searchBlock .collapse">
 <h2>Returns the block named $blockName in the given template.</h2>
-<pre>searchBlock(string $blockName, \Twig_Template $tpl) : array</pre>
+<pre>searchBlock(string $blockName, \Twig_Template $tpl) : array | null</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"><p>If it's not
@@ -456,7 +451,9 @@ found, returns null.</p></p>
 <code>\Twig_Template</code>
 </div>
 <h3>Returns</h3>
-<div class="subelement response"><code>array</code></div>
+<div class="subelement response">
+<code>array</code><code>null</code>
+</div>
 </div></div>
 </div>
 <h3>
@@ -506,7 +503,7 @@ found, returns null.</p></p>
 </div>
 <a name="%24xmlTextConverter" id="$xmlTextConverter"> </a><div class="element clickable property protected $xmlTextConverter" data-toggle="collapse" data-target=".$xmlTextConverter .collapse">
 <h2>Converter used to transform XmlText content in HTML5</h2>
-<pre>$xmlTextConverter : \eZ\Publish\Core\MVC\Symfony\Templating\Twig\Extension\eZ\Publish\Core\FieldType\XmlText\Converter\Html5</pre>
+<pre>$xmlTextConverter : <a href="../classes/eZ.Publish.Core.FieldType.XmlText.Converter.Html5.html">\eZ\Publish\Core\FieldType\XmlText\Converter\Html5</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
@@ -517,7 +514,7 @@ found, returns null.</p></p>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-29T14:53:12+01:00.<br></footer></div>
+            generated on 2012-11-30T17:24:30+01:00.<br></footer></div>
 </div>
 </body>
 </html>

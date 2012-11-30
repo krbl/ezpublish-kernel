@@ -35,16 +35,11 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3441</span></a></li>
+                <span class="label label-info">3434</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
-                <ul>
-<li>todo 
-                <span class="label label-info">162</span>
-</li>
-<li>fixme 
-                <span class="label label-info">10</span>
-</li>
-</ul></a></li>
+                <ul><li>todo 
+                <span class="label label-info">178</span>
+</li></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
                 <span class="label label-info">10</span></a></li>
 </ul>
@@ -80,12 +75,12 @@
 <li class="method protected inherited"><a href="#getProperties" title="getProperties :: Function where list of properties are returned"><span class="description">Function where list of properties are returned</span><pre>getProperties()</pre></a></li>
 <li class="nav-header">
 <i class="icon-custom icon-property"></i> Properties</li>
-<li class="property public "><a href="#%24autoplay" title="$autoplay :: if the media should be automatically played"><span class="description">if the media should be automatically played</span><pre>$autoplay</pre></a></li>
+<li class="property public "><a href="#%24autoplay" title="$autoplay :: If the media should be automatically played"><span class="description">If the media should be automatically played</span><pre>$autoplay</pre></a></li>
 <li class="property public inherited"><a href="#%24fileName" title="$fileName :: Display file name"><span class="description">Display file name</span><pre>$fileName</pre></a></li>
 <li class="property public inherited"><a href="#%24fileSize" title="$fileSize :: Size of the image file"><span class="description">Size of the image file</span><pre>$fileSize</pre></a></li>
 <li class="property public "><a href="#%24hasController" title="$hasController :: If the media has a controller when being displayed"><span class="description">If the media has a controller when being displayed</span><pre>$hasController</pre></a></li>
 <li class="property public "><a href="#%24height" title="$height :: Height of the media"><span class="description">Height of the media</span><pre>$height</pre></a></li>
-<li class="property public "><a href="#%24loop" title="$loop :: if the media should be played in a loop"><span class="description">if the media should be played in a loop</span><pre>$loop</pre></a></li>
+<li class="property public "><a href="#%24loop" title="$loop :: If the media should be played in a loop"><span class="description">If the media should be played in a loop</span><pre>$loop</pre></a></li>
 <li class="property public inherited"><a href="#%24mimeType" title="$mimeType :: Mime type of the file"><span class="description">Mime type of the file</span><pre>$mimeType</pre></a></li>
 <li class="property public inherited"><a href="#%24path" title="$path :: Path string, where the binary file is located"><span class="description">Path string, where the binary file is located</span><pre>$path</pre></a></li>
 <li class="property public "><a href="#%24width" title="$width :: Width of the media"><span class="description">Width of the media</span><pre>$width</pre></a></li>
@@ -329,7 +324,7 @@ is parsed with PHP.</p></p>
 </div>
 <a name="attribute" id="attribute"></a><div class="element clickable method public attribute" data-toggle="collapse" data-target=".attribute .collapse">
 <h2>Internal function for Legacy template engine compatibility to get property value</h2>
-<pre>attribute($property) : mixed</pre>
+<pre>attribute(string $property) : mixed</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -358,7 +353,7 @@ is parsed with PHP.</p></p>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$property</h4>
-<code></code>
+<code>string</code>
 </div>
 <h3>Returns</h3>
 <div class="subelement response"><code>mixed</code></div>
@@ -398,7 +393,7 @@ is parsed with PHP.</p></p>
 </div>
 <a name="hasAttribute" id="hasAttribute"></a><div class="element clickable method public hasAttribute" data-toggle="collapse" data-target=".hasAttribute .collapse">
 <h2>Internal function for Legacy template engine compatibility to check existence of property</h2>
-<pre>hasAttribute($property) : bool</pre>
+<pre>hasAttribute(string $property) : boolean</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -427,10 +422,10 @@ is parsed with PHP.</p></p>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$property</h4>
-<code></code>
+<code>string</code>
 </div>
 <h3>Returns</h3>
-<div class="subelement response"><code>bool</code></div>
+<div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
 <a name="getProperties" id="getProperties"></a><div class="element clickable method protected getProperties" data-toggle="collapse" data-target=".getProperties .collapse">
@@ -468,8 +463,8 @@ is parsed with PHP.</p></p>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
 <a name="%24autoplay" id="$autoplay"> </a><div class="element clickable property public $autoplay" data-toggle="collapse" data-target=".$autoplay .collapse">
-<h2>if the media should be automatically played</h2>
-<pre>$autoplay : bool</pre>
+<h2>If the media should be automatically played</h2>
+<pre>$autoplay : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
@@ -487,7 +482,7 @@ is parsed with PHP.</p></p>
 </div>
 <a name="%24fileSize" id="$fileSize"> </a><div class="element clickable property public $fileSize" data-toggle="collapse" data-target=".$fileSize .collapse">
 <h2>Size of the image file</h2>
-<pre>$fileSize : integer</pre>
+<pre>$fileSize : int</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -499,7 +494,7 @@ is parsed with PHP.</p></p>
 </div>
 <a name="%24hasController" id="$hasController"> </a><div class="element clickable property public $hasController" data-toggle="collapse" data-target=".$hasController .collapse">
 <h2>If the media has a controller when being displayed</h2>
-<pre>$hasController : bool</pre>
+<pre>$hasController : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
@@ -510,8 +505,8 @@ is parsed with PHP.</p></p>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
 <a name="%24loop" id="$loop"> </a><div class="element clickable property public $loop" data-toggle="collapse" data-target=".$loop .collapse">
-<h2>if the media should be played in a loop</h2>
-<pre>$loop : bool</pre>
+<h2>If the media should be played in a loop</h2>
+<pre>$loop : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
@@ -558,7 +553,7 @@ is parsed with PHP.</p></p>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-29T14:53:02+01:00.<br></footer></div>
+            generated on 2012-11-30T17:24:20+01:00.<br></footer></div>
 </div>
 </body>
 </html>

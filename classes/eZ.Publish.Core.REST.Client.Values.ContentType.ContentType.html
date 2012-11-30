@@ -35,16 +35,11 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3441</span></a></li>
+                <span class="label label-info">3434</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
-                <ul>
-<li>todo 
-                <span class="label label-info">162</span>
-</li>
-<li>fixme 
-                <span class="label label-info">10</span>
-</li>
-</ul></a></li>
+                <ul><li>todo 
+                <span class="label label-info">178</span>
+</li></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
                 <span class="label label-info">10</span></a></li>
 </ul>
@@ -75,11 +70,11 @@
 <li class="method public inherited"><a href="#attribute" title="attribute :: Internal function for Legacy template engine compatibility to get property value"><span class="description">Internal function for Legacy template engine compatibility to get property value</span><pre>attribute()</pre></a></li>
 <li class="method public inherited"><a href="#attributes" title="attributes :: Internal function for Legacy template engine compatibility to get properties"><span class="description">Internal function for Legacy template engine compatibility to get properties</span><pre>attributes()</pre></a></li>
 <li class="method public "><a href="#getContentTypeGroups" title="getContentTypeGroups :: This method returns the content type groups this content type is assigned to"><span class="description">This method returns the content type groups this content type is assigned to</span><pre>getContentTypeGroups()</pre></a></li>
-<li class="method public "><a href="#getDescription" title="getDescription :: this method returns the name of the content type in the given language"><span class="description">this method returns the name of the content type in the given language</span><pre>getDescription()</pre></a></li>
+<li class="method public "><a href="#getDescription" title="getDescription :: This method returns the name of the content type in the given language"><span class="description">This method returns the name of the content type in the given language</span><pre>getDescription()</pre></a></li>
 <li class="method public "><a href="#getDescriptions" title="getDescriptions :: This method returns the human readable description of the content type"><span class="description">This method returns the human readable description of the content type</span><pre>getDescriptions()</pre></a></li>
-<li class="method public "><a href="#getFieldDefinition" title="getFieldDefinition :: this method returns the field definition for the given identifier"><span class="description">this method returns the field definition for the given identifier</span><pre>getFieldDefinition()</pre></a></li>
+<li class="method public "><a href="#getFieldDefinition" title="getFieldDefinition :: This method returns the field definition for the given identifier"><span class="description">This method returns the field definition for the given identifier</span><pre>getFieldDefinition()</pre></a></li>
 <li class="method public "><a href="#getFieldDefinitions" title="getFieldDefinitions :: This method returns the content type field definitions from this type"><span class="description">This method returns the content type field definitions from this type</span><pre>getFieldDefinitions()</pre></a></li>
-<li class="method public "><a href="#getName" title="getName :: this method returns the name of the content type in the given language"><span class="description">this method returns the name of the content type in the given language</span><pre>getName()</pre></a></li>
+<li class="method public "><a href="#getName" title="getName :: This method returns the name of the content type in the given language"><span class="description">This method returns the name of the content type in the given language</span><pre>getName()</pre></a></li>
 <li class="method public "><a href="#getNames" title="getNames :: This method returns the human readable name in all provided languages
 of the content type"><span class="description">This method returns the human readable name in all provided languages
 of the content type</span><pre>getNames()</pre></a></li>
@@ -111,8 +106,8 @@ of the content type</span><pre>getNames()</pre></a></li>
 <li class="property protected "><a href="#%24contentTypeService" title="$contentTypeService :: Content type service to fetch additional information from"><span class="description">Content type service to fetch additional information from</span><pre>$contentTypeService</pre></a></li>
 <li class="property protected inherited"><a href="#%24creationDate" title="$creationDate :: Creation date of the content type"><span class="description">Creation date of the content type</span><pre>$creationDate</pre></a></li>
 <li class="property protected inherited"><a href="#%24creatorId" title="$creatorId :: Creator user id of the content type"><span class="description">Creator user id of the content type</span><pre>$creatorId</pre></a></li>
-<li class="property protected inherited"><a href="#%24defaultAlwaysAvailable" title="$defaultAlwaysAvailable :: if an instance of a content type is created the always available flag is set
-by default to this value."><span class="description">if an instance of a content type is created the always available flag is set
+<li class="property protected inherited"><a href="#%24defaultAlwaysAvailable" title="$defaultAlwaysAvailable :: If an instance of a content type is created the always available flag is set
+by default to this value."><span class="description">If an instance of a content type is created the always available flag is set
 by default to this value.</span><pre>$defaultAlwaysAvailable</pre></a></li>
 <li class="property protected inherited"><a href="#%24defaultSortField" title="$defaultSortField :: Specifies which property the child locations should be sorted on by default when created"><span class="description">Specifies which property the child locations should be sorted on by default when created</span><pre>$defaultSortField</pre></a></li>
 <li class="property protected inherited"><a href="#%24defaultSortOrder" title="$defaultSortOrder :: Specifies whether the sort order should be ascending or descending by default when created"><span class="description">Specifies whether the sort order should be ascending or descending by default when created</span><pre>$defaultSortOrder</pre></a></li>
@@ -359,7 +354,7 @@ is parsed with PHP.</p></p>
 </div>
 <a name="attribute" id="attribute"></a><div class="element clickable method public attribute" data-toggle="collapse" data-target=".attribute .collapse">
 <h2>Internal function for Legacy template engine compatibility to get property value</h2>
-<pre>attribute($property) : mixed</pre>
+<pre>attribute(string $property) : mixed</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -384,7 +379,7 @@ is parsed with PHP.</p></p>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$property</h4>
-<code></code>
+<code>string</code>
 </div>
 <h3>Returns</h3>
 <div class="subelement response"><code>mixed</code></div>
@@ -420,17 +415,16 @@ is parsed with PHP.</p></p>
 </div>
 <a name="getContentTypeGroups" id="getContentTypeGroups"></a><div class="element clickable method public getContentTypeGroups" data-toggle="collapse" data-target=".getContentTypeGroups .collapse">
 <h2>This method returns the content type groups this content type is assigned to</h2>
-<pre>getContentTypeGroups() : array</pre>
+<pre>getContentTypeGroups() : <a href="Publish.API.Repository.Values.ContentType.ContentTypeGroup.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContentType%5CContentTypeGroup">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
 <h3>Returns</h3>
-<div class="subelement response">
-<code>array</code>an array of {@link ContentTypeGroup}</div>
+<div class="subelement response"><code><a href="Publish.API.Repository.Values.ContentType.ContentTypeGroup.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContentType%5CContentTypeGroup">\eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup[]</a></code></div>
 </div></div>
 </div>
 <a name="getDescription" id="getDescription"></a><div class="element clickable method public getDescription" data-toggle="collapse" data-target=".getDescription .collapse">
-<h2>this method returns the name of the content type in the given language</h2>
+<h2>This method returns the name of the content type in the given language</h2>
 <pre>getDescription(string $languageCode) : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -459,15 +453,15 @@ is parsed with PHP.</p></p>
 </div></div>
 </div>
 <a name="getFieldDefinition" id="getFieldDefinition"></a><div class="element clickable method public getFieldDefinition" data-toggle="collapse" data-target=".getFieldDefinition .collapse">
-<h2>this method returns the field definition for the given identifier</h2>
-<pre>getFieldDefinition($fieldDefinitionIdentifier) : <a href="../classes/eZ.Publish.Core.REST.Client.Values.ContentType.FieldDefinition.html">\eZ\Publish\Core\REST\Client\Values\ContentType\FieldDefinition</a></pre>
+<h2>This method returns the field definition for the given identifier</h2>
+<pre>getFieldDefinition(string $fieldDefinitionIdentifier) : <a href="../classes/eZ.Publish.Core.REST.Client.Values.ContentType.FieldDefinition.html">\eZ\Publish\Core\REST\Client\Values\ContentType\FieldDefinition</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$fieldDefinitionIdentifier</h4>
-<code></code>
+<code>string</code>
 </div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.Core.REST.Client.Values.ContentType.FieldDefinition.html">\eZ\Publish\Core\REST\Client\Values\ContentType\FieldDefinition</a></code></div>
@@ -475,17 +469,16 @@ is parsed with PHP.</p></p>
 </div>
 <a name="getFieldDefinitions" id="getFieldDefinitions"></a><div class="element clickable method public getFieldDefinitions" data-toggle="collapse" data-target=".getFieldDefinitions .collapse">
 <h2>This method returns the content type field definitions from this type</h2>
-<pre>getFieldDefinitions() : array</pre>
+<pre>getFieldDefinitions() : <a href="Publish.API.Repository.Values.ContentType.FieldDefinition.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContentType%5CFieldDefinition">\eZ\Publish\API\Repository\Values\ContentType\FieldDefinition[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
 <h3>Returns</h3>
-<div class="subelement response">
-<code>array</code>an array of {@link FieldDefinition}</div>
+<div class="subelement response"><code><a href="Publish.API.Repository.Values.ContentType.FieldDefinition.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContentType%5CFieldDefinition">\eZ\Publish\API\Repository\Values\ContentType\FieldDefinition[]</a></code></div>
 </div></div>
 </div>
 <a name="getName" id="getName"></a><div class="element clickable method public getName" data-toggle="collapse" data-target=".getName .collapse">
-<h2>this method returns the name of the content type in the given language</h2>
+<h2>This method returns the name of the content type in the given language</h2>
 <pre>getName(string $languageCode) : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -516,7 +509,7 @@ of the content type</h2>
 </div>
 <a name="hasAttribute" id="hasAttribute"></a><div class="element clickable method public hasAttribute" data-toggle="collapse" data-target=".hasAttribute .collapse">
 <h2>Internal function for Legacy template engine compatibility to check existence of property</h2>
-<pre>hasAttribute($property) : bool</pre>
+<pre>hasAttribute(string $property) : boolean</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -541,10 +534,10 @@ of the content type</h2>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$property</h4>
-<code></code>
+<code>string</code>
 </div>
 <h3>Returns</h3>
-<div class="subelement response"><code>bool</code></div>
+<div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
 <a name="getProperties" id="getProperties"></a><div class="element clickable method protected getProperties" data-toggle="collapse" data-target=".getProperties .collapse">
@@ -597,7 +590,7 @@ of the content type</h2>
 </div>
 <a name="%24creationDate" id="$creationDate"> </a><div class="element clickable property public $creationDate" data-toggle="collapse" data-target=".$creationDate .collapse">
 <h2>the date of the creation of this content type</h2>
-<pre>$creationDate : \eZ\Publish\Core\REST\Client\Values\ContentType\DateTime</pre>
+<pre>$creationDate : <a href="http://php.net/manual/en/class.datetime.php">\DateTime</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -795,7 +788,7 @@ of the content type</h2>
 </div>
 <a name="%24modificationDate" id="$modificationDate"> </a><div class="element clickable property public $modificationDate" data-toggle="collapse" data-target=".$modificationDate .collapse">
 <h2>the date of the last modification of this content type</h2>
-<pre>$modificationDate : \eZ\Publish\Core\REST\Client\Values\ContentType\DateTime</pre>
+<pre>$modificationDate : <a href="http://php.net/manual/en/class.datetime.php">\DateTime</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -921,13 +914,13 @@ of the content type</h2>
 </div>
 <a name="%24contentTypeService" id="$contentTypeService"> </a><div class="element clickable property protected $contentTypeService" data-toggle="collapse" data-target=".$contentTypeService .collapse">
 <h2>Content type service to fetch additional information from</h2>
-<pre>$contentTypeService : \eZ\Publish\Core\REST\Client\Values\ContentType\eZ\Publish\Core\REST\Client\ContentTypeService</pre>
+<pre>$contentTypeService : <a href="../classes/eZ.Publish.Core.REST.Client.ContentTypeService.html">\eZ\Publish\Core\REST\Client\ContentTypeService</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
 <a name="%24creationDate" id="$creationDate"> </a><div class="element clickable property protected $creationDate" data-toggle="collapse" data-target=".$creationDate .collapse">
 <h2>Creation date of the content type</h2>
-<pre>$creationDate : \eZ\Publish\API\Repository\Values\ContentType\DateTime</pre>
+<pre>$creationDate : <a href="http://php.net/manual/en/class.datetime.php">\DateTime</a></pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -950,7 +943,7 @@ of the content type</h2>
 </div></div>
 </div>
 <a name="%24defaultAlwaysAvailable" id="$defaultAlwaysAvailable"> </a><div class="element clickable property protected $defaultAlwaysAvailable" data-toggle="collapse" data-target=".$defaultAlwaysAvailable .collapse">
-<h2>if an instance of a content type is created the always available flag is set
+<h2>If an instance of a content type is created the always available flag is set
 by default to this value.</h2>
 <pre>$defaultAlwaysAvailable : boolean</pre>
 <div class="labels"><span class="label">Inherited</span></div>
@@ -1048,7 +1041,7 @@ by default to this value.</h2>
 </div>
 <a name="%24modificationDate" id="$modificationDate"> </a><div class="element clickable property protected $modificationDate" data-toggle="collapse" data-target=".$modificationDate .collapse">
 <h2>Modification date of the content type</h2>
-<pre>$modificationDate : \eZ\Publish\API\Repository\Values\ContentType\DateTime</pre>
+<pre>$modificationDate : <a href="http://php.net/manual/en/class.datetime.php">\DateTime</a></pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -1177,7 +1170,7 @@ content type</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-29T14:52:01+01:00.<br></footer></div>
+            generated on 2012-11-30T17:23:14+01:00.<br></footer></div>
 </div>
 </body>
 </html>

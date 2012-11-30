@@ -35,16 +35,11 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3441</span></a></li>
+                <span class="label label-info">3434</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
-                <ul>
-<li>todo 
-                <span class="label label-info">162</span>
-</li>
-<li>fixme 
-                <span class="label label-info">10</span>
-</li>
-</ul></a></li>
+                <ul><li>todo 
+                <span class="label label-info">178</span>
+</li></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
                 <span class="label label-info">10</span></a></li>
 </ul>
@@ -85,7 +80,7 @@
 <li class="method public "><a href="#insertVersion" title="insertVersion :: Inserts a new version."><span class="description">Inserts a new version.</span><pre>insertVersion()</pre></a></li>
 <li class="method public "><a href="#listVersions" title="listVersions :: Returns all version data for the given $contentId"><span class="description">Returns all version data for the given $contentId</span><pre>listVersions()</pre></a></li>
 <li class="method public "><a href="#listVersionsForUser" title="listVersionsForUser :: Returns data for all versions with given status created by the given $userId"><span class="description">Returns data for all versions with given status created by the given $userId</span><pre>listVersionsForUser()</pre></a></li>
-<li class="method public "><a href="#load" title="load :: Load data for a content object"><span class="description">Load data for a content object</span><pre>load()</pre></a></li>
+<li class="method public "><a href="#load" title="load :: Loads data for a content object"><span class="description">Loads data for a content object</span><pre>load()</pre></a></li>
 <li class="method public "><a href="#loadContentInfo" title="loadContentInfo :: Loads info for content identified by $contentId."><span class="description">Loads info for content identified by $contentId.</span><pre>loadContentInfo()</pre></a></li>
 <li class="method public "><a href="#loadLatestPublishedData" title="loadLatestPublishedData :: Loads data for the latest published version of the content identified by
 $contentId"><span class="description">Loads data for the latest published version of the content identified by
@@ -431,14 +426,14 @@ version number changes.</p></p>
 </div>
 <a name="listVersionsForUser" id="listVersionsForUser"></a><div class="element clickable method public listVersionsForUser" data-toggle="collapse" data-target=".listVersionsForUser .collapse">
 <h2>Returns data for all versions with given status created by the given $userId</h2>
-<pre>listVersionsForUser($userId, int $status) : \eZ\Publish\Core\Persistence\Legacy\Content\Gateway\string[][]</pre>
+<pre>listVersionsForUser(int $userId, int $status) : \eZ\Publish\Core\Persistence\Legacy\Content\Gateway\string[][]</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$userId</h4>
-<code></code>
+<code>int</code>
 </div>
 <div class="subelement argument">
 <h4>$status</h4>
@@ -449,7 +444,7 @@ version number changes.</p></p>
 </div></div>
 </div>
 <a name="load" id="load"></a><div class="element clickable method public load" data-toggle="collapse" data-target=".load .collapse">
-<h2>Load data for a content object</h2>
+<h2>Loads data for a content object</h2>
 <pre>load(mixed $contentId, mixed $version, string[] $translations) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -625,7 +620,7 @@ $contentId</h2>
 </div>
 <a name="updateAlwaysAvailableFlag" id="updateAlwaysAvailableFlag"></a><div class="element clickable method public updateAlwaysAvailableFlag" data-toggle="collapse" data-target=".updateAlwaysAvailableFlag .collapse">
 <h2>Updates "always available" flag for content identified by $contentId, in respect to $alwaysAvailable.</h2>
-<pre>updateAlwaysAvailableFlag(int $contentId, bool $newAlwaysAvailable) </pre>
+<pre>updateAlwaysAvailableFlag(int $contentId, boolean $newAlwaysAvailable) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -636,7 +631,7 @@ $contentId</h2>
 </div>
 <div class="subelement argument">
 <h4>$newAlwaysAvailable</h4>
-<code>bool</code><p>New "always available" value</p>
+<code>boolean</code><p>New "always available" value</p>
 </div>
 </div></div>
 </div>
@@ -731,7 +726,7 @@ $contentId</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-29T14:53:34+01:00.<br></footer></div>
+            generated on 2012-11-30T17:24:55+01:00.<br></footer></div>
 </div>
 </body>
 </html>

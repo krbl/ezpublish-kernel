@@ -35,16 +35,11 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3441</span></a></li>
+                <span class="label label-info">3434</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
-                <ul>
-<li>todo 
-                <span class="label label-info">162</span>
-</li>
-<li>fixme 
-                <span class="label label-info">10</span>
-</li>
-</ul></a></li>
+                <ul><li>todo 
+                <span class="label label-info">178</span>
+</li></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
                 <span class="label label-info">10</span></a></li>
 </ul>
@@ -68,15 +63,15 @@
 <i class="icon-custom icon-method"></i> Methods</li>
 <li class="method public "><a href="#__construct" title="__construct :: Construct from database handler"><span class="description">Construct from database handler</span><pre>__construct()</pre></a></li>
 <li class="method public "><a href="#addPolicy" title="addPolicy :: Adds a policy to a role"><span class="description">Adds a policy to a role</span><pre>addPolicy()</pre></a></li>
-<li class="method public "><a href="#addPolicyLimitations" title="addPolicyLimitations :: Add limitations to an existing policy"><span class="description">Add limitations to an existing policy</span><pre>addPolicyLimitations()</pre></a></li>
+<li class="method public "><a href="#addPolicyLimitations" title="addPolicyLimitations :: Adds limitations to an existing policy"><span class="description">Adds limitations to an existing policy</span><pre>addPolicyLimitations()</pre></a></li>
 <li class="method public "><a href="#createRole" title="createRole :: Create new role"><span class="description">Create new role</span><pre>createRole()</pre></a></li>
 <li class="method public "><a href="#deleteRole" title="deleteRole :: Delete the specified role"><span class="description">Delete the specified role</span><pre>deleteRole()</pre></a></li>
 <li class="method public "><a href="#loadPoliciesByUserId" title="loadPoliciesByUserId :: Returns the user policies associated with the user"><span class="description">Returns the user policies associated with the user</span><pre>loadPoliciesByUserId()</pre></a></li>
-<li class="method public "><a href="#loadRole" title="loadRole :: Load a specified role by id"><span class="description">Load a specified role by id</span><pre>loadRole()</pre></a></li>
+<li class="method public "><a href="#loadRole" title="loadRole :: Loads a specified role by id"><span class="description">Loads a specified role by id</span><pre>loadRole()</pre></a></li>
 <li class="method public "><a href="#loadRoleAssignmentsByGroupId" title="loadRoleAssignmentsByGroupId :: Loads role assignments for specified content ID"><span class="description">Loads role assignments for specified content ID</span><pre>loadRoleAssignmentsByGroupId()</pre></a></li>
-<li class="method public "><a href="#loadRoleByIdentifier" title="loadRoleByIdentifier :: Load a specified role by $identifier"><span class="description">Load a specified role by $identifier</span><pre>loadRoleByIdentifier()</pre></a></li>
-<li class="method public "><a href="#loadRoles" title="loadRoles :: Load all roles"><span class="description">Load all roles</span><pre>loadRoles()</pre></a></li>
-<li class="method public "><a href="#loadRolesForContentObjects" title="loadRolesForContentObjects :: Load all roles associated with the given content objects"><span class="description">Load all roles associated with the given content objects</span><pre>loadRolesForContentObjects()</pre></a></li>
+<li class="method public "><a href="#loadRoleByIdentifier" title="loadRoleByIdentifier :: Loads a specified role by $identifier"><span class="description">Loads a specified role by $identifier</span><pre>loadRoleByIdentifier()</pre></a></li>
+<li class="method public "><a href="#loadRoles" title="loadRoles :: Loads all roles"><span class="description">Loads all roles</span><pre>loadRoles()</pre></a></li>
+<li class="method public "><a href="#loadRolesForContentObjects" title="loadRolesForContentObjects :: Loads all roles associated with the given content objects"><span class="description">Loads all roles associated with the given content objects</span><pre>loadRolesForContentObjects()</pre></a></li>
 <li class="method public "><a href="#removePolicy" title="removePolicy :: Removes a policy from a role"><span class="description">Removes a policy from a role</span><pre>removePolicy()</pre></a></li>
 <li class="method public "><a href="#removePolicyLimitations" title="removePolicyLimitations :: Remove all limitations for a policy"><span class="description">Remove all limitations for a policy</span><pre>removePolicyLimitations()</pre></a></li>
 <li class="method public "><a href="#updateRole" title="updateRole :: Update role"><span class="description">Update role</span><pre>updateRole()</pre></a></li>
@@ -145,7 +140,7 @@
 </div></div>
 </div>
 <a name="addPolicyLimitations" id="addPolicyLimitations"></a><div class="element clickable method public addPolicyLimitations" data-toggle="collapse" data-target=".addPolicyLimitations .collapse">
-<h2>Add limitations to an existing policy</h2>
+<h2>Adds limitations to an existing policy</h2>
 <pre>addPolicyLimitations(int $policyId, \array $limitations) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -205,7 +200,7 @@
 </div></div>
 </div>
 <a name="loadRole" id="loadRole"></a><div class="element clickable method public loadRole" data-toggle="collapse" data-target=".loadRole .collapse">
-<h2>Load a specified role by id</h2>
+<h2>Loads a specified role by id</h2>
 <pre>loadRole(mixed $roleId) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -221,7 +216,7 @@
 </div>
 <a name="loadRoleAssignmentsByGroupId" id="loadRoleAssignmentsByGroupId"></a><div class="element clickable method public loadRoleAssignmentsByGroupId" data-toggle="collapse" data-target=".loadRoleAssignmentsByGroupId .collapse">
 <h2>Loads role assignments for specified content ID</h2>
-<pre>loadRoleAssignmentsByGroupId(mixed $groupId, bool $inherited) : array</pre>
+<pre>loadRoleAssignmentsByGroupId(mixed $groupId, boolean $inherited) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -232,14 +227,14 @@
 </div>
 <div class="subelement argument">
 <h4>$inherited</h4>
-<code>bool</code>
+<code>boolean</code>
 </div>
 <h3>Returns</h3>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
 <a name="loadRoleByIdentifier" id="loadRoleByIdentifier"></a><div class="element clickable method public loadRoleByIdentifier" data-toggle="collapse" data-target=".loadRoleByIdentifier .collapse">
-<h2>Load a specified role by $identifier</h2>
+<h2>Loads a specified role by $identifier</h2>
 <pre>loadRoleByIdentifier(string $identifier) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -254,7 +249,7 @@
 </div></div>
 </div>
 <a name="loadRoles" id="loadRoles"></a><div class="element clickable method public loadRoles" data-toggle="collapse" data-target=".loadRoles .collapse">
-<h2>Load all roles</h2>
+<h2>Loads all roles</h2>
 <pre>loadRoles() : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -264,7 +259,7 @@
 </div></div>
 </div>
 <a name="loadRolesForContentObjects" id="loadRolesForContentObjects"></a><div class="element clickable method public loadRolesForContentObjects" data-toggle="collapse" data-target=".loadRolesForContentObjects .collapse">
-<h2>Load all roles associated with the given content objects</h2>
+<h2>Loads all roles associated with the given content objects</h2>
 <pre>loadRolesForContentObjects(array $contentIds) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -355,7 +350,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-29T14:53:38+01:00.<br></footer></div>
+            generated on 2012-11-30T17:24:58+01:00.<br></footer></div>
 </div>
 </body>
 </html>
