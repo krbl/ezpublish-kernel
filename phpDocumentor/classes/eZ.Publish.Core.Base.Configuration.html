@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,82 +61,105 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#__construct" title="__construct :: Create instance of Configuration"><span class="description">Create instance of Configuration</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#get" title="get :: Gets a configuration value, or $fallBackValue if undefined
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Create instance of Configuration"><span class="description">Create instance of Configuration</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_get" title="get :: Gets a configuration value, or $fallBackValue if undefined
 Triggers warning if key is not set and $fallBackValue is null"><span class="description">Gets a configuration value, or $fallBackValue if undefined
 Triggers warning if key is not set and $fallBackValue is null</span><pre>get()</pre></a></li>
-<li class="method public "><a href="#getAll" title="getAll :: Gets all section and configuration value"><span class="description">Gets all section and configuration value</span><pre>getAll()</pre></a></li>
-<li class="method public "><a href="#getDirs" title="getDirs :: Get raw instance override path list data."><span class="description">Get raw instance override path list data.</span><pre>getDirs()</pre></a></li>
-<li class="method public "><a href="#getSection" title="getSection :: Gets a configuration values for a section or $fallBackValue if undefined
+<li class="method public "><a href="#method_getAll" title="getAll :: Gets all section and configuration value"><span class="description">Gets all section and configuration value</span><pre>getAll()</pre></a></li>
+<li class="method public "><a href="#method_getDirs" title="getDirs :: Get raw instance override path list data."><span class="description">Get raw instance override path list data.</span><pre>getDirs()</pre></a></li>
+<li class="method public "><a href="#method_getSection" title="getSection :: Gets a configuration values for a section or $fallBackValue if undefined
 Triggers warning if section is not set and $fallBackValue is null"><span class="description">Gets a configuration values for a section or $fallBackValue if undefined
 Triggers warning if section is not set and $fallBackValue is null</span><pre>getSection()</pre></a></li>
-<li class="method public "><a href="#has" title="has :: Checks if a configuration section and optionally key is set."><span class="description">Checks if a configuration section and optionally key is set.</span><pre>has()</pre></a></li>
-<li class="method public "><a href="#hasValue" title="hasValue :: Checks if a configuration section &amp; key is set and has a value."><span class="description">Checks if a configuration section &amp; key is set and has a value.</span><pre>hasValue()</pre></a></li>
-<li class="method public "><a href="#load" title="load :: Loads the configuration from cache or from source (if $useCache is false or there is no cache)"><span class="description">Loads the configuration from cache or from source (if $useCache is false or there is no cache)</span><pre>load()</pre></a></li>
-<li class="method public "><a href="#reload" title="reload :: Reload cache data conditionally if path hash has changed on current instance"><span class="description">Reload cache data conditionally if path hash has changed on current instance</span><pre>reload()</pre></a></li>
-<li class="method public "><a href="#set" title="set :: Gets a configuration value, or null if not set."><span class="description">Gets a configuration value, or null if not set.</span><pre>set()</pre></a></li>
-<li class="nav-header protected">» Protected</li>
-<li class="method protected "><a href="#createCacheName" title="createCacheName :: Create cache name."><span class="description">Create cache name.</span><pre>createCacheName()</pre></a></li>
-<li class="method protected "><a href="#generateRawData" title="generateRawData :: Generate raw data for use in cache"><span class="description">Generate raw data for use in cache</span><pre>generateRawData()</pre></a></li>
-<li class="method protected "><a href="#hasCache" title="hasCache :: Check if cache file exists."><span class="description">Check if cache file exists.</span><pre>hasCache()</pre></a></li>
-<li class="method protected "><a href="#parse" title="parse :: Parse configuration files"><span class="description">Parse configuration files</span><pre>parse()</pre></a></li>
-<li class="method protected "><a href="#pathsHash" title="pathsHash :: Get cache hash based on override dirs"><span class="description">Get cache hash based on override dirs</span><pre>pathsHash()</pre></a></li>
-<li class="method protected "><a href="#readCache" title="readCache :: Loads cache file, use {@link hasCache()} to make sure it exists first!"><span class="description">Loads cache file, use {@link hasCache()} to make sure it exists first!</span><pre>readCache()</pre></a></li>
-<li class="method protected "><a href="#recursiveArrayClearing" title="recursiveArrayClearing :: Recursively clear array values"><span class="description">Recursively clear array values</span><pre>recursiveArrayClearing()</pre></a></li>
-<li class="method protected "><a href="#setGlobalConfig" title="setGlobalConfig :: Recursively set global configuration"><span class="description">Recursively set global configuration</span><pre>setGlobalConfig()</pre></a></li>
-<li class="method protected "><a href="#storeCache" title="storeCache :: Store cache file, overwrites any existing file"><span class="description">Store cache file, overwrites any existing file</span><pre>storeCache()</pre></a></li>
+<li class="method public "><a href="#method_has" title="has :: Checks if a configuration section and optionally key is set."><span class="description">Checks if a configuration section and optionally key is set.</span><pre>has()</pre></a></li>
+<li class="method public "><a href="#method_hasValue" title="hasValue :: Checks if a configuration section &amp; key is set and has a value."><span class="description">Checks if a configuration section &amp; key is set and has a value.</span><pre>hasValue()</pre></a></li>
+<li class="method public "><a href="#method_load" title="load :: Loads the configuration from cache or from source (if $useCache is false or there is no cache)"><span class="description">Loads the configuration from cache or from source (if $useCache is false or there is no cache)</span><pre>load()</pre></a></li>
+<li class="method public "><a href="#method_reload" title="reload :: Reload cache data conditionally if path hash has changed on current instance"><span class="description">Reload cache data conditionally if path hash has changed on current instance</span><pre>reload()</pre></a></li>
+<li class="method public "><a href="#method_set" title="set :: Gets a configuration value, or null if not set."><span class="description">Gets a configuration value, or null if not set.</span><pre>set()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method_createCacheName" title="createCacheName :: Create cache name."><span class="description">Create cache name.</span><pre>createCacheName()</pre></a></li>
+<li class="method protected "><a href="#method_generateRawData" title="generateRawData :: Generate raw data for use in cache"><span class="description">Generate raw data for use in cache</span><pre>generateRawData()</pre></a></li>
+<li class="method protected "><a href="#method_hasCache" title="hasCache :: Check if cache file exists."><span class="description">Check if cache file exists.</span><pre>hasCache()</pre></a></li>
+<li class="method protected "><a href="#method_parse" title="parse :: Parse configuration files"><span class="description">Parse configuration files</span><pre>parse()</pre></a></li>
+<li class="method protected "><a href="#method_pathsHash" title="pathsHash :: Get cache hash based on override dirs"><span class="description">Get cache hash based on override dirs</span><pre>pathsHash()</pre></a></li>
+<li class="method protected "><a href="#method_readCache" title="readCache :: Loads cache file, use {@link hasCache()} to make sure it exists first!"><span class="description">Loads cache file, use {@link hasCache()} to make sure it exists first!</span><pre>readCache()</pre></a></li>
+<li class="method protected "><a href="#method_recursiveArrayClearing" title="recursiveArrayClearing :: Recursively clear array values"><span class="description">Recursively clear array values</span><pre>recursiveArrayClearing()</pre></a></li>
+<li class="method protected "><a href="#method_setGlobalConfig" title="setGlobalConfig :: Recursively set global configuration"><span class="description">Recursively set global configuration</span><pre>setGlobalConfig()</pre></a></li>
+<li class="method protected "><a href="#method_storeCache" title="storeCache :: Store cache file, overwrites any existing file"><span class="description">Store cache file, overwrites any existing file</span><pre>storeCache()</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected "><a href="#%24dirPermission" title="$dirPermission :: "><span class="description">$dirPermission</span><pre>$dirPermission</pre></a></li>
-<li class="property protected "><a href="#%24filePermission" title="$filePermission :: "><span class="description">$filePermission</span><pre>$filePermission</pre></a></li>
-<li class="property protected "><a href="#%24globalConfiguration" title="$globalConfiguration :: Global settings (see config.php-RECOMMENDED)"><span class="description">Global settings (see config.php-RECOMMENDED)</span><pre>$globalConfiguration</pre></a></li>
-<li class="property protected "><a href="#%24moduleName" title="$moduleName :: The instance module name, set by {@link __construct()}"><span class="description">The instance module name, set by {@link __construct()}</span><pre>$moduleName</pre></a></li>
-<li class="property protected "><a href="#%24raw" title="$raw :: The in memory representation of the current raw configuration data."><span class="description">The in memory representation of the current raw configuration data.</span><pre>$raw</pre></a></li>
-<li class="nav-header private">» Private</li>
-<li class="property private "><a href="#%24paths" title="$paths :: The instance path array, scoped in the order they should be parsed"><span class="description">The instance path array, scoped in the order they should be parsed</span><pre>$paths</pre></a></li>
-<li class="property private "><a href="#%24pathsHash" title="$pathsHash :: The instance configuration path array md5 hash, for use in cache names."><span class="description">The instance configuration path array md5 hash, for use in cache names.</span><pre>$pathsHash</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_dirPermission" title="$dirPermission :: "><span class="description"></span><pre>$dirPermission</pre></a></li>
+<li class="property protected "><a href="#property_filePermission" title="$filePermission :: "><span class="description"></span><pre>$filePermission</pre></a></li>
+<li class="property protected "><a href="#property_globalConfiguration" title="$globalConfiguration :: Global settings (see config.php-RECOMMENDED)"><span class="description"></span><pre>$globalConfiguration</pre></a></li>
+<li class="property protected "><a href="#property_moduleName" title="$moduleName :: The instance module name, set by {@link __construct()}"><span class="description"></span><pre>$moduleName</pre></a></li>
+<li class="property protected "><a href="#property_raw" title="$raw :: The in memory representation of the current raw configuration data."><span class="description"></span><pre>$raw</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_paths" title="$paths :: The instance path array, scoped in the order they should be parsed"><span class="description"></span><pre>$paths</pre></a></li>
+<li class="property private "><a href="#property_pathsHash" title="$pathsHash :: The instance configuration path array md5 hash, for use in cache names."><span class="description"></span><pre>$pathsHash</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-constant"></i> Constants</li>
-<li class="constant  "><a href="#CONFIG_CACHE_DIR" title="CONFIG_CACHE_DIR :: Constant path to directory for configuration cache"><span class="description">Constant path to directory for configuration cache</span><pre>CONFIG_CACHE_DIR</pre></a></li>
-<li class="constant  "><a href="#CONFIG_CACHE_REV" title="CONFIG_CACHE_REV :: Constant integer to check against configuration cache format revision"><span class="description">Constant integer to check against configuration cache format revision</span><pre>CONFIG_CACHE_REV</pre></a></li>
-<li class="constant  "><a href="#TEMP_INI_UNSET_VAR" title="TEMP_INI_UNSET_VAR :: Constant string used as a temporary unset variable during ini parsing"><span class="description">Constant string used as a temporary unset variable during ini parsing</span><pre>TEMP_INI_UNSET_VAR</pre></a></li>
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  "><a href="#constant_CONFIG_CACHE_DIR" title="CONFIG_CACHE_DIR :: Constant path to directory for configuration cache"><span class="description">Constant path to directory for configuration cache</span><pre>CONFIG_CACHE_DIR</pre></a></li>
+<li class="constant  "><a href="#constant_CONFIG_CACHE_REV" title="CONFIG_CACHE_REV :: Constant integer to check against configuration cache format revision"><span class="description">Constant integer to check against configuration cache format revision</span><pre>CONFIG_CACHE_REV</pre></a></li>
+<li class="constant  "><a href="#constant_TEMP_INI_UNSET_VAR" title="TEMP_INI_UNSET_VAR :: Constant string used as a temporary unset variable during ini parsing"><span class="description">Constant string used as a temporary unset variable during ini parsing</span><pre>TEMP_INI_UNSET_VAR</pre></a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CBase%5CConfiguration" id="\eZ\Publish\Core\Base\Configuration"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\Base\Configuration"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Base.html">Base</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Base.html">Base</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.Base.Configuration.html">Configuration</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.Base.Configuration.html" class="element class">
+<div class="element class">
 <p class="short_description">Configuration instance class</p>
 <div class="details">
-<p class="long_description"><p>A configuration class with override setting support that uses parsers to deal with
+<div class="long_description"><p>A configuration class with override setting support that uses parsers to deal with
 files so you can support ini/yaml/xml/json given it is defined when setting up the class.</p>
 
 <p>By default values are cached to a raw php files and files are not read again unless
-development mode is on and some file has been removed or modified since cache was created.</p></p>
+development mode is on and some file has been removed or modified since cache was created.</p></div>
 <table class="table table-bordered"><tr>
 <th>uses</th>
-<td>\ezcPhpGenerator</td>
+<td>When generating cache files.</td>
 </tr></table>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
 <h2>Create instance of Configuration</h2>
-<pre>__construct(string $moduleName, \array $paths, \array $globalConfiguration) </pre>
+<pre>__construct(string $moduleName, array $paths, array $globalConfiguration) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$moduleName</h4>
@@ -149,13 +173,13 @@ development mode is on and some file has been removed or modified since cache wa
 <code>array</code><p>Global settings for module</p></div>
 </div></div>
 </div>
-<a name="get" id="get"></a><div class="element clickable method public get" data-toggle="collapse" data-target=".get .collapse">
+<a id="method_get"></a><div class="element clickable method public method_get" data-toggle="collapse" data-target=".method_get .collapse">
 <h2>Gets a configuration value, or $fallBackValue if undefined
 Triggers warning if key is not set and $fallBackValue is null</h2>
 <pre>get(string $section, string $key, mixed $fallBackValue) : mixed | null</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$section</h4>
@@ -171,22 +195,22 @@ Triggers warning if key is not set and $fallBackValue is null</h2>
 <code>mixed</code><code>null</code>(null if key is undefined and no $fallBackValue is provided)</div>
 </div></div>
 </div>
-<a name="getAll" id="getAll"></a><div class="element clickable method public getAll" data-toggle="collapse" data-target=".getAll .collapse">
+<a id="method_getAll"></a><div class="element clickable method public method_getAll" data-toggle="collapse" data-target=".method_getAll .collapse">
 <h2>Gets all section and configuration value</h2>
 <pre>getAll() : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="getDirs" id="getDirs"></a><div class="element clickable method public getDirs" data-toggle="collapse" data-target=".getDirs .collapse">
+<a id="method_getDirs"></a><div class="element clickable method public method_getDirs" data-toggle="collapse" data-target=".method_getDirs .collapse">
 <h2>Get raw instance override path list data.</h2>
 <pre>getDirs(string $scope) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$scope</h4>
@@ -201,13 +225,13 @@ Triggers warning if key is not set and $fallBackValue is null</h2>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="getSection" id="getSection"></a><div class="element clickable method public getSection" data-toggle="collapse" data-target=".getSection .collapse">
+<a id="method_getSection"></a><div class="element clickable method public method_getSection" data-toggle="collapse" data-target=".method_getSection .collapse">
 <h2>Gets a configuration values for a section or $fallBackValue if undefined
 Triggers warning if section is not set and $fallBackValue is null</h2>
 <pre>getSection(string $section, mixed $fallBackValue) : array | null</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$section</h4>
@@ -220,12 +244,12 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 <code>array</code><code>null</code>(null if key is undefined and no $fallBackValue is provided)</div>
 </div></div>
 </div>
-<a name="has" id="has"></a><div class="element clickable method public has" data-toggle="collapse" data-target=".has .collapse">
+<a id="method_has"></a><div class="element clickable method public method_has" data-toggle="collapse" data-target=".method_has .collapse">
 <h2>Checks if a configuration section and optionally key is set.</h2>
 <pre>has(string $section, string $key) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$section</h4>
@@ -239,12 +263,12 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 <code>boolean</code>Return true if setting exist</div>
 </div></div>
 </div>
-<a name="hasValue" id="hasValue"></a><div class="element clickable method public hasValue" data-toggle="collapse" data-target=".hasValue .collapse">
+<a id="method_hasValue"></a><div class="element clickable method public method_hasValue" data-toggle="collapse" data-target=".method_hasValue .collapse">
 <h2>Checks if a configuration section &amp; key is set and has a value.</h2>
 <pre>hasValue(string $section, string $key) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>(ie. a check using !empty())</p></p>
+<div class="long_description"><p>(ie. a check using !empty())</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$section</h4>
@@ -259,16 +283,16 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 <code>boolean</code>Return true if setting exist and has value</div>
 </div></div>
 </div>
-<a name="load" id="load"></a><div class="element clickable method public load" data-toggle="collapse" data-target=".load .collapse">
+<a id="method_load"></a><div class="element clickable method public method_load" data-toggle="collapse" data-target=".method_load .collapse">
 <h2>Loads the configuration from cache or from source (if $useCache is false or there is no cache)</h2>
 <pre>load(boolean | null $hasCache, boolean $useCache) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$hasCache</h4>
-<code>booleannull</code><p>Lets you specify if there is a cache file, will check if null and $useCache is true</p>
+<code>boolean</code><code>null</code><p>Lets you specify if there is a cache file, will check if null and $useCache is true</p>
 </div>
 <div class="subelement argument">
 <h4>$useCache</h4>
@@ -276,18 +300,18 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 </div>
 </div></div>
 </div>
-<a name="reload" id="reload"></a><div class="element clickable method public reload" data-toggle="collapse" data-target=".reload .collapse">
+<a id="method_reload"></a><div class="element clickable method public method_reload" data-toggle="collapse" data-target=".method_reload .collapse">
 <h2>Reload cache data conditionally if path hash has changed on current instance</h2>
 <pre>reload() </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="set" id="set"></a><div class="element clickable method public set" data-toggle="collapse" data-target=".set .collapse">
+<a id="method_set"></a><div class="element clickable method public method_set" data-toggle="collapse" data-target=".method_set .collapse">
 <h2>Gets a configuration value, or null if not set.</h2>
 <pre>set(string $section, string $key, mixed $value) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$section</h4>
@@ -303,12 +327,12 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 <code>boolean</code>Return true if section existed and was overwritten</div>
 </div></div>
 </div>
-<a name="createCacheName" id="createCacheName"></a><div class="element clickable method protected createCacheName" data-toggle="collapse" data-target=".createCacheName .collapse">
+<a id="method_createCacheName"></a><div class="element clickable method protected method_createCacheName" data-toggle="collapse" data-target=".method_createCacheName .collapse">
 <h2>Create cache name.</h2>
 <pre>createCacheName(string $configurationPathsHash) : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$configurationPathsHash</h4>
@@ -318,12 +342,12 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="generateRawData" id="generateRawData"></a><div class="element clickable method protected generateRawData" data-toggle="collapse" data-target=".generateRawData .collapse">
+<a id="method_generateRawData"></a><div class="element clickable method protected method_generateRawData" data-toggle="collapse" data-target=".method_generateRawData .collapse">
 <h2>Generate raw data for use in cache</h2>
-<pre>generateRawData(string $configurationPathsHash, \array $configurationData, \array $sourceFiles, \array $sourcePaths) : array</pre>
+<pre>generateRawData(string $configurationPathsHash, array $configurationData, array $sourceFiles, array $sourcePaths) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$configurationPathsHash</h4>
@@ -343,12 +367,12 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="hasCache" id="hasCache"></a><div class="element clickable method protected hasCache" data-toggle="collapse" data-target=".hasCache .collapse">
+<a id="method_hasCache"></a><div class="element clickable method protected method_hasCache" data-toggle="collapse" data-target=".method_hasCache .collapse">
 <h2>Check if cache file exists.</h2>
 <pre>hasCache(string $cacheName) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$cacheName</h4>
@@ -358,14 +382,14 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="parse" id="parse"></a><div class="element clickable method protected parse" data-toggle="collapse" data-target=".parse .collapse">
+<a id="method_parse"></a><div class="element clickable method protected method_parse" data-toggle="collapse" data-target=".method_parse .collapse">
 <h2>Parse configuration files</h2>
-<pre>parse(\array $configurationPaths, \array $sourceFiles) : array</pre>
+<pre>parse(array $configurationPaths, array $sourceFiles) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Uses configured parsers to do the file parsing pr file, and then merges the result from them and:
+<div class="long_description"><p>Uses configured parsers to do the file parsing pr file, and then merges the result from them and:
 - Handles array clearing
-- Handles section extends ( "Section:Base" extends "Base" )</p></p>
+- Handles section extends ( "Section:Base" extends "Base" )</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$configurationPaths</h4>
@@ -373,7 +397,8 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 </div>
 <div class="subelement argument">
 <h4>$sourceFiles</h4>
-<code>array</code><p>ByRef value or source files that has been/is going to be parsed files you pass in will not be checked if they exists.</p>
+<code>array</code><p>ByRef value or source files that has been/is going to be parsed
+                          files you pass in will not be checked if they exists.</p>
 </div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
@@ -385,23 +410,23 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 <code>array</code>Data structure for parsed ini files</div>
 </div></div>
 </div>
-<a name="pathsHash" id="pathsHash"></a><div class="element clickable method protected pathsHash" data-toggle="collapse" data-target=".pathsHash .collapse">
+<a id="method_pathsHash"></a><div class="element clickable method protected method_pathsHash" data-toggle="collapse" data-target=".method_pathsHash .collapse">
 <h2>Get cache hash based on override dirs</h2>
 <pre>pathsHash() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>string</code>md5 hash</div>
 </div></div>
 </div>
-<a name="readCache" id="readCache"></a><div class="element clickable method protected readCache" data-toggle="collapse" data-target=".readCache .collapse">
+<a id="method_readCache"></a><div class="element clickable method protected method_readCache" data-toggle="collapse" data-target=".method_readCache .collapse">
 <h2>Loads cache file, use {@link hasCache()} to make sure it exists first!</h2>
 <pre>readCache(string $cacheName) : array | null</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$cacheName</h4>
@@ -413,12 +438,12 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 </div>
 </div></div>
 </div>
-<a name="recursiveArrayClearing" id="recursiveArrayClearing"></a><div class="element clickable method protected recursiveArrayClearing" data-toggle="collapse" data-target=".recursiveArrayClearing .collapse">
+<a id="method_recursiveArrayClearing"></a><div class="element clickable method protected method_recursiveArrayClearing" data-toggle="collapse" data-target=".method_recursiveArrayClearing .collapse">
 <h2>Recursively clear array values</h2>
-<pre>recursiveArrayClearing(\array $iniArray, array | null $configurationPiece) </pre>
+<pre>recursiveArrayClearing(array $iniArray, array | null $configurationPiece) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$iniArray</h4>
@@ -426,16 +451,16 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 </div>
 <div class="subelement argument">
 <h4>$configurationPiece</h4>
-<code>arraynull</code>
+<code>array</code><code>null</code>
 </div>
 </div></div>
 </div>
-<a name="setGlobalConfig" id="setGlobalConfig"></a><div class="element clickable method protected setGlobalConfig" data-toggle="collapse" data-target=".setGlobalConfig .collapse">
+<a id="method_setGlobalConfig"></a><div class="element clickable method protected method_setGlobalConfig" data-toggle="collapse" data-target=".method_setGlobalConfig .collapse">
 <h2>Recursively set global configuration</h2>
-<pre>setGlobalConfig(\array $globalSettings, \array $conf) </pre>
+<pre>setGlobalConfig(array $globalSettings, array $conf) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$globalSettings</h4>
@@ -447,12 +472,12 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 </div>
 </div></div>
 </div>
-<a name="storeCache" id="storeCache"></a><div class="element clickable method protected storeCache" data-toggle="collapse" data-target=".storeCache .collapse">
+<a id="method_storeCache"></a><div class="element clickable method protected method_storeCache" data-toggle="collapse" data-target=".method_storeCache .collapse">
 <h2>Store cache file, overwrites any existing file</h2>
-<pre>storeCache(string $cacheName, \array $rawData) </pre>
+<pre>storeCache(string $cacheName, array $rawData) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$cacheName</h4>
@@ -466,67 +491,67 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24dirPermission" id="$dirPermission"> </a><div class="element clickable property protected $dirPermission" data-toggle="collapse" data-target=".$dirPermission .collapse">
-<h2>$dirPermission</h2>
+<a id="property_dirPermission"> </a><div class="element clickable property protected property_dirPermission" data-toggle="collapse" data-target=".property_dirPermission .collapse">
+<h2></h2>
 <pre>$dirPermission : int</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24filePermission" id="$filePermission"> </a><div class="element clickable property protected $filePermission" data-toggle="collapse" data-target=".$filePermission .collapse">
-<h2>$filePermission</h2>
+<a id="property_filePermission"> </a><div class="element clickable property protected property_filePermission" data-toggle="collapse" data-target=".property_filePermission .collapse">
+<h2></h2>
 <pre>$filePermission : int</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24globalConfiguration" id="$globalConfiguration"> </a><div class="element clickable property protected $globalConfiguration" data-toggle="collapse" data-target=".$globalConfiguration .collapse">
-<h2>Global settings (see config.php-RECOMMENDED)</h2>
+<a id="property_globalConfiguration"> </a><div class="element clickable property protected property_globalConfiguration" data-toggle="collapse" data-target=".property_globalConfiguration .collapse">
+<h2></h2>
 <pre>$globalConfiguration : array</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24moduleName" id="$moduleName"> </a><div class="element clickable property protected $moduleName" data-toggle="collapse" data-target=".$moduleName .collapse">
-<h2>The instance module name, set by {@link __construct()}</h2>
+<a id="property_moduleName"> </a><div class="element clickable property protected property_moduleName" data-toggle="collapse" data-target=".property_moduleName .collapse">
+<h2></h2>
 <pre>$moduleName : string</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24raw" id="$raw"> </a><div class="element clickable property protected $raw" data-toggle="collapse" data-target=".$raw .collapse">
-<h2>The in memory representation of the current raw configuration data.</h2>
+<a id="property_raw"> </a><div class="element clickable property protected property_raw" data-toggle="collapse" data-target=".property_raw .collapse">
+<h2></h2>
 <pre>$raw : null | array</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24paths" id="$paths"> </a><div class="element clickable property private $paths" data-toggle="collapse" data-target=".$paths .collapse">
-<h2>The instance path array, scoped in the order they should be parsed</h2>
+<a id="property_paths"> </a><div class="element clickable property private property_paths" data-toggle="collapse" data-target=".property_paths .collapse">
+<h2></h2>
 <pre>$paths : array</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24pathsHash" id="$pathsHash"> </a><div class="element clickable property private $pathsHash" data-toggle="collapse" data-target=".$pathsHash .collapse">
-<h2>The instance configuration path array md5 hash, for use in cache names.</h2>
+<a id="property_pathsHash"> </a><div class="element clickable property private property_pathsHash" data-toggle="collapse" data-target=".property_pathsHash .collapse">
+<h2></h2>
 <pre>$pathsHash : string</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"><p>Empty if it needs to be regenerated</p></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Empty if it needs to be regenerated</p></div></div></div>
 </div>
 <h3>
 <i class="icon-custom icon-constant"></i> Constants</h3>
-<a name="CONFIG_CACHE_DIR" id="CONFIG_CACHE_DIR"> </a><div class="element clickable constant  CONFIG_CACHE_DIR" data-toggle="collapse" data-target=".CONFIG_CACHE_DIR .collapse">
+<a id="constant_CONFIG_CACHE_DIR"> </a><div class="element clickable constant  constant_CONFIG_CACHE_DIR" data-toggle="collapse" data-target=".constant_CONFIG_CACHE_DIR .collapse">
 <h2>Constant path to directory for configuration cache</h2>
 <pre>CONFIG_CACHE_DIR : string</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="CONFIG_CACHE_REV" id="CONFIG_CACHE_REV"> </a><div class="element clickable constant  CONFIG_CACHE_REV" data-toggle="collapse" data-target=".CONFIG_CACHE_REV .collapse">
+<a id="constant_CONFIG_CACHE_REV"> </a><div class="element clickable constant  constant_CONFIG_CACHE_REV" data-toggle="collapse" data-target=".constant_CONFIG_CACHE_REV .collapse">
 <h2>Constant integer to check against configuration cache format revision</h2>
 <pre>CONFIG_CACHE_REV : int</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="TEMP_INI_UNSET_VAR" id="TEMP_INI_UNSET_VAR"> </a><div class="element clickable constant  TEMP_INI_UNSET_VAR" data-toggle="collapse" data-target=".TEMP_INI_UNSET_VAR .collapse">
+<a id="constant_TEMP_INI_UNSET_VAR"> </a><div class="element clickable constant  constant_TEMP_INI_UNSET_VAR" data-toggle="collapse" data-target=".constant_TEMP_INI_UNSET_VAR .collapse">
 <h2>Constant string used as a temporary unset variable during ini parsing</h2>
 <pre>TEMP_INI_UNSET_VAR : string</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
 </div>
@@ -534,8 +559,8 @@ Triggers warning if section is not set and $fallBackValue is null</h2>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T16:59:14Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:40:53Z.<br></footer></div>
 </div>
 </body>
 </html>

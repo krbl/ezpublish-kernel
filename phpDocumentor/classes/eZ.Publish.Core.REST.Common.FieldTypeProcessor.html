@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -58,44 +59,53 @@
 <span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
 <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
 </div>
-<ul class="side-nav nav nav-list">
-<li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#postProcessHash" title="postProcessHash :: Perform manipulations on an a generated $outgoingValueHash"><span class="description">Perform manipulations on an a generated $outgoingValueHash</span><pre>postProcessHash()</pre></a></li>
-<li class="method public "><a href="#preProcessHash" title="preProcessHash :: Perform manipulations on a received $incomingValueHash"><span class="description">Perform manipulations on a received $incomingValueHash</span><pre>preProcessHash()</pre></a></li>
+<ul class="side-nav nav nav-list"><li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_postProcessHash" title="postProcessHash :: Perform manipulations on an a generated $outgoingValueHash"><span class="description">Perform manipulations on an a generated $outgoingValueHash</span><pre>postProcessHash()</pre></a></li>
+<li class="method public "><a href="#method_preProcessHash" title="preProcessHash :: Perform manipulations on a received $incomingValueHash"><span class="description">Perform manipulations on a received $incomingValueHash</span><pre>preProcessHash()</pre></a></li>
 </ul>
+</li></ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CREST%5CCommon%5CFieldTypeProcessor" id="\eZ\Publish\Core\REST\Common\FieldTypeProcessor"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\REST\Common\FieldTypeProcessor"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.REST.html">REST</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.REST.Common.html">Common</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.REST.html">REST</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.REST.Common.html">Common</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.REST.Common.FieldTypeProcessor.html">FieldTypeProcessor</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.REST.Common.FieldTypeProcessor.html" class="element interface">
+<div class="element interface">
 <p class="short_description">FieldTypeProcessor</p>
 <div class="details">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="postProcessHash" id="postProcessHash"></a><div class="element clickable method public postProcessHash" data-toggle="collapse" data-target=".postProcessHash .collapse">
+<a id="method_postProcessHash"></a><div class="element clickable method public method_postProcessHash" data-toggle="collapse" data-target=".method_postProcessHash .collapse">
 <h2>Perform manipulations on an a generated $outgoingValueHash</h2>
 <pre>postProcessHash(mixed $outgoingValueHash) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>This method is called by the REST server to allow a field type to post
+<div class="long_description"><p>This method is called by the REST server to allow a field type to post
 process the given $outgoingValueHash, which was previously generated
 using <a href="eZ\Publish\SPI\FieldType\FieldType::toHash()">eZ\Publish\SPI\FieldType\FieldType::toHash()</a>, before it is
 sent to the client. The return value of this method replaces
 $outgoingValueHash and must obey to the same rules as the original
-$outgoingValueHash.</p></p>
+$outgoingValueHash.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$outgoingValueHash</h4>
@@ -106,17 +116,17 @@ $outgoingValueHash.</p></p>
 <code>mixed</code>Post processed hash</div>
 </div></div>
 </div>
-<a name="preProcessHash" id="preProcessHash"></a><div class="element clickable method public preProcessHash" data-toggle="collapse" data-target=".preProcessHash .collapse">
+<a id="method_preProcessHash"></a><div class="element clickable method public method_preProcessHash" data-toggle="collapse" data-target=".method_preProcessHash .collapse">
 <h2>Perform manipulations on a received $incomingValueHash</h2>
 <pre>preProcessHash(mixed $incomingValueHash) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>This method is called by the REST server to allow a field type to pre
+<div class="long_description"><p>This method is called by the REST server to allow a field type to pre
 process the given $incomingValueHash before it is handled by {@link
 eZ\Publish\SPI\FieldType\FieldType::fromHash()}. The $incomingValueHash
 can be expected to conform to the rules that need to apply to hashes
 accepted by fromHash(). The return value of this method replaces the
-$incomingValueHash.</p></p>
+$incomingValueHash.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$incomingValueHash</h4>
@@ -133,8 +143,8 @@ $incomingValueHash.</p></p>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T16:57:48Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:39:42Z.<br></footer></div>
 </div>
 </body>
 </html>

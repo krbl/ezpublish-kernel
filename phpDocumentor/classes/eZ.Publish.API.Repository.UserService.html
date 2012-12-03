@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -58,48 +59,55 @@
 <span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
 <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
 </div>
-<ul class="side-nav nav nav-list">
-<li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#assignUserToUserGroup" title="assignUserToUserGroup :: Assigns a new user group to the user"><span class="description">Assigns a new user group to the user</span><pre>assignUserToUserGroup()</pre></a></li>
-<li class="method public "><a href="#createUser" title="createUser :: Create a new user."><span class="description">Create a new user.</span><pre>createUser()</pre></a></li>
-<li class="method public "><a href="#createUserGroup" title="createUserGroup :: Creates a new user group using the data provided in the ContentCreateStruct parameter"><span class="description">Creates a new user group using the data provided in the ContentCreateStruct parameter</span><pre>createUserGroup()</pre></a></li>
-<li class="method public "><a href="#deleteUser" title="deleteUser :: This method deletes a user"><span class="description">This method deletes a user</span><pre>deleteUser()</pre></a></li>
-<li class="method public "><a href="#deleteUserGroup" title="deleteUserGroup :: Removes a user group"><span class="description">Removes a user group</span><pre>deleteUserGroup()</pre></a></li>
-<li class="method public "><a href="#loadAnonymousUser" title="loadAnonymousUser :: Loads anonymous user"><span class="description">Loads anonymous user</span><pre>loadAnonymousUser()</pre></a></li>
-<li class="method public "><a href="#loadSubUserGroups" title="loadSubUserGroups :: Loads the sub groups of a user group"><span class="description">Loads the sub groups of a user group</span><pre>loadSubUserGroups()</pre></a></li>
-<li class="method public "><a href="#loadUser" title="loadUser :: Loads a user"><span class="description">Loads a user</span><pre>loadUser()</pre></a></li>
-<li class="method public "><a href="#loadUserByCredentials" title="loadUserByCredentials :: Loads a user for the given login and password"><span class="description">Loads a user for the given login and password</span><pre>loadUserByCredentials()</pre></a></li>
-<li class="method public "><a href="#loadUserGroup" title="loadUserGroup :: Loads a user group for the given id"><span class="description">Loads a user group for the given id</span><pre>loadUserGroup()</pre></a></li>
-<li class="method public "><a href="#loadUserGroupsOfUser" title="loadUserGroupsOfUser :: Loads the user groups the user belongs to"><span class="description">Loads the user groups the user belongs to</span><pre>loadUserGroupsOfUser()</pre></a></li>
-<li class="method public "><a href="#loadUsersOfUserGroup" title="loadUsersOfUserGroup :: Loads the users of a user group"><span class="description">Loads the users of a user group</span><pre>loadUsersOfUserGroup()</pre></a></li>
-<li class="method public "><a href="#moveUserGroup" title="moveUserGroup :: Moves the user group to another parent"><span class="description">Moves the user group to another parent</span><pre>moveUserGroup()</pre></a></li>
-<li class="method public "><a href="#newUserCreateStruct" title="newUserCreateStruct :: Instantiate a user create class"><span class="description">Instantiate a user create class</span><pre>newUserCreateStruct()</pre></a></li>
-<li class="method public "><a href="#newUserGroupCreateStruct" title="newUserGroupCreateStruct :: Instantiate a user group create class"><span class="description">Instantiate a user group create class</span><pre>newUserGroupCreateStruct()</pre></a></li>
-<li class="method public "><a href="#newUserGroupUpdateStruct" title="newUserGroupUpdateStruct :: Instantiate a new user group update struct"><span class="description">Instantiate a new user group update struct</span><pre>newUserGroupUpdateStruct()</pre></a></li>
-<li class="method public "><a href="#newUserUpdateStruct" title="newUserUpdateStruct :: Instantiate a new user update struct"><span class="description">Instantiate a new user update struct</span><pre>newUserUpdateStruct()</pre></a></li>
-<li class="method public "><a href="#unAssignUserFromUserGroup" title="unAssignUserFromUserGroup :: Removes a user group from the user"><span class="description">Removes a user group from the user</span><pre>unAssignUserFromUserGroup()</pre></a></li>
-<li class="method public "><a href="#updateUser" title="updateUser :: Updates a user"><span class="description">Updates a user</span><pre>updateUser()</pre></a></li>
-<li class="method public "><a href="#updateUserGroup" title="updateUserGroup :: Updates the group profile with fields and meta data"><span class="description">Updates the group profile with fields and meta data</span><pre>updateUserGroup()</pre></a></li>
+<ul class="side-nav nav nav-list"><li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_assignUserToUserGroup" title="assignUserToUserGroup :: Assigns a new user group to the user"><span class="description">Assigns a new user group to the user</span><pre>assignUserToUserGroup()</pre></a></li>
+<li class="method public "><a href="#method_createUser" title="createUser :: Create a new user."><span class="description">Create a new user.</span><pre>createUser()</pre></a></li>
+<li class="method public "><a href="#method_createUserGroup" title="createUserGroup :: Creates a new user group using the data provided in the ContentCreateStruct parameter"><span class="description">Creates a new user group using the data provided in the ContentCreateStruct parameter</span><pre>createUserGroup()</pre></a></li>
+<li class="method public "><a href="#method_deleteUser" title="deleteUser :: This method deletes a user"><span class="description">This method deletes a user</span><pre>deleteUser()</pre></a></li>
+<li class="method public "><a href="#method_deleteUserGroup" title="deleteUserGroup :: Removes a user group"><span class="description">Removes a user group</span><pre>deleteUserGroup()</pre></a></li>
+<li class="method public "><a href="#method_loadAnonymousUser" title="loadAnonymousUser :: Loads anonymous user"><span class="description">Loads anonymous user</span><pre>loadAnonymousUser()</pre></a></li>
+<li class="method public "><a href="#method_loadSubUserGroups" title="loadSubUserGroups :: Loads the sub groups of a user group"><span class="description">Loads the sub groups of a user group</span><pre>loadSubUserGroups()</pre></a></li>
+<li class="method public "><a href="#method_loadUser" title="loadUser :: Loads a user"><span class="description">Loads a user</span><pre>loadUser()</pre></a></li>
+<li class="method public "><a href="#method_loadUserByCredentials" title="loadUserByCredentials :: Loads a user for the given login and password"><span class="description">Loads a user for the given login and password</span><pre>loadUserByCredentials()</pre></a></li>
+<li class="method public "><a href="#method_loadUserGroup" title="loadUserGroup :: Loads a user group for the given id"><span class="description">Loads a user group for the given id</span><pre>loadUserGroup()</pre></a></li>
+<li class="method public "><a href="#method_loadUserGroupsOfUser" title="loadUserGroupsOfUser :: Loads the user groups the user belongs to"><span class="description">Loads the user groups the user belongs to</span><pre>loadUserGroupsOfUser()</pre></a></li>
+<li class="method public "><a href="#method_loadUsersOfUserGroup" title="loadUsersOfUserGroup :: Loads the users of a user group"><span class="description">Loads the users of a user group</span><pre>loadUsersOfUserGroup()</pre></a></li>
+<li class="method public "><a href="#method_moveUserGroup" title="moveUserGroup :: Moves the user group to another parent"><span class="description">Moves the user group to another parent</span><pre>moveUserGroup()</pre></a></li>
+<li class="method public "><a href="#method_newUserCreateStruct" title="newUserCreateStruct :: Instantiate a user create class"><span class="description">Instantiate a user create class</span><pre>newUserCreateStruct()</pre></a></li>
+<li class="method public "><a href="#method_newUserGroupCreateStruct" title="newUserGroupCreateStruct :: Instantiate a user group create class"><span class="description">Instantiate a user group create class</span><pre>newUserGroupCreateStruct()</pre></a></li>
+<li class="method public "><a href="#method_newUserGroupUpdateStruct" title="newUserGroupUpdateStruct :: Instantiate a new user group update struct"><span class="description">Instantiate a new user group update struct</span><pre>newUserGroupUpdateStruct()</pre></a></li>
+<li class="method public "><a href="#method_newUserUpdateStruct" title="newUserUpdateStruct :: Instantiate a new user update struct"><span class="description">Instantiate a new user update struct</span><pre>newUserUpdateStruct()</pre></a></li>
+<li class="method public "><a href="#method_unAssignUserFromUserGroup" title="unAssignUserFromUserGroup :: Removes a user group from the user"><span class="description">Removes a user group from the user</span><pre>unAssignUserFromUserGroup()</pre></a></li>
+<li class="method public "><a href="#method_updateUser" title="updateUser :: Updates a user"><span class="description">Updates a user</span><pre>updateUser()</pre></a></li>
+<li class="method public "><a href="#method_updateUserGroup" title="updateUserGroup :: Updates the group profile with fields and meta data"><span class="description">Updates the group profile with fields and meta data</span><pre>updateUserGroup()</pre></a></li>
 </ul>
+</li></ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CAPI%5CRepository%5CUserService" id="\eZ\Publish\API\Repository\UserService"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\API\Repository\UserService"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.API.html">API</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.API.Repository.html">Repository</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.API.html">API</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.API.Repository.html">Repository</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.API.Repository.UserService.html">UserService</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.API.Repository.UserService.html" class="element interface">
+<div class="element interface">
 <p class="short_description">This service provides methods for managing users and user groups</p>
 <div class="details">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered">
 <tr>
 <th>example</th>
@@ -112,12 +120,12 @@
 </table>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="assignUserToUserGroup" id="assignUserToUserGroup"></a><div class="element clickable method public assignUserToUserGroup" data-toggle="collapse" data-target=".assignUserToUserGroup .collapse">
+<a id="method_assignUserToUserGroup"></a><div class="element clickable method public method_assignUserToUserGroup" data-toggle="collapse" data-target=".method_assignUserToUserGroup .collapse">
 <h2>Assigns a new user group to the user</h2>
 <pre>assignUserToUserGroup(\eZ\Publish\API\Repository\Values\User\User $user, \eZ\Publish\API\Repository\Values\User\UserGroup $userGroup) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If the user is already in the given user group this method does nothing.</p></p>
+<div class="long_description"><p>If the user is already in the given user group this method does nothing.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$user</h4>
@@ -134,12 +142,12 @@
 </tr></table>
 </div></div>
 </div>
-<a name="createUser" id="createUser"></a><div class="element clickable method public createUser" data-toggle="collapse" data-target=".createUser .collapse">
+<a id="method_createUser"></a><div class="element clickable method public method_createUser" data-toggle="collapse" data-target=".method_createUser .collapse">
 <h2>Create a new user.</h2>
-<pre>createUser(\eZ\Publish\API\Repository\Values\User\UserCreateStruct $userCreateStruct, \array $parentGroups) : <a href="../classes/eZ.Publish.API.Repository.Values.User.User.html">\eZ\Publish\API\Repository\Values\User\User</a></pre>
+<pre>createUser(\eZ\Publish\API\Repository\Values\User\UserCreateStruct $userCreateStruct, array $parentGroups) : <a href="../classes/eZ.Publish.API.Repository.Values.User.User.html">\eZ\Publish\API\Repository\Values\User\User</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>The created user is published by this method</p></p>
+<div class="long_description"><p>The created user is published by this method</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$userCreateStruct</h4>
@@ -160,25 +168,26 @@
 </tr>
 <tr>
 <th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.ContentValidationException.html">\eZ\Publish\API\Repository\Exceptions\ContentValidationException</a></code></th>
-<td>if a required field is missing or set to an empty value</td>
+<td>if a required field is missing or set  to an empty value</td>
 </tr>
 <tr>
 <th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
-<td>if a field value is not accepted by the field type if a user with provided login already exists</td>
+<td>if a field value is not accepted by the field type
+                                                                       if a user with provided login already exists</td>
 </tr>
 </table>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.User.User.html">\eZ\Publish\API\Repository\Values\User\User</a></code></div>
 </div></div>
 </div>
-<a name="createUserGroup" id="createUserGroup"></a><div class="element clickable method public createUserGroup" data-toggle="collapse" data-target=".createUserGroup .collapse">
+<a id="method_createUserGroup"></a><div class="element clickable method public method_createUserGroup" data-toggle="collapse" data-target=".method_createUserGroup .collapse">
 <h2>Creates a new user group using the data provided in the ContentCreateStruct parameter</h2>
 <pre>createUserGroup(\eZ\Publish\API\Repository\Values\User\UserGroupCreateStruct $userGroupCreateStruct, \eZ\Publish\API\Repository\Values\User\UserGroup $parentGroup) : <a href="../classes/eZ.Publish.API.Repository.Values.User.UserGroup.html">\eZ\Publish\API\Repository\Values\User\UserGroup</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>In 4.x in the content type parameter in the profile is ignored
+<div class="long_description"><p>In 4.x in the content type parameter in the profile is ignored
 - the content type is determined via configuration and can be set to null.
-The returned version is published.</p></p>
+The returned version is published.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$userGroupCreateStruct</h4>
@@ -210,12 +219,12 @@ The returned version is published.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.User.UserGroup.html">\eZ\Publish\API\Repository\Values\User\UserGroup</a></code></div>
 </div></div>
 </div>
-<a name="deleteUser" id="deleteUser"></a><div class="element clickable method public deleteUser" data-toggle="collapse" data-target=".deleteUser .collapse">
+<a id="method_deleteUser"></a><div class="element clickable method public method_deleteUser" data-toggle="collapse" data-target=".method_deleteUser .collapse">
 <h2>This method deletes a user</h2>
 <pre>deleteUser(\eZ\Publish\API\Repository\Values\User\User $user) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$user</h4>
@@ -228,12 +237,12 @@ The returned version is published.</p></p>
 </tr></table>
 </div></div>
 </div>
-<a name="deleteUserGroup" id="deleteUserGroup"></a><div class="element clickable method public deleteUserGroup" data-toggle="collapse" data-target=".deleteUserGroup .collapse">
+<a id="method_deleteUserGroup"></a><div class="element clickable method public method_deleteUserGroup" data-toggle="collapse" data-target=".method_deleteUserGroup .collapse">
 <h2>Removes a user group</h2>
 <pre>deleteUserGroup(\eZ\Publish\API\Repository\Values\User\UserGroup $userGroup) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>the users which are not assigned to other groups will be deleted.</p></p>
+<div class="long_description"><p>the users which are not assigned to other groups will be deleted.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$userGroup</h4>
@@ -246,12 +255,12 @@ The returned version is published.</p></p>
 </tr></table>
 </div></div>
 </div>
-<a name="loadAnonymousUser" id="loadAnonymousUser"></a><div class="element clickable method public loadAnonymousUser" data-toggle="collapse" data-target=".loadAnonymousUser .collapse">
+<a id="method_loadAnonymousUser"></a><div class="element clickable method public method_loadAnonymousUser" data-toggle="collapse" data-target=".method_loadAnonymousUser .collapse">
 <h2>Loads anonymous user</h2>
 <pre>loadAnonymousUser() : <a href="../classes/eZ.Publish.API.Repository.Values.User.User.html">\eZ\Publish\API\Repository\Values\User\User</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>uses</th>
 <td>\eZ\Publish\API\Repository\loadUser()</td>
@@ -260,12 +269,12 @@ The returned version is published.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.User.User.html">\eZ\Publish\API\Repository\Values\User\User</a></code></div>
 </div></div>
 </div>
-<a name="loadSubUserGroups" id="loadSubUserGroups"></a><div class="element clickable method public loadSubUserGroups" data-toggle="collapse" data-target=".loadSubUserGroups .collapse">
+<a id="method_loadSubUserGroups"></a><div class="element clickable method public method_loadSubUserGroups" data-toggle="collapse" data-target=".method_loadSubUserGroups .collapse">
 <h2>Loads the sub groups of a user group</h2>
 <pre>loadSubUserGroups(\eZ\Publish\API\Repository\Values\User\UserGroup $userGroup) : <a href="Publish.API.Repository.Values.User.UserGroup.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CUser%5CUserGroup">\eZ\Publish\API\Repository\Values\User\UserGroup[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$userGroup</h4>
@@ -280,12 +289,12 @@ The returned version is published.</p></p>
 <div class="subelement response"><code><a href="Publish.API.Repository.Values.User.UserGroup.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CUser%5CUserGroup">\eZ\Publish\API\Repository\Values\User\UserGroup[]</a></code></div>
 </div></div>
 </div>
-<a name="loadUser" id="loadUser"></a><div class="element clickable method public loadUser" data-toggle="collapse" data-target=".loadUser .collapse">
+<a id="method_loadUser"></a><div class="element clickable method public method_loadUser" data-toggle="collapse" data-target=".method_loadUser .collapse">
 <h2>Loads a user</h2>
 <pre>loadUser(int $userId) : <a href="../classes/eZ.Publish.API.Repository.Values.User.User.html">\eZ\Publish\API\Repository\Values\User\User</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$userId</h4>
@@ -300,12 +309,12 @@ The returned version is published.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.User.User.html">\eZ\Publish\API\Repository\Values\User\User</a></code></div>
 </div></div>
 </div>
-<a name="loadUserByCredentials" id="loadUserByCredentials"></a><div class="element clickable method public loadUserByCredentials" data-toggle="collapse" data-target=".loadUserByCredentials .collapse">
+<a id="method_loadUserByCredentials"></a><div class="element clickable method public method_loadUserByCredentials" data-toggle="collapse" data-target=".method_loadUserByCredentials .collapse">
 <h2>Loads a user for the given login and password</h2>
 <pre>loadUserByCredentials(string $login, string $password) : <a href="../classes/eZ.Publish.API.Repository.Values.User.User.html">\eZ\Publish\API\Repository\Values\User\User</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$login</h4>
@@ -323,12 +332,12 @@ The returned version is published.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.User.User.html">\eZ\Publish\API\Repository\Values\User\User</a></code></div>
 </div></div>
 </div>
-<a name="loadUserGroup" id="loadUserGroup"></a><div class="element clickable method public loadUserGroup" data-toggle="collapse" data-target=".loadUserGroup .collapse">
+<a id="method_loadUserGroup"></a><div class="element clickable method public method_loadUserGroup" data-toggle="collapse" data-target=".method_loadUserGroup .collapse">
 <h2>Loads a user group for the given id</h2>
 <pre>loadUserGroup(int $id) : <a href="../classes/eZ.Publish.API.Repository.Values.User.UserGroup.html">\eZ\Publish\API\Repository\Values\User\UserGroup</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$id</h4>
@@ -349,12 +358,12 @@ The returned version is published.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.User.UserGroup.html">\eZ\Publish\API\Repository\Values\User\UserGroup</a></code></div>
 </div></div>
 </div>
-<a name="loadUserGroupsOfUser" id="loadUserGroupsOfUser"></a><div class="element clickable method public loadUserGroupsOfUser" data-toggle="collapse" data-target=".loadUserGroupsOfUser .collapse">
+<a id="method_loadUserGroupsOfUser"></a><div class="element clickable method public method_loadUserGroupsOfUser" data-toggle="collapse" data-target=".method_loadUserGroupsOfUser .collapse">
 <h2>Loads the user groups the user belongs to</h2>
 <pre>loadUserGroupsOfUser(\eZ\Publish\API\Repository\Values\User\User $user) : <a href="Publish.API.Repository.Values.User.UserGroup.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CUser%5CUserGroup">\eZ\Publish\API\Repository\Values\User\UserGroup[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$user</h4>
@@ -369,12 +378,12 @@ The returned version is published.</p></p>
 <div class="subelement response"><code><a href="Publish.API.Repository.Values.User.UserGroup.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CUser%5CUserGroup">\eZ\Publish\API\Repository\Values\User\UserGroup[]</a></code></div>
 </div></div>
 </div>
-<a name="loadUsersOfUserGroup" id="loadUsersOfUserGroup"></a><div class="element clickable method public loadUsersOfUserGroup" data-toggle="collapse" data-target=".loadUsersOfUserGroup .collapse">
+<a id="method_loadUsersOfUserGroup"></a><div class="element clickable method public method_loadUsersOfUserGroup" data-toggle="collapse" data-target=".method_loadUsersOfUserGroup .collapse">
 <h2>Loads the users of a user group</h2>
 <pre>loadUsersOfUserGroup(\eZ\Publish\API\Repository\Values\User\UserGroup $userGroup, int $offset, int $limit) : <a href="Publish.API.Repository.Values.User.User.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CUser%5CUser">\eZ\Publish\API\Repository\Values\User\User[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$userGroup</h4>
@@ -397,12 +406,12 @@ The returned version is published.</p></p>
 <div class="subelement response"><code><a href="Publish.API.Repository.Values.User.User.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CUser%5CUser">\eZ\Publish\API\Repository\Values\User\User[]</a></code></div>
 </div></div>
 </div>
-<a name="moveUserGroup" id="moveUserGroup"></a><div class="element clickable method public moveUserGroup" data-toggle="collapse" data-target=".moveUserGroup .collapse">
+<a id="method_moveUserGroup"></a><div class="element clickable method public method_moveUserGroup" data-toggle="collapse" data-target=".method_moveUserGroup .collapse">
 <h2>Moves the user group to another parent</h2>
 <pre>moveUserGroup(\eZ\Publish\API\Repository\Values\User\UserGroup $userGroup, \eZ\Publish\API\Repository\Values\User\UserGroup $newParent) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$userGroup</h4>
@@ -419,12 +428,12 @@ The returned version is published.</p></p>
 </tr></table>
 </div></div>
 </div>
-<a name="newUserCreateStruct" id="newUserCreateStruct"></a><div class="element clickable method public newUserCreateStruct" data-toggle="collapse" data-target=".newUserCreateStruct .collapse">
+<a id="method_newUserCreateStruct"></a><div class="element clickable method public method_newUserCreateStruct" data-toggle="collapse" data-target=".method_newUserCreateStruct .collapse">
 <h2>Instantiate a user create class</h2>
 <pre>newUserCreateStruct(string $login, string $email, string $password, string $mainLanguageCode, <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a> $contentType) : <a href="../classes/eZ.Publish.API.Repository.Values.User.UserCreateStruct.html">\eZ\Publish\API\Repository\Values\User\UserCreateStruct</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$login</h4>
@@ -445,49 +454,49 @@ The returned version is published.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.User.UserCreateStruct.html">\eZ\Publish\API\Repository\Values\User\UserCreateStruct</a></code></div>
 </div></div>
 </div>
-<a name="newUserGroupCreateStruct" id="newUserGroupCreateStruct"></a><div class="element clickable method public newUserGroupCreateStruct" data-toggle="collapse" data-target=".newUserGroupCreateStruct .collapse">
+<a id="method_newUserGroupCreateStruct"></a><div class="element clickable method public method_newUserGroupCreateStruct" data-toggle="collapse" data-target=".method_newUserGroupCreateStruct .collapse">
 <h2>Instantiate a user group create class</h2>
 <pre>newUserGroupCreateStruct(string $mainLanguageCode, null | <a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a> $contentType) : <a href="../classes/eZ.Publish.API.Repository.Values.User.UserGroupCreateStruct.html">\eZ\Publish\API\Repository\Values\User\UserGroupCreateStruct</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$mainLanguageCode</h4>
 <code>string</code><p>The main language for the underlying content object</p></div>
 <div class="subelement argument">
 <h4>$contentType</h4>
-<code>null<a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></code><p>5.x the content type for the underlying content object. In 4.x it is ignored and taken from the configuration</p></div>
+<code>null</code><code><a href="../classes/eZ.Publish.API.Repository.Values.ContentType.ContentType.html">\eZ\Publish\API\Repository\Values\ContentType\ContentType</a></code><p>5.x the content type for the underlying content object. In 4.x it is ignored and taken from the configuration</p></div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.User.UserGroupCreateStruct.html">\eZ\Publish\API\Repository\Values\User\UserGroupCreateStruct</a></code></div>
 </div></div>
 </div>
-<a name="newUserGroupUpdateStruct" id="newUserGroupUpdateStruct"></a><div class="element clickable method public newUserGroupUpdateStruct" data-toggle="collapse" data-target=".newUserGroupUpdateStruct .collapse">
+<a id="method_newUserGroupUpdateStruct"></a><div class="element clickable method public method_newUserGroupUpdateStruct" data-toggle="collapse" data-target=".method_newUserGroupUpdateStruct .collapse">
 <h2>Instantiate a new user group update struct</h2>
 <pre>newUserGroupUpdateStruct() : <a href="../classes/eZ.Publish.API.Repository.Values.User.UserGroupUpdateStruct.html">\eZ\Publish\API\Repository\Values\User\UserGroupUpdateStruct</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.User.UserGroupUpdateStruct.html">\eZ\Publish\API\Repository\Values\User\UserGroupUpdateStruct</a></code></div>
 </div></div>
 </div>
-<a name="newUserUpdateStruct" id="newUserUpdateStruct"></a><div class="element clickable method public newUserUpdateStruct" data-toggle="collapse" data-target=".newUserUpdateStruct .collapse">
+<a id="method_newUserUpdateStruct"></a><div class="element clickable method public method_newUserUpdateStruct" data-toggle="collapse" data-target=".method_newUserUpdateStruct .collapse">
 <h2>Instantiate a new user update struct</h2>
 <pre>newUserUpdateStruct() : <a href="../classes/eZ.Publish.API.Repository.Values.User.UserUpdateStruct.html">\eZ\Publish\API\Repository\Values\User\UserUpdateStruct</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.User.UserUpdateStruct.html">\eZ\Publish\API\Repository\Values\User\UserUpdateStruct</a></code></div>
 </div></div>
 </div>
-<a name="unAssignUserFromUserGroup" id="unAssignUserFromUserGroup"></a><div class="element clickable method public unAssignUserFromUserGroup" data-toggle="collapse" data-target=".unAssignUserFromUserGroup .collapse">
+<a id="method_unAssignUserFromUserGroup"></a><div class="element clickable method public method_unAssignUserFromUserGroup" data-toggle="collapse" data-target=".method_unAssignUserFromUserGroup .collapse">
 <h2>Removes a user group from the user</h2>
 <pre>unAssignUserFromUserGroup(\eZ\Publish\API\Repository\Values\User\User $user, \eZ\Publish\API\Repository\Values\User\UserGroup $userGroup) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$user</h4>
@@ -510,13 +519,13 @@ The returned version is published.</p></p>
 </table>
 </div></div>
 </div>
-<a name="updateUser" id="updateUser"></a><div class="element clickable method public updateUser" data-toggle="collapse" data-target=".updateUser .collapse">
+<a id="method_updateUser"></a><div class="element clickable method public method_updateUser" data-toggle="collapse" data-target=".method_updateUser .collapse">
 <h2>Updates a user</h2>
 <pre>updateUser(\eZ\Publish\API\Repository\Values\User\User $user, \eZ\Publish\API\Repository\Values\User\UserUpdateStruct $userUpdateStruct) : <a href="../classes/eZ.Publish.API.Repository.Values.User.User.html">\eZ\Publish\API\Repository\Values\User\User</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>4.x: If the versionUpdateStruct is set in the user update structure, this method internally creates a content draft, updates ts with the provided data
-and publishes the draft. If a draft is explicitly required, the user group can be updated via the content service methods.</p></p>
+<div class="long_description"><p>4.x: If the versionUpdateStruct is set in the user update structure, this method internally creates a content draft, updates ts with the provided data
+and publishes the draft. If a draft is explicitly required, the user group can be updated via the content service methods.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$user</h4>
@@ -549,13 +558,13 @@ and publishes the draft. If a draft is explicitly required, the user group can b
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.User.User.html">\eZ\Publish\API\Repository\Values\User\User</a></code></div>
 </div></div>
 </div>
-<a name="updateUserGroup" id="updateUserGroup"></a><div class="element clickable method public updateUserGroup" data-toggle="collapse" data-target=".updateUserGroup .collapse">
+<a id="method_updateUserGroup"></a><div class="element clickable method public method_updateUserGroup" data-toggle="collapse" data-target=".method_updateUserGroup .collapse">
 <h2>Updates the group profile with fields and meta data</h2>
 <pre>updateUserGroup(\eZ\Publish\API\Repository\Values\User\UserGroup $userGroup, \eZ\Publish\API\Repository\Values\User\UserGroupUpdateStruct $userGroupUpdateStruct) : <a href="../classes/eZ.Publish.API.Repository.Values.User.UserGroup.html">\eZ\Publish\API\Repository\Values\User\UserGroup</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>4.x: If the versionUpdateStruct is set in $userGroupUpdateStruct, this method internally creates a content draft, updates ts with the provided data
-and publishes the draft. If a draft is explicitly required, the user group can be updated via the content service methods.</p></p>
+<div class="long_description"><p>4.x: If the versionUpdateStruct is set in $userGroupUpdateStruct, this method internally creates a content draft, updates ts with the provided data
+and publishes the draft. If a draft is explicitly required, the user group can be updated via the content service methods.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$userGroup</h4>
@@ -594,8 +603,8 @@ and publishes the draft. If a draft is explicitly required, the user group can b
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T16:56:35Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:38:42Z.<br></footer></div>
 </div>
 </body>
 </html>

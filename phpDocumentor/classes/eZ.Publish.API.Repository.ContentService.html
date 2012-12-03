@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -58,58 +59,65 @@
 <span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
 <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
 </div>
-<ul class="side-nav nav nav-list">
-<li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#addRelation" title="addRelation :: Adds a relation of type common."><span class="description">Adds a relation of type common.</span><pre>addRelation()</pre></a></li>
-<li class="method public "><a href="#addTranslationInfo" title="addTranslationInfo :: Adds translation information to the content object"><span class="description">Adds translation information to the content object</span><pre>addTranslationInfo()</pre></a></li>
-<li class="method public "><a href="#copyContent" title="copyContent :: Copies the content to a new location."><span class="description">Copies the content to a new location.</span><pre>copyContent()</pre></a></li>
-<li class="method public "><a href="#createContent" title="createContent :: Creates a new content draft assigned to the authenticated user."><span class="description">Creates a new content draft assigned to the authenticated user.</span><pre>createContent()</pre></a></li>
-<li class="method public "><a href="#createContentDraft" title="createContentDraft :: Creates a draft from a published or archived version."><span class="description">Creates a draft from a published or archived version.</span><pre>createContentDraft()</pre></a></li>
-<li class="method public "><a href="#deleteContent" title="deleteContent :: Deletes a content object including all its versions and locations including their subtrees."><span class="description">Deletes a content object including all its versions and locations including their subtrees.</span><pre>deleteContent()</pre></a></li>
-<li class="method public "><a href="#deleteRelation" title="deleteRelation :: Removes a relation of type COMMON from a draft."><span class="description">Removes a relation of type COMMON from a draft.</span><pre>deleteRelation()</pre></a></li>
-<li class="method public "><a href="#deleteVersion" title="deleteVersion :: removes the given version"><span class="description">removes the given version</span><pre>deleteVersion()</pre></a></li>
-<li class="method public "><a href="#loadContent" title="loadContent :: Loads content in a version of the given content object."><span class="description">Loads content in a version of the given content object.</span><pre>loadContent()</pre></a></li>
-<li class="method public "><a href="#loadContentByContentInfo" title="loadContentByContentInfo :: Loads content in a version for the given content info object."><span class="description">Loads content in a version for the given content info object.</span><pre>loadContentByContentInfo()</pre></a></li>
-<li class="method public "><a href="#loadContentByRemoteId" title="loadContentByRemoteId :: Loads content in a version for the content object reference by the given remote id."><span class="description">Loads content in a version for the content object reference by the given remote id.</span><pre>loadContentByRemoteId()</pre></a></li>
-<li class="method public "><a href="#loadContentByVersionInfo" title="loadContentByVersionInfo :: Loads content in the version given by version info."><span class="description">Loads content in the version given by version info.</span><pre>loadContentByVersionInfo()</pre></a></li>
-<li class="method public "><a href="#loadContentDrafts" title="loadContentDrafts :: Loads drafts for a user."><span class="description">Loads drafts for a user.</span><pre>loadContentDrafts()</pre></a></li>
-<li class="method public "><a href="#loadContentInfo" title="loadContentInfo :: Loads a content info object."><span class="description">Loads a content info object.</span><pre>loadContentInfo()</pre></a></li>
-<li class="method public "><a href="#loadContentInfoByRemoteId" title="loadContentInfoByRemoteId :: Loads a content info object for the given remoteId."><span class="description">Loads a content info object for the given remoteId.</span><pre>loadContentInfoByRemoteId()</pre></a></li>
-<li class="method public "><a href="#loadRelations" title="loadRelations :: Loads all outgoing relations for the given version"><span class="description">Loads all outgoing relations for the given version</span><pre>loadRelations()</pre></a></li>
-<li class="method public "><a href="#loadReverseRelations" title="loadReverseRelations :: Loads all incoming relations for a content object."><span class="description">Loads all incoming relations for a content object.</span><pre>loadReverseRelations()</pre></a></li>
-<li class="method public "><a href="#loadTranslationInfos" title="loadTranslationInfos :: lists the translations done on this content object"><span class="description">lists the translations done on this content object</span><pre>loadTranslationInfos()</pre></a></li>
-<li class="method public "><a href="#loadVersionInfo" title="loadVersionInfo :: Loads a version info of the given content object."><span class="description">Loads a version info of the given content object.</span><pre>loadVersionInfo()</pre></a></li>
-<li class="method public "><a href="#loadVersionInfoById" title="loadVersionInfoById :: Loads a version info of the given content object id."><span class="description">Loads a version info of the given content object id.</span><pre>loadVersionInfoById()</pre></a></li>
-<li class="method public "><a href="#loadVersions" title="loadVersions :: Loads all versions for the given content"><span class="description">Loads all versions for the given content</span><pre>loadVersions()</pre></a></li>
-<li class="method public "><a href="#newContentCreateStruct" title="newContentCreateStruct :: Instantiates a new content create struct object"><span class="description">Instantiates a new content create struct object</span><pre>newContentCreateStruct()</pre></a></li>
-<li class="method public "><a href="#newContentMetadataUpdateStruct" title="newContentMetadataUpdateStruct :: Instantiates a new content meta data update struct"><span class="description">Instantiates a new content meta data update struct</span><pre>newContentMetadataUpdateStruct()</pre></a></li>
-<li class="method public "><a href="#newContentUpdateStruct" title="newContentUpdateStruct :: Instantiates a new content update struct"><span class="description">Instantiates a new content update struct</span><pre>newContentUpdateStruct()</pre></a></li>
-<li class="method public "><a href="#newTranslationInfo" title="newTranslationInfo :: Instantiates a new TranslationInfo object"><span class="description">Instantiates a new TranslationInfo object</span><pre>newTranslationInfo()</pre></a></li>
-<li class="method public "><a href="#newTranslationValues" title="newTranslationValues :: Instantiates a Translation object"><span class="description">Instantiates a Translation object</span><pre>newTranslationValues()</pre></a></li>
-<li class="method public "><a href="#publishVersion" title="publishVersion :: Publishes a content version"><span class="description">Publishes a content version</span><pre>publishVersion()</pre></a></li>
-<li class="method public "><a href="#translateVersion" title="translateVersion :: Translate a version"><span class="description">Translate a version</span><pre>translateVersion()</pre></a></li>
-<li class="method public "><a href="#updateContent" title="updateContent :: Updates the fields of a draft."><span class="description">Updates the fields of a draft.</span><pre>updateContent()</pre></a></li>
-<li class="method public "><a href="#updateContentMetadata" title="updateContentMetadata :: Updates the metadata."><span class="description">Updates the metadata.</span><pre>updateContentMetadata()</pre></a></li>
+<ul class="side-nav nav nav-list"><li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_addRelation" title="addRelation :: Adds a relation of type common."><span class="description">Adds a relation of type common.</span><pre>addRelation()</pre></a></li>
+<li class="method public "><a href="#method_addTranslationInfo" title="addTranslationInfo :: Adds translation information to the content object"><span class="description">Adds translation information to the content object</span><pre>addTranslationInfo()</pre></a></li>
+<li class="method public "><a href="#method_copyContent" title="copyContent :: Copies the content to a new location."><span class="description">Copies the content to a new location.</span><pre>copyContent()</pre></a></li>
+<li class="method public "><a href="#method_createContent" title="createContent :: Creates a new content draft assigned to the authenticated user."><span class="description">Creates a new content draft assigned to the authenticated user.</span><pre>createContent()</pre></a></li>
+<li class="method public "><a href="#method_createContentDraft" title="createContentDraft :: Creates a draft from a published or archived version."><span class="description">Creates a draft from a published or archived version.</span><pre>createContentDraft()</pre></a></li>
+<li class="method public "><a href="#method_deleteContent" title="deleteContent :: Deletes a content object including all its versions and locations including their subtrees."><span class="description">Deletes a content object including all its versions and locations including their subtrees.</span><pre>deleteContent()</pre></a></li>
+<li class="method public "><a href="#method_deleteRelation" title="deleteRelation :: Removes a relation of type COMMON from a draft."><span class="description">Removes a relation of type COMMON from a draft.</span><pre>deleteRelation()</pre></a></li>
+<li class="method public "><a href="#method_deleteVersion" title="deleteVersion :: removes the given version"><span class="description">removes the given version</span><pre>deleteVersion()</pre></a></li>
+<li class="method public "><a href="#method_loadContent" title="loadContent :: Loads content in a version of the given content object."><span class="description">Loads content in a version of the given content object.</span><pre>loadContent()</pre></a></li>
+<li class="method public "><a href="#method_loadContentByContentInfo" title="loadContentByContentInfo :: Loads content in a version for the given content info object."><span class="description">Loads content in a version for the given content info object.</span><pre>loadContentByContentInfo()</pre></a></li>
+<li class="method public "><a href="#method_loadContentByRemoteId" title="loadContentByRemoteId :: Loads content in a version for the content object reference by the given remote id."><span class="description">Loads content in a version for the content object reference by the given remote id.</span><pre>loadContentByRemoteId()</pre></a></li>
+<li class="method public "><a href="#method_loadContentByVersionInfo" title="loadContentByVersionInfo :: Loads content in the version given by version info."><span class="description">Loads content in the version given by version info.</span><pre>loadContentByVersionInfo()</pre></a></li>
+<li class="method public "><a href="#method_loadContentDrafts" title="loadContentDrafts :: Loads drafts for a user."><span class="description">Loads drafts for a user.</span><pre>loadContentDrafts()</pre></a></li>
+<li class="method public "><a href="#method_loadContentInfo" title="loadContentInfo :: Loads a content info object."><span class="description">Loads a content info object.</span><pre>loadContentInfo()</pre></a></li>
+<li class="method public "><a href="#method_loadContentInfoByRemoteId" title="loadContentInfoByRemoteId :: Loads a content info object for the given remoteId."><span class="description">Loads a content info object for the given remoteId.</span><pre>loadContentInfoByRemoteId()</pre></a></li>
+<li class="method public "><a href="#method_loadRelations" title="loadRelations :: Loads all outgoing relations for the given version"><span class="description">Loads all outgoing relations for the given version</span><pre>loadRelations()</pre></a></li>
+<li class="method public "><a href="#method_loadReverseRelations" title="loadReverseRelations :: Loads all incoming relations for a content object."><span class="description">Loads all incoming relations for a content object.</span><pre>loadReverseRelations()</pre></a></li>
+<li class="method public "><a href="#method_loadTranslationInfos" title="loadTranslationInfos :: lists the translations done on this content object"><span class="description">lists the translations done on this content object</span><pre>loadTranslationInfos()</pre></a></li>
+<li class="method public "><a href="#method_loadVersionInfo" title="loadVersionInfo :: Loads a version info of the given content object."><span class="description">Loads a version info of the given content object.</span><pre>loadVersionInfo()</pre></a></li>
+<li class="method public "><a href="#method_loadVersionInfoById" title="loadVersionInfoById :: Loads a version info of the given content object id."><span class="description">Loads a version info of the given content object id.</span><pre>loadVersionInfoById()</pre></a></li>
+<li class="method public "><a href="#method_loadVersions" title="loadVersions :: Loads all versions for the given content"><span class="description">Loads all versions for the given content</span><pre>loadVersions()</pre></a></li>
+<li class="method public "><a href="#method_newContentCreateStruct" title="newContentCreateStruct :: Instantiates a new content create struct object"><span class="description">Instantiates a new content create struct object</span><pre>newContentCreateStruct()</pre></a></li>
+<li class="method public "><a href="#method_newContentMetadataUpdateStruct" title="newContentMetadataUpdateStruct :: Instantiates a new content meta data update struct"><span class="description">Instantiates a new content meta data update struct</span><pre>newContentMetadataUpdateStruct()</pre></a></li>
+<li class="method public "><a href="#method_newContentUpdateStruct" title="newContentUpdateStruct :: Instantiates a new content update struct"><span class="description">Instantiates a new content update struct</span><pre>newContentUpdateStruct()</pre></a></li>
+<li class="method public "><a href="#method_newTranslationInfo" title="newTranslationInfo :: Instantiates a new TranslationInfo object"><span class="description">Instantiates a new TranslationInfo object</span><pre>newTranslationInfo()</pre></a></li>
+<li class="method public "><a href="#method_newTranslationValues" title="newTranslationValues :: Instantiates a Translation object"><span class="description">Instantiates a Translation object</span><pre>newTranslationValues()</pre></a></li>
+<li class="method public "><a href="#method_publishVersion" title="publishVersion :: Publishes a content version"><span class="description">Publishes a content version</span><pre>publishVersion()</pre></a></li>
+<li class="method public "><a href="#method_translateVersion" title="translateVersion :: Translate a version"><span class="description">Translate a version</span><pre>translateVersion()</pre></a></li>
+<li class="method public "><a href="#method_updateContent" title="updateContent :: Updates the fields of a draft."><span class="description">Updates the fields of a draft.</span><pre>updateContent()</pre></a></li>
+<li class="method public "><a href="#method_updateContentMetadata" title="updateContentMetadata :: Updates the metadata."><span class="description">Updates the metadata.</span><pre>updateContentMetadata()</pre></a></li>
 </ul>
+</li></ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CAPI%5CRepository%5CContentService" id="\eZ\Publish\API\Repository\ContentService"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\API\Repository\ContentService"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.API.html">API</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.API.Repository.html">Repository</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.API.html">API</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.API.Repository.html">Repository</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.API.Repository.ContentService.html">ContentService</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.API.Repository.ContentService.html" class="element interface">
+<div class="element interface">
 <p class="short_description">This class provides service methods for managing content</p>
 <div class="details">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered">
 <tr>
 <th>example</th>
@@ -122,13 +130,13 @@
 </table>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="addRelation" id="addRelation"></a><div class="element clickable method public addRelation" data-toggle="collapse" data-target=".addRelation .collapse">
+<a id="method_addRelation"></a><div class="element clickable method public method_addRelation" data-toggle="collapse" data-target=".method_addRelation .collapse">
 <h2>Adds a relation of type common.</h2>
 <pre>addRelation(\eZ\Publish\API\Repository\Values\Content\VersionInfo $sourceVersion, \eZ\Publish\API\Repository\Values\Content\ContentInfo $destinationContent) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Relation.html">\eZ\Publish\API\Repository\Values\Content\Relation</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>The source of the relation is the content and version
-referenced by $versionInfo.</p></p>
+<div class="long_description"><p>The source of the relation is the content and version
+referenced by $versionInfo.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$sourceVersion</h4>
@@ -153,13 +161,13 @@ referenced by $versionInfo.</p></p>
 <code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Relation.html">\eZ\Publish\API\Repository\Values\Content\Relation</a></code>the newly created relation</div>
 </div></div>
 </div>
-<a name="addTranslationInfo" id="addTranslationInfo"></a><div class="element clickable method public addTranslationInfo" data-toggle="collapse" data-target=".addTranslationInfo .collapse">
+<a id="method_addTranslationInfo"></a><div class="element clickable method public method_addTranslationInfo" data-toggle="collapse" data-target=".method_addTranslationInfo .collapse">
 <h2>Adds translation information to the content object</h2>
 <pre>addTranslationInfo(\eZ\Publish\API\Repository\Values\Content\TranslationInfo $translationInfo) </pre>
 <div class="labels"></div>
 <div class="row collapse">
 <div class="span4">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered">
 <tr>
 <th>example</th>
@@ -187,13 +195,13 @@ referenced by $versionInfo.</p></p>
 </div>
 </div>
 </div>
-<a name="copyContent" id="copyContent"></a><div class="element clickable method public copyContent" data-toggle="collapse" data-target=".copyContent .collapse">
+<a id="method_copyContent"></a><div class="element clickable method public method_copyContent" data-toggle="collapse" data-target=".method_copyContent .collapse">
 <h2>Copies the content to a new location.</h2>
 <pre>copyContent(\eZ\Publish\API\Repository\Values\Content\ContentInfo $contentInfo, \eZ\Publish\API\Repository\Values\Content\LocationCreateStruct $destinationLocationCreateStruct, \eZ\Publish\API\Repository\Values\Content\VersionInfo $versionInfo) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If no version is given,
-all versions are copied, otherwise only the given version.</p></p>
+<div class="long_description"><p>If no version is given,
+all versions are copied, otherwise only the given version.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentInfo</h4>
@@ -215,17 +223,17 @@ all versions are copied, otherwise only the given version.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></code></div>
 </div></div>
 </div>
-<a name="createContent" id="createContent"></a><div class="element clickable method public createContent" data-toggle="collapse" data-target=".createContent .collapse">
+<a id="method_createContent"></a><div class="element clickable method public method_createContent" data-toggle="collapse" data-target=".method_createContent .collapse">
 <h2>Creates a new content draft assigned to the authenticated user.</h2>
-<pre>createContent(\eZ\Publish\API\Repository\Values\Content\ContentCreateStruct $contentCreateStruct, \array $locationCreateStructs) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></pre>
+<pre>createContent(\eZ\Publish\API\Repository\Values\Content\ContentCreateStruct $contentCreateStruct, array $locationCreateStructs) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If a different userId is given in $contentCreateStruct it is assigned to the given user
+<div class="long_description"><p>If a different userId is given in $contentCreateStruct it is assigned to the given user
 but this required special rights for the authenticated user
 (this is useful for content staging where the transfer process does not
 have to authenticate with the user which created the content object in the source server).
 The user has to publish the draft if it should be visible.
-In 4.x at least one location has to be provided in the location creation array.</p></p>
+In 4.x at least one location has to be provided in the location creation array.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentCreateStruct</h4>
@@ -243,7 +251,9 @@ In 4.x at least one location has to be provided in the location creation array.<
 </tr>
 <tr>
 <th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
-<td>if there is a provided remoteId which exists in the system or there is no location provided (4.x) or multiple locations are under the same parent or if the a field value is not accepted by the field type</td>
+<td>if there is a provided remoteId which exists in the system
+                                                                       or there is no location provided (4.x) or multiple locations
+                                                                       are under the same parent or if the a field value is not accepted by the field type</td>
 </tr>
 <tr>
 <th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.ContentFieldValidationException.html">\eZ\Publish\API\Repository\Exceptions\ContentFieldValidationException</a></code></th>
@@ -259,14 +269,14 @@ In 4.x at least one location has to be provided in the location creation array.<
 <code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></code>- the newly created content draft</div>
 </div></div>
 </div>
-<a name="createContentDraft" id="createContentDraft"></a><div class="element clickable method public createContentDraft" data-toggle="collapse" data-target=".createContentDraft .collapse">
+<a id="method_createContentDraft"></a><div class="element clickable method public method_createContentDraft" data-toggle="collapse" data-target=".method_createContentDraft .collapse">
 <h2>Creates a draft from a published or archived version.</h2>
 <pre>createContentDraft(\eZ\Publish\API\Repository\Values\Content\ContentInfo $contentInfo, \eZ\Publish\API\Repository\Values\Content\VersionInfo $versionInfo, \eZ\Publish\API\Repository\Values\User\User $user) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If no version is given, the current published version is used.
+<div class="long_description"><p>If no version is given, the current published version is used.
 4.x: The draft is created with the initialLanguage code of the source version or if not present with the main language.
-It can be changed on updating the version.</p></p>
+It can be changed on updating the version.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentInfo</h4>
@@ -290,12 +300,12 @@ It can be changed on updating the version.</p></p>
 <code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></code>- the newly created content draft</div>
 </div></div>
 </div>
-<a name="deleteContent" id="deleteContent"></a><div class="element clickable method public deleteContent" data-toggle="collapse" data-target=".deleteContent .collapse">
+<a id="method_deleteContent"></a><div class="element clickable method public method_deleteContent" data-toggle="collapse" data-target=".method_deleteContent .collapse">
 <h2>Deletes a content object including all its versions and locations including their subtrees.</h2>
 <pre>deleteContent(\eZ\Publish\API\Repository\Values\Content\ContentInfo $contentInfo) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentInfo</h4>
@@ -308,12 +318,12 @@ It can be changed on updating the version.</p></p>
 </tr></table>
 </div></div>
 </div>
-<a name="deleteRelation" id="deleteRelation"></a><div class="element clickable method public deleteRelation" data-toggle="collapse" data-target=".deleteRelation .collapse">
+<a id="method_deleteRelation"></a><div class="element clickable method public method_deleteRelation" data-toggle="collapse" data-target=".method_deleteRelation .collapse">
 <h2>Removes a relation of type COMMON from a draft.</h2>
 <pre>deleteRelation(\eZ\Publish\API\Repository\Values\Content\VersionInfo $sourceVersion, \eZ\Publish\API\Repository\Values\Content\ContentInfo $destinationContent) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$sourceVersion</h4>
@@ -340,12 +350,12 @@ It can be changed on updating the version.</p></p>
 </table>
 </div></div>
 </div>
-<a name="deleteVersion" id="deleteVersion"></a><div class="element clickable method public deleteVersion" data-toggle="collapse" data-target=".deleteVersion .collapse">
+<a id="method_deleteVersion"></a><div class="element clickable method public method_deleteVersion" data-toggle="collapse" data-target=".method_deleteVersion .collapse">
 <h2>removes the given version</h2>
 <pre>deleteVersion(\eZ\Publish\API\Repository\Values\Content\VersionInfo $versionInfo) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -364,12 +374,12 @@ It can be changed on updating the version.</p></p>
 </table>
 </div></div>
 </div>
-<a name="loadContent" id="loadContent"></a><div class="element clickable method public loadContent" data-toggle="collapse" data-target=".loadContent .collapse">
+<a id="method_loadContent"></a><div class="element clickable method public method_loadContent" data-toggle="collapse" data-target=".method_loadContent .collapse">
 <h2>Loads content in a version of the given content object.</h2>
-<pre>loadContent(int $contentId, \array $languages, int $versionNo) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></pre>
+<pre>loadContent(int $contentId, array $languages, int $versionNo) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If no version number is given, the method returns the current version</p></p>
+<div class="long_description"><p>If no version number is given, the method returns the current version</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -396,12 +406,12 @@ It can be changed on updating the version.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></code></div>
 </div></div>
 </div>
-<a name="loadContentByContentInfo" id="loadContentByContentInfo"></a><div class="element clickable method public loadContentByContentInfo" data-toggle="collapse" data-target=".loadContentByContentInfo .collapse">
+<a id="method_loadContentByContentInfo"></a><div class="element clickable method public method_loadContentByContentInfo" data-toggle="collapse" data-target=".method_loadContentByContentInfo .collapse">
 <h2>Loads content in a version for the given content info object.</h2>
-<pre>loadContentByContentInfo(\eZ\Publish\API\Repository\Values\Content\ContentInfo $contentInfo, \array $languages, int $versionNo) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></pre>
+<pre>loadContentByContentInfo(\eZ\Publish\API\Repository\Values\Content\ContentInfo $contentInfo, array $languages, int $versionNo) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If no version number is given, the method returns the current version</p></p>
+<div class="long_description"><p>If no version number is given, the method returns the current version</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentInfo</h4>
@@ -428,12 +438,12 @@ It can be changed on updating the version.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></code></div>
 </div></div>
 </div>
-<a name="loadContentByRemoteId" id="loadContentByRemoteId"></a><div class="element clickable method public loadContentByRemoteId" data-toggle="collapse" data-target=".loadContentByRemoteId .collapse">
+<a id="method_loadContentByRemoteId"></a><div class="element clickable method public method_loadContentByRemoteId" data-toggle="collapse" data-target=".method_loadContentByRemoteId .collapse">
 <h2>Loads content in a version for the content object reference by the given remote id.</h2>
-<pre>loadContentByRemoteId(string $remoteId, \array $languages, int $versionNo) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></pre>
+<pre>loadContentByRemoteId(string $remoteId, array $languages, int $versionNo) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If no version is given, the method returns the current version</p></p>
+<div class="long_description"><p>If no version is given, the method returns the current version</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$remoteId</h4>
@@ -460,12 +470,12 @@ It can be changed on updating the version.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></code></div>
 </div></div>
 </div>
-<a name="loadContentByVersionInfo" id="loadContentByVersionInfo"></a><div class="element clickable method public loadContentByVersionInfo" data-toggle="collapse" data-target=".loadContentByVersionInfo .collapse">
+<a id="method_loadContentByVersionInfo"></a><div class="element clickable method public method_loadContentByVersionInfo" data-toggle="collapse" data-target=".method_loadContentByVersionInfo .collapse">
 <h2>Loads content in the version given by version info.</h2>
-<pre>loadContentByVersionInfo(\eZ\Publish\API\Repository\Values\Content\VersionInfo $versionInfo, \array $languages) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></pre>
+<pre>loadContentByVersionInfo(\eZ\Publish\API\Repository\Values\Content\VersionInfo $versionInfo, array $languages) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -483,12 +493,12 @@ It can be changed on updating the version.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></code></div>
 </div></div>
 </div>
-<a name="loadContentDrafts" id="loadContentDrafts"></a><div class="element clickable method public loadContentDrafts" data-toggle="collapse" data-target=".loadContentDrafts .collapse">
+<a id="method_loadContentDrafts"></a><div class="element clickable method public method_loadContentDrafts" data-toggle="collapse" data-target=".method_loadContentDrafts .collapse">
 <h2>Loads drafts for a user.</h2>
 <pre>loadContentDrafts(\eZ\Publish\API\Repository\Values\User\User $user) : <a href="Publish.API.Repository.Values.Content.VersionInfo.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CVersionInfo">\eZ\Publish\API\Repository\Values\Content\VersionInfo[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If no user is given the drafts for the authenticated user a returned</p></p>
+<div class="long_description"><p>If no user is given the drafts for the authenticated user a returned</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$user</h4>
@@ -504,12 +514,12 @@ It can be changed on updating the version.</p></p>
 <code><a href="Publish.API.Repository.Values.Content.VersionInfo.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CVersionInfo">\eZ\Publish\API\Repository\Values\Content\VersionInfo[]</a></code>the drafts ({@link VersionInfo}) owned by the given user</div>
 </div></div>
 </div>
-<a name="loadContentInfo" id="loadContentInfo"></a><div class="element clickable method public loadContentInfo" data-toggle="collapse" data-target=".loadContentInfo .collapse">
+<a id="method_loadContentInfo"></a><div class="element clickable method public method_loadContentInfo" data-toggle="collapse" data-target=".method_loadContentInfo .collapse">
 <h2>Loads a content info object.</h2>
 <pre>loadContentInfo(int $contentId) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.ContentInfo.html">\eZ\Publish\API\Repository\Values\Content\ContentInfo</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>To load fields use loadContent</p></p>
+<div class="long_description"><p>To load fields use loadContent</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -530,12 +540,12 @@ It can be changed on updating the version.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.ContentInfo.html">\eZ\Publish\API\Repository\Values\Content\ContentInfo</a></code></div>
 </div></div>
 </div>
-<a name="loadContentInfoByRemoteId" id="loadContentInfoByRemoteId"></a><div class="element clickable method public loadContentInfoByRemoteId" data-toggle="collapse" data-target=".loadContentInfoByRemoteId .collapse">
+<a id="method_loadContentInfoByRemoteId"></a><div class="element clickable method public method_loadContentInfoByRemoteId" data-toggle="collapse" data-target=".method_loadContentInfoByRemoteId .collapse">
 <h2>Loads a content info object for the given remoteId.</h2>
 <pre>loadContentInfoByRemoteId(string $remoteId) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.ContentInfo.html">\eZ\Publish\API\Repository\Values\Content\ContentInfo</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>To load fields use loadContent</p></p>
+<div class="long_description"><p>To load fields use loadContent</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$remoteId</h4>
@@ -556,12 +566,12 @@ It can be changed on updating the version.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.ContentInfo.html">\eZ\Publish\API\Repository\Values\Content\ContentInfo</a></code></div>
 </div></div>
 </div>
-<a name="loadRelations" id="loadRelations"></a><div class="element clickable method public loadRelations" data-toggle="collapse" data-target=".loadRelations .collapse">
+<a id="method_loadRelations"></a><div class="element clickable method public method_loadRelations" data-toggle="collapse" data-target=".method_loadRelations .collapse">
 <h2>Loads all outgoing relations for the given version</h2>
 <pre>loadRelations(\eZ\Publish\API\Repository\Values\Content\VersionInfo $versionInfo) : <a href="Publish.API.Repository.Values.Content.Relation.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CRelation">\eZ\Publish\API\Repository\Values\Content\Relation[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -576,12 +586,12 @@ It can be changed on updating the version.</p></p>
 <div class="subelement response"><code><a href="Publish.API.Repository.Values.Content.Relation.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CRelation">\eZ\Publish\API\Repository\Values\Content\Relation[]</a></code></div>
 </div></div>
 </div>
-<a name="loadReverseRelations" id="loadReverseRelations"></a><div class="element clickable method public loadReverseRelations" data-toggle="collapse" data-target=".loadReverseRelations .collapse">
+<a id="method_loadReverseRelations"></a><div class="element clickable method public method_loadReverseRelations" data-toggle="collapse" data-target=".method_loadReverseRelations .collapse">
 <h2>Loads all incoming relations for a content object.</h2>
 <pre>loadReverseRelations(\eZ\Publish\API\Repository\Values\Content\ContentInfo $contentInfo) : <a href="Publish.API.Repository.Values.Content.Relation.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CRelation">\eZ\Publish\API\Repository\Values\Content\Relation[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>The relations come only from published versions of the source content objects</p></p>
+<div class="long_description"><p>The relations come only from published versions of the source content objects</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentInfo</h4>
@@ -596,12 +606,12 @@ It can be changed on updating the version.</p></p>
 <div class="subelement response"><code><a href="Publish.API.Repository.Values.Content.Relation.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CRelation">\eZ\Publish\API\Repository\Values\Content\Relation[]</a></code></div>
 </div></div>
 </div>
-<a name="loadTranslationInfos" id="loadTranslationInfos"></a><div class="element clickable method public loadTranslationInfos" data-toggle="collapse" data-target=".loadTranslationInfos .collapse">
+<a id="method_loadTranslationInfos"></a><div class="element clickable method public method_loadTranslationInfos" data-toggle="collapse" data-target=".method_loadTranslationInfos .collapse">
 <h2>lists the translations done on this content object</h2>
-<pre>loadTranslationInfos(\eZ\Publish\API\Repository\Values\Content\ContentInfo $contentInfo, \array $filter) : <a href="Publish.API.Repository.Values.Content.TranslationInfo.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CTranslationInfo">\eZ\Publish\API\Repository\Values\Content\TranslationInfo[]</a></pre>
+<pre>loadTranslationInfos(\eZ\Publish\API\Repository\Values\Content\ContentInfo $contentInfo, array $filter) : <a href="Publish.API.Repository.Values.Content.TranslationInfo.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CTranslationInfo">\eZ\Publish\API\Repository\Values\Content\TranslationInfo[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered">
 <tr>
 <th>todo</th>
@@ -630,12 +640,12 @@ It can be changed on updating the version.</p></p>
 <div class="subelement response"><code><a href="Publish.API.Repository.Values.Content.TranslationInfo.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CTranslationInfo">\eZ\Publish\API\Repository\Values\Content\TranslationInfo[]</a></code></div>
 </div></div>
 </div>
-<a name="loadVersionInfo" id="loadVersionInfo"></a><div class="element clickable method public loadVersionInfo" data-toggle="collapse" data-target=".loadVersionInfo .collapse">
+<a id="method_loadVersionInfo"></a><div class="element clickable method public method_loadVersionInfo" data-toggle="collapse" data-target=".method_loadVersionInfo .collapse">
 <h2>Loads a version info of the given content object.</h2>
 <pre>loadVersionInfo(\eZ\Publish\API\Repository\Values\Content\ContentInfo $contentInfo, int $versionNo) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.VersionInfo.html">\eZ\Publish\API\Repository\Values\Content\VersionInfo</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If no version number is given, the method returns the current version</p></p>
+<div class="long_description"><p>If no version number is given, the method returns the current version</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentInfo</h4>
@@ -659,12 +669,12 @@ It can be changed on updating the version.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.VersionInfo.html">\eZ\Publish\API\Repository\Values\Content\VersionInfo</a></code></div>
 </div></div>
 </div>
-<a name="loadVersionInfoById" id="loadVersionInfoById"></a><div class="element clickable method public loadVersionInfoById" data-toggle="collapse" data-target=".loadVersionInfoById .collapse">
+<a id="method_loadVersionInfoById"></a><div class="element clickable method public method_loadVersionInfoById" data-toggle="collapse" data-target=".method_loadVersionInfoById .collapse">
 <h2>Loads a version info of the given content object id.</h2>
 <pre>loadVersionInfoById(int $contentId, int $versionNo) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.VersionInfo.html">\eZ\Publish\API\Repository\Values\Content\VersionInfo</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If no version number is given, the method returns the current version</p></p>
+<div class="long_description"><p>If no version number is given, the method returns the current version</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -688,12 +698,12 @@ It can be changed on updating the version.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.VersionInfo.html">\eZ\Publish\API\Repository\Values\Content\VersionInfo</a></code></div>
 </div></div>
 </div>
-<a name="loadVersions" id="loadVersions"></a><div class="element clickable method public loadVersions" data-toggle="collapse" data-target=".loadVersions .collapse">
+<a id="method_loadVersions"></a><div class="element clickable method public method_loadVersions" data-toggle="collapse" data-target=".method_loadVersions .collapse">
 <h2>Loads all versions for the given content</h2>
 <pre>loadVersions(\eZ\Publish\API\Repository\Values\Content\ContentInfo $contentInfo) : <a href="Publish.API.Repository.Values.Content.VersionInfo.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CVersionInfo">\eZ\Publish\API\Repository\Values\Content\VersionInfo[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentInfo</h4>
@@ -709,12 +719,12 @@ It can be changed on updating the version.</p></p>
 <code><a href="Publish.API.Repository.Values.Content.VersionInfo.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CVersionInfo">\eZ\Publish\API\Repository\Values\Content\VersionInfo[]</a></code>an array of {@link \eZ\Publish\API\Repository\Values\Content\VersionInfo} sorted by creation date</div>
 </div></div>
 </div>
-<a name="newContentCreateStruct" id="newContentCreateStruct"></a><div class="element clickable method public newContentCreateStruct" data-toggle="collapse" data-target=".newContentCreateStruct .collapse">
+<a id="method_newContentCreateStruct"></a><div class="element clickable method public method_newContentCreateStruct" data-toggle="collapse" data-target=".method_newContentCreateStruct .collapse">
 <h2>Instantiates a new content create struct object</h2>
 <pre>newContentCreateStruct(\eZ\Publish\API\Repository\Values\ContentType\ContentType $contentType, string $mainLanguageCode) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.ContentCreateStruct.html">\eZ\Publish\API\Repository\Values\Content\ContentCreateStruct</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentType</h4>
@@ -728,52 +738,52 @@ It can be changed on updating the version.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.ContentCreateStruct.html">\eZ\Publish\API\Repository\Values\Content\ContentCreateStruct</a></code></div>
 </div></div>
 </div>
-<a name="newContentMetadataUpdateStruct" id="newContentMetadataUpdateStruct"></a><div class="element clickable method public newContentMetadataUpdateStruct" data-toggle="collapse" data-target=".newContentMetadataUpdateStruct .collapse">
+<a id="method_newContentMetadataUpdateStruct"></a><div class="element clickable method public method_newContentMetadataUpdateStruct" data-toggle="collapse" data-target=".method_newContentMetadataUpdateStruct .collapse">
 <h2>Instantiates a new content meta data update struct</h2>
 <pre>newContentMetadataUpdateStruct() : <a href="../classes/eZ.Publish.API.Repository.Values.Content.ContentMetadataUpdateStruct.html">\eZ\Publish\API\Repository\Values\Content\ContentMetadataUpdateStruct</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.ContentMetadataUpdateStruct.html">\eZ\Publish\API\Repository\Values\Content\ContentMetadataUpdateStruct</a></code></div>
 </div></div>
 </div>
-<a name="newContentUpdateStruct" id="newContentUpdateStruct"></a><div class="element clickable method public newContentUpdateStruct" data-toggle="collapse" data-target=".newContentUpdateStruct .collapse">
+<a id="method_newContentUpdateStruct"></a><div class="element clickable method public method_newContentUpdateStruct" data-toggle="collapse" data-target=".method_newContentUpdateStruct .collapse">
 <h2>Instantiates a new content update struct</h2>
 <pre>newContentUpdateStruct() : <a href="../classes/eZ.Publish.API.Repository.Values.Content.ContentUpdateStruct.html">\eZ\Publish\API\Repository\Values\Content\ContentUpdateStruct</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.ContentUpdateStruct.html">\eZ\Publish\API\Repository\Values\Content\ContentUpdateStruct</a></code></div>
 </div></div>
 </div>
-<a name="newTranslationInfo" id="newTranslationInfo"></a><div class="element clickable method public newTranslationInfo" data-toggle="collapse" data-target=".newTranslationInfo .collapse">
+<a id="method_newTranslationInfo"></a><div class="element clickable method public method_newTranslationInfo" data-toggle="collapse" data-target=".method_newTranslationInfo .collapse">
 <h2>Instantiates a new TranslationInfo object</h2>
 <pre>newTranslationInfo() : <a href="../classes/eZ.Publish.API.Repository.Values.Content.TranslationInfo.html">\eZ\Publish\API\Repository\Values\Content\TranslationInfo</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.TranslationInfo.html">\eZ\Publish\API\Repository\Values\Content\TranslationInfo</a></code></div>
 </div></div>
 </div>
-<a name="newTranslationValues" id="newTranslationValues"></a><div class="element clickable method public newTranslationValues" data-toggle="collapse" data-target=".newTranslationValues .collapse">
+<a id="method_newTranslationValues"></a><div class="element clickable method public method_newTranslationValues" data-toggle="collapse" data-target=".method_newTranslationValues .collapse">
 <h2>Instantiates a Translation object</h2>
 <pre>newTranslationValues() : <a href="../classes/eZ.Publish.API.Repository.Values.Content.TranslationValues.html">\eZ\Publish\API\Repository\Values\Content\TranslationValues</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.TranslationValues.html">\eZ\Publish\API\Repository\Values\Content\TranslationValues</a></code></div>
 </div></div>
 </div>
-<a name="publishVersion" id="publishVersion"></a><div class="element clickable method public publishVersion" data-toggle="collapse" data-target=".publishVersion .collapse">
+<a id="method_publishVersion"></a><div class="element clickable method public method_publishVersion" data-toggle="collapse" data-target=".method_publishVersion .collapse">
 <h2>Publishes a content version</h2>
 <pre>publishVersion(\eZ\Publish\API\Repository\Values\Content\VersionInfo $versionInfo) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -794,13 +804,13 @@ It can be changed on updating the version.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></code></div>
 </div></div>
 </div>
-<a name="translateVersion" id="translateVersion"></a><div class="element clickable method public translateVersion" data-toggle="collapse" data-target=".translateVersion .collapse">
+<a id="method_translateVersion"></a><div class="element clickable method public method_translateVersion" data-toggle="collapse" data-target=".method_translateVersion .collapse">
 <h2>Translate a version</h2>
 <pre>translateVersion(\eZ\Publish\API\Repository\Values\Content\TranslationInfo $translationInfo, \eZ\Publish\API\Repository\Values\Content\TranslationValues $translationValues, \eZ\Publish\API\Repository\Values\User\User $user) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></pre>
 <div class="labels"></div>
 <div class="row collapse">
 <div class="span4">
-<p class="long_description"><p>updates the destination version given in $translationInfo with the provided translated fields in $translationValues</p></p>
+<div class="long_description"><p>updates the destination version given in $translationInfo with the provided translated fields in $translationValues</p></div>
 <table class="table table-bordered">
 <tr>
 <th>example</th>
@@ -852,12 +862,12 @@ It can be changed on updating the version.</p></p>
 </div>
 </div>
 </div>
-<a name="updateContent" id="updateContent"></a><div class="element clickable method public updateContent" data-toggle="collapse" data-target=".updateContent .collapse">
+<a id="method_updateContent"></a><div class="element clickable method public method_updateContent" data-toggle="collapse" data-target=".method_updateContent .collapse">
 <h2>Updates the fields of a draft.</h2>
 <pre>updateContent(\eZ\Publish\API\Repository\Values\Content\VersionInfo $versionInfo, \eZ\Publish\API\Repository\Values\Content\ContentUpdateStruct $contentUpdateStruct) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -895,12 +905,12 @@ It can be changed on updating the version.</p></p>
 <code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></code>the content draft with the updated fields</div>
 </div></div>
 </div>
-<a name="updateContentMetadata" id="updateContentMetadata"></a><div class="element clickable method public updateContentMetadata" data-toggle="collapse" data-target=".updateContentMetadata .collapse">
+<a id="method_updateContentMetadata"></a><div class="element clickable method public method_updateContentMetadata" data-toggle="collapse" data-target=".method_updateContentMetadata .collapse">
 <h2>Updates the metadata.</h2>
 <pre>updateContentMetadata(\eZ\Publish\API\Repository\Values\Content\ContentInfo $contentInfo, \eZ\Publish\API\Repository\Values\Content\ContentMetadataUpdateStruct $contentMetadataUpdateStruct) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>(see <a href="ContentMetadataUpdateStruct">ContentMetadataUpdateStruct</a>) of a content object - to update fields use updateContent</p></p>
+<div class="long_description"><p>(see <a href="ContentMetadataUpdateStruct">ContentMetadataUpdateStruct</a>) of a content object - to update fields use updateContent</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentInfo</h4>
@@ -932,8 +942,8 @@ It can be changed on updating the version.</p></p>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T16:56:38Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:38:44Z.<br></footer></div>
 </div>
 </body>
 </html>

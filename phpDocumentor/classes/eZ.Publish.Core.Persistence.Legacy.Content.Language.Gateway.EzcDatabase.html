@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,53 +61,76 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#__construct" title="__construct :: Creates a new EzcDatabase Section Gateway"><span class="description">Creates a new EzcDatabase Section Gateway</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#canDeleteLanguage" title="canDeleteLanguage :: Check whether a language may be deleted"><span class="description">Check whether a language may be deleted</span><pre>canDeleteLanguage()</pre></a></li>
-<li class="method public "><a href="#deleteLanguage" title="deleteLanguage :: Deletes the language with $id"><span class="description">Deletes the language with $id</span><pre>deleteLanguage()</pre></a></li>
-<li class="method public "><a href="#insertLanguage" title="insertLanguage :: Inserts the given $language"><span class="description">Inserts the given $language</span><pre>insertLanguage()</pre></a></li>
-<li class="method public "><a href="#loadAllLanguagesData" title="loadAllLanguagesData :: Loads the data for all languages"><span class="description">Loads the data for all languages</span><pre>loadAllLanguagesData()</pre></a></li>
-<li class="method public "><a href="#loadLanguageData" title="loadLanguageData :: Loads data for the Language with $id"><span class="description">Loads data for the Language with $id</span><pre>loadLanguageData()</pre></a></li>
-<li class="method public "><a href="#loadLanguageDataByLanguageCode" title="loadLanguageDataByLanguageCode :: Loads data for the Language with Language Code (eg: eng-GB)"><span class="description">Loads data for the Language with Language Code (eg: eng-GB)</span><pre>loadLanguageDataByLanguageCode()</pre></a></li>
-<li class="method public "><a href="#updateLanguage" title="updateLanguage :: Updates the data of the given $language"><span class="description">Updates the data of the given $language</span><pre>updateLanguage()</pre></a></li>
-<li class="nav-header protected">» Protected</li>
-<li class="method protected "><a href="#createFindQuery" title="createFindQuery :: Creates a Language find query"><span class="description">Creates a Language find query</span><pre>createFindQuery()</pre></a></li>
-<li class="method protected "><a href="#setCommonLanguageColumns" title="setCommonLanguageColumns :: Sets columns in $query from $language"><span class="description">Sets columns in $query from $language</span><pre>setCommonLanguageColumns()</pre></a></li>
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Creates a new EzcDatabase Section Gateway"><span class="description">Creates a new EzcDatabase Section Gateway</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_canDeleteLanguage" title="canDeleteLanguage :: Check whether a language may be deleted"><span class="description">Check whether a language may be deleted</span><pre>canDeleteLanguage()</pre></a></li>
+<li class="method public "><a href="#method_deleteLanguage" title="deleteLanguage :: Deletes the language with $id"><span class="description">Deletes the language with $id</span><pre>deleteLanguage()</pre></a></li>
+<li class="method public "><a href="#method_insertLanguage" title="insertLanguage :: Inserts the given $language"><span class="description">Inserts the given $language</span><pre>insertLanguage()</pre></a></li>
+<li class="method public "><a href="#method_loadAllLanguagesData" title="loadAllLanguagesData :: Loads the data for all languages"><span class="description">Loads the data for all languages</span><pre>loadAllLanguagesData()</pre></a></li>
+<li class="method public "><a href="#method_loadLanguageData" title="loadLanguageData :: Loads data for the Language with $id"><span class="description">Loads data for the Language with $id</span><pre>loadLanguageData()</pre></a></li>
+<li class="method public "><a href="#method_loadLanguageDataByLanguageCode" title="loadLanguageDataByLanguageCode :: Loads data for the Language with Language Code (eg: eng-GB)"><span class="description">Loads data for the Language with Language Code (eg: eng-GB)</span><pre>loadLanguageDataByLanguageCode()</pre></a></li>
+<li class="method public "><a href="#method_updateLanguage" title="updateLanguage :: Updates the data of the given $language"><span class="description">Updates the data of the given $language</span><pre>updateLanguage()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method_createFindQuery" title="createFindQuery :: Creates a Language find query"><span class="description">Creates a Language find query</span><pre>createFindQuery()</pre></a></li>
+<li class="method protected "><a href="#method_setCommonLanguageColumns" title="setCommonLanguageColumns :: Sets columns in $query from $language"><span class="description">Sets columns in $query from $language</span><pre>setCommonLanguageColumns()</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected "><a href="#%24dbHandler" title="$dbHandler :: Database handler"><span class="description">Database handler</span><pre>$dbHandler</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="property protected "><a href="#property_dbHandler" title="$dbHandler :: Database handler"><span class="description"></span><pre>$dbHandler</pre></a></li></ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CPersistence%5CLegacy%5CContent%5CLanguage%5CGateway%5CEzcDatabase" id="\eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\EzcDatabase"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\EzcDatabase"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.Language.html">Language</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.Language.Gateway.html">Gateway</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.Language.html">Language</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.Language.Gateway.html">Gateway</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Language.Gateway.EzcDatabase.html">EzcDatabase</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Language.Gateway.EzcDatabase.html" class="element class">
+<div class="element class">
 <p class="short_description">ezcDatabase based Language Gateway</p>
 <div class="details">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
 <h2>Creates a new EzcDatabase Section Gateway</h2>
 <pre>__construct(\eZ\Publish\Core\Persistence\Legacy\EzcDbHandler $dbHandler) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$dbHandler</h4>
@@ -114,12 +138,12 @@
 </div>
 </div></div>
 </div>
-<a name="canDeleteLanguage" id="canDeleteLanguage"></a><div class="element clickable method public canDeleteLanguage" data-toggle="collapse" data-target=".canDeleteLanguage .collapse">
+<a id="method_canDeleteLanguage"></a><div class="element clickable method public method_canDeleteLanguage" data-toggle="collapse" data-target=".method_canDeleteLanguage .collapse">
 <h2>Check whether a language may be deleted</h2>
 <pre>canDeleteLanguage(int $id) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$id</h4>
@@ -129,12 +153,12 @@
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="deleteLanguage" id="deleteLanguage"></a><div class="element clickable method public deleteLanguage" data-toggle="collapse" data-target=".deleteLanguage .collapse">
+<a id="method_deleteLanguage"></a><div class="element clickable method public method_deleteLanguage" data-toggle="collapse" data-target=".method_deleteLanguage .collapse">
 <h2>Deletes the language with $id</h2>
 <pre>deleteLanguage(int $id) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$id</h4>
@@ -142,12 +166,12 @@
 </div>
 </div></div>
 </div>
-<a name="insertLanguage" id="insertLanguage"></a><div class="element clickable method public insertLanguage" data-toggle="collapse" data-target=".insertLanguage .collapse">
+<a id="method_insertLanguage"></a><div class="element clickable method public method_insertLanguage" data-toggle="collapse" data-target=".method_insertLanguage .collapse">
 <h2>Inserts the given $language</h2>
 <pre>insertLanguage(\eZ\Publish\SPI\Persistence\Content\Language $language) : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$language</h4>
@@ -158,22 +182,22 @@
 <code>int</code>ID of the new language</div>
 </div></div>
 </div>
-<a name="loadAllLanguagesData" id="loadAllLanguagesData"></a><div class="element clickable method public loadAllLanguagesData" data-toggle="collapse" data-target=".loadAllLanguagesData .collapse">
+<a id="method_loadAllLanguagesData"></a><div class="element clickable method public method_loadAllLanguagesData" data-toggle="collapse" data-target=".method_loadAllLanguagesData .collapse">
 <h2>Loads the data for all languages</h2>
 <pre>loadAllLanguagesData() : \eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\string[][]</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>\eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\string[][]</code></div>
 </div></div>
 </div>
-<a name="loadLanguageData" id="loadLanguageData"></a><div class="element clickable method public loadLanguageData" data-toggle="collapse" data-target=".loadLanguageData .collapse">
+<a id="method_loadLanguageData"></a><div class="element clickable method public method_loadLanguageData" data-toggle="collapse" data-target=".method_loadLanguageData .collapse">
 <h2>Loads data for the Language with $id</h2>
 <pre>loadLanguageData(int $id) : \eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\string[][]</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$id</h4>
@@ -183,12 +207,12 @@
 <div class="subelement response"><code>\eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\string[][]</code></div>
 </div></div>
 </div>
-<a name="loadLanguageDataByLanguageCode" id="loadLanguageDataByLanguageCode"></a><div class="element clickable method public loadLanguageDataByLanguageCode" data-toggle="collapse" data-target=".loadLanguageDataByLanguageCode .collapse">
+<a id="method_loadLanguageDataByLanguageCode"></a><div class="element clickable method public method_loadLanguageDataByLanguageCode" data-toggle="collapse" data-target=".method_loadLanguageDataByLanguageCode .collapse">
 <h2>Loads data for the Language with Language Code (eg: eng-GB)</h2>
 <pre>loadLanguageDataByLanguageCode(string $languageCode) : \eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\string[][]</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$languageCode</h4>
@@ -198,12 +222,12 @@
 <div class="subelement response"><code>\eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\string[][]</code></div>
 </div></div>
 </div>
-<a name="updateLanguage" id="updateLanguage"></a><div class="element clickable method public updateLanguage" data-toggle="collapse" data-target=".updateLanguage .collapse">
+<a id="method_updateLanguage"></a><div class="element clickable method public method_updateLanguage" data-toggle="collapse" data-target=".method_updateLanguage .collapse">
 <h2>Updates the data of the given $language</h2>
 <pre>updateLanguage(\eZ\Publish\SPI\Persistence\Content\Language $language) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$language</h4>
@@ -211,22 +235,22 @@
 </div>
 </div></div>
 </div>
-<a name="createFindQuery" id="createFindQuery"></a><div class="element clickable method protected createFindQuery" data-toggle="collapse" data-target=".createFindQuery .collapse">
+<a id="method_createFindQuery"></a><div class="element clickable method protected method_createFindQuery" data-toggle="collapse" data-target=".method_createFindQuery .collapse">
 <h2>Creates a Language find query</h2>
 <pre>createFindQuery() : \ezcQuerySelect</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>\ezcQuerySelect</code></div>
 </div></div>
 </div>
-<a name="setCommonLanguageColumns" id="setCommonLanguageColumns"></a><div class="element clickable method protected setCommonLanguageColumns" data-toggle="collapse" data-target=".setCommonLanguageColumns .collapse">
+<a id="method_setCommonLanguageColumns"></a><div class="element clickable method protected method_setCommonLanguageColumns" data-toggle="collapse" data-target=".method_setCommonLanguageColumns .collapse">
 <h2>Sets columns in $query from $language</h2>
 <pre>setCommonLanguageColumns(\ezcQuery $query, \eZ\Publish\SPI\Persistence\Content\Language $language) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$query</h4>
@@ -240,12 +264,12 @@
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24dbHandler" id="$dbHandler"> </a><div class="element clickable property protected $dbHandler" data-toggle="collapse" data-target=".$dbHandler .collapse">
-<h2>Database handler</h2>
+<a id="property_dbHandler"> </a><div class="element clickable property protected property_dbHandler" data-toggle="collapse" data-target=".property_dbHandler .collapse">
+<h2></h2>
 <pre>$dbHandler </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>param</th>
 <td></td>
@@ -258,8 +282,8 @@
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T17:00:38Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:42:02Z.<br></footer></div>
 </div>
 </body>
 </html>

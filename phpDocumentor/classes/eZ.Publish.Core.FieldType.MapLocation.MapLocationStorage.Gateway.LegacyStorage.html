@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,56 +61,77 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#deleteFieldData" title="deleteFieldData :: Deletes the data for all given $fieldIds"><span class="description">Deletes the data for all given $fieldIds</span><pre>deleteFieldData()</pre></a></li>
-<li class="method public "><a href="#getFieldData" title="getFieldData :: Sets the loaded field data into $field-&gt;externalData."><span class="description">Sets the loaded field data into $field-&gt;externalData.</span><pre>getFieldData()</pre></a></li>
-<li class="method public "><a href="#setConnection" title="setConnection :: Set database handler for this gateway"><span class="description">Set database handler for this gateway</span><pre>setConnection()</pre></a></li>
-<li class="method public "><a href="#storeFieldData" title="storeFieldData :: Stores the data stored in the given $field"><span class="description">Stores the data stored in the given $field</span><pre>storeFieldData()</pre></a></li>
-<li class="nav-header protected">» Protected</li>
-<li class="method protected "><a href="#getConnection" title="getConnection :: Returns the active connection"><span class="description">Returns the active connection</span><pre>getConnection()</pre></a></li>
-<li class="method protected "><a href="#hasFieldData" title="hasFieldData :: Returns if field data exists for $fieldId"><span class="description">Returns if field data exists for $fieldId</span><pre>hasFieldData()</pre></a></li>
-<li class="method protected "><a href="#loadFieldData" title="loadFieldData :: Returns the data for the given $fieldId"><span class="description">Returns the data for the given $fieldId</span><pre>loadFieldData()</pre></a></li>
-<li class="method protected "><a href="#storeNewFieldData" title="storeNewFieldData :: Stores new field data"><span class="description">Stores new field data</span><pre>storeNewFieldData()</pre></a></li>
-<li class="method protected "><a href="#updateFieldData" title="updateFieldData :: Performs an update on the field data"><span class="description">Performs an update on the field data</span><pre>updateFieldData()</pre></a></li>
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_deleteFieldData" title="deleteFieldData :: Deletes the data for all given $fieldIds"><span class="description">Deletes the data for all given $fieldIds</span><pre>deleteFieldData()</pre></a></li>
+<li class="method public "><a href="#method_getFieldData" title="getFieldData :: Sets the loaded field data into $field-&gt;externalData."><span class="description">Sets the loaded field data into $field-&gt;externalData.</span><pre>getFieldData()</pre></a></li>
+<li class="method public "><a href="#method_setConnection" title="setConnection :: Set database handler for this gateway"><span class="description">Set database handler for this gateway</span><pre>setConnection()</pre></a></li>
+<li class="method public "><a href="#method_storeFieldData" title="storeFieldData :: Stores the data stored in the given $field"><span class="description">Stores the data stored in the given $field</span><pre>storeFieldData()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method_getConnection" title="getConnection :: Returns the active connection"><span class="description">Returns the active connection</span><pre>getConnection()</pre></a></li>
+<li class="method protected "><a href="#method_hasFieldData" title="hasFieldData :: Returns if field data exists for $fieldId"><span class="description">Returns if field data exists for $fieldId</span><pre>hasFieldData()</pre></a></li>
+<li class="method protected "><a href="#method_loadFieldData" title="loadFieldData :: Returns the data for the given $fieldId"><span class="description">Returns the data for the given $fieldId</span><pre>loadFieldData()</pre></a></li>
+<li class="method protected "><a href="#method_storeNewFieldData" title="storeNewFieldData :: Stores new field data"><span class="description">Stores new field data</span><pre>storeNewFieldData()</pre></a></li>
+<li class="method protected "><a href="#method_updateFieldData" title="updateFieldData :: Performs an update on the field data"><span class="description">Performs an update on the field data</span><pre>updateFieldData()</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected "><a href="#%24dbHandler" title="$dbHandler :: Connection"><span class="description">Connection</span><pre>$dbHandler</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="property protected "><a href="#property_dbHandler" title="$dbHandler :: Connection"><span class="description"></span><pre>$dbHandler</pre></a></li></ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CFieldType%5CMapLocation%5CMapLocationStorage%5CGateway%5CLegacyStorage" id="\eZ\Publish\Core\FieldType\MapLocation\MapLocationStorage\Gateway\LegacyStorage"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\FieldType\MapLocation\MapLocationStorage\Gateway\LegacyStorage"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.FieldType.html">FieldType</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.FieldType.MapLocation.html">MapLocation</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.FieldType.MapLocation.MapLocationStorage.html">MapLocationStorage</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.FieldType.MapLocation.MapLocationStorage.Gateway.html">Gateway</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.FieldType.html">FieldType</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.FieldType.MapLocation.html">MapLocation</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.FieldType.MapLocation.MapLocationStorage.html">MapLocationStorage</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.FieldType.MapLocation.MapLocationStorage.Gateway.html">Gateway</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.FieldType.MapLocation.MapLocationStorage.Gateway.LegacyStorage.html">LegacyStorage</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.FieldType.MapLocation.MapLocationStorage.Gateway.LegacyStorage.html" class="element class">
+<div class="element class">
 <p class="short_description">Abstract base class for storage gateways</p>
 <div class="details">
-<p class="long_description"><p>This base class must be extended by storage gateways to be used with a
+<div class="long_description"><p>This base class must be extended by storage gateways to be used with a
 <a href="eZ\Publish\Core\FieldType\GatewayBasedStorage">eZ\Publish\Core\FieldType\GatewayBasedStorage</a> based storage
 implementation.</p>
 
 <p>The <a href="setConnection()">setConnection()</a> method is called by the GatewayBasedStorage to
-set the connection from the current persistence context.</p></p>
+set the connection from the current persistence context.</p></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="deleteFieldData" id="deleteFieldData"></a><div class="element clickable method public deleteFieldData" data-toggle="collapse" data-target=".deleteFieldData .collapse">
+<a id="method_deleteFieldData"></a><div class="element clickable method public method_deleteFieldData" data-toggle="collapse" data-target=".method_deleteFieldData .collapse">
 <h2>Deletes the data for all given $fieldIds</h2>
-<pre>deleteFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \array $fieldIds) : void</pre>
+<pre>deleteFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, array $fieldIds) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -121,12 +143,12 @@ set the connection from the current persistence context.</p></p>
 </div>
 </div></div>
 </div>
-<a name="getFieldData" id="getFieldData"></a><div class="element clickable method public getFieldData" data-toggle="collapse" data-target=".getFieldData .collapse">
+<a id="method_getFieldData"></a><div class="element clickable method public method_getFieldData" data-toggle="collapse" data-target=".method_getFieldData .collapse">
 <h2>Sets the loaded field data into $field-&gt;externalData.</h2>
 <pre>getFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -140,14 +162,14 @@ set the connection from the current persistence context.</p></p>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="setConnection" id="setConnection"></a><div class="element clickable method public setConnection" data-toggle="collapse" data-target=".setConnection .collapse">
+<a id="method_setConnection"></a><div class="element clickable method public method_setConnection" data-toggle="collapse" data-target=".method_setConnection .collapse">
 <h2>Set database handler for this gateway</h2>
 <pre>setConnection(mixed $dbHandler) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Allows injection of the data storage connection to be used from external
+<div class="long_description"><p>Allows injection of the data storage connection to be used from external
 source. This can be a database connection resource or something else to
-define the storage, depending on the gateway implementation.</p></p>
+define the storage, depending on the gateway implementation.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$dbHandler</h4>
@@ -156,17 +178,18 @@ define the storage, depending on the gateway implementation.</p></p>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
-<td>if $dbHandler is not an instance of {@link \eZ\Publish\Core\Persistence\Legacy\EzcDbHandler}</td>
+<td>if $dbHandler is not an instance of
+        {@link \eZ\Publish\Core\Persistence\Legacy\EzcDbHandler}</td>
 </tr></table>
 </div></div>
 </div>
-<a name="storeFieldData" id="storeFieldData"></a><div class="element clickable method public storeFieldData" data-toggle="collapse" data-target=".storeFieldData .collapse">
+<a id="method_storeFieldData"></a><div class="element clickable method public method_storeFieldData" data-toggle="collapse" data-target=".method_storeFieldData .collapse">
 <h2>Stores the data stored in the given $field</h2>
 <pre>storeFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Potentially rewrites data in $field and returns true, if the $field
-needs to be updated in the database.</p></p>
+<div class="long_description"><p>Potentially rewrites data in $field and returns true, if the $field
+needs to be updated in the database.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -181,12 +204,12 @@ needs to be updated in the database.</p></p>
 <code>boolean</code>If restoring of the internal field data is required</div>
 </div></div>
 </div>
-<a name="getConnection" id="getConnection"></a><div class="element clickable method protected getConnection" data-toggle="collapse" data-target=".getConnection .collapse">
+<a id="method_getConnection"></a><div class="element clickable method protected method_getConnection" data-toggle="collapse" data-target=".method_getConnection .collapse">
 <h2>Returns the active connection</h2>
 <pre>getConnection() : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.EzcDbHandler.html">\eZ\Publish\Core\Persistence\Legacy\EzcDbHandler</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
@@ -196,12 +219,12 @@ needs to be updated in the database.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.Core.Persistence.Legacy.EzcDbHandler.html">\eZ\Publish\Core\Persistence\Legacy\EzcDbHandler</a></code></div>
 </div></div>
 </div>
-<a name="hasFieldData" id="hasFieldData"></a><div class="element clickable method protected hasFieldData" data-toggle="collapse" data-target=".hasFieldData .collapse">
+<a id="method_hasFieldData"></a><div class="element clickable method protected method_hasFieldData" data-toggle="collapse" data-target=".method_hasFieldData .collapse">
 <h2>Returns if field data exists for $fieldId</h2>
 <pre>hasFieldData(int $fieldId, int $versionNo) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$fieldId</h4>
@@ -215,33 +238,30 @@ needs to be updated in the database.</p></p>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="loadFieldData" id="loadFieldData"></a><div class="element clickable method protected loadFieldData" data-toggle="collapse" data-target=".loadFieldData .collapse">
+<a id="method_loadFieldData"></a><div class="element clickable method protected method_loadFieldData" data-toggle="collapse" data-target=".method_loadFieldData .collapse">
 <h2>Returns the data for the given $fieldId</h2>
 <pre>loadFieldData(int $fieldId, $versionNo) : array | null</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If no data is found, null is returned.</p></p>
+<div class="long_description"><p>If no data is found, null is returned.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$fieldId</h4>
 <code>int</code>
 </div>
-<div class="subelement argument">
-<h4>$versionNo</h4>
-<code></code>
-</div>
+<div class="subelement argument"><h4>$versionNo</h4></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>array</code><code>null</code>
 </div>
 </div></div>
 </div>
-<a name="storeNewFieldData" id="storeNewFieldData"></a><div class="element clickable method protected storeNewFieldData" data-toggle="collapse" data-target=".storeNewFieldData .collapse">
+<a id="method_storeNewFieldData"></a><div class="element clickable method protected method_storeNewFieldData" data-toggle="collapse" data-target=".method_storeNewFieldData .collapse">
 <h2>Stores new field data</h2>
 <pre>storeNewFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -253,12 +273,12 @@ needs to be updated in the database.</p></p>
 </div>
 </div></div>
 </div>
-<a name="updateFieldData" id="updateFieldData"></a><div class="element clickable method protected updateFieldData" data-toggle="collapse" data-target=".updateFieldData .collapse">
+<a id="method_updateFieldData"></a><div class="element clickable method protected method_updateFieldData" data-toggle="collapse" data-target=".method_updateFieldData .collapse">
 <h2>Performs an update on the field data</h2>
 <pre>updateFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -274,11 +294,11 @@ needs to be updated in the database.</p></p>
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24dbHandler" id="$dbHandler"> </a><div class="element clickable property protected $dbHandler" data-toggle="collapse" data-target=".$dbHandler .collapse">
-<h2>Connection</h2>
+<a id="property_dbHandler"> </a><div class="element clickable property protected property_dbHandler" data-toggle="collapse" data-target=".property_dbHandler .collapse">
+<h2></h2>
 <pre>$dbHandler : mixed</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
 </div>
@@ -286,8 +306,8 @@ needs to be updated in the database.</p></p>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T16:59:45Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:41:18Z.<br></footer></div>
 </div>
 </body>
 </html>

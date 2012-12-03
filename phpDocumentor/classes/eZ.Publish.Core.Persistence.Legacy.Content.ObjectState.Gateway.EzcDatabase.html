@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,72 +61,97 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#__construct" title="__construct :: Creates a new EzcDatabase ObjectState Gateway"><span class="description">Creates a new EzcDatabase ObjectState Gateway</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#deleteObjectState" title="deleteObjectState :: Deletes object state identified by $stateId"><span class="description">Deletes object state identified by $stateId</span><pre>deleteObjectState()</pre></a></li>
-<li class="method public "><a href="#deleteObjectStateGroup" title="deleteObjectStateGroup :: Deletes the object state group identified by $groupId"><span class="description">Deletes the object state group identified by $groupId</span><pre>deleteObjectStateGroup()</pre></a></li>
-<li class="method public "><a href="#deleteObjectStateLinks" title="deleteObjectStateLinks :: Deletes object state links identified by $stateId"><span class="description">Deletes object state links identified by $stateId</span><pre>deleteObjectStateLinks()</pre></a></li>
-<li class="method public "><a href="#getContentCount" title="getContentCount :: Returns the number of objects which are in this state"><span class="description">Returns the number of objects which are in this state</span><pre>getContentCount()</pre></a></li>
-<li class="method public "><a href="#insertObjectState" title="insertObjectState :: Inserts a new object state into database"><span class="description">Inserts a new object state into database</span><pre>insertObjectState()</pre></a></li>
-<li class="method public "><a href="#insertObjectStateGroup" title="insertObjectStateGroup :: Inserts a new object state group into database"><span class="description">Inserts a new object state group into database</span><pre>insertObjectStateGroup()</pre></a></li>
-<li class="method public "><a href="#loadObjectStateData" title="loadObjectStateData :: Loads data for an object state"><span class="description">Loads data for an object state</span><pre>loadObjectStateData()</pre></a></li>
-<li class="method public "><a href="#loadObjectStateDataByIdentifier" title="loadObjectStateDataByIdentifier :: Loads data for an object state by identifier"><span class="description">Loads data for an object state by identifier</span><pre>loadObjectStateDataByIdentifier()</pre></a></li>
-<li class="method public "><a href="#loadObjectStateDataForContent" title="loadObjectStateDataForContent :: Loads object state data for $contentId content from $stateGroupId state group"><span class="description">Loads object state data for $contentId content from $stateGroupId state group</span><pre>loadObjectStateDataForContent()</pre></a></li>
-<li class="method public "><a href="#loadObjectStateGroupData" title="loadObjectStateGroupData :: Loads data for an object state group"><span class="description">Loads data for an object state group</span><pre>loadObjectStateGroupData()</pre></a></li>
-<li class="method public "><a href="#loadObjectStateGroupDataByIdentifier" title="loadObjectStateGroupDataByIdentifier :: Loads data for an object state group by identifier"><span class="description">Loads data for an object state group by identifier</span><pre>loadObjectStateGroupDataByIdentifier()</pre></a></li>
-<li class="method public "><a href="#loadObjectStateGroupListData" title="loadObjectStateGroupListData :: Loads data for all object state groups, filtered by $offset and $limit"><span class="description">Loads data for all object state groups, filtered by $offset and $limit</span><pre>loadObjectStateGroupListData()</pre></a></li>
-<li class="method public "><a href="#loadObjectStateListData" title="loadObjectStateListData :: Loads data for all object states belonging to group with $groupId ID"><span class="description">Loads data for all object states belonging to group with $groupId ID</span><pre>loadObjectStateListData()</pre></a></li>
-<li class="method public "><a href="#setContentState" title="setContentState :: Sets the object state $stateId to content with $contentId ID"><span class="description">Sets the object state $stateId to content with $contentId ID</span><pre>setContentState()</pre></a></li>
-<li class="method public "><a href="#updateObjectState" title="updateObjectState :: Updates the stored object state with provided data"><span class="description">Updates the stored object state with provided data</span><pre>updateObjectState()</pre></a></li>
-<li class="method public "><a href="#updateObjectStateGroup" title="updateObjectStateGroup :: Updates the stored object state group with provided data"><span class="description">Updates the stored object state group with provided data</span><pre>updateObjectStateGroup()</pre></a></li>
-<li class="method public "><a href="#updateObjectStateLinks" title="updateObjectStateLinks :: Update object state links to $newStateId"><span class="description">Update object state links to $newStateId</span><pre>updateObjectStateLinks()</pre></a></li>
-<li class="method public "><a href="#updateObjectStatePriority" title="updateObjectStatePriority :: Updates the object state priority to provided value"><span class="description">Updates the object state priority to provided value</span><pre>updateObjectStatePriority()</pre></a></li>
-<li class="nav-header protected">» Protected</li>
-<li class="method protected "><a href="#createObjectStateFindQuery" title="createObjectStateFindQuery :: Creates a generalized query for fetching object state(s)"><span class="description">Creates a generalized query for fetching object state(s)</span><pre>createObjectStateFindQuery()</pre></a></li>
-<li class="method protected "><a href="#createObjectStateGroupFindQuery" title="createObjectStateGroupFindQuery :: Creates a generalized query for fetching object state group(s)"><span class="description">Creates a generalized query for fetching object state group(s)</span><pre>createObjectStateGroupFindQuery()</pre></a></li>
-<li class="method protected "><a href="#deleteObjectStateGroupTranslations" title="deleteObjectStateGroupTranslations :: Deletes all translations of the $groupId state group"><span class="description">Deletes all translations of the $groupId state group</span><pre>deleteObjectStateGroupTranslations()</pre></a></li>
-<li class="method protected "><a href="#deleteObjectStateTranslations" title="deleteObjectStateTranslations :: Deletes all translations of the $stateId state"><span class="description">Deletes all translations of the $stateId state</span><pre>deleteObjectStateTranslations()</pre></a></li>
-<li class="method protected "><a href="#generateLanguageMask" title="generateLanguageMask :: Generates language mask from provided language codes
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Creates a new EzcDatabase ObjectState Gateway"><span class="description">Creates a new EzcDatabase ObjectState Gateway</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_deleteObjectState" title="deleteObjectState :: Deletes object state identified by $stateId"><span class="description">Deletes object state identified by $stateId</span><pre>deleteObjectState()</pre></a></li>
+<li class="method public "><a href="#method_deleteObjectStateGroup" title="deleteObjectStateGroup :: Deletes the object state group identified by $groupId"><span class="description">Deletes the object state group identified by $groupId</span><pre>deleteObjectStateGroup()</pre></a></li>
+<li class="method public "><a href="#method_deleteObjectStateLinks" title="deleteObjectStateLinks :: Deletes object state links identified by $stateId"><span class="description">Deletes object state links identified by $stateId</span><pre>deleteObjectStateLinks()</pre></a></li>
+<li class="method public "><a href="#method_getContentCount" title="getContentCount :: Returns the number of objects which are in this state"><span class="description">Returns the number of objects which are in this state</span><pre>getContentCount()</pre></a></li>
+<li class="method public "><a href="#method_insertObjectState" title="insertObjectState :: Inserts a new object state into database"><span class="description">Inserts a new object state into database</span><pre>insertObjectState()</pre></a></li>
+<li class="method public "><a href="#method_insertObjectStateGroup" title="insertObjectStateGroup :: Inserts a new object state group into database"><span class="description">Inserts a new object state group into database</span><pre>insertObjectStateGroup()</pre></a></li>
+<li class="method public "><a href="#method_loadObjectStateData" title="loadObjectStateData :: Loads data for an object state"><span class="description">Loads data for an object state</span><pre>loadObjectStateData()</pre></a></li>
+<li class="method public "><a href="#method_loadObjectStateDataByIdentifier" title="loadObjectStateDataByIdentifier :: Loads data for an object state by identifier"><span class="description">Loads data for an object state by identifier</span><pre>loadObjectStateDataByIdentifier()</pre></a></li>
+<li class="method public "><a href="#method_loadObjectStateDataForContent" title="loadObjectStateDataForContent :: Loads object state data for $contentId content from $stateGroupId state group"><span class="description">Loads object state data for $contentId content from $stateGroupId state group</span><pre>loadObjectStateDataForContent()</pre></a></li>
+<li class="method public "><a href="#method_loadObjectStateGroupData" title="loadObjectStateGroupData :: Loads data for an object state group"><span class="description">Loads data for an object state group</span><pre>loadObjectStateGroupData()</pre></a></li>
+<li class="method public "><a href="#method_loadObjectStateGroupDataByIdentifier" title="loadObjectStateGroupDataByIdentifier :: Loads data for an object state group by identifier"><span class="description">Loads data for an object state group by identifier</span><pre>loadObjectStateGroupDataByIdentifier()</pre></a></li>
+<li class="method public "><a href="#method_loadObjectStateGroupListData" title="loadObjectStateGroupListData :: Loads data for all object state groups, filtered by $offset and $limit"><span class="description">Loads data for all object state groups, filtered by $offset and $limit</span><pre>loadObjectStateGroupListData()</pre></a></li>
+<li class="method public "><a href="#method_loadObjectStateListData" title="loadObjectStateListData :: Loads data for all object states belonging to group with $groupId ID"><span class="description">Loads data for all object states belonging to group with $groupId ID</span><pre>loadObjectStateListData()</pre></a></li>
+<li class="method public "><a href="#method_setContentState" title="setContentState :: Sets the object state $stateId to content with $contentId ID"><span class="description">Sets the object state $stateId to content with $contentId ID</span><pre>setContentState()</pre></a></li>
+<li class="method public "><a href="#method_updateObjectState" title="updateObjectState :: Updates the stored object state with provided data"><span class="description">Updates the stored object state with provided data</span><pre>updateObjectState()</pre></a></li>
+<li class="method public "><a href="#method_updateObjectStateGroup" title="updateObjectStateGroup :: Updates the stored object state group with provided data"><span class="description">Updates the stored object state group with provided data</span><pre>updateObjectStateGroup()</pre></a></li>
+<li class="method public "><a href="#method_updateObjectStateLinks" title="updateObjectStateLinks :: Update object state links to $newStateId"><span class="description">Update object state links to $newStateId</span><pre>updateObjectStateLinks()</pre></a></li>
+<li class="method public "><a href="#method_updateObjectStatePriority" title="updateObjectStatePriority :: Updates the object state priority to provided value"><span class="description">Updates the object state priority to provided value</span><pre>updateObjectStatePriority()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method_createObjectStateFindQuery" title="createObjectStateFindQuery :: Creates a generalized query for fetching object state(s)"><span class="description">Creates a generalized query for fetching object state(s)</span><pre>createObjectStateFindQuery()</pre></a></li>
+<li class="method protected "><a href="#method_createObjectStateGroupFindQuery" title="createObjectStateGroupFindQuery :: Creates a generalized query for fetching object state group(s)"><span class="description">Creates a generalized query for fetching object state group(s)</span><pre>createObjectStateGroupFindQuery()</pre></a></li>
+<li class="method protected "><a href="#method_deleteObjectStateGroupTranslations" title="deleteObjectStateGroupTranslations :: Deletes all translations of the $groupId state group"><span class="description">Deletes all translations of the $groupId state group</span><pre>deleteObjectStateGroupTranslations()</pre></a></li>
+<li class="method protected "><a href="#method_deleteObjectStateTranslations" title="deleteObjectStateTranslations :: Deletes all translations of the $stateId state"><span class="description">Deletes all translations of the $stateId state</span><pre>deleteObjectStateTranslations()</pre></a></li>
+<li class="method protected "><a href="#method_generateLanguageMask" title="generateLanguageMask :: Generates language mask from provided language codes
 Also sets always available bit"><span class="description">Generates language mask from provided language codes
 Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
-<li class="method protected "><a href="#insertObjectStateGroupTranslations" title="insertObjectStateGroupTranslations :: Inserts object state group translations into database"><span class="description">Inserts object state group translations into database</span><pre>insertObjectStateGroupTranslations()</pre></a></li>
-<li class="method protected "><a href="#insertObjectStateTranslations" title="insertObjectStateTranslations :: Inserts object state group translations into database"><span class="description">Inserts object state group translations into database</span><pre>insertObjectStateTranslations()</pre></a></li>
+<li class="method protected "><a href="#method_insertObjectStateGroupTranslations" title="insertObjectStateGroupTranslations :: Inserts object state group translations into database"><span class="description">Inserts object state group translations into database</span><pre>insertObjectStateGroupTranslations()</pre></a></li>
+<li class="method protected "><a href="#method_insertObjectStateTranslations" title="insertObjectStateTranslations :: Inserts object state group translations into database"><span class="description">Inserts object state group translations into database</span><pre>insertObjectStateTranslations()</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected "><a href="#%24dbHandler" title="$dbHandler :: Database handler"><span class="description">Database handler</span><pre>$dbHandler</pre></a></li>
-<li class="property protected "><a href="#%24maskGenerator" title="$maskGenerator :: Language mask generator"><span class="description">Language mask generator</span><pre>$maskGenerator</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_dbHandler" title="$dbHandler :: Database handler"><span class="description"></span><pre>$dbHandler</pre></a></li>
+<li class="property protected "><a href="#property_maskGenerator" title="$maskGenerator :: Language mask generator"><span class="description"></span><pre>$maskGenerator</pre></a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CPersistence%5CLegacy%5CContent%5CObjectState%5CGateway%5CEzcDatabase" id="\eZ\Publish\Core\Persistence\Legacy\Content\ObjectState\Gateway\EzcDatabase"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\Persistence\Legacy\Content\ObjectState\Gateway\EzcDatabase"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.ObjectState.html">ObjectState</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.ObjectState.Gateway.html">Gateway</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.ObjectState.html">ObjectState</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.ObjectState.Gateway.html">Gateway</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.ObjectState.Gateway.EzcDatabase.html">EzcDatabase</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.ObjectState.Gateway.EzcDatabase.html" class="element class">
+<div class="element class">
 <p class="short_description">ObjectState ezcDatabase Gateway</p>
 <div class="details">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
 <h2>Creates a new EzcDatabase ObjectState Gateway</h2>
 <pre>__construct(\eZ\Publish\Core\Persistence\Legacy\EzcDbHandler $dbHandler, \eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator $maskGenerator) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$dbHandler</h4>
@@ -137,12 +163,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="deleteObjectState" id="deleteObjectState"></a><div class="element clickable method public deleteObjectState" data-toggle="collapse" data-target=".deleteObjectState .collapse">
+<a id="method_deleteObjectState"></a><div class="element clickable method public method_deleteObjectState" data-toggle="collapse" data-target=".method_deleteObjectState .collapse">
 <h2>Deletes object state identified by $stateId</h2>
 <pre>deleteObjectState(int $stateId) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$stateId</h4>
@@ -150,12 +176,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="deleteObjectStateGroup" id="deleteObjectStateGroup"></a><div class="element clickable method public deleteObjectStateGroup" data-toggle="collapse" data-target=".deleteObjectStateGroup .collapse">
+<a id="method_deleteObjectStateGroup"></a><div class="element clickable method public method_deleteObjectStateGroup" data-toggle="collapse" data-target=".method_deleteObjectStateGroup .collapse">
 <h2>Deletes the object state group identified by $groupId</h2>
 <pre>deleteObjectStateGroup(mixed $groupId) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$groupId</h4>
@@ -163,12 +189,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="deleteObjectStateLinks" id="deleteObjectStateLinks"></a><div class="element clickable method public deleteObjectStateLinks" data-toggle="collapse" data-target=".deleteObjectStateLinks .collapse">
+<a id="method_deleteObjectStateLinks"></a><div class="element clickable method public method_deleteObjectStateLinks" data-toggle="collapse" data-target=".method_deleteObjectStateLinks .collapse">
 <h2>Deletes object state links identified by $stateId</h2>
 <pre>deleteObjectStateLinks(int $stateId) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$stateId</h4>
@@ -176,12 +202,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="getContentCount" id="getContentCount"></a><div class="element clickable method public getContentCount" data-toggle="collapse" data-target=".getContentCount .collapse">
+<a id="method_getContentCount"></a><div class="element clickable method public method_getContentCount" data-toggle="collapse" data-target=".method_getContentCount .collapse">
 <h2>Returns the number of objects which are in this state</h2>
 <pre>getContentCount(mixed $stateId) : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$stateId</h4>
@@ -191,12 +217,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 <div class="subelement response"><code>int</code></div>
 </div></div>
 </div>
-<a name="insertObjectState" id="insertObjectState"></a><div class="element clickable method public insertObjectState" data-toggle="collapse" data-target=".insertObjectState .collapse">
+<a id="method_insertObjectState"></a><div class="element clickable method public method_insertObjectState" data-toggle="collapse" data-target=".method_insertObjectState .collapse">
 <h2>Inserts a new object state into database</h2>
 <pre>insertObjectState(\eZ\Publish\SPI\Persistence\Content\ObjectState $objectState, int $groupId) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$objectState</h4>
@@ -208,12 +234,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="insertObjectStateGroup" id="insertObjectStateGroup"></a><div class="element clickable method public insertObjectStateGroup" data-toggle="collapse" data-target=".insertObjectStateGroup .collapse">
+<a id="method_insertObjectStateGroup"></a><div class="element clickable method public method_insertObjectStateGroup" data-toggle="collapse" data-target=".method_insertObjectStateGroup .collapse">
 <h2>Inserts a new object state group into database</h2>
 <pre>insertObjectStateGroup(\eZ\Publish\SPI\Persistence\Content\ObjectState\Group $objectStateGroup) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$objectStateGroup</h4>
@@ -221,12 +247,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="loadObjectStateData" id="loadObjectStateData"></a><div class="element clickable method public loadObjectStateData" data-toggle="collapse" data-target=".loadObjectStateData .collapse">
+<a id="method_loadObjectStateData"></a><div class="element clickable method public method_loadObjectStateData" data-toggle="collapse" data-target=".method_loadObjectStateData .collapse">
 <h2>Loads data for an object state</h2>
 <pre>loadObjectStateData(mixed $stateId) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$stateId</h4>
@@ -236,12 +262,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="loadObjectStateDataByIdentifier" id="loadObjectStateDataByIdentifier"></a><div class="element clickable method public loadObjectStateDataByIdentifier" data-toggle="collapse" data-target=".loadObjectStateDataByIdentifier .collapse">
+<a id="method_loadObjectStateDataByIdentifier"></a><div class="element clickable method public method_loadObjectStateDataByIdentifier" data-toggle="collapse" data-target=".method_loadObjectStateDataByIdentifier .collapse">
 <h2>Loads data for an object state by identifier</h2>
 <pre>loadObjectStateDataByIdentifier(string $identifier, mixed $groupId) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$identifier</h4>
@@ -255,12 +281,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="loadObjectStateDataForContent" id="loadObjectStateDataForContent"></a><div class="element clickable method public loadObjectStateDataForContent" data-toggle="collapse" data-target=".loadObjectStateDataForContent .collapse">
+<a id="method_loadObjectStateDataForContent"></a><div class="element clickable method public method_loadObjectStateDataForContent" data-toggle="collapse" data-target=".method_loadObjectStateDataForContent .collapse">
 <h2>Loads object state data for $contentId content from $stateGroupId state group</h2>
 <pre>loadObjectStateDataForContent(int $contentId, int $stateGroupId) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -274,12 +300,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="loadObjectStateGroupData" id="loadObjectStateGroupData"></a><div class="element clickable method public loadObjectStateGroupData" data-toggle="collapse" data-target=".loadObjectStateGroupData .collapse">
+<a id="method_loadObjectStateGroupData"></a><div class="element clickable method public method_loadObjectStateGroupData" data-toggle="collapse" data-target=".method_loadObjectStateGroupData .collapse">
 <h2>Loads data for an object state group</h2>
 <pre>loadObjectStateGroupData(mixed $groupId) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$groupId</h4>
@@ -289,12 +315,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="loadObjectStateGroupDataByIdentifier" id="loadObjectStateGroupDataByIdentifier"></a><div class="element clickable method public loadObjectStateGroupDataByIdentifier" data-toggle="collapse" data-target=".loadObjectStateGroupDataByIdentifier .collapse">
+<a id="method_loadObjectStateGroupDataByIdentifier"></a><div class="element clickable method public method_loadObjectStateGroupDataByIdentifier" data-toggle="collapse" data-target=".method_loadObjectStateGroupDataByIdentifier .collapse">
 <h2>Loads data for an object state group by identifier</h2>
 <pre>loadObjectStateGroupDataByIdentifier(string $identifier) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$identifier</h4>
@@ -304,12 +330,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="loadObjectStateGroupListData" id="loadObjectStateGroupListData"></a><div class="element clickable method public loadObjectStateGroupListData" data-toggle="collapse" data-target=".loadObjectStateGroupListData .collapse">
+<a id="method_loadObjectStateGroupListData"></a><div class="element clickable method public method_loadObjectStateGroupListData" data-toggle="collapse" data-target=".method_loadObjectStateGroupListData .collapse">
 <h2>Loads data for all object state groups, filtered by $offset and $limit</h2>
 <pre>loadObjectStateGroupListData(int $offset, int $limit) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$offset</h4>
@@ -323,12 +349,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="loadObjectStateListData" id="loadObjectStateListData"></a><div class="element clickable method public loadObjectStateListData" data-toggle="collapse" data-target=".loadObjectStateListData .collapse">
+<a id="method_loadObjectStateListData"></a><div class="element clickable method public method_loadObjectStateListData" data-toggle="collapse" data-target=".method_loadObjectStateListData .collapse">
 <h2>Loads data for all object states belonging to group with $groupId ID</h2>
 <pre>loadObjectStateListData(mixed $groupId) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$groupId</h4>
@@ -338,12 +364,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="setContentState" id="setContentState"></a><div class="element clickable method public setContentState" data-toggle="collapse" data-target=".setContentState .collapse">
+<a id="method_setContentState"></a><div class="element clickable method public method_setContentState" data-toggle="collapse" data-target=".method_setContentState .collapse">
 <h2>Sets the object state $stateId to content with $contentId ID</h2>
 <pre>setContentState(mixed $contentId, mixed $groupId, mixed $stateId) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -359,12 +385,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="updateObjectState" id="updateObjectState"></a><div class="element clickable method public updateObjectState" data-toggle="collapse" data-target=".updateObjectState .collapse">
+<a id="method_updateObjectState"></a><div class="element clickable method public method_updateObjectState" data-toggle="collapse" data-target=".method_updateObjectState .collapse">
 <h2>Updates the stored object state with provided data</h2>
 <pre>updateObjectState(\eZ\Publish\SPI\Persistence\Content\ObjectState $objectState) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$objectState</h4>
@@ -372,12 +398,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="updateObjectStateGroup" id="updateObjectStateGroup"></a><div class="element clickable method public updateObjectStateGroup" data-toggle="collapse" data-target=".updateObjectStateGroup .collapse">
+<a id="method_updateObjectStateGroup"></a><div class="element clickable method public method_updateObjectStateGroup" data-toggle="collapse" data-target=".method_updateObjectStateGroup .collapse">
 <h2>Updates the stored object state group with provided data</h2>
 <pre>updateObjectStateGroup(\eZ\Publish\SPI\Persistence\Content\ObjectState\Group $objectStateGroup) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$objectStateGroup</h4>
@@ -385,12 +411,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="updateObjectStateLinks" id="updateObjectStateLinks"></a><div class="element clickable method public updateObjectStateLinks" data-toggle="collapse" data-target=".updateObjectStateLinks .collapse">
+<a id="method_updateObjectStateLinks"></a><div class="element clickable method public method_updateObjectStateLinks" data-toggle="collapse" data-target=".method_updateObjectStateLinks .collapse">
 <h2>Update object state links to $newStateId</h2>
 <pre>updateObjectStateLinks(int $oldStateId, int $newStateId) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$oldStateId</h4>
@@ -402,12 +428,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="updateObjectStatePriority" id="updateObjectStatePriority"></a><div class="element clickable method public updateObjectStatePriority" data-toggle="collapse" data-target=".updateObjectStatePriority .collapse">
+<a id="method_updateObjectStatePriority"></a><div class="element clickable method public method_updateObjectStatePriority" data-toggle="collapse" data-target=".method_updateObjectStatePriority .collapse">
 <h2>Updates the object state priority to provided value</h2>
 <pre>updateObjectStatePriority(mixed $stateId, int $priority) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$stateId</h4>
@@ -419,32 +445,32 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="createObjectStateFindQuery" id="createObjectStateFindQuery"></a><div class="element clickable method protected createObjectStateFindQuery" data-toggle="collapse" data-target=".createObjectStateFindQuery .collapse">
+<a id="method_createObjectStateFindQuery"></a><div class="element clickable method protected method_createObjectStateFindQuery" data-toggle="collapse" data-target=".method_createObjectStateFindQuery .collapse">
 <h2>Creates a generalized query for fetching object state(s)</h2>
 <pre>createObjectStateFindQuery() : \ezcQuerySelect</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>\ezcQuerySelect</code></div>
 </div></div>
 </div>
-<a name="createObjectStateGroupFindQuery" id="createObjectStateGroupFindQuery"></a><div class="element clickable method protected createObjectStateGroupFindQuery" data-toggle="collapse" data-target=".createObjectStateGroupFindQuery .collapse">
+<a id="method_createObjectStateGroupFindQuery"></a><div class="element clickable method protected method_createObjectStateGroupFindQuery" data-toggle="collapse" data-target=".method_createObjectStateGroupFindQuery .collapse">
 <h2>Creates a generalized query for fetching object state group(s)</h2>
 <pre>createObjectStateGroupFindQuery() : \ezcQuerySelect</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>\ezcQuerySelect</code></div>
 </div></div>
 </div>
-<a name="deleteObjectStateGroupTranslations" id="deleteObjectStateGroupTranslations"></a><div class="element clickable method protected deleteObjectStateGroupTranslations" data-toggle="collapse" data-target=".deleteObjectStateGroupTranslations .collapse">
+<a id="method_deleteObjectStateGroupTranslations"></a><div class="element clickable method protected method_deleteObjectStateGroupTranslations" data-toggle="collapse" data-target=".method_deleteObjectStateGroupTranslations .collapse">
 <h2>Deletes all translations of the $groupId state group</h2>
 <pre>deleteObjectStateGroupTranslations(mixed $groupId) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$groupId</h4>
@@ -452,12 +478,12 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="deleteObjectStateTranslations" id="deleteObjectStateTranslations"></a><div class="element clickable method protected deleteObjectStateTranslations" data-toggle="collapse" data-target=".deleteObjectStateTranslations .collapse">
+<a id="method_deleteObjectStateTranslations"></a><div class="element clickable method protected method_deleteObjectStateTranslations" data-toggle="collapse" data-target=".method_deleteObjectStateTranslations .collapse">
 <h2>Deletes all translations of the $stateId state</h2>
 <pre>deleteObjectStateTranslations(mixed $stateId) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$stateId</h4>
@@ -465,13 +491,13 @@ Also sets always available bit</span><pre>generateLanguageMask()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="generateLanguageMask" id="generateLanguageMask"></a><div class="element clickable method protected generateLanguageMask" data-toggle="collapse" data-target=".generateLanguageMask .collapse">
+<a id="method_generateLanguageMask"></a><div class="element clickable method protected method_generateLanguageMask" data-toggle="collapse" data-target=".method_generateLanguageMask .collapse">
 <h2>Generates language mask from provided language codes
 Also sets always available bit</h2>
-<pre>generateLanguageMask(\array $languageCodes) : int</pre>
+<pre>generateLanguageMask(array $languageCodes) : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$languageCodes</h4>
@@ -481,12 +507,12 @@ Also sets always available bit</h2>
 <div class="subelement response"><code>int</code></div>
 </div></div>
 </div>
-<a name="insertObjectStateGroupTranslations" id="insertObjectStateGroupTranslations"></a><div class="element clickable method protected insertObjectStateGroupTranslations" data-toggle="collapse" data-target=".insertObjectStateGroupTranslations .collapse">
+<a id="method_insertObjectStateGroupTranslations"></a><div class="element clickable method protected method_insertObjectStateGroupTranslations" data-toggle="collapse" data-target=".method_insertObjectStateGroupTranslations .collapse">
 <h2>Inserts object state group translations into database</h2>
 <pre>insertObjectStateGroupTranslations(\eZ\Publish\SPI\Persistence\Content\ObjectState\Group $objectStateGroup) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$objectStateGroup</h4>
@@ -494,12 +520,12 @@ Also sets always available bit</h2>
 </div>
 </div></div>
 </div>
-<a name="insertObjectStateTranslations" id="insertObjectStateTranslations"></a><div class="element clickable method protected insertObjectStateTranslations" data-toggle="collapse" data-target=".insertObjectStateTranslations .collapse">
+<a id="method_insertObjectStateTranslations"></a><div class="element clickable method protected method_insertObjectStateTranslations" data-toggle="collapse" data-target=".method_insertObjectStateTranslations .collapse">
 <h2>Inserts object state group translations into database</h2>
 <pre>insertObjectStateTranslations(\eZ\Publish\SPI\Persistence\Content\ObjectState $objectState) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$objectState</h4>
@@ -509,17 +535,17 @@ Also sets always available bit</h2>
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24dbHandler" id="$dbHandler"> </a><div class="element clickable property protected $dbHandler" data-toggle="collapse" data-target=".$dbHandler .collapse">
-<h2>Database handler</h2>
+<a id="property_dbHandler"> </a><div class="element clickable property protected property_dbHandler" data-toggle="collapse" data-target=".property_dbHandler .collapse">
+<h2></h2>
 <pre>$dbHandler : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.EzcDbHandler.html">\eZ\Publish\Core\Persistence\Legacy\EzcDbHandler</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24maskGenerator" id="$maskGenerator"> </a><div class="element clickable property protected $maskGenerator" data-toggle="collapse" data-target=".$maskGenerator .collapse">
-<h2>Language mask generator</h2>
+<a id="property_maskGenerator"> </a><div class="element clickable property protected property_maskGenerator" data-toggle="collapse" data-target=".property_maskGenerator .collapse">
+<h2></h2>
 <pre>$maskGenerator : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Language.MaskGenerator.html">\eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
 </div>
@@ -527,8 +553,8 @@ Also sets always available bit</h2>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T17:00:33Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:41:57Z.<br></footer></div>
 </div>
 </body>
 </html>

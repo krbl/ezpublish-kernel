@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,50 +61,72 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#getFieldData" title="getFieldData :: Populates $field-&gt;value with external data"><span class="description">Populates $field-&gt;value with external data</span><pre>getFieldData()</pre></a></li>
-<li class="method public "><a href="#setConnection" title="setConnection :: Set database handler for this gateway"><span class="description">Set database handler for this gateway</span><pre>setConnection()</pre></a></li>
-<li class="method public "><a href="#storeFieldData" title="storeFieldData :: Stores data, external to XMLText type"><span class="description">Stores data, external to XMLText type</span><pre>storeFieldData()</pre></a></li>
-<li class="nav-header protected">» Protected</li>
-<li class="method protected "><a href="#getConnection" title="getConnection :: Returns the active connection"><span class="description">Returns the active connection</span><pre>getConnection()</pre></a></li>
-<li class="nav-header private">» Private</li>
-<li class="method private "><a href="#getLinksId" title="getLinksId :: Fetches rows in ezurl table referenced by URLs in $linksUrls array."><span class="description">Fetches rows in ezurl table referenced by URLs in $linksUrls array.</span><pre>getLinksId()</pre></a></li>
-<li class="method private "><a href="#getLinksUrl" title="getLinksUrl :: Fetches rows in ezurl table referenced by IDs in $linkIds array."><span class="description">Fetches rows in ezurl table referenced by IDs in $linkIds array.</span><pre>getLinksUrl()</pre></a></li>
-<li class="method private "><a href="#insertLink" title="insertLink :: Inserts a new entry in ezurl table and returns the table last insert id"><span class="description">Inserts a new entry in ezurl table and returns the table last insert id</span><pre>insertLink()</pre></a></li>
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_getFieldData" title="getFieldData :: Populates $field-&gt;value with external data"><span class="description">Populates $field-&gt;value with external data</span><pre>getFieldData()</pre></a></li>
+<li class="method public "><a href="#method_setConnection" title="setConnection :: Set database handler for this gateway"><span class="description">Set database handler for this gateway</span><pre>setConnection()</pre></a></li>
+<li class="method public "><a href="#method_storeFieldData" title="storeFieldData :: Stores data, external to XMLText type"><span class="description">Stores data, external to XMLText type</span><pre>storeFieldData()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="method protected "><a href="#method_getConnection" title="getConnection :: Returns the active connection"><span class="description">Returns the active connection</span><pre>getConnection()</pre></a></li></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="method private "><a href="#method_getLinksId" title="getLinksId :: Fetches rows in ezurl table referenced by URLs in $linksUrls array."><span class="description">Fetches rows in ezurl table referenced by URLs in $linksUrls array.</span><pre>getLinksId()</pre></a></li>
+<li class="method private "><a href="#method_getLinksUrl" title="getLinksUrl :: Fetches rows in ezurl table referenced by IDs in $linkIds array."><span class="description">Fetches rows in ezurl table referenced by IDs in $linkIds array.</span><pre>getLinksUrl()</pre></a></li>
+<li class="method private "><a href="#method_insertLink" title="insertLink :: Inserts a new entry in ezurl table and returns the table last insert id"><span class="description">Inserts a new entry in ezurl table and returns the table last insert id</span><pre>insertLink()</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected "><a href="#%24dbHandler" title="$dbHandler :: "><span class="description">$dbHandler</span><pre>$dbHandler</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="property protected "><a href="#property_dbHandler" title="$dbHandler :: "><span class="description"></span><pre>$dbHandler</pre></a></li></ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CFieldType%5CXmlText%5CXmlTextStorage%5CGateway%5CLegacyStorage" id="\eZ\Publish\Core\FieldType\XmlText\XmlTextStorage\Gateway\LegacyStorage"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\FieldType\XmlText\XmlTextStorage\Gateway\LegacyStorage"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.FieldType.html">FieldType</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.FieldType.XmlText.html">XmlText</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.FieldType.XmlText.XmlTextStorage.html">XmlTextStorage</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.FieldType.XmlText.XmlTextStorage.Gateway.html">Gateway</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.FieldType.html">FieldType</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.FieldType.XmlText.html">XmlText</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.FieldType.XmlText.XmlTextStorage.html">XmlTextStorage</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.FieldType.XmlText.XmlTextStorage.Gateway.html">Gateway</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.FieldType.XmlText.XmlTextStorage.Gateway.LegacyStorage.html">LegacyStorage</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.FieldType.XmlText.XmlTextStorage.Gateway.LegacyStorage.html" class="element class">
+<div class="element class">
 <p class="short_description">Abstract gateway class for XmlText type.</p>
 <div class="details">
-<p class="long_description"><p>Handles data that is not directly included in raw XML value from the field (i.e. URLs)</p></p>
+<div class="long_description"><p>Handles data that is not directly included in raw XML value from the field (i.e. URLs)</p></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="getFieldData" id="getFieldData"></a><div class="element clickable method public getFieldData" data-toggle="collapse" data-target=".getFieldData .collapse">
+<a id="method_getFieldData"></a><div class="element clickable method public method_getFieldData" data-toggle="collapse" data-target=".method_getFieldData .collapse">
 <h2>Populates $field-&gt;value with external data</h2>
 <pre>getFieldData(\eZ\Publish\SPI\Persistence\Content\Field $field) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$field</h4>
@@ -111,14 +134,14 @@
 </div>
 </div></div>
 </div>
-<a name="setConnection" id="setConnection"></a><div class="element clickable method public setConnection" data-toggle="collapse" data-target=".setConnection .collapse">
+<a id="method_setConnection"></a><div class="element clickable method public method_setConnection" data-toggle="collapse" data-target=".method_setConnection .collapse">
 <h2>Set database handler for this gateway</h2>
 <pre>setConnection(mixed $dbHandler) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Allows injection of the data storage connection to be used from external
+<div class="long_description"><p>Allows injection of the data storage connection to be used from external
 source. This can be a database connection resource or something else to
-define the storage, depending on the gateway implementation.</p></p>
+define the storage, depending on the gateway implementation.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$dbHandler</h4>
@@ -127,16 +150,17 @@ define the storage, depending on the gateway implementation.</p></p>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
-<td>if $dbHandler is not an instance of {@link \eZ\Publish\Core\Persistence\Legacy\EzcDbHandler}</td>
+<td>if $dbHandler is not an instance of
+        {@link \eZ\Publish\Core\Persistence\Legacy\EzcDbHandler}</td>
 </tr></table>
 </div></div>
 </div>
-<a name="storeFieldData" id="storeFieldData"></a><div class="element clickable method public storeFieldData" data-toggle="collapse" data-target=".storeFieldData .collapse">
+<a id="method_storeFieldData"></a><div class="element clickable method public method_storeFieldData" data-toggle="collapse" data-target=".method_storeFieldData .collapse">
 <h2>Stores data, external to XMLText type</h2>
 <pre>storeFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -150,12 +174,12 @@ define the storage, depending on the gateway implementation.</p></p>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="getConnection" id="getConnection"></a><div class="element clickable method protected getConnection" data-toggle="collapse" data-target=".getConnection .collapse">
+<a id="method_getConnection"></a><div class="element clickable method protected method_getConnection" data-toggle="collapse" data-target=".method_getConnection .collapse">
 <h2>Returns the active connection</h2>
 <pre>getConnection() : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.EzcDbHandler.html">\eZ\Publish\Core\Persistence\Legacy\EzcDbHandler</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
@@ -165,12 +189,12 @@ define the storage, depending on the gateway implementation.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.Core.Persistence.Legacy.EzcDbHandler.html">\eZ\Publish\Core\Persistence\Legacy\EzcDbHandler</a></code></div>
 </div></div>
 </div>
-<a name="getLinksId" id="getLinksId"></a><div class="element clickable method private getLinksId" data-toggle="collapse" data-target=".getLinksId .collapse">
+<a id="method_getLinksId"></a><div class="element clickable method private method_getLinksId" data-toggle="collapse" data-target=".method_getLinksId .collapse">
 <h2>Fetches rows in ezurl table referenced by URLs in $linksUrls array.</h2>
-<pre>getLinksId(\array $linksUrls) : array</pre>
+<pre>getLinksId(array $linksUrls) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Returns as hash with URL as key and corresponding URL id as value.</p></p>
+<div class="long_description"><p>Returns as hash with URL as key and corresponding URL id as value.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$linksUrls</h4>
@@ -180,12 +204,12 @@ define the storage, depending on the gateway implementation.</p></p>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="getLinksUrl" id="getLinksUrl"></a><div class="element clickable method private getLinksUrl" data-toggle="collapse" data-target=".getLinksUrl .collapse">
+<a id="method_getLinksUrl"></a><div class="element clickable method private method_getLinksUrl" data-toggle="collapse" data-target=".method_getLinksUrl .collapse">
 <h2>Fetches rows in ezurl table referenced by IDs in $linkIds array.</h2>
-<pre>getLinksUrl(\array $linkIds) : array</pre>
+<pre>getLinksUrl(array $linkIds) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Returns as hash with URL id as key and corresponding URL as value.</p></p>
+<div class="long_description"><p>Returns as hash with URL id as key and corresponding URL as value.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$linkIds</h4>
@@ -195,12 +219,12 @@ define the storage, depending on the gateway implementation.</p></p>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="insertLink" id="insertLink"></a><div class="element clickable method private insertLink" data-toggle="collapse" data-target=".insertLink .collapse">
+<a id="method_insertLink"></a><div class="element clickable method private method_insertLink" data-toggle="collapse" data-target=".method_insertLink .collapse">
 <h2>Inserts a new entry in ezurl table and returns the table last insert id</h2>
 <pre>insertLink(string $url) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$url</h4>
@@ -209,11 +233,11 @@ define the storage, depending on the gateway implementation.</p></p>
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24dbHandler" id="$dbHandler"> </a><div class="element clickable property protected $dbHandler" data-toggle="collapse" data-target=".$dbHandler .collapse">
-<h2>$dbHandler</h2>
+<a id="property_dbHandler"> </a><div class="element clickable property protected property_dbHandler" data-toggle="collapse" data-target=".property_dbHandler .collapse">
+<h2></h2>
 <pre>$dbHandler </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
 </div>
@@ -221,8 +245,8 @@ define the storage, depending on the gateway implementation.</p></p>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T17:00:08Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:41:36Z.<br></footer></div>
 </div>
 </body>
 </html>

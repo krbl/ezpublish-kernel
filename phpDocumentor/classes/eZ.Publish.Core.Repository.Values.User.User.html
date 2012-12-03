@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,82 +61,104 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public inherited"><a href="#__construct" title="__construct :: Construct object optionally with a set of properties"><span class="description">Construct object optionally with a set of properties</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#__get" title="__get :: Magic getter for retrieving convenience properties"><span class="description">Magic getter for retrieving convenience properties</span><pre>__get()</pre></a></li>
-<li class="method public "><a href="#__isset" title="__isset :: Magic isset for signaling existence of convenience properties"><span class="description">Magic isset for signaling existence of convenience properties</span><pre>__isset()</pre></a></li>
-<li class="method public inherited"><a href="#__set" title="__set :: Magic set function handling writes to non public properties"><span class="description">Magic set function handling writes to non public properties</span><pre>__set()</pre></a></li>
-<li class="method public inherited"><a href="#__set_state" title="__set_state :: Returns a new instance of this class with the data specified by $array."><span class="description">Returns a new instance of this class with the data specified by $array.</span><pre>__set_state()</pre></a></li>
-<li class="method public inherited"><a href="#__unset" title="__unset :: Magic unset function handling unset() to non public properties"><span class="description">Magic unset function handling unset() to non public properties</span><pre>__unset()</pre></a></li>
-<li class="method public inherited"><a href="#attribute" title="attribute :: Internal function for Legacy template engine compatibility to get property value"><span class="description">Internal function for Legacy template engine compatibility to get property value</span><pre>attribute()</pre></a></li>
-<li class="method public inherited"><a href="#attributes" title="attributes :: Internal function for Legacy template engine compatibility to get properties"><span class="description">Internal function for Legacy template engine compatibility to get properties</span><pre>attributes()</pre></a></li>
-<li class="method public "><a href="#getFieldValue" title="getFieldValue :: Returns a field value for the given value
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___construct" title="__construct :: Construct object optionally with a set of properties"><span class="description">Construct object optionally with a set of properties</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method___get" title="__get :: Magic getter for retrieving convenience properties"><span class="description">Magic getter for retrieving convenience properties</span><pre>__get()</pre></a></li>
+<li class="method public "><a href="#method___isset" title="__isset :: Magic isset for signaling existence of convenience properties"><span class="description">Magic isset for signaling existence of convenience properties</span><pre>__isset()</pre></a></li>
+<li class="method public inherited"><a href="#method___set" title="__set :: Magic set function handling writes to non public properties"><span class="description">Magic set function handling writes to non public properties</span><pre>__set()</pre></a></li>
+<li class="method public inherited"><a href="#method___set_state" title="__set_state :: Returns a new instance of this class with the data specified by $array."><span class="description">Returns a new instance of this class with the data specified by $array.</span><pre>__set_state()</pre></a></li>
+<li class="method public inherited"><a href="#method___unset" title="__unset :: Magic unset function handling unset() to non public properties"><span class="description">Magic unset function handling unset() to non public properties</span><pre>__unset()</pre></a></li>
+<li class="method public inherited"><a href="#method_attribute" title="attribute :: Internal function for Legacy template engine compatibility to get property value"><span class="description">Internal function for Legacy template engine compatibility to get property value</span><pre>attribute()</pre></a></li>
+<li class="method public inherited"><a href="#method_attributes" title="attributes :: Internal function for Legacy template engine compatibility to get properties"><span class="description">Internal function for Legacy template engine compatibility to get properties</span><pre>attributes()</pre></a></li>
+<li class="method public "><a href="#method_getFieldValue" title="getFieldValue :: Returns a field value for the given value
 $version-&gt;fields[$fieldDefId][$languageCode] is an equivalent call
 if no language is given on a translatable field this method returns
 the value of the initial language of the version if present, otherwise null."><span class="description">Returns a field value for the given value
 $version-&gt;fields[$fieldDefId][$languageCode] is an equivalent call
 if no language is given on a translatable field this method returns
 the value of the initial language of the version if present, otherwise null.</span><pre>getFieldValue()</pre></a></li>
-<li class="method public "><a href="#getFields" title="getFields :: This method returns the complete fields collection"><span class="description">This method returns the complete fields collection</span><pre>getFields()</pre></a></li>
-<li class="method public "><a href="#getFieldsByLanguage" title="getFieldsByLanguage :: This method returns the fields for a given language and non translatable fields"><span class="description">This method returns the fields for a given language and non translatable fields</span><pre>getFieldsByLanguage()</pre></a></li>
-<li class="method public "><a href="#getRelations" title="getRelations :: Returns the outgoing relations"><span class="description">Returns the outgoing relations</span><pre>getRelations()</pre></a></li>
-<li class="method public "><a href="#getVersionInfo" title="getVersionInfo :: Returns the VersionInfo for this version"><span class="description">Returns the VersionInfo for this version</span><pre>getVersionInfo()</pre></a></li>
-<li class="method public inherited"><a href="#hasAttribute" title="hasAttribute :: Internal function for Legacy template engine compatibility to check existence of property"><span class="description">Internal function for Legacy template engine compatibility to check existence of property</span><pre>hasAttribute()</pre></a></li>
-<li class="nav-header protected">» Protected</li>
-<li class="method protected "><a href="#getProperties" title="getProperties :: Function where list of properties are returned"><span class="description">Function where list of properties are returned</span><pre>getProperties()</pre></a></li>
+<li class="method public "><a href="#method_getFields" title="getFields :: This method returns the complete fields collection"><span class="description">This method returns the complete fields collection</span><pre>getFields()</pre></a></li>
+<li class="method public "><a href="#method_getFieldsByLanguage" title="getFieldsByLanguage :: This method returns the fields for a given language and non translatable fields"><span class="description">This method returns the fields for a given language and non translatable fields</span><pre>getFieldsByLanguage()</pre></a></li>
+<li class="method public "><a href="#method_getRelations" title="getRelations :: Returns the outgoing relations"><span class="description">Returns the outgoing relations</span><pre>getRelations()</pre></a></li>
+<li class="method public "><a href="#method_getVersionInfo" title="getVersionInfo :: Returns the VersionInfo for this version"><span class="description">Returns the VersionInfo for this version</span><pre>getVersionInfo()</pre></a></li>
+<li class="method public inherited"><a href="#method_hasAttribute" title="hasAttribute :: Internal function for Legacy template engine compatibility to check existence of property"><span class="description">Internal function for Legacy template engine compatibility to check existence of property</span><pre>hasAttribute()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="method protected "><a href="#method_getProperties" title="getProperties :: Function where list of properties are returned"><span class="description">Function where list of properties are returned</span><pre>getProperties()</pre></a></li></ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected "><a href="#%24content" title="$content :: Internal content representation"><span class="description">Internal content representation</span><pre>$content</pre></a></li>
-<li class="property protected inherited"><a href="#%24email" title="$email :: User E-Mail address"><span class="description">User E-Mail address</span><pre>$email</pre></a></li>
-<li class="property protected inherited"><a href="#%24enabled" title="$enabled :: Flag to signal if user is enabled or not"><span class="description">Flag to signal if user is enabled or not</span><pre>$enabled</pre></a></li>
-<li class="property protected inherited"><a href="#%24hashAlgorithm" title="$hashAlgorithm :: Hash algorithm used to hash the password"><span class="description">Hash algorithm used to hash the password</span><pre>$hashAlgorithm</pre></a></li>
-<li class="property protected inherited"><a href="#%24login" title="$login :: User login"><span class="description">User login</span><pre>$login</pre></a></li>
-<li class="property protected inherited"><a href="#%24maxLogin" title="$maxLogin :: Max number of time user is allowed to login"><span class="description">Max number of time user is allowed to login</span><pre>$maxLogin</pre></a></li>
-<li class="property protected inherited"><a href="#%24passwordHash" title="$passwordHash :: User password hash"><span class="description">User password hash</span><pre>$passwordHash</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_content" title="$content :: Internal content representation"><span class="description"></span><pre>$content</pre></a></li>
+<li class="property protected inherited"><a href="#property_email" title="$email :: User E-Mail address"><span class="description"></span><pre>$email</pre></a></li>
+<li class="property protected inherited"><a href="#property_enabled" title="$enabled :: Flag to signal if user is enabled or not"><span class="description"></span><pre>$enabled</pre></a></li>
+<li class="property protected inherited"><a href="#property_hashAlgorithm" title="$hashAlgorithm :: Hash algorithm used to hash the password"><span class="description"></span><pre>$hashAlgorithm</pre></a></li>
+<li class="property protected inherited"><a href="#property_login" title="$login :: User login"><span class="description"></span><pre>$login</pre></a></li>
+<li class="property protected inherited"><a href="#property_maxLogin" title="$maxLogin :: Max number of time user is allowed to login"><span class="description"></span><pre>$maxLogin</pre></a></li>
+<li class="property protected inherited"><a href="#property_passwordHash" title="$passwordHash :: User password hash"><span class="description"></span><pre>$passwordHash</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-constant"></i> Constants</li>
-<li class="constant  "><a href="#PASSWORD_HASH_MD5_PASSWORD" title="PASSWORD_HASH_MD5_PASSWORD :: "><span class="description">&lt;p&gt;MD5 of password, not recommended&lt;/p&gt;</span><pre>PASSWORD_HASH_MD5_PASSWORD</pre></a></li>
-<li class="constant  "><a href="#PASSWORD_HASH_MD5_SITE" title="PASSWORD_HASH_MD5_SITE :: "><span class="description">&lt;p&gt;MD5 of site, user and password&lt;/p&gt;</span><pre>PASSWORD_HASH_MD5_SITE</pre></a></li>
-<li class="constant  "><a href="#PASSWORD_HASH_MD5_USER" title="PASSWORD_HASH_MD5_USER :: "><span class="description">&lt;p&gt;MD5 of user and password&lt;/p&gt;</span><pre>PASSWORD_HASH_MD5_USER</pre></a></li>
-<li class="constant  "><a href="#PASSWORD_HASH_PLAINTEXT" title="PASSWORD_HASH_PLAINTEXT :: "><span class="description">&lt;p&gt;Passwords in plaintext, should not be used for real sites&lt;/p&gt;</span><pre>PASSWORD_HASH_PLAINTEXT</pre></a></li>
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  "><a href="#constant_PASSWORD_HASH_MD5_PASSWORD" title="PASSWORD_HASH_MD5_PASSWORD :: "><span class="description">&lt;p&gt;MD5 of password, not recommended&lt;/p&gt;</span><pre>PASSWORD_HASH_MD5_PASSWORD</pre></a></li>
+<li class="constant  "><a href="#constant_PASSWORD_HASH_MD5_SITE" title="PASSWORD_HASH_MD5_SITE :: "><span class="description">&lt;p&gt;MD5 of site, user and password&lt;/p&gt;</span><pre>PASSWORD_HASH_MD5_SITE</pre></a></li>
+<li class="constant  "><a href="#constant_PASSWORD_HASH_MD5_USER" title="PASSWORD_HASH_MD5_USER :: "><span class="description">&lt;p&gt;MD5 of user and password&lt;/p&gt;</span><pre>PASSWORD_HASH_MD5_USER</pre></a></li>
+<li class="constant  "><a href="#constant_PASSWORD_HASH_PLAINTEXT" title="PASSWORD_HASH_PLAINTEXT :: "><span class="description">&lt;p&gt;Passwords in plaintext, should not be used for real sites&lt;/p&gt;</span><pre>PASSWORD_HASH_PLAINTEXT</pre></a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CRepository%5CValues%5CUser%5CUser" id="\eZ\Publish\Core\Repository\Values\User\User"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\Repository\Values\User\User"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Repository.html">Repository</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Repository.Values.html">Values</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Repository.Values.User.html">User</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Repository.html">Repository</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Repository.Values.html">Values</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Repository.Values.User.html">User</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.Repository.Values.User.User.html">User</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.Repository.Values.User.User.html" class="element class">
+<div class="element class">
 <p class="short_description">This class represents a user value</p>
 <div class="details">
-<p class="long_description"><p>Supports readonly properties by marking them as protected.
+<div class="long_description"><p>Supports readonly properties by marking them as protected.
 In this case they will only be writable using constructor, and need to be documented
 using @property-read <type> <$var> in class doc in addition to inline property doc.
-Writable properties must be public and must be documented inline.</p></p>
+Writable properties must be public and must be documented inline.</p></div>
 <table class="table table-bordered"><tr>
 <th>package</th>
 <td><a href="../packages/Default.html">eZ\Publish\API\Repository\Values</a></td>
 </tr></table>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
 <h2>Construct object optionally with a set of properties</h2>
-<pre>__construct(\array $properties) </pre>
+<pre>__construct(array $properties) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Readonly properties values must be set using $properties as they are not writable anymore
-after object has been created.</p></p>
+<div class="long_description"><p>Readonly properties values must be set using $properties as they are not writable anymore
+after object has been created.</p></div>
 <table class="table table-bordered">
 <tr>
 <th>inherited_from</th>
@@ -157,12 +180,12 @@ after object has been created.</p></p>
 </div>
 </div></div>
 </div>
-<a name="__get" id="__get"></a><div class="element clickable method public __get" data-toggle="collapse" data-target=".__get .collapse">
+<a id="method___get"></a><div class="element clickable method public method___get" data-toggle="collapse" data-target=".method___get .collapse">
 <h2>Magic getter for retrieving convenience properties</h2>
 <pre>__get(string $property) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Returns value for all readonly (protected) properties.</p></p>
+<div class="long_description"><p>Returns value for all readonly (protected) properties.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$property</h4>
@@ -176,12 +199,12 @@ after object has been created.</p></p>
 <div class="subelement response"><code>mixed</code></div>
 </div></div>
 </div>
-<a name="__isset" id="__isset"></a><div class="element clickable method public __isset" data-toggle="collapse" data-target=".__isset .collapse">
+<a id="method___isset"></a><div class="element clickable method public method___isset" data-toggle="collapse" data-target=".method___isset .collapse">
 <h2>Magic isset for signaling existence of convenience properties</h2>
 <pre>__isset(string $property) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Returns true for all (public/)protected/private properties.</p></p>
+<div class="long_description"><p>Returns true for all (public/)protected/private properties.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$property</h4>
@@ -191,12 +214,12 @@ after object has been created.</p></p>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="__set" id="__set"></a><div class="element clickable method public __set" data-toggle="collapse" data-target=".__set .collapse">
+<a id="method___set"></a><div class="element clickable method public method___set" data-toggle="collapse" data-target=".method___set .collapse">
 <h2>Magic set function handling writes to non public properties</h2>
 <pre>__set(string $property, string $value) : void</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered">
 <tr>
 <th>inherited_from</th>
@@ -232,17 +255,19 @@ after object has been created.</p></p>
 </table>
 </div></div>
 </div>
-<a name="__set_state" id="__set_state"></a><div class="element clickable method public __set_state" data-toggle="collapse" data-target=".__set_state .collapse">
+<a id="method___set_state"></a><div class="element clickable method public method___set_state" data-toggle="collapse" data-target=".method___set_state .collapse">
 <h2>Returns a new instance of this class with the data specified by $array.</h2>
-<pre>__set_state(\array $array) : <a href="../classes/eZ.Publish.API.Repository.Values.ValueObject.html">\eZ\Publish\API\Repository\Values\ValueObject</a></pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<pre>__set_state(array $array) : <a href="../classes/eZ.Publish.API.Repository.Values.ValueObject.html">\eZ\Publish\API\Repository\Values\ValueObject</a></pre>
+<div class="labels">
+<span class="label">Inherited</span><span class="label">Static</span>
+</div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>$array contains all the data members of this class in the form:
+<div class="long_description"><p>$array contains all the data members of this class in the form:
 array('member_name'=>value).</p>
 
 <p>__set_state makes this class exportable with var_export.
 var_export() generates code, that calls this method when it
-is parsed with PHP.</p></p>
+is parsed with PHP.</p></div>
 <table class="table table-bordered">
 <tr>
 <th>inherited_from</th>
@@ -266,12 +291,12 @@ is parsed with PHP.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.ValueObject.html">\eZ\Publish\API\Repository\Values\ValueObject</a></code></div>
 </div></div>
 </div>
-<a name="__unset" id="__unset"></a><div class="element clickable method public __unset" data-toggle="collapse" data-target=".__unset .collapse">
+<a id="method___unset"></a><div class="element clickable method public method___unset" data-toggle="collapse" data-target=".method___unset .collapse">
 <h2>Magic unset function handling unset() to non public properties</h2>
 <pre>__unset(string $property) : boolean</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered">
 <tr>
 <th>uses</th>
@@ -309,12 +334,12 @@ is parsed with PHP.</p></p>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="attribute" id="attribute"></a><div class="element clickable method public attribute" data-toggle="collapse" data-target=".attribute .collapse">
+<a id="method_attribute"></a><div class="element clickable method public method_attribute" data-toggle="collapse" data-target=".method_attribute .collapse">
 <h2>Internal function for Legacy template engine compatibility to get property value</h2>
 <pre>attribute(string $property) : mixed</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered">
 <tr>
 <th>access</th>
@@ -346,12 +371,12 @@ is parsed with PHP.</p></p>
 <div class="subelement response"><code>mixed</code></div>
 </div></div>
 </div>
-<a name="attributes" id="attributes"></a><div class="element clickable method public attributes" data-toggle="collapse" data-target=".attributes .collapse">
+<a id="method_attributes"></a><div class="element clickable method public method_attributes" data-toggle="collapse" data-target=".method_attributes .collapse">
 <h2>Internal function for Legacy template engine compatibility to get properties</h2>
 <pre>attributes() : array</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered">
 <tr>
 <th>access</th>
@@ -378,7 +403,7 @@ is parsed with PHP.</p></p>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="getFieldValue" id="getFieldValue"></a><div class="element clickable method public getFieldValue" data-toggle="collapse" data-target=".getFieldValue .collapse">
+<a id="method_getFieldValue"></a><div class="element clickable method public method_getFieldValue" data-toggle="collapse" data-target=".method_getFieldValue .collapse">
 <h2>Returns a field value for the given value
 $version-&gt;fields[$fieldDefId][$languageCode] is an equivalent call
 if no language is given on a translatable field this method returns
@@ -386,7 +411,7 @@ the value of the initial language of the version if present, otherwise null.</h2
 <pre>getFieldValue(string $fieldDefIdentifier, string $languageCode) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>On non translatable fields this method ignores the languageCode parameter.</p></p>
+<div class="long_description"><p>On non translatable fields this method ignores the languageCode parameter.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$fieldDefIdentifier</h4>
@@ -401,22 +426,22 @@ the value of the initial language of the version if present, otherwise null.</h2
 <code>mixed</code>a primitive type or a field type Value object depending on the field type.</div>
 </div></div>
 </div>
-<a name="getFields" id="getFields"></a><div class="element clickable method public getFields" data-toggle="collapse" data-target=".getFields .collapse">
+<a id="method_getFields"></a><div class="element clickable method public method_getFields" data-toggle="collapse" data-target=".method_getFields .collapse">
 <h2>This method returns the complete fields collection</h2>
 <pre>getFields() : <a href="Publish.API.Repository.Values.Content.Field.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CField">\eZ\Publish\API\Repository\Values\Content\Field[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="Publish.API.Repository.Values.Content.Field.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CField">\eZ\Publish\API\Repository\Values\Content\Field[]</a></code></div>
 </div></div>
 </div>
-<a name="getFieldsByLanguage" id="getFieldsByLanguage"></a><div class="element clickable method public getFieldsByLanguage" data-toggle="collapse" data-target=".getFieldsByLanguage .collapse">
+<a id="method_getFieldsByLanguage"></a><div class="element clickable method public method_getFieldsByLanguage" data-toggle="collapse" data-target=".method_getFieldsByLanguage .collapse">
 <h2>This method returns the fields for a given language and non translatable fields</h2>
 <pre>getFieldsByLanguage(string $languageCode) : <a href="Publish.API.Repository.Values.Content.Field.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CField">\eZ\Publish\API\Repository\Values\Content\Field[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If note set the initialLanguage of the content version is used.</p></p>
+<div class="long_description"><p>If note set the initialLanguage of the content version is used.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$languageCode</h4>
@@ -427,32 +452,32 @@ the value of the initial language of the version if present, otherwise null.</h2
 <code><a href="Publish.API.Repository.Values.Content.Field.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CField">\eZ\Publish\API\Repository\Values\Content\Field[]</a></code>with field identifier as keys</div>
 </div></div>
 </div>
-<a name="getRelations" id="getRelations"></a><div class="element clickable method public getRelations" data-toggle="collapse" data-target=".getRelations .collapse">
+<a id="method_getRelations"></a><div class="element clickable method public method_getRelations" data-toggle="collapse" data-target=".method_getRelations .collapse">
 <h2>Returns the outgoing relations</h2>
 <pre>getRelations() : <a href="Publish.API.Repository.Values.Content.Relation.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CRelation">\eZ\Publish\API\Repository\Values\Content\Relation[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="Publish.API.Repository.Values.Content.Relation.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CRelation">\eZ\Publish\API\Repository\Values\Content\Relation[]</a></code></div>
 </div></div>
 </div>
-<a name="getVersionInfo" id="getVersionInfo"></a><div class="element clickable method public getVersionInfo" data-toggle="collapse" data-target=".getVersionInfo .collapse">
+<a id="method_getVersionInfo"></a><div class="element clickable method public method_getVersionInfo" data-toggle="collapse" data-target=".method_getVersionInfo .collapse">
 <h2>Returns the VersionInfo for this version</h2>
 <pre>getVersionInfo() : <a href="../classes/eZ.Publish.API.Repository.Values.Content.VersionInfo.html">\eZ\Publish\API\Repository\Values\Content\VersionInfo</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.VersionInfo.html">\eZ\Publish\API\Repository\Values\Content\VersionInfo</a></code></div>
 </div></div>
 </div>
-<a name="hasAttribute" id="hasAttribute"></a><div class="element clickable method public hasAttribute" data-toggle="collapse" data-target=".hasAttribute .collapse">
+<a id="method_hasAttribute"></a><div class="element clickable method public method_hasAttribute" data-toggle="collapse" data-target=".method_hasAttribute .collapse">
 <h2>Internal function for Legacy template engine compatibility to check existence of property</h2>
 <pre>hasAttribute(string $property) : boolean</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered">
 <tr>
 <th>access</th>
@@ -484,12 +509,12 @@ the value of the initial language of the version if present, otherwise null.</h2
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="getProperties" id="getProperties"></a><div class="element clickable method protected getProperties" data-toggle="collapse" data-target=".getProperties .collapse">
+<a id="method_getProperties"></a><div class="element clickable method protected method_getProperties" data-toggle="collapse" data-target=".method_getProperties .collapse">
 <h2>Function where list of properties are returned</h2>
 <pre>getProperties(array $dynamicProperties) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Override to add dynamic properties</p></p>
+<div class="long_description"><p>Override to add dynamic properties</p></div>
 <table class="table table-bordered"><tr>
 <th>uses</th>
 <td>\eZ\Publish\Core\Repository\Values\User\parent::getProperties()</td>
@@ -505,78 +530,78 @@ the value of the initial language of the version if present, otherwise null.</h2
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24content" id="$content"> </a><div class="element clickable property protected $content" data-toggle="collapse" data-target=".$content .collapse">
-<h2>Internal content representation</h2>
+<a id="property_content"> </a><div class="element clickable property protected property_content" data-toggle="collapse" data-target=".property_content .collapse">
+<h2></h2>
 <pre>$content : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Content.html">\eZ\Publish\API\Repository\Values\Content\Content</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24email" id="$email"> </a><div class="element clickable property protected $email" data-toggle="collapse" data-target=".$email .collapse">
-<h2>User E-Mail address</h2>
+<a id="property_email"> </a><div class="element clickable property protected property_email" data-toggle="collapse" data-target=".property_email .collapse">
+<h2></h2>
 <pre>$email : string</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\API\Repository\Values\User\User::$$email</td>
 </tr></table>
 </div></div>
 </div>
-<a name="%24enabled" id="$enabled"> </a><div class="element clickable property protected $enabled" data-toggle="collapse" data-target=".$enabled .collapse">
-<h2>Flag to signal if user is enabled or not</h2>
+<a id="property_enabled"> </a><div class="element clickable property protected property_enabled" data-toggle="collapse" data-target=".property_enabled .collapse">
+<h2></h2>
 <pre>$enabled : boolean</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>User can not login if false</p></p>
+<div class="long_description"><p>User can not login if false</p></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\API\Repository\Values\User\User::$$enabled</td>
 </tr></table>
 </div></div>
 </div>
-<a name="%24hashAlgorithm" id="$hashAlgorithm"> </a><div class="element clickable property protected $hashAlgorithm" data-toggle="collapse" data-target=".$hashAlgorithm .collapse">
-<h2>Hash algorithm used to hash the password</h2>
+<a id="property_hashAlgorithm"> </a><div class="element clickable property protected property_hashAlgorithm" data-toggle="collapse" data-target=".property_hashAlgorithm .collapse">
+<h2></h2>
 <pre>$hashAlgorithm : int</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\API\Repository\Values\User\User::$$hashAlgorithm</td>
 </tr></table>
 </div></div>
 </div>
-<a name="%24login" id="$login"> </a><div class="element clickable property protected $login" data-toggle="collapse" data-target=".$login .collapse">
-<h2>User login</h2>
+<a id="property_login"> </a><div class="element clickable property protected property_login" data-toggle="collapse" data-target=".property_login .collapse">
+<h2></h2>
 <pre>$login : string</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\API\Repository\Values\User\User::$$login</td>
 </tr></table>
 </div></div>
 </div>
-<a name="%24maxLogin" id="$maxLogin"> </a><div class="element clickable property protected $maxLogin" data-toggle="collapse" data-target=".$maxLogin .collapse">
-<h2>Max number of time user is allowed to login</h2>
+<a id="property_maxLogin"> </a><div class="element clickable property protected property_maxLogin" data-toggle="collapse" data-target=".property_maxLogin .collapse">
+<h2></h2>
 <pre>$maxLogin : int</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\API\Repository\Values\User\User::$$maxLogin</td>
 </tr></table>
 </div></div>
 </div>
-<a name="%24passwordHash" id="$passwordHash"> </a><div class="element clickable property protected $passwordHash" data-toggle="collapse" data-target=".$passwordHash .collapse">
-<h2>User password hash</h2>
+<a id="property_passwordHash"> </a><div class="element clickable property protected property_passwordHash" data-toggle="collapse" data-target=".property_passwordHash .collapse">
+<h2></h2>
 <pre>$passwordHash : string</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\API\Repository\Values\User\User::$$passwordHash</td>
@@ -585,29 +610,29 @@ the value of the initial language of the version if present, otherwise null.</h2
 </div>
 <h3>
 <i class="icon-custom icon-constant"></i> Constants</h3>
-<a name="PASSWORD_HASH_MD5_PASSWORD" id="PASSWORD_HASH_MD5_PASSWORD"> </a><div class="element clickable constant  PASSWORD_HASH_MD5_PASSWORD" data-toggle="collapse" data-target=".PASSWORD_HASH_MD5_PASSWORD .collapse">
+<a id="constant_PASSWORD_HASH_MD5_PASSWORD"> </a><div class="element clickable constant  constant_PASSWORD_HASH_MD5_PASSWORD" data-toggle="collapse" data-target=".constant_PASSWORD_HASH_MD5_PASSWORD .collapse">
 <h2>&lt;p&gt;MD5 of password, not recommended&lt;/p&gt;</h2>
 <pre>PASSWORD_HASH_MD5_PASSWORD : int</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="PASSWORD_HASH_MD5_SITE" id="PASSWORD_HASH_MD5_SITE"> </a><div class="element clickable constant  PASSWORD_HASH_MD5_SITE" data-toggle="collapse" data-target=".PASSWORD_HASH_MD5_SITE .collapse">
+<a id="constant_PASSWORD_HASH_MD5_SITE"> </a><div class="element clickable constant  constant_PASSWORD_HASH_MD5_SITE" data-toggle="collapse" data-target=".constant_PASSWORD_HASH_MD5_SITE .collapse">
 <h2>&lt;p&gt;MD5 of site, user and password&lt;/p&gt;</h2>
 <pre>PASSWORD_HASH_MD5_SITE : int</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="PASSWORD_HASH_MD5_USER" id="PASSWORD_HASH_MD5_USER"> </a><div class="element clickable constant  PASSWORD_HASH_MD5_USER" data-toggle="collapse" data-target=".PASSWORD_HASH_MD5_USER .collapse">
+<a id="constant_PASSWORD_HASH_MD5_USER"> </a><div class="element clickable constant  constant_PASSWORD_HASH_MD5_USER" data-toggle="collapse" data-target=".constant_PASSWORD_HASH_MD5_USER .collapse">
 <h2>&lt;p&gt;MD5 of user and password&lt;/p&gt;</h2>
 <pre>PASSWORD_HASH_MD5_USER : int</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="PASSWORD_HASH_PLAINTEXT" id="PASSWORD_HASH_PLAINTEXT"> </a><div class="element clickable constant  PASSWORD_HASH_PLAINTEXT" data-toggle="collapse" data-target=".PASSWORD_HASH_PLAINTEXT .collapse">
+<a id="constant_PASSWORD_HASH_PLAINTEXT"> </a><div class="element clickable constant  constant_PASSWORD_HASH_PLAINTEXT" data-toggle="collapse" data-target=".constant_PASSWORD_HASH_PLAINTEXT .collapse">
 <h2>&lt;p&gt;Passwords in plaintext, should not be used for real sites&lt;/p&gt;</h2>
 <pre>PASSWORD_HASH_PLAINTEXT : int</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
 </div>
@@ -615,8 +640,8 @@ the value of the initial language of the version if present, otherwise null.</h2
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T16:59:33Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:41:09Z.<br></footer></div>
 </div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,58 +61,76 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#__construct" title="__construct :: Builds the file service based on the dynamic configuration provided by
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Builds the file service based on the dynamic configuration provided by
 the config resolver"><span class="description">Builds the file service based on the dynamic configuration provided by
 the config resolver</span><pre>__construct()</pre></a></li>
-<li class="method public inherited"><a href="#exists" title="exists :: Returns is a file/directory with the given $storageIdentifier exists"><span class="description">Returns is a file/directory with the given $storageIdentifier exists</span><pre>exists()</pre></a></li>
-<li class="method public inherited"><a href="#getFileSize" title="getFileSize :: Returns the file size of the file identified by $storageIdentifier"><span class="description">Returns the file size of the file identified by $storageIdentifier</span><pre>getFileSize()</pre></a></li>
-<li class="method public inherited"><a href="#getMetaData" title="getMetaData :: Returns a hash of meta data"><span class="description">Returns a hash of meta data</span><pre>getMetaData()</pre></a></li>
-<li class="method public inherited"><a href="#getStorageIdentifier" title="getStorageIdentifier :: Returns a storage identifier for the given $path"><span class="description">Returns a storage identifier for the given $path</span><pre>getStorageIdentifier()</pre></a></li>
-<li class="method public inherited"><a href="#remove" title="remove :: Removes the path identified by $storageIdentifier, potentially
+<li class="method public inherited"><a href="#method_exists" title="exists :: Returns is a file/directory with the given $storageIdentifier exists"><span class="description">Returns is a file/directory with the given $storageIdentifier exists</span><pre>exists()</pre></a></li>
+<li class="method public inherited"><a href="#method_getFileSize" title="getFileSize :: Returns the file size of the file identified by $storageIdentifier"><span class="description">Returns the file size of the file identified by $storageIdentifier</span><pre>getFileSize()</pre></a></li>
+<li class="method public inherited"><a href="#method_getMetaData" title="getMetaData :: Returns a hash of meta data"><span class="description">Returns a hash of meta data</span><pre>getMetaData()</pre></a></li>
+<li class="method public inherited"><a href="#method_getStorageIdentifier" title="getStorageIdentifier :: Returns a storage identifier for the given $path"><span class="description">Returns a storage identifier for the given $path</span><pre>getStorageIdentifier()</pre></a></li>
+<li class="method public inherited"><a href="#method_remove" title="remove :: Removes the path identified by $storageIdentifier, potentially
 $recursive."><span class="description">Removes the path identified by $storageIdentifier, potentially
 $recursive.</span><pre>remove()</pre></a></li>
-<li class="method public inherited"><a href="#storeFile" title="storeFile :: Store the local file identified by $sourcePath in a location that corresponds
+<li class="method public inherited"><a href="#method_storeFile" title="storeFile :: Store the local file identified by $sourcePath in a location that corresponds
 to $storageIdentifier."><span class="description">Store the local file identified by $sourcePath in a location that corresponds
 to $storageIdentifier.</span><pre>storeFile()</pre></a></li>
-<li class="nav-header protected">» Protected</li>
-<li class="method protected inherited"><a href="#createDirectoryRecursive" title="createDirectoryRecursive :: Creates the given directory recursively"><span class="description">Creates the given directory recursively</span><pre>createDirectoryRecursive()</pre></a></li>
-<li class="method protected inherited"><a href="#getFullPath" title="getFullPath :: Returns the full path for $path"><span class="description">Returns the full path for $path</span><pre>getFullPath()</pre></a></li>
-<li class="method protected inherited"><a href="#removePathInternal" title="removePathInternal :: Deletes $path, $recursive or not"><span class="description">Deletes $path, $recursive or not</span><pre>removePathInternal()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected inherited"><a href="#method_createDirectoryRecursive" title="createDirectoryRecursive :: Creates the given directory recursively"><span class="description">Creates the given directory recursively</span><pre>createDirectoryRecursive()</pre></a></li>
+<li class="method protected inherited"><a href="#method_getFullPath" title="getFullPath :: Returns the full path for $path"><span class="description">Returns the full path for $path</span><pre>getFullPath()</pre></a></li>
+<li class="method protected inherited"><a href="#method_removePathInternal" title="removePathInternal :: Deletes $path, $recursive or not"><span class="description">Deletes $path, $recursive or not</span><pre>removePathInternal()</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected inherited"><a href="#%24identifierPrefix" title="$identifierPrefix :: Identifier prefix, will be appended to $storageDir for storing, but also
-delivered as part of the storage identifier."><span class="description">Identifier prefix, will be appended to $storageDir for storing, but also
-delivered as part of the storage identifier.</span><pre>$identifierPrefix</pre></a></li>
-<li class="property protected inherited"><a href="#%24installDir" title="$installDir :: eZ Publish base install dir"><span class="description">eZ Publish base install dir</span><pre>$installDir</pre></a></li>
-<li class="property protected inherited"><a href="#%24storageDir" title="$storageDir :: Storage dir path (relative to $installDir)"><span class="description">Storage dir path (relative to $installDir)</span><pre>$storageDir</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property_identifierPrefix" title="$identifierPrefix :: Identifier prefix, will be appended to $storageDir for storing, but also
+delivered as part of the storage identifier."><span class="description"></span><pre>$identifierPrefix</pre></a></li>
+<li class="property protected inherited"><a href="#property_installDir" title="$installDir :: eZ Publish base install dir"><span class="description"></span><pre>$installDir</pre></a></li>
+<li class="property protected inherited"><a href="#property_storageDir" title="$storageDir :: Storage dir path (relative to $installDir)"><span class="description"></span><pre>$storageDir</pre></a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CMVC%5CSymfony%5CConfiguredLocalFileService" id="\eZ\Publish\Core\MVC\Symfony\ConfiguredLocalFileService"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\MVC\Symfony\ConfiguredLocalFileService"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.MVC.html">MVC</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.MVC.Symfony.html">Symfony</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.MVC.html">MVC</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.MVC.Symfony.html">Symfony</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.MVC.Symfony.ConfiguredLocalFileService.html">ConfiguredLocalFileService</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.MVC.Symfony.ConfiguredLocalFileService.html" class="element class"><div class="details">
+<div class="element class"><div class="details">
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
 <h2>Builds the file service based on the dynamic configuration provided by
 the config resolver</h2>
 <pre>__construct(\eZ\Publish\Core\MVC\ConfigResolverInterface $resolver, string $installDir) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$resolver</h4>
@@ -123,12 +142,12 @@ the config resolver</h2>
 </div>
 </div></div>
 </div>
-<a name="exists" id="exists"></a><div class="element clickable method public exists" data-toggle="collapse" data-target=".exists .collapse">
+<a id="method_exists"></a><div class="element clickable method public method_exists" data-toggle="collapse" data-target=".method_exists .collapse">
 <h2>Returns is a file/directory with the given $storageIdentifier exists</h2>
 <pre>exists(string $storageIdentifier) : boolean</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\FileService\LocalFileService::exists()</td>
@@ -142,12 +161,12 @@ the config resolver</h2>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="getFileSize" id="getFileSize"></a><div class="element clickable method public getFileSize" data-toggle="collapse" data-target=".getFileSize .collapse">
+<a id="method_getFileSize"></a><div class="element clickable method public method_getFileSize" data-toggle="collapse" data-target=".method_getFileSize .collapse">
 <h2>Returns the file size of the file identified by $storageIdentifier</h2>
 <pre>getFileSize(string $storageIdentifier) : int</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\FileService\LocalFileService::getFileSize()</td>
@@ -161,16 +180,16 @@ the config resolver</h2>
 <div class="subelement response"><code>int</code></div>
 </div></div>
 </div>
-<a name="getMetaData" id="getMetaData"></a><div class="element clickable method public getMetaData" data-toggle="collapse" data-target=".getMetaData .collapse">
+<a id="method_getMetaData"></a><div class="element clickable method public method_getMetaData" data-toggle="collapse" data-target=".method_getMetaData .collapse">
 <h2>Returns a hash of meta data</h2>
 <pre>getMetaData(string $storageIdentifier) : array</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>array(
+<div class="long_description"><p>array(
  'width' => <int>,
  'height' => <int>,
  'mime' => <string>,
-);</p></p>
+);</p></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\FileService\LocalFileService::getMetaData()</td>
@@ -184,13 +203,13 @@ the config resolver</h2>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="getStorageIdentifier" id="getStorageIdentifier"></a><div class="element clickable method public getStorageIdentifier" data-toggle="collapse" data-target=".getStorageIdentifier .collapse">
+<a id="method_getStorageIdentifier"></a><div class="element clickable method public method_getStorageIdentifier" data-toggle="collapse" data-target=".method_getStorageIdentifier .collapse">
 <h2>Returns a storage identifier for the given $path</h2>
 <pre>getStorageIdentifier(string $path) : string</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>The storage identifier is used to identify $path inside the storage
-encapsulated by the file service.</p></p>
+<div class="long_description"><p>The storage identifier is used to identify $path inside the storage
+encapsulated by the file service.</p></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\FileService\LocalFileService::getStorageIdentifier()</td>
@@ -204,16 +223,16 @@ encapsulated by the file service.</p></p>
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="remove" id="remove"></a><div class="element clickable method public remove" data-toggle="collapse" data-target=".remove .collapse">
+<a id="method_remove"></a><div class="element clickable method public method_remove" data-toggle="collapse" data-target=".method_remove .collapse">
 <h2>Removes the path identified by $storageIdentifier, potentially
 $recursive.</h2>
 <pre>remove(string $storageIdentifier, boolean $recursive) : void</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Attemts to removed the path identified by $storageIdentifier. If
+<div class="long_description"><p>Attemts to removed the path identified by $storageIdentifier. If
 $storageIdentifier is a directory which is not empty and $recursive is
 set to false, an exception is thrown. Attemting to remove a non
-existing $storageIdentifier is silently ignored.</p></p>
+existing $storageIdentifier is silently ignored.</p></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\FileService\LocalFileService::remove()</td>
@@ -231,22 +250,24 @@ existing $storageIdentifier is silently ignored.</p></p>
 <table class="table table-bordered">
 <tr>
 <th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
-<td>if children of $storageIdentifier exist and $recursive is false</td>
+<td>if children of $storageIdentifier exist and
+                          $recursive is false</td>
 </tr>
 <tr>
 <th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
-<td>if $storageIdentifier could not be removed (most likely permission issues)</td>
+<td>if $storageIdentifier could not be removed (most
+                          likely permission issues)</td>
 </tr>
 </table>
 </div></div>
 </div>
-<a name="storeFile" id="storeFile"></a><div class="element clickable method public storeFile" data-toggle="collapse" data-target=".storeFile .collapse">
+<a id="method_storeFile"></a><div class="element clickable method public method_storeFile" data-toggle="collapse" data-target=".method_storeFile .collapse">
 <h2>Store the local file identified by $sourcePath in a location that corresponds
 to $storageIdentifier.</h2>
 <pre>storeFile(string $sourcePath, string $storageIdentifier) : string</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Returns an $storageIdentifier again.</p></p>
+<div class="long_description"><p>Returns an $storageIdentifier again.</p></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\FileService\LocalFileService::storeFile()</td>
@@ -264,12 +285,12 @@ to $storageIdentifier.</h2>
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="createDirectoryRecursive" id="createDirectoryRecursive"></a><div class="element clickable method protected createDirectoryRecursive" data-toggle="collapse" data-target=".createDirectoryRecursive .collapse">
+<a id="method_createDirectoryRecursive"></a><div class="element clickable method protected method_createDirectoryRecursive" data-toggle="collapse" data-target=".method_createDirectoryRecursive .collapse">
 <h2>Creates the given directory recursively</h2>
 <pre>createDirectoryRecursive(string $directory) : void</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\FileService\LocalFileService::createDirectoryRecursive()</td>
@@ -286,12 +307,12 @@ to $storageIdentifier.</h2>
 </tr></table>
 </div></div>
 </div>
-<a name="getFullPath" id="getFullPath"></a><div class="element clickable method protected getFullPath" data-toggle="collapse" data-target=".getFullPath .collapse">
+<a id="method_getFullPath"></a><div class="element clickable method protected method_getFullPath" data-toggle="collapse" data-target=".method_getFullPath .collapse">
 <h2>Returns the full path for $path</h2>
 <pre>getFullPath(string $path, $allowLocal) : string</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\FileService\LocalFileService::getFullPath()</td>
@@ -301,20 +322,17 @@ to $storageIdentifier.</h2>
 <h4>$path</h4>
 <code>string</code>
 </div>
-<div class="subelement argument">
-<h4>$allowLocal</h4>
-<code></code>
-</div>
+<div class="subelement argument"><h4>$allowLocal</h4></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="removePathInternal" id="removePathInternal"></a><div class="element clickable method protected removePathInternal" data-toggle="collapse" data-target=".removePathInternal .collapse">
+<a id="method_removePathInternal"></a><div class="element clickable method protected method_removePathInternal" data-toggle="collapse" data-target=".method_removePathInternal .collapse">
 <h2>Deletes $path, $recursive or not</h2>
 <pre>removePathInternal(string $path, boolean $recursive) : void</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\FileService\LocalFileService::removePathInternal()</td>
@@ -332,7 +350,8 @@ to $storageIdentifier.</h2>
 <table class="table table-bordered">
 <tr>
 <th><code>\eZ\Publish\Core\FieldType\FileService\RuntimeException</code></th>
-<td>if $path is a non-empty directory and $recursive is false</td>
+<td>if $path is a non-empty directory and
+                         $recursive is false</td>
 </tr>
 <tr>
 <th><code>\eZ\Publish\Core\FieldType\FileService\RuntimeException</code></th>
@@ -343,37 +362,36 @@ to $storageIdentifier.</h2>
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24identifierPrefix" id="$identifierPrefix"> </a><div class="element clickable property protected $identifierPrefix" data-toggle="collapse" data-target=".$identifierPrefix .collapse">
-<h2>Identifier prefix, will be appended to $storageDir for storing, but also
-delivered as part of the storage identifier.</h2>
+<a id="property_identifierPrefix"> </a><div class="element clickable property protected property_identifierPrefix" data-toggle="collapse" data-target=".property_identifierPrefix .collapse">
+<h2></h2>
 <pre>$identifierPrefix : string</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\FileService\LocalFileService::$$identifierPrefix</td>
 </tr></table>
 </div></div>
 </div>
-<a name="%24installDir" id="$installDir"> </a><div class="element clickable property protected $installDir" data-toggle="collapse" data-target=".$installDir .collapse">
-<h2>eZ Publish base install dir</h2>
+<a id="property_installDir"> </a><div class="element clickable property protected property_installDir" data-toggle="collapse" data-target=".property_installDir .collapse">
+<h2></h2>
 <pre>$installDir : string</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\FileService\LocalFileService::$$installDir</td>
 </tr></table>
 </div></div>
 </div>
-<a name="%24storageDir" id="$storageDir"> </a><div class="element clickable property protected $storageDir" data-toggle="collapse" data-target=".$storageDir .collapse">
-<h2>Storage dir path (relative to $installDir)</h2>
+<a id="property_storageDir"> </a><div class="element clickable property protected property_storageDir" data-toggle="collapse" data-target=".property_storageDir .collapse">
+<h2></h2>
 <pre>$storageDir : string</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\FileService\LocalFileService::$$storageDir</td>
@@ -385,8 +403,8 @@ delivered as part of the storage identifier.</h2>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T17:01:06Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:42:24Z.<br></footer></div>
 </div>
 </body>
 </html>

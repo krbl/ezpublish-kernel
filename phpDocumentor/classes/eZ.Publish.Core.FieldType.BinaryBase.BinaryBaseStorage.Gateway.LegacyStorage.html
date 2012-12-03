@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,63 +61,84 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#countFileReferences" title="countFileReferences :: Returns a map with the number of refereces each file from $files has"><span class="description">Returns a map with the number of refereces each file from $files has</span><pre>countFileReferences()</pre></a></li>
-<li class="method public "><a href="#getFileReferenceData" title="getFileReferenceData :: Returns the file reference data for the given $fieldId in $versionNo"><span class="description">Returns the file reference data for the given $fieldId in $versionNo</span><pre>getFileReferenceData()</pre></a></li>
-<li class="method public "><a href="#getReferencedFiles" title="getReferencedFiles :: Returns a set o file references, referenced by the given $fieldIds."><span class="description">Returns a set o file references, referenced by the given $fieldIds.</span><pre>getReferencedFiles()</pre></a></li>
-<li class="method public "><a href="#prependMimeToPath" title="prependMimeToPath :: Prepends $path with the first part of the given $mimeType."><span class="description">Prepends $path with the first part of the given $mimeType.</span><pre>prependMimeToPath()</pre></a></li>
-<li class="method public "><a href="#removeFileReference" title="removeFileReference :: Removes a specific file reference for $fieldId and $versionId"><span class="description">Removes a specific file reference for $fieldId and $versionId</span><pre>removeFileReference()</pre></a></li>
-<li class="method public "><a href="#removeFileReferences" title="removeFileReferences :: Removes all file references for the given $fieldIds"><span class="description">Removes all file references for the given $fieldIds</span><pre>removeFileReferences()</pre></a></li>
-<li class="method public "><a href="#removeMimeFromPath" title="removeMimeFromPath :: Removes the prepended mime-type directory from $path for legacy storage."><span class="description">Removes the prepended mime-type directory from $path for legacy storage.</span><pre>removeMimeFromPath()</pre></a></li>
-<li class="method public "><a href="#setConnection" title="setConnection :: Set database handler for this gateway"><span class="description">Set database handler for this gateway</span><pre>setConnection()</pre></a></li>
-<li class="method public "><a href="#storeFileReference" title="storeFileReference :: Stores the file reference in $field for $versionNo"><span class="description">Stores the file reference in $field for $versionNo</span><pre>storeFileReference()</pre></a></li>
-<li class="nav-header protected">» Protected</li>
-<li class="method protected "><a href="#castToPropertyValue" title="castToPropertyValue :: Returns $value casted as specified by {@link getPropertyMapping()}."><span class="description">Returns $value casted as specified by {@link getPropertyMapping()}.</span><pre>castToPropertyValue()</pre></a></li>
-<li class="method protected "><a href="#getConnection" title="getConnection :: Returns the active connection"><span class="description">Returns the active connection</span><pre>getConnection()</pre></a></li>
-<li class="method protected "><a href="#getPropertyMapping" title="getPropertyMapping :: Returns a column to property mapping for the storage table."><span class="description">Returns a column to property mapping for the storage table.</span><pre>getPropertyMapping()</pre></a></li>
-<li class="method protected "><a href="#getStorageTable" title="getStorageTable :: Returns the table name to store data in."><span class="description">Returns the table name to store data in.</span><pre>getStorageTable()</pre></a></li>
-<li class="method protected "><a href="#setFetchColumns" title="setFetchColumns :: Set columns to be fetched from the database"><span class="description">Set columns to be fetched from the database</span><pre>setFetchColumns()</pre></a></li>
-<li class="method protected "><a href="#setInsertColumns" title="setInsertColumns :: Sets the required insert columns to $selectQuery."><span class="description">Sets the required insert columns to $selectQuery.</span><pre>setInsertColumns()</pre></a></li>
-<li class="method protected "><a href="#toPropertyName" title="toPropertyName :: Returns the property name for the given $columnName"><span class="description">Returns the property name for the given $columnName</span><pre>toPropertyName()</pre></a></li>
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_countFileReferences" title="countFileReferences :: Returns a map with the number of refereces each file from $files has"><span class="description">Returns a map with the number of refereces each file from $files has</span><pre>countFileReferences()</pre></a></li>
+<li class="method public "><a href="#method_getFileReferenceData" title="getFileReferenceData :: Returns the file reference data for the given $fieldId in $versionNo"><span class="description">Returns the file reference data for the given $fieldId in $versionNo</span><pre>getFileReferenceData()</pre></a></li>
+<li class="method public "><a href="#method_getReferencedFiles" title="getReferencedFiles :: Returns a set o file references, referenced by the given $fieldIds."><span class="description">Returns a set o file references, referenced by the given $fieldIds.</span><pre>getReferencedFiles()</pre></a></li>
+<li class="method public "><a href="#method_prependMimeToPath" title="prependMimeToPath :: Prepends $path with the first part of the given $mimeType."><span class="description">Prepends $path with the first part of the given $mimeType.</span><pre>prependMimeToPath()</pre></a></li>
+<li class="method public "><a href="#method_removeFileReference" title="removeFileReference :: Removes a specific file reference for $fieldId and $versionId"><span class="description">Removes a specific file reference for $fieldId and $versionId</span><pre>removeFileReference()</pre></a></li>
+<li class="method public "><a href="#method_removeFileReferences" title="removeFileReferences :: Removes all file references for the given $fieldIds"><span class="description">Removes all file references for the given $fieldIds</span><pre>removeFileReferences()</pre></a></li>
+<li class="method public "><a href="#method_removeMimeFromPath" title="removeMimeFromPath :: Removes the prepended mime-type directory from $path for legacy storage."><span class="description">Removes the prepended mime-type directory from $path for legacy storage.</span><pre>removeMimeFromPath()</pre></a></li>
+<li class="method public "><a href="#method_setConnection" title="setConnection :: Set database handler for this gateway"><span class="description">Set database handler for this gateway</span><pre>setConnection()</pre></a></li>
+<li class="method public "><a href="#method_storeFileReference" title="storeFileReference :: Stores the file reference in $field for $versionNo"><span class="description">Stores the file reference in $field for $versionNo</span><pre>storeFileReference()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method_castToPropertyValue" title="castToPropertyValue :: Returns $value casted as specified by {@link getPropertyMapping()}."><span class="description">Returns $value casted as specified by {@link getPropertyMapping()}.</span><pre>castToPropertyValue()</pre></a></li>
+<li class="method protected "><a href="#method_getConnection" title="getConnection :: Returns the active connection"><span class="description">Returns the active connection</span><pre>getConnection()</pre></a></li>
+<li class="method protected "><a href="#method_getPropertyMapping" title="getPropertyMapping :: Returns a column to property mapping for the storage table."><span class="description">Returns a column to property mapping for the storage table.</span><pre>getPropertyMapping()</pre></a></li>
+<li class="method protected "><a href="#method_getStorageTable" title="getStorageTable :: Returns the table name to store data in."><span class="description">Returns the table name to store data in.</span><pre>getStorageTable()</pre></a></li>
+<li class="method protected "><a href="#method_setFetchColumns" title="setFetchColumns :: Set columns to be fetched from the database"><span class="description">Set columns to be fetched from the database</span><pre>setFetchColumns()</pre></a></li>
+<li class="method protected "><a href="#method_setInsertColumns" title="setInsertColumns :: Sets the required insert columns to $selectQuery."><span class="description">Sets the required insert columns to $selectQuery.</span><pre>setInsertColumns()</pre></a></li>
+<li class="method protected "><a href="#method_toPropertyName" title="toPropertyName :: Returns the property name for the given $columnName"><span class="description">Returns the property name for the given $columnName</span><pre>toPropertyName()</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected "><a href="#%24dbHandler" title="$dbHandler :: Connection"><span class="description">Connection</span><pre>$dbHandler</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="property protected "><a href="#property_dbHandler" title="$dbHandler :: Connection"><span class="description"></span><pre>$dbHandler</pre></a></li></ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CFieldType%5CBinaryBase%5CBinaryBaseStorage%5CGateway%5CLegacyStorage" id="\eZ\Publish\Core\FieldType\BinaryBase\BinaryBaseStorage\Gateway\LegacyStorage"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\FieldType\BinaryBase\BinaryBaseStorage\Gateway\LegacyStorage"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.FieldType.html">FieldType</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.FieldType.BinaryBase.html">BinaryBase</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.FieldType.BinaryBase.BinaryBaseStorage.html">BinaryBaseStorage</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.FieldType.BinaryBase.BinaryBaseStorage.Gateway.html">Gateway</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.FieldType.html">FieldType</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.FieldType.BinaryBase.html">BinaryBase</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.FieldType.BinaryBase.BinaryBaseStorage.html">BinaryBaseStorage</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.FieldType.BinaryBase.BinaryBaseStorage.Gateway.html">Gateway</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.FieldType.BinaryBase.BinaryBaseStorage.Gateway.LegacyStorage.html">LegacyStorage</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.FieldType.BinaryBase.BinaryBaseStorage.Gateway.LegacyStorage.html" class="element class">
+<div class="element class">
 <p class="short_description">Abstract base class for storage gateways</p>
 <div class="details">
-<p class="long_description"><p>This base class must be extended by storage gateways to be used with a
+<div class="long_description"><p>This base class must be extended by storage gateways to be used with a
 <a href="eZ\Publish\Core\FieldType\GatewayBasedStorage">eZ\Publish\Core\FieldType\GatewayBasedStorage</a> based storage
 implementation.</p>
 
 <p>The <a href="setConnection()">setConnection()</a> method is called by the GatewayBasedStorage to
-set the connection from the current persistence context.</p></p>
+set the connection from the current persistence context.</p></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="countFileReferences" id="countFileReferences"></a><div class="element clickable method public countFileReferences" data-toggle="collapse" data-target=".countFileReferences .collapse">
+<a id="method_countFileReferences"></a><div class="element clickable method public method_countFileReferences" data-toggle="collapse" data-target=".method_countFileReferences .collapse">
 <h2>Returns a map with the number of refereces each file from $files has</h2>
-<pre>countFileReferences(\array $files) : array</pre>
+<pre>countFileReferences(array $files) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$files</h4>
@@ -126,12 +148,12 @@ set the connection from the current persistence context.</p></p>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="getFileReferenceData" id="getFileReferenceData"></a><div class="element clickable method public getFileReferenceData" data-toggle="collapse" data-target=".getFileReferenceData .collapse">
+<a id="method_getFileReferenceData"></a><div class="element clickable method public method_getFileReferenceData" data-toggle="collapse" data-target=".method_getFileReferenceData .collapse">
 <h2>Returns the file reference data for the given $fieldId in $versionNo</h2>
 <pre>getFileReferenceData(mixed $fieldId, int $versionNo) : array | void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$fieldId</h4>
@@ -147,31 +169,28 @@ set the connection from the current persistence context.</p></p>
 </div>
 </div></div>
 </div>
-<a name="getReferencedFiles" id="getReferencedFiles"></a><div class="element clickable method public getReferencedFiles" data-toggle="collapse" data-target=".getReferencedFiles .collapse">
+<a id="method_getReferencedFiles"></a><div class="element clickable method public method_getReferencedFiles" data-toggle="collapse" data-target=".method_getReferencedFiles .collapse">
 <h2>Returns a set o file references, referenced by the given $fieldIds.</h2>
-<pre>getReferencedFiles(\array $fieldIds, $versionNo) : array</pre>
+<pre>getReferencedFiles(array $fieldIds, $versionNo) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$fieldIds</h4>
 <code>array</code>
 </div>
-<div class="subelement argument">
-<h4>$versionNo</h4>
-<code></code>
-</div>
+<div class="subelement argument"><h4>$versionNo</h4></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="prependMimeToPath" id="prependMimeToPath"></a><div class="element clickable method public prependMimeToPath" data-toggle="collapse" data-target=".prependMimeToPath .collapse">
+<a id="method_prependMimeToPath"></a><div class="element clickable method public method_prependMimeToPath" data-toggle="collapse" data-target=".method_prependMimeToPath .collapse">
 <h2>Prepends $path with the first part of the given $mimeType.</h2>
 <pre>prependMimeToPath(string $path, string $mimeType) : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>protected</th>
 <td></td>
@@ -189,12 +208,12 @@ set the connection from the current persistence context.</p></p>
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="removeFileReference" id="removeFileReference"></a><div class="element clickable method public removeFileReference" data-toggle="collapse" data-target=".removeFileReference .collapse">
+<a id="method_removeFileReference"></a><div class="element clickable method public method_removeFileReference" data-toggle="collapse" data-target=".method_removeFileReference .collapse">
 <h2>Removes a specific file reference for $fieldId and $versionId</h2>
 <pre>removeFileReference(mixed $fieldId, int $versionNo) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$fieldId</h4>
@@ -206,29 +225,26 @@ set the connection from the current persistence context.</p></p>
 </div>
 </div></div>
 </div>
-<a name="removeFileReferences" id="removeFileReferences"></a><div class="element clickable method public removeFileReferences" data-toggle="collapse" data-target=".removeFileReferences .collapse">
+<a id="method_removeFileReferences"></a><div class="element clickable method public method_removeFileReferences" data-toggle="collapse" data-target=".method_removeFileReferences .collapse">
 <h2>Removes all file references for the given $fieldIds</h2>
-<pre>removeFileReferences(\array $fieldIds, $versionNo) : void</pre>
+<pre>removeFileReferences(array $fieldIds, $versionNo) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$fieldIds</h4>
 <code>array</code>
 </div>
-<div class="subelement argument">
-<h4>$versionNo</h4>
-<code></code>
-</div>
+<div class="subelement argument"><h4>$versionNo</h4></div>
 </div></div>
 </div>
-<a name="removeMimeFromPath" id="removeMimeFromPath"></a><div class="element clickable method public removeMimeFromPath" data-toggle="collapse" data-target=".removeMimeFromPath .collapse">
+<a id="method_removeMimeFromPath"></a><div class="element clickable method public method_removeMimeFromPath" data-toggle="collapse" data-target=".method_removeMimeFromPath .collapse">
 <h2>Removes the prepended mime-type directory from $path for legacy storage.</h2>
 <pre>removeMimeFromPath(string $path) : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>protected</th>
 <td></td>
@@ -242,14 +258,14 @@ set the connection from the current persistence context.</p></p>
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="setConnection" id="setConnection"></a><div class="element clickable method public setConnection" data-toggle="collapse" data-target=".setConnection .collapse">
+<a id="method_setConnection"></a><div class="element clickable method public method_setConnection" data-toggle="collapse" data-target=".method_setConnection .collapse">
 <h2>Set database handler for this gateway</h2>
 <pre>setConnection(mixed $dbHandler) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Allows injection of the data storage connection to be used from external
+<div class="long_description"><p>Allows injection of the data storage connection to be used from external
 source. This can be a database connection resource or something else to
-define the storage, depending on the gateway implementation.</p></p>
+define the storage, depending on the gateway implementation.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$dbHandler</h4>
@@ -258,16 +274,17 @@ define the storage, depending on the gateway implementation.</p></p>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
-<td>if $dbHandler is not an instance of {@link \eZ\Publish\Core\Persistence\Legacy\EzcDbHandler}</td>
+<td>if $dbHandler is not an instance of
+        {@link \eZ\Publish\Core\Persistence\Legacy\EzcDbHandler}</td>
 </tr></table>
 </div></div>
 </div>
-<a name="storeFileReference" id="storeFileReference"></a><div class="element clickable method public storeFileReference" data-toggle="collapse" data-target=".storeFileReference .collapse">
+<a id="method_storeFileReference"></a><div class="element clickable method public method_storeFileReference" data-toggle="collapse" data-target=".method_storeFileReference .collapse">
 <h2>Stores the file reference in $field for $versionNo</h2>
 <pre>storeFileReference(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -279,12 +296,12 @@ define the storage, depending on the gateway implementation.</p></p>
 </div>
 </div></div>
 </div>
-<a name="castToPropertyValue" id="castToPropertyValue"></a><div class="element clickable method protected castToPropertyValue" data-toggle="collapse" data-target=".castToPropertyValue .collapse">
+<a id="method_castToPropertyValue"></a><div class="element clickable method protected method_castToPropertyValue" data-toggle="collapse" data-target=".method_castToPropertyValue .collapse">
 <h2>Returns $value casted as specified by {@link getPropertyMapping()}.</h2>
 <pre>castToPropertyValue(mixed $value, string $columnName) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$value</h4>
@@ -298,12 +315,12 @@ define the storage, depending on the gateway implementation.</p></p>
 <div class="subelement response"><code>mixed</code></div>
 </div></div>
 </div>
-<a name="getConnection" id="getConnection"></a><div class="element clickable method protected getConnection" data-toggle="collapse" data-target=".getConnection .collapse">
+<a id="method_getConnection"></a><div class="element clickable method protected method_getConnection" data-toggle="collapse" data-target=".method_getConnection .collapse">
 <h2>Returns the active connection</h2>
 <pre>getConnection() : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.EzcDbHandler.html">\eZ\Publish\Core\Persistence\Legacy\EzcDbHandler</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
@@ -313,30 +330,30 @@ define the storage, depending on the gateway implementation.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.Core.Persistence.Legacy.EzcDbHandler.html">\eZ\Publish\Core\Persistence\Legacy\EzcDbHandler</a></code></div>
 </div></div>
 </div>
-<a name="getPropertyMapping" id="getPropertyMapping"></a><div class="element clickable method protected getPropertyMapping" data-toggle="collapse" data-target=".getPropertyMapping .collapse">
+<a id="method_getPropertyMapping"></a><div class="element clickable method protected method_getPropertyMapping" data-toggle="collapse" data-target=".method_getPropertyMapping .collapse">
 <h2>Returns a column to property mapping for the storage table.</h2>
 <pre>getPropertyMapping() : void</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="getStorageTable" id="getStorageTable"></a><div class="element clickable method protected getStorageTable" data-toggle="collapse" data-target=".getStorageTable .collapse">
+<a id="method_getStorageTable"></a><div class="element clickable method protected method_getStorageTable" data-toggle="collapse" data-target=".method_getStorageTable .collapse">
 <h2>Returns the table name to store data in.</h2>
 <pre>getStorageTable() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="setFetchColumns" id="setFetchColumns"></a><div class="element clickable method protected setFetchColumns" data-toggle="collapse" data-target=".setFetchColumns .collapse">
+<a id="method_setFetchColumns"></a><div class="element clickable method protected method_setFetchColumns" data-toggle="collapse" data-target=".method_setFetchColumns .collapse">
 <h2>Set columns to be fetched from the database</h2>
 <pre>setFetchColumns(\ezcQuerySelect $selectQuery, int $fieldId, int $versionNo) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>This method is intended to be overwritten by derived classes in order to
+<div class="long_description"><p>This method is intended to be overwritten by derived classes in order to
 add additional columns to be fetched from the database. Please do not
-forget to call the parent when overwriting this method.</p></p>
+forget to call the parent when overwriting this method.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$selectQuery</h4>
@@ -352,14 +369,14 @@ forget to call the parent when overwriting this method.</p></p>
 </div>
 </div></div>
 </div>
-<a name="setInsertColumns" id="setInsertColumns"></a><div class="element clickable method protected setInsertColumns" data-toggle="collapse" data-target=".setInsertColumns .collapse">
+<a id="method_setInsertColumns"></a><div class="element clickable method protected method_setInsertColumns" data-toggle="collapse" data-target=".method_setInsertColumns .collapse">
 <h2>Sets the required insert columns to $selectQuery.</h2>
 <pre>setInsertColumns(\ezcQueryInsert $insertQuery, \eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>This method is intended to be overwritten by derived classes in order to
+<div class="long_description"><p>This method is intended to be overwritten by derived classes in order to
 add additional columns to be set in the database. Please do not forget
-to call the parent when overwriting this method.</p></p>
+to call the parent when overwriting this method.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$insertQuery</h4>
@@ -375,12 +392,12 @@ to call the parent when overwriting this method.</p></p>
 </div>
 </div></div>
 </div>
-<a name="toPropertyName" id="toPropertyName"></a><div class="element clickable method protected toPropertyName" data-toggle="collapse" data-target=".toPropertyName .collapse">
+<a id="method_toPropertyName"></a><div class="element clickable method protected method_toPropertyName" data-toggle="collapse" data-target=".method_toPropertyName .collapse">
 <h2>Returns the property name for the given $columnName</h2>
 <pre>toPropertyName(string $columnName) : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$columnName</h4>
@@ -392,11 +409,11 @@ to call the parent when overwriting this method.</p></p>
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24dbHandler" id="$dbHandler"> </a><div class="element clickable property protected $dbHandler" data-toggle="collapse" data-target=".$dbHandler .collapse">
-<h2>Connection</h2>
+<a id="property_dbHandler"> </a><div class="element clickable property protected property_dbHandler" data-toggle="collapse" data-target=".property_dbHandler .collapse">
+<h2></h2>
 <pre>$dbHandler : mixed</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
 </div>
@@ -404,8 +421,8 @@ to call the parent when overwriting this method.</p></p>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T17:00:00Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:41:29Z.<br></footer></div>
 </div>
 </body>
 </html>

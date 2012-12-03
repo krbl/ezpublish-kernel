@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,57 +61,72 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#__construct" title="__construct :: Setups service with reference to repository object that created it &amp; corresponding handler"><span class="description">Setups service with reference to repository object that created it &amp; corresponding handler</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#createLanguage" title="createLanguage :: Creates the a new Language in the content repository"><span class="description">Creates the a new Language in the content repository</span><pre>createLanguage()</pre></a></li>
-<li class="method public "><a href="#deleteLanguage" title="deleteLanguage :: Deletes  a language from content repository"><span class="description">Deletes  a language from content repository</span><pre>deleteLanguage()</pre></a></li>
-<li class="method public "><a href="#disableLanguage" title="disableLanguage :: Disables a language"><span class="description">Disables a language</span><pre>disableLanguage()</pre></a></li>
-<li class="method public "><a href="#enableLanguage" title="enableLanguage :: Enables a language"><span class="description">Enables a language</span><pre>enableLanguage()</pre></a></li>
-<li class="method public "><a href="#getDefaultLanguageCode" title="getDefaultLanguageCode :: Returns a configured default language code"><span class="description">Returns a configured default language code</span><pre>getDefaultLanguageCode()</pre></a></li>
-<li class="method public "><a href="#loadLanguage" title="loadLanguage :: Loads a Language from its language code ($languageCode)"><span class="description">Loads a Language from its language code ($languageCode)</span><pre>loadLanguage()</pre></a></li>
-<li class="method public "><a href="#loadLanguageById" title="loadLanguageById :: Loads a Language by its id ($languageId)"><span class="description">Loads a Language by its id ($languageId)</span><pre>loadLanguageById()</pre></a></li>
-<li class="method public "><a href="#loadLanguages" title="loadLanguages :: Loads all Languages"><span class="description">Loads all Languages</span><pre>loadLanguages()</pre></a></li>
-<li class="method public "><a href="#newLanguageCreateStruct" title="newLanguageCreateStruct :: Instantiates an object to be used for creating languages"><span class="description">Instantiates an object to be used for creating languages</span><pre>newLanguageCreateStruct()</pre></a></li>
-<li class="method public "><a href="#updateLanguageName" title="updateLanguageName :: Changes the name of the language in the content repository"><span class="description">Changes the name of the language in the content repository</span><pre>updateLanguageName()</pre></a></li>
-<li class="nav-header protected">» Protected</li>
-<li class="method protected "><a href="#buildDomainObject" title="buildDomainObject :: Builds Language domain object from ValueObject returned by Persistence API"><span class="description">Builds Language domain object from ValueObject returned by Persistence API</span><pre>buildDomainObject()</pre></a></li>
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Setups service with reference to repository object that created it &amp; corresponding handler"><span class="description">Setups service with reference to repository object that created it &amp; corresponding handler</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_createLanguage" title="createLanguage :: Creates the a new Language in the content repository"><span class="description">Creates the a new Language in the content repository</span><pre>createLanguage()</pre></a></li>
+<li class="method public "><a href="#method_deleteLanguage" title="deleteLanguage :: Deletes  a language from content repository"><span class="description">Deletes  a language from content repository</span><pre>deleteLanguage()</pre></a></li>
+<li class="method public "><a href="#method_disableLanguage" title="disableLanguage :: Disables a language"><span class="description">Disables a language</span><pre>disableLanguage()</pre></a></li>
+<li class="method public "><a href="#method_enableLanguage" title="enableLanguage :: Enables a language"><span class="description">Enables a language</span><pre>enableLanguage()</pre></a></li>
+<li class="method public "><a href="#method_getDefaultLanguageCode" title="getDefaultLanguageCode :: Returns a configured default language code"><span class="description">Returns a configured default language code</span><pre>getDefaultLanguageCode()</pre></a></li>
+<li class="method public "><a href="#method_loadLanguage" title="loadLanguage :: Loads a Language from its language code ($languageCode)"><span class="description">Loads a Language from its language code ($languageCode)</span><pre>loadLanguage()</pre></a></li>
+<li class="method public "><a href="#method_loadLanguageById" title="loadLanguageById :: Loads a Language by its id ($languageId)"><span class="description">Loads a Language by its id ($languageId)</span><pre>loadLanguageById()</pre></a></li>
+<li class="method public "><a href="#method_loadLanguages" title="loadLanguages :: Loads all Languages"><span class="description">Loads all Languages</span><pre>loadLanguages()</pre></a></li>
+<li class="method public "><a href="#method_newLanguageCreateStruct" title="newLanguageCreateStruct :: Instantiates an object to be used for creating languages"><span class="description">Instantiates an object to be used for creating languages</span><pre>newLanguageCreateStruct()</pre></a></li>
+<li class="method public "><a href="#method_updateLanguageName" title="updateLanguageName :: Changes the name of the language in the content repository"><span class="description">Changes the name of the language in the content repository</span><pre>updateLanguageName()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="method protected "><a href="#method_buildDomainObject" title="buildDomainObject :: Builds Language domain object from ValueObject returned by Persistence API"><span class="description">Builds Language domain object from ValueObject returned by Persistence API</span><pre>buildDomainObject()</pre></a></li></ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected "><a href="#%24languageHandler" title="$languageHandler :: "><span class="description">$languageHandler</span><pre>$languageHandler</pre></a></li>
-<li class="property protected "><a href="#%24repository" title="$repository :: "><span class="description">$repository</span><pre>$repository</pre></a></li>
-<li class="property protected "><a href="#%24settings" title="$settings :: "><span class="description">$settings</span><pre>$settings</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_languageHandler" title="$languageHandler :: "><span class="description"></span><pre>$languageHandler</pre></a></li>
+<li class="property protected "><a href="#property_repository" title="$repository :: "><span class="description"></span><pre>$repository</pre></a></li>
+<li class="property protected "><a href="#property_settings" title="$settings :: "><span class="description"></span><pre>$settings</pre></a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CRepository%5CLanguageService" id="\eZ\Publish\Core\Repository\LanguageService"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\Repository\LanguageService"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Repository.html">Repository</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Repository.html">Repository</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.Repository.LanguageService.html">LanguageService</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.Repository.LanguageService.html" class="element class">
+<div class="element class">
 <p class="short_description">Language service, used for language operations</p>
 <div class="details">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>package</th>
 <td><a href="../packages/eZ.Publish.Core.Repository.html">eZ\Publish\Core\Repository</a></td>
 </tr></table>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
 <h2>Setups service with reference to repository object that created it &amp; corresponding handler</h2>
-<pre>__construct(\eZ\Publish\API\Repository\Repository $repository, \eZ\Publish\SPI\Persistence\Content\Language\Handler $languageHandler, \array $settings) </pre>
+<pre>__construct(\eZ\Publish\API\Repository\Repository $repository, \eZ\Publish\SPI\Persistence\Content\Language\Handler $languageHandler, array $settings) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$repository</h4>
@@ -126,12 +142,12 @@
 </div>
 </div></div>
 </div>
-<a name="createLanguage" id="createLanguage"></a><div class="element clickable method public createLanguage" data-toggle="collapse" data-target=".createLanguage .collapse">
+<a id="method_createLanguage"></a><div class="element clickable method public method_createLanguage" data-toggle="collapse" data-target=".method_createLanguage .collapse">
 <h2>Creates the a new Language in the content repository</h2>
 <pre>createLanguage(\eZ\Publish\API\Repository\Values\Content\LanguageCreateStruct $languageCreateStruct) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Language.html">\eZ\Publish\API\Repository\Values\Content\Language</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$languageCreateStruct</h4>
@@ -152,12 +168,12 @@
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Language.html">\eZ\Publish\API\Repository\Values\Content\Language</a></code></div>
 </div></div>
 </div>
-<a name="deleteLanguage" id="deleteLanguage"></a><div class="element clickable method public deleteLanguage" data-toggle="collapse" data-target=".deleteLanguage .collapse">
+<a id="method_deleteLanguage"></a><div class="element clickable method public method_deleteLanguage" data-toggle="collapse" data-target=".method_deleteLanguage .collapse">
 <h2>Deletes  a language from content repository</h2>
 <pre>deleteLanguage(\eZ\Publish\API\Repository\Values\Content\Language $language) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$language</h4>
@@ -167,7 +183,8 @@
 <table class="table table-bordered">
 <tr>
 <th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
-<td>if language can not be deleted because it is still assigned to some content / type / (...).</td>
+<td>if language can not be deleted
+        because it is still assigned to some content / type / (...).</td>
 </tr>
 <tr>
 <th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
@@ -176,12 +193,12 @@
 </table>
 </div></div>
 </div>
-<a name="disableLanguage" id="disableLanguage"></a><div class="element clickable method public disableLanguage" data-toggle="collapse" data-target=".disableLanguage .collapse">
+<a id="method_disableLanguage"></a><div class="element clickable method public method_disableLanguage" data-toggle="collapse" data-target=".method_disableLanguage .collapse">
 <h2>Disables a language</h2>
 <pre>disableLanguage(\eZ\Publish\API\Repository\Values\Content\Language $language) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Language.html">\eZ\Publish\API\Repository\Values\Content\Language</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$language</h4>
@@ -196,12 +213,12 @@
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Language.html">\eZ\Publish\API\Repository\Values\Content\Language</a></code></div>
 </div></div>
 </div>
-<a name="enableLanguage" id="enableLanguage"></a><div class="element clickable method public enableLanguage" data-toggle="collapse" data-target=".enableLanguage .collapse">
+<a id="method_enableLanguage"></a><div class="element clickable method public method_enableLanguage" data-toggle="collapse" data-target=".method_enableLanguage .collapse">
 <h2>Enables a language</h2>
 <pre>enableLanguage(\eZ\Publish\API\Repository\Values\Content\Language $language) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Language.html">\eZ\Publish\API\Repository\Values\Content\Language</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$language</h4>
@@ -216,22 +233,22 @@
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Language.html">\eZ\Publish\API\Repository\Values\Content\Language</a></code></div>
 </div></div>
 </div>
-<a name="getDefaultLanguageCode" id="getDefaultLanguageCode"></a><div class="element clickable method public getDefaultLanguageCode" data-toggle="collapse" data-target=".getDefaultLanguageCode .collapse">
+<a id="method_getDefaultLanguageCode"></a><div class="element clickable method public method_getDefaultLanguageCode" data-toggle="collapse" data-target=".method_getDefaultLanguageCode .collapse">
 <h2>Returns a configured default language code</h2>
 <pre>getDefaultLanguageCode() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="loadLanguage" id="loadLanguage"></a><div class="element clickable method public loadLanguage" data-toggle="collapse" data-target=".loadLanguage .collapse">
+<a id="method_loadLanguage"></a><div class="element clickable method public method_loadLanguage" data-toggle="collapse" data-target=".method_loadLanguage .collapse">
 <h2>Loads a Language from its language code ($languageCode)</h2>
 <pre>loadLanguage(string $languageCode) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Language.html">\eZ\Publish\API\Repository\Values\Content\Language</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$languageCode</h4>
@@ -241,7 +258,8 @@
 <table class="table table-bordered">
 <tr>
 <th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
-<td>if languageCode argument is not string</td>
+<td>if languageCode argument
+        is not string</td>
 </tr>
 <tr>
 <th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
@@ -252,12 +270,12 @@
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Language.html">\eZ\Publish\API\Repository\Values\Content\Language</a></code></div>
 </div></div>
 </div>
-<a name="loadLanguageById" id="loadLanguageById"></a><div class="element clickable method public loadLanguageById" data-toggle="collapse" data-target=".loadLanguageById .collapse">
+<a id="method_loadLanguageById"></a><div class="element clickable method public method_loadLanguageById" data-toggle="collapse" data-target=".method_loadLanguageById .collapse">
 <h2>Loads a Language by its id ($languageId)</h2>
 <pre>loadLanguageById(int $languageId) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Language.html">\eZ\Publish\API\Repository\Values\Content\Language</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$languageId</h4>
@@ -267,7 +285,8 @@
 <table class="table table-bordered">
 <tr>
 <th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
-<td>if languageId argument is not integer</td>
+<td>if languageId argument
+        is not integer</td>
 </tr>
 <tr>
 <th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.NotFoundException.html">\eZ\Publish\API\Repository\Exceptions\NotFoundException</a></code></th>
@@ -278,32 +297,32 @@
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Language.html">\eZ\Publish\API\Repository\Values\Content\Language</a></code></div>
 </div></div>
 </div>
-<a name="loadLanguages" id="loadLanguages"></a><div class="element clickable method public loadLanguages" data-toggle="collapse" data-target=".loadLanguages .collapse">
+<a id="method_loadLanguages"></a><div class="element clickable method public method_loadLanguages" data-toggle="collapse" data-target=".method_loadLanguages .collapse">
 <h2>Loads all Languages</h2>
 <pre>loadLanguages() : <a href="Publish.API.Repository.Values.Content.Language.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CLanguage">\eZ\Publish\API\Repository\Values\Content\Language[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="Publish.API.Repository.Values.Content.Language.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CLanguage">\eZ\Publish\API\Repository\Values\Content\Language[]</a></code></div>
 </div></div>
 </div>
-<a name="newLanguageCreateStruct" id="newLanguageCreateStruct"></a><div class="element clickable method public newLanguageCreateStruct" data-toggle="collapse" data-target=".newLanguageCreateStruct .collapse">
+<a id="method_newLanguageCreateStruct"></a><div class="element clickable method public method_newLanguageCreateStruct" data-toggle="collapse" data-target=".method_newLanguageCreateStruct .collapse">
 <h2>Instantiates an object to be used for creating languages</h2>
 <pre>newLanguageCreateStruct() : <a href="../classes/eZ.Publish.API.Repository.Values.Content.LanguageCreateStruct.html">\eZ\Publish\API\Repository\Values\Content\LanguageCreateStruct</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.LanguageCreateStruct.html">\eZ\Publish\API\Repository\Values\Content\LanguageCreateStruct</a></code></div>
 </div></div>
 </div>
-<a name="updateLanguageName" id="updateLanguageName"></a><div class="element clickable method public updateLanguageName" data-toggle="collapse" data-target=".updateLanguageName .collapse">
+<a id="method_updateLanguageName"></a><div class="element clickable method public method_updateLanguageName" data-toggle="collapse" data-target=".method_updateLanguageName .collapse">
 <h2>Changes the name of the language in the content repository</h2>
 <pre>updateLanguageName(\eZ\Publish\API\Repository\Values\Content\Language $language, string $newName) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Language.html">\eZ\Publish\API\Repository\Values\Content\Language</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$language</h4>
@@ -317,7 +336,8 @@
 <table class="table table-bordered">
 <tr>
 <th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.InvalidArgumentException.html">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a></code></th>
-<td>if languageCode argument is not string</td>
+<td>if languageCode argument
+        is not string</td>
 </tr>
 <tr>
 <th><code><a href="../classes/eZ.Publish.API.Repository.Exceptions.UnauthorizedException.html">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</a></code></th>
@@ -328,12 +348,12 @@
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Language.html">\eZ\Publish\API\Repository\Values\Content\Language</a></code></div>
 </div></div>
 </div>
-<a name="buildDomainObject" id="buildDomainObject"></a><div class="element clickable method protected buildDomainObject" data-toggle="collapse" data-target=".buildDomainObject .collapse">
+<a id="method_buildDomainObject"></a><div class="element clickable method protected method_buildDomainObject" data-toggle="collapse" data-target=".method_buildDomainObject .collapse">
 <h2>Builds Language domain object from ValueObject returned by Persistence API</h2>
 <pre>buildDomainObject(\eZ\Publish\SPI\Persistence\Content\Language $spiLanguage) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Language.html">\eZ\Publish\API\Repository\Values\Content\Language</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$spiLanguage</h4>
@@ -345,23 +365,23 @@
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24languageHandler" id="$languageHandler"> </a><div class="element clickable property protected $languageHandler" data-toggle="collapse" data-target=".$languageHandler .collapse">
-<h2>$languageHandler</h2>
+<a id="property_languageHandler"> </a><div class="element clickable property protected property_languageHandler" data-toggle="collapse" data-target=".property_languageHandler .collapse">
+<h2></h2>
 <pre>$languageHandler : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Language.Handler.html">\eZ\Publish\SPI\Persistence\Content\Language\Handler</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24repository" id="$repository"> </a><div class="element clickable property protected $repository" data-toggle="collapse" data-target=".$repository .collapse">
-<h2>$repository</h2>
+<a id="property_repository"> </a><div class="element clickable property protected property_repository" data-toggle="collapse" data-target=".property_repository .collapse">
+<h2></h2>
 <pre>$repository : <a href="../classes/eZ.Publish.API.Repository.Repository.html">\eZ\Publish\API\Repository\Repository</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24settings" id="$settings"> </a><div class="element clickable property protected $settings" data-toggle="collapse" data-target=".$settings .collapse">
-<h2>$settings</h2>
+<a id="property_settings"> </a><div class="element clickable property protected property_settings" data-toggle="collapse" data-target=".property_settings .collapse">
+<h2></h2>
 <pre>$settings : array</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
 </div>
@@ -369,8 +389,8 @@
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T16:59:34Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:41:09Z.<br></footer></div>
 </div>
 </body>
 </html>

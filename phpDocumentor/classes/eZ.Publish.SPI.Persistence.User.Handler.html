@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -58,57 +59,66 @@
 <span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
 <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
 </div>
-<ul class="side-nav nav nav-list">
-<li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#addPolicy" title="addPolicy :: Adds a policy to a role"><span class="description">Adds a policy to a role</span><pre>addPolicy()</pre></a></li>
-<li class="method public "><a href="#assignRole" title="assignRole :: Assigns role to a user or user group with given limitations"><span class="description">Assigns role to a user or user group with given limitations</span><pre>assignRole()</pre></a></li>
-<li class="method public "><a href="#create" title="create :: Create a user"><span class="description">Create a user</span><pre>create()</pre></a></li>
-<li class="method public "><a href="#createRole" title="createRole :: Create new role"><span class="description">Create new role</span><pre>createRole()</pre></a></li>
-<li class="method public "><a href="#delete" title="delete :: Delete user with the given ID."><span class="description">Delete user with the given ID.</span><pre>delete()</pre></a></li>
-<li class="method public "><a href="#deleteRole" title="deleteRole :: Delete the specified role"><span class="description">Delete the specified role</span><pre>deleteRole()</pre></a></li>
-<li class="method public "><a href="#load" title="load :: Loads user with user ID."><span class="description">Loads user with user ID.</span><pre>load()</pre></a></li>
-<li class="method public "><a href="#loadByLogin" title="loadByLogin :: Loads user(s) with user login / email."><span class="description">Loads user(s) with user login / email.</span><pre>loadByLogin()</pre></a></li>
-<li class="method public "><a href="#loadPoliciesByUserId" title="loadPoliciesByUserId :: Returns the user policies associated with the user (including inherited policies from user groups)"><span class="description">Returns the user policies associated with the user (including inherited policies from user groups)</span><pre>loadPoliciesByUserId()</pre></a></li>
-<li class="method public "><a href="#loadRole" title="loadRole :: Loads a specified role by $roleId"><span class="description">Loads a specified role by $roleId</span><pre>loadRole()</pre></a></li>
-<li class="method public "><a href="#loadRoleAssignmentsByGroupId" title="loadRoleAssignmentsByGroupId :: Loads roles assignments to a user/group"><span class="description">Loads roles assignments to a user/group</span><pre>loadRoleAssignmentsByGroupId()</pre></a></li>
-<li class="method public "><a href="#loadRoleAssignmentsByRoleId" title="loadRoleAssignmentsByRoleId :: Loads roles assignments Role"><span class="description">Loads roles assignments Role</span><pre>loadRoleAssignmentsByRoleId()</pre></a></li>
-<li class="method public "><a href="#loadRoleByIdentifier" title="loadRoleByIdentifier :: Loads a specified role by $identifier"><span class="description">Loads a specified role by $identifier</span><pre>loadRoleByIdentifier()</pre></a></li>
-<li class="method public "><a href="#loadRoles" title="loadRoles :: Loads all roles"><span class="description">Loads all roles</span><pre>loadRoles()</pre></a></li>
-<li class="method public "><a href="#loadRolesByGroupId" title="loadRolesByGroupId :: Loads roles assigned to a user/group (not including inherited roles)"><span class="description">Loads roles assigned to a user/group (not including inherited roles)</span><pre>loadRolesByGroupId()</pre></a></li>
-<li class="method public "><a href="#removePolicy" title="removePolicy :: Removes a policy from a role"><span class="description">Removes a policy from a role</span><pre>removePolicy()</pre></a></li>
-<li class="method public "><a href="#unAssignRole" title="unAssignRole :: Un-assign a role"><span class="description">Un-assign a role</span><pre>unAssignRole()</pre></a></li>
-<li class="method public "><a href="#update" title="update :: Update the user information specified by the user struct"><span class="description">Update the user information specified by the user struct</span><pre>update()</pre></a></li>
-<li class="method public "><a href="#updatePolicy" title="updatePolicy :: Update a policy"><span class="description">Update a policy</span><pre>updatePolicy()</pre></a></li>
-<li class="method public "><a href="#updateRole" title="updateRole :: Update role"><span class="description">Update role</span><pre>updateRole()</pre></a></li>
+<ul class="side-nav nav nav-list"><li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_addPolicy" title="addPolicy :: Adds a policy to a role"><span class="description">Adds a policy to a role</span><pre>addPolicy()</pre></a></li>
+<li class="method public "><a href="#method_assignRole" title="assignRole :: Assigns role to a user or user group with given limitations"><span class="description">Assigns role to a user or user group with given limitations</span><pre>assignRole()</pre></a></li>
+<li class="method public "><a href="#method_create" title="create :: Create a user"><span class="description">Create a user</span><pre>create()</pre></a></li>
+<li class="method public "><a href="#method_createRole" title="createRole :: Create new role"><span class="description">Create new role</span><pre>createRole()</pre></a></li>
+<li class="method public "><a href="#method_delete" title="delete :: Delete user with the given ID."><span class="description">Delete user with the given ID.</span><pre>delete()</pre></a></li>
+<li class="method public "><a href="#method_deleteRole" title="deleteRole :: Delete the specified role"><span class="description">Delete the specified role</span><pre>deleteRole()</pre></a></li>
+<li class="method public "><a href="#method_load" title="load :: Loads user with user ID."><span class="description">Loads user with user ID.</span><pre>load()</pre></a></li>
+<li class="method public "><a href="#method_loadByLogin" title="loadByLogin :: Loads user(s) with user login / email."><span class="description">Loads user(s) with user login / email.</span><pre>loadByLogin()</pre></a></li>
+<li class="method public "><a href="#method_loadPoliciesByUserId" title="loadPoliciesByUserId :: Returns the user policies associated with the user (including inherited policies from user groups)"><span class="description">Returns the user policies associated with the user (including inherited policies from user groups)</span><pre>loadPoliciesByUserId()</pre></a></li>
+<li class="method public "><a href="#method_loadRole" title="loadRole :: Loads a specified role by $roleId"><span class="description">Loads a specified role by $roleId</span><pre>loadRole()</pre></a></li>
+<li class="method public "><a href="#method_loadRoleAssignmentsByGroupId" title="loadRoleAssignmentsByGroupId :: Loads roles assignments to a user/group"><span class="description">Loads roles assignments to a user/group</span><pre>loadRoleAssignmentsByGroupId()</pre></a></li>
+<li class="method public "><a href="#method_loadRoleAssignmentsByRoleId" title="loadRoleAssignmentsByRoleId :: Loads roles assignments Role"><span class="description">Loads roles assignments Role</span><pre>loadRoleAssignmentsByRoleId()</pre></a></li>
+<li class="method public "><a href="#method_loadRoleByIdentifier" title="loadRoleByIdentifier :: Loads a specified role by $identifier"><span class="description">Loads a specified role by $identifier</span><pre>loadRoleByIdentifier()</pre></a></li>
+<li class="method public "><a href="#method_loadRoles" title="loadRoles :: Loads all roles"><span class="description">Loads all roles</span><pre>loadRoles()</pre></a></li>
+<li class="method public "><a href="#method_loadRolesByGroupId" title="loadRolesByGroupId :: Loads roles assigned to a user/group (not including inherited roles)"><span class="description">Loads roles assigned to a user/group (not including inherited roles)</span><pre>loadRolesByGroupId()</pre></a></li>
+<li class="method public "><a href="#method_removePolicy" title="removePolicy :: Removes a policy from a role"><span class="description">Removes a policy from a role</span><pre>removePolicy()</pre></a></li>
+<li class="method public "><a href="#method_unAssignRole" title="unAssignRole :: Un-assign a role"><span class="description">Un-assign a role</span><pre>unAssignRole()</pre></a></li>
+<li class="method public "><a href="#method_update" title="update :: Update the user information specified by the user struct"><span class="description">Update the user information specified by the user struct</span><pre>update()</pre></a></li>
+<li class="method public "><a href="#method_updatePolicy" title="updatePolicy :: Update a policy"><span class="description">Update a policy</span><pre>updatePolicy()</pre></a></li>
+<li class="method public "><a href="#method_updateRole" title="updateRole :: Update role"><span class="description">Update role</span><pre>updateRole()</pre></a></li>
 </ul>
+</li></ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CHandler" id="\eZ\Publish\SPI\Persistence\User\Handler"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\SPI\Persistence\User\Handler"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.SPI.html">SPI</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.SPI.Persistence.html">Persistence</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.SPI.Persistence.User.html">User</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.SPI.html">SPI</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.SPI.Persistence.html">Persistence</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.SPI.Persistence.User.html">User</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.SPI.Persistence.User.Handler.html">Handler</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.SPI.Persistence.User.Handler.html" class="element interface">
+<div class="element interface">
 <p class="short_description">Storage Engine handler for user module</p>
 <div class="details">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="addPolicy" id="addPolicy"></a><div class="element clickable method public addPolicy" data-toggle="collapse" data-target=".addPolicy .collapse">
+<a id="method_addPolicy"></a><div class="element clickable method public method_addPolicy" data-toggle="collapse" data-target=".method_addPolicy .collapse">
 <h2>Adds a policy to a role</h2>
 <pre>addPolicy(mixed $roleId, \eZ\Publish\SPI\Persistence\User\Policy $policy) : <a href="../classes/eZ.Publish.SPI.Persistence.User.Policy.html">\eZ\Publish\SPI\Persistence\User\Policy</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>todo</th>
 <td>Throw on invalid Role Id?</td>
@@ -131,12 +141,12 @@
 <div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.User.Policy.html">\eZ\Publish\SPI\Persistence\User\Policy</a></code></div>
 </div></div>
 </div>
-<a name="assignRole" id="assignRole"></a><div class="element clickable method public assignRole" data-toggle="collapse" data-target=".assignRole .collapse">
+<a id="method_assignRole"></a><div class="element clickable method public method_assignRole" data-toggle="collapse" data-target=".method_assignRole .collapse">
 <h2>Assigns role to a user or user group with given limitations</h2>
-<pre>assignRole(mixed $contentId, mixed $roleId, \array $limitation) </pre>
+<pre>assignRole(mixed $contentId, mixed $roleId, array $limitation) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>The limitation array looks like:</p>
+<div class="long_description"><p>The limitation array looks like:</p>
 
 <pre><code> array(
      'Subtree' => array(
@@ -149,7 +159,7 @@
 </code></pre>
 
 <p>Where the keys are the limitation identifiers, and the respective values
-are an array of limitation values. The limitation parameter is optional.</p></p>
+are an array of limitation values. The limitation parameter is optional.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -164,13 +174,13 @@ are an array of limitation values. The limitation parameter is optional.</p></p>
 </div>
 </div></div>
 </div>
-<a name="create" id="create"></a><div class="element clickable method public create" data-toggle="collapse" data-target=".create .collapse">
+<a id="method_create"></a><div class="element clickable method public method_create" data-toggle="collapse" data-target=".method_create .collapse">
 <h2>Create a user</h2>
 <pre>create(\eZ\Publish\SPI\Persistence\User $user) : <a href="../classes/eZ.Publish.SPI.Persistence.User.html">\eZ\Publish\SPI\Persistence\User</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>The User struct used to create the user will contain an ID which is used
-to reference the user.</p></p>
+<div class="long_description"><p>The User struct used to create the user will contain an ID which is used
+to reference the user.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$user</h4>
@@ -180,12 +190,12 @@ to reference the user.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.User.html">\eZ\Publish\SPI\Persistence\User</a></code></div>
 </div></div>
 </div>
-<a name="createRole" id="createRole"></a><div class="element clickable method public createRole" data-toggle="collapse" data-target=".createRole .collapse">
+<a id="method_createRole"></a><div class="element clickable method public method_createRole" data-toggle="collapse" data-target=".method_createRole .collapse">
 <h2>Create new role</h2>
 <pre>createRole(\eZ\Publish\SPI\Persistence\User\Role $role) : <a href="../classes/eZ.Publish.SPI.Persistence.User.Role.html">\eZ\Publish\SPI\Persistence\User\Role</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$role</h4>
@@ -195,12 +205,12 @@ to reference the user.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.User.Role.html">\eZ\Publish\SPI\Persistence\User\Role</a></code></div>
 </div></div>
 </div>
-<a name="delete" id="delete"></a><div class="element clickable method public delete" data-toggle="collapse" data-target=".delete .collapse">
+<a id="method_delete"></a><div class="element clickable method public method_delete" data-toggle="collapse" data-target=".method_delete .collapse">
 <h2>Delete user with the given ID.</h2>
 <pre>delete(mixed $userId) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>todo</th>
 <td>Throw on missing user?</td>
@@ -212,12 +222,12 @@ to reference the user.</p></p>
 </div>
 </div></div>
 </div>
-<a name="deleteRole" id="deleteRole"></a><div class="element clickable method public deleteRole" data-toggle="collapse" data-target=".deleteRole .collapse">
+<a id="method_deleteRole"></a><div class="element clickable method public method_deleteRole" data-toggle="collapse" data-target=".method_deleteRole .collapse">
 <h2>Delete the specified role</h2>
 <pre>deleteRole(mixed $roleId) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$roleId</h4>
@@ -225,12 +235,12 @@ to reference the user.</p></p>
 </div>
 </div></div>
 </div>
-<a name="load" id="load"></a><div class="element clickable method public load" data-toggle="collapse" data-target=".load .collapse">
+<a id="method_load"></a><div class="element clickable method public method_load" data-toggle="collapse" data-target=".method_load .collapse">
 <h2>Loads user with user ID.</h2>
 <pre>load(mixed $userId) : <a href="../classes/eZ.Publish.SPI.Persistence.User.html">\eZ\Publish\SPI\Persistence\User</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$userId</h4>
@@ -245,12 +255,12 @@ to reference the user.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.User.html">\eZ\Publish\SPI\Persistence\User</a></code></div>
 </div></div>
 </div>
-<a name="loadByLogin" id="loadByLogin"></a><div class="element clickable method public loadByLogin" data-toggle="collapse" data-target=".loadByLogin .collapse">
+<a id="method_loadByLogin"></a><div class="element clickable method public method_loadByLogin" data-toggle="collapse" data-target=".method_loadByLogin .collapse">
 <h2>Loads user(s) with user login / email.</h2>
 <pre>loadByLogin(string $login, boolean $alsoMatchEmail) : <a href="Publish.SPI.Persistence.User.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser">\eZ\Publish\SPI\Persistence\User[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Optimized for login use (hence the possibility to match email and return several users).</p></p>
+<div class="long_description"><p>Optimized for login use (hence the possibility to match email and return several users).</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$login</h4>
@@ -264,12 +274,12 @@ to reference the user.</p></p>
 <div class="subelement response"><code><a href="Publish.SPI.Persistence.User.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser">\eZ\Publish\SPI\Persistence\User[]</a></code></div>
 </div></div>
 </div>
-<a name="loadPoliciesByUserId" id="loadPoliciesByUserId"></a><div class="element clickable method public loadPoliciesByUserId" data-toggle="collapse" data-target=".loadPoliciesByUserId .collapse">
+<a id="method_loadPoliciesByUserId"></a><div class="element clickable method public method_loadPoliciesByUserId" data-toggle="collapse" data-target=".method_loadPoliciesByUserId .collapse">
 <h2>Returns the user policies associated with the user (including inherited policies from user groups)</h2>
 <pre>loadPoliciesByUserId(mixed $userId) : <a href="Publish.SPI.Persistence.User.Policy.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CPolicy">\eZ\Publish\SPI\Persistence\User\Policy[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$userId</h4>
@@ -278,12 +288,12 @@ to reference the user.</p></p>
 <div class="subelement response"><code><a href="Publish.SPI.Persistence.User.Policy.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CPolicy">\eZ\Publish\SPI\Persistence\User\Policy[]</a></code></div>
 </div></div>
 </div>
-<a name="loadRole" id="loadRole"></a><div class="element clickable method public loadRole" data-toggle="collapse" data-target=".loadRole .collapse">
+<a id="method_loadRole"></a><div class="element clickable method public method_loadRole" data-toggle="collapse" data-target=".method_loadRole .collapse">
 <h2>Loads a specified role by $roleId</h2>
 <pre>loadRole(mixed $roleId) : <a href="../classes/eZ.Publish.SPI.Persistence.User.Role.html">\eZ\Publish\SPI\Persistence\User\Role</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$roleId</h4>
@@ -298,16 +308,17 @@ to reference the user.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.User.Role.html">\eZ\Publish\SPI\Persistence\User\Role</a></code></div>
 </div></div>
 </div>
-<a name="loadRoleAssignmentsByGroupId" id="loadRoleAssignmentsByGroupId"></a><div class="element clickable method public loadRoleAssignmentsByGroupId" data-toggle="collapse" data-target=".loadRoleAssignmentsByGroupId .collapse">
+<a id="method_loadRoleAssignmentsByGroupId"></a><div class="element clickable method public method_loadRoleAssignmentsByGroupId" data-toggle="collapse" data-target=".method_loadRoleAssignmentsByGroupId .collapse">
 <h2>Loads roles assignments to a user/group</h2>
 <pre>loadRoleAssignmentsByGroupId(mixed $groupId, boolean $inherit) : <a href="Publish.SPI.Persistence.User.RoleAssignment.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRoleAssignment">\eZ\Publish\SPI\Persistence\User\RoleAssignment[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Role Assignments with same roleId and limitationIdentifier will be merged together into one.</p></p>
+<div class="long_description"><p>Role Assignments with same roleId and limitationIdentifier will be merged together into one.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$groupId</h4>
-<code>mixed</code><p>In legacy storage engine this is the content object id roles are assigned to in ezuser_role. By the nature of legacy this can currently also be used to get by $userId.</p>
+<code>mixed</code><p>In legacy storage engine this is the content object id roles are assigned to in ezuser_role.
+                     By the nature of legacy this can currently also be used to get by $userId.</p>
 </div>
 <div class="subelement argument">
 <h4>$inherit</h4>
@@ -316,12 +327,12 @@ to reference the user.</p></p>
 <div class="subelement response"><code><a href="Publish.SPI.Persistence.User.RoleAssignment.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRoleAssignment">\eZ\Publish\SPI\Persistence\User\RoleAssignment[]</a></code></div>
 </div></div>
 </div>
-<a name="loadRoleAssignmentsByRoleId" id="loadRoleAssignmentsByRoleId"></a><div class="element clickable method public loadRoleAssignmentsByRoleId" data-toggle="collapse" data-target=".loadRoleAssignmentsByRoleId .collapse">
+<a id="method_loadRoleAssignmentsByRoleId"></a><div class="element clickable method public method_loadRoleAssignmentsByRoleId" data-toggle="collapse" data-target=".method_loadRoleAssignmentsByRoleId .collapse">
 <h2>Loads roles assignments Role</h2>
 <pre>loadRoleAssignmentsByRoleId(mixed $roleId) : <a href="Publish.SPI.Persistence.User.RoleAssignment.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRoleAssignment">\eZ\Publish\SPI\Persistence\User\RoleAssignment[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Role Assignments with same roleId and limitationIdentifier will be merged together into one.</p></p>
+<div class="long_description"><p>Role Assignments with same roleId and limitationIdentifier will be merged together into one.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$roleId</h4>
@@ -331,12 +342,12 @@ to reference the user.</p></p>
 <div class="subelement response"><code><a href="Publish.SPI.Persistence.User.RoleAssignment.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRoleAssignment">\eZ\Publish\SPI\Persistence\User\RoleAssignment[]</a></code></div>
 </div></div>
 </div>
-<a name="loadRoleByIdentifier" id="loadRoleByIdentifier"></a><div class="element clickable method public loadRoleByIdentifier" data-toggle="collapse" data-target=".loadRoleByIdentifier .collapse">
+<a id="method_loadRoleByIdentifier"></a><div class="element clickable method public method_loadRoleByIdentifier" data-toggle="collapse" data-target=".method_loadRoleByIdentifier .collapse">
 <h2>Loads a specified role by $identifier</h2>
 <pre>loadRoleByIdentifier(string $identifier) : <a href="../classes/eZ.Publish.SPI.Persistence.User.Role.html">\eZ\Publish\SPI\Persistence\User\Role</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$identifier</h4>
@@ -351,37 +362,38 @@ to reference the user.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.User.Role.html">\eZ\Publish\SPI\Persistence\User\Role</a></code></div>
 </div></div>
 </div>
-<a name="loadRoles" id="loadRoles"></a><div class="element clickable method public loadRoles" data-toggle="collapse" data-target=".loadRoles .collapse">
+<a id="method_loadRoles"></a><div class="element clickable method public method_loadRoles" data-toggle="collapse" data-target=".method_loadRoles .collapse">
 <h2>Loads all roles</h2>
 <pre>loadRoles() : <a href="Publish.SPI.Persistence.User.Role.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRole">\eZ\Publish\SPI\Persistence\User\Role[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="Publish.SPI.Persistence.User.Role.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRole">\eZ\Publish\SPI\Persistence\User\Role[]</a></code></div>
 </div></div>
 </div>
-<a name="loadRolesByGroupId" id="loadRolesByGroupId"></a><div class="element clickable method public loadRolesByGroupId" data-toggle="collapse" data-target=".loadRolesByGroupId .collapse">
+<a id="method_loadRolesByGroupId"></a><div class="element clickable method public method_loadRolesByGroupId" data-toggle="collapse" data-target=".method_loadRolesByGroupId .collapse">
 <h2>Loads roles assigned to a user/group (not including inherited roles)</h2>
 <pre>loadRolesByGroupId(mixed $groupId) : <a href="Publish.SPI.Persistence.User.Role.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRole">\eZ\Publish\SPI\Persistence\User\Role[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$groupId</h4>
-<code>mixed</code><p>In legacy storage engine this is the content object id a role is assigned to. By the nature of legacy storage engine, it is therefor possible to use $userId as well here.</p>
+<code>mixed</code><p>In legacy storage engine this is the content object id a role is assigned to.
+             By the nature of legacy storage engine, it is therefor possible to use $userId as well here.</p>
 </div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="Publish.SPI.Persistence.User.Role.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CUser%5CRole">\eZ\Publish\SPI\Persistence\User\Role[]</a></code></div>
 </div></div>
 </div>
-<a name="removePolicy" id="removePolicy"></a><div class="element clickable method public removePolicy" data-toggle="collapse" data-target=".removePolicy .collapse">
+<a id="method_removePolicy"></a><div class="element clickable method public method_removePolicy" data-toggle="collapse" data-target=".method_removePolicy .collapse">
 <h2>Removes a policy from a role</h2>
 <pre>removePolicy(mixed $roleId, mixed $policyId) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>todo</th>
 <td>Throw exception on missing role / policy?</td>
@@ -397,12 +409,12 @@ to reference the user.</p></p>
 </div>
 </div></div>
 </div>
-<a name="unAssignRole" id="unAssignRole"></a><div class="element clickable method public unAssignRole" data-toggle="collapse" data-target=".unAssignRole .collapse">
+<a id="method_unAssignRole"></a><div class="element clickable method public method_unAssignRole" data-toggle="collapse" data-target=".method_unAssignRole .collapse">
 <h2>Un-assign a role</h2>
 <pre>unAssignRole(mixed $contentId, mixed $roleId) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -414,12 +426,12 @@ to reference the user.</p></p>
 </div>
 </div></div>
 </div>
-<a name="update" id="update"></a><div class="element clickable method public update" data-toggle="collapse" data-target=".update .collapse">
+<a id="method_update"></a><div class="element clickable method public method_update" data-toggle="collapse" data-target=".method_update .collapse">
 <h2>Update the user information specified by the user struct</h2>
 <pre>update(\eZ\Publish\SPI\Persistence\User $user) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$user</h4>
@@ -427,12 +439,12 @@ to reference the user.</p></p>
 </div>
 </div></div>
 </div>
-<a name="updatePolicy" id="updatePolicy"></a><div class="element clickable method public updatePolicy" data-toggle="collapse" data-target=".updatePolicy .collapse">
+<a id="method_updatePolicy"></a><div class="element clickable method public method_updatePolicy" data-toggle="collapse" data-target=".method_updatePolicy .collapse">
 <h2>Update a policy</h2>
 <pre>updatePolicy(\eZ\Publish\SPI\Persistence\User\Policy $policy) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Replaces limitations values with new values.</p></p>
+<div class="long_description"><p>Replaces limitations values with new values.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$policy</h4>
@@ -445,12 +457,12 @@ to reference the user.</p></p>
 </tr></table>
 </div></div>
 </div>
-<a name="updateRole" id="updateRole"></a><div class="element clickable method public updateRole" data-toggle="collapse" data-target=".updateRole .collapse">
+<a id="method_updateRole"></a><div class="element clickable method public method_updateRole" data-toggle="collapse" data-target=".method_updateRole .collapse">
 <h2>Update role</h2>
 <pre>updateRole(\eZ\Publish\SPI\Persistence\User\RoleUpdateStruct $role) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$role</h4>
@@ -464,8 +476,8 @@ to reference the user.</p></p>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T16:56:34Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:38:41Z.<br></footer></div>
 </div>
 </body>
 </html>

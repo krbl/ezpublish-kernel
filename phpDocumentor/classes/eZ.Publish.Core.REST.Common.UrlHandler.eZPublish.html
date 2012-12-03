@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,58 +61,80 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public inherited"><a href="#__construct" title="__construct :: Construct from optional initial map"><span class="description">Construct from optional initial map</span><pre>__construct()</pre></a></li>
-<li class="method public inherited"><a href="#addPattern" title="addPattern :: Adds a pattern for a type"><span class="description">Adds a pattern for a type</span><pre>addPattern()</pre></a></li>
-<li class="method public inherited"><a href="#generate" title="generate :: Generate a URL of the given type from the specified values"><span class="description">Generate a URL of the given type from the specified values</span><pre>generate()</pre></a></li>
-<li class="method public inherited"><a href="#parse" title="parse :: Parse URL and return the IDs contained in the URL"><span class="description">Parse URL and return the IDs contained in the URL</span><pre>parse()</pre></a></li>
-<li class="nav-header protected">» Protected</li>
-<li class="method protected inherited"><a href="#compile" title="compile :: Compiles a given pattern to a PCRE regular expression"><span class="description">Compiles a given pattern to a PCRE regular expression</span><pre>compile()</pre></a></li>
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___construct" title="__construct :: Construct from optional initial map"><span class="description">Construct from optional initial map</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#method_addPattern" title="addPattern :: Adds a pattern for a type"><span class="description">Adds a pattern for a type</span><pre>addPattern()</pre></a></li>
+<li class="method public inherited"><a href="#method_generate" title="generate :: Generate a URL of the given type from the specified values"><span class="description">Generate a URL of the given type from the specified values</span><pre>generate()</pre></a></li>
+<li class="method public inherited"><a href="#method_parse" title="parse :: Parse URL and return the IDs contained in the URL"><span class="description">Parse URL and return the IDs contained in the URL</span><pre>parse()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="method protected inherited"><a href="#method_compile" title="compile :: Compiles a given pattern to a PCRE regular expression"><span class="description">Compiles a given pattern to a PCRE regular expression</span><pre>compile()</pre></a></li></ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected inherited"><a href="#%24compileCache" title="$compileCache :: Cache for compiled expressions"><span class="description">Cache for compiled expressions</span><pre>$compileCache</pre></a></li>
-<li class="property protected "><a href="#%24map" title="$map :: Map of URL types to their URL patterns"><span class="description">Map of URL types to their URL patterns</span><pre>$map</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property_compileCache" title="$compileCache :: Cache for compiled expressions"><span class="description"></span><pre>$compileCache</pre></a></li>
+<li class="property protected "><a href="#property_map" title="$map :: Map of URL types to their URL patterns"><span class="description"></span><pre>$map</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-constant"></i> Constants</li>
-<li class="constant  inherited"><a href="#SLASHES_VARIABLE_REGEX" title="SLASHES_VARIABLE_REGEX :: Pattern regular sub-expression that might contain slashes"><span class="description">Pattern regular sub-expression that might contain slashes</span><pre>SLASHES_VARIABLE_REGEX</pre></a></li>
-<li class="constant  inherited"><a href="#STANDARD_VARIABLE_REGEX" title="STANDARD_VARIABLE_REGEX :: Pattern regular sub-expression"><span class="description">Pattern regular sub-expression</span><pre>STANDARD_VARIABLE_REGEX</pre></a></li>
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  inherited"><a href="#constant_SLASHES_VARIABLE_REGEX" title="SLASHES_VARIABLE_REGEX :: Pattern regular sub-expression that might contain slashes"><span class="description">Pattern regular sub-expression that might contain slashes</span><pre>SLASHES_VARIABLE_REGEX</pre></a></li>
+<li class="constant  inherited"><a href="#constant_STANDARD_VARIABLE_REGEX" title="STANDARD_VARIABLE_REGEX :: Pattern regular sub-expression"><span class="description">Pattern regular sub-expression</span><pre>STANDARD_VARIABLE_REGEX</pre></a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CREST%5CCommon%5CUrlHandler%5CeZPublish" id="\eZ\Publish\Core\REST\Common\UrlHandler\eZPublish"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\REST\Common\UrlHandler\eZPublish"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.REST.html">REST</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.REST.Common.html">Common</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.REST.Common.UrlHandler.html">UrlHandler</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.REST.html">REST</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.REST.Common.html">Common</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.REST.Common.UrlHandler.html">UrlHandler</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.REST.Common.UrlHandler.eZPublish.html">eZPublish</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.REST.Common.UrlHandler.eZPublish.html" class="element class">
+<div class="element class">
 <p class="short_description">Pattern based URL Handler pre-configured for eZ Publish</p>
 <div class="details">
-<p class="long_description"><p>Handles 2 types of patterns to be used in an URL:</p>
+<div class="long_description"><p>Handles 2 types of patterns to be used in an URL:</p>
 
 <ul>
 <li>{foo} matches anything but a slash and is used to match the typical URL
 variable (e.g. an ID)</li>
 <li>{&amp;foo} matches the slash, too, and is used to match only those URL
 variables, which may have a slash</li>
-</ul></p>
+</ul></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
 <h2>Construct from optional initial map</h2>
-<pre>__construct(\array $map) </pre>
+<pre>__construct(array $map) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\REST\Common\UrlHandler\Pattern::__construct()</td>
@@ -123,12 +146,12 @@ variables, which may have a slash</li>
 </div>
 </div></div>
 </div>
-<a name="addPattern" id="addPattern"></a><div class="element clickable method public addPattern" data-toggle="collapse" data-target=".addPattern .collapse">
+<a id="method_addPattern"></a><div class="element clickable method public method_addPattern" data-toggle="collapse" data-target=".method_addPattern .collapse">
 <h2>Adds a pattern for a type</h2>
 <pre>addPattern(string $type, string $pattern) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\REST\Common\UrlHandler\Pattern::addPattern()</td>
@@ -144,12 +167,12 @@ variables, which may have a slash</li>
 </div>
 </div></div>
 </div>
-<a name="generate" id="generate"></a><div class="element clickable method public generate" data-toggle="collapse" data-target=".generate .collapse">
+<a id="method_generate"></a><div class="element clickable method public method_generate" data-toggle="collapse" data-target=".method_generate .collapse">
 <h2>Generate a URL of the given type from the specified values</h2>
-<pre>generate(string $type, \array $values) : string</pre>
+<pre>generate(string $type, array $values) : string</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\REST\Common\UrlHandler\Pattern::generate()</td>
@@ -167,12 +190,12 @@ variables, which may have a slash</li>
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="parse" id="parse"></a><div class="element clickable method public parse" data-toggle="collapse" data-target=".parse .collapse">
+<a id="method_parse"></a><div class="element clickable method public method_parse" data-toggle="collapse" data-target=".method_parse .collapse">
 <h2>Parse URL and return the IDs contained in the URL</h2>
 <pre>parse(string $type, string $url) : array</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\REST\Common\UrlHandler\Pattern::parse()</td>
@@ -190,12 +213,12 @@ variables, which may have a slash</li>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="compile" id="compile"></a><div class="element clickable method protected compile" data-toggle="collapse" data-target=".compile .collapse">
+<a id="method_compile"></a><div class="element clickable method protected method_compile" data-toggle="collapse" data-target=".method_compile .collapse">
 <h2>Compiles a given pattern to a PCRE regular expression</h2>
 <pre>compile(string $pattern) : string</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\REST\Common\UrlHandler\Pattern::compile()</td>
@@ -211,24 +234,24 @@ variables, which may have a slash</li>
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24compileCache" id="$compileCache"> </a><div class="element clickable property protected $compileCache" data-toggle="collapse" data-target=".$compileCache .collapse">
-<h2>Cache for compiled expressions</h2>
+<a id="property_compileCache"> </a><div class="element clickable property protected property_compileCache" data-toggle="collapse" data-target=".property_compileCache .collapse">
+<h2></h2>
 <pre>$compileCache : array</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\REST\Common\UrlHandler\Pattern::$$compileCache</td>
 </tr></table>
 </div></div>
 </div>
-<a name="%24map" id="$map"> </a><div class="element clickable property protected $map" data-toggle="collapse" data-target=".$map .collapse">
-<h2>Map of URL types to their URL patterns</h2>
+<a id="property_map"> </a><div class="element clickable property protected property_map" data-toggle="collapse" data-target=".property_map .collapse">
+<h2></h2>
 <pre>$map : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>todo</th>
 <td>: Add sensible missing names</td>
@@ -237,24 +260,24 @@ variables, which may have a slash</li>
 </div>
 <h3>
 <i class="icon-custom icon-constant"></i> Constants</h3>
-<a name="SLASHES_VARIABLE_REGEX" id="SLASHES_VARIABLE_REGEX"> </a><div class="element clickable constant  SLASHES_VARIABLE_REGEX" data-toggle="collapse" data-target=".SLASHES_VARIABLE_REGEX .collapse">
+<a id="constant_SLASHES_VARIABLE_REGEX"> </a><div class="element clickable constant  constant_SLASHES_VARIABLE_REGEX" data-toggle="collapse" data-target=".constant_SLASHES_VARIABLE_REGEX .collapse">
 <h2>Pattern regular sub-expression that might contain slashes</h2>
 <pre>SLASHES_VARIABLE_REGEX </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\REST\Common\UrlHandler\Pattern::SLASHES_VARIABLE_REGEX</td>
 </tr></table>
 </div></div>
 </div>
-<a name="STANDARD_VARIABLE_REGEX" id="STANDARD_VARIABLE_REGEX"> </a><div class="element clickable constant  STANDARD_VARIABLE_REGEX" data-toggle="collapse" data-target=".STANDARD_VARIABLE_REGEX .collapse">
+<a id="constant_STANDARD_VARIABLE_REGEX"> </a><div class="element clickable constant  constant_STANDARD_VARIABLE_REGEX" data-toggle="collapse" data-target=".constant_STANDARD_VARIABLE_REGEX .collapse">
 <h2>Pattern regular sub-expression</h2>
 <pre>STANDARD_VARIABLE_REGEX </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\REST\Common\UrlHandler\Pattern::STANDARD_VARIABLE_REGEX</td>
@@ -267,8 +290,8 @@ variables, which may have a slash</li>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T16:57:48Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:39:42Z.<br></footer></div>
 </div>
 </body>
 </html>

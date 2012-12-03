@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -58,35 +59,42 @@
 <span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
 <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
 </div>
-<ul class="side-nav nav nav-list">
-<li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#deleteFieldData" title="deleteFieldData :: Deletes field data for all $fieldIds in the version identified by
+<ul class="side-nav nav nav-list"><li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_deleteFieldData" title="deleteFieldData :: Deletes field data for all $fieldIds in the version identified by
 $versionInfo."><span class="description">Deletes field data for all $fieldIds in the version identified by
 $versionInfo.</span><pre>deleteFieldData()</pre></a></li>
-<li class="method public "><a href="#getFieldData" title="getFieldData :: Populates $field value property based on the external data."><span class="description">Populates $field value property based on the external data.</span><pre>getFieldData()</pre></a></li>
-<li class="method public "><a href="#getIndexData" title="getIndexData :: Get index data for external data for search backend"><span class="description">Get index data for external data for search backend</span><pre>getIndexData()</pre></a></li>
-<li class="method public "><a href="#hasFieldData" title="hasFieldData :: Checks if field type has external data to deal with"><span class="description">Checks if field type has external data to deal with</span><pre>hasFieldData()</pre></a></li>
-<li class="method public "><a href="#storeFieldData" title="storeFieldData :: Allows custom field types to store data in an external source (e.g."><span class="description">Allows custom field types to store data in an external source (e.g.</span><pre>storeFieldData()</pre></a></li>
+<li class="method public "><a href="#method_getFieldData" title="getFieldData :: Populates $field value property based on the external data."><span class="description">Populates $field value property based on the external data.</span><pre>getFieldData()</pre></a></li>
+<li class="method public "><a href="#method_getIndexData" title="getIndexData :: Get index data for external data for search backend"><span class="description">Get index data for external data for search backend</span><pre>getIndexData()</pre></a></li>
+<li class="method public "><a href="#method_hasFieldData" title="hasFieldData :: Checks if field type has external data to deal with"><span class="description">Checks if field type has external data to deal with</span><pre>hasFieldData()</pre></a></li>
+<li class="method public "><a href="#method_storeFieldData" title="storeFieldData :: Allows custom field types to store data in an external source (e.g."><span class="description">Allows custom field types to store data in an external source (e.g.</span><pre>storeFieldData()</pre></a></li>
 </ul>
+</li></ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CSPI%5CFieldType%5CFieldStorage" id="\eZ\Publish\SPI\FieldType\FieldStorage"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\SPI\FieldType\FieldStorage"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.SPI.html">SPI</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.SPI.FieldType.html">FieldType</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.SPI.html">SPI</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.SPI.FieldType.html">FieldType</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.SPI.FieldType.FieldStorage.html">FieldStorage</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.SPI.FieldType.FieldStorage.html" class="element interface">
+<div class="element interface">
 <p class="short_description">Interface for setting field type data.</p>
 <div class="details">
-<p class="long_description"><p>Methods in this interface are called by storage engine.</p>
+<div class="long_description"><p>Methods in this interface are called by storage engine.</p>
 
 <p>$context array passed to most methods provides some context for the field handler about the
 currently used storage engine.
@@ -97,20 +105,20 @@ For example, using Legacy storage engine, $context will be:
   - identifier = 'LegacyStorage'
   - connection = <a href="\eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">\eZ\Publish\Core\Persistence\Legacy\EzcDbHandler</a> object handler (for DB connection),
                  to be used accordingly to
-                 <a href="http://incubator.apache.org/zetacomponents/documentation/trunk/Database/tutorial.html">ezcDatabase</a> usage</p></p>
+                 <a href="http://incubator.apache.org/zetacomponents/documentation/trunk/Database/tutorial.html">ezcDatabase</a> usage</p></div>
 <table class="table table-bordered"><tr>
 <th>package</th>
 <td><a href="../packages/FieldTypeProviderInterface.html">FieldTypeProviderInterface</a></td>
 </tr></table>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="deleteFieldData" id="deleteFieldData"></a><div class="element clickable method public deleteFieldData" data-toggle="collapse" data-target=".deleteFieldData .collapse">
+<a id="method_deleteFieldData"></a><div class="element clickable method public method_deleteFieldData" data-toggle="collapse" data-target=".method_deleteFieldData .collapse">
 <h2>Deletes field data for all $fieldIds in the version identified by
 $versionInfo.</h2>
-<pre>deleteFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \array $fieldIds, \array $context) : boolean</pre>
+<pre>deleteFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, array $fieldIds, array $context) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -127,14 +135,14 @@ $versionInfo.</h2>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="getFieldData" id="getFieldData"></a><div class="element clickable method public getFieldData" data-toggle="collapse" data-target=".getFieldData .collapse">
+<a id="method_getFieldData"></a><div class="element clickable method public method_getFieldData" data-toggle="collapse" data-target=".method_getFieldData .collapse">
 <h2>Populates $field value property based on the external data.</h2>
-<pre>getFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field, \array $context) : void</pre>
+<pre>getFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field, array $context) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>$field->value is a <a href="eZ\Publish\SPI\Persistence\Content\FieldValue">eZ\Publish\SPI\Persistence\Content\FieldValue</a> object.
+<div class="long_description"><p>$field->value is a <a href="eZ\Publish\SPI\Persistence\Content\FieldValue">eZ\Publish\SPI\Persistence\Content\FieldValue</a> object.
 This value holds the data as a <a href="eZ\Publish\Core\FieldType\Value">eZ\Publish\Core\FieldType\Value</a> based object,
-according to the field type (e.g. for TextLine, it will be a <a href="eZ\Publish\Core\FieldType\TextLine\Value">eZ\Publish\Core\FieldType\TextLine\Value</a> object).</p></p>
+according to the field type (e.g. for TextLine, it will be a <a href="eZ\Publish\Core\FieldType\TextLine\Value">eZ\Publish\Core\FieldType\TextLine\Value</a> object).</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -150,17 +158,14 @@ according to the field type (e.g. for TextLine, it will be a <a href="eZ\Publish
 </div>
 </div></div>
 </div>
-<a name="getIndexData" id="getIndexData"></a><div class="element clickable method public getIndexData" data-toggle="collapse" data-target=".getIndexData .collapse">
+<a id="method_getIndexData"></a><div class="element clickable method public method_getIndexData" data-toggle="collapse" data-target=".method_getIndexData .collapse">
 <h2>Get index data for external data for search backend</h2>
-<pre>getIndexData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field, \array $context) : <a href="Publish.SPI.Persistence.Content.Search.Field.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CSearch%5CField">\eZ\Publish\SPI\Persistence\Content\Search\Field[]</a></pre>
+<pre>getIndexData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field, array $context) : <a href="Publish.SPI.Persistence.Content.Search.Field.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CSearch%5CField">\eZ\Publish\SPI\Persistence\Content\Search\Field[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$versionInfo</h4>
-<code></code>
-</div>
+<div class="subelement argument"><h4>$versionInfo</h4></div>
 <div class="subelement argument">
 <h4>$field</h4>
 <code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Field.html">\eZ\Publish\SPI\Persistence\Content\Field</a></code>
@@ -173,22 +178,22 @@ according to the field type (e.g. for TextLine, it will be a <a href="eZ\Publish
 <div class="subelement response"><code><a href="Publish.SPI.Persistence.Content.Search.Field.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CSearch%5CField">\eZ\Publish\SPI\Persistence\Content\Search\Field[]</a></code></div>
 </div></div>
 </div>
-<a name="hasFieldData" id="hasFieldData"></a><div class="element clickable method public hasFieldData" data-toggle="collapse" data-target=".hasFieldData .collapse">
+<a id="method_hasFieldData"></a><div class="element clickable method public method_hasFieldData" data-toggle="collapse" data-target=".method_hasFieldData .collapse">
 <h2>Checks if field type has external data to deal with</h2>
 <pre>hasFieldData() : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="storeFieldData" id="storeFieldData"></a><div class="element clickable method public storeFieldData" data-toggle="collapse" data-target=".storeFieldData .collapse">
+<a id="method_storeFieldData"></a><div class="element clickable method public method_storeFieldData" data-toggle="collapse" data-target=".method_storeFieldData .collapse">
 <h2>Allows custom field types to store data in an external source (e.g.</h2>
-<pre>storeFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field, \array $context) : null | true</pre>
+<pre>storeFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field, array $context) : null | true</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>another DB table).</p>
+<div class="long_description"><p>another DB table).</p>
 
 <p>Stores value for $field in an external data source.
 The whole <a href="eZ\Publish\SPI\Persistence\Content\Field">eZ\Publish\SPI\Persistence\Content\Field</a> object is passed and its value
@@ -212,7 +217,7 @@ For example, using Legacy storage engine, $context will be:
                  <a href="http://incubator.apache.org/zetacomponents/documentation/trunk/Database/tutorial.html">ezcDatabase</a> usage</p>
 
 <p>This method might return true if $field needs to be updated after storage done here (to store a PK for instance).
-In any other case, this method must not return anything (null).</p></p>
+In any other case, this method must not return anything (null).</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -238,8 +243,8 @@ In any other case, this method must not return anything (null).</p></p>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T16:56:18Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:38:28Z.<br></footer></div>
 </div>
 </body>
 </html>

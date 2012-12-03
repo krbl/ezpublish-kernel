@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -58,43 +59,50 @@
 <span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
 <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
 </div>
-<ul class="side-nav nav nav-list">
-<li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#exists" title="exists :: Returns is a file/directory with the given $storageIdentifier exists"><span class="description">Returns is a file/directory with the given $storageIdentifier exists</span><pre>exists()</pre></a></li>
-<li class="method public "><a href="#getFileSize" title="getFileSize :: Returns the file size of the file identified by $storageIdentifier"><span class="description">Returns the file size of the file identified by $storageIdentifier</span><pre>getFileSize()</pre></a></li>
-<li class="method public "><a href="#getMetaData" title="getMetaData :: Returns a hash of meta data for $storageIdentifier"><span class="description">Returns a hash of meta data for $storageIdentifier</span><pre>getMetaData()</pre></a></li>
-<li class="method public "><a href="#getStorageIdentifier" title="getStorageIdentifier :: Returns a storage identifier for the given $path"><span class="description">Returns a storage identifier for the given $path</span><pre>getStorageIdentifier()</pre></a></li>
-<li class="method public "><a href="#remove" title="remove :: Removes the path identified by $storageIdentifier, potentially
+<ul class="side-nav nav nav-list"><li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_exists" title="exists :: Returns is a file/directory with the given $storageIdentifier exists"><span class="description">Returns is a file/directory with the given $storageIdentifier exists</span><pre>exists()</pre></a></li>
+<li class="method public "><a href="#method_getFileSize" title="getFileSize :: Returns the file size of the file identified by $storageIdentifier"><span class="description">Returns the file size of the file identified by $storageIdentifier</span><pre>getFileSize()</pre></a></li>
+<li class="method public "><a href="#method_getMetaData" title="getMetaData :: Returns a hash of meta data for $storageIdentifier"><span class="description">Returns a hash of meta data for $storageIdentifier</span><pre>getMetaData()</pre></a></li>
+<li class="method public "><a href="#method_getStorageIdentifier" title="getStorageIdentifier :: Returns a storage identifier for the given $path"><span class="description">Returns a storage identifier for the given $path</span><pre>getStorageIdentifier()</pre></a></li>
+<li class="method public "><a href="#method_remove" title="remove :: Removes the path identified by $storageIdentifier, potentially
 $recursive."><span class="description">Removes the path identified by $storageIdentifier, potentially
 $recursive.</span><pre>remove()</pre></a></li>
-<li class="method public "><a href="#storeFile" title="storeFile :: Store the local file identified by $sourcePath in a location that corresponds
+<li class="method public "><a href="#method_storeFile" title="storeFile :: Store the local file identified by $sourcePath in a location that corresponds
 to $storageIdentifier."><span class="description">Store the local file identified by $sourcePath in a location that corresponds
 to $storageIdentifier.</span><pre>storeFile()</pre></a></li>
 </ul>
+</li></ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CFieldType%5CFileService" id="\eZ\Publish\Core\FieldType\FileService"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\FieldType\FileService"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.FieldType.html">FieldType</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.FieldType.html">FieldType</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.FieldType.FileService.html">FileService</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.FieldType.FileService.html" class="element interface"><div class="details">
+<div class="element interface"><div class="details">
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="exists" id="exists"></a><div class="element clickable method public exists" data-toggle="collapse" data-target=".exists .collapse">
+<a id="method_exists"></a><div class="element clickable method public method_exists" data-toggle="collapse" data-target=".method_exists .collapse">
 <h2>Returns is a file/directory with the given $storageIdentifier exists</h2>
 <pre>exists(string $storageIdentifier) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$storageIdentifier</h4>
@@ -104,12 +112,12 @@ to $storageIdentifier.</span><pre>storeFile()</pre></a></li>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="getFileSize" id="getFileSize"></a><div class="element clickable method public getFileSize" data-toggle="collapse" data-target=".getFileSize .collapse">
+<a id="method_getFileSize"></a><div class="element clickable method public method_getFileSize" data-toggle="collapse" data-target=".method_getFileSize .collapse">
 <h2>Returns the file size of the file identified by $storageIdentifier</h2>
 <pre>getFileSize(string $storageIdentifier) : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$storageIdentifier</h4>
@@ -119,20 +127,20 @@ to $storageIdentifier.</span><pre>storeFile()</pre></a></li>
 <div class="subelement response"><code>int</code></div>
 </div></div>
 </div>
-<a name="getMetaData" id="getMetaData"></a><div class="element clickable method public getMetaData" data-toggle="collapse" data-target=".getMetaData .collapse">
+<a id="method_getMetaData"></a><div class="element clickable method public method_getMetaData" data-toggle="collapse" data-target=".method_getMetaData .collapse">
 <h2>Returns a hash of meta data for $storageIdentifier</h2>
 <pre>getMetaData(string $storageIdentifier) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>array(
+<div class="long_description"><p>array(
  'width' => <int>,
  'height' => <int>,
  'mime' => <string>,
-);</p></p>
+);</p></div>
 <table class="table table-bordered"><tr>
 <th>todo</th>
 <td>This method should be extracted later into a dedicated class to
-handle meta data.</td>
+      handle meta data.</td>
 </tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument">
@@ -143,13 +151,13 @@ handle meta data.</td>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="getStorageIdentifier" id="getStorageIdentifier"></a><div class="element clickable method public getStorageIdentifier" data-toggle="collapse" data-target=".getStorageIdentifier .collapse">
+<a id="method_getStorageIdentifier"></a><div class="element clickable method public method_getStorageIdentifier" data-toggle="collapse" data-target=".method_getStorageIdentifier .collapse">
 <h2>Returns a storage identifier for the given $path</h2>
 <pre>getStorageIdentifier(string $path) : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>The storage identifier is used to identify $path inside the storage
-encapsulated by the file service.</p></p>
+<div class="long_description"><p>The storage identifier is used to identify $path inside the storage
+encapsulated by the file service.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$path</h4>
@@ -159,16 +167,16 @@ encapsulated by the file service.</p></p>
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="remove" id="remove"></a><div class="element clickable method public remove" data-toggle="collapse" data-target=".remove .collapse">
+<a id="method_remove"></a><div class="element clickable method public method_remove" data-toggle="collapse" data-target=".method_remove .collapse">
 <h2>Removes the path identified by $storageIdentifier, potentially
 $recursive.</h2>
 <pre>remove(string $storageIdentifier, boolean $recursive) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Attemts to removed the path identified by $storageIdentifier. If
+<div class="long_description"><p>Attemts to removed the path identified by $storageIdentifier. If
 $storageIdentifier is a directory which is not empty and $recursive is
 set to false, an exception is thrown. Attemting to remove a non
-existing $storageIdentifier is silently ignored.</p></p>
+existing $storageIdentifier is silently ignored.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$storageIdentifier</h4>
@@ -182,23 +190,25 @@ existing $storageIdentifier is silently ignored.</p></p>
 <table class="table table-bordered">
 <tr>
 <th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
-<td>if children of $storageIdentifier exist and $recursive is false</td>
+<td>if children of $storageIdentifier exist and
+                          $recursive is false</td>
 </tr>
 <tr>
 <th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
-<td>if $storageIdentifier could not be removed (most likely permission issues)</td>
+<td>if $storageIdentifier could not be removed (most
+                          likely permission issues)</td>
 </tr>
 </table>
 </div></div>
 </div>
-<a name="storeFile" id="storeFile"></a><div class="element clickable method public storeFile" data-toggle="collapse" data-target=".storeFile .collapse">
+<a id="method_storeFile"></a><div class="element clickable method public method_storeFile" data-toggle="collapse" data-target=".method_storeFile .collapse">
 <h2>Store the local file identified by $sourcePath in a location that corresponds
 to $storageIdentifier.</h2>
 <pre>storeFile(string $sourcePath, string $storageIdentifier) : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Returns a storage identifier used inside the
-storage (might differ from the incoming $storageIdentifier).</p></p>
+<div class="long_description"><p>Returns a storage identifier used inside the
+storage (might differ from the incoming $storageIdentifier).</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$sourcePath</h4>
@@ -217,8 +227,8 @@ storage (might differ from the incoming $storageIdentifier).</p></p>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T17:00:12Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:41:39Z.<br></footer></div>
 </div>
 </body>
 </html>

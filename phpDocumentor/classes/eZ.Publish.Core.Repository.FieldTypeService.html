@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,37 +61,51 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#__construct" title="__construct :: Setups service with reference to repository object that created it &amp; corresponding handler"><span class="description">Setups service with reference to repository object that created it &amp; corresponding handler</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#getFieldType" title="getFieldType :: Returns the FieldType registered with the given identifier"><span class="description">Returns the FieldType registered with the given identifier</span><pre>getFieldType()</pre></a></li>
-<li class="method public "><a href="#getFieldTypes" title="getFieldTypes :: Returns a list of all field types."><span class="description">Returns a list of all field types.</span><pre>getFieldTypes()</pre></a></li>
-<li class="method public "><a href="#hasFieldType" title="hasFieldType :: Returns if there is a FieldType registered under $identifier"><span class="description">Returns if there is a FieldType registered under $identifier</span><pre>hasFieldType()</pre></a></li>
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Setups service with reference to repository object that created it &amp; corresponding handler"><span class="description">Setups service with reference to repository object that created it &amp; corresponding handler</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_getFieldType" title="getFieldType :: Returns the FieldType registered with the given identifier"><span class="description">Returns the FieldType registered with the given identifier</span><pre>getFieldType()</pre></a></li>
+<li class="method public "><a href="#method_getFieldTypes" title="getFieldTypes :: Returns a list of all field types."><span class="description">Returns a list of all field types.</span><pre>getFieldTypes()</pre></a></li>
+<li class="method public "><a href="#method_hasFieldType" title="hasFieldType :: Returns if there is a FieldType registered under $identifier"><span class="description">Returns if there is a FieldType registered under $identifier</span><pre>hasFieldType()</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected "><a href="#%24fieldTypes" title="$fieldTypes :: Holds an array of FieldType objects"><span class="description">Holds an array of FieldType objects</span><pre>$fieldTypes</pre></a></li>
-<li class="property protected "><a href="#%24persistenceHandler" title="$persistenceHandler :: "><span class="description">$persistenceHandler</span><pre>$persistenceHandler</pre></a></li>
-<li class="property protected "><a href="#%24repository" title="$repository :: "><span class="description">$repository</span><pre>$repository</pre></a></li>
-<li class="property protected "><a href="#%24settings" title="$settings :: "><span class="description">&lt;p&gt;Hash of SPI FieldTypes or callable callbacks to generate one.&lt;/p&gt;</span><pre>$settings</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_fieldTypes" title="$fieldTypes :: Holds an array of FieldType objects"><span class="description"></span><pre>$fieldTypes</pre></a></li>
+<li class="property protected "><a href="#property_persistenceHandler" title="$persistenceHandler :: "><span class="description"></span><pre>$persistenceHandler</pre></a></li>
+<li class="property protected "><a href="#property_repository" title="$repository :: "><span class="description"></span><pre>$repository</pre></a></li>
+<li class="property protected "><a href="#property_settings" title="$settings :: "><span class="description">Hash of SPI FieldTypes or callable callbacks to generate one.</span><pre>$settings</pre></a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CRepository%5CFieldTypeService" id="\eZ\Publish\Core\Repository\FieldTypeService"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\Repository\FieldTypeService"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Repository.html">Repository</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Repository.html">Repository</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.Repository.FieldTypeService.html">FieldTypeService</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.Repository.FieldTypeService.html" class="element class">
+<div class="element class">
 <p class="short_description">An implementation of this class provides access to FieldTypes</p>
 <div class="details">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered">
 <tr>
 <th>package</th>
@@ -98,17 +113,17 @@
 </tr>
 <tr>
 <th>see</th>
-<td>\eZ\Publish\API\Repository\FieldType</td>
+<td><a href="Publish.API.Repository.FieldType.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CFieldType">\eZ\Publish\API\Repository\FieldType</a></td>
 </tr>
 </table>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
 <h2>Setups service with reference to repository object that created it &amp; corresponding handler</h2>
-<pre>__construct(\eZ\Publish\API\Repository\Repository $repository, \eZ\Publish\SPI\Persistence\Handler $handler, \array $settings) </pre>
+<pre>__construct(\eZ\Publish\API\Repository\Repository $repository, \eZ\Publish\SPI\Persistence\Handler $handler, array $settings) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$repository</h4>
@@ -123,12 +138,12 @@
 <code>array</code><p>Hash of SPI FieldTypes or callable callbacks to generate one.</p></div>
 </div></div>
 </div>
-<a name="getFieldType" id="getFieldType"></a><div class="element clickable method public getFieldType" data-toggle="collapse" data-target=".getFieldType .collapse">
+<a id="method_getFieldType"></a><div class="element clickable method public method_getFieldType" data-toggle="collapse" data-target=".method_getFieldType .collapse">
 <h2>Returns the FieldType registered with the given identifier</h2>
 <pre>getFieldType(string $identifier) : <a href="../classes/eZ.Publish.API.Repository.FieldType.html">\eZ\Publish\API\Repository\FieldType</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$identifier</h4>
@@ -143,22 +158,22 @@
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.FieldType.html">\eZ\Publish\API\Repository\FieldType</a></code></div>
 </div></div>
 </div>
-<a name="getFieldTypes" id="getFieldTypes"></a><div class="element clickable method public getFieldTypes" data-toggle="collapse" data-target=".getFieldTypes .collapse">
+<a id="method_getFieldTypes"></a><div class="element clickable method public method_getFieldTypes" data-toggle="collapse" data-target=".method_getFieldTypes .collapse">
 <h2>Returns a list of all field types.</h2>
 <pre>getFieldTypes() : <a href="Publish.API.Repository.FieldType.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CFieldType">\eZ\Publish\API\Repository\FieldType[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="Publish.API.Repository.FieldType.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CFieldType">\eZ\Publish\API\Repository\FieldType[]</a></code></div>
 </div></div>
 </div>
-<a name="hasFieldType" id="hasFieldType"></a><div class="element clickable method public hasFieldType" data-toggle="collapse" data-target=".hasFieldType .collapse">
+<a id="method_hasFieldType"></a><div class="element clickable method public method_hasFieldType" data-toggle="collapse" data-target=".method_hasFieldType .collapse">
 <h2>Returns if there is a FieldType registered under $identifier</h2>
 <pre>hasFieldType(string $identifier) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$identifier</h4>
@@ -170,29 +185,29 @@
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24fieldTypes" id="$fieldTypes"> </a><div class="element clickable property protected $fieldTypes" data-toggle="collapse" data-target=".$fieldTypes .collapse">
-<h2>Holds an array of FieldType objects</h2>
+<a id="property_fieldTypes"> </a><div class="element clickable property protected property_fieldTypes" data-toggle="collapse" data-target=".property_fieldTypes .collapse">
+<h2></h2>
 <pre>$fieldTypes : <a href="Publish.API.Repository.FieldType.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CFieldType">\eZ\Publish\API\Repository\FieldType[]</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24persistenceHandler" id="$persistenceHandler"> </a><div class="element clickable property protected $persistenceHandler" data-toggle="collapse" data-target=".$persistenceHandler .collapse">
-<h2>$persistenceHandler</h2>
+<a id="property_persistenceHandler"> </a><div class="element clickable property protected property_persistenceHandler" data-toggle="collapse" data-target=".property_persistenceHandler .collapse">
+<h2></h2>
 <pre>$persistenceHandler : <a href="../classes/eZ.Publish.SPI.Persistence.Handler.html">\eZ\Publish\SPI\Persistence\Handler</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24repository" id="$repository"> </a><div class="element clickable property protected $repository" data-toggle="collapse" data-target=".$repository .collapse">
-<h2>$repository</h2>
+<a id="property_repository"> </a><div class="element clickable property protected property_repository" data-toggle="collapse" data-target=".property_repository .collapse">
+<h2></h2>
 <pre>$repository : <a href="../classes/eZ.Publish.API.Repository.Repository.html">\eZ\Publish\API\Repository\Repository</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24settings" id="$settings"> </a><div class="element clickable property protected $settings" data-toggle="collapse" data-target=".$settings .collapse">
-<h2>&lt;p&gt;Hash of SPI FieldTypes or callable callbacks to generate one.&lt;/p&gt;</h2>
+<a id="property_settings"> </a><div class="element clickable property protected property_settings" data-toggle="collapse" data-target=".property_settings .collapse">
+<h2>Hash of SPI FieldTypes or callable callbacks to generate one.</h2>
 <pre>$settings : array</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
 </div>
@@ -200,8 +215,8 @@
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T16:59:23Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:41:01Z.<br></footer></div>
 </div>
 </body>
 </html>

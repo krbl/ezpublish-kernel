@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,47 +61,66 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public inherited"><a href="#__construct" title="__construct :: Construct from gateways"><span class="description">Construct from gateways</span><pre>__construct()</pre></a></li>
-<li class="method public inherited"><a href="#addGateway" title="addGateway :: Adds a storage $gateway assigned to the given $identifier"><span class="description">Adds a storage $gateway assigned to the given $identifier</span><pre>addGateway()</pre></a></li>
-<li class="method public inherited"><a href="#deleteFieldData" title="deleteFieldData :: Deletes field data for all $fieldIds in the version identified by
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___construct" title="__construct :: Construct from gateways"><span class="description">Construct from gateways</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#method_addGateway" title="addGateway :: Adds a storage $gateway assigned to the given $identifier"><span class="description">Adds a storage $gateway assigned to the given $identifier</span><pre>addGateway()</pre></a></li>
+<li class="method public inherited"><a href="#method_deleteFieldData" title="deleteFieldData :: Deletes field data for all $fieldIds in the version identified by
 $versionInfo."><span class="description">Deletes field data for all $fieldIds in the version identified by
 $versionInfo.</span><pre>deleteFieldData()</pre></a></li>
-<li class="method public inherited"><a href="#getFieldData" title="getFieldData :: Populates $field value property based on the external data."><span class="description">Populates $field value property based on the external data.</span><pre>getFieldData()</pre></a></li>
-<li class="method public inherited"><a href="#getIndexData" title="getIndexData :: Get index data for external data for search backend"><span class="description">Get index data for external data for search backend</span><pre>getIndexData()</pre></a></li>
-<li class="method public inherited"><a href="#hasFieldData" title="hasFieldData :: Checks if field type has external data to deal with"><span class="description">Checks if field type has external data to deal with</span><pre>hasFieldData()</pre></a></li>
-<li class="method public inherited"><a href="#storeFieldData" title="storeFieldData :: Allows custom field types to store data in an external source (e.g."><span class="description">Allows custom field types to store data in an external source (e.g.</span><pre>storeFieldData()</pre></a></li>
-<li class="nav-header protected">» Protected</li>
-<li class="method protected inherited"><a href="#getGateway" title="getGateway :: Retrieve the fitting gateway, base on the identifer in $context"><span class="description">Retrieve the fitting gateway, base on the identifer in $context</span><pre>getGateway()</pre></a></li>
-<li class="method protected inherited"><a href="#removeOldFile" title="removeOldFile :: Removes the old file referenced by $fieldId in $versionNo, if not
+<li class="method public inherited"><a href="#method_getFieldData" title="getFieldData :: Populates $field value property based on the external data."><span class="description">Populates $field value property based on the external data.</span><pre>getFieldData()</pre></a></li>
+<li class="method public inherited"><a href="#method_getIndexData" title="getIndexData :: Get index data for external data for search backend"><span class="description">Get index data for external data for search backend</span><pre>getIndexData()</pre></a></li>
+<li class="method public inherited"><a href="#method_hasFieldData" title="hasFieldData :: Checks if field type has external data to deal with"><span class="description">Checks if field type has external data to deal with</span><pre>hasFieldData()</pre></a></li>
+<li class="method public inherited"><a href="#method_storeFieldData" title="storeFieldData :: Allows custom field types to store data in an external source (e.g."><span class="description">Allows custom field types to store data in an external source (e.g.</span><pre>storeFieldData()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected inherited"><a href="#method_getGateway" title="getGateway :: Retrieve the fitting gateway, base on the identifer in $context"><span class="description">Retrieve the fitting gateway, base on the identifer in $context</span><pre>getGateway()</pre></a></li>
+<li class="method protected inherited"><a href="#method_removeOldFile" title="removeOldFile :: Removes the old file referenced by $fieldId in $versionNo, if not
 referenced else where"><span class="description">Removes the old file referenced by $fieldId in $versionNo, if not
 referenced else where</span><pre>removeOldFile()</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected inherited"><a href="#%24fileService" title="$fileService :: File service to be used"><span class="description">File service to be used</span><pre>$fileService</pre></a></li>
-<li class="property protected inherited"><a href="#%24gateways" title="$gateways :: Gateways"><span class="description">Gateways</span><pre>$gateways</pre></a></li>
-<li class="property protected inherited"><a href="#%24pathGenerator" title="$pathGenerator :: Path generator"><span class="description">Path generator</span><pre>$pathGenerator</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property_fileService" title="$fileService :: File service to be used"><span class="description"></span><pre>$fileService</pre></a></li>
+<li class="property protected inherited"><a href="#property_gateways" title="$gateways :: Gateways"><span class="description"></span><pre>$gateways</pre></a></li>
+<li class="property protected inherited"><a href="#property_pathGenerator" title="$pathGenerator :: Path generator"><span class="description"></span><pre>$pathGenerator</pre></a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CFieldType%5CBinaryFile%5CBinaryFileStorage" id="\eZ\Publish\Core\FieldType\BinaryFile\BinaryFileStorage"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\FieldType\BinaryFile\BinaryFileStorage"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.FieldType.html">FieldType</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.FieldType.BinaryFile.html">BinaryFile</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.FieldType.html">FieldType</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.FieldType.BinaryFile.html">BinaryFile</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.FieldType.BinaryFile.BinaryFileStorage.html">BinaryFileStorage</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.FieldType.BinaryFile.BinaryFileStorage.html" class="element class">
+<div class="element class">
 <p class="short_description">Description of BinaryFileStorage</p>
 <div class="details">
-<p class="long_description"><p>This class gives a common basis to realized gateway based storage
+<div class="long_description"><p>This class gives a common basis to realized gateway based storage
 dispatching. It is intened to deal as a base class for FieldType storages,
 giving a common infrastructure to handle multiple gateways, based on the
 context provided by the SPI.</p>
@@ -108,15 +128,15 @@ context provided by the SPI.</p>
 <p>The method <a href="getGateway()">getGateway()</a> is used in derived classes to retrieve the
 correct gateway implementation, based on the context. The method <a href="getPersistenceHandler()">getPersistenceHandler()</a> can be used to retrieve the SPI persistence
 handler. It is encouraged, to use this object to retrieve any eZ Publish
-internal data objects, in order to allow caching.</p></p>
+internal data objects, in order to allow caching.</p></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
 <h2>Construct from gateways</h2>
-<pre>__construct(\array $gateways, \eZ\Publish\Core\FieldType\FileService $fileService, \eZ\Publish\Core\FieldType\BinaryBase\PathGenerator $pathGenerator) </pre>
+<pre>__construct(array $gateways, \eZ\Publish\Core\FieldType\FileService $fileService, \eZ\Publish\Core\FieldType\BinaryBase\PathGenerator $pathGenerator) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\BinaryBase\BinaryBaseStorage::__construct()</td>
@@ -136,12 +156,12 @@ internal data objects, in order to allow caching.</p></p>
 </div>
 </div></div>
 </div>
-<a name="addGateway" id="addGateway"></a><div class="element clickable method public addGateway" data-toggle="collapse" data-target=".addGateway .collapse">
+<a id="method_addGateway"></a><div class="element clickable method public method_addGateway" data-toggle="collapse" data-target=".method_addGateway .collapse">
 <h2>Adds a storage $gateway assigned to the given $identifier</h2>
 <pre>addGateway(string $identifier, \eZ\Publish\Core\FieldType\StorageGateway $gateway) : void</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered">
 <tr>
 <th>inherited_from</th>
@@ -163,22 +183,19 @@ internal data objects, in order to allow caching.</p></p>
 </div>
 </div></div>
 </div>
-<a name="deleteFieldData" id="deleteFieldData"></a><div class="element clickable method public deleteFieldData" data-toggle="collapse" data-target=".deleteFieldData .collapse">
+<a id="method_deleteFieldData"></a><div class="element clickable method public method_deleteFieldData" data-toggle="collapse" data-target=".method_deleteFieldData .collapse">
 <h2>Deletes field data for all $fieldIds in the version identified by
 $versionInfo.</h2>
-<pre>deleteFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \array $fieldIds, \array $context) : boolean</pre>
+<pre>deleteFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, array $fieldIds, array $context) : boolean</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\BinaryBase\BinaryBaseStorage::deleteFieldData()</td>
 </tr></table>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$versionInfo</h4>
-<code></code>
-</div>
+<div class="subelement argument"><h4>$versionInfo</h4></div>
 <div class="subelement argument">
 <h4>$fieldIds</h4>
 <code>array</code>
@@ -191,14 +208,14 @@ $versionInfo.</h2>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="getFieldData" id="getFieldData"></a><div class="element clickable method public getFieldData" data-toggle="collapse" data-target=".getFieldData .collapse">
+<a id="method_getFieldData"></a><div class="element clickable method public method_getFieldData" data-toggle="collapse" data-target=".method_getFieldData .collapse">
 <h2>Populates $field value property based on the external data.</h2>
-<pre>getFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field, \array $context) : void</pre>
+<pre>getFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field, array $context) : void</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>$field->value is a <a href="eZ\Publish\SPI\Persistence\Content\FieldValue">eZ\Publish\SPI\Persistence\Content\FieldValue</a> object.
+<div class="long_description"><p>$field->value is a <a href="eZ\Publish\SPI\Persistence\Content\FieldValue">eZ\Publish\SPI\Persistence\Content\FieldValue</a> object.
 This value holds the data as a <a href="eZ\Publish\Core\FieldType\Value">eZ\Publish\Core\FieldType\Value</a> based object,
-according to the field type (e.g. for TextLine, it will be a <a href="eZ\Publish\Core\FieldType\TextLine\Value">eZ\Publish\Core\FieldType\TextLine\Value</a> object).</p></p>
+according to the field type (e.g. for TextLine, it will be a <a href="eZ\Publish\Core\FieldType\TextLine\Value">eZ\Publish\Core\FieldType\TextLine\Value</a> object).</p></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\BinaryBase\BinaryBaseStorage::getFieldData()</td>
@@ -218,12 +235,12 @@ according to the field type (e.g. for TextLine, it will be a <a href="eZ\Publish
 </div>
 </div></div>
 </div>
-<a name="getIndexData" id="getIndexData"></a><div class="element clickable method public getIndexData" data-toggle="collapse" data-target=".getIndexData .collapse">
+<a id="method_getIndexData"></a><div class="element clickable method public method_getIndexData" data-toggle="collapse" data-target=".method_getIndexData .collapse">
 <h2>Get index data for external data for search backend</h2>
-<pre>getIndexData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field, \array $context) : void</pre>
+<pre>getIndexData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field, array $context) : void</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\BinaryBase\BinaryBaseStorage::getIndexData()</td>
@@ -243,12 +260,12 @@ according to the field type (e.g. for TextLine, it will be a <a href="eZ\Publish
 </div>
 </div></div>
 </div>
-<a name="hasFieldData" id="hasFieldData"></a><div class="element clickable method public hasFieldData" data-toggle="collapse" data-target=".hasFieldData .collapse">
+<a id="method_hasFieldData"></a><div class="element clickable method public method_hasFieldData" data-toggle="collapse" data-target=".method_hasFieldData .collapse">
 <h2>Checks if field type has external data to deal with</h2>
 <pre>hasFieldData() : boolean</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\BinaryBase\BinaryBaseStorage::hasFieldData()</td>
@@ -257,12 +274,12 @@ according to the field type (e.g. for TextLine, it will be a <a href="eZ\Publish
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="storeFieldData" id="storeFieldData"></a><div class="element clickable method public storeFieldData" data-toggle="collapse" data-target=".storeFieldData .collapse">
+<a id="method_storeFieldData"></a><div class="element clickable method public method_storeFieldData" data-toggle="collapse" data-target=".method_storeFieldData .collapse">
 <h2>Allows custom field types to store data in an external source (e.g.</h2>
-<pre>storeFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field, \array $context) : void</pre>
+<pre>storeFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field, array $context) : void</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>another DB table).</p>
+<div class="long_description"><p>another DB table).</p>
 
 <p>Stores value for $field in an external data source.
 The whole <a href="eZ\Publish\SPI\Persistence\Content\Field">eZ\Publish\SPI\Persistence\Content\Field</a> ValueObject is passed and its value
@@ -283,7 +300,7 @@ For example, using Legacy storage engine, $context will be:
   - identifier = 'LegacyStorage'
   - connection = <a href="\eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">\eZ\Publish\Core\Persistence\Legacy\EzcDbHandler</a> object handler (for DB connection),
                  to be used accordingly to
-                 <a href="http://incubator.apache.org/zetacomponents/documentation/trunk/Database/tutorial.html">ezcDatabase</a> usage</p></p>
+                 <a href="http://incubator.apache.org/zetacomponents/documentation/trunk/Database/tutorial.html">ezcDatabase</a> usage</p></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\BinaryBase\BinaryBaseStorage::storeFieldData()</td>
@@ -303,12 +320,12 @@ For example, using Legacy storage engine, $context will be:
 </div>
 </div></div>
 </div>
-<a name="getGateway" id="getGateway"></a><div class="element clickable method protected getGateway" data-toggle="collapse" data-target=".getGateway .collapse">
+<a id="method_getGateway"></a><div class="element clickable method protected method_getGateway" data-toggle="collapse" data-target=".method_getGateway .collapse">
 <h2>Retrieve the fitting gateway, base on the identifer in $context</h2>
-<pre>getGateway(\array $context) : <a href="../classes/eZ.Publish.Core.FieldType.StorageGateway.html">\eZ\Publish\Core\FieldType\StorageGateway</a></pre>
+<pre>getGateway(array $context) : <a href="../classes/eZ.Publish.Core.FieldType.StorageGateway.html">\eZ\Publish\Core\FieldType\StorageGateway</a></pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered">
 <tr>
 <th>inherited_from</th>
@@ -328,13 +345,13 @@ For example, using Legacy storage engine, $context will be:
 <div class="subelement response"><code><a href="../classes/eZ.Publish.Core.FieldType.StorageGateway.html">\eZ\Publish\Core\FieldType\StorageGateway</a></code></div>
 </div></div>
 </div>
-<a name="removeOldFile" id="removeOldFile"></a><div class="element clickable method protected removeOldFile" data-toggle="collapse" data-target=".removeOldFile .collapse">
+<a id="method_removeOldFile"></a><div class="element clickable method protected method_removeOldFile" data-toggle="collapse" data-target=".method_removeOldFile .collapse">
 <h2>Removes the old file referenced by $fieldId in $versionNo, if not
 referenced else where</h2>
-<pre>removeOldFile(mixed $fieldId, string $versionNo, \array $context) : void</pre>
+<pre>removeOldFile(mixed $fieldId, string $versionNo, array $context) : void</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\BinaryBase\BinaryBaseStorage::removeOldFile()</td>
@@ -356,24 +373,24 @@ referenced else where</h2>
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24fileService" id="$fileService"> </a><div class="element clickable property protected $fileService" data-toggle="collapse" data-target=".$fileService .collapse">
-<h2>File service to be used</h2>
+<a id="property_fileService"> </a><div class="element clickable property protected property_fileService" data-toggle="collapse" data-target=".property_fileService .collapse">
+<h2></h2>
 <pre>$fileService : <a href="../classes/eZ.Publish.Core.FieldType.FileService.html">\eZ\Publish\Core\FieldType\FileService</a></pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\BinaryBase\BinaryBaseStorage::$$fileService</td>
 </tr></table>
 </div></div>
 </div>
-<a name="%24gateways" id="$gateways"> </a><div class="element clickable property protected $gateways" data-toggle="collapse" data-target=".$gateways .collapse">
-<h2>Gateways</h2>
+<a id="property_gateways"> </a><div class="element clickable property protected property_gateways" data-toggle="collapse" data-target=".property_gateways .collapse">
+<h2></h2>
 <pre>$gateways : <a href="Publish.Core.FieldType.StorageGateway.html#%5CeZ%5CPublish%5CCore%5CFieldType%5CStorageGateway">\eZ\Publish\Core\FieldType\StorageGateway[]</a></pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered">
 <tr>
 <th>inherited_from</th>
@@ -386,12 +403,12 @@ referenced else where</h2>
 </table>
 </div></div>
 </div>
-<a name="%24pathGenerator" id="$pathGenerator"> </a><div class="element clickable property protected $pathGenerator" data-toggle="collapse" data-target=".$pathGenerator .collapse">
-<h2>Path generator</h2>
+<a id="property_pathGenerator"> </a><div class="element clickable property protected property_pathGenerator" data-toggle="collapse" data-target=".property_pathGenerator .collapse">
+<h2></h2>
 <pre>$pathGenerator : <a href="../classes/eZ.Publish.Core.FieldType.BinaryBase.PathGenerator.html">\eZ\Publish\Core\FieldType\BinaryBase\PathGenerator</a></pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\FieldType\BinaryBase\BinaryBaseStorage::$$pathGenerator</td>
@@ -404,8 +421,8 @@ referenced else where</h2>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T16:59:49Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:41:21Z.<br></footer></div>
 </div>
 </body>
 </html>

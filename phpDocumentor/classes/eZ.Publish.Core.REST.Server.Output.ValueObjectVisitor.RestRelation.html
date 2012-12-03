@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,52 +61,73 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public inherited"><a href="#__construct" title="__construct :: Construct from used URL handler"><span class="description">Construct from used URL handler</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#visit" title="visit :: Visit struct returned by controllers"><span class="description">Visit struct returned by controllers</span><pre>visit()</pre></a></li>
-<li class="nav-header protected">» Protected</li>
-<li class="method protected "><a href="#getRelationTypeString" title="getRelationTypeString :: Returns $relationType as a readable string"><span class="description">Returns $relationType as a readable string</span><pre>getRelationTypeString()</pre></a></li>
-<li class="method protected inherited"><a href="#serializeBool" title="serializeBool :: Returns a string representation for the given $boolValue"><span class="description">Returns a string representation for the given $boolValue</span><pre>serializeBool()</pre></a></li>
-<li class="method protected inherited"><a href="#serializeSortField" title="serializeSortField :: Serializes the given $sortField to a string representation"><span class="description">Serializes the given $sortField to a string representation</span><pre>serializeSortField()</pre></a></li>
-<li class="method protected inherited"><a href="#serializeSortOrder" title="serializeSortOrder :: Serializes the given $sortOrder to a string representation"><span class="description">Serializes the given $sortOrder to a string representation</span><pre>serializeSortOrder()</pre></a></li>
-<li class="method protected inherited"><a href="#visitDescriptionsList" title="visitDescriptionsList :: Visits the given list of $descriptions"><span class="description">Visits the given list of $descriptions</span><pre>visitDescriptionsList()</pre></a></li>
-<li class="method protected inherited"><a href="#visitLimitation" title="visitLimitation :: Visits a limitation"><span class="description">Visits a limitation</span><pre>visitLimitation()</pre></a></li>
-<li class="method protected inherited"><a href="#visitNamesList" title="visitNamesList :: Visits the given list of $names"><span class="description">Visits the given list of $names</span><pre>visitNamesList()</pre></a></li>
-<li class="method protected inherited"><a href="#visitTranslatedList" title="visitTranslatedList :: Visits a list of translated elements"><span class="description">Visits a list of translated elements</span><pre>visitTranslatedList()</pre></a></li>
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___construct" title="__construct :: Construct from used URL handler"><span class="description">Construct from used URL handler</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_visit" title="visit :: Visit struct returned by controllers"><span class="description">Visit struct returned by controllers</span><pre>visit()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method_getRelationTypeString" title="getRelationTypeString :: Returns $relationType as a readable string"><span class="description">Returns $relationType as a readable string</span><pre>getRelationTypeString()</pre></a></li>
+<li class="method protected inherited"><a href="#method_serializeBool" title="serializeBool :: Returns a string representation for the given $boolValue"><span class="description">Returns a string representation for the given $boolValue</span><pre>serializeBool()</pre></a></li>
+<li class="method protected inherited"><a href="#method_serializeSortField" title="serializeSortField :: Serializes the given $sortField to a string representation"><span class="description">Serializes the given $sortField to a string representation</span><pre>serializeSortField()</pre></a></li>
+<li class="method protected inherited"><a href="#method_serializeSortOrder" title="serializeSortOrder :: Serializes the given $sortOrder to a string representation"><span class="description">Serializes the given $sortOrder to a string representation</span><pre>serializeSortOrder()</pre></a></li>
+<li class="method protected inherited"><a href="#method_visitDescriptionsList" title="visitDescriptionsList :: Visits the given list of $descriptions"><span class="description">Visits the given list of $descriptions</span><pre>visitDescriptionsList()</pre></a></li>
+<li class="method protected inherited"><a href="#method_visitLimitation" title="visitLimitation :: Visits a limitation"><span class="description">Visits a limitation</span><pre>visitLimitation()</pre></a></li>
+<li class="method protected inherited"><a href="#method_visitNamesList" title="visitNamesList :: Visits the given list of $names"><span class="description">Visits the given list of $names</span><pre>visitNamesList()</pre></a></li>
+<li class="method protected inherited"><a href="#method_visitTranslatedList" title="visitTranslatedList :: Visits a list of translated elements"><span class="description">Visits a list of translated elements</span><pre>visitTranslatedList()</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected inherited"><a href="#%24urlHandler" title="$urlHandler :: URL handler for URL generation"><span class="description">URL handler for URL generation</span><pre>$urlHandler</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="property protected inherited"><a href="#property_urlHandler" title="$urlHandler :: URL handler for URL generation"><span class="description"></span><pre>$urlHandler</pre></a></li></ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CREST%5CServer%5COutput%5CValueObjectVisitor%5CRestRelation" id="\eZ\Publish\Core\REST\Server\Output\ValueObjectVisitor\RestRelation"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\REST\Server\Output\ValueObjectVisitor\RestRelation"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.REST.html">REST</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.REST.Server.html">Server</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.REST.Server.Output.html">Output</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.REST.Server.Output.ValueObjectVisitor.html">ValueObjectVisitor</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.REST.html">REST</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.REST.Server.html">Server</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.REST.Server.Output.html">Output</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.REST.Server.Output.ValueObjectVisitor.html">ValueObjectVisitor</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.REST.Server.Output.ValueObjectVisitor.RestRelation.html">RestRelation</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.REST.Server.Output.ValueObjectVisitor.RestRelation.html" class="element class">
+<div class="element class">
 <p class="short_description">RestRelation value object visitor</p>
 <div class="details">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
 <h2>Construct from used URL handler</h2>
 <pre>__construct(\eZ\Publish\Core\REST\Common\UrlHandler $urlHandler) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\REST\Common\Output\ValueObjectVisitor::__construct()</td>
@@ -117,12 +139,12 @@
 </div>
 </div></div>
 </div>
-<a name="visit" id="visit"></a><div class="element clickable method public visit" data-toggle="collapse" data-target=".visit .collapse">
+<a id="method_visit"></a><div class="element clickable method public method_visit" data-toggle="collapse" data-target=".method_visit .collapse">
 <h2>Visit struct returned by controllers</h2>
 <pre>visit(\eZ\Publish\Core\REST\Common\Output\Visitor $visitor, \eZ\Publish\Core\REST\Common\Output\Generator $generator, <a href="../classes/eZ.Publish.Core.REST.Server.Values.RestRelation.html">\eZ\Publish\Core\REST\Server\Values\RestRelation</a> $data) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$visitor</h4>
@@ -138,12 +160,12 @@
 </div>
 </div></div>
 </div>
-<a name="getRelationTypeString" id="getRelationTypeString"></a><div class="element clickable method protected getRelationTypeString" data-toggle="collapse" data-target=".getRelationTypeString .collapse">
+<a id="method_getRelationTypeString"></a><div class="element clickable method protected method_getRelationTypeString" data-toggle="collapse" data-target=".method_getRelationTypeString .collapse">
 <h2>Returns $relationType as a readable string</h2>
 <pre>getRelationTypeString(int $relationType) : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$relationType</h4>
@@ -153,12 +175,12 @@
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="serializeBool" id="serializeBool"></a><div class="element clickable method protected serializeBool" data-toggle="collapse" data-target=".serializeBool .collapse">
+<a id="method_serializeBool"></a><div class="element clickable method protected method_serializeBool" data-toggle="collapse" data-target=".method_serializeBool .collapse">
 <h2>Returns a string representation for the given $boolValue</h2>
 <pre>serializeBool(boolean $boolValue) : string</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\REST\Common\Output\ValueObjectVisitor::serializeBool()</td>
@@ -172,12 +194,12 @@
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="serializeSortField" id="serializeSortField"></a><div class="element clickable method protected serializeSortField" data-toggle="collapse" data-target=".serializeSortField .collapse">
+<a id="method_serializeSortField"></a><div class="element clickable method protected method_serializeSortField" data-toggle="collapse" data-target=".method_serializeSortField .collapse">
 <h2>Serializes the given $sortField to a string representation</h2>
 <pre>serializeSortField(int $sortField) : string</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\REST\Common\Output\ValueObjectVisitor::serializeSortField()</td>
@@ -191,12 +213,12 @@
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="serializeSortOrder" id="serializeSortOrder"></a><div class="element clickable method protected serializeSortOrder" data-toggle="collapse" data-target=".serializeSortOrder .collapse">
+<a id="method_serializeSortOrder"></a><div class="element clickable method protected method_serializeSortOrder" data-toggle="collapse" data-target=".method_serializeSortOrder .collapse">
 <h2>Serializes the given $sortOrder to a string representation</h2>
 <pre>serializeSortOrder(int $sortOrder) : string</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\REST\Common\Output\ValueObjectVisitor::serializeSortOrder()</td>
@@ -210,12 +232,12 @@
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="visitDescriptionsList" id="visitDescriptionsList"></a><div class="element clickable method protected visitDescriptionsList" data-toggle="collapse" data-target=".visitDescriptionsList .collapse">
+<a id="method_visitDescriptionsList"></a><div class="element clickable method protected method_visitDescriptionsList" data-toggle="collapse" data-target=".method_visitDescriptionsList .collapse">
 <h2>Visits the given list of $descriptions</h2>
-<pre>visitDescriptionsList(\eZ\Publish\Core\REST\Common\Output\Generator $generator, \array $descriptions) </pre>
+<pre>visitDescriptionsList(\eZ\Publish\Core\REST\Common\Output\Generator $generator, array $descriptions) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\REST\Common\Output\ValueObjectVisitor::visitDescriptionsList()</td>
@@ -231,12 +253,12 @@
 </div>
 </div></div>
 </div>
-<a name="visitLimitation" id="visitLimitation"></a><div class="element clickable method protected visitLimitation" data-toggle="collapse" data-target=".visitLimitation .collapse">
+<a id="method_visitLimitation"></a><div class="element clickable method protected method_visitLimitation" data-toggle="collapse" data-target=".method_visitLimitation .collapse">
 <h2>Visits a limitation</h2>
 <pre>visitLimitation(\eZ\Publish\Core\REST\Common\Output\Generator $generator, \eZ\Publish\API\Repository\Values\User\Limitation $limitation) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\REST\Common\Output\ValueObjectVisitor::visitLimitation()</td>
@@ -252,12 +274,12 @@
 </div>
 </div></div>
 </div>
-<a name="visitNamesList" id="visitNamesList"></a><div class="element clickable method protected visitNamesList" data-toggle="collapse" data-target=".visitNamesList .collapse">
+<a id="method_visitNamesList"></a><div class="element clickable method protected method_visitNamesList" data-toggle="collapse" data-target=".method_visitNamesList .collapse">
 <h2>Visits the given list of $names</h2>
-<pre>visitNamesList(\eZ\Publish\Core\REST\Common\Output\Generator $generator, \array $names) </pre>
+<pre>visitNamesList(\eZ\Publish\Core\REST\Common\Output\Generator $generator, array $names) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\REST\Common\Output\ValueObjectVisitor::visitNamesList()</td>
@@ -273,12 +295,12 @@
 </div>
 </div></div>
 </div>
-<a name="visitTranslatedList" id="visitTranslatedList"></a><div class="element clickable method protected visitTranslatedList" data-toggle="collapse" data-target=".visitTranslatedList .collapse">
+<a id="method_visitTranslatedList"></a><div class="element clickable method protected method_visitTranslatedList" data-toggle="collapse" data-target=".method_visitTranslatedList .collapse">
 <h2>Visits a list of translated elements</h2>
-<pre>visitTranslatedList(\eZ\Publish\Core\REST\Common\Output\Generator $generator, \array $translatedElements, mixed $listName) </pre>
+<pre>visitTranslatedList(\eZ\Publish\Core\REST\Common\Output\Generator $generator, array $translatedElements, mixed $listName) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\REST\Common\Output\ValueObjectVisitor::visitTranslatedList()</td>
@@ -300,12 +322,12 @@
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24urlHandler" id="$urlHandler"> </a><div class="element clickable property protected $urlHandler" data-toggle="collapse" data-target=".$urlHandler .collapse">
-<h2>URL handler for URL generation</h2>
+<a id="property_urlHandler"> </a><div class="element clickable property protected property_urlHandler" data-toggle="collapse" data-target=".property_urlHandler .collapse">
+<h2></h2>
 <pre>$urlHandler : <a href="../classes/eZ.Publish.Core.REST.Common.UrlHandler.html">\eZ\Publish\Core\REST\Common\UrlHandler</a></pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>inherited_from</th>
 <td>\eZ\Publish\Core\REST\Common\Output\ValueObjectVisitor::$$urlHandler</td>
@@ -318,8 +340,8 @@
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T16:58:32Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:40:18Z.<br></footer></div>
 </div>
 </body>
 </html>

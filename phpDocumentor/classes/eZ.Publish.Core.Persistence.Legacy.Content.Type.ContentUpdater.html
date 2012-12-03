@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,50 +61,73 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#__construct" title="__construct :: Creates a new content updater"><span class="description">Creates a new content updater</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#applyUpdates" title="applyUpdates :: Applies all given updates"><span class="description">Applies all given updates</span><pre>applyUpdates()</pre></a></li>
-<li class="method public "><a href="#determineActions" title="determineActions :: Determines the neccessary update actions"><span class="description">Determines the neccessary update actions</span><pre>determineActions()</pre></a></li>
-<li class="nav-header protected">» Protected</li>
-<li class="method protected "><a href="#hasFieldDefinition" title="hasFieldDefinition :: hasFieldDefinition"><span class="description">hasFieldDefinition</span><pre>hasFieldDefinition()</pre></a></li>
-<li class="method protected "><a href="#loadContentObjects" title="loadContentObjects :: Returns all content objects of $contentTypeId"><span class="description">Returns all content objects of $contentTypeId</span><pre>loadContentObjects()</pre></a></li>
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Creates a new content updater"><span class="description">Creates a new content updater</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_applyUpdates" title="applyUpdates :: Applies all given updates"><span class="description">Applies all given updates</span><pre>applyUpdates()</pre></a></li>
+<li class="method public "><a href="#method_determineActions" title="determineActions :: Determines the neccessary update actions"><span class="description">Determines the neccessary update actions</span><pre>determineActions()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method_hasFieldDefinition" title="hasFieldDefinition :: hasFieldDefinition"><span class="description">hasFieldDefinition</span><pre>hasFieldDefinition()</pre></a></li>
+<li class="method protected "><a href="#method_loadContentObjects" title="loadContentObjects :: Returns all content objects of $contentTypeId"><span class="description">Returns all content objects of $contentTypeId</span><pre>loadContentObjects()</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected "><a href="#%24contentGateway" title="$contentGateway :: Content gateway"><span class="description">Content gateway</span><pre>$contentGateway</pre></a></li>
-<li class="property protected "><a href="#%24converterRegistry" title="$converterRegistry :: FieldValue converter registry"><span class="description">FieldValue converter registry</span><pre>$converterRegistry</pre></a></li>
-<li class="property protected "><a href="#%24searchHandler" title="$searchHandler :: Search handler"><span class="description">Search handler</span><pre>$searchHandler</pre></a></li>
-<li class="property protected "><a href="#%24storageHandler" title="$storageHandler :: Storage handler"><span class="description">Storage handler</span><pre>$storageHandler</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_contentGateway" title="$contentGateway :: Content gateway"><span class="description"></span><pre>$contentGateway</pre></a></li>
+<li class="property protected "><a href="#property_converterRegistry" title="$converterRegistry :: FieldValue converter registry"><span class="description"></span><pre>$converterRegistry</pre></a></li>
+<li class="property protected "><a href="#property_searchHandler" title="$searchHandler :: Search handler"><span class="description"></span><pre>$searchHandler</pre></a></li>
+<li class="property protected "><a href="#property_storageHandler" title="$storageHandler :: Storage handler"><span class="description"></span><pre>$storageHandler</pre></a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CPersistence%5CLegacy%5CContent%5CType%5CContentUpdater" id="\eZ\Publish\Core\Persistence\Legacy\Content\Type\ContentUpdater"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\Persistence\Legacy\Content\Type\ContentUpdater"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.Type.html">Type</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.Type.html">Type</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Type.ContentUpdater.html">ContentUpdater</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Type.ContentUpdater.html" class="element class">
+<div class="element class">
 <p class="short_description">Class to update content objects to a new type version</p>
 <div class="details">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
 <h2>Creates a new content updater</h2>
 <pre>__construct(\eZ\Publish\SPI\Persistence\Content\Search\Handler $searchHandler, \eZ\Publish\Core\Persistence\Legacy\Content\Gateway $contentGateway, \eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry $converterRegistry, \eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler $storageHandler) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$searchHandler</h4>
@@ -123,12 +147,12 @@
 </div>
 </div></div>
 </div>
-<a name="applyUpdates" id="applyUpdates"></a><div class="element clickable method public applyUpdates" data-toggle="collapse" data-target=".applyUpdates .collapse">
+<a id="method_applyUpdates"></a><div class="element clickable method public method_applyUpdates" data-toggle="collapse" data-target=".method_applyUpdates .collapse">
 <h2>Applies all given updates</h2>
-<pre>applyUpdates(mixed $contentTypeId, \array $actions) : void</pre>
+<pre>applyUpdates(mixed $contentTypeId, array $actions) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentTypeId</h4>
@@ -140,12 +164,12 @@
 </div>
 </div></div>
 </div>
-<a name="determineActions" id="determineActions"></a><div class="element clickable method public determineActions" data-toggle="collapse" data-target=".determineActions .collapse">
+<a id="method_determineActions"></a><div class="element clickable method public method_determineActions" data-toggle="collapse" data-target=".method_determineActions .collapse">
 <h2>Determines the neccessary update actions</h2>
 <pre>determineActions(\eZ\Publish\SPI\Persistence\Content\Type $fromType, \eZ\Publish\SPI\Persistence\Content\Type $toType) : <a href="Publish.Core.Persistence.Legacy.Content.Type.ContentUpdater.Action.html#%5CeZ%5CPublish%5CCore%5CPersistence%5CLegacy%5CContent%5CType%5CContentUpdater%5CAction">\eZ\Publish\Core\Persistence\Legacy\Content\Type\ContentUpdater\Action[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$fromType</h4>
@@ -159,12 +183,12 @@
 <div class="subelement response"><code><a href="Publish.Core.Persistence.Legacy.Content.Type.ContentUpdater.Action.html#%5CeZ%5CPublish%5CCore%5CPersistence%5CLegacy%5CContent%5CType%5CContentUpdater%5CAction">\eZ\Publish\Core\Persistence\Legacy\Content\Type\ContentUpdater\Action[]</a></code></div>
 </div></div>
 </div>
-<a name="hasFieldDefinition" id="hasFieldDefinition"></a><div class="element clickable method protected hasFieldDefinition" data-toggle="collapse" data-target=".hasFieldDefinition .collapse">
+<a id="method_hasFieldDefinition"></a><div class="element clickable method protected method_hasFieldDefinition" data-toggle="collapse" data-target=".method_hasFieldDefinition .collapse">
 <h2>hasFieldDefinition</h2>
 <pre>hasFieldDefinition(\eZ\Publish\SPI\Persistence\Content\Type $type, \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDef) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$type</h4>
@@ -178,12 +202,12 @@
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="loadContentObjects" id="loadContentObjects"></a><div class="element clickable method protected loadContentObjects" data-toggle="collapse" data-target=".loadContentObjects .collapse">
+<a id="method_loadContentObjects"></a><div class="element clickable method protected method_loadContentObjects" data-toggle="collapse" data-target=".method_loadContentObjects .collapse">
 <h2>Returns all content objects of $contentTypeId</h2>
 <pre>loadContentObjects(mixed $contentTypeId) : \eZ\Publish\Core\Persistence\Legacy\Content[]</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentTypeId</h4>
@@ -195,29 +219,29 @@
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24contentGateway" id="$contentGateway"> </a><div class="element clickable property protected $contentGateway" data-toggle="collapse" data-target=".$contentGateway .collapse">
-<h2>Content gateway</h2>
+<a id="property_contentGateway"> </a><div class="element clickable property protected property_contentGateway" data-toggle="collapse" data-target=".property_contentGateway .collapse">
+<h2></h2>
 <pre>$contentGateway : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Gateway.html">\eZ\Publish\Core\Persistence\Legacy\Content\Gateway</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24converterRegistry" id="$converterRegistry"> </a><div class="element clickable property protected $converterRegistry" data-toggle="collapse" data-target=".$converterRegistry .collapse">
-<h2>FieldValue converter registry</h2>
+<a id="property_converterRegistry"> </a><div class="element clickable property protected property_converterRegistry" data-toggle="collapse" data-target=".property_converterRegistry .collapse">
+<h2></h2>
 <pre>$converterRegistry : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.FieldValue.ConverterRegistry.html">\eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24searchHandler" id="$searchHandler"> </a><div class="element clickable property protected $searchHandler" data-toggle="collapse" data-target=".$searchHandler .collapse">
-<h2>Search handler</h2>
+<a id="property_searchHandler"> </a><div class="element clickable property protected property_searchHandler" data-toggle="collapse" data-target=".property_searchHandler .collapse">
+<h2></h2>
 <pre>$searchHandler : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Search.Handler.html">\eZ\Publish\Core\Persistence\Legacy\Content\Search\Handler</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24storageHandler" id="$storageHandler"> </a><div class="element clickable property protected $storageHandler" data-toggle="collapse" data-target=".$storageHandler .collapse">
-<h2>Storage handler</h2>
+<a id="property_storageHandler"> </a><div class="element clickable property protected property_storageHandler" data-toggle="collapse" data-target=".property_storageHandler .collapse">
+<h2></h2>
 <pre>$storageHandler : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.StorageHandler.html">\eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
 </div>
@@ -225,8 +249,8 @@
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T17:00:24Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:41:49Z.<br></footer></div>
 </div>
 </body>
 </html>

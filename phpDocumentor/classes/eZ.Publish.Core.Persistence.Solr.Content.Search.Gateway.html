@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -58,43 +59,56 @@
 <span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
 <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
 </div>
-<ul class="side-nav nav nav-list">
-<li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#findContent" title="findContent :: Finds content objects for the given query."><span class="description">Finds content objects for the given query.</span><pre>findContent()</pre></a></li>
-<li class="method public "><a href="#indexContent" title="indexContent :: Indexes a content object"><span class="description">Indexes a content object</span><pre>indexContent()</pre></a></li>
-<li class="method public "><a href="#purgeIndex" title="purgeIndex :: Purges all contents from the index"><span class="description">Purges all contents from the index</span><pre>purgeIndex()</pre></a></li>
+<ul class="side-nav nav nav-list"><li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_findContent" title="findContent :: Finds content objects for the given query."><span class="description">Finds content objects for the given query.</span><pre>findContent()</pre></a></li>
+<li class="method public "><a href="#method_indexContent" title="indexContent :: Indexes a content object"><span class="description">Indexes a content object</span><pre>indexContent()</pre></a></li>
+<li class="method public "><a href="#method_purgeIndex" title="purgeIndex :: Purges all contents from the index"><span class="description">Purges all contents from the index</span><pre>purgeIndex()</pre></a></li>
 </ul>
+</li></ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CPersistence%5CSolr%5CContent%5CSearch%5CGateway" id="\eZ\Publish\Core\Persistence\Solr\Content\Search\Gateway"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\Persistence\Solr\Content\Search\Gateway"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.html">Solr</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.html">Content</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.Search.html">Search</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.html">Solr</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.html">Content</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Solr.Content.Search.html">Search</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.Gateway.html">Gateway</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.Persistence.Solr.Content.Search.Gateway.html" class="element class">
+<div class="element class">
 <p class="short_description">The Content Search Gateway provides the implementation for one database to
 retrieve the desired content objects.</p>
 <div class="details">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="findContent" id="findContent"></a><div class="element clickable method public findContent" data-toggle="collapse" data-target=".findContent .collapse">
+<a id="method_findContent"></a><div class="element clickable method public method_findContent" data-toggle="collapse" data-target=".method_findContent .collapse">
 <h2>Finds content objects for the given query.</h2>
-<pre>findContent(\eZ\Publish\API\Repository\Values\Content\Query $query, \array $fieldFilters) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Search.SearchResult.html">\eZ\Publish\API\Repository\Values\Content\Search\SearchResult</a></pre>
+<pre>findContent(\eZ\Publish\API\Repository\Values\Content\Query $query, array $fieldFilters) : <a href="../classes/eZ.Publish.API.Repository.Values.Content.Search.SearchResult.html">\eZ\Publish\API\Repository\Values\Content\Search\SearchResult</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>todo</th>
 <td>define structs for the field filters</td>
@@ -107,19 +121,20 @@ retrieve the desired content objects.</p>
 <div class="subelement argument">
 <h4>$fieldFilters</h4>
 <code>array</code><ul>
-<li>a map of filters for the returned fields. Currently supported: <code>array("languages" => array(<language1>,..))</code>.</li>
+<li>a map of filters for the returned fields.
+   Currently supported: <code>array("languages" => array(<language1>,..))</code>.</li>
 </ul>
 </div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Search.SearchResult.html">\eZ\Publish\API\Repository\Values\Content\Search\SearchResult</a></code></div>
 </div></div>
 </div>
-<a name="indexContent" id="indexContent"></a><div class="element clickable method public indexContent" data-toggle="collapse" data-target=".indexContent .collapse">
+<a id="method_indexContent"></a><div class="element clickable method public method_indexContent" data-toggle="collapse" data-target=".method_indexContent .collapse">
 <h2>Indexes a content object</h2>
-<pre>indexContent(\array $document) : void</pre>
+<pre>indexContent(array $document) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$document</h4>
@@ -127,11 +142,11 @@ retrieve the desired content objects.</p>
 </div>
 </div></div>
 </div>
-<a name="purgeIndex" id="purgeIndex"></a><div class="element clickable method public purgeIndex" data-toggle="collapse" data-target=".purgeIndex .collapse">
+<a id="method_purgeIndex"></a><div class="element clickable method public method_purgeIndex" data-toggle="collapse" data-target=".method_purgeIndex .collapse">
 <h2>Purges all contents from the index</h2>
 <pre>purgeIndex() : void</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
 </div>
@@ -139,8 +154,8 @@ retrieve the desired content objects.</p>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T17:00:45Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:42:07Z.<br></footer></div>
 </div>
 </body>
 </html>

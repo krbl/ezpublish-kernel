@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,75 +61,95 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#__construct" title="__construct :: Creates a new exception conversion gateway around $innerGateway"><span class="description">Creates a new exception conversion gateway around $innerGateway</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#countGroupsForType" title="countGroupsForType :: Returns the number of Groups the type is assigned to."><span class="description">Returns the number of Groups the type is assigned to.</span><pre>countGroupsForType()</pre></a></li>
-<li class="method public "><a href="#countInstancesOfType" title="countInstancesOfType :: Counts the number of instances that exists of the identified type."><span class="description">Counts the number of instances that exists of the identified type.</span><pre>countInstancesOfType()</pre></a></li>
-<li class="method public "><a href="#countTypesInGroup" title="countTypesInGroup :: Returns the number of types in a certain group."><span class="description">Returns the number of types in a certain group.</span><pre>countTypesInGroup()</pre></a></li>
-<li class="method public "><a href="#delete" title="delete :: Deletes a Type completely."><span class="description">Deletes a Type completely.</span><pre>delete()</pre></a></li>
-<li class="method public "><a href="#deleteFieldDefinition" title="deleteFieldDefinition :: Deletes a field definition."><span class="description">Deletes a field definition.</span><pre>deleteFieldDefinition()</pre></a></li>
-<li class="method public "><a href="#deleteFieldDefinitionsForType" title="deleteFieldDefinitionsForType :: Deletes all field definitions of a Type."><span class="description">Deletes all field definitions of a Type.</span><pre>deleteFieldDefinitionsForType()</pre></a></li>
-<li class="method public "><a href="#deleteGroup" title="deleteGroup :: Deletes the Group with the given $groupId."><span class="description">Deletes the Group with the given $groupId.</span><pre>deleteGroup()</pre></a></li>
-<li class="method public "><a href="#deleteGroupAssignment" title="deleteGroupAssignment :: Deletes a group assignments for a Type."><span class="description">Deletes a group assignments for a Type.</span><pre>deleteGroupAssignment()</pre></a></li>
-<li class="method public "><a href="#deleteGroupAssignmentsForType" title="deleteGroupAssignmentsForType :: Deletes all group assignments for a Type."><span class="description">Deletes all group assignments for a Type.</span><pre>deleteGroupAssignmentsForType()</pre></a></li>
-<li class="method public "><a href="#deleteType" title="deleteType :: Deletes a the Type."><span class="description">Deletes a the Type.</span><pre>deleteType()</pre></a></li>
-<li class="method public "><a href="#insertFieldDefinition" title="insertFieldDefinition :: Inserts a $fieldDefinition for $typeId."><span class="description">Inserts a $fieldDefinition for $typeId.</span><pre>insertFieldDefinition()</pre></a></li>
-<li class="method public "><a href="#insertGroup" title="insertGroup :: Inserts the given $group."><span class="description">Inserts the given $group.</span><pre>insertGroup()</pre></a></li>
-<li class="method public "><a href="#insertGroupAssignment" title="insertGroupAssignment :: Insert assignment of $typeId to $groupId."><span class="description">Insert assignment of $typeId to $groupId.</span><pre>insertGroupAssignment()</pre></a></li>
-<li class="method public "><a href="#insertType" title="insertType :: Inserts a new content type."><span class="description">Inserts a new content type.</span><pre>insertType()</pre></a></li>
-<li class="method public "><a href="#loadAllGroupsData" title="loadAllGroupsData :: Returns an array with data about all Group objects."><span class="description">Returns an array with data about all Group objects.</span><pre>loadAllGroupsData()</pre></a></li>
-<li class="method public "><a href="#loadFieldDefinition" title="loadFieldDefinition :: Loads an array with data about field definition referred $id and $status."><span class="description">Loads an array with data about field definition referred $id and $status.</span><pre>loadFieldDefinition()</pre></a></li>
-<li class="method public "><a href="#loadGroupData" title="loadGroupData :: Returns an array with data about the Group with $groupId."><span class="description">Returns an array with data about the Group with $groupId.</span><pre>loadGroupData()</pre></a></li>
-<li class="method public "><a href="#loadGroupDataByIdentifier" title="loadGroupDataByIdentifier :: Returns an array with data about the Group with $identifier."><span class="description">Returns an array with data about the Group with $identifier.</span><pre>loadGroupDataByIdentifier()</pre></a></li>
-<li class="method public "><a href="#loadTypeData" title="loadTypeData :: Loads an array with data about $typeId in $status."><span class="description">Loads an array with data about $typeId in $status.</span><pre>loadTypeData()</pre></a></li>
-<li class="method public "><a href="#loadTypeDataByIdentifier" title="loadTypeDataByIdentifier :: Loads an array with data about the type referred to by $identifier in
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Creates a new exception conversion gateway around $innerGateway"><span class="description">Creates a new exception conversion gateway around $innerGateway</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_countGroupsForType" title="countGroupsForType :: Returns the number of Groups the type is assigned to."><span class="description">Returns the number of Groups the type is assigned to.</span><pre>countGroupsForType()</pre></a></li>
+<li class="method public "><a href="#method_countInstancesOfType" title="countInstancesOfType :: Counts the number of instances that exists of the identified type."><span class="description">Counts the number of instances that exists of the identified type.</span><pre>countInstancesOfType()</pre></a></li>
+<li class="method public "><a href="#method_countTypesInGroup" title="countTypesInGroup :: Returns the number of types in a certain group."><span class="description">Returns the number of types in a certain group.</span><pre>countTypesInGroup()</pre></a></li>
+<li class="method public "><a href="#method_delete" title="delete :: Deletes a Type completely."><span class="description">Deletes a Type completely.</span><pre>delete()</pre></a></li>
+<li class="method public "><a href="#method_deleteFieldDefinition" title="deleteFieldDefinition :: Deletes a field definition."><span class="description">Deletes a field definition.</span><pre>deleteFieldDefinition()</pre></a></li>
+<li class="method public "><a href="#method_deleteFieldDefinitionsForType" title="deleteFieldDefinitionsForType :: Deletes all field definitions of a Type."><span class="description">Deletes all field definitions of a Type.</span><pre>deleteFieldDefinitionsForType()</pre></a></li>
+<li class="method public "><a href="#method_deleteGroup" title="deleteGroup :: Deletes the Group with the given $groupId."><span class="description">Deletes the Group with the given $groupId.</span><pre>deleteGroup()</pre></a></li>
+<li class="method public "><a href="#method_deleteGroupAssignment" title="deleteGroupAssignment :: Deletes a group assignments for a Type."><span class="description">Deletes a group assignments for a Type.</span><pre>deleteGroupAssignment()</pre></a></li>
+<li class="method public "><a href="#method_deleteGroupAssignmentsForType" title="deleteGroupAssignmentsForType :: Deletes all group assignments for a Type."><span class="description">Deletes all group assignments for a Type.</span><pre>deleteGroupAssignmentsForType()</pre></a></li>
+<li class="method public "><a href="#method_deleteType" title="deleteType :: Deletes a the Type."><span class="description">Deletes a the Type.</span><pre>deleteType()</pre></a></li>
+<li class="method public "><a href="#method_insertFieldDefinition" title="insertFieldDefinition :: Inserts a $fieldDefinition for $typeId."><span class="description">Inserts a $fieldDefinition for $typeId.</span><pre>insertFieldDefinition()</pre></a></li>
+<li class="method public "><a href="#method_insertGroup" title="insertGroup :: Inserts the given $group."><span class="description">Inserts the given $group.</span><pre>insertGroup()</pre></a></li>
+<li class="method public "><a href="#method_insertGroupAssignment" title="insertGroupAssignment :: Insert assignment of $typeId to $groupId."><span class="description">Insert assignment of $typeId to $groupId.</span><pre>insertGroupAssignment()</pre></a></li>
+<li class="method public "><a href="#method_insertType" title="insertType :: Inserts a new content type."><span class="description">Inserts a new content type.</span><pre>insertType()</pre></a></li>
+<li class="method public "><a href="#method_loadAllGroupsData" title="loadAllGroupsData :: Returns an array with data about all Group objects."><span class="description">Returns an array with data about all Group objects.</span><pre>loadAllGroupsData()</pre></a></li>
+<li class="method public "><a href="#method_loadFieldDefinition" title="loadFieldDefinition :: Loads an array with data about field definition referred $id and $status."><span class="description">Loads an array with data about field definition referred $id and $status.</span><pre>loadFieldDefinition()</pre></a></li>
+<li class="method public "><a href="#method_loadGroupData" title="loadGroupData :: Returns an array with data about the Group with $groupId."><span class="description">Returns an array with data about the Group with $groupId.</span><pre>loadGroupData()</pre></a></li>
+<li class="method public "><a href="#method_loadGroupDataByIdentifier" title="loadGroupDataByIdentifier :: Returns an array with data about the Group with $identifier."><span class="description">Returns an array with data about the Group with $identifier.</span><pre>loadGroupDataByIdentifier()</pre></a></li>
+<li class="method public "><a href="#method_loadTypeData" title="loadTypeData :: Loads an array with data about $typeId in $status."><span class="description">Loads an array with data about $typeId in $status.</span><pre>loadTypeData()</pre></a></li>
+<li class="method public "><a href="#method_loadTypeDataByIdentifier" title="loadTypeDataByIdentifier :: Loads an array with data about the type referred to by $identifier in
 $status."><span class="description">Loads an array with data about the type referred to by $identifier in
 $status.</span><pre>loadTypeDataByIdentifier()</pre></a></li>
-<li class="method public "><a href="#loadTypeDataByRemoteId" title="loadTypeDataByRemoteId :: Loads an array with data about the type referred to by $remoteId in
+<li class="method public "><a href="#method_loadTypeDataByRemoteId" title="loadTypeDataByRemoteId :: Loads an array with data about the type referred to by $remoteId in
 $status."><span class="description">Loads an array with data about the type referred to by $remoteId in
 $status.</span><pre>loadTypeDataByRemoteId()</pre></a></li>
-<li class="method public "><a href="#loadTypesDataForGroup" title="loadTypesDataForGroup :: Loads data for all Types in $status in $groupId."><span class="description">Loads data for all Types in $status in $groupId.</span><pre>loadTypesDataForGroup()</pre></a></li>
-<li class="method public "><a href="#publishTypeAndFields" title="publishTypeAndFields :: Publishes the Type with $typeId from $sourceVersion to $targetVersion,
+<li class="method public "><a href="#method_loadTypesDataForGroup" title="loadTypesDataForGroup :: Loads data for all Types in $status in $groupId."><span class="description">Loads data for all Types in $status in $groupId.</span><pre>loadTypesDataForGroup()</pre></a></li>
+<li class="method public "><a href="#method_publishTypeAndFields" title="publishTypeAndFields :: Publishes the Type with $typeId from $sourceVersion to $targetVersion,
 including its fields"><span class="description">Publishes the Type with $typeId from $sourceVersion to $targetVersion,
 including its fields</span><pre>publishTypeAndFields()</pre></a></li>
-<li class="method public "><a href="#updateFieldDefinition" title="updateFieldDefinition :: Updates a $fieldDefinition for $typeId."><span class="description">Updates a $fieldDefinition for $typeId.</span><pre>updateFieldDefinition()</pre></a></li>
-<li class="method public "><a href="#updateGroup" title="updateGroup :: Updates a group with data in $group."><span class="description">Updates a group with data in $group.</span><pre>updateGroup()</pre></a></li>
-<li class="method public "><a href="#updateType" title="updateType :: Update a type with $updateStruct."><span class="description">Update a type with $updateStruct.</span><pre>updateType()</pre></a></li>
+<li class="method public "><a href="#method_updateFieldDefinition" title="updateFieldDefinition :: Updates a $fieldDefinition for $typeId."><span class="description">Updates a $fieldDefinition for $typeId.</span><pre>updateFieldDefinition()</pre></a></li>
+<li class="method public "><a href="#method_updateGroup" title="updateGroup :: Updates a group with data in $group."><span class="description">Updates a group with data in $group.</span><pre>updateGroup()</pre></a></li>
+<li class="method public "><a href="#method_updateType" title="updateType :: Update a type with $updateStruct."><span class="description">Update a type with $updateStruct.</span><pre>updateType()</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected "><a href="#%24innerGateway" title="$innerGateway :: The wrapped gateway"><span class="description">The wrapped gateway</span><pre>$innerGateway</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="property protected "><a href="#property_innerGateway" title="$innerGateway :: The wrapped gateway"><span class="description"></span><pre>$innerGateway</pre></a></li></ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CPersistence%5CLegacy%5CContent%5CType%5CGateway%5CExceptionConversion" id="\eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\ExceptionConversion"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\ExceptionConversion"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.Type.html">Type</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.Type.Gateway.html">Gateway</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.Type.html">Type</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.Type.Gateway.html">Gateway</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Type.Gateway.ExceptionConversion.html">ExceptionConversion</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Type.Gateway.ExceptionConversion.html" class="element class">
+<div class="element class">
 <p class="short_description">Base class for content type gateways.</p>
 <div class="details">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
 <h2>Creates a new exception conversion gateway around $innerGateway</h2>
 <pre>__construct(\eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway $innerGateway) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$innerGateway</h4>
@@ -136,12 +157,12 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="countGroupsForType" id="countGroupsForType"></a><div class="element clickable method public countGroupsForType" data-toggle="collapse" data-target=".countGroupsForType .collapse">
+<a id="method_countGroupsForType"></a><div class="element clickable method public method_countGroupsForType" data-toggle="collapse" data-target=".method_countGroupsForType .collapse">
 <h2>Returns the number of Groups the type is assigned to.</h2>
 <pre>countGroupsForType(int $typeId, int $status) : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$typeId</h4>
@@ -155,12 +176,12 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 <div class="subelement response"><code>int</code></div>
 </div></div>
 </div>
-<a name="countInstancesOfType" id="countInstancesOfType"></a><div class="element clickable method public countInstancesOfType" data-toggle="collapse" data-target=".countInstancesOfType .collapse">
+<a id="method_countInstancesOfType"></a><div class="element clickable method public method_countInstancesOfType" data-toggle="collapse" data-target=".method_countInstancesOfType .collapse">
 <h2>Counts the number of instances that exists of the identified type.</h2>
 <pre>countInstancesOfType(int $typeId) : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$typeId</h4>
@@ -170,12 +191,12 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 <div class="subelement response"><code>int</code></div>
 </div></div>
 </div>
-<a name="countTypesInGroup" id="countTypesInGroup"></a><div class="element clickable method public countTypesInGroup" data-toggle="collapse" data-target=".countTypesInGroup .collapse">
+<a id="method_countTypesInGroup"></a><div class="element clickable method public method_countTypesInGroup" data-toggle="collapse" data-target=".method_countTypesInGroup .collapse">
 <h2>Returns the number of types in a certain group.</h2>
 <pre>countTypesInGroup(int $groupId) : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$groupId</h4>
@@ -185,12 +206,12 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 <div class="subelement response"><code>int</code></div>
 </div></div>
 </div>
-<a name="delete" id="delete"></a><div class="element clickable method public delete" data-toggle="collapse" data-target=".delete .collapse">
+<a id="method_delete"></a><div class="element clickable method public method_delete" data-toggle="collapse" data-target=".method_delete .collapse">
 <h2>Deletes a Type completely.</h2>
 <pre>delete(mixed $typeId, int $status) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$typeId</h4>
@@ -202,12 +223,12 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="deleteFieldDefinition" id="deleteFieldDefinition"></a><div class="element clickable method public deleteFieldDefinition" data-toggle="collapse" data-target=".deleteFieldDefinition .collapse">
+<a id="method_deleteFieldDefinition"></a><div class="element clickable method public method_deleteFieldDefinition" data-toggle="collapse" data-target=".method_deleteFieldDefinition .collapse">
 <h2>Deletes a field definition.</h2>
 <pre>deleteFieldDefinition(mixed $typeId, int $status, mixed $fieldDefinitionId) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$typeId</h4>
@@ -223,12 +244,12 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="deleteFieldDefinitionsForType" id="deleteFieldDefinitionsForType"></a><div class="element clickable method public deleteFieldDefinitionsForType" data-toggle="collapse" data-target=".deleteFieldDefinitionsForType .collapse">
+<a id="method_deleteFieldDefinitionsForType"></a><div class="element clickable method public method_deleteFieldDefinitionsForType" data-toggle="collapse" data-target=".method_deleteFieldDefinitionsForType .collapse">
 <h2>Deletes all field definitions of a Type.</h2>
 <pre>deleteFieldDefinitionsForType(mixed $typeId, int $status) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$typeId</h4>
@@ -240,12 +261,12 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="deleteGroup" id="deleteGroup"></a><div class="element clickable method public deleteGroup" data-toggle="collapse" data-target=".deleteGroup .collapse">
+<a id="method_deleteGroup"></a><div class="element clickable method public method_deleteGroup" data-toggle="collapse" data-target=".method_deleteGroup .collapse">
 <h2>Deletes the Group with the given $groupId.</h2>
 <pre>deleteGroup(int $groupId) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$groupId</h4>
@@ -253,12 +274,12 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="deleteGroupAssignment" id="deleteGroupAssignment"></a><div class="element clickable method public deleteGroupAssignment" data-toggle="collapse" data-target=".deleteGroupAssignment .collapse">
+<a id="method_deleteGroupAssignment"></a><div class="element clickable method public method_deleteGroupAssignment" data-toggle="collapse" data-target=".method_deleteGroupAssignment .collapse">
 <h2>Deletes a group assignments for a Type.</h2>
 <pre>deleteGroupAssignment(mixed $groupId, mixed $typeId, int $status) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$groupId</h4>
@@ -274,12 +295,12 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="deleteGroupAssignmentsForType" id="deleteGroupAssignmentsForType"></a><div class="element clickable method public deleteGroupAssignmentsForType" data-toggle="collapse" data-target=".deleteGroupAssignmentsForType .collapse">
+<a id="method_deleteGroupAssignmentsForType"></a><div class="element clickable method public method_deleteGroupAssignmentsForType" data-toggle="collapse" data-target=".method_deleteGroupAssignmentsForType .collapse">
 <h2>Deletes all group assignments for a Type.</h2>
 <pre>deleteGroupAssignmentsForType(mixed $typeId, int $status) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$typeId</h4>
@@ -291,12 +312,12 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="deleteType" id="deleteType"></a><div class="element clickable method public deleteType" data-toggle="collapse" data-target=".deleteType .collapse">
+<a id="method_deleteType"></a><div class="element clickable method public method_deleteType" data-toggle="collapse" data-target=".method_deleteType .collapse">
 <h2>Deletes a the Type.</h2>
 <pre>deleteType(mixed $typeId, int $status) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Does no delete the field definitions!</p></p>
+<div class="long_description"><p>Does no delete the field definitions!</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$typeId</h4>
@@ -308,12 +329,12 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="insertFieldDefinition" id="insertFieldDefinition"></a><div class="element clickable method public insertFieldDefinition" data-toggle="collapse" data-target=".insertFieldDefinition .collapse">
+<a id="method_insertFieldDefinition"></a><div class="element clickable method public method_insertFieldDefinition" data-toggle="collapse" data-target=".method_insertFieldDefinition .collapse">
 <h2>Inserts a $fieldDefinition for $typeId.</h2>
 <pre>insertFieldDefinition(mixed $typeId, int $status, \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDefinition, \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition $storageFieldDef) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$typeId</h4>
@@ -336,12 +357,12 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 <code>mixed</code>Field definition ID</div>
 </div></div>
 </div>
-<a name="insertGroup" id="insertGroup"></a><div class="element clickable method public insertGroup" data-toggle="collapse" data-target=".insertGroup .collapse">
+<a id="method_insertGroup"></a><div class="element clickable method public method_insertGroup" data-toggle="collapse" data-target=".method_insertGroup .collapse">
 <h2>Inserts the given $group.</h2>
 <pre>insertGroup(\eZ\Publish\SPI\Persistence\Content\Type\Group $group) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$group</h4>
@@ -352,12 +373,12 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 <code>mixed</code>Group ID</div>
 </div></div>
 </div>
-<a name="insertGroupAssignment" id="insertGroupAssignment"></a><div class="element clickable method public insertGroupAssignment" data-toggle="collapse" data-target=".insertGroupAssignment .collapse">
+<a id="method_insertGroupAssignment"></a><div class="element clickable method public method_insertGroupAssignment" data-toggle="collapse" data-target=".method_insertGroupAssignment .collapse">
 <h2>Insert assignment of $typeId to $groupId.</h2>
 <pre>insertGroupAssignment(mixed $typeId, int $status, mixed $groupId) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$typeId</h4>
@@ -373,12 +394,12 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="insertType" id="insertType"></a><div class="element clickable method public insertType" data-toggle="collapse" data-target=".insertType .collapse">
+<a id="method_insertType"></a><div class="element clickable method public method_insertType" data-toggle="collapse" data-target=".method_insertType .collapse">
 <h2>Inserts a new content type.</h2>
 <pre>insertType(\eZ\Publish\SPI\Persistence\Content\Type $type, mixed | null $typeId) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$type</h4>
@@ -386,29 +407,29 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 </div>
 <div class="subelement argument">
 <h4>$typeId</h4>
-<code>mixednull</code>
+<code>mixed</code><code>null</code>
 </div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>mixed</code>Type ID</div>
 </div></div>
 </div>
-<a name="loadAllGroupsData" id="loadAllGroupsData"></a><div class="element clickable method public loadAllGroupsData" data-toggle="collapse" data-target=".loadAllGroupsData .collapse">
+<a id="method_loadAllGroupsData"></a><div class="element clickable method public method_loadAllGroupsData" data-toggle="collapse" data-target=".method_loadAllGroupsData .collapse">
 <h2>Returns an array with data about all Group objects.</h2>
 <pre>loadAllGroupsData() : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="loadFieldDefinition" id="loadFieldDefinition"></a><div class="element clickable method public loadFieldDefinition" data-toggle="collapse" data-target=".loadFieldDefinition .collapse">
+<a id="method_loadFieldDefinition"></a><div class="element clickable method public method_loadFieldDefinition" data-toggle="collapse" data-target=".method_loadFieldDefinition .collapse">
 <h2>Loads an array with data about field definition referred $id and $status.</h2>
 <pre>loadFieldDefinition(mixed $id, int $status) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$id</h4>
@@ -421,12 +442,12 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 <code>array</code>Data rows.</div>
 </div></div>
 </div>
-<a name="loadGroupData" id="loadGroupData"></a><div class="element clickable method public loadGroupData" data-toggle="collapse" data-target=".loadGroupData .collapse">
+<a id="method_loadGroupData"></a><div class="element clickable method public method_loadGroupData" data-toggle="collapse" data-target=".method_loadGroupData .collapse">
 <h2>Returns an array with data about the Group with $groupId.</h2>
 <pre>loadGroupData(int $groupId) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$groupId</h4>
@@ -436,12 +457,12 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="loadGroupDataByIdentifier" id="loadGroupDataByIdentifier"></a><div class="element clickable method public loadGroupDataByIdentifier" data-toggle="collapse" data-target=".loadGroupDataByIdentifier .collapse">
+<a id="method_loadGroupDataByIdentifier"></a><div class="element clickable method public method_loadGroupDataByIdentifier" data-toggle="collapse" data-target=".method_loadGroupDataByIdentifier .collapse">
 <h2>Returns an array with data about the Group with $identifier.</h2>
 <pre>loadGroupDataByIdentifier(int $identifier) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$identifier</h4>
@@ -451,12 +472,12 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="loadTypeData" id="loadTypeData"></a><div class="element clickable method public loadTypeData" data-toggle="collapse" data-target=".loadTypeData .collapse">
+<a id="method_loadTypeData"></a><div class="element clickable method public method_loadTypeData" data-toggle="collapse" data-target=".method_loadTypeData .collapse">
 <h2>Loads an array with data about $typeId in $status.</h2>
 <pre>loadTypeData(mixed $typeId, int $status) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$typeId</h4>
@@ -471,13 +492,13 @@ including its fields</span><pre>publishTypeAndFields()</pre></a></li>
 <code>array</code>Data rows.</div>
 </div></div>
 </div>
-<a name="loadTypeDataByIdentifier" id="loadTypeDataByIdentifier"></a><div class="element clickable method public loadTypeDataByIdentifier" data-toggle="collapse" data-target=".loadTypeDataByIdentifier .collapse">
+<a id="method_loadTypeDataByIdentifier"></a><div class="element clickable method public method_loadTypeDataByIdentifier" data-toggle="collapse" data-target=".method_loadTypeDataByIdentifier .collapse">
 <h2>Loads an array with data about the type referred to by $identifier in
 $status.</h2>
 <pre>loadTypeDataByIdentifier(string $identifier, int $status) : \eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\array(int=&gt;array(string=&gt;mixed))</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$identifier</h4>
@@ -492,13 +513,13 @@ $status.</h2>
 <code>\eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\array(int=&gt;array(string=&gt;mixed))</code>Data rows.</div>
 </div></div>
 </div>
-<a name="loadTypeDataByRemoteId" id="loadTypeDataByRemoteId"></a><div class="element clickable method public loadTypeDataByRemoteId" data-toggle="collapse" data-target=".loadTypeDataByRemoteId .collapse">
+<a id="method_loadTypeDataByRemoteId"></a><div class="element clickable method public method_loadTypeDataByRemoteId" data-toggle="collapse" data-target=".method_loadTypeDataByRemoteId .collapse">
 <h2>Loads an array with data about the type referred to by $remoteId in
 $status.</h2>
 <pre>loadTypeDataByRemoteId(mixed $remoteId, int $status) : \eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\array(int=&gt;array(string=&gt;mixed))</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$remoteId</h4>
@@ -513,12 +534,12 @@ $status.</h2>
 <code>\eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\array(int=&gt;array(string=&gt;mixed))</code>Data rows.</div>
 </div></div>
 </div>
-<a name="loadTypesDataForGroup" id="loadTypesDataForGroup"></a><div class="element clickable method public loadTypesDataForGroup" data-toggle="collapse" data-target=".loadTypesDataForGroup .collapse">
+<a id="method_loadTypesDataForGroup"></a><div class="element clickable method public method_loadTypesDataForGroup" data-toggle="collapse" data-target=".method_loadTypesDataForGroup .collapse">
 <h2>Loads data for all Types in $status in $groupId.</h2>
 <pre>loadTypesDataForGroup(mixed $groupId, int $status) : \eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\string[][]</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$groupId</h4>
@@ -532,13 +553,13 @@ $status.</h2>
 <div class="subelement response"><code>\eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\string[][]</code></div>
 </div></div>
 </div>
-<a name="publishTypeAndFields" id="publishTypeAndFields"></a><div class="element clickable method public publishTypeAndFields" data-toggle="collapse" data-target=".publishTypeAndFields .collapse">
+<a id="method_publishTypeAndFields"></a><div class="element clickable method public method_publishTypeAndFields" data-toggle="collapse" data-target=".method_publishTypeAndFields .collapse">
 <h2>Publishes the Type with $typeId from $sourceVersion to $targetVersion,
 including its fields</h2>
 <pre>publishTypeAndFields(int $typeId, int $sourceStatus, int $targetStatus) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$typeId</h4>
@@ -554,12 +575,12 @@ including its fields</h2>
 </div>
 </div></div>
 </div>
-<a name="updateFieldDefinition" id="updateFieldDefinition"></a><div class="element clickable method public updateFieldDefinition" data-toggle="collapse" data-target=".updateFieldDefinition .collapse">
+<a id="method_updateFieldDefinition"></a><div class="element clickable method public method_updateFieldDefinition" data-toggle="collapse" data-target=".method_updateFieldDefinition .collapse">
 <h2>Updates a $fieldDefinition for $typeId.</h2>
 <pre>updateFieldDefinition(mixed $typeId, int $status, \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDefinition, \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition $storageFieldDef) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$typeId</h4>
@@ -579,12 +600,12 @@ including its fields</h2>
 </div>
 </div></div>
 </div>
-<a name="updateGroup" id="updateGroup"></a><div class="element clickable method public updateGroup" data-toggle="collapse" data-target=".updateGroup .collapse">
+<a id="method_updateGroup"></a><div class="element clickable method public method_updateGroup" data-toggle="collapse" data-target=".method_updateGroup .collapse">
 <h2>Updates a group with data in $group.</h2>
 <pre>updateGroup(\eZ\Publish\SPI\Persistence\Content\Type\Group\UpdateStruct $group) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$group</h4>
@@ -592,12 +613,12 @@ including its fields</h2>
 </div>
 </div></div>
 </div>
-<a name="updateType" id="updateType"></a><div class="element clickable method public updateType" data-toggle="collapse" data-target=".updateType .collapse">
+<a id="method_updateType"></a><div class="element clickable method public method_updateType" data-toggle="collapse" data-target=".method_updateType .collapse">
 <h2>Update a type with $updateStruct.</h2>
 <pre>updateType(mixed $typeId, int $status, \eZ\Publish\SPI\Persistence\Content\Type\UpdateStruct $updateStruct) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$typeId</h4>
@@ -615,11 +636,11 @@ including its fields</h2>
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24innerGateway" id="$innerGateway"> </a><div class="element clickable property protected $innerGateway" data-toggle="collapse" data-target=".$innerGateway .collapse">
-<h2>The wrapped gateway</h2>
+<a id="property_innerGateway"> </a><div class="element clickable property protected property_innerGateway" data-toggle="collapse" data-target=".property_innerGateway .collapse">
+<h2></h2>
 <pre>$innerGateway : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Type.Gateway.html">\eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
 </div>
@@ -627,8 +648,8 @@ including its fields</h2>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T17:00:22Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:41:48Z.<br></footer></div>
 </div>
 </body>
 </html>

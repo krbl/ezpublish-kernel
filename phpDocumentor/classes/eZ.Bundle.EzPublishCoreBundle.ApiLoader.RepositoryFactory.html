@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,72 +61,83 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#__construct" title="__construct :: "><span class="description">__construct()
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: "><span class="description">__construct()
         </span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#buildLazyRepository" title="buildLazyRepository :: Returns a closure which returns ezpublish.api.repository when called."><span class="description">Returns a closure which returns ezpublish.api.repository when called.</span><pre>buildLazyRepository()</pre></a></li>
-<li class="method public "><a href="#buildRepository" title="buildRepository :: Builds the main repository, heart of eZ Publish API"><span class="description">Builds the main repository, heart of eZ Publish API</span><pre>buildRepository()</pre></a></li>
-<li class="method public "><a href="#buildService" title="buildService :: Returns a service based on a name string (content =&gt; contentService, etc)"><span class="description">Returns a service based on a name string (content =&gt; contentService, etc)</span><pre>buildService()</pre></a></li>
-<li class="method public "><a href="#getExternalStorageHandlers" title="getExternalStorageHandlers :: Returns registered external storage handlers for field types (as closures to be lazy loaded in the public API)"><span class="description">Returns registered external storage handlers for field types (as closures to be lazy loaded in the public API)</span><pre>getExternalStorageHandlers()</pre></a></li>
-<li class="method public "><a href="#registerExternalStorageHandler" title="registerExternalStorageHandler :: Registers an external storage handler for a field type, identified by $fieldTypeAlias."><span class="description">Registers an external storage handler for a field type, identified by $fieldTypeAlias.</span><pre>registerExternalStorageHandler()</pre></a></li>
-<li class="method public "><a href="#registerFieldType" title="registerFieldType :: Registers an eZ Publish field type."><span class="description">Registers an eZ Publish field type.</span><pre>registerFieldType()</pre></a></li>
-<li class="method public "><a href="#registerLimitationType" title="registerLimitationType :: Registers a limitation type for the RoleService."><span class="description">Registers a limitation type for the RoleService.</span><pre>registerLimitationType()</pre></a></li>
+<li class="method public "><a href="#method_buildLazyRepository" title="buildLazyRepository :: Returns a closure which returns ezpublish.api.repository when called."><span class="description">Returns a closure which returns ezpublish.api.repository when called.</span><pre>buildLazyRepository()</pre></a></li>
+<li class="method public "><a href="#method_buildRepository" title="buildRepository :: Builds the main repository, heart of eZ Publish API"><span class="description">Builds the main repository, heart of eZ Publish API</span><pre>buildRepository()</pre></a></li>
+<li class="method public "><a href="#method_buildService" title="buildService :: Returns a service based on a name string (content =&gt; contentService, etc)"><span class="description">Returns a service based on a name string (content =&gt; contentService, etc)</span><pre>buildService()</pre></a></li>
+<li class="method public "><a href="#method_getExternalStorageHandlers" title="getExternalStorageHandlers :: Returns registered external storage handlers for field types (as closures to be lazy loaded in the public API)"><span class="description">Returns registered external storage handlers for field types (as closures to be lazy loaded in the public API)</span><pre>getExternalStorageHandlers()</pre></a></li>
+<li class="method public "><a href="#method_registerExternalStorageHandler" title="registerExternalStorageHandler :: Registers an external storage handler for a field type, identified by $fieldTypeAlias."><span class="description">Registers an external storage handler for a field type, identified by $fieldTypeAlias.</span><pre>registerExternalStorageHandler()</pre></a></li>
+<li class="method public "><a href="#method_registerFieldType" title="registerFieldType :: Registers an eZ Publish field type."><span class="description">Registers an eZ Publish field type.</span><pre>registerFieldType()</pre></a></li>
+<li class="method public "><a href="#method_registerLimitationType" title="registerLimitationType :: Registers a limitation type for the RoleService."><span class="description">Registers a limitation type for the RoleService.</span><pre>registerLimitationType()</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected "><a href="#%24container" title="$container :: "><span class="description">$container</span><pre>$container</pre></a></li>
-<li class="property protected "><a href="#%24externalStorages" title="$externalStorages :: Collection of external storage handlers for field types that need them"><span class="description">Collection of external storage handlers for field types that need them</span><pre>$externalStorages</pre></a></li>
-<li class="property protected "><a href="#%24fieldTypes" title="$fieldTypes :: Collection of fieldTypes, lazy loaded via a closure"><span class="description">Collection of fieldTypes, lazy loaded via a closure</span><pre>$fieldTypes</pre></a></li>
-<li class="property protected "><a href="#%24roleLimitations" title="$roleLimitations :: Collection of limitation types for the RoleService."><span class="description">Collection of limitation types for the RoleService.</span><pre>$roleLimitations</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_container" title="$container :: "><span class="description"></span><pre>$container</pre></a></li>
+<li class="property protected "><a href="#property_externalStorages" title="$externalStorages :: Collection of external storage handlers for field types that need them"><span class="description"></span><pre>$externalStorages</pre></a></li>
+<li class="property protected "><a href="#property_fieldTypes" title="$fieldTypes :: Collection of fieldTypes, lazy loaded via a closure"><span class="description"></span><pre>$fieldTypes</pre></a></li>
+<li class="property protected "><a href="#property_roleLimitations" title="$roleLimitations :: Collection of limitation types for the RoleService."><span class="description"></span><pre>$roleLimitations</pre></a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CBundle%5CEzPublishCoreBundle%5CApiLoader%5CRepositoryFactory" id="\eZ\Bundle\EzPublishCoreBundle\ApiLoader\RepositoryFactory"></a><ul class="breadcrumb">
+<a id="\eZ\Bundle\EzPublishCoreBundle\ApiLoader\RepositoryFactory"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Bundle.html">Bundle</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Bundle.EzPublishCoreBundle.html">EzPublishCoreBundle</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Bundle.EzPublishCoreBundle.ApiLoader.html">ApiLoader</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Bundle.html">Bundle</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Bundle.EzPublishCoreBundle.html">EzPublishCoreBundle</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Bundle.EzPublishCoreBundle.ApiLoader.html">ApiLoader</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Bundle.EzPublishCoreBundle.ApiLoader.RepositoryFactory.html">RepositoryFactory</a>
 </li>
 </ul>
-<div href="../classes/eZ.Bundle.EzPublishCoreBundle.ApiLoader.RepositoryFactory.html" class="element class"><div class="details">
+<div class="element class"><div class="details">
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
 <h2>__construct()
         </h2>
 <pre>__construct(\Symfony\Component\DependencyInjection\ContainerInterface $container) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$container</h4>
-<code></code>
-</div>
+<div class="subelement argument"><h4>$container</h4></div>
 </div></div>
 </div>
-<a name="buildLazyRepository" id="buildLazyRepository"></a><div class="element clickable method public buildLazyRepository" data-toggle="collapse" data-target=".buildLazyRepository .collapse">
+<a id="method_buildLazyRepository"></a><div class="element clickable method public method_buildLazyRepository" data-toggle="collapse" data-target=".method_buildLazyRepository .collapse">
 <h2>Returns a closure which returns ezpublish.api.repository when called.</h2>
 <pre>buildLazyRepository() : <a href="http://php.net/manual/en/class.closure.php">\Closure</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>To be used when lazy loading is needed.</p></p>
+<div class="long_description"><p>To be used when lazy loading is needed.</p></div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="http://php.net/manual/en/class.closure.php">\Closure</a></code></div>
 </div></div>
 </div>
-<a name="buildRepository" id="buildRepository"></a><div class="element clickable method public buildRepository" data-toggle="collapse" data-target=".buildRepository .collapse">
+<a id="method_buildRepository"></a><div class="element clickable method public method_buildRepository" data-toggle="collapse" data-target=".method_buildRepository .collapse">
 <h2>Builds the main repository, heart of eZ Publish API</h2>
 <pre>buildRepository(\eZ\Publish\SPI\Persistence\Handler $persistenceHandler, \eZ\Publish\SPI\IO\Handler $ioHandler) : <a href="../classes/eZ.Publish.API.Repository.Repository.html">\eZ\Publish\API\Repository\Repository</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>This always returns the true inner Repository, please depend on ezpublish.api.repository and not this method
-directly to make sure you get an instance wrapped inside Signal / Cache / * functionality.</p></p>
+<div class="long_description"><p>This always returns the true inner Repository, please depend on ezpublish.api.repository and not this method
+directly to make sure you get an instance wrapped inside Signal / Cache / * functionality.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$persistenceHandler</h4>
@@ -139,12 +151,12 @@ directly to make sure you get an instance wrapped inside Signal / Cache / * func
 <div class="subelement response"><code><a href="../classes/eZ.Publish.API.Repository.Repository.html">\eZ\Publish\API\Repository\Repository</a></code></div>
 </div></div>
 </div>
-<a name="buildService" id="buildService"></a><div class="element clickable method public buildService" data-toggle="collapse" data-target=".buildService .collapse">
+<a id="method_buildService"></a><div class="element clickable method public method_buildService" data-toggle="collapse" data-target=".method_buildService .collapse">
 <h2>Returns a service based on a name string (content =&gt; contentService, etc)</h2>
 <pre>buildService(\eZ\Publish\API\Repository\Repository $repository, string $serviceName) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$repository</h4>
@@ -163,22 +175,22 @@ directly to make sure you get an instance wrapped inside Signal / Cache / * func
 <div class="subelement response"><code>mixed</code></div>
 </div></div>
 </div>
-<a name="getExternalStorageHandlers" id="getExternalStorageHandlers"></a><div class="element clickable method public getExternalStorageHandlers" data-toggle="collapse" data-target=".getExternalStorageHandlers .collapse">
+<a id="method_getExternalStorageHandlers"></a><div class="element clickable method public method_getExternalStorageHandlers" data-toggle="collapse" data-target=".method_getExternalStorageHandlers .collapse">
 <h2>Returns registered external storage handlers for field types (as closures to be lazy loaded in the public API)</h2>
 <pre>getExternalStorageHandlers() : <a href="http://php.net/manual/en/class.closure.php">\Closure[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="http://php.net/manual/en/class.closure.php">\Closure[]</a></code></div>
 </div></div>
 </div>
-<a name="registerExternalStorageHandler" id="registerExternalStorageHandler"></a><div class="element clickable method public registerExternalStorageHandler" data-toggle="collapse" data-target=".registerExternalStorageHandler .collapse">
+<a id="method_registerExternalStorageHandler"></a><div class="element clickable method public method_registerExternalStorageHandler" data-toggle="collapse" data-target=".method_registerExternalStorageHandler .collapse">
 <h2>Registers an external storage handler for a field type, identified by $fieldTypeAlias.</h2>
 <pre>registerExternalStorageHandler(string $serviceId, string $fieldTypeAlias) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>They are being registered as closures so that they will be lazy loaded.</p></p>
+<div class="long_description"><p>They are being registered as closures so that they will be lazy loaded.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$serviceId</h4>
@@ -189,12 +201,12 @@ directly to make sure you get an instance wrapped inside Signal / Cache / * func
 </div>
 </div></div>
 </div>
-<a name="registerFieldType" id="registerFieldType"></a><div class="element clickable method public registerFieldType" data-toggle="collapse" data-target=".registerFieldType .collapse">
+<a id="method_registerFieldType"></a><div class="element clickable method public method_registerFieldType" data-toggle="collapse" data-target=".method_registerFieldType .collapse">
 <h2>Registers an eZ Publish field type.</h2>
 <pre>registerFieldType(string $fieldTypeServiceId, string $fieldTypeAlias) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Field types are being registered as a closure so that they will be lazy loaded.</p></p>
+<div class="long_description"><p>Field types are being registered as a closure so that they will be lazy loaded.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$fieldTypeServiceId</h4>
@@ -205,12 +217,12 @@ directly to make sure you get an instance wrapped inside Signal / Cache / * func
 </div>
 </div></div>
 </div>
-<a name="registerLimitationType" id="registerLimitationType"></a><div class="element clickable method public registerLimitationType" data-toggle="collapse" data-target=".registerLimitationType .collapse">
+<a id="method_registerLimitationType"></a><div class="element clickable method public method_registerLimitationType" data-toggle="collapse" data-target=".method_registerLimitationType .collapse">
 <h2>Registers a limitation type for the RoleService.</h2>
 <pre>registerLimitationType(string $limitationName, \eZ\Publish\SPI\Limitation\Type $limitationType) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$limitationName</h4>
@@ -224,37 +236,37 @@ directly to make sure you get an instance wrapped inside Signal / Cache / * func
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24container" id="$container"> </a><div class="element clickable property protected $container" data-toggle="collapse" data-target=".$container .collapse">
-<h2>$container</h2>
+<a id="property_container"> </a><div class="element clickable property protected property_container" data-toggle="collapse" data-target=".property_container .collapse">
+<h2></h2>
 <pre>$container : \Symfony\Component\DependencyInjection\ContainerInterface</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24externalStorages" id="$externalStorages"> </a><div class="element clickable property protected $externalStorages" data-toggle="collapse" data-target=".$externalStorages .collapse">
-<h2>Collection of external storage handlers for field types that need them</h2>
+<a id="property_externalStorages"> </a><div class="element clickable property protected property_externalStorages" data-toggle="collapse" data-target=".property_externalStorages .collapse">
+<h2></h2>
 <pre>$externalStorages : <a href="http://php.net/manual/en/class.closure.php">\Closure[]</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24fieldTypes" id="$fieldTypes"> </a><div class="element clickable property protected $fieldTypes" data-toggle="collapse" data-target=".$fieldTypes .collapse">
-<h2>Collection of fieldTypes, lazy loaded via a closure</h2>
+<a id="property_fieldTypes"> </a><div class="element clickable property protected property_fieldTypes" data-toggle="collapse" data-target=".property_fieldTypes .collapse">
+<h2></h2>
 <pre>$fieldTypes : <a href="http://php.net/manual/en/class.closure.php">\Closure[]</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24roleLimitations" id="$roleLimitations"> </a><div class="element clickable property protected $roleLimitations" data-toggle="collapse" data-target=".$roleLimitations .collapse">
-<h2>Collection of limitation types for the RoleService.</h2>
+<a id="property_roleLimitations"> </a><div class="element clickable property protected property_roleLimitations" data-toggle="collapse" data-target=".property_roleLimitations .collapse">
+<h2></h2>
 <pre>$roleLimitations : <a href="Publish.SPI.Limitation.Type.html#%5CeZ%5CPublish%5CSPI%5CLimitation%5CType">\eZ\Publish\SPI\Limitation\Type[]</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div></div>
 </div>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T16:56:15Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:38:25Z.<br></footer></div>
 </div>
 </body>
 </html>

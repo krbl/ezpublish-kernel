@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -58,71 +59,82 @@
 <span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
 <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
 </div>
-<ul class="side-nav nav nav-list">
-<li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#deleteContent" title="deleteContent :: Deletes the actual content object referred to by $contentId"><span class="description">Deletes the actual content object referred to by $contentId</span><pre>deleteContent()</pre></a></li>
-<li class="method public "><a href="#deleteField" title="deleteField :: Deletes the field with the given $fieldId"><span class="description">Deletes the field with the given $fieldId</span><pre>deleteField()</pre></a></li>
-<li class="method public "><a href="#deleteFields" title="deleteFields :: Deletes all fields of $contentId in all versions."><span class="description">Deletes all fields of $contentId in all versions.</span><pre>deleteFields()</pre></a></li>
-<li class="method public "><a href="#deleteNames" title="deleteNames :: Deletes all names of $contentId."><span class="description">Deletes all names of $contentId.</span><pre>deleteNames()</pre></a></li>
-<li class="method public "><a href="#deleteRelation" title="deleteRelation :: Deletes the relation with the given $relationId"><span class="description">Deletes the relation with the given $relationId</span><pre>deleteRelation()</pre></a></li>
-<li class="method public "><a href="#deleteRelations" title="deleteRelations :: Deletes relations to and from $contentId."><span class="description">Deletes relations to and from $contentId.</span><pre>deleteRelations()</pre></a></li>
-<li class="method public "><a href="#deleteVersions" title="deleteVersions :: Deletes all versions of $contentId."><span class="description">Deletes all versions of $contentId.</span><pre>deleteVersions()</pre></a></li>
-<li class="method public "><a href="#getAllLocationIds" title="getAllLocationIds :: Returns all IDs for locations that refer to $contentId"><span class="description">Returns all IDs for locations that refer to $contentId</span><pre>getAllLocationIds()</pre></a></li>
-<li class="method public "><a href="#getContext" title="getContext :: Get context definition for external storage layers"><span class="description">Get context definition for external storage layers</span><pre>getContext()</pre></a></li>
-<li class="method public "><a href="#getFieldIdsByType" title="getFieldIdsByType :: Returns all field IDs of $contentId grouped by their type."><span class="description">Returns all field IDs of $contentId grouped by their type.</span><pre>getFieldIdsByType()</pre></a></li>
-<li class="method public "><a href="#getLastVersionNumber" title="getLastVersionNumber :: Returns last version number for content identified by $contentId"><span class="description">Returns last version number for content identified by $contentId</span><pre>getLastVersionNumber()</pre></a></li>
-<li class="method public "><a href="#insertContentObject" title="insertContentObject :: Inserts a new content object."><span class="description">Inserts a new content object.</span><pre>insertContentObject()</pre></a></li>
-<li class="method public "><a href="#insertExistingField" title="insertExistingField :: Inserts an existing field."><span class="description">Inserts an existing field.</span><pre>insertExistingField()</pre></a></li>
-<li class="method public "><a href="#insertNewField" title="insertNewField :: Inserts a new field."><span class="description">Inserts a new field.</span><pre>insertNewField()</pre></a></li>
-<li class="method public "><a href="#insertRelation" title="insertRelation :: Inserts a new relation database record"><span class="description">Inserts a new relation database record</span><pre>insertRelation()</pre></a></li>
-<li class="method public "><a href="#insertVersion" title="insertVersion :: Inserts a new version."><span class="description">Inserts a new version.</span><pre>insertVersion()</pre></a></li>
-<li class="method public "><a href="#listVersions" title="listVersions :: Returns all version data for the given $contentId"><span class="description">Returns all version data for the given $contentId</span><pre>listVersions()</pre></a></li>
-<li class="method public "><a href="#listVersionsForUser" title="listVersionsForUser :: Returns data for all versions with given status created by the given $userId"><span class="description">Returns data for all versions with given status created by the given $userId</span><pre>listVersionsForUser()</pre></a></li>
-<li class="method public "><a href="#load" title="load :: Loads data for a content object"><span class="description">Loads data for a content object</span><pre>load()</pre></a></li>
-<li class="method public "><a href="#loadContentInfo" title="loadContentInfo :: Loads info for content identified by $contentId."><span class="description">Loads info for content identified by $contentId.</span><pre>loadContentInfo()</pre></a></li>
-<li class="method public "><a href="#loadLatestPublishedData" title="loadLatestPublishedData :: Loads data for the latest published version of the content identified by
+<ul class="side-nav nav nav-list"><li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_deleteContent" title="deleteContent :: Deletes the actual content object referred to by $contentId"><span class="description">Deletes the actual content object referred to by $contentId</span><pre>deleteContent()</pre></a></li>
+<li class="method public "><a href="#method_deleteField" title="deleteField :: Deletes the field with the given $fieldId"><span class="description">Deletes the field with the given $fieldId</span><pre>deleteField()</pre></a></li>
+<li class="method public "><a href="#method_deleteFields" title="deleteFields :: Deletes all fields of $contentId in all versions."><span class="description">Deletes all fields of $contentId in all versions.</span><pre>deleteFields()</pre></a></li>
+<li class="method public "><a href="#method_deleteNames" title="deleteNames :: Deletes all names of $contentId."><span class="description">Deletes all names of $contentId.</span><pre>deleteNames()</pre></a></li>
+<li class="method public "><a href="#method_deleteRelation" title="deleteRelation :: Deletes the relation with the given $relationId"><span class="description">Deletes the relation with the given $relationId</span><pre>deleteRelation()</pre></a></li>
+<li class="method public "><a href="#method_deleteRelations" title="deleteRelations :: Deletes relations to and from $contentId."><span class="description">Deletes relations to and from $contentId.</span><pre>deleteRelations()</pre></a></li>
+<li class="method public "><a href="#method_deleteVersions" title="deleteVersions :: Deletes all versions of $contentId."><span class="description">Deletes all versions of $contentId.</span><pre>deleteVersions()</pre></a></li>
+<li class="method public "><a href="#method_getAllLocationIds" title="getAllLocationIds :: Returns all IDs for locations that refer to $contentId"><span class="description">Returns all IDs for locations that refer to $contentId</span><pre>getAllLocationIds()</pre></a></li>
+<li class="method public "><a href="#method_getContext" title="getContext :: Get context definition for external storage layers"><span class="description">Get context definition for external storage layers</span><pre>getContext()</pre></a></li>
+<li class="method public "><a href="#method_getFieldIdsByType" title="getFieldIdsByType :: Returns all field IDs of $contentId grouped by their type."><span class="description">Returns all field IDs of $contentId grouped by their type.</span><pre>getFieldIdsByType()</pre></a></li>
+<li class="method public "><a href="#method_getLastVersionNumber" title="getLastVersionNumber :: Returns last version number for content identified by $contentId"><span class="description">Returns last version number for content identified by $contentId</span><pre>getLastVersionNumber()</pre></a></li>
+<li class="method public "><a href="#method_insertContentObject" title="insertContentObject :: Inserts a new content object."><span class="description">Inserts a new content object.</span><pre>insertContentObject()</pre></a></li>
+<li class="method public "><a href="#method_insertExistingField" title="insertExistingField :: Inserts an existing field."><span class="description">Inserts an existing field.</span><pre>insertExistingField()</pre></a></li>
+<li class="method public "><a href="#method_insertNewField" title="insertNewField :: Inserts a new field."><span class="description">Inserts a new field.</span><pre>insertNewField()</pre></a></li>
+<li class="method public "><a href="#method_insertRelation" title="insertRelation :: Inserts a new relation database record"><span class="description">Inserts a new relation database record</span><pre>insertRelation()</pre></a></li>
+<li class="method public "><a href="#method_insertVersion" title="insertVersion :: Inserts a new version."><span class="description">Inserts a new version.</span><pre>insertVersion()</pre></a></li>
+<li class="method public "><a href="#method_listVersions" title="listVersions :: Returns all version data for the given $contentId"><span class="description">Returns all version data for the given $contentId</span><pre>listVersions()</pre></a></li>
+<li class="method public "><a href="#method_listVersionsForUser" title="listVersionsForUser :: Returns data for all versions with given status created by the given $userId"><span class="description">Returns data for all versions with given status created by the given $userId</span><pre>listVersionsForUser()</pre></a></li>
+<li class="method public "><a href="#method_load" title="load :: Loads data for a content object"><span class="description">Loads data for a content object</span><pre>load()</pre></a></li>
+<li class="method public "><a href="#method_loadContentInfo" title="loadContentInfo :: Loads info for content identified by $contentId."><span class="description">Loads info for content identified by $contentId.</span><pre>loadContentInfo()</pre></a></li>
+<li class="method public "><a href="#method_loadLatestPublishedData" title="loadLatestPublishedData :: Loads data for the latest published version of the content identified by
 $contentId"><span class="description">Loads data for the latest published version of the content identified by
 $contentId</span><pre>loadLatestPublishedData()</pre></a></li>
-<li class="method public "><a href="#loadRelations" title="loadRelations :: Loads data of related to/from $contentId"><span class="description">Loads data of related to/from $contentId</span><pre>loadRelations()</pre></a></li>
-<li class="method public "><a href="#loadReverseRelations" title="loadReverseRelations :: Loads data of related to/from $contentId"><span class="description">Loads data of related to/from $contentId</span><pre>loadReverseRelations()</pre></a></li>
-<li class="method public "><a href="#loadVersionInfo" title="loadVersionInfo :: Loads version info for content identified by $contentId and $versionNo."><span class="description">Loads version info for content identified by $contentId and $versionNo.</span><pre>loadVersionInfo()</pre></a></li>
-<li class="method public "><a href="#setName" title="setName :: Sets the content object name"><span class="description">Sets the content object name</span><pre>setName()</pre></a></li>
-<li class="method public "><a href="#setStatus" title="setStatus :: Sets the state of object identified by $contentId and $version to $state."><span class="description">Sets the state of object identified by $contentId and $version to $state.</span><pre>setStatus()</pre></a></li>
-<li class="method public "><a href="#updateAlwaysAvailableFlag" title='updateAlwaysAvailableFlag :: Updates "always available" flag for content identified by $contentId, in respect to $alwaysAvailable.'><span class="description">Updates "always available" flag for content identified by $contentId, in respect to $alwaysAvailable.</span><pre>updateAlwaysAvailableFlag()</pre></a></li>
-<li class="method public "><a href="#updateContent" title="updateContent :: Updates an existing content identified by $contentId in respect to $struct"><span class="description">Updates an existing content identified by $contentId in respect to $struct</span><pre>updateContent()</pre></a></li>
-<li class="method public "><a href="#updateField" title="updateField :: Updates an existing field"><span class="description">Updates an existing field</span><pre>updateField()</pre></a></li>
-<li class="method public "><a href="#updateNonTranslatableField" title="updateNonTranslatableField :: Updates an existing, non-translatable field"><span class="description">Updates an existing, non-translatable field</span><pre>updateNonTranslatableField()</pre></a></li>
-<li class="method public "><a href="#updateVersion" title="updateVersion :: Updates version $versionNo for content identified by $contentId, in respect to $struct"><span class="description">Updates version $versionNo for content identified by $contentId, in respect to $struct</span><pre>updateVersion()</pre></a></li>
+<li class="method public "><a href="#method_loadRelations" title="loadRelations :: Loads data of related to/from $contentId"><span class="description">Loads data of related to/from $contentId</span><pre>loadRelations()</pre></a></li>
+<li class="method public "><a href="#method_loadReverseRelations" title="loadReverseRelations :: Loads data of related to/from $contentId"><span class="description">Loads data of related to/from $contentId</span><pre>loadReverseRelations()</pre></a></li>
+<li class="method public "><a href="#method_loadVersionInfo" title="loadVersionInfo :: Loads version info for content identified by $contentId and $versionNo."><span class="description">Loads version info for content identified by $contentId and $versionNo.</span><pre>loadVersionInfo()</pre></a></li>
+<li class="method public "><a href="#method_setName" title="setName :: Sets the content object name"><span class="description">Sets the content object name</span><pre>setName()</pre></a></li>
+<li class="method public "><a href="#method_setStatus" title="setStatus :: Sets the state of object identified by $contentId and $version to $state."><span class="description">Sets the state of object identified by $contentId and $version to $state.</span><pre>setStatus()</pre></a></li>
+<li class="method public "><a href="#method_updateAlwaysAvailableFlag" title='updateAlwaysAvailableFlag :: Updates "always available" flag for content identified by $contentId, in respect to $alwaysAvailable.'><span class="description">Updates "always available" flag for content identified by $contentId, in respect to $alwaysAvailable.</span><pre>updateAlwaysAvailableFlag()</pre></a></li>
+<li class="method public "><a href="#method_updateContent" title="updateContent :: Updates an existing content identified by $contentId in respect to $struct"><span class="description">Updates an existing content identified by $contentId in respect to $struct</span><pre>updateContent()</pre></a></li>
+<li class="method public "><a href="#method_updateField" title="updateField :: Updates an existing field"><span class="description">Updates an existing field</span><pre>updateField()</pre></a></li>
+<li class="method public "><a href="#method_updateNonTranslatableField" title="updateNonTranslatableField :: Updates an existing, non-translatable field"><span class="description">Updates an existing, non-translatable field</span><pre>updateNonTranslatableField()</pre></a></li>
+<li class="method public "><a href="#method_updateVersion" title="updateVersion :: Updates version $versionNo for content identified by $contentId, in respect to $struct"><span class="description">Updates version $versionNo for content identified by $contentId, in respect to $struct</span><pre>updateVersion()</pre></a></li>
 </ul>
+</li></ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CPersistence%5CLegacy%5CContent%5CGateway" id="\eZ\Publish\Core\Persistence\Legacy\Content\Gateway"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\Persistence\Legacy\Content\Gateway"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Gateway.html">Gateway</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Gateway.html" class="element class">
+<div class="element class">
 <p class="short_description">Base class for content gateways</p>
 <div class="details">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="deleteContent" id="deleteContent"></a><div class="element clickable method public deleteContent" data-toggle="collapse" data-target=".deleteContent .collapse">
+<a id="method_deleteContent"></a><div class="element clickable method public method_deleteContent" data-toggle="collapse" data-target=".method_deleteContent .collapse">
 <h2>Deletes the actual content object referred to by $contentId</h2>
 <pre>deleteContent(int $contentId) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -130,12 +142,12 @@ $contentId</span><pre>loadLatestPublishedData()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="deleteField" id="deleteField"></a><div class="element clickable method public deleteField" data-toggle="collapse" data-target=".deleteField .collapse">
+<a id="method_deleteField"></a><div class="element clickable method public method_deleteField" data-toggle="collapse" data-target=".method_deleteField .collapse">
 <h2>Deletes the field with the given $fieldId</h2>
 <pre>deleteField(int $fieldId, int $version) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$fieldId</h4>
@@ -147,12 +159,12 @@ $contentId</span><pre>loadLatestPublishedData()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="deleteFields" id="deleteFields"></a><div class="element clickable method public deleteFields" data-toggle="collapse" data-target=".deleteFields .collapse">
+<a id="method_deleteFields"></a><div class="element clickable method public method_deleteFields" data-toggle="collapse" data-target=".method_deleteFields .collapse">
 <h2>Deletes all fields of $contentId in all versions.</h2>
 <pre>deleteFields(int $contentId, int | null $versionNo) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If $versionNo is set only fields for that version are deleted.</p></p>
+<div class="long_description"><p>If $versionNo is set only fields for that version are deleted.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -160,16 +172,16 @@ $contentId</span><pre>loadLatestPublishedData()</pre></a></li>
 </div>
 <div class="subelement argument">
 <h4>$versionNo</h4>
-<code>intnull</code>
+<code>int</code><code>null</code>
 </div>
 </div></div>
 </div>
-<a name="deleteNames" id="deleteNames"></a><div class="element clickable method public deleteNames" data-toggle="collapse" data-target=".deleteNames .collapse">
+<a id="method_deleteNames"></a><div class="element clickable method public method_deleteNames" data-toggle="collapse" data-target=".method_deleteNames .collapse">
 <h2>Deletes all names of $contentId.</h2>
 <pre>deleteNames(int $contentId, int | null $versionNo) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If $versionNo is set only names for that version are deleted.</p></p>
+<div class="long_description"><p>If $versionNo is set only names for that version are deleted.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -177,16 +189,16 @@ $contentId</span><pre>loadLatestPublishedData()</pre></a></li>
 </div>
 <div class="subelement argument">
 <h4>$versionNo</h4>
-<code>intnull</code>
+<code>int</code><code>null</code>
 </div>
 </div></div>
 </div>
-<a name="deleteRelation" id="deleteRelation"></a><div class="element clickable method public deleteRelation" data-toggle="collapse" data-target=".deleteRelation .collapse">
+<a id="method_deleteRelation"></a><div class="element clickable method public method_deleteRelation" data-toggle="collapse" data-target=".method_deleteRelation .collapse">
 <h2>Deletes the relation with the given $relationId</h2>
 <pre>deleteRelation(int $relationId) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$relationId</h4>
@@ -194,12 +206,12 @@ $contentId</span><pre>loadLatestPublishedData()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="deleteRelations" id="deleteRelations"></a><div class="element clickable method public deleteRelations" data-toggle="collapse" data-target=".deleteRelations .collapse">
+<a id="method_deleteRelations"></a><div class="element clickable method public method_deleteRelations" data-toggle="collapse" data-target=".method_deleteRelations .collapse">
 <h2>Deletes relations to and from $contentId.</h2>
 <pre>deleteRelations(int $contentId, int | null $versionNo) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If $versionNo is set only relations for that version are deleted.</p></p>
+<div class="long_description"><p>If $versionNo is set only relations for that version are deleted.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -207,16 +219,16 @@ $contentId</span><pre>loadLatestPublishedData()</pre></a></li>
 </div>
 <div class="subelement argument">
 <h4>$versionNo</h4>
-<code>intnull</code>
+<code>int</code><code>null</code>
 </div>
 </div></div>
 </div>
-<a name="deleteVersions" id="deleteVersions"></a><div class="element clickable method public deleteVersions" data-toggle="collapse" data-target=".deleteVersions .collapse">
+<a id="method_deleteVersions"></a><div class="element clickable method public method_deleteVersions" data-toggle="collapse" data-target=".method_deleteVersions .collapse">
 <h2>Deletes all versions of $contentId.</h2>
 <pre>deleteVersions(int $contentId, int | null $versionNo) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If $versionNo is set only that version is deleted.</p></p>
+<div class="long_description"><p>If $versionNo is set only that version is deleted.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -224,16 +236,16 @@ $contentId</span><pre>loadLatestPublishedData()</pre></a></li>
 </div>
 <div class="subelement argument">
 <h4>$versionNo</h4>
-<code>intnull</code>
+<code>int</code><code>null</code>
 </div>
 </div></div>
 </div>
-<a name="getAllLocationIds" id="getAllLocationIds"></a><div class="element clickable method public getAllLocationIds" data-toggle="collapse" data-target=".getAllLocationIds .collapse">
+<a id="method_getAllLocationIds"></a><div class="element clickable method public method_getAllLocationIds" data-toggle="collapse" data-target=".method_getAllLocationIds .collapse">
 <h2>Returns all IDs for locations that refer to $contentId</h2>
 <pre>getAllLocationIds(int $contentId) : int[]</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -243,22 +255,22 @@ $contentId</span><pre>loadLatestPublishedData()</pre></a></li>
 <div class="subelement response"><code>int[]</code></div>
 </div></div>
 </div>
-<a name="getContext" id="getContext"></a><div class="element clickable method public getContext" data-toggle="collapse" data-target=".getContext .collapse">
+<a id="method_getContext"></a><div class="element clickable method public method_getContext" data-toggle="collapse" data-target=".method_getContext .collapse">
 <h2>Get context definition for external storage layers</h2>
 <pre>getContext() : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="getFieldIdsByType" id="getFieldIdsByType"></a><div class="element clickable method public getFieldIdsByType" data-toggle="collapse" data-target=".getFieldIdsByType .collapse">
+<a id="method_getFieldIdsByType"></a><div class="element clickable method public method_getFieldIdsByType" data-toggle="collapse" data-target=".method_getFieldIdsByType .collapse">
 <h2>Returns all field IDs of $contentId grouped by their type.</h2>
 <pre>getFieldIdsByType(int $contentId, int | null $versionNo) : \eZ\Publish\Core\Persistence\Legacy\Content\int[][]</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If $versionNo is set only field IDs for that version are returned.</p></p>
+<div class="long_description"><p>If $versionNo is set only field IDs for that version are returned.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -266,18 +278,18 @@ $contentId</span><pre>loadLatestPublishedData()</pre></a></li>
 </div>
 <div class="subelement argument">
 <h4>$versionNo</h4>
-<code>intnull</code>
+<code>int</code><code>null</code>
 </div>
 <h3>Returns</h3>
 <div class="subelement response"><code>\eZ\Publish\Core\Persistence\Legacy\Content\int[][]</code></div>
 </div></div>
 </div>
-<a name="getLastVersionNumber" id="getLastVersionNumber"></a><div class="element clickable method public getLastVersionNumber" data-toggle="collapse" data-target=".getLastVersionNumber .collapse">
+<a id="method_getLastVersionNumber"></a><div class="element clickable method public method_getLastVersionNumber" data-toggle="collapse" data-target=".method_getLastVersionNumber .collapse">
 <h2>Returns last version number for content identified by $contentId</h2>
 <pre>getLastVersionNumber(int $contentId) : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -287,12 +299,12 @@ $contentId</span><pre>loadLatestPublishedData()</pre></a></li>
 <div class="subelement response"><code>int</code></div>
 </div></div>
 </div>
-<a name="insertContentObject" id="insertContentObject"></a><div class="element clickable method public insertContentObject" data-toggle="collapse" data-target=".insertContentObject .collapse">
+<a id="method_insertContentObject"></a><div class="element clickable method public method_insertContentObject" data-toggle="collapse" data-target=".method_insertContentObject .collapse">
 <h2>Inserts a new content object.</h2>
 <pre>insertContentObject(\eZ\Publish\SPI\Persistence\Content\CreateStruct $struct, mixed $currentVersionNo) : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$struct</h4>
@@ -307,12 +319,12 @@ $contentId</span><pre>loadLatestPublishedData()</pre></a></li>
 <code>int</code>ID</div>
 </div></div>
 </div>
-<a name="insertExistingField" id="insertExistingField"></a><div class="element clickable method public insertExistingField" data-toggle="collapse" data-target=".insertExistingField .collapse">
+<a id="method_insertExistingField"></a><div class="element clickable method public method_insertExistingField" data-toggle="collapse" data-target=".method_insertExistingField .collapse">
 <h2>Inserts an existing field.</h2>
 <pre>insertExistingField(\eZ\Publish\SPI\Persistence\Content $content, \eZ\Publish\SPI\Persistence\Content\Field $field, \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue $value) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Used to insert a field with an exsting ID but a new version number.</p></p>
+<div class="long_description"><p>Used to insert a field with an exsting ID but a new version number.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$content</h4>
@@ -328,14 +340,14 @@ $contentId</span><pre>loadLatestPublishedData()</pre></a></li>
 </div>
 </div></div>
 </div>
-<a name="insertNewField" id="insertNewField"></a><div class="element clickable method public insertNewField" data-toggle="collapse" data-target=".insertNewField .collapse">
+<a id="method_insertNewField"></a><div class="element clickable method public method_insertNewField" data-toggle="collapse" data-target=".method_insertNewField .collapse">
 <h2>Inserts a new field.</h2>
 <pre>insertNewField(\eZ\Publish\SPI\Persistence\Content $content, \eZ\Publish\SPI\Persistence\Content\Field $field, \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue $value) : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Only used when a new field is created (i.e. a new object or a field in a
+<div class="long_description"><p>Only used when a new field is created (i.e. a new object or a field in a
 new language!). After that, field IDs need to stay the same, only the
-version number changes.</p></p>
+version number changes.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$content</h4>
@@ -354,12 +366,12 @@ version number changes.</p></p>
 <code>int</code>ID</div>
 </div></div>
 </div>
-<a name="insertRelation" id="insertRelation"></a><div class="element clickable method public insertRelation" data-toggle="collapse" data-target=".insertRelation .collapse">
+<a id="method_insertRelation"></a><div class="element clickable method public method_insertRelation" data-toggle="collapse" data-target=".method_insertRelation .collapse">
 <h2>Inserts a new relation database record</h2>
 <pre>insertRelation(\eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct $createStruct) : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$createStruct</h4>
@@ -370,12 +382,12 @@ version number changes.</p></p>
 <code>int</code>ID the inserted ID</div>
 </div></div>
 </div>
-<a name="insertVersion" id="insertVersion"></a><div class="element clickable method public insertVersion" data-toggle="collapse" data-target=".insertVersion .collapse">
+<a id="method_insertVersion"></a><div class="element clickable method public method_insertVersion" data-toggle="collapse" data-target=".method_insertVersion .collapse">
 <h2>Inserts a new version.</h2>
-<pre>insertVersion(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \array $fields) : int</pre>
+<pre>insertVersion(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, array $fields) : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -390,12 +402,12 @@ version number changes.</p></p>
 <code>int</code>ID</div>
 </div></div>
 </div>
-<a name="listVersions" id="listVersions"></a><div class="element clickable method public listVersions" data-toggle="collapse" data-target=".listVersions .collapse">
+<a id="method_listVersions"></a><div class="element clickable method public method_listVersions" data-toggle="collapse" data-target=".method_listVersions .collapse">
 <h2>Returns all version data for the given $contentId</h2>
 <pre>listVersions(mixed $contentId) : \eZ\Publish\Core\Persistence\Legacy\Content\string[][]</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -405,12 +417,12 @@ version number changes.</p></p>
 <div class="subelement response"><code>\eZ\Publish\Core\Persistence\Legacy\Content\string[][]</code></div>
 </div></div>
 </div>
-<a name="listVersionsForUser" id="listVersionsForUser"></a><div class="element clickable method public listVersionsForUser" data-toggle="collapse" data-target=".listVersionsForUser .collapse">
+<a id="method_listVersionsForUser"></a><div class="element clickable method public method_listVersionsForUser" data-toggle="collapse" data-target=".method_listVersionsForUser .collapse">
 <h2>Returns data for all versions with given status created by the given $userId</h2>
 <pre>listVersionsForUser(int $userId, int $status) : \eZ\Publish\Core\Persistence\Legacy\Content\string[][]</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$userId</h4>
@@ -424,12 +436,12 @@ version number changes.</p></p>
 <div class="subelement response"><code>\eZ\Publish\Core\Persistence\Legacy\Content\string[][]</code></div>
 </div></div>
 </div>
-<a name="load" id="load"></a><div class="element clickable method public load" data-toggle="collapse" data-target=".load .collapse">
+<a id="method_load"></a><div class="element clickable method public method_load" data-toggle="collapse" data-target=".method_load .collapse">
 <h2>Loads data for a content object</h2>
 <pre>load(mixed $contentId, mixed $version, string[] $translations) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Returns an array with the relevant data.</p></p>
+<div class="long_description"><p>Returns an array with the relevant data.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -447,14 +459,14 @@ version number changes.</p></p>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="loadContentInfo" id="loadContentInfo"></a><div class="element clickable method public loadContentInfo" data-toggle="collapse" data-target=".loadContentInfo .collapse">
+<a id="method_loadContentInfo"></a><div class="element clickable method public method_loadContentInfo" data-toggle="collapse" data-target=".method_loadContentInfo .collapse">
 <h2>Loads info for content identified by $contentId.</h2>
 <pre>loadContentInfo(int $contentId) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Will basically return a hash containing all field values for ezcontentobject table plus following keys:
+<div class="long_description"><p>Will basically return a hash containing all field values for ezcontentobject table plus following keys:
  - always_available => Boolean indicating if content's language mask contains alwaysAvailable bit field
- - main_language_code => Language code for main (initial) language. E.g. "eng-GB"</p></p>
+ - main_language_code => Language code for main (initial) language. E.g. "eng-GB"</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -469,13 +481,13 @@ version number changes.</p></p>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="loadLatestPublishedData" id="loadLatestPublishedData"></a><div class="element clickable method public loadLatestPublishedData" data-toggle="collapse" data-target=".loadLatestPublishedData .collapse">
+<a id="method_loadLatestPublishedData"></a><div class="element clickable method public method_loadLatestPublishedData" data-toggle="collapse" data-target=".method_loadLatestPublishedData .collapse">
 <h2>Loads data for the latest published version of the content identified by
 $contentId</h2>
 <pre>loadLatestPublishedData(mixed $contentId) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -485,12 +497,12 @@ $contentId</h2>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="loadRelations" id="loadRelations"></a><div class="element clickable method public loadRelations" data-toggle="collapse" data-target=".loadRelations .collapse">
+<a id="method_loadRelations"></a><div class="element clickable method public method_loadRelations" data-toggle="collapse" data-target=".method_loadRelations .collapse">
 <h2>Loads data of related to/from $contentId</h2>
 <pre>loadRelations(int $contentId, int $contentVersionNo, int $relationType) : \eZ\Publish\Core\Persistence\Legacy\Content\mixed[][]</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -509,12 +521,12 @@ $contentId</h2>
 <code>\eZ\Publish\Core\Persistence\Legacy\Content\mixed[][]</code>Content data, array structured like {@see \eZ\Publish\Core\Persistence\Legacy\Content\Gateway::load()}</div>
 </div></div>
 </div>
-<a name="loadReverseRelations" id="loadReverseRelations"></a><div class="element clickable method public loadReverseRelations" data-toggle="collapse" data-target=".loadReverseRelations .collapse">
+<a id="method_loadReverseRelations"></a><div class="element clickable method public method_loadReverseRelations" data-toggle="collapse" data-target=".method_loadReverseRelations .collapse">
 <h2>Loads data of related to/from $contentId</h2>
 <pre>loadReverseRelations(int $contentId, int $relationType) : \eZ\Publish\Core\Persistence\Legacy\Content\mixed[][]</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -529,15 +541,15 @@ $contentId</h2>
 <code>\eZ\Publish\Core\Persistence\Legacy\Content\mixed[][]</code>Content data, array structured like {@see \eZ\Publish\Core\Persistence\Legacy\Content\Gateway::load()}</div>
 </div></div>
 </div>
-<a name="loadVersionInfo" id="loadVersionInfo"></a><div class="element clickable method public loadVersionInfo" data-toggle="collapse" data-target=".loadVersionInfo .collapse">
+<a id="method_loadVersionInfo"></a><div class="element clickable method public method_loadVersionInfo" data-toggle="collapse" data-target=".method_loadVersionInfo .collapse">
 <h2>Loads version info for content identified by $contentId and $versionNo.</h2>
 <pre>loadVersionInfo(int $contentId, int $versionNo) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Will basically return a hash containing all field values from ezcontentobject_version table plus following keys:
+<div class="long_description"><p>Will basically return a hash containing all field values from ezcontentobject_version table plus following keys:
  - names => Hash of content object names. Key is the language code, value is the name.
  - languages => Hash of language ids. Key is the language code (e.g. "eng-GB"), value is the language numeric id without the always available bit.
- - initial_language_code => Language code for initial language in this version.</p></p>
+ - initial_language_code => Language code for initial language in this version.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -551,12 +563,12 @@ $contentId</h2>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="setName" id="setName"></a><div class="element clickable method public setName" data-toggle="collapse" data-target=".setName .collapse">
+<a id="method_setName"></a><div class="element clickable method public method_setName" data-toggle="collapse" data-target=".method_setName .collapse">
 <h2>Sets the content object name</h2>
 <pre>setName(int $contentId, int $version, string $name, string $language) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -576,12 +588,12 @@ $contentId</h2>
 </div>
 </div></div>
 </div>
-<a name="setStatus" id="setStatus"></a><div class="element clickable method public setStatus" data-toggle="collapse" data-target=".setStatus .collapse">
+<a id="method_setStatus"></a><div class="element clickable method public method_setStatus" data-toggle="collapse" data-target=".method_setStatus .collapse">
 <h2>Sets the state of object identified by $contentId and $version to $state.</h2>
 <pre>setStatus(int $contentId, int $version, int $status) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>The $status can be one of STATUS_DRAFT, STATUS_PUBLISHED, STATUS_ARCHIVED</p></p>
+<div class="long_description"><p>The $status can be one of STATUS_DRAFT, STATUS_PUBLISHED, STATUS_ARCHIVED</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -599,12 +611,12 @@ $contentId</h2>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="updateAlwaysAvailableFlag" id="updateAlwaysAvailableFlag"></a><div class="element clickable method public updateAlwaysAvailableFlag" data-toggle="collapse" data-target=".updateAlwaysAvailableFlag .collapse">
+<a id="method_updateAlwaysAvailableFlag"></a><div class="element clickable method public method_updateAlwaysAvailableFlag" data-toggle="collapse" data-target=".method_updateAlwaysAvailableFlag .collapse">
 <h2>Updates "always available" flag for content identified by $contentId, in respect to $alwaysAvailable.</h2>
 <pre>updateAlwaysAvailableFlag(int $contentId, boolean $newAlwaysAvailable) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -616,12 +628,12 @@ $contentId</h2>
 </div>
 </div></div>
 </div>
-<a name="updateContent" id="updateContent"></a><div class="element clickable method public updateContent" data-toggle="collapse" data-target=".updateContent .collapse">
+<a id="method_updateContent"></a><div class="element clickable method public method_updateContent" data-toggle="collapse" data-target=".method_updateContent .collapse">
 <h2>Updates an existing content identified by $contentId in respect to $struct</h2>
 <pre>updateContent(int $contentId, \eZ\Publish\SPI\Persistence\Content\MetadataUpdateStruct $struct) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -633,12 +645,12 @@ $contentId</h2>
 </div>
 </div></div>
 </div>
-<a name="updateField" id="updateField"></a><div class="element clickable method public updateField" data-toggle="collapse" data-target=".updateField .collapse">
+<a id="method_updateField"></a><div class="element clickable method public method_updateField" data-toggle="collapse" data-target=".method_updateField .collapse">
 <h2>Updates an existing field</h2>
 <pre>updateField(\eZ\Publish\SPI\Persistence\Content\Field $field, \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue $value) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$field</h4>
@@ -650,12 +662,12 @@ $contentId</h2>
 </div>
 </div></div>
 </div>
-<a name="updateNonTranslatableField" id="updateNonTranslatableField"></a><div class="element clickable method public updateNonTranslatableField" data-toggle="collapse" data-target=".updateNonTranslatableField .collapse">
+<a id="method_updateNonTranslatableField"></a><div class="element clickable method public method_updateNonTranslatableField" data-toggle="collapse" data-target=".method_updateNonTranslatableField .collapse">
 <h2>Updates an existing, non-translatable field</h2>
 <pre>updateNonTranslatableField(\eZ\Publish\SPI\Persistence\Content\Field $field, \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue $value, int $contentId) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$field</h4>
@@ -671,12 +683,12 @@ $contentId</h2>
 </div>
 </div></div>
 </div>
-<a name="updateVersion" id="updateVersion"></a><div class="element clickable method public updateVersion" data-toggle="collapse" data-target=".updateVersion .collapse">
+<a id="method_updateVersion"></a><div class="element clickable method public method_updateVersion" data-toggle="collapse" data-target=".method_updateVersion .collapse">
 <h2>Updates version $versionNo for content identified by $contentId, in respect to $struct</h2>
 <pre>updateVersion(int $contentId, int $versionNo, \eZ\Publish\SPI\Persistence\Content\UpdateStruct $struct) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -698,8 +710,8 @@ $contentId</h2>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T17:00:20Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:41:46Z.<br></footer></div>
 </div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,81 +61,99 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#changeMainLocation" title="changeMainLocation :: Changes main location of content identified by given $contentId to location identified by given $locationId"><span class="description">Changes main location of content identified by given $contentId to location identified by given $locationId</span><pre>changeMainLocation()</pre></a></li>
-<li class="method public "><a href="#cleanupTrash" title="cleanupTrash :: Removes every entries in the trash."><span class="description">Removes every entries in the trash.</span><pre>cleanupTrash()</pre></a></li>
-<li class="method public "><a href="#countLocationsByContentId" title="countLocationsByContentId :: Returns how many locations given content object identified by $contentId has"><span class="description">Returns how many locations given content object identified by $contentId has</span><pre>countLocationsByContentId()</pre></a></li>
-<li class="method public "><a href="#create" title="create :: Creates a new location in given $parentNode"><span class="description">Creates a new location in given $parentNode</span><pre>create()</pre></a></li>
-<li class="method public "><a href="#createLocationsFromNodeAssignments" title="createLocationsFromNodeAssignments :: Create locations from node assignments"><span class="description">Create locations from node assignments</span><pre>createLocationsFromNodeAssignments()</pre></a></li>
-<li class="method public "><a href="#createNodeAssignment" title="createNodeAssignment :: Create an entry in the node assignment table"><span class="description">Create an entry in the node assignment table</span><pre>createNodeAssignment()</pre></a></li>
-<li class="method public "><a href="#deleteNodeAssignment" title="deleteNodeAssignment :: Deletes node assignment for given $contentId and $versionNo"><span class="description">Deletes node assignment for given $contentId and $versionNo</span><pre>deleteNodeAssignment()</pre></a></li>
-<li class="method public "><a href="#getBasicNodeData" title="getBasicNodeData :: Returns an array with basic node data"><span class="description">Returns an array with basic node data</span><pre>getBasicNodeData()</pre></a></li>
-<li class="method public "><a href="#getBasicNodeDataByRemoteId" title="getBasicNodeDataByRemoteId :: Returns an array with basic node data for the node with $remoteId"><span class="description">Returns an array with basic node data for the node with $remoteId</span><pre>getBasicNodeDataByRemoteId()</pre></a></li>
-<li class="method public "><a href="#getChildren" title="getChildren :: Returns data for the first level children of the location identified by given $locationId"><span class="description">Returns data for the first level children of the location identified by given $locationId</span><pre>getChildren()</pre></a></li>
-<li class="method public "><a href="#getFallbackMainNodeData" title="getFallbackMainNodeData :: Returns id of the next in line node to be set as a new main node"><span class="description">Returns id of the next in line node to be set as a new main node</span><pre>getFallbackMainNodeData()</pre></a></li>
-<li class="method public "><a href="#getSubtreeContent" title="getSubtreeContent :: Find all content in the given subtree"><span class="description">Find all content in the given subtree</span><pre>getSubtreeContent()</pre></a></li>
-<li class="method public "><a href="#hideSubtree" title="hideSubtree :: Sets a location to be hidden, and it self + all children to invisible."><span class="description">Sets a location to be hidden, and it self + all children to invisible.</span><pre>hideSubtree()</pre></a></li>
-<li class="method public "><a href="#listTrashed" title="listTrashed :: Lists trashed items."><span class="description">Lists trashed items.</span><pre>listTrashed()</pre></a></li>
-<li class="method public "><a href="#loadLocationDataByContent" title="loadLocationDataByContent :: Loads data for all Locations for $contentId, optionally only in the
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_changeMainLocation" title="changeMainLocation :: Changes main location of content identified by given $contentId to location identified by given $locationId"><span class="description">Changes main location of content identified by given $contentId to location identified by given $locationId</span><pre>changeMainLocation()</pre></a></li>
+<li class="method public "><a href="#method_cleanupTrash" title="cleanupTrash :: Removes every entries in the trash."><span class="description">Removes every entries in the trash.</span><pre>cleanupTrash()</pre></a></li>
+<li class="method public "><a href="#method_countLocationsByContentId" title="countLocationsByContentId :: Returns how many locations given content object identified by $contentId has"><span class="description">Returns how many locations given content object identified by $contentId has</span><pre>countLocationsByContentId()</pre></a></li>
+<li class="method public "><a href="#method_create" title="create :: Creates a new location in given $parentNode"><span class="description">Creates a new location in given $parentNode</span><pre>create()</pre></a></li>
+<li class="method public "><a href="#method_createLocationsFromNodeAssignments" title="createLocationsFromNodeAssignments :: Create locations from node assignments"><span class="description">Create locations from node assignments</span><pre>createLocationsFromNodeAssignments()</pre></a></li>
+<li class="method public "><a href="#method_createNodeAssignment" title="createNodeAssignment :: Create an entry in the node assignment table"><span class="description">Create an entry in the node assignment table</span><pre>createNodeAssignment()</pre></a></li>
+<li class="method public "><a href="#method_deleteNodeAssignment" title="deleteNodeAssignment :: Deletes node assignment for given $contentId and $versionNo"><span class="description">Deletes node assignment for given $contentId and $versionNo</span><pre>deleteNodeAssignment()</pre></a></li>
+<li class="method public "><a href="#method_getBasicNodeData" title="getBasicNodeData :: Returns an array with basic node data"><span class="description">Returns an array with basic node data</span><pre>getBasicNodeData()</pre></a></li>
+<li class="method public "><a href="#method_getBasicNodeDataByRemoteId" title="getBasicNodeDataByRemoteId :: Returns an array with basic node data for the node with $remoteId"><span class="description">Returns an array with basic node data for the node with $remoteId</span><pre>getBasicNodeDataByRemoteId()</pre></a></li>
+<li class="method public "><a href="#method_getChildren" title="getChildren :: Returns data for the first level children of the location identified by given $locationId"><span class="description">Returns data for the first level children of the location identified by given $locationId</span><pre>getChildren()</pre></a></li>
+<li class="method public "><a href="#method_getFallbackMainNodeData" title="getFallbackMainNodeData :: Returns id of the next in line node to be set as a new main node"><span class="description">Returns id of the next in line node to be set as a new main node</span><pre>getFallbackMainNodeData()</pre></a></li>
+<li class="method public "><a href="#method_getSubtreeContent" title="getSubtreeContent :: Find all content in the given subtree"><span class="description">Find all content in the given subtree</span><pre>getSubtreeContent()</pre></a></li>
+<li class="method public "><a href="#method_hideSubtree" title="hideSubtree :: Sets a location to be hidden, and it self + all children to invisible."><span class="description">Sets a location to be hidden, and it self + all children to invisible.</span><pre>hideSubtree()</pre></a></li>
+<li class="method public "><a href="#method_listTrashed" title="listTrashed :: Lists trashed items."><span class="description">Lists trashed items.</span><pre>listTrashed()</pre></a></li>
+<li class="method public "><a href="#method_loadLocationDataByContent" title="loadLocationDataByContent :: Loads data for all Locations for $contentId, optionally only in the
 subtree starting at $rootLocationId"><span class="description">Loads data for all Locations for $contentId, optionally only in the
 subtree starting at $rootLocationId</span><pre>loadLocationDataByContent()</pre></a></li>
-<li class="method public "><a href="#loadTrashByLocation" title="loadTrashByLocation :: Loads trash data specified by location ID"><span class="description">Loads trash data specified by location ID</span><pre>loadTrashByLocation()</pre></a></li>
-<li class="method public "><a href="#moveSubtreeNodes" title="moveSubtreeNodes :: Update path strings to move nodes in the ezcontentobject_tree table"><span class="description">Update path strings to move nodes in the ezcontentobject_tree table</span><pre>moveSubtreeNodes()</pre></a></li>
-<li class="method public "><a href="#removeElementFromTrash" title="removeElementFromTrash :: Removes trashed element identified by $id from trash."><span class="description">Removes trashed element identified by $id from trash.</span><pre>removeElementFromTrash()</pre></a></li>
-<li class="method public "><a href="#removeLocation" title="removeLocation :: Deletes ezcontentobject_tree row for given $locationId (node_id)"><span class="description">Deletes ezcontentobject_tree row for given $locationId (node_id)</span><pre>removeLocation()</pre></a></li>
-<li class="method public "><a href="#setSectionForSubtree" title="setSectionForSubtree :: Set section on all content objects in the subtree"><span class="description">Set section on all content objects in the subtree</span><pre>setSectionForSubtree()</pre></a></li>
-<li class="method public "><a href="#swap" title="swap :: Swaps the content object being pointed to by a location object."><span class="description">Swaps the content object being pointed to by a location object.</span><pre>swap()</pre></a></li>
-<li class="method public "><a href="#trashLocation" title="trashLocation :: Sends a single location identified by given $locationId to the trash."><span class="description">Sends a single location identified by given $locationId to the trash.</span><pre>trashLocation()</pre></a></li>
-<li class="method public "><a href="#unHideSubtree" title="unHideSubtree :: Sets a location to be unhidden, and self + children to visible unless a parent is hidding the tree."><span class="description">Sets a location to be unhidden, and self + children to visible unless a parent is hidding the tree.</span><pre>unHideSubtree()</pre></a></li>
-<li class="method public "><a href="#untrashLocation" title="untrashLocation :: Returns a trashed location to normal state."><span class="description">Returns a trashed location to normal state.</span><pre>untrashLocation()</pre></a></li>
-<li class="method public "><a href="#update" title="update :: Updates an existing location."><span class="description">Updates an existing location.</span><pre>update()</pre></a></li>
-<li class="method public "><a href="#updateLocationsContentVersionNo" title="updateLocationsContentVersionNo :: Updates all Locations of content identified with $contentId with $versionNo"><span class="description">Updates all Locations of content identified with $contentId with $versionNo</span><pre>updateLocationsContentVersionNo()</pre></a></li>
-<li class="method public "><a href="#updateNodeAssignment" title="updateNodeAssignment :: Update node assignment table"><span class="description">Update node assignment table</span><pre>updateNodeAssignment()</pre></a></li>
-<li class="method public "><a href="#updatePathIdentificationString" title="updatePathIdentificationString :: Updates path identification string for given $locationId."><span class="description">Updates path identification string for given $locationId.</span><pre>updatePathIdentificationString()</pre></a></li>
-<li class="method public "><a href="#updateSubtreeModificationTime" title="updateSubtreeModificationTime :: Updated subtree modification time for all nodes on path"><span class="description">Updated subtree modification time for all nodes on path</span><pre>updateSubtreeModificationTime()</pre></a></li>
+<li class="method public "><a href="#method_loadTrashByLocation" title="loadTrashByLocation :: Loads trash data specified by location ID"><span class="description">Loads trash data specified by location ID</span><pre>loadTrashByLocation()</pre></a></li>
+<li class="method public "><a href="#method_moveSubtreeNodes" title="moveSubtreeNodes :: Update path strings to move nodes in the ezcontentobject_tree table"><span class="description">Update path strings to move nodes in the ezcontentobject_tree table</span><pre>moveSubtreeNodes()</pre></a></li>
+<li class="method public "><a href="#method_removeElementFromTrash" title="removeElementFromTrash :: Removes trashed element identified by $id from trash."><span class="description">Removes trashed element identified by $id from trash.</span><pre>removeElementFromTrash()</pre></a></li>
+<li class="method public "><a href="#method_removeLocation" title="removeLocation :: Deletes ezcontentobject_tree row for given $locationId (node_id)"><span class="description">Deletes ezcontentobject_tree row for given $locationId (node_id)</span><pre>removeLocation()</pre></a></li>
+<li class="method public "><a href="#method_setSectionForSubtree" title="setSectionForSubtree :: Set section on all content objects in the subtree"><span class="description">Set section on all content objects in the subtree</span><pre>setSectionForSubtree()</pre></a></li>
+<li class="method public "><a href="#method_swap" title="swap :: Swaps the content object being pointed to by a location object."><span class="description">Swaps the content object being pointed to by a location object.</span><pre>swap()</pre></a></li>
+<li class="method public "><a href="#method_trashLocation" title="trashLocation :: Sends a single location identified by given $locationId to the trash."><span class="description">Sends a single location identified by given $locationId to the trash.</span><pre>trashLocation()</pre></a></li>
+<li class="method public "><a href="#method_unHideSubtree" title="unHideSubtree :: Sets a location to be unhidden, and self + children to visible unless a parent is hidding the tree."><span class="description">Sets a location to be unhidden, and self + children to visible unless a parent is hidding the tree.</span><pre>unHideSubtree()</pre></a></li>
+<li class="method public "><a href="#method_untrashLocation" title="untrashLocation :: Returns a trashed location to normal state."><span class="description">Returns a trashed location to normal state.</span><pre>untrashLocation()</pre></a></li>
+<li class="method public "><a href="#method_update" title="update :: Updates an existing location."><span class="description">Updates an existing location.</span><pre>update()</pre></a></li>
+<li class="method public "><a href="#method_updateLocationsContentVersionNo" title="updateLocationsContentVersionNo :: Updates all Locations of content identified with $contentId with $versionNo"><span class="description">Updates all Locations of content identified with $contentId with $versionNo</span><pre>updateLocationsContentVersionNo()</pre></a></li>
+<li class="method public "><a href="#method_updateNodeAssignment" title="updateNodeAssignment :: Update node assignment table"><span class="description">Update node assignment table</span><pre>updateNodeAssignment()</pre></a></li>
+<li class="method public "><a href="#method_updatePathIdentificationString" title="updatePathIdentificationString :: Updates path identification string for given $locationId."><span class="description">Updates path identification string for given $locationId.</span><pre>updatePathIdentificationString()</pre></a></li>
+<li class="method public "><a href="#method_updateSubtreeModificationTime" title="updateSubtreeModificationTime :: Updated subtree modification time for all nodes on path"><span class="description">Updated subtree modification time for all nodes on path</span><pre>updateSubtreeModificationTime()</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-constant"></i> Constants</li>
-<li class="constant  "><a href="#NODE_ASSIGNMENT_OP_CODE_CREATE" title="NODE_ASSIGNMENT_OP_CODE_CREATE :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_CREATE</span><pre>NODE_ASSIGNMENT_OP_CODE_CREATE</pre></a></li>
-<li class="constant  "><a href="#NODE_ASSIGNMENT_OP_CODE_CREATE_NOP" title="NODE_ASSIGNMENT_OP_CODE_CREATE_NOP :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_CREATE_NOP</span><pre>NODE_ASSIGNMENT_OP_CODE_CREATE_NOP</pre></a></li>
-<li class="constant  "><a href="#NODE_ASSIGNMENT_OP_CODE_EXECUTE" title="NODE_ASSIGNMENT_OP_CODE_EXECUTE :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_EXECUTE</span><pre>NODE_ASSIGNMENT_OP_CODE_EXECUTE</pre></a></li>
-<li class="constant  "><a href="#NODE_ASSIGNMENT_OP_CODE_MOVE" title="NODE_ASSIGNMENT_OP_CODE_MOVE :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_MOVE</span><pre>NODE_ASSIGNMENT_OP_CODE_MOVE</pre></a></li>
-<li class="constant  "><a href="#NODE_ASSIGNMENT_OP_CODE_MOVE_NOP" title="NODE_ASSIGNMENT_OP_CODE_MOVE_NOP :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_MOVE_NOP</span><pre>NODE_ASSIGNMENT_OP_CODE_MOVE_NOP</pre></a></li>
-<li class="constant  "><a href="#NODE_ASSIGNMENT_OP_CODE_NOP" title="NODE_ASSIGNMENT_OP_CODE_NOP :: Constants for node assignment op codes"><span class="description">Constants for node assignment op codes</span><pre>NODE_ASSIGNMENT_OP_CODE_NOP</pre></a></li>
-<li class="constant  "><a href="#NODE_ASSIGNMENT_OP_CODE_REMOVE" title="NODE_ASSIGNMENT_OP_CODE_REMOVE :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_REMOVE</span><pre>NODE_ASSIGNMENT_OP_CODE_REMOVE</pre></a></li>
-<li class="constant  "><a href="#NODE_ASSIGNMENT_OP_CODE_REMOVE_NOP" title="NODE_ASSIGNMENT_OP_CODE_REMOVE_NOP :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_REMOVE_NOP</span><pre>NODE_ASSIGNMENT_OP_CODE_REMOVE_NOP</pre></a></li>
-<li class="constant  "><a href="#NODE_ASSIGNMENT_OP_CODE_SET" title="NODE_ASSIGNMENT_OP_CODE_SET :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_SET</span><pre>NODE_ASSIGNMENT_OP_CODE_SET</pre></a></li>
-<li class="constant  "><a href="#NODE_ASSIGNMENT_OP_CODE_SET_NOP" title="NODE_ASSIGNMENT_OP_CODE_SET_NOP :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_SET_NOP</span><pre>NODE_ASSIGNMENT_OP_CODE_SET_NOP</pre></a></li>
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  "><a href="#constant_NODE_ASSIGNMENT_OP_CODE_CREATE" title="NODE_ASSIGNMENT_OP_CODE_CREATE :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_CREATE</span><pre>NODE_ASSIGNMENT_OP_CODE_CREATE</pre></a></li>
+<li class="constant  "><a href="#constant_NODE_ASSIGNMENT_OP_CODE_CREATE_NOP" title="NODE_ASSIGNMENT_OP_CODE_CREATE_NOP :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_CREATE_NOP</span><pre>NODE_ASSIGNMENT_OP_CODE_CREATE_NOP</pre></a></li>
+<li class="constant  "><a href="#constant_NODE_ASSIGNMENT_OP_CODE_EXECUTE" title="NODE_ASSIGNMENT_OP_CODE_EXECUTE :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_EXECUTE</span><pre>NODE_ASSIGNMENT_OP_CODE_EXECUTE</pre></a></li>
+<li class="constant  "><a href="#constant_NODE_ASSIGNMENT_OP_CODE_MOVE" title="NODE_ASSIGNMENT_OP_CODE_MOVE :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_MOVE</span><pre>NODE_ASSIGNMENT_OP_CODE_MOVE</pre></a></li>
+<li class="constant  "><a href="#constant_NODE_ASSIGNMENT_OP_CODE_MOVE_NOP" title="NODE_ASSIGNMENT_OP_CODE_MOVE_NOP :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_MOVE_NOP</span><pre>NODE_ASSIGNMENT_OP_CODE_MOVE_NOP</pre></a></li>
+<li class="constant  "><a href="#constant_NODE_ASSIGNMENT_OP_CODE_NOP" title="NODE_ASSIGNMENT_OP_CODE_NOP :: Constants for node assignment op codes"><span class="description">Constants for node assignment op codes</span><pre>NODE_ASSIGNMENT_OP_CODE_NOP</pre></a></li>
+<li class="constant  "><a href="#constant_NODE_ASSIGNMENT_OP_CODE_REMOVE" title="NODE_ASSIGNMENT_OP_CODE_REMOVE :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_REMOVE</span><pre>NODE_ASSIGNMENT_OP_CODE_REMOVE</pre></a></li>
+<li class="constant  "><a href="#constant_NODE_ASSIGNMENT_OP_CODE_REMOVE_NOP" title="NODE_ASSIGNMENT_OP_CODE_REMOVE_NOP :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_REMOVE_NOP</span><pre>NODE_ASSIGNMENT_OP_CODE_REMOVE_NOP</pre></a></li>
+<li class="constant  "><a href="#constant_NODE_ASSIGNMENT_OP_CODE_SET" title="NODE_ASSIGNMENT_OP_CODE_SET :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_SET</span><pre>NODE_ASSIGNMENT_OP_CODE_SET</pre></a></li>
+<li class="constant  "><a href="#constant_NODE_ASSIGNMENT_OP_CODE_SET_NOP" title="NODE_ASSIGNMENT_OP_CODE_SET_NOP :: "><span class="description">NODE_ASSIGNMENT_OP_CODE_SET_NOP</span><pre>NODE_ASSIGNMENT_OP_CODE_SET_NOP</pre></a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CPersistence%5CLegacy%5CContent%5CLocation%5CGateway" id="\eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.Location.html">Location</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.Location.html">Location</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Location.Gateway.html">Gateway</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.Location.Gateway.html" class="element class">
+<div class="element class">
 <p class="short_description">Base class for location gateways.</p>
 <div class="details">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="changeMainLocation" id="changeMainLocation"></a><div class="element clickable method public changeMainLocation" data-toggle="collapse" data-target=".changeMainLocation .collapse">
+<a id="method_changeMainLocation"></a><div class="element clickable method public method_changeMainLocation" data-toggle="collapse" data-target=".method_changeMainLocation .collapse">
 <h2>Changes main location of content identified by given $contentId to location identified by given $locationId</h2>
 <pre>changeMainLocation(mixed $contentId, mixed $locationId, mixed $versionNo, mixed $parentLocationId) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Updates ezcontentobject_tree table for the given $contentId and eznode_assignment table for the given
-$contentId, $parentLocationId and $versionNo</p></p>
+<div class="long_description"><p>Updates ezcontentobject_tree table for the given $contentId and eznode_assignment table for the given
+$contentId, $parentLocationId and $versionNo</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -149,24 +168,25 @@ $contentId, $parentLocationId and $versionNo</p></p>
 <code>mixed</code><p>version number, needed to update eznode_assignment table</p></div>
 <div class="subelement argument">
 <h4>$parentLocationId</h4>
-<code>mixed</code><p>parent location of location identified by $locationId, needed to update eznode_assignment table</p>
+<code>mixed</code><p>parent location of location identified by $locationId, needed to update
+       eznode_assignment table</p>
 </div>
 </div></div>
 </div>
-<a name="cleanupTrash" id="cleanupTrash"></a><div class="element clickable method public cleanupTrash" data-toggle="collapse" data-target=".cleanupTrash .collapse">
+<a id="method_cleanupTrash"></a><div class="element clickable method public method_cleanupTrash" data-toggle="collapse" data-target=".method_cleanupTrash .collapse">
 <h2>Removes every entries in the trash.</h2>
 <pre>cleanupTrash() : void</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"><p>Will NOT remove associated content objects nor attributes.</p>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Will NOT remove associated content objects nor attributes.</p>
 
-<p>Basically truncates ezcontentobject_trash table.</p></p></div></div>
+<p>Basically truncates ezcontentobject_trash table.</p></div></div></div>
 </div>
-<a name="countLocationsByContentId" id="countLocationsByContentId"></a><div class="element clickable method public countLocationsByContentId" data-toggle="collapse" data-target=".countLocationsByContentId .collapse">
+<a id="method_countLocationsByContentId"></a><div class="element clickable method public method_countLocationsByContentId" data-toggle="collapse" data-target=".method_countLocationsByContentId .collapse">
 <h2>Returns how many locations given content object identified by $contentId has</h2>
 <pre>countLocationsByContentId(int $contentId) : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -176,12 +196,12 @@ $contentId, $parentLocationId and $versionNo</p></p>
 <div class="subelement response"><code>int</code></div>
 </div></div>
 </div>
-<a name="create" id="create"></a><div class="element clickable method public create" data-toggle="collapse" data-target=".create .collapse">
+<a id="method_create"></a><div class="element clickable method public method_create" data-toggle="collapse" data-target=".method_create .collapse">
 <h2>Creates a new location in given $parentNode</h2>
-<pre>create(\eZ\Publish\SPI\Persistence\Content\Location\CreateStruct $createStruct, \array $parentNode) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Location.html">\eZ\Publish\SPI\Persistence\Content\Location</a></pre>
+<pre>create(\eZ\Publish\SPI\Persistence\Content\Location\CreateStruct $createStruct, array $parentNode) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Location.html">\eZ\Publish\SPI\Persistence\Content\Location</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$createStruct</h4>
@@ -195,12 +215,12 @@ $contentId, $parentLocationId and $versionNo</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Location.html">\eZ\Publish\SPI\Persistence\Content\Location</a></code></div>
 </div></div>
 </div>
-<a name="createLocationsFromNodeAssignments" id="createLocationsFromNodeAssignments"></a><div class="element clickable method public createLocationsFromNodeAssignments" data-toggle="collapse" data-target=".createLocationsFromNodeAssignments .collapse">
+<a id="method_createLocationsFromNodeAssignments"></a><div class="element clickable method public method_createLocationsFromNodeAssignments" data-toggle="collapse" data-target=".method_createLocationsFromNodeAssignments .collapse">
 <h2>Create locations from node assignments</h2>
 <pre>createLocationsFromNodeAssignments(mixed $contentId, mixed $versionNo) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Convert existing node assignments into real locations.</p></p>
+<div class="long_description"><p>Convert existing node assignments into real locations.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -212,12 +232,12 @@ $contentId, $parentLocationId and $versionNo</p></p>
 </div>
 </div></div>
 </div>
-<a name="createNodeAssignment" id="createNodeAssignment"></a><div class="element clickable method public createNodeAssignment" data-toggle="collapse" data-target=".createNodeAssignment .collapse">
+<a id="method_createNodeAssignment"></a><div class="element clickable method public method_createNodeAssignment" data-toggle="collapse" data-target=".method_createNodeAssignment .collapse">
 <h2>Create an entry in the node assignment table</h2>
 <pre>createNodeAssignment(\eZ\Publish\SPI\Persistence\Content\Location\CreateStruct $createStruct, mixed $parentNodeId, int $type) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$createStruct</h4>
@@ -233,12 +253,12 @@ $contentId, $parentLocationId and $versionNo</p></p>
 </div>
 </div></div>
 </div>
-<a name="deleteNodeAssignment" id="deleteNodeAssignment"></a><div class="element clickable method public deleteNodeAssignment" data-toggle="collapse" data-target=".deleteNodeAssignment .collapse">
+<a id="method_deleteNodeAssignment"></a><div class="element clickable method public method_deleteNodeAssignment" data-toggle="collapse" data-target=".method_deleteNodeAssignment .collapse">
 <h2>Deletes node assignment for given $contentId and $versionNo</h2>
 <pre>deleteNodeAssignment(int $contentId, int $versionNo) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -250,13 +270,13 @@ $contentId, $parentLocationId and $versionNo</p></p>
 </div>
 </div></div>
 </div>
-<a name="getBasicNodeData" id="getBasicNodeData"></a><div class="element clickable method public getBasicNodeData" data-toggle="collapse" data-target=".getBasicNodeData .collapse">
+<a id="method_getBasicNodeData"></a><div class="element clickable method public method_getBasicNodeData" data-toggle="collapse" data-target=".method_getBasicNodeData .collapse">
 <h2>Returns an array with basic node data</h2>
 <pre>getBasicNodeData(mixed $nodeId) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>We might want to cache this, since this method is used by about every
-method in the location handler.</p></p>
+<div class="long_description"><p>We might want to cache this, since this method is used by about every
+method in the location handler.</p></div>
 <table class="table table-bordered"><tr>
 <th>todo</th>
 <td>optimize</td>
@@ -270,12 +290,12 @@ method in the location handler.</p></p>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="getBasicNodeDataByRemoteId" id="getBasicNodeDataByRemoteId"></a><div class="element clickable method public getBasicNodeDataByRemoteId" data-toggle="collapse" data-target=".getBasicNodeDataByRemoteId .collapse">
+<a id="method_getBasicNodeDataByRemoteId"></a><div class="element clickable method public method_getBasicNodeDataByRemoteId" data-toggle="collapse" data-target=".method_getBasicNodeDataByRemoteId .collapse">
 <h2>Returns an array with basic node data for the node with $remoteId</h2>
 <pre>getBasicNodeDataByRemoteId(mixed $remoteId) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>todo</th>
 <td>optimize</td>
@@ -289,12 +309,12 @@ method in the location handler.</p></p>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="getChildren" id="getChildren"></a><div class="element clickable method public getChildren" data-toggle="collapse" data-target=".getChildren .collapse">
+<a id="method_getChildren"></a><div class="element clickable method public method_getChildren" data-toggle="collapse" data-target=".method_getChildren .collapse">
 <h2>Returns data for the first level children of the location identified by given $locationId</h2>
 <pre>getChildren(mixed $locationId) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$locationId</h4>
@@ -304,14 +324,14 @@ method in the location handler.</p></p>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="getFallbackMainNodeData" id="getFallbackMainNodeData"></a><div class="element clickable method public getFallbackMainNodeData" data-toggle="collapse" data-target=".getFallbackMainNodeData .collapse">
+<a id="method_getFallbackMainNodeData"></a><div class="element clickable method public method_getFallbackMainNodeData" data-toggle="collapse" data-target=".method_getFallbackMainNodeData .collapse">
 <h2>Returns id of the next in line node to be set as a new main node</h2>
 <pre>getFallbackMainNodeData(mixed $contentId, mixed $locationId) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>This returns lowest node id for content identified by $contentId, and not of
+<div class="long_description"><p>This returns lowest node id for content identified by $contentId, and not of
 the node identified by given $locationId (current main node).
-Assumes that content has more than one location.</p></p>
+Assumes that content has more than one location.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -325,12 +345,12 @@ Assumes that content has more than one location.</p></p>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="getSubtreeContent" id="getSubtreeContent"></a><div class="element clickable method public getSubtreeContent" data-toggle="collapse" data-target=".getSubtreeContent .collapse">
+<a id="method_getSubtreeContent"></a><div class="element clickable method public method_getSubtreeContent" data-toggle="collapse" data-target=".method_getSubtreeContent .collapse">
 <h2>Find all content in the given subtree</h2>
 <pre>getSubtreeContent(mixed $sourceId) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$sourceId</h4>
@@ -340,12 +360,12 @@ Assumes that content has more than one location.</p></p>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="hideSubtree" id="hideSubtree"></a><div class="element clickable method public hideSubtree" data-toggle="collapse" data-target=".hideSubtree .collapse">
+<a id="method_hideSubtree"></a><div class="element clickable method public method_hideSubtree" data-toggle="collapse" data-target=".method_hideSubtree .collapse">
 <h2>Sets a location to be hidden, and it self + all children to invisible.</h2>
 <pre>hideSubtree(string $pathString) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$pathString</h4>
@@ -353,12 +373,12 @@ Assumes that content has more than one location.</p></p>
 </div>
 </div></div>
 </div>
-<a name="listTrashed" id="listTrashed"></a><div class="element clickable method public listTrashed" data-toggle="collapse" data-target=".listTrashed .collapse">
+<a id="method_listTrashed"></a><div class="element clickable method public method_listTrashed" data-toggle="collapse" data-target=".method_listTrashed .collapse">
 <h2>Lists trashed items.</h2>
-<pre>listTrashed(int $offset, int $limit, \array $sort) : array</pre>
+<pre>listTrashed(int $offset, int $limit, array $sort) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Returns entries from ezcontentobject_trash.</p></p>
+<div class="long_description"><p>Returns entries from ezcontentobject_trash.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$offset</h4>
@@ -376,13 +396,13 @@ Assumes that content has more than one location.</p></p>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="loadLocationDataByContent" id="loadLocationDataByContent"></a><div class="element clickable method public loadLocationDataByContent" data-toggle="collapse" data-target=".loadLocationDataByContent .collapse">
+<a id="method_loadLocationDataByContent"></a><div class="element clickable method public method_loadLocationDataByContent" data-toggle="collapse" data-target=".method_loadLocationDataByContent .collapse">
 <h2>Loads data for all Locations for $contentId, optionally only in the
 subtree starting at $rootLocationId</h2>
 <pre>loadLocationDataByContent(int $contentId, int $rootLocationId) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -396,12 +416,12 @@ subtree starting at $rootLocationId</h2>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="loadTrashByLocation" id="loadTrashByLocation"></a><div class="element clickable method public loadTrashByLocation" data-toggle="collapse" data-target=".loadTrashByLocation .collapse">
+<a id="method_loadTrashByLocation"></a><div class="element clickable method public method_loadTrashByLocation" data-toggle="collapse" data-target=".method_loadTrashByLocation .collapse">
 <h2>Loads trash data specified by location ID</h2>
 <pre>loadTrashByLocation(mixed $locationId) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$locationId</h4>
@@ -411,13 +431,13 @@ subtree starting at $rootLocationId</h2>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="moveSubtreeNodes" id="moveSubtreeNodes"></a><div class="element clickable method public moveSubtreeNodes" data-toggle="collapse" data-target=".moveSubtreeNodes .collapse">
+<a id="method_moveSubtreeNodes"></a><div class="element clickable method public method_moveSubtreeNodes" data-toggle="collapse" data-target=".method_moveSubtreeNodes .collapse">
 <h2>Update path strings to move nodes in the ezcontentobject_tree table</h2>
 <pre>moveSubtreeNodes(string $fromPathString, string $toPathString) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>This query can likely be optimized to use some more advanced string
-operations, which then depend on the respective database.</p></p>
+<div class="long_description"><p>This query can likely be optimized to use some more advanced string
+operations, which then depend on the respective database.</p></div>
 <table class="table table-bordered"><tr>
 <th>todo</th>
 <td>optimize</td>
@@ -433,24 +453,24 @@ operations, which then depend on the respective database.</p></p>
 </div>
 </div></div>
 </div>
-<a name="removeElementFromTrash" id="removeElementFromTrash"></a><div class="element clickable method public removeElementFromTrash" data-toggle="collapse" data-target=".removeElementFromTrash .collapse">
+<a id="method_removeElementFromTrash"></a><div class="element clickable method public method_removeElementFromTrash" data-toggle="collapse" data-target=".method_removeElementFromTrash .collapse">
 <h2>Removes trashed element identified by $id from trash.</h2>
 <pre>removeElementFromTrash(int $id) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Will NOT remove associated content object nor attributes.</p></p>
+<div class="long_description"><p>Will NOT remove associated content object nor attributes.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$id</h4>
 <code>int</code><p>The trashed location Id</p></div>
 </div></div>
 </div>
-<a name="removeLocation" id="removeLocation"></a><div class="element clickable method public removeLocation" data-toggle="collapse" data-target=".removeLocation .collapse">
+<a id="method_removeLocation"></a><div class="element clickable method public method_removeLocation" data-toggle="collapse" data-target=".method_removeLocation .collapse">
 <h2>Deletes ezcontentobject_tree row for given $locationId (node_id)</h2>
 <pre>removeLocation(mixed $locationId) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$locationId</h4>
@@ -458,12 +478,12 @@ operations, which then depend on the respective database.</p></p>
 </div>
 </div></div>
 </div>
-<a name="setSectionForSubtree" id="setSectionForSubtree"></a><div class="element clickable method public setSectionForSubtree" data-toggle="collapse" data-target=".setSectionForSubtree .collapse">
+<a id="method_setSectionForSubtree"></a><div class="element clickable method public method_setSectionForSubtree" data-toggle="collapse" data-target=".method_setSectionForSubtree .collapse">
 <h2>Set section on all content objects in the subtree</h2>
 <pre>setSectionForSubtree(mixed $pathString, mixed $sectionId) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$pathString</h4>
@@ -477,13 +497,13 @@ operations, which then depend on the respective database.</p></p>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="swap" id="swap"></a><div class="element clickable method public swap" data-toggle="collapse" data-target=".swap .collapse">
+<a id="method_swap"></a><div class="element clickable method public method_swap" data-toggle="collapse" data-target=".method_swap .collapse">
 <h2>Swaps the content object being pointed to by a location object.</h2>
 <pre>swap(mixed $locationId1, mixed $locationId2) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Make the location identified by $locationId1 refer to the Content
-referred to by $locationId2 and vice versa.</p></p>
+<div class="long_description"><p>Make the location identified by $locationId1 refer to the Content
+referred to by $locationId2 and vice versa.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$locationId1</h4>
@@ -497,12 +517,12 @@ referred to by $locationId2 and vice versa.</p></p>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="trashLocation" id="trashLocation"></a><div class="element clickable method public trashLocation" data-toggle="collapse" data-target=".trashLocation .collapse">
+<a id="method_trashLocation"></a><div class="element clickable method public method_trashLocation" data-toggle="collapse" data-target=".method_trashLocation .collapse">
 <h2>Sends a single location identified by given $locationId to the trash.</h2>
 <pre>trashLocation(mixed $locationId) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>The associated content object is left untouched.</p></p>
+<div class="long_description"><p>The associated content object is left untouched.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$locationId</h4>
@@ -512,12 +532,12 @@ referred to by $locationId2 and vice versa.</p></p>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="unHideSubtree" id="unHideSubtree"></a><div class="element clickable method public unHideSubtree" data-toggle="collapse" data-target=".unHideSubtree .collapse">
+<a id="method_unHideSubtree"></a><div class="element clickable method public method_unHideSubtree" data-toggle="collapse" data-target=".method_unHideSubtree .collapse">
 <h2>Sets a location to be unhidden, and self + children to visible unless a parent is hidding the tree.</h2>
 <pre>unHideSubtree(string $pathString) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If not make sure only children down to first hidden node is marked visible.</p></p>
+<div class="long_description"><p>If not make sure only children down to first hidden node is marked visible.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$pathString</h4>
@@ -525,15 +545,15 @@ referred to by $locationId2 and vice versa.</p></p>
 </div>
 </div></div>
 </div>
-<a name="untrashLocation" id="untrashLocation"></a><div class="element clickable method public untrashLocation" data-toggle="collapse" data-target=".untrashLocation .collapse">
+<a id="method_untrashLocation"></a><div class="element clickable method public method_untrashLocation" data-toggle="collapse" data-target=".method_untrashLocation .collapse">
 <h2>Returns a trashed location to normal state.</h2>
 <pre>untrashLocation(mixed $locationId, mixed $newParentId) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.Location.html">\eZ\Publish\SPI\Persistence\Content\Location</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Recreates the originally trashed location in the new position. If no new
+<div class="long_description"><p>Recreates the originally trashed location in the new position. If no new
 position has been specified, it will be tried to re-create the location
 at the old position. If this is not possible ( because the old location
-does not exist any more) and exception is thrown.</p></p>
+does not exist any more) and exception is thrown.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$locationId</h4>
@@ -547,12 +567,12 @@ does not exist any more) and exception is thrown.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.Location.html">\eZ\Publish\SPI\Persistence\Content\Location</a></code></div>
 </div></div>
 </div>
-<a name="update" id="update"></a><div class="element clickable method public update" data-toggle="collapse" data-target=".update .collapse">
+<a id="method_update"></a><div class="element clickable method public method_update" data-toggle="collapse" data-target=".method_update .collapse">
 <h2>Updates an existing location.</h2>
 <pre>update(\eZ\Publish\SPI\Persistence\Content\Location\UpdateStruct $location, int $locationId) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$location</h4>
@@ -566,12 +586,12 @@ does not exist any more) and exception is thrown.</p></p>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="updateLocationsContentVersionNo" id="updateLocationsContentVersionNo"></a><div class="element clickable method public updateLocationsContentVersionNo" data-toggle="collapse" data-target=".updateLocationsContentVersionNo .collapse">
+<a id="method_updateLocationsContentVersionNo"></a><div class="element clickable method public method_updateLocationsContentVersionNo" data-toggle="collapse" data-target=".method_updateLocationsContentVersionNo .collapse">
 <h2>Updates all Locations of content identified with $contentId with $versionNo</h2>
 <pre>updateLocationsContentVersionNo(mixed $contentId, mixed $versionNo) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentId</h4>
@@ -583,12 +603,12 @@ does not exist any more) and exception is thrown.</p></p>
 </div>
 </div></div>
 </div>
-<a name="updateNodeAssignment" id="updateNodeAssignment"></a><div class="element clickable method public updateNodeAssignment" data-toggle="collapse" data-target=".updateNodeAssignment .collapse">
+<a id="method_updateNodeAssignment"></a><div class="element clickable method public method_updateNodeAssignment" data-toggle="collapse" data-target=".method_updateNodeAssignment .collapse">
 <h2>Update node assignment table</h2>
 <pre>updateNodeAssignment(int $contentObjectId, int $oldParent, int $newParent, int $opcode) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$contentObjectId</h4>
@@ -608,12 +628,12 @@ does not exist any more) and exception is thrown.</p></p>
 </div>
 </div></div>
 </div>
-<a name="updatePathIdentificationString" id="updatePathIdentificationString"></a><div class="element clickable method public updatePathIdentificationString" data-toggle="collapse" data-target=".updatePathIdentificationString .collapse">
+<a id="method_updatePathIdentificationString"></a><div class="element clickable method public method_updatePathIdentificationString" data-toggle="collapse" data-target=".method_updatePathIdentificationString .collapse">
 <h2>Updates path identification string for given $locationId.</h2>
 <pre>updatePathIdentificationString(mixed $locationId, mixed $parentLocationId, string $text) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$locationId</h4>
@@ -629,12 +649,12 @@ does not exist any more) and exception is thrown.</p></p>
 </div>
 </div></div>
 </div>
-<a name="updateSubtreeModificationTime" id="updateSubtreeModificationTime"></a><div class="element clickable method public updateSubtreeModificationTime" data-toggle="collapse" data-target=".updateSubtreeModificationTime .collapse">
+<a id="method_updateSubtreeModificationTime"></a><div class="element clickable method public method_updateSubtreeModificationTime" data-toggle="collapse" data-target=".method_updateSubtreeModificationTime .collapse">
 <h2>Updated subtree modification time for all nodes on path</h2>
 <pre>updateSubtreeModificationTime(string $pathString, int | null $timestamp) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$pathString</h4>
@@ -642,71 +662,71 @@ does not exist any more) and exception is thrown.</p></p>
 </div>
 <div class="subelement argument">
 <h4>$timestamp</h4>
-<code>intnull</code>
+<code>int</code><code>null</code>
 </div>
 </div></div>
 </div>
 <h3>
 <i class="icon-custom icon-constant"></i> Constants</h3>
-<a name="NODE_ASSIGNMENT_OP_CODE_CREATE" id="NODE_ASSIGNMENT_OP_CODE_CREATE"> </a><div class="element clickable constant  NODE_ASSIGNMENT_OP_CODE_CREATE" data-toggle="collapse" data-target=".NODE_ASSIGNMENT_OP_CODE_CREATE .collapse">
+<a id="constant_NODE_ASSIGNMENT_OP_CODE_CREATE"> </a><div class="element clickable constant  constant_NODE_ASSIGNMENT_OP_CODE_CREATE" data-toggle="collapse" data-target=".constant_NODE_ASSIGNMENT_OP_CODE_CREATE .collapse">
 <h2>NODE_ASSIGNMENT_OP_CODE_CREATE</h2>
 <pre>NODE_ASSIGNMENT_OP_CODE_CREATE </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="NODE_ASSIGNMENT_OP_CODE_CREATE_NOP" id="NODE_ASSIGNMENT_OP_CODE_CREATE_NOP"> </a><div class="element clickable constant  NODE_ASSIGNMENT_OP_CODE_CREATE_NOP" data-toggle="collapse" data-target=".NODE_ASSIGNMENT_OP_CODE_CREATE_NOP .collapse">
+<a id="constant_NODE_ASSIGNMENT_OP_CODE_CREATE_NOP"> </a><div class="element clickable constant  constant_NODE_ASSIGNMENT_OP_CODE_CREATE_NOP" data-toggle="collapse" data-target=".constant_NODE_ASSIGNMENT_OP_CODE_CREATE_NOP .collapse">
 <h2>NODE_ASSIGNMENT_OP_CODE_CREATE_NOP</h2>
 <pre>NODE_ASSIGNMENT_OP_CODE_CREATE_NOP </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="NODE_ASSIGNMENT_OP_CODE_EXECUTE" id="NODE_ASSIGNMENT_OP_CODE_EXECUTE"> </a><div class="element clickable constant  NODE_ASSIGNMENT_OP_CODE_EXECUTE" data-toggle="collapse" data-target=".NODE_ASSIGNMENT_OP_CODE_EXECUTE .collapse">
+<a id="constant_NODE_ASSIGNMENT_OP_CODE_EXECUTE"> </a><div class="element clickable constant  constant_NODE_ASSIGNMENT_OP_CODE_EXECUTE" data-toggle="collapse" data-target=".constant_NODE_ASSIGNMENT_OP_CODE_EXECUTE .collapse">
 <h2>NODE_ASSIGNMENT_OP_CODE_EXECUTE</h2>
 <pre>NODE_ASSIGNMENT_OP_CODE_EXECUTE </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="NODE_ASSIGNMENT_OP_CODE_MOVE" id="NODE_ASSIGNMENT_OP_CODE_MOVE"> </a><div class="element clickable constant  NODE_ASSIGNMENT_OP_CODE_MOVE" data-toggle="collapse" data-target=".NODE_ASSIGNMENT_OP_CODE_MOVE .collapse">
+<a id="constant_NODE_ASSIGNMENT_OP_CODE_MOVE"> </a><div class="element clickable constant  constant_NODE_ASSIGNMENT_OP_CODE_MOVE" data-toggle="collapse" data-target=".constant_NODE_ASSIGNMENT_OP_CODE_MOVE .collapse">
 <h2>NODE_ASSIGNMENT_OP_CODE_MOVE</h2>
 <pre>NODE_ASSIGNMENT_OP_CODE_MOVE </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="NODE_ASSIGNMENT_OP_CODE_MOVE_NOP" id="NODE_ASSIGNMENT_OP_CODE_MOVE_NOP"> </a><div class="element clickable constant  NODE_ASSIGNMENT_OP_CODE_MOVE_NOP" data-toggle="collapse" data-target=".NODE_ASSIGNMENT_OP_CODE_MOVE_NOP .collapse">
+<a id="constant_NODE_ASSIGNMENT_OP_CODE_MOVE_NOP"> </a><div class="element clickable constant  constant_NODE_ASSIGNMENT_OP_CODE_MOVE_NOP" data-toggle="collapse" data-target=".constant_NODE_ASSIGNMENT_OP_CODE_MOVE_NOP .collapse">
 <h2>NODE_ASSIGNMENT_OP_CODE_MOVE_NOP</h2>
 <pre>NODE_ASSIGNMENT_OP_CODE_MOVE_NOP </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="NODE_ASSIGNMENT_OP_CODE_NOP" id="NODE_ASSIGNMENT_OP_CODE_NOP"> </a><div class="element clickable constant  NODE_ASSIGNMENT_OP_CODE_NOP" data-toggle="collapse" data-target=".NODE_ASSIGNMENT_OP_CODE_NOP .collapse">
+<a id="constant_NODE_ASSIGNMENT_OP_CODE_NOP"> </a><div class="element clickable constant  constant_NODE_ASSIGNMENT_OP_CODE_NOP" data-toggle="collapse" data-target=".constant_NODE_ASSIGNMENT_OP_CODE_NOP .collapse">
 <h2>Constants for node assignment op codes</h2>
 <pre>NODE_ASSIGNMENT_OP_CODE_NOP </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="NODE_ASSIGNMENT_OP_CODE_REMOVE" id="NODE_ASSIGNMENT_OP_CODE_REMOVE"> </a><div class="element clickable constant  NODE_ASSIGNMENT_OP_CODE_REMOVE" data-toggle="collapse" data-target=".NODE_ASSIGNMENT_OP_CODE_REMOVE .collapse">
+<a id="constant_NODE_ASSIGNMENT_OP_CODE_REMOVE"> </a><div class="element clickable constant  constant_NODE_ASSIGNMENT_OP_CODE_REMOVE" data-toggle="collapse" data-target=".constant_NODE_ASSIGNMENT_OP_CODE_REMOVE .collapse">
 <h2>NODE_ASSIGNMENT_OP_CODE_REMOVE</h2>
 <pre>NODE_ASSIGNMENT_OP_CODE_REMOVE </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="NODE_ASSIGNMENT_OP_CODE_REMOVE_NOP" id="NODE_ASSIGNMENT_OP_CODE_REMOVE_NOP"> </a><div class="element clickable constant  NODE_ASSIGNMENT_OP_CODE_REMOVE_NOP" data-toggle="collapse" data-target=".NODE_ASSIGNMENT_OP_CODE_REMOVE_NOP .collapse">
+<a id="constant_NODE_ASSIGNMENT_OP_CODE_REMOVE_NOP"> </a><div class="element clickable constant  constant_NODE_ASSIGNMENT_OP_CODE_REMOVE_NOP" data-toggle="collapse" data-target=".constant_NODE_ASSIGNMENT_OP_CODE_REMOVE_NOP .collapse">
 <h2>NODE_ASSIGNMENT_OP_CODE_REMOVE_NOP</h2>
 <pre>NODE_ASSIGNMENT_OP_CODE_REMOVE_NOP </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="NODE_ASSIGNMENT_OP_CODE_SET" id="NODE_ASSIGNMENT_OP_CODE_SET"> </a><div class="element clickable constant  NODE_ASSIGNMENT_OP_CODE_SET" data-toggle="collapse" data-target=".NODE_ASSIGNMENT_OP_CODE_SET .collapse">
+<a id="constant_NODE_ASSIGNMENT_OP_CODE_SET"> </a><div class="element clickable constant  constant_NODE_ASSIGNMENT_OP_CODE_SET" data-toggle="collapse" data-target=".constant_NODE_ASSIGNMENT_OP_CODE_SET .collapse">
 <h2>NODE_ASSIGNMENT_OP_CODE_SET</h2>
 <pre>NODE_ASSIGNMENT_OP_CODE_SET </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="NODE_ASSIGNMENT_OP_CODE_SET_NOP" id="NODE_ASSIGNMENT_OP_CODE_SET_NOP"> </a><div class="element clickable constant  NODE_ASSIGNMENT_OP_CODE_SET_NOP" data-toggle="collapse" data-target=".NODE_ASSIGNMENT_OP_CODE_SET_NOP .collapse">
+<a id="constant_NODE_ASSIGNMENT_OP_CODE_SET_NOP"> </a><div class="element clickable constant  constant_NODE_ASSIGNMENT_OP_CODE_SET_NOP" data-toggle="collapse" data-target=".constant_NODE_ASSIGNMENT_OP_CODE_SET_NOP .collapse">
 <h2>NODE_ASSIGNMENT_OP_CODE_SET_NOP</h2>
 <pre>NODE_ASSIGNMENT_OP_CODE_SET_NOP </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
 </div>
@@ -714,8 +734,8 @@ does not exist any more) and exception is thrown.</p></p>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T17:00:34Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:41:58Z.<br></footer></div>
 </div>
 </body>
 </html>

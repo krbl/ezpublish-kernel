@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,45 +61,63 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#__construct" title="__construct :: Creates a new storage handler"><span class="description">Creates a new storage handler</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#deleteFieldData" title="deleteFieldData :: Deletes data for field $ids from external storage of $fieldType"><span class="description">Deletes data for field $ids from external storage of $fieldType</span><pre>deleteFieldData()</pre></a></li>
-<li class="method public "><a href="#getFieldData" title="getFieldData :: Fetches external data for $field from its corresponding external storage"><span class="description">Fetches external data for $field from its corresponding external storage</span><pre>getFieldData()</pre></a></li>
-<li class="method public "><a href="#storeFieldData" title="storeFieldData :: Stores data from $field in its corresponding external storage"><span class="description">Stores data from $field in its corresponding external storage</span><pre>storeFieldData()</pre></a></li>
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Creates a new storage handler"><span class="description">Creates a new storage handler</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_deleteFieldData" title="deleteFieldData :: Deletes data for field $ids from external storage of $fieldType"><span class="description">Deletes data for field $ids from external storage of $fieldType</span><pre>deleteFieldData()</pre></a></li>
+<li class="method public "><a href="#method_getFieldData" title="getFieldData :: Fetches external data for $field from its corresponding external storage"><span class="description">Fetches external data for $field from its corresponding external storage</span><pre>getFieldData()</pre></a></li>
+<li class="method public "><a href="#method_storeFieldData" title="storeFieldData :: Stores data from $field in its corresponding external storage"><span class="description">Stores data from $field in its corresponding external storage</span><pre>storeFieldData()</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected "><a href="#%24context" title="$context :: Array with database context"><span class="description">Array with database context</span><pre>$context</pre></a></li>
-<li class="property protected "><a href="#%24storageRegistry" title="$storageRegistry :: Storage registry"><span class="description">Storage registry</span><pre>$storageRegistry</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_context" title="$context :: Array with database context"><span class="description"></span><pre>$context</pre></a></li>
+<li class="property protected "><a href="#property_storageRegistry" title="$storageRegistry :: Storage registry"><span class="description"></span><pre>$storageRegistry</pre></a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CPersistence%5CLegacy%5CContent%5CStorageHandler" id="\eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.html">Legacy</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.Legacy.Content.html">Content</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.StorageHandler.html">StorageHandler</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.StorageHandler.html" class="element class">
+<div class="element class">
 <p class="short_description">Handler for external storages</p>
 <div class="details">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
 <h2>Creates a new storage handler</h2>
-<pre>__construct(\eZ\Publish\Core\Persistence\Legacy\Content\StorageRegistry $storageRegistry, \array $context) </pre>
+<pre>__construct(\eZ\Publish\Core\Persistence\Legacy\Content\StorageRegistry $storageRegistry, array $context) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$storageRegistry</h4>
@@ -110,12 +129,12 @@
 </div>
 </div></div>
 </div>
-<a name="deleteFieldData" id="deleteFieldData"></a><div class="element clickable method public deleteFieldData" data-toggle="collapse" data-target=".deleteFieldData .collapse">
+<a id="method_deleteFieldData"></a><div class="element clickable method public method_deleteFieldData" data-toggle="collapse" data-target=".method_deleteFieldData .collapse">
 <h2>Deletes data for field $ids from external storage of $fieldType</h2>
-<pre>deleteFieldData(string $fieldType, \eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \array $ids) : void</pre>
+<pre>deleteFieldData(string $fieldType, \eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, array $ids) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$fieldType</h4>
@@ -131,12 +150,12 @@
 </div>
 </div></div>
 </div>
-<a name="getFieldData" id="getFieldData"></a><div class="element clickable method public getFieldData" data-toggle="collapse" data-target=".getFieldData .collapse">
+<a id="method_getFieldData"></a><div class="element clickable method public method_getFieldData" data-toggle="collapse" data-target=".method_getFieldData .collapse">
 <h2>Fetches external data for $field from its corresponding external storage</h2>
 <pre>getFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -148,12 +167,12 @@
 </div>
 </div></div>
 </div>
-<a name="storeFieldData" id="storeFieldData"></a><div class="element clickable method public storeFieldData" data-toggle="collapse" data-target=".storeFieldData .collapse">
+<a id="method_storeFieldData"></a><div class="element clickable method public method_storeFieldData" data-toggle="collapse" data-target=".method_storeFieldData .collapse">
 <h2>Stores data from $field in its corresponding external storage</h2>
 <pre>storeFieldData(\eZ\Publish\SPI\Persistence\Content\VersionInfo $versionInfo, \eZ\Publish\SPI\Persistence\Content\Field $field) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$versionInfo</h4>
@@ -167,17 +186,17 @@
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24context" id="$context"> </a><div class="element clickable property protected $context" data-toggle="collapse" data-target=".$context .collapse">
-<h2>Array with database context</h2>
+<a id="property_context"> </a><div class="element clickable property protected property_context" data-toggle="collapse" data-target=".property_context .collapse">
+<h2></h2>
 <pre>$context : array</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24storageRegistry" id="$storageRegistry"> </a><div class="element clickable property protected $storageRegistry" data-toggle="collapse" data-target=".$storageRegistry .collapse">
-<h2>Storage registry</h2>
+<a id="property_storageRegistry"> </a><div class="element clickable property protected property_storageRegistry" data-toggle="collapse" data-target=".property_storageRegistry .collapse">
+<h2></h2>
 <pre>$storageRegistry : <a href="../classes/eZ.Publish.Core.Persistence.Legacy.Content.StorageRegistry.html">\eZ\Publish\Core\Persistence\Legacy\Content\StorageRegistry</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
 </div>
@@ -185,8 +204,8 @@
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T17:00:37Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:42:00Z.<br></footer></div>
 </div>
 </body>
 </html>

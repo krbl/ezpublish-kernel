@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -21,6 +21,7 @@
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/eZ.html"><i class="icon-th"></i> eZ</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 <li><a href="../packages/FieldTypeProviderInterface.html"><i class="icon-folder-open"></i> FieldTypeProviderInterface</a></li>
@@ -35,7 +36,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3434</span></a></li>
+                <span class="label label-info">1641</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
                 <span class="label label-info">178</span>
@@ -60,71 +61,90 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#__construct" title="__construct :: Setups current handler instance with reference to Handler object that created it."><span class="description">Setups current handler instance with reference to Handler object that created it.</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#createCustomUrlAlias" title="createCustomUrlAlias :: Create a user chosen $alias pointing to $locationId in $languageCode."><span class="description">Create a user chosen $alias pointing to $locationId in $languageCode.</span><pre>createCustomUrlAlias()</pre></a></li>
-<li class="method public "><a href="#createGlobalUrlAlias" title="createGlobalUrlAlias :: Create a user chosen $alias pointing to a resource in $languageCode."><span class="description">Create a user chosen $alias pointing to a resource in $languageCode.</span><pre>createGlobalUrlAlias()</pre></a></li>
-<li class="method public "><a href="#createNewAlias" title="createNewAlias :: Creates new alias."><span class="description">Creates new alias.</span><pre>createNewAlias()</pre></a></li>
-<li class="method public "><a href="#listGlobalURLAliases" title="listGlobalURLAliases :: List global aliases."><span class="description">List global aliases.</span><pre>listGlobalURLAliases()</pre></a></li>
-<li class="method public "><a href="#listURLAliasesForLocation" title="listURLAliasesForLocation :: List of url entries of $urlType, pointing to $locationId."><span class="description">List of url entries of $urlType, pointing to $locationId.</span><pre>listURLAliasesForLocation()</pre></a></li>
-<li class="method public "><a href="#loadUrlAlias" title="loadUrlAlias :: Loads URL alias by given $id"><span class="description">Loads URL alias by given $id</span><pre>loadUrlAlias()</pre></a></li>
-<li class="method public "><a href="#locationCopied" title="locationCopied :: Notifies the underlying engine that a location has moved."><span class="description">Notifies the underlying engine that a location has moved.</span><pre>locationCopied()</pre></a></li>
-<li class="method public "><a href="#locationDeleted" title="locationDeleted :: Notifies the underlying engine that a location was deleted or moved to trash"><span class="description">Notifies the underlying engine that a location was deleted or moved to trash</span><pre>locationDeleted()</pre></a></li>
-<li class="method public "><a href="#locationMoved" title="locationMoved :: Notifies the underlying engine that a location has moved."><span class="description">Notifies the underlying engine that a location has moved.</span><pre>locationMoved()</pre></a></li>
-<li class="method public "><a href="#lookup" title="lookup :: Looks up a url alias for the given url"><span class="description">Looks up a url alias for the given url</span><pre>lookup()</pre></a></li>
-<li class="method public "><a href="#publishUrlAliasForLocation" title="publishUrlAliasForLocation :: This method creates or updates an urlalias from a new or changed content name in a language
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Setups current handler instance with reference to Handler object that created it."><span class="description">Setups current handler instance with reference to Handler object that created it.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_createCustomUrlAlias" title="createCustomUrlAlias :: Create a user chosen $alias pointing to $locationId in $languageCode."><span class="description">Create a user chosen $alias pointing to $locationId in $languageCode.</span><pre>createCustomUrlAlias()</pre></a></li>
+<li class="method public "><a href="#method_createGlobalUrlAlias" title="createGlobalUrlAlias :: Create a user chosen $alias pointing to a resource in $languageCode."><span class="description">Create a user chosen $alias pointing to a resource in $languageCode.</span><pre>createGlobalUrlAlias()</pre></a></li>
+<li class="method public "><a href="#method_createNewAlias" title="createNewAlias :: Creates new alias."><span class="description">Creates new alias.</span><pre>createNewAlias()</pre></a></li>
+<li class="method public "><a href="#method_listGlobalURLAliases" title="listGlobalURLAliases :: List global aliases."><span class="description">List global aliases.</span><pre>listGlobalURLAliases()</pre></a></li>
+<li class="method public "><a href="#method_listURLAliasesForLocation" title="listURLAliasesForLocation :: List of url entries of $urlType, pointing to $locationId."><span class="description">List of url entries of $urlType, pointing to $locationId.</span><pre>listURLAliasesForLocation()</pre></a></li>
+<li class="method public "><a href="#method_loadUrlAlias" title="loadUrlAlias :: Loads URL alias by given $id"><span class="description">Loads URL alias by given $id</span><pre>loadUrlAlias()</pre></a></li>
+<li class="method public "><a href="#method_locationCopied" title="locationCopied :: Notifies the underlying engine that a location has moved."><span class="description">Notifies the underlying engine that a location has moved.</span><pre>locationCopied()</pre></a></li>
+<li class="method public "><a href="#method_locationDeleted" title="locationDeleted :: Notifies the underlying engine that a location was deleted or moved to trash"><span class="description">Notifies the underlying engine that a location was deleted or moved to trash</span><pre>locationDeleted()</pre></a></li>
+<li class="method public "><a href="#method_locationMoved" title="locationMoved :: Notifies the underlying engine that a location has moved."><span class="description">Notifies the underlying engine that a location has moved.</span><pre>locationMoved()</pre></a></li>
+<li class="method public "><a href="#method_lookup" title="lookup :: Looks up a url alias for the given url"><span class="description">Looks up a url alias for the given url</span><pre>lookup()</pre></a></li>
+<li class="method public "><a href="#method_publishUrlAliasForLocation" title="publishUrlAliasForLocation :: This method creates or updates an urlalias from a new or changed content name in a language
 (if published)."><span class="description">This method creates or updates an urlalias from a new or changed content name in a language
 (if published).</span><pre>publishUrlAliasForLocation()</pre></a></li>
-<li class="method public "><a href="#removeURLAliases" title="removeURLAliases :: Removes url aliases."><span class="description">Removes url aliases.</span><pre>removeURLAliases()</pre></a></li>
-<li class="nav-header protected">» Protected</li>
-<li class="method protected "><a href="#createUrlAlias" title="createUrlAlias :: Internal method for creating global or custom URL alias (these are handled in the same way)"><span class="description">Internal method for creating global or custom URL alias (these are handled in the same way)</span><pre>createUrlAlias()</pre></a></li>
-<li class="method protected "><a href="#downgrade" title="downgrade :: Remove translation in given $languageCode from alias or delete alias if given translation is the last one."><span class="description">Remove translation in given $languageCode from alias or delete alias if given translation is the last one.</span><pre>downgrade()</pre></a></li>
-<li class="method protected "><a href="#expandAlias" title="expandAlias :: Expands given $alias to array of new aliases for each different translation."><span class="description">Expands given $alias to array of new aliases for each different translation.</span><pre>expandAlias()</pre></a></li>
-<li class="method protected "><a href="#getHash" title="getHash :: "><span class="description">getHash()
+<li class="method public "><a href="#method_removeURLAliases" title="removeURLAliases :: Removes url aliases."><span class="description">Removes url aliases.</span><pre>removeURLAliases()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method_createUrlAlias" title="createUrlAlias :: Internal method for creating global or custom URL alias (these are handled in the same way)"><span class="description">Internal method for creating global or custom URL alias (these are handled in the same way)</span><pre>createUrlAlias()</pre></a></li>
+<li class="method protected "><a href="#method_downgrade" title="downgrade :: Remove translation in given $languageCode from alias or delete alias if given translation is the last one."><span class="description">Remove translation in given $languageCode from alias or delete alias if given translation is the last one.</span><pre>downgrade()</pre></a></li>
+<li class="method protected "><a href="#method_expandAlias" title="expandAlias :: Expands given $alias to array of new aliases for each different translation."><span class="description">Expands given $alias to array of new aliases for each different translation.</span><pre>expandAlias()</pre></a></li>
+<li class="method protected "><a href="#method_getHash" title="getHash :: "><span class="description">getHash()
         </span><pre>getHash()</pre></a></li>
-<li class="method protected "><a href="#getNextLinkId" title="getNextLinkId :: Returns max found link id incremented by 1"><span class="description">Returns max found link id incremented by 1</span><pre>getNextLinkId()</pre></a></li>
-<li class="method protected "><a href="#getTranslation" title="getTranslation :: Returns translation in given $languageCode or null if it does not exist."><span class="description">Returns translation in given $languageCode or null if it does not exist.</span><pre>getTranslation()</pre></a></li>
-<li class="method protected "><a href="#historize" title="historize :: Creates history for one translation."><span class="description">Creates history for one translation.</span><pre>historize()</pre></a></li>
-<li class="method protected "><a href="#historizeAndUpdateExistingAlias" title="historizeAndUpdateExistingAlias :: Updates existing location alias and creates history if necessary."><span class="description">Updates existing location alias and creates history if necessary.</span><pre>historizeAndUpdateExistingAlias()</pre></a></li>
-<li class="method protected "><a href="#loadAlias" title="loadAlias :: Loads alias by given $parentId and $text."><span class="description">Loads alias by given $parentId and $text.</span><pre>loadAlias()</pre></a></li>
-<li class="method protected "><a href="#loadAutogeneratedAlias" title="loadAutogeneratedAlias :: Loads autogenerated location alias for given $locationId, optionally limited by given $parentId."><span class="description">Loads autogenerated location alias for given $locationId, optionally limited by given $parentId.</span><pre>loadAutogeneratedAlias()</pre></a></li>
+<li class="method protected "><a href="#method_getNextLinkId" title="getNextLinkId :: Returns max found link id incremented by 1"><span class="description">Returns max found link id incremented by 1</span><pre>getNextLinkId()</pre></a></li>
+<li class="method protected "><a href="#method_getTranslation" title="getTranslation :: Returns translation in given $languageCode or null if it does not exist."><span class="description">Returns translation in given $languageCode or null if it does not exist.</span><pre>getTranslation()</pre></a></li>
+<li class="method protected "><a href="#method_historize" title="historize :: Creates history for one translation."><span class="description">Creates history for one translation.</span><pre>historize()</pre></a></li>
+<li class="method protected "><a href="#method_historizeAndUpdateExistingAlias" title="historizeAndUpdateExistingAlias :: Updates existing location alias and creates history if necessary."><span class="description">Updates existing location alias and creates history if necessary.</span><pre>historizeAndUpdateExistingAlias()</pre></a></li>
+<li class="method protected "><a href="#method_loadAlias" title="loadAlias :: Loads alias by given $parentId and $text."><span class="description">Loads alias by given $parentId and $text.</span><pre>loadAlias()</pre></a></li>
+<li class="method protected "><a href="#method_loadAutogeneratedAlias" title="loadAutogeneratedAlias :: Loads autogenerated location alias for given $locationId, optionally limited by given $parentId."><span class="description">Loads autogenerated location alias for given $locationId, optionally limited by given $parentId.</span><pre>loadAutogeneratedAlias()</pre></a></li>
+</ul>
+</li>
 <li class="nav-header">
-<i class="icon-custom icon-property"></i> Properties</li>
-<li class="nav-header protected">» Protected</li>
-<li class="property protected "><a href="#%24backend" title="$backend :: "><span class="description">$backend</span><pre>$backend</pre></a></li>
-<li class="property protected "><a href="#%24handler" title="$handler :: "><span class="description">$handler</span><pre>$handler</pre></a></li>
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_backend" title="$backend :: "><span class="description"></span><pre>$backend</pre></a></li>
+<li class="property protected "><a href="#property_handler" title="$handler :: "><span class="description"></span><pre>$handler</pre></a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="span8">
-<a name="%5CeZ%5CPublish%5CCore%5CPersistence%5CInMemory%5CUrlAliasHandler" id="\eZ\Publish\Core\Persistence\InMemory\UrlAliasHandler"></a><ul class="breadcrumb">
+<a id="\eZ\Publish\Core\Persistence\InMemory\UrlAliasHandler"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/eZ.html">eZ</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.html">Publish</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.html">Core</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a></li>
-<span class="divider">\</span><li><a href="../namespaces/eZ.Publish.Core.Persistence.InMemory.html">InMemory</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.html">Publish</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.html">Core</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.html">Persistence</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/eZ.Publish.Core.Persistence.InMemory.html">InMemory</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/eZ.Publish.Core.Persistence.InMemory.UrlAliasHandler.html">UrlAliasHandler</a>
 </li>
 </ul>
-<div href="../classes/eZ.Publish.Core.Persistence.InMemory.UrlAliasHandler.html" class="element class">
+<div class="element class">
 <p class="short_description"></p>
 <div class="details">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered"><tr>
 <th>see</th>
-<td>\eZ\Publish\SPI\Persistence\Content\UrlAlias\Handler</td>
+<td><a href="Publish.SPI.Persistence.Content.UrlAlias.Handler.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CUrlAlias%5CHandler">\eZ\Publish\SPI\Persistence\Content\UrlAlias\Handler</a></td>
 </tr></table>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
 <h2>Setups current handler instance with reference to Handler object that created it.</h2>
 <pre>__construct(\eZ\Publish\Core\Persistence\InMemory\Handler $handler, \eZ\Publish\Core\Persistence\InMemory\Backend $backend) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$handler</h4>
@@ -135,13 +155,13 @@
 <code><a href="../classes/eZ.Publish.Core.Persistence.InMemory.Backend.html">\eZ\Publish\Core\Persistence\InMemory\Backend</a></code><p>The storage engine backend</p></div>
 </div></div>
 </div>
-<a name="createCustomUrlAlias" id="createCustomUrlAlias"></a><div class="element clickable method public createCustomUrlAlias" data-toggle="collapse" data-target=".createCustomUrlAlias .collapse">
+<a id="method_createCustomUrlAlias"></a><div class="element clickable method public method_createCustomUrlAlias" data-toggle="collapse" data-target=".method_createCustomUrlAlias .collapse">
 <h2>Create a user chosen $alias pointing to $locationId in $languageCode.</h2>
 <pre>createCustomUrlAlias(mixed $locationId, string $path, boolean $forwarding, string $languageCode, boolean $alwaysAvailable) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.UrlAlias.html">\eZ\Publish\SPI\Persistence\Content\UrlAlias</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>If $languageCode is null the $alias is created in the system's default
-language. $alwaysAvailable makes the alias available in all languages.</p></p>
+<div class="long_description"><p>If $languageCode is null the $alias is created in the system's default
+language. $alwaysAvailable makes the alias available in all languages.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$locationId</h4>
@@ -167,16 +187,16 @@ language. $alwaysAvailable makes the alias available in all languages.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.UrlAlias.html">\eZ\Publish\SPI\Persistence\Content\UrlAlias</a></code></div>
 </div></div>
 </div>
-<a name="createGlobalUrlAlias" id="createGlobalUrlAlias"></a><div class="element clickable method public createGlobalUrlAlias" data-toggle="collapse" data-target=".createGlobalUrlAlias .collapse">
+<a id="method_createGlobalUrlAlias"></a><div class="element clickable method public method_createGlobalUrlAlias" data-toggle="collapse" data-target=".method_createGlobalUrlAlias .collapse">
 <h2>Create a user chosen $alias pointing to a resource in $languageCode.</h2>
 <pre>createGlobalUrlAlias(string $resource, string $path, boolean $forwarding, string $languageCode, boolean $alwaysAvailable) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.UrlAlias.html">\eZ\Publish\SPI\Persistence\Content\UrlAlias</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>This method does not handle location resources - if a user enters a location target
+<div class="long_description"><p>This method does not handle location resources - if a user enters a location target
 the createCustomUrlAlias method has to be used.</p>
 
 <p>If $languageCode is null the $alias is created in the system's default
-language. $alwaysAvailable makes the alias available in all languages.</p></p>
+language. $alwaysAvailable makes the alias available in all languages.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$resource</h4>
@@ -207,12 +227,12 @@ language. $alwaysAvailable makes the alias available in all languages.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.UrlAlias.html">\eZ\Publish\SPI\Persistence\Content\UrlAlias</a></code></div>
 </div></div>
 </div>
-<a name="createNewAlias" id="createNewAlias"></a><div class="element clickable method public createNewAlias" data-toggle="collapse" data-target=".createNewAlias .collapse">
+<a id="method_createNewAlias"></a><div class="element clickable method public method_createNewAlias" data-toggle="collapse" data-target=".method_createNewAlias .collapse">
 <h2>Creates new alias.</h2>
 <pre>createNewAlias(mixed $linkId, array $data, string $languageCode, string $name, boolean $alwaysAvailable) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$linkId</h4>
@@ -236,16 +256,16 @@ language. $alwaysAvailable makes the alias available in all languages.</p></p>
 </div>
 </div></div>
 </div>
-<a name="listGlobalURLAliases" id="listGlobalURLAliases"></a><div class="element clickable method public listGlobalURLAliases" data-toggle="collapse" data-target=".listGlobalURLAliases .collapse">
+<a id="method_listGlobalURLAliases"></a><div class="element clickable method public method_listGlobalURLAliases" data-toggle="collapse" data-target=".method_listGlobalURLAliases .collapse">
 <h2>List global aliases.</h2>
 <pre>listGlobalURLAliases(string | null $languageCode, int $offset, int $limit) : <a href="Publish.SPI.Persistence.Content.UrlAlias.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CUrlAlias">\eZ\Publish\SPI\Persistence\Content\UrlAlias[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$languageCode</h4>
-<code>stringnull</code>
+<code>string</code><code>null</code>
 </div>
 <div class="subelement argument">
 <h4>$offset</h4>
@@ -259,12 +279,12 @@ language. $alwaysAvailable makes the alias available in all languages.</p></p>
 <div class="subelement response"><code><a href="Publish.SPI.Persistence.Content.UrlAlias.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CUrlAlias">\eZ\Publish\SPI\Persistence\Content\UrlAlias[]</a></code></div>
 </div></div>
 </div>
-<a name="listURLAliasesForLocation" id="listURLAliasesForLocation"></a><div class="element clickable method public listURLAliasesForLocation" data-toggle="collapse" data-target=".listURLAliasesForLocation .collapse">
+<a id="method_listURLAliasesForLocation"></a><div class="element clickable method public method_listURLAliasesForLocation" data-toggle="collapse" data-target=".method_listURLAliasesForLocation .collapse">
 <h2>List of url entries of $urlType, pointing to $locationId.</h2>
 <pre>listURLAliasesForLocation(mixed $locationId, boolean $custom) : <a href="Publish.SPI.Persistence.Content.UrlAlias.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CUrlAlias">\eZ\Publish\SPI\Persistence\Content\UrlAlias[]</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$locationId</h4>
@@ -277,12 +297,12 @@ language. $alwaysAvailable makes the alias available in all languages.</p></p>
 <div class="subelement response"><code><a href="Publish.SPI.Persistence.Content.UrlAlias.html#%5CeZ%5CPublish%5CSPI%5CPersistence%5CContent%5CUrlAlias">\eZ\Publish\SPI\Persistence\Content\UrlAlias[]</a></code></div>
 </div></div>
 </div>
-<a name="loadUrlAlias" id="loadUrlAlias"></a><div class="element clickable method public loadUrlAlias" data-toggle="collapse" data-target=".loadUrlAlias .collapse">
+<a id="method_loadUrlAlias"></a><div class="element clickable method public method_loadUrlAlias" data-toggle="collapse" data-target=".method_loadUrlAlias .collapse">
 <h2>Loads URL alias by given $id</h2>
 <pre>loadUrlAlias(string $id) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.UrlAlias.html">\eZ\Publish\SPI\Persistence\Content\UrlAlias</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$id</h4>
@@ -297,12 +317,12 @@ language. $alwaysAvailable makes the alias available in all languages.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.UrlAlias.html">\eZ\Publish\SPI\Persistence\Content\UrlAlias</a></code></div>
 </div></div>
 </div>
-<a name="locationCopied" id="locationCopied"></a><div class="element clickable method public locationCopied" data-toggle="collapse" data-target=".locationCopied .collapse">
+<a id="method_locationCopied"></a><div class="element clickable method public method_locationCopied" data-toggle="collapse" data-target=".method_locationCopied .collapse">
 <h2>Notifies the underlying engine that a location has moved.</h2>
 <pre>locationCopied(mixed $locationId, mixed $oldParentId, mixed $newParentId) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>This method triggers the creation of the autogenerated aliases for the copied locations</p></p>
+<div class="long_description"><p>This method triggers the creation of the autogenerated aliases for the copied locations</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$locationId</h4>
@@ -318,12 +338,12 @@ language. $alwaysAvailable makes the alias available in all languages.</p></p>
 </div>
 </div></div>
 </div>
-<a name="locationDeleted" id="locationDeleted"></a><div class="element clickable method public locationDeleted" data-toggle="collapse" data-target=".locationDeleted .collapse">
+<a id="method_locationDeleted"></a><div class="element clickable method public method_locationDeleted" data-toggle="collapse" data-target=".method_locationDeleted .collapse">
 <h2>Notifies the underlying engine that a location was deleted or moved to trash</h2>
 <pre>locationDeleted(mixed $locationId) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$locationId</h4>
@@ -331,12 +351,12 @@ language. $alwaysAvailable makes the alias available in all languages.</p></p>
 </div>
 </div></div>
 </div>
-<a name="locationMoved" id="locationMoved"></a><div class="element clickable method public locationMoved" data-toggle="collapse" data-target=".locationMoved .collapse">
+<a id="method_locationMoved"></a><div class="element clickable method public method_locationMoved" data-toggle="collapse" data-target=".method_locationMoved .collapse">
 <h2>Notifies the underlying engine that a location has moved.</h2>
 <pre>locationMoved(mixed $locationId, mixed $oldParentId, mixed $newParentId) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>This method triggers the change of the autogenerated aliases</p></p>
+<div class="long_description"><p>This method triggers the change of the autogenerated aliases</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$locationId</h4>
@@ -352,12 +372,12 @@ language. $alwaysAvailable makes the alias available in all languages.</p></p>
 </div>
 </div></div>
 </div>
-<a name="lookup" id="lookup"></a><div class="element clickable method public lookup" data-toggle="collapse" data-target=".lookup .collapse">
+<a id="method_lookup"></a><div class="element clickable method public method_lookup" data-toggle="collapse" data-target=".method_lookup .collapse">
 <h2>Looks up a url alias for the given url</h2>
 <pre>lookup(string $url) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.UrlAlias.html">\eZ\Publish\SPI\Persistence\Content\UrlAlias</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$url</h4>
@@ -372,17 +392,17 @@ language. $alwaysAvailable makes the alias available in all languages.</p></p>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.SPI.Persistence.Content.UrlAlias.html">\eZ\Publish\SPI\Persistence\Content\UrlAlias</a></code></div>
 </div></div>
 </div>
-<a name="publishUrlAliasForLocation" id="publishUrlAliasForLocation"></a><div class="element clickable method public publishUrlAliasForLocation" data-toggle="collapse" data-target=".publishUrlAliasForLocation .collapse">
+<a id="method_publishUrlAliasForLocation"></a><div class="element clickable method public method_publishUrlAliasForLocation" data-toggle="collapse" data-target=".method_publishUrlAliasForLocation .collapse">
 <h2>This method creates or updates an urlalias from a new or changed content name in a language
 (if published).</h2>
 <pre>publishUrlAliasForLocation(mixed $locationId, mixed $parentLocationId, string $name, string $languageCode, boolean $alwaysAvailable) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>It also can be used to create an alias for a new location of content.
+<div class="long_description"><p>It also can be used to create an alias for a new location of content.
 On update the old alias is linked to the new one (i.e. a history alias is generated).</p>
 
 <p>$alwaysAvailable controls whether the url alias is accessible in all
-languages.</p></p>
+languages.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$locationId</h4>
@@ -405,12 +425,12 @@ languages.</p></p>
 </div>
 </div></div>
 </div>
-<a name="removeURLAliases" id="removeURLAliases"></a><div class="element clickable method public removeURLAliases" data-toggle="collapse" data-target=".removeURLAliases .collapse">
+<a id="method_removeURLAliases"></a><div class="element clickable method public method_removeURLAliases" data-toggle="collapse" data-target=".method_removeURLAliases .collapse">
 <h2>Removes url aliases.</h2>
-<pre>removeURLAliases(\array $urlAliases) : boolean</pre>
+<pre>removeURLAliases(array $urlAliases) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Autogenerated aliases are not removed by this method.</p></p>
+<div class="long_description"><p>Autogenerated aliases are not removed by this method.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$urlAliases</h4>
@@ -420,12 +440,12 @@ languages.</p></p>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a name="createUrlAlias" id="createUrlAlias"></a><div class="element clickable method protected createUrlAlias" data-toggle="collapse" data-target=".createUrlAlias .collapse">
+<a id="method_createUrlAlias"></a><div class="element clickable method protected method_createUrlAlias" data-toggle="collapse" data-target=".method_createUrlAlias .collapse">
 <h2>Internal method for creating global or custom URL alias (these are handled in the same way)</h2>
 <pre>createUrlAlias(string $resource, string $path, boolean $forwarding, string | null $languageCode, boolean $alwaysAvailable) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.UrlAlias.html">\eZ\Publish\SPI\Persistence\Content\UrlAlias</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$resource</h4>
@@ -441,7 +461,7 @@ languages.</p></p>
 </div>
 <div class="subelement argument">
 <h4>$languageCode</h4>
-<code>stringnull</code>
+<code>string</code><code>null</code>
 </div>
 <div class="subelement argument">
 <h4>$alwaysAvailable</h4>
@@ -457,12 +477,12 @@ languages.</p></p>
 <code><a href="../classes/eZ.Publish.SPI.Persistence.Content.UrlAlias.html">\eZ\Publish\SPI\Persistence\Content\UrlAlias</a></code>With $type = URLAlias::RESOURCE</div>
 </div></div>
 </div>
-<a name="downgrade" id="downgrade"></a><div class="element clickable method protected downgrade" data-toggle="collapse" data-target=".downgrade .collapse">
+<a id="method_downgrade"></a><div class="element clickable method protected method_downgrade" data-toggle="collapse" data-target=".method_downgrade .collapse">
 <h2>Remove translation in given $languageCode from alias or delete alias if given translation is the last one.</h2>
 <pre>downgrade(<a href="../classes/eZ.Publish.SPI.Persistence.Content.UrlAlias.html">\eZ\Publish\SPI\Persistence\Content\UrlAlias</a> $urlAlias, string $languageCode) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$urlAlias</h4>
@@ -474,12 +494,12 @@ languages.</p></p>
 </div>
 </div></div>
 </div>
-<a name="expandAlias" id="expandAlias"></a><div class="element clickable method protected expandAlias" data-toggle="collapse" data-target=".expandAlias .collapse">
+<a id="method_expandAlias"></a><div class="element clickable method protected method_expandAlias" data-toggle="collapse" data-target=".method_expandAlias .collapse">
 <h2>Expands given $alias to array of new aliases for each different translation.</h2>
 <pre>expandAlias(<a href="../classes/eZ.Publish.SPI.Persistence.Content.UrlAlias.html">\eZ\Publish\SPI\Persistence\Content\UrlAlias</a> $alias) : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$alias</h4>
@@ -489,13 +509,13 @@ languages.</p></p>
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a name="getHash" id="getHash"></a><div class="element clickable method protected getHash" data-toggle="collapse" data-target=".getHash .collapse">
+<a id="method_getHash"></a><div class="element clickable method protected method_getHash" data-toggle="collapse" data-target=".method_getHash .collapse">
 <h2>getHash()
         </h2>
 <pre>getHash(string $text) : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$text</h4>
@@ -505,22 +525,22 @@ languages.</p></p>
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="getNextLinkId" id="getNextLinkId"></a><div class="element clickable method protected getNextLinkId" data-toggle="collapse" data-target=".getNextLinkId .collapse">
+<a id="method_getNextLinkId"></a><div class="element clickable method protected method_getNextLinkId" data-toggle="collapse" data-target=".method_getNextLinkId .collapse">
 <h2>Returns max found link id incremented by 1</h2>
 <pre>getNextLinkId() : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>int</code></div>
 </div></div>
 </div>
-<a name="getTranslation" id="getTranslation"></a><div class="element clickable method protected getTranslation" data-toggle="collapse" data-target=".getTranslation .collapse">
+<a id="method_getTranslation"></a><div class="element clickable method protected method_getTranslation" data-toggle="collapse" data-target=".method_getTranslation .collapse">
 <h2>Returns translation in given $languageCode or null if it does not exist.</h2>
 <pre>getTranslation(<a href="../classes/eZ.Publish.SPI.Persistence.Content.UrlAlias.html">\eZ\Publish\SPI\Persistence\Content\UrlAlias</a> $urlAlias, string $languageCode) : string | null</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$urlAlias</h4>
@@ -536,12 +556,12 @@ languages.</p></p>
 </div>
 </div></div>
 </div>
-<a name="historize" id="historize"></a><div class="element clickable method protected historize" data-toggle="collapse" data-target=".historize .collapse">
+<a id="method_historize"></a><div class="element clickable method protected method_historize" data-toggle="collapse" data-target=".method_historize .collapse">
 <h2>Creates history for one translation.</h2>
 <pre>historize(<a href="../classes/eZ.Publish.SPI.Persistence.Content.UrlAlias.html">\eZ\Publish\SPI\Persistence\Content\UrlAlias</a> $urlAlias, string $languageCode) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$urlAlias</h4>
@@ -553,12 +573,12 @@ languages.</p></p>
 </div>
 </div></div>
 </div>
-<a name="historizeAndUpdateExistingAlias" id="historizeAndUpdateExistingAlias"></a><div class="element clickable method protected historizeAndUpdateExistingAlias" data-toggle="collapse" data-target=".historizeAndUpdateExistingAlias .collapse">
+<a id="method_historizeAndUpdateExistingAlias"></a><div class="element clickable method protected method_historizeAndUpdateExistingAlias" data-toggle="collapse" data-target=".method_historizeAndUpdateExistingAlias .collapse">
 <h2>Updates existing location alias and creates history if necessary.</h2>
 <pre>historizeAndUpdateExistingAlias(array $data, <a href="../classes/eZ.Publish.SPI.Persistence.Content.UrlAlias.html">\eZ\Publish\SPI\Persistence\Content\UrlAlias</a> $existingAlias, string $languageCode, string $name, boolean $alwaysAvailable) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$data</h4>
@@ -582,12 +602,12 @@ languages.</p></p>
 </div>
 </div></div>
 </div>
-<a name="loadAlias" id="loadAlias"></a><div class="element clickable method protected loadAlias" data-toggle="collapse" data-target=".loadAlias .collapse">
+<a id="method_loadAlias"></a><div class="element clickable method protected method_loadAlias" data-toggle="collapse" data-target=".method_loadAlias .collapse">
 <h2>Loads alias by given $parentId and $text.</h2>
 <pre>loadAlias(mixed $parentId, string $text) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.UrlAlias.html">\eZ\Publish\SPI\Persistence\Content\UrlAlias</a> | null</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$parentId</h4>
@@ -603,12 +623,12 @@ languages.</p></p>
 </div>
 </div></div>
 </div>
-<a name="loadAutogeneratedAlias" id="loadAutogeneratedAlias"></a><div class="element clickable method protected loadAutogeneratedAlias" data-toggle="collapse" data-target=".loadAutogeneratedAlias .collapse">
+<a id="method_loadAutogeneratedAlias"></a><div class="element clickable method protected method_loadAutogeneratedAlias" data-toggle="collapse" data-target=".method_loadAutogeneratedAlias .collapse">
 <h2>Loads autogenerated location alias for given $locationId, optionally limited by given $parentId.</h2>
 <pre>loadAutogeneratedAlias(mixed $locationId, null $parentId) : <a href="../classes/eZ.Publish.SPI.Persistence.Content.UrlAlias.html">\eZ\Publish\SPI\Persistence\Content\UrlAlias</a> | null</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$locationId</h4>
@@ -631,17 +651,17 @@ languages.</p></p>
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24backend" id="$backend"> </a><div class="element clickable property protected $backend" data-toggle="collapse" data-target=".$backend .collapse">
-<h2>$backend</h2>
+<a id="property_backend"> </a><div class="element clickable property protected property_backend" data-toggle="collapse" data-target=".property_backend .collapse">
+<h2></h2>
 <pre>$backend : <a href="../classes/eZ.Publish.Core.Persistence.InMemory.Backend.html">\eZ\Publish\Core\Persistence\InMemory\Backend</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="%24handler" id="$handler"> </a><div class="element clickable property protected $handler" data-toggle="collapse" data-target=".$handler .collapse">
-<h2>$handler</h2>
+<a id="property_handler"> </a><div class="element clickable property protected property_handler" data-toggle="collapse" data-target=".property_handler .collapse">
+<h2></h2>
 <pre>$handler : <a href="../classes/eZ.Publish.Core.Persistence.InMemory.Handler.html">\eZ\Publish\Core\Persistence\InMemory\Handler</a></pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
 </div>
@@ -649,8 +669,8 @@ languages.</p></p>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a7</a> and<br>
-            generated on 2012-11-30T17:00:59Z.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-03T13:42:19Z.<br></footer></div>
 </div>
 </body>
 </html>
