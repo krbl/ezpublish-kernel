@@ -1,0 +1,5 @@
+var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1Subtree =
+[
+    [ "accept", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1Subtree.html#a389c47958bd40a9e2509fc7c373b704b", null ],
+    [ "handle", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1Subtree.html#ae22d5e4a40df5c564f49579432e3e07b", null ]
+];

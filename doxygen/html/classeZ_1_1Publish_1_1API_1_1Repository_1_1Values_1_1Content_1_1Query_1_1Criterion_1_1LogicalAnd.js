@@ -1,0 +1,4 @@
+var classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1LogicalAnd =
+[
+    [ "__construct", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1LogicalAnd.html#ae6c00e74ef56a36c1e3a4b516a0e0cfe", null ]
+];

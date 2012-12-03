@@ -1,0 +1,5 @@
+var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1RemoteId =
+[
+    [ "accept", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1RemoteId.html#acdea88055b7c2d9313f17474ca6394d7", null ],
+    [ "handle", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1RemoteId.html#ad6b5e0b67326d50ec57128fce9851a26", null ]
+];

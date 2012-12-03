@@ -1,0 +1,7 @@
+var namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection =
+[
+    [ "Compiler", "namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Compiler.html", "namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Compiler" ],
+    [ "Configuration", "namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Configuration.html", "namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Configuration" ],
+    [ "Configuration", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Configuration.html", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Configuration" ],
+    [ "EzPublishLegacyExtension", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1EzPublishLegacyExtension.html", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1EzPublishLegacyExtension" ]
+];

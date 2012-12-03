@@ -1,0 +1,4 @@
+var classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1ChainConfigResolverPass =
+[
+    [ "process", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1ChainConfigResolverPass.html#a34b7ba38ece6fd59d7312d8e4fc16399", null ]
+];

@@ -1,0 +1,8 @@
+var namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1LanguageService =
+[
+    [ "CreateLanguageSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1LanguageService_1_1CreateLanguageSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1LanguageService_1_1CreateLanguageSignal" ],
+    [ "DeleteLanguageSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1LanguageService_1_1DeleteLanguageSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1LanguageService_1_1DeleteLanguageSignal" ],
+    [ "DisableLanguageSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1LanguageService_1_1DisableLanguageSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1LanguageService_1_1DisableLanguageSignal" ],
+    [ "EnableLanguageSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1LanguageService_1_1EnableLanguageSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1LanguageService_1_1EnableLanguageSignal" ],
+    [ "UpdateLanguageNameSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1LanguageService_1_1UpdateLanguageNameSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1LanguageService_1_1UpdateLanguageNameSignal" ]
+];

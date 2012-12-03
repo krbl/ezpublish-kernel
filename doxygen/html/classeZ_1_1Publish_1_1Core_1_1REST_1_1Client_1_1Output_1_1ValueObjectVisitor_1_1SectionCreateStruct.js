@@ -1,0 +1,4 @@
+var classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1SectionCreateStruct =
+[
+    [ "visit", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1SectionCreateStruct.html#ae9c6da402ad2125e17ede6f7da59d397", null ]
+];

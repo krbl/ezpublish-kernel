@@ -1,0 +1,5 @@
+var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1DateMetadata_1_1ModifiedIn =
+[
+    [ "canVisit", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1DateMetadata_1_1ModifiedIn.html#a18267f123718a29c08b68890c5d959de", null ],
+    [ "visit", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1DateMetadata_1_1ModifiedIn.html#ac9977315331d9b9555f1c496e525f229", null ]
+];

@@ -1,0 +1,4 @@
+var classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1DeleteContentTypeSignal =
+[
+    [ "$contentTypeId", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1DeleteContentTypeSignal.html#a314e5cbcb463886a4134b36892efd2c5", null ]
+];

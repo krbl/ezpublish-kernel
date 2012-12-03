@@ -1,0 +1,5 @@
+var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1LogicalOr =
+[
+    [ "accept", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1LogicalOr.html#a0d056228cf3680c2fca3c75a3992a7a6", null ],
+    [ "handle", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1LogicalOr.html#ab3f6bd64e1b64609860e53318112dc45", null ]
+];

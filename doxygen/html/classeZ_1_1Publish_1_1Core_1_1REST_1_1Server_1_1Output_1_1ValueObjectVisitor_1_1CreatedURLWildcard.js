@@ -1,0 +1,4 @@
+var classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1CreatedURLWildcard =
+[
+    [ "visit", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1CreatedURLWildcard.html#ae084a3e89d058d981fd24cee49c2ebfd", null ]
+];

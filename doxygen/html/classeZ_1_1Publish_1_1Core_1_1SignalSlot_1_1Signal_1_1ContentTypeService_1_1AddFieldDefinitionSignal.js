@@ -1,0 +1,4 @@
+var classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1AddFieldDefinitionSignal =
+[
+    [ "$contentTypeDraftId", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1AddFieldDefinitionSignal.html#af16978201fb81ace899b7cc471c42f00", null ]
+];

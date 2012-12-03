@@ -1,0 +1,13 @@
+var namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService =
+[
+    [ "AddPolicySignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1AddPolicySignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1AddPolicySignal" ],
+    [ "AssignRoleToUserGroupSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1AssignRoleToUserGroupSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1AssignRoleToUserGroupSignal" ],
+    [ "AssignRoleToUserSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1AssignRoleToUserSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1AssignRoleToUserSignal" ],
+    [ "CreateRoleSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1CreateRoleSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1CreateRoleSignal" ],
+    [ "DeleteRoleSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1DeleteRoleSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1DeleteRoleSignal" ],
+    [ "RemovePolicySignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1RemovePolicySignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1RemovePolicySignal" ],
+    [ "UnassignRoleFromUserGroupSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserGroupSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserGroupSignal" ],
+    [ "UnassignRoleFromUserSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserSignal" ],
+    [ "UpdatePolicySignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UpdatePolicySignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UpdatePolicySignal" ],
+    [ "UpdateRoleSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UpdateRoleSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UpdateRoleSignal" ]
+];

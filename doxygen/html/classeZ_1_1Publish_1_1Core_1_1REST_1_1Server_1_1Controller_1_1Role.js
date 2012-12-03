@@ -1,0 +1,28 @@
+var classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role =
+[
+    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#ab6e443827a2c820636841bd9ad50937e", null ],
+    [ "addPolicy", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#a0a80fdc3b7ca7169e3ef494700517b42", null ],
+    [ "assignRoleToUser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#aca98c2a904e7d67e23580d8d3d98a061", null ],
+    [ "assignRoleToUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#a030211d869a7de679c2f7a7edfe20cae", null ],
+    [ "createRole", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#a4cac3be8b00fbd13ecd671b8f53f96ad", null ],
+    [ "deletePolicies", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#add687926d9d52ef0ac5df66a7a3a1c2e", null ],
+    [ "deletePolicy", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#a49e0b14551455679c47f93d60ff5b23b", null ],
+    [ "deleteRole", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#ae6952891a50669924aad2247c87f2f14", null ],
+    [ "listPoliciesForUser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#a43596a77597190e5cb09c69803f7a089", null ],
+    [ "listRoles", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#a01e80dba4bdf03ecced76a64ac9aad91", null ],
+    [ "loadPolicies", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#aaa4069eb187cd7c539d3bb798d3fc2a6", null ],
+    [ "loadPolicy", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#aa70a1dd260a2236215cf01377a9d2b6c", null ],
+    [ "loadRole", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#a073bf0757dad56a63ac06e7b161e4ccd", null ],
+    [ "loadRoleAssignmentForUser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#a03c5bae9106c0883f35551a774b3b174", null ],
+    [ "loadRoleAssignmentForUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#a417105ebbc0d76398f1182ef00a83d78", null ],
+    [ "loadRoleAssignmentsForUser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#a404cf2d5a8692fc1eae11fe179d5a733", null ],
+    [ "loadRoleAssignmentsForUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#a175d32fc1db37b4b73ae1279faef314c", null ],
+    [ "mapToUpdateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#a6a93fe36f4fd656fb69a86c2c9f5b40c", null ],
+    [ "unassignRoleFromUser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#a5e89633cd9459d8c2c4da185e28dacd1", null ],
+    [ "unassignRoleFromUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#ab38685cca31de1ce87be441939ae3a9b", null ],
+    [ "updatePolicy", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#a4c9c4594e66cee49b799fe1c09d604d7", null ],
+    [ "updateRole", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#a58734727fce6cb935c43a1162e00e768", null ],
+    [ "$locationService", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#adb89adbd7fbc3cb613a3577662d006b9", null ],
+    [ "$roleService", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#a4e4b92e1528d5e801368d17d187016a3", null ],
+    [ "$userService", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Role.html#a2963781562a05c3905abc6998194ac01", null ]
+];

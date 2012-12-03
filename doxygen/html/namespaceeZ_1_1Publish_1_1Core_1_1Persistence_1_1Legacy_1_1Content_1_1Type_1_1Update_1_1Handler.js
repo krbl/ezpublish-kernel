@@ -1,0 +1,5 @@
+var namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Update_1_1Handler =
+[
+    [ "DeferredLegacy", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Update_1_1Handler_1_1DeferredLegacy.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Update_1_1Handler_1_1DeferredLegacy" ],
+    [ "EzcDatabase", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Update_1_1Handler_1_1EzcDatabase.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Update_1_1Handler_1_1EzcDatabase" ]
+];

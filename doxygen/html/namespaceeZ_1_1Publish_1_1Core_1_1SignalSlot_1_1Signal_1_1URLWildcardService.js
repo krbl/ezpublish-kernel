@@ -1,0 +1,6 @@
+var namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1URLWildcardService =
+[
+    [ "CreateSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1URLWildcardService_1_1CreateSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1URLWildcardService_1_1CreateSignal" ],
+    [ "RemoveSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1URLWildcardService_1_1RemoveSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1URLWildcardService_1_1RemoveSignal" ],
+    [ "TranslateSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1URLWildcardService_1_1TranslateSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1URLWildcardService_1_1TranslateSignal" ]
+];

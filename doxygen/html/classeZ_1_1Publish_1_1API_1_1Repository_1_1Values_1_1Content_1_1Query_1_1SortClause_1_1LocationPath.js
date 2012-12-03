@@ -1,0 +1,4 @@
+var classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1SortClause_1_1LocationPath =
+[
+    [ "__construct", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1SortClause_1_1LocationPath.html#acd6f65388e0fb9fe348e929ece6ff142", null ]
+];

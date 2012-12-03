@@ -1,0 +1,26 @@
+var interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService =
+[
+    [ "addPolicy", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#a09373b454753e868c0f644e6b7a98545", null ],
+    [ "assignRoleToUser", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#ad877112527b434652369452d49217938", null ],
+    [ "assignRoleToUserGroup", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#a58d350245c488681f0dcd77715255f84", null ],
+    [ "createRole", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#a98003c5f56bc715695e6a725a2041c62", null ],
+    [ "deleteRole", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#af8c59299a1c8abc28e894f096fb23fa7", null ],
+    [ "getLimitationType", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#a01043336e88cc4742d1dfe49b8e0ff91", null ],
+    [ "getLimitationTypesByModuleFunction", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#a70d55b5f348072d2b5ab5b7cf4ba8a28", null ],
+    [ "getRoleAssignments", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#a61bc2fde374ed5b3ccec97c4c050985e", null ],
+    [ "getRoleAssignmentsForUser", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#ab9aa52f5a2dd4bef93d09f1e0946f4b8", null ],
+    [ "getRoleAssignmentsForUserGroup", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#a640bdbb8670bba8cbe8cbec2cbbd9762", null ],
+    [ "loadPoliciesByUserId", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#a7c6fe4b8ab63abe18aca9ee2401d03db", null ],
+    [ "loadRole", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#ae78f2ec7dac1dfc66182e412d6ffedb7", null ],
+    [ "loadRoleByIdentifier", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#a8f1b3f5d5dad1a92f6101a3c6f4fee90", null ],
+    [ "loadRoles", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#ab35de42f9c1fd81358414e63a816f72d", null ],
+    [ "newPolicyCreateStruct", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#a02e7abcd564e55dd5433d5a385a62369", null ],
+    [ "newPolicyUpdateStruct", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#a8bd0f8f79aac1cca9ef37642293744ab", null ],
+    [ "newRoleCreateStruct", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#a249d03d5f0d89bb5200fd89b3a828e43", null ],
+    [ "newRoleUpdateStruct", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#a7cfc6081da98be3098c87f17096dc9ac", null ],
+    [ "removePolicy", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#a279f1f83cb86885fb12363a95be10263", null ],
+    [ "unassignRoleFromUser", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#aaedd980f9fa91c24bc635328e078e2ab", null ],
+    [ "unassignRoleFromUserGroup", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#afcc417ef1c8a07513190b34551874b9a", null ],
+    [ "updatePolicy", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#a8e0897ecbc743b05c0a2856d1ab13e28", null ],
+    [ "updateRole", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html#a646b1fbcd2f7bccb805348b10a827cc0", null ]
+];

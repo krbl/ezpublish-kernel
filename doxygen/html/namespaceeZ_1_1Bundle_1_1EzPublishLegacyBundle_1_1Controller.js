@@ -1,0 +1,6 @@
+var namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller =
+[
+    [ "LegacyKernelController", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController" ],
+    [ "LegacySetupController", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacySetupController.html", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacySetupController" ],
+    [ "LegacyTreeMenuController", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController" ]
+];

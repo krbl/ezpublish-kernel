@@ -1,0 +1,4 @@
+var classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1ObjectStateGroupCreateStruct =
+[
+    [ "visit", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1ObjectStateGroupCreateStruct.html#aa3e1e7bb6c2786718016cba0738451b7", null ]
+];

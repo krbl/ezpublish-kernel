@@ -1,0 +1,28 @@
+var classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService =
+[
+    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a10b1d45d70478746f83d6fa51a08ce39", null ],
+    [ "addPolicy", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a017f3a3fc91b3cad5c44819fd1588ad4", null ],
+    [ "assignRoleToUser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#acf07931eb844f25753a2adcb9e1b22d2", null ],
+    [ "assignRoleToUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a560a1cfae290a9880ec82109a042677b", null ],
+    [ "createRole", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a0805aafc5adb82e29a284a85e23a1863", null ],
+    [ "deleteRole", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a4a2cf9a5950145956e6589d7c47bd603", null ],
+    [ "getLimitationType", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#ab198e31411e782a2deaa038c75e15752", null ],
+    [ "getLimitationTypesByModuleFunction", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a271c95ef44ae0943d5a3b998f21a0749", null ],
+    [ "getRoleAssignments", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a9b4e533af6b2db7b6e22f77a32465be6", null ],
+    [ "getRoleAssignmentsForUser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a7c7c8e3a62b4f2f47be8328356455591", null ],
+    [ "getRoleAssignmentsForUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a0bc7805bbcbbb706773a8debc573fe0f", null ],
+    [ "loadPoliciesByUserId", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a2e13bb1c234cb3b390cc27ee78e4caf1", null ],
+    [ "loadRole", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#ace0242c197cf691a6ed4bca9bf7e6eff", null ],
+    [ "loadRoleByIdentifier", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a8a7880216b51cbd153636a7f1dac3608", null ],
+    [ "loadRoles", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#ad679d9bd9cf8c6ce042c651ca697644b", null ],
+    [ "newPolicyCreateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a2b905741b3e772a816046d9abe36cad4", null ],
+    [ "newPolicyUpdateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#abced448f61c4cbb0fdb223bb37929143", null ],
+    [ "newRoleCreateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#af0053c20f6185595ec1323ba7eecd403", null ],
+    [ "newRoleUpdateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#ae349ab26812ecef8ff4017ddfa7d078a", null ],
+    [ "removePolicy", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a2158a24a399372a3bb8da714792f849a", null ],
+    [ "setSession", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a1a5603213117807d5764690c4449f443", null ],
+    [ "unassignRoleFromUser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#ad60c3012fb691a2448ca19eb1361182f", null ],
+    [ "unassignRoleFromUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a1f68960c83de2c075b39ccde61f76bb3", null ],
+    [ "updatePolicy", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a754927b71fa0ca6afb85426bb4bcbc3f", null ],
+    [ "updateRole", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a3e738af67906927f9d224586dd2085e3", null ]
+];

@@ -1,0 +1,25 @@
+var classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type =
+[
+    [ "$created", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#a51245278736337fc90d68b5bf05c5a4a", null ],
+    [ "$creatorId", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#a78b4c5b93ad641d899228a2f69aa4b32", null ],
+    [ "$defaultAlwaysAvailable", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#a166be4d8baf208b8be0120f8bc7604cd", null ],
+    [ "$description", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#ae0e333dff22dc4f395dfd81bd66fca62", null ],
+    [ "$fieldDefinitions", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#a44d090e855dd1163815a479ccdba7d3d", null ],
+    [ "$groupIds", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#a7a5a0da71e00011465c7cab5f67683b5", null ],
+    [ "$id", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#a3da2390f11e0b0ee548b497757c9370d", null ],
+    [ "$identifier", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#a11c6f42d00b3ac1c1357459ce0fb1490", null ],
+    [ "$initialLanguageId", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#ac0f569ed4e461983929a512ab6b335e9", null ],
+    [ "$isContainer", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#afff3ecccb641b1d77833527a055b0df1", null ],
+    [ "$modified", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#abff48cbc064b3ef681c03c005aa02dc9", null ],
+    [ "$modifierId", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#a5a802d475386afc737bf0a9ba98f93f9", null ],
+    [ "$name", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#a9ff61388007f5c378fab2e4a29019aa1", null ],
+    [ "$nameSchema", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#aeafddabb9f700dd8bc9dbd70e8c4d5c4", null ],
+    [ "$remoteId", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#a3c6d68b32b0724de2ed5ea02a2f0ff09", null ],
+    [ "$sortField", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#a61ec856646f950859d212b1a3e618a66", null ],
+    [ "$sortOrder", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#a868d9b6caf5fb4a1f539a3ce36b0c599", null ],
+    [ "$status", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#ac0c836b271f1508f39229b70fbb107de", null ],
+    [ "$urlAliasSchema", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#a33e4c11af85afd13b8c6ea9c2bd8629c", null ],
+    [ "STATUS_DEFINED", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#a01aada3b3e2f3c25bf6e827243f98bd1", null ],
+    [ "STATUS_DRAFT", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#ac198fede7cefadc827701835f964767d", null ],
+    [ "STATUS_MODIFIED", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type.html#af42a065f6ebf79c88f4b282003b9016d", null ]
+];

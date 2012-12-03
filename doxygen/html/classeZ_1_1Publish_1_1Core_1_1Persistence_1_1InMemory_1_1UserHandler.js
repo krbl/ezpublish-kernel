@@ -1,0 +1,27 @@
+var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler =
+[
+    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a31c6653e44526ba2342660f308b12f29", null ],
+    [ "addPolicy", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#aa8a5ab88c88eb921bce02f40f29e3d9b", null ],
+    [ "assignRole", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#aaefff7d6147e199f95f416a80d004638", null ],
+    [ "create", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a5695fc68cf229be7ab48096d3aab62de", null ],
+    [ "createRole", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a30ed5a95a3e5c448c82a60542d65a166", null ],
+    [ "delete", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a38040a4a98cc81fb1f2d71a90a19448c", null ],
+    [ "deleteRole", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#aa508a932c74879cf3e9a4eaea793634c", null ],
+    [ "getPermissionsForObject", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#ad4f3fdd147e0b6fb3ad8957551ef7e44", null ],
+    [ "load", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a107620f4ba67fc97f517c871e954ff69", null ],
+    [ "loadByLogin", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a899a519c565b4c7801aea517c38ac67a", null ],
+    [ "loadPoliciesByUserId", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a7734ed679754e1360093cce2c609298e", null ],
+    [ "loadRole", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a80866d1123b00d6eddf8de9bffe961b9", null ],
+    [ "loadRoleAssignmentsByGroupId", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#ad01fcf4928adf1ccb630c0d00ce917c5", null ],
+    [ "loadRoleAssignmentsByRoleId", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a1485e24d2418c0ddc8d33a10707853cb", null ],
+    [ "loadRoleByIdentifier", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#adc56bd4aa9ee6757fdf328419c83c6d5", null ],
+    [ "loadRoles", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a69b51748301117b2b4f9fbf49d002b70", null ],
+    [ "loadRolesByGroupId", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a782d5a7e0ee54d1415999702c0625587", null ],
+    [ "removePolicy", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#ab8a314f9d3ff1e23b693572f954b458d", null ],
+    [ "unAssignRole", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#ab2aa1e56d19e7426e21e270b48934b25", null ],
+    [ "update", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#ad137a38b18887b92168c72becd59337f", null ],
+    [ "updatePolicy", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#ad498af728eae42c231d9a250d114b7d5", null ],
+    [ "updateRole", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a4db38d271130593a931d399cb9184221", null ],
+    [ "$backend", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a9cb8ded07d3b75e6899d938767a22920", null ],
+    [ "$handler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a84350812b0196acef3625e0fac93ae14", null ]
+];

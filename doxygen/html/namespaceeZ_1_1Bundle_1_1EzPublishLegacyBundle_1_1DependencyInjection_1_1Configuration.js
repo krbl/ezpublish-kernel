@@ -1,0 +1,4 @@
+var namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Configuration =
+[
+    [ "LegacyConfigResolver", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Configuration_1_1LegacyConfigResolver.html", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Configuration_1_1LegacyConfigResolver" ]
+];

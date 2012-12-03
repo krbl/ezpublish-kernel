@@ -1,0 +1,4 @@
+var classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ObjectStateService_1_1UpdateObjectStateSignal =
+[
+    [ "$objectStateId", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ObjectStateService_1_1UpdateObjectStateSignal.html#af1839a9f9f72d82750d1ebea0676314e", null ]
+];

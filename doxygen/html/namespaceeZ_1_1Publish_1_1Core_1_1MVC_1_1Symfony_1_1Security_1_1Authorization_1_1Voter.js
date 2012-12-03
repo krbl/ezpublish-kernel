@@ -1,0 +1,4 @@
+var namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Security_1_1Authorization_1_1Voter =
+[
+    [ "CoreVoter", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Security_1_1Authorization_1_1Voter_1_1CoreVoter.html", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Security_1_1Authorization_1_1Voter_1_1CoreVoter" ]
+];

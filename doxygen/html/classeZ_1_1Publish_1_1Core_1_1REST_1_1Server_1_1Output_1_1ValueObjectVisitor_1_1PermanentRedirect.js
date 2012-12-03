@@ -1,0 +1,4 @@
+var classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1PermanentRedirect =
+[
+    [ "visit", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1PermanentRedirect.html#aad8f5ae2d29b1c7b36edd6569e86efbd", null ]
+];

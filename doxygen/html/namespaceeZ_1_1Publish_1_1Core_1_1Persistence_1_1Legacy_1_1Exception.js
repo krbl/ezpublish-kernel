@@ -1,0 +1,9 @@
+var namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception =
+[
+    [ "GroupNotEmpty", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1GroupNotEmpty.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1GroupNotEmpty" ],
+    [ "RemoveLastGroupFromType", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1RemoveLastGroupFromType.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1RemoveLastGroupFromType" ],
+    [ "StorageNotFound", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1StorageNotFound.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1StorageNotFound" ],
+    [ "TypeGroupNotFound", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1TypeGroupNotFound.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1TypeGroupNotFound" ],
+    [ "TypeNotFound", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1TypeNotFound.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1TypeNotFound" ],
+    [ "TypeStillHasContent", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1TypeStillHasContent.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1TypeStillHasContent" ]
+];

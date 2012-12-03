@@ -1,0 +1,4 @@
+var classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1SortClause_1_1SectionName =
+[
+    [ "__construct", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1SortClause_1_1SectionName.html#a7cc65b8f5a42feebecd7922cbefeb81c", null ]
+];

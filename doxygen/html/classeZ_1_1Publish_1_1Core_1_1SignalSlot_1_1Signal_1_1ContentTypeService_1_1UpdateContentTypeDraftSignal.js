@@ -1,0 +1,4 @@
+var classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1UpdateContentTypeDraftSignal =
+[
+    [ "$contentTypeDraftId", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1UpdateContentTypeDraftSignal.html#a6d92fc87f1c86f4e3fe36215f02ff58f", null ]
+];

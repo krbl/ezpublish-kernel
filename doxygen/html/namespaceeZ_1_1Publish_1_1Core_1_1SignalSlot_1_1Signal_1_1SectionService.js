@@ -1,0 +1,7 @@
+var namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService =
+[
+    [ "AssignSectionSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService_1_1AssignSectionSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService_1_1AssignSectionSignal" ],
+    [ "CreateSectionSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService_1_1CreateSectionSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService_1_1CreateSectionSignal" ],
+    [ "DeleteSectionSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService_1_1DeleteSectionSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService_1_1DeleteSectionSignal" ],
+    [ "UpdateSectionSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService_1_1UpdateSectionSignal.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService_1_1UpdateSectionSignal" ]
+];

@@ -1,0 +1,4 @@
+var classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1LegacyStorageEnginePass =
+[
+    [ "process", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1LegacyStorageEnginePass.html#a350189655da8a7a14af76f0b0cb98874", null ]
+];

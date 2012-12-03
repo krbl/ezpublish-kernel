@@ -1,0 +1,4 @@
+var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1HttpClient_1_1ConnectionException =
+[
+    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1HttpClient_1_1ConnectionException.html#a80f1e321a414fe238885d5b585bdb45a", null ]
+];

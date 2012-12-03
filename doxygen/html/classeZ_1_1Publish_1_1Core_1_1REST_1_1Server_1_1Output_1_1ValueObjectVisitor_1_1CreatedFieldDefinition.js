@@ -1,0 +1,4 @@
+var classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1CreatedFieldDefinition =
+[
+    [ "visit", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1CreatedFieldDefinition.html#ad6185dd65bb958107ddc9a88bfa632f1", null ]
+];

@@ -1,0 +1,5 @@
+var namespaceeZ_1_1Bundle_1_1EzPublishRestBundle_1_1DependencyInjection =
+[
+    [ "Configuration", "classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1DependencyInjection_1_1Configuration.html", "classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1DependencyInjection_1_1Configuration" ],
+    [ "EzPublishRestExtension", "classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1DependencyInjection_1_1EzPublishRestExtension.html", "classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1DependencyInjection_1_1EzPublishRestExtension" ]
+];

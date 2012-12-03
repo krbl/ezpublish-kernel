@@ -1,0 +1,4 @@
+var classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Image_1_1PathGenerator_1_1LegacyPathGenerator =
+[
+    [ "getStoragePathForField", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Image_1_1PathGenerator_1_1LegacyPathGenerator.html#af9a83d2c03c4920bcd4b2bf56d79c8ef", null ]
+];

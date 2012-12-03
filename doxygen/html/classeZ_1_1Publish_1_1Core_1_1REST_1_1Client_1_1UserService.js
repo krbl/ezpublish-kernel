@@ -1,0 +1,25 @@
+var classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService =
+[
+    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#a0d0bb98ce002a1d0beb7d5447ae8ddc1", null ],
+    [ "assignUserToUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#aa4c8b83f34a621cc5dfa11e087a914ee", null ],
+    [ "createUser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#a55b7c65e0558f68b568d37ba9335bcd9", null ],
+    [ "createUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#a76550b6bee0ca7267bf28a778f963f2c", null ],
+    [ "deleteUser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#a5770673f40e512cd015c145f9df982e3", null ],
+    [ "deleteUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#a743de630adf7defa4e2711c2223480fa", null ],
+    [ "loadAnonymousUser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#ae62017f2565e5868a73329a8caeda415", null ],
+    [ "loadSubUserGroups", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#a68c3d16ed2412bbc72ddfc04b0808800", null ],
+    [ "loadUser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#af407738a52c832f488d0a4c5935b75c2", null ],
+    [ "loadUserByCredentials", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#a54a09bcf72a10b3fe822948641daacc0", null ],
+    [ "loadUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#a977cf8c4d9b04593ca9f8553225b21ae", null ],
+    [ "loadUserGroupsOfUser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#ac5ae69e825a1870a9637fdf5379a143c", null ],
+    [ "loadUsersOfUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#a6d28fc08252c2f302e5dbe353822b6ca", null ],
+    [ "moveUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#a312e87400e241eadded0d7120905898e", null ],
+    [ "newUserCreateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#ae6ece756790205d27481fe113e6106d5", null ],
+    [ "newUserGroupCreateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#aa1571dd774c08f9e02cafa92950c0363", null ],
+    [ "newUserGroupUpdateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#a2579227945e68dd1c690788e2eeda1a5", null ],
+    [ "newUserUpdateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#a27827b8a69c0b8ab7966e3be650362db", null ],
+    [ "setSession", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#a02e95aefd6ccc8ede9cb13edec853466", null ],
+    [ "unAssignUserFromUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#a95fc8ac09e4cab8c6a61d2477161d1c9", null ],
+    [ "updateUser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#a0bbd4d91267917cbc1929ace636ba4b6", null ],
+    [ "updateUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html#a8853a518f0d65ad30bc6a59aa886f0f2", null ]
+];

@@ -1,0 +1,4 @@
+var classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1ObjectStateUpdateStruct =
+[
+    [ "visit", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1ObjectStateUpdateStruct.html#ab615fc89c3bf80b74fa3791dc7580296", null ]
+];

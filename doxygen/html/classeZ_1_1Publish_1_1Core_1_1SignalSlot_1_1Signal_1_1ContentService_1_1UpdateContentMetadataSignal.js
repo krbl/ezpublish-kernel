@@ -1,0 +1,4 @@
+var classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentService_1_1UpdateContentMetadataSignal =
+[
+    [ "$contentId", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentService_1_1UpdateContentMetadataSignal.html#a0ad1d575a9226ddcd34c6977fbe7d202", null ]
+];

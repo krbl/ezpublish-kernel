@@ -1,0 +1,7 @@
+var namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor =
+[
+    [ "Aggregate", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor_1_1Aggregate.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor_1_1Aggregate" ],
+    [ "ContentType", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor_1_1ContentType.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor_1_1ContentType" ],
+    [ "Section", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor_1_1Section.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor_1_1Section" ],
+    [ "User", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor_1_1User.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor_1_1User" ]
+];

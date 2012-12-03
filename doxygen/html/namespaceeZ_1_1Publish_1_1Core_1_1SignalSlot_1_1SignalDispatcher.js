@@ -1,0 +1,4 @@
+var namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1SignalDispatcher =
+[
+    [ "DefaultSignalDispatcher", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1SignalDispatcher_1_1DefaultSignalDispatcher.html", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1SignalDispatcher_1_1DefaultSignalDispatcher" ]
+];

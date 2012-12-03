@@ -1,0 +1,4 @@
+var classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1DeleteContentTypeGroupSignal =
+[
+    [ "$contentTypeGroupId", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1DeleteContentTypeGroupSignal.html#ac1674705efe7c6f8907b2711d6688102", null ]
+];
