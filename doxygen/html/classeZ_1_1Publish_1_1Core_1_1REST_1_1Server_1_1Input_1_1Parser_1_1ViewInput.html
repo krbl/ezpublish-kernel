@@ -148,7 +148,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser.html">Parser</a> for <a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ViewInput.html">ViewInput</a> </p>
 
-<p>Definition at line <a class="el" href="ViewInput_8php_source.html#l00022">22</a> of file <a class="el" href="ViewInput_8php_source.html">ViewInput.php</a>.</p>
+<p>Definition at line <a class="el" href="ViewInput_8php_source.html#l00023">23</a> of file <a class="el" href="ViewInput_8php_source.html">ViewInput.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="affb06799d163ba9a43701249d96b4510"></a>
 <div class="memitem">
@@ -173,7 +173,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Base.html#a1c9b36cd5236da4634dd7df319271099">eZ\Publish\Core\REST\Server\Input\Parser\Base</a>.</p>
 
-<p>Definition at line <a class="el" href="ViewInput_8php_source.html#l00029">29</a> of file <a class="el" href="ViewInput_8php_source.html">ViewInput.php</a>.</p>
+<p>Definition at line <a class="el" href="ViewInput_8php_source.html#l00030">30</a> of file <a class="el" href="ViewInput_8php_source.html">ViewInput.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ViewInput.html#affb06799d163ba9a43701249d96b4510">parent::__construct</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Base.html#a08ee718192666816620ca7e86a4f19d7">$urlHandler</a> );</div>
 <div class="line">    }</div>
@@ -220,9 +220,9 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="ViewInput_8php_source.html#l00044">44</a> of file <a class="el" href="ViewInput_8php_source.html">ViewInput.php</a>.</p>
+<p>Definition at line <a class="el" href="ViewInput_8php_source.html#l00045">45</a> of file <a class="el" href="ViewInput_8php_source.html">ViewInput.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html#l00041">eZ\Publish\Core\REST\Server\Input\Parser\Criterion\dispatchCriterion()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html#l00042">eZ\Publish\Core\REST\Server\Input\Parser\Criterion\dispatchCriterion()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $restViewInput = <span class="keyword">new</span> RestViewInput();</div>
 <div class="line"></div>
@@ -234,7 +234,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line">        $restViewInput-&gt;identifier  = $data[<span class="stringliteral">&#39;identifier&#39;</span>];</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// query</span></div>
-<div class="line">        <span class="keywordflow">if</span> ( !array_key_exists( <span class="stringliteral">&#39;Query&#39;</span>, $data ) || !is_array( $data[<span class="stringliteral">&#39;Query&#39;</span>]))</div>
+<div class="line">        <span class="keywordflow">if</span> ( !array_key_exists( <span class="stringliteral">&#39;Query&#39;</span>, $data ) || !is_array( $data[<span class="stringliteral">&#39;Query&#39;</span>] ) )</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exceptions\Parser( <span class="stringliteral">&quot;Missing &lt;Query&gt; attribute for &lt;ViewInput&gt;.&quot;</span> );</div>
 <div class="line">        }</div>
@@ -247,7 +247,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line">        <span class="keywordflow">if</span> ( array_key_exists( <span class="stringliteral">&#39;Criteria&#39;</span>, $queryData ) &amp;&amp; is_array( $queryData[<span class="stringliteral">&#39;Criteria&#39;</span>] ) )</div>
 <div class="line">        {</div>
 <div class="line">            $criteria = array();</div>
-<div class="line">            <span class="keywordflow">foreach</span>( $queryData[<span class="stringliteral">&#39;Criteria&#39;</span>] as $criterionName =&gt; $criterionData )</div>
+<div class="line">            <span class="keywordflow">foreach</span> ( $queryData[<span class="stringliteral">&#39;Criteria&#39;</span>] as $criterionName =&gt; $criterionData )</div>
 <div class="line">            {</div>
 <div class="line">                $criteria[] = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Criterion.html#a1ba029d363553447cbb3ebeb09a3db1c">dispatchCriterion</a>( $criterionName, $criterionData, $parsingDispatcher );</div>
 <div class="line">            }</div>
@@ -279,14 +279,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line">        <span class="comment">// ---- SortField</span></div>
 <div class="line">        <span class="keywordflow">if</span> ( array_key_exists( <span class="stringliteral">&#39;SortClauses&#39;</span>, $queryData ) )</div>
 <div class="line">        {</div>
-<div class="line"></div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// FacetBuilders</span></div>
 <div class="line">        <span class="comment">// -- contentTypeFacetBuilder</span></div>
 <div class="line">        <span class="keywordflow">if</span> ( array_key_exists( <span class="stringliteral">&#39;FacetBuilders&#39;</span>, $queryData ) )</div>
 <div class="line">        {</div>
-<div class="line"></div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        $restViewInput-&gt;query = $query;</div>
@@ -316,7 +314,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html">REST</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server.html">Server</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input.html">Input</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser.html">Parser</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ViewInput.html">ViewInput</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:05:00 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:22 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

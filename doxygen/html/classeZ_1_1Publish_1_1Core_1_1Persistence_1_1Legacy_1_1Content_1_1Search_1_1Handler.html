@@ -152,7 +152,7 @@ Protected Attributes</h2></td></tr>
 <p>3) The query might be possible to optimize (remove empty statements), reduce singular and and or constructs…</p>
 <p>4) Additionally we might need a post-query filtering step, which filters content objects based on criteria, which could not be convertedd in to database statements. </p>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00047">47</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00046">46</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a95faf269e66c6e33529f87e0911041e1"></a>
 <div class="memitem">
@@ -193,9 +193,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00077">77</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00076">76</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00061">eZ\Publish\Core\Persistence\Legacy\Content\Search\Handler\$contentMapper</a>, <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00068">eZ\Publish\Core\Persistence\Legacy\Content\Search\Handler\$fieldHandler</a>, and <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00054">eZ\Publish\Core\Persistence\Legacy\Content\Search\Handler\$gateway</a>.</p>
+<p>References <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00060">eZ\Publish\Core\Persistence\Legacy\Content\Search\Handler\$contentMapper</a>, <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00067">eZ\Publish\Core\Persistence\Legacy\Content\Search\Handler\$fieldHandler</a>, and <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00053">eZ\Publish\Core\Persistence\Legacy\Content\Search\Handler\$gateway</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;gateway = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Handler.html#adf7d2ae36fd8f331477a7505c5b2466b">$gateway</a>;</div>
 <div class="line">        $this-&gt;contentMapper = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Handler.html#a03ac9189385a17cd3bfd34153666fec7">$contentMapper</a>;</div>
@@ -229,7 +229,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Finds content objects for the given query.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000078">Todo:</a></b></dt><dd>define structs for the field filters</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000076">Todo:</a></b></dt><dd>define structs for the field filters</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">\eZ\Publish\API\Repository\Values\Content\Query</td><td class="paramname">$query</td><td></td></tr>
@@ -241,7 +241,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1Handler.html#aa48a771e880c0c58fbfb88866450372f">eZ\Publish\SPI\Persistence\Content\Search\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00095">95</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00094">94</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $start = microtime( <span class="keyword">true</span> );</div>
 <div class="line"></div>
@@ -256,7 +256,8 @@ Protected Attributes</h2></td></tr>
 <div class="line">        $result-&gt;time       = microtime( <span class="keyword">true</span> ) - $start;</div>
 <div class="line">        $result-&gt;totalCount = $data[<span class="stringliteral">&#39;count&#39;</span>];</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">foreach</span> ( $this-&gt;contentMapper-&gt;extractContentFromRows( $data[<span class="stringliteral">&#39;rows&#39;</span>] ) as $content ) {</div>
+<div class="line">        <span class="keywordflow">foreach</span> ( $this-&gt;contentMapper-&gt;extractContentFromRows( $data[<span class="stringliteral">&#39;rows&#39;</span>] ) as $content )</div>
+<div class="line">        {</div>
 <div class="line">            $this-&gt;fieldHandler-&gt;loadExternalFieldData( $content );</div>
 <div class="line">            $searchHit = <span class="keyword">new</span> SearchHit();</div>
 <div class="line">            $searchHit-&gt;valueObject = $content;</div>
@@ -311,7 +312,7 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000079">Todo:</a></b></dt><dd>define structs for the field filters </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000077">Todo:</a></b></dt><dd>define structs for the field filters </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">\eZ\Publish\API\Repository\Values\Content\Query\Criterion</td><td class="paramname">$criterion</td><td></td></tr>
@@ -325,7 +326,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00134">134</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00095">eZ\Publish\Core\Persistence\Legacy\Content\Search\Handler\findContent()</a>.</p>
+<p>References <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00094">eZ\Publish\Core\Persistence\Legacy\Content\Search\Handler\findContent()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $query = <span class="keyword">new</span> Query();</div>
 <div class="line">        $query-&gt;criterion = $criterion;</div>
@@ -460,7 +461,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00061">61</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00060">60</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 
 </div>
 </div>
@@ -482,7 +483,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00068">68</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00067">67</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 
 </div>
 </div>
@@ -504,7 +505,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00054">54</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html#l00053">53</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 
 </div>
 </div>
@@ -517,7 +518,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search.html">Search</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Handler.html">Handler</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:55 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:18 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

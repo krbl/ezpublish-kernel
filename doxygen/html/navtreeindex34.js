@@ -1,6 +1,5 @@
 var NAVTREEINDEX34 =
 {
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1URLWildcardList.html":[3,0,0,1,1,7,2,6,54],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1URLWildcardList.html#a0def21204b202ba77e68817c850292d2":[3,0,0,1,1,7,2,6,54,1],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1URLWildcardList.html#a41cb6505f69fd56c62a7bfaf3c5e628a":[3,0,0,1,1,7,2,6,54,0],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1UserGroupList.html":[3,0,0,1,1,7,2,6,55],
@@ -249,5 +248,6 @@ var NAVTREEINDEX34 =
 "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Repository.html#a5a2293cfeb8b3ff5dffd7acfeaa8989b":[3,0,0,1,1,6,10,15],
 "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Repository.html#a5da876e6306e295c080fba21bee1d875":[3,0,0,1,1,6,10,13],
 "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Repository.html#a6030a67bdaaefcb122cc0ca10f19693a":[3,0,0,1,1,6,10,30],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Repository.html#a6bb58ce24e49bde62ea418ffd2ffda4b":[3,0,0,1,1,6,10,7]
+"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Repository.html#a6bb58ce24e49bde62ea418ffd2ffda4b":[3,0,0,1,1,6,10,7],
+"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Repository.html#a71ab7e716b38cc854a252307782aec87":[3,0,0,1,1,6,10,11]
 };

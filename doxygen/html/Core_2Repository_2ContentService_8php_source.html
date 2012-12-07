@@ -107,211 +107,211 @@ $(document).ready(function(){initNavTree('Core_2Repository_2ContentService_8php_
 <a href="Core_2Repository_2ContentService_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1Repository.html">   11</a></span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\Repository;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html">eZ\Publish\API\Repository\ContentService</a> as ContentServiceInterface,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html">eZ\Publish\API\Repository\Repository</a> as RepositoryInterface,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Handler.html">eZ\Publish\SPI\Persistence\Handler</a>,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentUpdateStruct.html">eZ\Publish\API\Repository\Values\Content\ContentUpdateStruct</a> as APIContentUpdateStruct,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">eZ\Publish\API\Repository\Values\ContentType\ContentType</a>,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1TranslationInfo.html">eZ\Publish\API\Repository\Values\Content\TranslationInfo</a>,</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1TranslationValues.html">eZ\Publish\API\Repository\Values\Content\TranslationValues</a> as APITranslationValues,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentCreateStruct.html">eZ\Publish\API\Repository\Values\Content\ContentCreateStruct</a> as APIContentCreateStruct,</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentMetadataUpdateStruct.html">eZ\Publish\API\Repository\Values\Content\ContentMetadataUpdateStruct</a>,</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html">eZ\Publish\API\Repository\Values\Content\Content</a> as APIContent,</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1VersionInfo.html">eZ\Publish\API\Repository\Values\Content\VersionInfo</a> as APIVersionInfo,</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html">eZ\Publish\API\Repository\Values\Content\ContentInfo</a> as APIContentInfo,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1User.html">eZ\Publish\API\Repository\Values\User\User</a>,</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1LocationCreateStruct.html">eZ\Publish\API\Repository\Values\Content\LocationCreateStruct</a>,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Field.html">eZ\Publish\API\Repository\Values\Content\Field</a>,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Relation.html">eZ\Publish\API\Repository\Values\Content\Relation</a> as APIRelation,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    eZ\Publish\API\Repository\Values\Content\Query\Criterion\RemoteId as CriterionRemoteId,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1NotFoundException.html">eZ\Publish\API\Repository\Exceptions\NotFoundException</a> as APINotFoundException,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentValue.html">eZ\Publish\Core\Base\Exceptions\InvalidArgumentValue</a>,</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1BadStateException.html">eZ\Publish\Core\Base\Exceptions\BadStateException</a>,</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1NotFoundException.html">eZ\Publish\Core\Base\Exceptions\NotFoundException</a>,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentException.html">eZ\Publish\Core\Base\Exceptions\InvalidArgumentException</a>,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1ContentValidationException.html">eZ\Publish\Core\Base\Exceptions\ContentValidationException</a>,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1ContentFieldValidationException.html">eZ\Publish\Core\Base\Exceptions\ContentFieldValidationException</a>,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1UnauthorizedException.html">eZ\Publish\Core\Base\Exceptions\UnauthorizedException</a>,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html">eZ\Publish\Core\Repository\Values\Content\Content</a>,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html">eZ\Publish\Core\Repository\Values\Content\ContentInfo</a>,</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1VersionInfo.html">eZ\Publish\Core\Repository\Values\Content\VersionInfo</a>,</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentCreateStruct.html">eZ\Publish\Core\Repository\Values\Content\ContentCreateStruct</a>,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentUpdateStruct.html">eZ\Publish\Core\Repository\Values\Content\ContentUpdateStruct</a>,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Relation.html">eZ\Publish\Core\Repository\Values\Content\Relation</a>,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1TranslationValues.html">eZ\Publish\Core\Repository\Values\Content\TranslationValues</a>,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    eZ\Publish\SPI\Persistence\Content\VersionInfo as SPIVersionInfo,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    eZ\Publish\SPI\Persistence\Content\ContentInfo as SPIContentInfo,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">eZ\Publish\SPI\Persistence\Content</a> as SPIContent,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    eZ\Publish\SPI\Persistence\Content\MetadataUpdateStruct as SPIMetadataUpdateStruct,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    eZ\Publish\SPI\Persistence\Content\CreateStruct as SPIContentCreateStruct,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    eZ\Publish\SPI\Persistence\Content\UpdateStruct as SPIContentUpdateStruct,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    eZ\Publish\SPI\Persistence\Content\Field as SPIField,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    eZ\Publish\SPI\Persistence\Content\Location\CreateStruct as SPILocationCreateStruct,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    eZ\Publish\SPI\Persistence\Content\Relation as SPIRelation,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct as SPIRelationCreateStruct,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html">eZ\Publish\API\Repository\ContentService</a> as ContentServiceInterface;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html">eZ\Publish\API\Repository\Repository</a> as RepositoryInterface;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Handler.html">eZ\Publish\SPI\Persistence\Handler</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentUpdateStruct.html">eZ\Publish\API\Repository\Values\Content\ContentUpdateStruct</a> as APIContentUpdateStruct;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">eZ\Publish\API\Repository\Values\ContentType\ContentType</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1TranslationInfo.html">eZ\Publish\API\Repository\Values\Content\TranslationInfo</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1TranslationValues.html">eZ\Publish\API\Repository\Values\Content\TranslationValues</a> as APITranslationValues;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentCreateStruct.html">eZ\Publish\API\Repository\Values\Content\ContentCreateStruct</a> as APIContentCreateStruct;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentMetadataUpdateStruct.html">eZ\Publish\API\Repository\Values\Content\ContentMetadataUpdateStruct</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html">eZ\Publish\API\Repository\Values\Content\Content</a> as APIContent;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1VersionInfo.html">eZ\Publish\API\Repository\Values\Content\VersionInfo</a> as APIVersionInfo;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html">eZ\Publish\API\Repository\Values\Content\ContentInfo</a> as APIContentInfo;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1User.html">eZ\Publish\API\Repository\Values\User\User</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1LocationCreateStruct.html">eZ\Publish\API\Repository\Values\Content\LocationCreateStruct</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Field.html">eZ\Publish\API\Repository\Values\Content\Field</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Relation.html">eZ\Publish\API\Repository\Values\Content\Relation</a> as APIRelation;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion\RemoteId as CriterionRemoteId;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1NotFoundException.html">eZ\Publish\API\Repository\Exceptions\NotFoundException</a> as APINotFoundException;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentValue.html">eZ\Publish\Core\Base\Exceptions\InvalidArgumentValue</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1BadStateException.html">eZ\Publish\Core\Base\Exceptions\BadStateException</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1NotFoundException.html">eZ\Publish\Core\Base\Exceptions\NotFoundException</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentException.html">eZ\Publish\Core\Base\Exceptions\InvalidArgumentException</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1ContentValidationException.html">eZ\Publish\Core\Base\Exceptions\ContentValidationException</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1ContentFieldValidationException.html">eZ\Publish\Core\Base\Exceptions\ContentFieldValidationException</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1UnauthorizedException.html">eZ\Publish\Core\Base\Exceptions\UnauthorizedException</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html">eZ\Publish\Core\Repository\Values\Content\Content</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html">eZ\Publish\Core\Repository\Values\Content\ContentInfo</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1VersionInfo.html">eZ\Publish\Core\Repository\Values\Content\VersionInfo</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentCreateStruct.html">eZ\Publish\Core\Repository\Values\Content\ContentCreateStruct</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentUpdateStruct.html">eZ\Publish\Core\Repository\Values\Content\ContentUpdateStruct</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Relation.html">eZ\Publish\Core\Repository\Values\Content\Relation</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1TranslationValues.html">eZ\Publish\Core\Repository\Values\Content\TranslationValues</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;use eZ\Publish\SPI\Persistence\Content\VersionInfo as SPIVersionInfo;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;use eZ\Publish\SPI\Persistence\Content\ContentInfo as SPIContentInfo;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">eZ\Publish\SPI\Persistence\Content</a> as SPIContent;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;use eZ\Publish\SPI\Persistence\Content\MetadataUpdateStruct as SPIMetadataUpdateStruct;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;use eZ\Publish\SPI\Persistence\Content\CreateStruct as SPIContentCreateStruct;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;use eZ\Publish\SPI\Persistence\Content\UpdateStruct as SPIContentUpdateStruct;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;use eZ\Publish\SPI\Persistence\Content\Field as SPIField;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;use eZ\Publish\SPI\Persistence\Content\Location\CreateStruct as SPILocationCreateStruct;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;use eZ\Publish\SPI\Persistence\Content\Relation as SPIRelation;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;use eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct as SPIRelationCreateStruct;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;use DateTime;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;use Exception;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    DateTime,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    Exception;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html">   68</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html">ContentService</a> <span class="keyword">implements</span> ContentServiceInterface</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a584737e3238da4a67dcaa74131574560">   73</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a584737e3238da4a67dcaa74131574560">$repository</a>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a02e12f0efa160c24da1e57ae43630765">   78</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a02e12f0efa160c24da1e57ae43630765">$persistenceHandler</a>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a01c80b97d4a84e3c873204fc8afc52a7">   83</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a01c80b97d4a84e3c873204fc8afc52a7">$settings</a>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a3cd5a21f8374a392a3d71ad38dce0e9a">   92</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a3cd5a21f8374a392a3d71ad38dce0e9a">__construct</a>( RepositoryInterface <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a584737e3238da4a67dcaa74131574560">$repository</a>, <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1IO_1_1Handler.html">Handler</a> $handler, array <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a01c80b97d4a84e3c873204fc8afc52a7">$settings</a> = array() )</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        $this-&gt;repository = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a584737e3238da4a67dcaa74131574560">$repository</a>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        $this-&gt;persistenceHandler = $handler;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a01c80b97d4a84e3c873204fc8afc52a7">$settings</a> + array(<span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">//&#39;defaultSetting&#39; =&gt; array(),</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        );</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#ab89df555b6d042b5b8192de6a91cb9b1">  113</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#ab89df555b6d042b5b8192de6a91cb9b1">loadContentInfo</a>( $contentId )</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        $contentInfo = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a0657088a1be09d2644cd20cf660999e9">internalLoadContentInfo</a>( $contentId );</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;repository-&gt;canUser( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;read&#39;</span>, $contentInfo ) )</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1UnauthorizedException.html">UnauthorizedException</a>( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;read&#39;</span> );</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">return</span> $contentInfo;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a0657088a1be09d2644cd20cf660999e9">  134</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a0657088a1be09d2644cd20cf660999e9">internalLoadContentInfo</a>( $contentId )</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    {</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        {</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            $spiContentInfo = $this-&gt;persistenceHandler-&gt;contentHandler()-&gt;loadContentInfo( $contentId );</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordflow">catch</span> ( APINotFoundException $e )</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        {</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1NotFoundException.html">NotFoundException</a>(</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                <span class="stringliteral">&quot;Content&quot;</span>,</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                $contentId,</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                $e</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            );</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        }</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a319644201c7f55ab059522587bbc1b2c">buildContentInfoDomainObject</a>( $spiContentInfo );</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#aa727b69aab7f5239d677027a54d1eb5f">  164</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#aa727b69aab7f5239d677027a54d1eb5f">loadContentInfoByRemoteId</a>( $remoteId )</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    {</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        $content = $this-&gt;repository-&gt;getSearchService()-&gt;findSingle( <span class="keyword">new</span> CriterionRemoteId( $remoteId ), array(), <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;repository-&gt;canUser( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;read&#39;</span>, $content ) )</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1UnauthorizedException.html">UnauthorizedException</a>( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;read&#39;</span> );</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">return</span> $content-&gt;contentInfo;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a4114cfc2db3f924be7c94aefdd585419">  187</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a4114cfc2db3f924be7c94aefdd585419">loadVersionInfo</a>( APIContentInfo $contentInfo, $versionNo = null )</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a166a660112d8d49a63d633d33881bd4e">loadVersionInfoById</a>( $contentInfo-&gt;id, $versionNo );</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a166a660112d8d49a63d633d33881bd4e">  205</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a166a660112d8d49a63d633d33881bd4e">loadVersionInfoById</a>( $contentId, $versionNo = null )</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">if</span> ( $versionNo === null )</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        {</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            $versionNo = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#ab89df555b6d042b5b8192de6a91cb9b1">loadContentInfo</a>( $contentId )-&gt;currentVersionNo;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        }</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        {</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            $spiVersionInfo = $this-&gt;persistenceHandler-&gt;contentHandler()-&gt;loadVersionInfo(</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                $contentId,</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                $versionNo</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            );</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        }</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">catch</span> ( APINotFoundException $e )</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        {</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1NotFoundException.html">NotFoundException</a>(</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                <span class="stringliteral">&quot;VersionInfo&quot;</span>,</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                array(</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                    <span class="stringliteral">&quot;contentId&quot;</span> =&gt; $contentId,</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                    <span class="stringliteral">&quot;versionNo&quot;</span> =&gt; $versionNo</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                ),</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                $e</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            );</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        }</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        $versionInfo = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#ae1862650c03f09aeac896fb57586a6d5">buildVersionInfoDomainObject</a>( $spiVersionInfo );</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;repository-&gt;canUser( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;versionread&#39;</span>, $versionInfo ) )</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1UnauthorizedException.html">UnauthorizedException</a>( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;versionread&#39;</span> );</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordflow">return</span> $versionInfo;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    }</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
-<div class="line"><a name="l00252"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a01797e18b1bc2951b0e611602ba9b744">  252</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a01797e18b1bc2951b0e611602ba9b744">loadContentByContentInfo</a>( APIContentInfo $contentInfo, array $languages = null, $versionNo = null )</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#aca7d9f693a3b0e3af6d7dbe4e4fdd25e">loadContent</a>(</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            $contentInfo-&gt;id,</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            $languages,</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            $versionNo</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        );</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
-<div class="line"><a name="l00271"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a1af8719cf320d3d5a9038785c284d1ab">  271</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a1af8719cf320d3d5a9038785c284d1ab">loadContentByVersionInfo</a>( APIVersionInfo $versionInfo, array $languages = null )</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    {</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#aca7d9f693a3b0e3af6d7dbe4e4fdd25e">loadContent</a>(</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            $versionInfo-&gt;getContentInfo()-&gt;id,</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            $languages,</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            $versionInfo-&gt;versionNo</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        );</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    }</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
-<div class="line"><a name="l00294"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#aca7d9f693a3b0e3af6d7dbe4e4fdd25e">  294</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#aca7d9f693a3b0e3af6d7dbe4e4fdd25e">loadContent</a>( $contentId, array $languages = null, $versionNo = null )</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    {</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        $content = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a1b7e339dc6e930ef5e120a86af244522">internalLoadContent</a>( $contentId, $languages, $versionNo );</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;repository-&gt;canUser( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;read&#39;</span>, $content ) )</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1UnauthorizedException.html">UnauthorizedException</a>( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;read&#39;</span> );</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">return</span> $content;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
-<div class="line"><a name="l00318"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a1b7e339dc6e930ef5e120a86af244522">  318</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a1b7e339dc6e930ef5e120a86af244522">internalLoadContent</a>( $contentId, array $languages = null, $versionNo = null )</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        {</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            <span class="keywordflow">if</span> ( $versionNo === null )</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            {</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                $versionNo = $this-&gt;persistenceHandler-&gt;contentHandler()-&gt;loadContentInfo(</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                    $contentId</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                )-&gt;currentVersionNo;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            }</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            $spiContent = $this-&gt;persistenceHandler-&gt;contentHandler()-&gt;load(</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                $contentId,</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                $versionNo,</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                $languages</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            );</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        }</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="keywordflow">catch</span> ( APINotFoundException $e )</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        {</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1NotFoundException.html">NotFoundException</a>(</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                <span class="stringliteral">&quot;Content&quot;</span>,</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                array(</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                    <span class="stringliteral">&quot;id&quot;</span> =&gt; $contentId,</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                    <span class="stringliteral">&quot;languages&quot;</span> =&gt; $languages,</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                    <span class="stringliteral">&quot;versionNo&quot;</span> =&gt; $versionNo</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                ),</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                $e</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            );</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        }</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordflow">if</span> ( !empty( $languages ) )</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        {</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            <span class="keywordflow">foreach</span> ( $languages as $languageCode )</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            {</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                <span class="keywordflow">if</span> ( !in_array(</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                    $this-&gt;persistenceHandler-&gt;contentLanguageHandler()-&gt;loadByLanguageCode( $languageCode )-&gt;id,</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                    $spiContent-&gt;versionInfo-&gt;languageIds )</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html">   65</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html">ContentService</a> <span class="keyword">implements</span> ContentServiceInterface</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a584737e3238da4a67dcaa74131574560">   70</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a584737e3238da4a67dcaa74131574560">$repository</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a02e12f0efa160c24da1e57ae43630765">   75</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a02e12f0efa160c24da1e57ae43630765">$persistenceHandler</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a01c80b97d4a84e3c873204fc8afc52a7">   80</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a01c80b97d4a84e3c873204fc8afc52a7">$settings</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a3cd5a21f8374a392a3d71ad38dce0e9a">   89</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a3cd5a21f8374a392a3d71ad38dce0e9a">__construct</a>( RepositoryInterface <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a584737e3238da4a67dcaa74131574560">$repository</a>, <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1IO_1_1Handler.html">Handler</a> $handler, array <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a01c80b97d4a84e3c873204fc8afc52a7">$settings</a> = array() )</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        $this-&gt;repository = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a584737e3238da4a67dcaa74131574560">$repository</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        $this-&gt;persistenceHandler = $handler;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a01c80b97d4a84e3c873204fc8afc52a7">$settings</a> + array(</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="comment">//&#39;defaultSetting&#39; =&gt; array(),</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        );</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#ab89df555b6d042b5b8192de6a91cb9b1">  111</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#ab89df555b6d042b5b8192de6a91cb9b1">loadContentInfo</a>( $contentId )</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        $contentInfo = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a0657088a1be09d2644cd20cf660999e9">internalLoadContentInfo</a>( $contentId );</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;repository-&gt;canUser( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;read&#39;</span>, $contentInfo ) )</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1UnauthorizedException.html">UnauthorizedException</a>( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;read&#39;</span> );</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">return</span> $contentInfo;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a0657088a1be09d2644cd20cf660999e9">  132</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a0657088a1be09d2644cd20cf660999e9">internalLoadContentInfo</a>( $contentId )</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            $spiContentInfo = $this-&gt;persistenceHandler-&gt;contentHandler()-&gt;loadContentInfo( $contentId );</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">catch</span> ( APINotFoundException $e )</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1NotFoundException.html">NotFoundException</a>(</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                <span class="stringliteral">&quot;Content&quot;</span>,</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                $contentId,</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                $e</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            );</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a319644201c7f55ab059522587bbc1b2c">buildContentInfoDomainObject</a>( $spiContentInfo );</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#aa727b69aab7f5239d677027a54d1eb5f">  162</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#aa727b69aab7f5239d677027a54d1eb5f">loadContentInfoByRemoteId</a>( $remoteId )</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        $content = $this-&gt;repository-&gt;getSearchService()-&gt;findSingle( <span class="keyword">new</span> CriterionRemoteId( $remoteId ), array(), <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;repository-&gt;canUser( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;read&#39;</span>, $content ) )</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1UnauthorizedException.html">UnauthorizedException</a>( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;read&#39;</span> );</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">return</span> $content-&gt;contentInfo;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a4114cfc2db3f924be7c94aefdd585419">  185</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a4114cfc2db3f924be7c94aefdd585419">loadVersionInfo</a>( APIContentInfo $contentInfo, $versionNo = null )</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a166a660112d8d49a63d633d33881bd4e">loadVersionInfoById</a>( $contentInfo-&gt;id, $versionNo );</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a166a660112d8d49a63d633d33881bd4e">  203</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a166a660112d8d49a63d633d33881bd4e">loadVersionInfoById</a>( $contentId, $versionNo = null )</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">if</span> ( $versionNo === null )</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            $versionNo = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#ab89df555b6d042b5b8192de6a91cb9b1">loadContentInfo</a>( $contentId )-&gt;currentVersionNo;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            $spiVersionInfo = $this-&gt;persistenceHandler-&gt;contentHandler()-&gt;loadVersionInfo(</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                $contentId,</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                $versionNo</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            );</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">catch</span> ( APINotFoundException $e )</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1NotFoundException.html">NotFoundException</a>(</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                <span class="stringliteral">&quot;VersionInfo&quot;</span>,</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                array(</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                    <span class="stringliteral">&quot;contentId&quot;</span> =&gt; $contentId,</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                    <span class="stringliteral">&quot;versionNo&quot;</span> =&gt; $versionNo</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                ),</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                $e</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            );</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        $versionInfo = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#ae1862650c03f09aeac896fb57586a6d5">buildVersionInfoDomainObject</a>( $spiVersionInfo );</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;repository-&gt;canUser( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;versionread&#39;</span>, $versionInfo ) )</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1UnauthorizedException.html">UnauthorizedException</a>( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;versionread&#39;</span> );</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">return</span> $versionInfo;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a01797e18b1bc2951b0e611602ba9b744">  250</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a01797e18b1bc2951b0e611602ba9b744">loadContentByContentInfo</a>( APIContentInfo $contentInfo, array $languages = null, $versionNo = null )</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#aca7d9f693a3b0e3af6d7dbe4e4fdd25e">loadContent</a>(</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            $contentInfo-&gt;id,</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            $languages,</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            $versionNo</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        );</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a1af8719cf320d3d5a9038785c284d1ab">  269</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a1af8719cf320d3d5a9038785c284d1ab">loadContentByVersionInfo</a>( APIVersionInfo $versionInfo, array $languages = null )</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    {</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#aca7d9f693a3b0e3af6d7dbe4e4fdd25e">loadContent</a>(</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            $versionInfo-&gt;getContentInfo()-&gt;id,</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            $languages,</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            $versionInfo-&gt;versionNo</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        );</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00292"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#aca7d9f693a3b0e3af6d7dbe4e4fdd25e">  292</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#aca7d9f693a3b0e3af6d7dbe4e4fdd25e">loadContent</a>( $contentId, array $languages = null, $versionNo = null )</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        $content = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a1b7e339dc6e930ef5e120a86af244522">internalLoadContent</a>( $contentId, $languages, $versionNo );</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;repository-&gt;canUser( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;read&#39;</span>, $content ) )</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1UnauthorizedException.html">UnauthorizedException</a>( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;read&#39;</span> );</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordflow">return</span> $content;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
+<div class="line"><a name="l00316"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a1b7e339dc6e930ef5e120a86af244522">  316</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a1b7e339dc6e930ef5e120a86af244522">internalLoadContent</a>( $contentId, array $languages = null, $versionNo = null )</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordflow">if</span> ( $versionNo === null )</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                $versionNo = $this-&gt;persistenceHandler-&gt;contentHandler()-&gt;loadContentInfo(</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                    $contentId</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                )-&gt;currentVersionNo;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            }</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            $spiContent = $this-&gt;persistenceHandler-&gt;contentHandler()-&gt;load(</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                $contentId,</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                $versionNo,</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                $languages</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            );</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <span class="keywordflow">catch</span> ( APINotFoundException $e )</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        {</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1NotFoundException.html">NotFoundException</a>(</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                <span class="stringliteral">&quot;Content&quot;</span>,</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                array(</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                    <span class="stringliteral">&quot;id&quot;</span> =&gt; $contentId,</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                    <span class="stringliteral">&quot;languages&quot;</span> =&gt; $languages,</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                    <span class="stringliteral">&quot;versionNo&quot;</span> =&gt; $versionNo</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                ),</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                $e</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            );</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        }</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        <span class="keywordflow">if</span> ( !empty( $languages ) )</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        {</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            <span class="keywordflow">foreach</span> ( $languages as $languageCode )</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                <span class="keywordflow">if</span> (</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                    !in_array(</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                        $this-&gt;persistenceHandler-&gt;contentLanguageHandler()-&gt;loadByLanguageCode( $languageCode )-&gt;id,</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                        $spiContent-&gt;versionInfo-&gt;languageIds</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                    )</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                )</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                {</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                    <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1NotFoundException.html">NotFoundException</a>(</div>
@@ -515,9 +515,9 @@ $(document).ready(function(){initNavTree('Core_2Repository_2ContentService_8php_
 <div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;                <span class="stringliteral">&quot;fields&quot;</span> =&gt; $spiFields,</div>
 <div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;                <span class="stringliteral">&quot;alwaysAvailable&quot;</span> =&gt; $contentCreateStruct-&gt;alwaysAvailable,</div>
 <div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;                <span class="stringliteral">&quot;remoteId&quot;</span> =&gt; $contentCreateStruct-&gt;remoteId,</div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;                <span class="stringliteral">&quot;modified&quot;</span> =&gt; isset( $contentCreateStruct-&gt;modificationDate )</div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;                    ? $contentCreateStruct-&gt;modificationDate-&gt;getTimestamp()</div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;                    : time(),</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;                <span class="stringliteral">&quot;modified&quot;</span> =&gt; isset( $contentCreateStruct-&gt;modificationDate ) ?</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;                    $contentCreateStruct-&gt;modificationDate-&gt;getTimestamp() :</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;                    time(),</div>
 <div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;                <span class="stringliteral">&quot;initialLanguageId&quot;</span> =&gt; $this-&gt;persistenceHandler-&gt;contentLanguageHandler()-&gt;loadByLanguageCode(</div>
 <div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;                    $contentCreateStruct-&gt;mainLanguageCode</div>
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;                )-&gt;id</div>
@@ -673,17 +673,17 @@ $(document).ready(function(){initNavTree('Core_2Repository_2ContentService_8php_
 <div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;                    <span class="keyword">new</span> SPIMetadataUpdateStruct(</div>
 <div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;                        array(</div>
 <div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;                            <span class="stringliteral">&quot;ownerId&quot;</span> =&gt; $contentMetadataUpdateStruct-&gt;ownerId,</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;                            <span class="stringliteral">&quot;publicationDate&quot;</span> =&gt; isset( $contentMetadataUpdateStruct-&gt;publishedDate )</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;                                ? $contentMetadataUpdateStruct-&gt;publishedDate-&gt;getTimestamp()</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;                                : null,</div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;                            <span class="stringliteral">&quot;modificationDate&quot;</span> =&gt; isset( $contentMetadataUpdateStruct-&gt;modificationDate )</div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;                                ? $contentMetadataUpdateStruct-&gt;modificationDate-&gt;getTimestamp()</div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;                                : null,</div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;                            <span class="stringliteral">&quot;mainLanguageId&quot;</span> =&gt; isset( $contentMetadataUpdateStruct-&gt;mainLanguageCode )</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;                                ? $this-&gt;repository-&gt;getContentLanguageService()-&gt;loadLanguage(</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;                            <span class="stringliteral">&quot;publicationDate&quot;</span> =&gt; isset( $contentMetadataUpdateStruct-&gt;publishedDate ) ?</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;                                $contentMetadataUpdateStruct-&gt;publishedDate-&gt;getTimestamp() :</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;                                null,</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;                            <span class="stringliteral">&quot;modificationDate&quot;</span> =&gt; isset( $contentMetadataUpdateStruct-&gt;modificationDate ) ?</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;                                $contentMetadataUpdateStruct-&gt;modificationDate-&gt;getTimestamp() :</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;                                null,</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;                            <span class="stringliteral">&quot;mainLanguageId&quot;</span> =&gt; isset( $contentMetadataUpdateStruct-&gt;mainLanguageCode ) ?</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;                                $this-&gt;repository-&gt;getContentLanguageService()-&gt;loadLanguage(</div>
 <div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;                                    $contentMetadataUpdateStruct-&gt;mainLanguageCode</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;                                )-&gt;id</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;                                : null,</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;                                )-&gt;id :</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;                                null,</div>
 <div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;                            <span class="stringliteral">&quot;alwaysAvailable&quot;</span> =&gt; $contentMetadataUpdateStruct-&gt;alwaysAvailable,</div>
 <div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;                            <span class="stringliteral">&quot;remoteId&quot;</span> =&gt; $contentMetadataUpdateStruct-&gt;remoteId</div>
 <div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;                        )</div>
@@ -709,7 +709,7 @@ $(document).ready(function(){initNavTree('Core_2Repository_2ContentService_8php_
 <div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;                $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a4522ab79ca7f19503f7e28b4af210a43">publishUrlAliasesForContent</a>( $content );</div>
 <div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;            }</div>
 <div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;            <span class="comment">// @todo: this is legacy storage specific for updating ezcontentobject_tree.path_identification_string, to be removed</span></div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;            elseif ( isset( $contentMetadataUpdateStruct-&gt;mainLanguageCode )</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( isset( $contentMetadataUpdateStruct-&gt;mainLanguageCode )</div>
 <div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;                &amp;&amp; ( $loadedContentInfo-&gt;mainLanguageCode !== $contentMetadataUpdateStruct-&gt;mainLanguageCode ) )</div>
 <div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;            {</div>
 <div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;                $content = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#aca7d9f693a3b0e3af6d7dbe4e4fdd25e">loadContent</a>( $loadedContentInfo-&gt;id );</div>
@@ -806,7 +806,7 @@ $(document).ready(function(){initNavTree('Core_2Repository_2ContentService_8php_
 <div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;</div>
 <div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;            $versionNo = $versionInfo-&gt;versionNo;</div>
 <div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;        }</div>
-<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;        elseif ( $contentInfo-&gt;published )</div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $contentInfo-&gt;published )</div>
 <div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;        {</div>
 <div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;            $versionNo = $contentInfo-&gt;currentVersionNo;</div>
 <div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;        }</div>
@@ -961,13 +961,13 @@ $(document).ready(function(){initNavTree('Core_2Repository_2ContentService_8php_
 <div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;                    $fieldValue = $fieldType-&gt;acceptValue(</div>
 <div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;                        $content-&gt;getField(</div>
 <div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;                            $fieldDefinition-&gt;identifier,</div>
-<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;                            $fieldDefinition-&gt;isTranslatable</div>
-<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;                                ? $languageCode</div>
-<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;                                : $content-&gt;contentInfo-&gt;mainLanguageCode</div>
+<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;                            $fieldDefinition-&gt;isTranslatable ?</div>
+<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;                                $languageCode :</div>
+<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;                                $content-&gt;contentInfo-&gt;mainLanguageCode</div>
 <div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;                        )-&gt;value</div>
 <div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;                    );</div>
 <div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;                }</div>
-<div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;                elseif ( $isFieldUpdated )</div>
+<div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $isFieldUpdated )</div>
 <div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;                {</div>
 <div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;                    $fieldValue = $fieldType-&gt;acceptValue(</div>
 <div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;                        $fields[$fieldDefinition-&gt;identifier][$valueLanguageCode]-&gt;value</div>
@@ -1005,9 +1005,9 @@ $(document).ready(function(){initNavTree('Core_2Repository_2ContentService_8php_
 <div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;                $fieldValues[$fieldDefinition-&gt;identifier][$languageCode] = $fieldValue;</div>
 <div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;                $spiFields[] = <span class="keyword">new</span> SPIField(</div>
 <div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;                    array(</div>
-<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;                        <span class="stringliteral">&quot;id&quot;</span> =&gt; $isLanguageNew</div>
-<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;                            ? null</div>
-<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;                            : $content-&gt;getField( $fieldDefinition-&gt;identifier, $languageCode )-&gt;id,</div>
+<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;                        <span class="stringliteral">&quot;id&quot;</span> =&gt; $isLanguageNew ?</div>
+<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;                            null :</div>
+<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;                            $content-&gt;getField( $fieldDefinition-&gt;identifier, $languageCode )-&gt;id,</div>
 <div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;                        <span class="stringliteral">&quot;fieldDefinitionId&quot;</span> =&gt; $fieldDefinition-&gt;id,</div>
 <div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;                        <span class="stringliteral">&quot;type&quot;</span> =&gt; $fieldDefinition-&gt;fieldTypeIdentifier,</div>
 <div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;                        <span class="stringliteral">&quot;value&quot;</span> =&gt; $fieldType-&gt;toPersistenceValue( $fieldValue ),</div>
@@ -1464,12 +1464,12 @@ $(document).ready(function(){initNavTree('Core_2Repository_2ContentService_8php_
 <div class="line"><a name="l01820"></a><span class="lineno"> 1820</span>&#160;                <span class="stringliteral">&quot;currentVersionNo&quot;</span> =&gt; $spiContentInfo-&gt;currentVersionNo,</div>
 <div class="line"><a name="l01821"></a><span class="lineno"> 1821</span>&#160;                <span class="stringliteral">&quot;published&quot;</span> =&gt; $spiContentInfo-&gt;isPublished,</div>
 <div class="line"><a name="l01822"></a><span class="lineno"> 1822</span>&#160;                <span class="stringliteral">&quot;ownerId&quot;</span> =&gt; $spiContentInfo-&gt;ownerId,</div>
-<div class="line"><a name="l01823"></a><span class="lineno"> 1823</span>&#160;                <span class="stringliteral">&quot;modificationDate&quot;</span> =&gt; $spiContentInfo-&gt;modificationDate == 0</div>
-<div class="line"><a name="l01824"></a><span class="lineno"> 1824</span>&#160;                    ? null</div>
-<div class="line"><a name="l01825"></a><span class="lineno"> 1825</span>&#160;                    : $this-&gt;getDateTime( $spiContentInfo-&gt;modificationDate ),</div>
-<div class="line"><a name="l01826"></a><span class="lineno"> 1826</span>&#160;                <span class="stringliteral">&quot;publishedDate&quot;</span> =&gt; $spiContentInfo-&gt;publicationDate == 0</div>
-<div class="line"><a name="l01827"></a><span class="lineno"> 1827</span>&#160;                    ? null</div>
-<div class="line"><a name="l01828"></a><span class="lineno"> 1828</span>&#160;                    : $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a0dccfad219d6b6c6541994d95700c55d">getDateTime</a>( $spiContentInfo-&gt;publicationDate ),</div>
+<div class="line"><a name="l01823"></a><span class="lineno"> 1823</span>&#160;                <span class="stringliteral">&quot;modificationDate&quot;</span> =&gt; $spiContentInfo-&gt;modificationDate == 0 ?</div>
+<div class="line"><a name="l01824"></a><span class="lineno"> 1824</span>&#160;                    null :</div>
+<div class="line"><a name="l01825"></a><span class="lineno"> 1825</span>&#160;                    $this-&gt;getDateTime( $spiContentInfo-&gt;modificationDate ),</div>
+<div class="line"><a name="l01826"></a><span class="lineno"> 1826</span>&#160;                <span class="stringliteral">&quot;publishedDate&quot;</span> =&gt; $spiContentInfo-&gt;publicationDate == 0 ?</div>
+<div class="line"><a name="l01827"></a><span class="lineno"> 1827</span>&#160;                    null :</div>
+<div class="line"><a name="l01828"></a><span class="lineno"> 1828</span>&#160;                    $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a0dccfad219d6b6c6541994d95700c55d">getDateTime</a>( $spiContentInfo-&gt;publicationDate ),</div>
 <div class="line"><a name="l01829"></a><span class="lineno"> 1829</span>&#160;                <span class="stringliteral">&quot;alwaysAvailable&quot;</span> =&gt; $spiContentInfo-&gt;alwaysAvailable,</div>
 <div class="line"><a name="l01830"></a><span class="lineno"> 1830</span>&#160;                <span class="stringliteral">&quot;remoteId&quot;</span> =&gt; $spiContentInfo-&gt;remoteId,</div>
 <div class="line"><a name="l01831"></a><span class="lineno"> 1831</span>&#160;                <span class="stringliteral">&quot;mainLanguageCode&quot;</span> =&gt; $spiContentInfo-&gt;mainLanguageCode,</div>
@@ -1566,7 +1566,7 @@ $(document).ready(function(){initNavTree('Core_2Repository_2ContentService_8php_
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_57883f88f9071375c384973424cd03e2.html">Repository</a></li><li class="navelem"><a class="el" href="Core_2Repository_2ContentService_8php.html">ContentService.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:46 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:08 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

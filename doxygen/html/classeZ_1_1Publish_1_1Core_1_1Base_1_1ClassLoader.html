@@ -216,7 +216,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="ClassLoader_8php_source.html#l00154">154</a> of file <a class="el" href="ClassLoader_8php_source.html">ClassLoader.php</a>.</p>
+<p>Definition at line <a class="el" href="ClassLoader_8php_source.html#l00156">156</a> of file <a class="el" href="ClassLoader_8php_source.html">ClassLoader.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $ezpKernelClasses = require <span class="stringliteral">&quot;{$legacyDir}/autoload/ezp_kernel.php&quot;</span>;</div>
 <div class="line">        <span class="keywordflow">if</span> ( file_exists( <span class="stringliteral">&quot;{$legacyDir}/var/autoload/ezp_extension.php&quot;</span> ) )</div>
@@ -285,7 +285,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ClassLoader_8php_source.html#l00070">70</a> of file <a class="el" href="ClassLoader_8php_source.html">ClassLoader.php</a>.</p>
 
-<p>References <a class="el" href="ClassLoader_8php_source.html#l00154">eZ\Publish\Core\Base\ClassLoader\getEzpLegacyClassMap()</a>.</p>
+<p>References <a class="el" href="ClassLoader_8php_source.html#l00156">eZ\Publish\Core\Base\ClassLoader\getEzpLegacyClassMap()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $className[0] === <span class="charliteral">&#39;\\&#39;</span> )</div>
 <div class="line">            $className = substr( $className, 1 );</div>
@@ -307,7 +307,8 @@ Protected Attributes</h2></td></tr>
 <div class="line">            <span class="keywordflow">if</span> ( strpos( $className, $prefix ) !== 0 )</div>
 <div class="line">                <span class="keywordflow">continue</span>;</div>
 <div class="line"></div>
-<div class="line">            <span class="keywordflow">if</span> ( $pearMode ) <span class="comment">// PSR-0 PEAR compatibility mode</span></div>
+<div class="line">            <span class="comment">// PSR-0 PEAR compatibility mode</span></div>
+<div class="line">            <span class="keywordflow">if</span> ( $pearMode )</div>
 <div class="line">            {</div>
 <div class="line">                $lastNsPos = strripos( $className, <span class="charliteral">&#39;\\&#39;</span> );</div>
 <div class="line">                $fileName = $path;</div>
@@ -322,7 +323,8 @@ Protected Attributes</h2></td></tr>
 <div class="line">                <span class="comment">// Replacing &#39;_&#39; to &#39;/&#39; in className part and append &#39;.php&#39;</span></div>
 <div class="line">                $fileName .= str_replace( <span class="charliteral">&#39;_&#39;</span>, DIRECTORY_SEPARATOR, substr( $className, $lastNsPos + 1 ) ) . <span class="stringliteral">&#39;.php&#39;</span>;</div>
 <div class="line">            }</div>
-<div class="line">            <span class="keywordflow">else</span> <span class="comment">// PSR-0 NS strict mode</span></div>
+<div class="line">            <span class="comment">// PSR-0 NS strict mode</span></div>
+<div class="line">            <span class="keywordflow">else</span></div>
 <div class="line">            {</div>
 <div class="line">                $fileName = $path .</div>
 <div class="line">                    str_replace( <span class="charliteral">&#39;\\&#39;</span>, DIRECTORY_SEPARATOR, $className ) .</div>
@@ -473,7 +475,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Base.html">Base</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ClassLoader.html">ClassLoader</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:52 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:14 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

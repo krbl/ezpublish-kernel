@@ -160,7 +160,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00034">34</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00029">29</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a49dc5894f2db9fa17e1c55b07703bcae"></a>
 <div class="memitem">
@@ -201,13 +201,14 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00063">63</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00058">58</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00039">eZ\Publish\Core\Repository\IOService\$repository</a>, and <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00049">eZ\Publish\Core\Repository\IOService\$settings</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00034">eZ\Publish\Core\Repository\IOService\$repository</a>, and <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00044">eZ\Publish\Core\Repository\IOService\$settings</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;repository = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1IOService.html#ad81ecd9139a2887eeb982647f59fb4a0">$repository</a>;</div>
 <div class="line">        $this-&gt;ioHandler = $handler;</div>
-<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1IOService.html#a71a1ba087d165c6a88ef73f88161b5c9">$settings</a> + array(<span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        <span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1IOService.html#a71a1ba087d165c6a88ef73f88161b5c9">$settings</a> + array(</div>
 <div class="line">            <span class="comment">//&#39;defaultSetting&#39; =&gt; array(),</span></div>
 <div class="line">        );</div>
 <div class="line">    }</div>
@@ -245,13 +246,13 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00280">280</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00276">276</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> BinaryFile(</div>
 <div class="line">            array(</div>
 <div class="line">                <span class="comment">//@todo is setting the id of file to path correct?</span></div>
 <div class="line">                <span class="stringliteral">&#39;id&#39;</span> =&gt; $spiBinaryFile-&gt;path,</div>
-<div class="line">                <span class="stringliteral">&#39;size&#39;</span> =&gt; (<span class="keywordtype">int</span>) $spiBinaryFile-&gt;size,</div>
+<div class="line">                <span class="stringliteral">&#39;size&#39;</span> =&gt; (<span class="keywordtype">int</span>)$spiBinaryFile-&gt;size,</div>
 <div class="line">                <span class="stringliteral">&#39;mtime&#39;</span> =&gt; $spiBinaryFile-&gt;mtime,</div>
 <div class="line">                <span class="stringliteral">&#39;ctime&#39;</span> =&gt; $spiBinaryFile-&gt;ctime,</div>
 <div class="line">                <span class="stringliteral">&#39;mimeType&#39;</span> =&gt; $spiBinaryFile-&gt;mimeType,</div>
@@ -304,7 +305,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00260">260</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00256">256</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $spiBinaryCreateStruct = <span class="keyword">new</span> SPIBinaryFileCreateStruct();</div>
 <div class="line"></div>
@@ -354,9 +355,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html#ab5bf2689145aae1d36d7271affbdfc85">eZ\Publish\API\Repository\IOService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00163">163</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00159">159</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00280">eZ\Publish\Core\Repository\IOService\buildDomainBinaryFileObject()</a>, and <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00260">eZ\Publish\Core\Repository\IOService\buildSPIBinaryFileCreateStructObject()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00276">eZ\Publish\Core\Repository\IOService\buildDomainBinaryFileObject()</a>, and <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00256">eZ\Publish\Core\Repository\IOService\buildSPIBinaryFileCreateStructObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( empty( $binaryFileCreateStruct-&gt;mimeType ) || !is_string( $binaryFileCreateStruct-&gt;mimeType ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;mimeType&quot;</span>, <span class="stringliteral">&quot;invalid mimeType value&quot;</span>, <span class="stringliteral">&quot;BinaryFileCreateStruct&quot;</span> );</div>
@@ -416,7 +417,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html#a7409106db5576eb2dcf79b7fadd056a9">eZ\Publish\API\Repository\IOService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00192">192</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00188">188</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="comment">//@todo: is $binaryFile-&gt;id equal to file path?</span></div>
 <div class="line">        <span class="keywordflow">if</span> ( empty( $binaryFile-&gt;id ) || !is_string( $binaryFile-&gt;id ) )</div>
@@ -451,7 +452,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html#ab443c3e042b11bd92e648c2cec0bb23a">eZ\Publish\API\Repository\IOService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00244">244</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00240">240</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( empty( $binaryFile-&gt;id ) || !is_string( $binaryFile-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $binaryFile-&gt;id, <span class="stringliteral">&quot;BinaryFile&quot;</span> );</div>
@@ -486,7 +487,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html#a01e7c9944893f89e7b2c1edaa335c37f">eZ\Publish\API\Repository\IOService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00228">228</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00224">224</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( empty( $binaryFile-&gt;id ) || !is_string( $binaryFile-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $binaryFile-&gt;id, <span class="stringliteral">&quot;BinaryFile&quot;</span> );</div>
@@ -520,9 +521,9 @@ Protected Attributes</h2></td></tr>
 <p>Gets the legacy kernel instance.</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00089">89</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00085">85</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00054">eZ\Publish\Core\Repository\IOService\$legacyKernel</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00049">eZ\Publish\Core\Repository\IOService\$legacyKernel</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1IOService.html#a3a81f55ffdc9a03a50ffd679a117506d">$this-&gt;legacyKernel</a>;</div>
 <div class="line">    }</div>
@@ -559,9 +560,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html#aa9b7b4e0a1a1a07a2e294fcbdacc4aeb">eZ\Publish\API\Repository\IOService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00210">210</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00206">206</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00280">eZ\Publish\Core\Repository\IOService\buildDomainBinaryFileObject()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00276">eZ\Publish\Core\Repository\IOService\buildDomainBinaryFileObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( empty( $binaryFileid ) || !is_string( $binaryFileid ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;binaryFileid&quot;</span>, $binaryFileid );</div>
@@ -615,7 +616,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html#a113e52f148e7b4e6ea0b8bf88047d3c0">eZ\Publish\API\Repository\IOService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00134">134</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00130">130</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( empty( $localFile ) || !is_string( $localFile ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException( <span class="stringliteral">&quot;localFile&quot;</span>, <span class="stringliteral">&quot;localFile has an invalid value&quot;</span> );</div>
@@ -669,7 +670,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html#a9adec107b7ce50aaae3b5f7931685f05">eZ\Publish\API\Repository\IOService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00103">103</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00099">99</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_string( $uploadedFile[<span class="stringliteral">&#39;tmp_name&#39;</span>] ) || empty( $uploadedFile[<span class="stringliteral">&#39;tmp_name&#39;</span>] ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException( <span class="stringliteral">&quot;uploadedFile&quot;</span>, <span class="stringliteral">&quot;uploadedFile[&#39;tmp_name&#39;] does not exist or has invalid value&quot;</span> );</div>
@@ -715,9 +716,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00079">79</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00075">75</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00054">eZ\Publish\Core\Repository\IOService\$legacyKernel</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00049">eZ\Publish\Core\Repository\IOService\$legacyKernel</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;legacyKernel = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1IOService.html#a3a81f55ffdc9a03a50ffd679a117506d">$legacyKernel</a>;</div>
 <div class="line">    }</div>
@@ -743,7 +744,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00044">44</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00039">39</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
 
 </div>
 </div>
@@ -765,7 +766,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00054">54</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00049">49</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
 
 </div>
 </div>
@@ -787,7 +788,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00039">39</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00034">34</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
 
 </div>
 </div>
@@ -809,7 +810,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00049">49</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2IOService_8php_source.html#l00044">44</a> of file <a class="el" href="Core_2Repository_2IOService_8php_source.html">IOService.php</a>.</p>
 
 </div>
 </div>
@@ -822,7 +823,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Repository.html">Repository</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1IOService.html">IOService</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:57 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:20 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

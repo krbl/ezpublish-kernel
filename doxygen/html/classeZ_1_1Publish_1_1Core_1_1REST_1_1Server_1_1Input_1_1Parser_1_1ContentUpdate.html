@@ -230,7 +230,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line">            {</div>
 <div class="line">                $parsedData[<span class="stringliteral">&#39;alwaysAvailable&#39;</span>] = <span class="keyword">true</span>;</div>
 <div class="line">            }</div>
-<div class="line">            elseif ( $data[<span class="stringliteral">&#39;alwaysAvailable&#39;</span>] === <span class="stringliteral">&#39;false&#39;</span> )</div>
+<div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $data[<span class="stringliteral">&#39;alwaysAvailable&#39;</span>] === <span class="stringliteral">&#39;false&#39;</span> )</div>
 <div class="line">            {</div>
 <div class="line">                $parsedData[<span class="stringliteral">&#39;alwaysAvailable&#39;</span>] = <span class="keyword">false</span>;</div>
 <div class="line">            }</div>
@@ -253,7 +253,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line">            {</div>
 <div class="line">                $parsedData[<span class="stringliteral">&#39;modificationDate&#39;</span>] = <span class="keyword">new</span> DateTime( $data[<span class="stringliteral">&#39;modificationDate&#39;</span>] );</div>
 <div class="line">            }</div>
-<div class="line">            <span class="keywordflow">catch</span>( Exception $e )</div>
+<div class="line">            <span class="keywordflow">catch</span> ( Exception $e )</div>
 <div class="line">            {</div>
 <div class="line">                <span class="keywordflow">throw</span> <span class="keyword">new</span> Exceptions\Parser( <span class="stringliteral">&#39;Invalid format for &lt;modificationDate&gt; in &lt;ContentUpdate&gt;&#39;</span>, 0, $e );</div>
 <div class="line">            }</div>
@@ -266,7 +266,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line">            {</div>
 <div class="line">                $parsedData[<span class="stringliteral">&#39;publishedDate&#39;</span>] = <span class="keyword">new</span> DateTime( $data[<span class="stringliteral">&#39;publishDate&#39;</span>] );</div>
 <div class="line">            }</div>
-<div class="line">            <span class="keywordflow">catch</span>( Exception $e )</div>
+<div class="line">            <span class="keywordflow">catch</span> ( Exception $e )</div>
 <div class="line">            {</div>
 <div class="line">                <span class="keywordflow">throw</span> <span class="keyword">new</span> Exceptions\Parser( <span class="stringliteral">&#39;Invalid format for &lt;publishDate&gt; in &lt;ContentUpdate&gt;&#39;</span>, 0, $e );</div>
 <div class="line">            }</div>
@@ -286,7 +286,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html">REST</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server.html">Server</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input.html">Input</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser.html">Parser</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentUpdate.html">ContentUpdate</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:59 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:22 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

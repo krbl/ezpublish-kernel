@@ -107,31 +107,31 @@ $(document).ready(function(){initNavTree('SearchHandler_8php_source.html','');})
 <a href="SearchHandler_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\Persistence\InMemory;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">eZ\Publish\SPI\Persistence\Content</a>,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    eZ\Publish\SPI\Persistence\Content\ContentInfo,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    eZ\Publish\SPI\Persistence\Content\VersionInfo,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    eZ\Publish\SPI\Persistence\Content\Search\Handler as SearchHandlerInterface,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Search_1_1SearchResult.html">eZ\Publish\API\Repository\Values\Content\Search\SearchResult</a>,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Search_1_1SearchHit.html">eZ\Publish\API\Repository\Values\Content\Search\SearchHit</a>,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query.html">eZ\Publish\API\Repository\Values\Content\Query</a>,</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    eZ\Publish\API\Repository\Values\Content\Query\Criterion,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    eZ\Publish\API\Repository\Values\Content\Query\Criterion\ContentId,</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    eZ\Publish\API\Repository\Values\Content\Query\Criterion\ContentTypeId,</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    eZ\Publish\API\Repository\Values\Content\Query\Criterion\LocationId,</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    eZ\Publish\API\Repository\Values\Content\Query\Criterion\RemoteId,</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    eZ\Publish\API\Repository\Values\Content\Query\Criterion\LocationRemoteId,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    eZ\Publish\API\Repository\Values\Content\Query\Criterion\SectionId,</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    eZ\Publish\API\Repository\Values\Content\Query\Criterion\UserMetadata,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    eZ\Publish\API\Repository\Values\Content\Query\Criterion\ParentLocationId,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    eZ\Publish\API\Repository\Values\Content\Query\Criterion\ObjectStateId,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    eZ\Publish\API\Repository\Values\Content\Query\Criterion\LanguageCode,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    eZ\Publish\API\Repository\Values\Content\Query\Criterion\LogicalAnd,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    eZ\Publish\API\Repository\Values\Content\Query\Criterion\Subtree,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    eZ\Publish\API\Repository\Values\Content\Query\Criterion\Status,</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator,</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1NotFoundException.html">eZ\Publish\Core\Base\Exceptions\NotFoundException</a> as NotFound,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentException.html">eZ\Publish\Core\Base\Exceptions\InvalidArgumentException</a>,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    Exception;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">eZ\Publish\SPI\Persistence\Content</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use eZ\Publish\SPI\Persistence\Content\ContentInfo;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use eZ\Publish\SPI\Persistence\Content\VersionInfo;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use eZ\Publish\SPI\Persistence\Content\Search\Handler as SearchHandlerInterface;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Search_1_1SearchResult.html">eZ\Publish\API\Repository\Values\Content\Search\SearchResult</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Search_1_1SearchHit.html">eZ\Publish\API\Repository\Values\Content\Search\SearchHit</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query.html">eZ\Publish\API\Repository\Values\Content\Query</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion\ContentId;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion\ContentTypeId;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion\LocationId;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion\RemoteId;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion\LocationRemoteId;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion\SectionId;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion\UserMetadata;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion\ParentLocationId;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion\ObjectStateId;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion\LanguageCode;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion\LogicalAnd;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion\Subtree;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion\Status;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1NotFoundException.html">eZ\Publish\Core\Base\Exceptions\NotFoundException</a> as NotFound;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentException.html">eZ\Publish\Core\Base\Exceptions\InvalidArgumentException</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;use Exception;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1SearchHandler.html">   59</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1SearchHandler.html">SearchHandler</a> <span class="keyword">extends</span> SearchHandlerInterface</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
@@ -231,21 +231,21 @@ $(document).ready(function(){initNavTree('SearchHandler_8php_source.html','');})
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        $result-&gt;searchHits = array_map(</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keyword">function</span> ( $content )</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            {</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Search_1_1SearchHit.html">SearchHit</a>( array(</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                    <span class="stringliteral">&#39;valueObject&#39;</span> =&gt; $content,</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                ) );</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            },</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            $result-&gt;searchHits</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        );</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">return</span> $result;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1SearchHandler.html#aaf1b4b5e461f564126c2beb407b52a1e">  203</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1SearchHandler.html#aaf1b4b5e461f564126c2beb407b52a1e">findSingle</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion.html">Criterion</a> $criterion, array $fieldFilters = array() )</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    {</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        $list = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1SearchHandler.html#add6ae406d07165d0e25795713310204a">findContent</a>( <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query.html">Query</a>( array(</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="stringliteral">&#39;criterion&#39;</span> =&gt; $criterion,</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        ) ) );</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Search_1_1SearchHit.html">SearchHit</a>(</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                    array(</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                        <span class="stringliteral">&#39;valueObject&#39;</span> =&gt; $content,</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                    )</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                );</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            },</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            $result-&gt;searchHits</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        );</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">return</span> $result;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1SearchHandler.html#aaf1b4b5e461f564126c2beb407b52a1e">  205</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1SearchHandler.html#aaf1b4b5e461f564126c2beb407b52a1e">findSingle</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion.html">Criterion</a> $criterion, array $fieldFilters = array() )</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        $list = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1SearchHandler.html#add6ae406d07165d0e25795713310204a">findContent</a>( <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query.html">Query</a>( array( <span class="stringliteral">&#39;criterion&#39;</span> =&gt; $criterion ) ) );</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">if</span> ( !$list-&gt;totalCount )</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> NotFound( <span class="stringliteral">&#39;Content&#39;</span>, var_export( $criterion, <span class="keyword">true</span> ) );</div>
@@ -329,41 +329,40 @@ $(document).ready(function(){initNavTree('SearchHandler_8php_source.html','');})
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                    <span class="keywordflow">default</span>:</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                        <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception( <span class="stringliteral">&quot;Unsupported StatusCriterion-&gt;value[0]: &quot;</span> . $criterion-&gt;value[0] );</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                }</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            }</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $criterion instanceof <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1ParentLocationId.html">ParentLocationId</a> &amp;&amp; !isset( $match[<span class="stringliteral">&#39;locations&#39;</span>][<span class="stringliteral">&#39;parentId&#39;</span>] ) )</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            {</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                $match[<span class="stringliteral">&#39;locations&#39;</span>][<span class="stringliteral">&#39;parentId&#39;</span>] = $criterion-&gt;operator === <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1Operator.html#a9bb521a15912abd87df9570309ff140a">Operator::IN</a> ? $criterion-&gt;value : $criterion-&gt;value[0];</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            }</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $criterion instanceof <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1Subtree.html">Subtree</a> &amp;&amp; !isset( $match[<span class="stringliteral">&#39;locations&#39;</span>][<span class="stringliteral">&#39;pathString&#39;</span>] ) )</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            {</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                $match[<span class="stringliteral">&#39;locations&#39;</span>][<span class="stringliteral">&#39;pathString&#39;</span>] = $criterion-&gt;value[0] . <span class="charliteral">&#39;%&#39;</span>;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            }</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            {</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                <span class="keywordflow">if</span> ( $criterion instanceof <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1UserMetadata.html">UserMetadata</a> &amp;&amp; $criterion-&gt;target !== $criterion::MODIFIER )</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                {</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                    <span class="keywordflow">if</span> ( $criterion-&gt;target === $criterion::OWNER &amp;&amp; !isset( $match[<span class="stringliteral">&#39;versionInfo&#39;</span>][<span class="stringliteral">&#39;contentInfo&#39;</span>][<span class="stringliteral">&#39;ownerId&#39;</span>] ) )</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                        $match[<span class="stringliteral">&#39;versionInfo&#39;</span>][<span class="stringliteral">&#39;contentInfo&#39;</span>][<span class="stringliteral">&#39;ownerId&#39;</span>] = $criterion-&gt;operator === <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1Operator.html#a9bb521a15912abd87df9570309ff140a">Operator::IN</a> ? $criterion-&gt;value : $criterion-&gt;value[0];</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $criterion-&gt;target === $criterion::CREATOR &amp;&amp; !isset( $match[<span class="stringliteral">&#39;versionInfo&#39;</span>][<span class="stringliteral">&#39;creatorId&#39;</span>] ) )</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                        $match[<span class="stringliteral">&#39;versionInfo&#39;</span>][<span class="stringliteral">&#39;creatorId&#39;</span>] = $criterion-&gt;operator === <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1Operator.html#a9bb521a15912abd87df9570309ff140a">Operator::IN</a> ? $criterion-&gt;value : $criterion-&gt;value[0];</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                    <span class="comment">//else if ( $criterion-&gt;target === $criterion::MODIFIER &amp;&amp; !isset( $match[&#39;version&#39;][&#39;creatorId&#39;] ) )</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                        <span class="comment">//$match[&#39;version&#39;][&#39;creatorId&#39;] = $criterion-&gt;value[0];</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                }</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception( <span class="stringliteral">&quot;Support for provided criterion not supported or used more then once: &quot;</span> . get_class( $criterion ) );</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            }</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        }</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    }</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;}</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $criterion instanceof <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1ParentLocationId.html">ParentLocationId</a> &amp;&amp; !isset( $match[<span class="stringliteral">&#39;locations&#39;</span>][<span class="stringliteral">&#39;parentId&#39;</span>] ) )</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                $match[<span class="stringliteral">&#39;locations&#39;</span>][<span class="stringliteral">&#39;parentId&#39;</span>] = $criterion-&gt;operator === <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1Operator.html#a9bb521a15912abd87df9570309ff140a">Operator::IN</a> ? $criterion-&gt;value : $criterion-&gt;value[0];</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $criterion instanceof <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1Subtree.html">Subtree</a> &amp;&amp; !isset( $match[<span class="stringliteral">&#39;locations&#39;</span>][<span class="stringliteral">&#39;pathString&#39;</span>] ) )</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                $match[<span class="stringliteral">&#39;locations&#39;</span>][<span class="stringliteral">&#39;pathString&#39;</span>] = $criterion-&gt;value[0] . <span class="charliteral">&#39;%&#39;</span>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                <span class="keywordflow">if</span> ( $criterion instanceof <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1UserMetadata.html">UserMetadata</a> &amp;&amp; $criterion-&gt;target !== $criterion::MODIFIER )</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                {</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                    <span class="keywordflow">if</span> ( $criterion-&gt;target === $criterion::OWNER &amp;&amp; !isset( $match[<span class="stringliteral">&#39;versionInfo&#39;</span>][<span class="stringliteral">&#39;contentInfo&#39;</span>][<span class="stringliteral">&#39;ownerId&#39;</span>] ) )</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                        $match[<span class="stringliteral">&#39;versionInfo&#39;</span>][<span class="stringliteral">&#39;contentInfo&#39;</span>][<span class="stringliteral">&#39;ownerId&#39;</span>] = $criterion-&gt;operator === <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1Operator.html#a9bb521a15912abd87df9570309ff140a">Operator::IN</a> ? $criterion-&gt;value : $criterion-&gt;value[0];</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $criterion-&gt;target === $criterion::CREATOR &amp;&amp; !isset( $match[<span class="stringliteral">&#39;versionInfo&#39;</span>][<span class="stringliteral">&#39;creatorId&#39;</span>] ) )</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                        $match[<span class="stringliteral">&#39;versionInfo&#39;</span>][<span class="stringliteral">&#39;creatorId&#39;</span>] = $criterion-&gt;operator === <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1Operator.html#a9bb521a15912abd87df9570309ff140a">Operator::IN</a> ? $criterion-&gt;value : $criterion-&gt;value[0];</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                    <span class="comment">//else if ( $criterion-&gt;target === $criterion::MODIFIER &amp;&amp; !isset( $match[&#39;version&#39;][&#39;creatorId&#39;] ) )</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                        <span class="comment">//$match[&#39;version&#39;][&#39;creatorId&#39;] = $criterion-&gt;value[0];</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                }</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception( <span class="stringliteral">&quot;Support for provided criterion not supported or used more then once: &quot;</span> . get_class( $criterion ) );</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_1015c0c9ea9f233a345f6405868e3e61.html">Persistence</a></li><li class="navelem"><a class="el" href="dir_4df564e0180332f890b89108c9c66aa3.html">InMemory</a></li><li class="navelem"><a class="el" href="SearchHandler_8php.html">SearchHandler.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:48 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:10 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

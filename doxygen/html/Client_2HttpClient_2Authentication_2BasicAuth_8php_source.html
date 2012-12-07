@@ -106,48 +106,51 @@ $(document).ready(function(){initNavTree('Client_2HttpClient_2Authentication_2Ba
 <div class="contents">
 <a href="Client_2HttpClient_2Authentication_2BasicAuth_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication.html">   10</a></span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\REST\Client\HttpClient\Authentication;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient.html">eZ\Publish\Core\REST\Client\HttpClient</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">eZ\Publish\Core\REST\Common\Message</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html">BasicAuth</a> <span class="keyword">implements</span> <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient.html">HttpClient</a></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#afe31f47ab1639d4c18f040d173049b39">   24</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#afe31f47ab1639d4c18f040d173049b39">$innerClient</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#a9033c234e442829100e21ab8e7de152a">   31</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#a9033c234e442829100e21ab8e7de152a">$username</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#acba62d46353d986b35adfda45fa7b6d5">   38</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#acba62d46353d986b35adfda45fa7b6d5">$password</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#ad351d4f09411dffa6974b534a26a53c1">   47</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#ad351d4f09411dffa6974b534a26a53c1">__construct</a>( <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient.html">HttpClient</a> $innerClient, $username, $password )</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        $this-&gt;innerClient = $innerClient;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        $this-&gt;username    = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#a9033c234e442829100e21ab8e7de152a">$username</a>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        $this-&gt;password    = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#acba62d46353d986b35adfda45fa7b6d5">$password</a>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#a6fa04ec1db70fb8b1bf81ae7db10403d">   67</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient.html#a8a452783b4424b8bfd471bf5602fda94">request</a>( $method, $path, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a> $message = null )</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span> ( $message === null )</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            $message = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        $message-&gt;headers[<span class="stringliteral">&#39;Authorization&#39;</span>] = sprintf(</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="stringliteral">&#39;Basic %s&#39;</span>,</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            base64_encode( sprintf(</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="stringliteral">&#39;%s:%s&#39;</span>,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                $this-&gt;username,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                $this-&gt;password</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            ) )</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        );</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> $this-&gt;innerClient-&gt;request( $method, $path, $message );</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient.html">eZ\Publish\Core\REST\Client\HttpClient</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">eZ\Publish\Core\REST\Common\Message</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html">BasicAuth</a> <span class="keyword">implements</span> <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient.html">HttpClient</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#afe31f47ab1639d4c18f040d173049b39">   25</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#afe31f47ab1639d4c18f040d173049b39">$innerClient</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#a9033c234e442829100e21ab8e7de152a">   32</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#a9033c234e442829100e21ab8e7de152a">$username</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#acba62d46353d986b35adfda45fa7b6d5">   39</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#acba62d46353d986b35adfda45fa7b6d5">$password</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#ad351d4f09411dffa6974b534a26a53c1">   48</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#ad351d4f09411dffa6974b534a26a53c1">__construct</a>( <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient.html">HttpClient</a> $innerClient, $username, $password )</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        $this-&gt;innerClient = $innerClient;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        $this-&gt;username    = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#a9033c234e442829100e21ab8e7de152a">$username</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        $this-&gt;password    = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#acba62d46353d986b35adfda45fa7b6d5">$password</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html#a6fa04ec1db70fb8b1bf81ae7db10403d">   68</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient.html#a8a452783b4424b8bfd471bf5602fda94">request</a>( $method, $path, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a> $message = null )</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span> ( $message === null )</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            $message = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        $message-&gt;headers[<span class="stringliteral">&#39;Authorization&#39;</span>] = sprintf(</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="stringliteral">&#39;Basic %s&#39;</span>,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            base64_encode(</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                sprintf(</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    <span class="stringliteral">&#39;%s:%s&#39;</span>,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    $this-&gt;username,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    $this-&gt;password</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                )</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            )</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> $this-&gt;innerClient-&gt;request( $method, $path, $message );</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_797398f06ec5dac6abf0352e0ae63d7a.html">REST</a></li><li class="navelem"><a class="el" href="dir_9cef613736a01ac9013b9c2ddd9ab4f7.html">Client</a></li><li class="navelem"><a class="el" href="dir_8947e224aeeb9994f4e806c49166602b.html">HttpClient</a></li><li class="navelem"><a class="el" href="dir_a17ebe388bd6dd6b3e6e744c71042394.html">Authentication</a></li><li class="navelem"><a class="el" href="Client_2HttpClient_2Authentication_2BasicAuth_8php.html">BasicAuth.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:49 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:11 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

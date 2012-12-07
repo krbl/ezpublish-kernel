@@ -157,7 +157,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00038">38</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00033">33</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="acb62d5ecff08ace85ad65bac30e9121f"></a>
 <div class="memitem">
@@ -198,13 +198,14 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00062">62</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00057">57</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00043">eZ\Publish\Core\Repository\TrashService\$repository</a>, and <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00053">eZ\Publish\Core\Repository\TrashService\$settings</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00038">eZ\Publish\Core\Repository\TrashService\$repository</a>, and <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00048">eZ\Publish\Core\Repository\TrashService\$settings</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;repository = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1TrashService.html#a2063b506593a027176dc0c271c3b1542">$repository</a>;</div>
 <div class="line">        $this-&gt;persistenceHandler = $handler;</div>
-<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1TrashService.html#aea97e84a3206467809d9ef2c3484f781">$settings</a> + array(<span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        <span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1TrashService.html#aea97e84a3206467809d9ef2c3484f781">$settings</a> + array(</div>
 <div class="line">            <span class="comment">//&#39;defaultSetting&#39; =&gt; array(),</span></div>
 <div class="line">        );</div>
 <div class="line">    }</div>
@@ -242,21 +243,21 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00314">314</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00310">310</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> TrashItem(</div>
 <div class="line">            array(</div>
 <div class="line">                <span class="stringliteral">&#39;contentInfo&#39;</span> =&gt; $this-&gt;repository-&gt;getContentService()-&gt;loadContentInfo( $spiTrashItem-&gt;contentId ),</div>
-<div class="line">                <span class="stringliteral">&#39;id&#39;</span> =&gt; (int) $spiTrashItem-&gt;id,</div>
-<div class="line">                <span class="stringliteral">&#39;priority&#39;</span> =&gt; (<span class="keywordtype">int</span>) $spiTrashItem-&gt;priority,</div>
-<div class="line">                <span class="stringliteral">&#39;hidden&#39;</span> =&gt; (bool) $spiTrashItem-&gt;hidden,</div>
-<div class="line">                <span class="stringliteral">&#39;invisible&#39;</span> =&gt; (<span class="keywordtype">bool</span>) $spiTrashItem-&gt;invisible,</div>
+<div class="line">                <span class="stringliteral">&#39;id&#39;</span> =&gt; (int)$spiTrashItem-&gt;id,</div>
+<div class="line">                <span class="stringliteral">&#39;priority&#39;</span> =&gt; (<span class="keywordtype">int</span>)$spiTrashItem-&gt;priority,</div>
+<div class="line">                <span class="stringliteral">&#39;hidden&#39;</span> =&gt; (bool)$spiTrashItem-&gt;hidden,</div>
+<div class="line">                <span class="stringliteral">&#39;invisible&#39;</span> =&gt; (<span class="keywordtype">bool</span>)$spiTrashItem-&gt;invisible,</div>
 <div class="line">                <span class="stringliteral">&#39;remoteId&#39;</span> =&gt; $spiTrashItem-&gt;remoteId,</div>
-<div class="line">                <span class="stringliteral">&#39;parentLocationId&#39;</span> =&gt; (int) $spiTrashItem-&gt;parentId,</div>
+<div class="line">                <span class="stringliteral">&#39;parentLocationId&#39;</span> =&gt; (int)$spiTrashItem-&gt;parentId,</div>
 <div class="line">                <span class="stringliteral">&#39;pathString&#39;</span> =&gt; $spiTrashItem-&gt;pathString,</div>
-<div class="line">                <span class="stringliteral">&#39;depth&#39;</span> =&gt; (<span class="keywordtype">int</span>) $spiTrashItem-&gt;depth,</div>
-<div class="line">                <span class="stringliteral">&#39;sortField&#39;</span> =&gt; (int) $spiTrashItem-&gt;sortField,</div>
-<div class="line">                <span class="stringliteral">&#39;sortOrder&#39;</span> =&gt; (<span class="keywordtype">int</span>) $spiTrashItem-&gt;sortOrder,</div>
+<div class="line">                <span class="stringliteral">&#39;depth&#39;</span> =&gt; (<span class="keywordtype">int</span>)$spiTrashItem-&gt;depth,</div>
+<div class="line">                <span class="stringliteral">&#39;sortField&#39;</span> =&gt; (int)$spiTrashItem-&gt;sortField,</div>
+<div class="line">                <span class="stringliteral">&#39;sortOrder&#39;</span> =&gt; (<span class="keywordtype">int</span>)$spiTrashItem-&gt;sortOrder,</div>
 <div class="line">            )</div>
 <div class="line">        );</div>
 <div class="line">    }</div>
@@ -302,7 +303,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00233">233</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00229">229</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $this-&gt;repository-&gt;hasAccess( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;cleantrash&#39;</span> ) !== true )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> UnauthorizedException( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;cleantrash&#39;</span> );</div>
@@ -348,7 +349,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1TrashService.html#ae713d18476674aa542e6f7c2016223de">eZ\Publish\API\Repository\TrashService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00205">205</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00201">201</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $this-&gt;repository-&gt;hasAccess( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;cleantrash&#39;</span> ) !== true )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> UnauthorizedException( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;cleantrash&#39;</span> );</div>
@@ -394,9 +395,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1TrashService.html#a16110b474d52ea6061aad29ee16c1d58">eZ\Publish\API\Repository\TrashService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00263">263</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00259">259</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00314">eZ\Publish\Core\Repository\TrashService\buildDomainTrashItemObject()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00310">eZ\Publish\Core\Repository\TrashService\buildDomainTrashItemObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $query-&gt;criterion !== null &amp;&amp; !$query-&gt;criterion instanceof Criterion )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;query-&gt;criterion&quot;</span>, $query-&gt;criterion, <span class="stringliteral">&quot;Query&quot;</span> );</div>
@@ -421,8 +422,8 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        $spiTrashItems = $this-&gt;persistenceHandler-&gt;trashHandler()-&gt;findTrashItems(</div>
 <div class="line">            $query-&gt;criterion !== null ? $query-&gt;criterion : null,</div>
-<div class="line">            $query-&gt;offset !== null &amp;&amp; $query-&gt;offset &gt; 0 ? (<span class="keywordtype">int</span>) $query-&gt;offset : 0,</div>
-<div class="line">            $query-&gt;limit !== null &amp;&amp; $query-&gt;limit &gt;= 1 ? (<span class="keywordtype">int</span>) $query-&gt;limit : null,</div>
+<div class="line">            $query-&gt;offset !== null &amp;&amp; $query-&gt;offset &gt; 0 ? (<span class="keywordtype">int</span>)$query-&gt;offset : 0,</div>
+<div class="line">            $query-&gt;limit !== null &amp;&amp; $query-&gt;limit &gt;= 1 ? (<span class="keywordtype">int</span>)$query-&gt;limit : null,</div>
 <div class="line">            $query-&gt;sortClauses !== null ? $query-&gt;sortClauses : null</div>
 <div class="line">        );</div>
 <div class="line"></div>
@@ -482,7 +483,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00338">338</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00334">334</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $dateTime = <span class="keyword">new</span> DateTime();</div>
 <div class="line">        $dateTime-&gt;setTimestamp( $timestamp );</div>
@@ -523,9 +524,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1TrashService.html#ae659be2ddb50df6b7db8b0fba582994a">eZ\Publish\API\Repository\TrashService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00083">83</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00079">79</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00314">eZ\Publish\Core\Repository\TrashService\buildDomainTrashItemObject()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00310">eZ\Publish\Core\Repository\TrashService\buildDomainTrashItemObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $trashItemId ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;trashItemId&quot;</span>, $trashItemId );</div>
@@ -594,7 +595,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the newly created or recovered location </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00148">148</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00144">144</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $trashItem-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $trashItem-&gt;id, <span class="stringliteral">&quot;TrashItem&quot;</span> );</div>
@@ -676,9 +677,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1TrashService.html#aa22cddadea8df62c78a33d19f8e9f3c3">eZ\Publish\API\Repository\TrashService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00110">110</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00106">106</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00314">eZ\Publish\Core\Repository\TrashService\buildDomainTrashItemObject()</a>, and <a class="el" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Location.html#a8ebff1e98885dc49937ca715410e443e">eZ\Publish\API\Repository\Values\Content\Location\getContentInfo()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00310">eZ\Publish\Core\Repository\TrashService\buildDomainTrashItemObject()</a>, and <a class="el" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Location.html#a8ebff1e98885dc49937ca715410e443e">eZ\Publish\API\Repository\Values\Content\Location\getContentInfo()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $location-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $location-&gt;id, <span class="stringliteral">&quot;Location&quot;</span> );</div>
@@ -736,7 +737,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00048">48</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00043">43</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
 
 </div>
 </div>
@@ -758,7 +759,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00043">43</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00038">38</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
 
 </div>
 </div>
@@ -780,7 +781,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00053">53</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2TrashService_8php_source.html#l00048">48</a> of file <a class="el" href="Core_2Repository_2TrashService_8php_source.html">TrashService.php</a>.</p>
 
 </div>
 </div>
@@ -793,7 +794,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Repository.html">Repository</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1TrashService.html">TrashService</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:57 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:20 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

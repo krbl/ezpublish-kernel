@@ -1,6 +1,6 @@
 var classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService =
 [
-    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a10b1d45d70478746f83d6fa51a08ce39", null ],
+    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a1c4abafe5b04259c0c323d3fe82978ce", null ],
     [ "addPolicy", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a017f3a3fc91b3cad5c44819fd1588ad4", null ],
     [ "assignRoleToUser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#acf07931eb844f25753a2adcb9e1b22d2", null ],
     [ "assignRoleToUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a560a1cfae290a9880ec82109a042677b", null ],

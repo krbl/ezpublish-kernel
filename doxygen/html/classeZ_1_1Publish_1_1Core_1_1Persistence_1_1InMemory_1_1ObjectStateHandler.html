@@ -259,7 +259,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">            $newPriority = $objectStates[count( $objectStates ) - 1]-&gt;priority + 1;</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        $inputData[<span class="stringliteral">&quot;groupId&quot;</span>] = (int) $groupId;</div>
+<div class="line">        $inputData[<span class="stringliteral">&quot;groupId&quot;</span>] = (int)$groupId;</div>
 <div class="line">        $inputData[<span class="stringliteral">&quot;priority&quot;</span>] = $newPriority;</div>
 <div class="line"></div>
 <div class="line">        $createdState = $this-&gt;backend-&gt;create( <span class="stringliteral">&#39;Content\\ObjectState&#39;</span>, $inputData );</div>
@@ -533,7 +533,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">        <span class="keywordflow">if</span> ( empty( $groupStateIds ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> NotFound( <span class="stringliteral">&quot;Content\\ObjectState&quot;</span>, array( <span class="stringliteral">&quot;groupId&quot;</span> =&gt; $stateGroupId ) );</div>
 <div class="line"></div>
-<div class="line">        $contentId = (int) $contentId;</div>
+<div class="line">        $contentId = (int)$contentId;</div>
 <div class="line"></div>
 <div class="line">        $contentToStateMap = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ObjectStateHandler.html#a9be7d8efdfd18c2f257963c75d624689">getContentToStateMap</a>();</div>
 <div class="line">        <span class="keywordflow">if</span> ( !isset( $contentToStateMap[$contentId] ) )</div>
@@ -648,7 +648,8 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="ObjectStateHandler_8php_source.html#l00116">eZ\Publish\Core\Persistence\InMemory\ObjectStateHandler\loadObjectStates()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $groupStates = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ObjectStateHandler.html#abdc23d015a5747c87270f4d0271ac036">loadObjectStates</a>( $groupId );</div>
-<div class="line">        <span class="keywordflow">return</span> array_map( <span class="keyword">function</span>( ObjectState $objectState )</div>
+<div class="line">        <span class="keywordflow">return</span> array_map(</div>
+<div class="line">            <span class="keyword">function</span> ( ObjectState $objectState )</div>
 <div class="line">            {</div>
 <div class="line">                <span class="keywordflow">return</span> $objectState-&gt;id;</div>
 <div class="line">            },</div>
@@ -712,7 +713,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ObjectStateHandler_8php_source.html#l00410">410</a> of file <a class="el" href="ObjectStateHandler_8php_source.html">ObjectStateHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        $inputData = (array) $input;</div>
+<div class="line">        $inputData = (array)$input;</div>
 <div class="line">        $inputData[<span class="stringliteral">&quot;languageCodes&quot;</span>] = array_keys( $input-&gt;name );</div>
 <div class="line">        <span class="keywordflow">return</span> $inputData;</div>
 <div class="line">    }</div>
@@ -1154,7 +1155,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        <span class="comment">// If the content was in one of the group states,</span></div>
 <div class="line">        <span class="comment">// find all content for the old state and update the old state with excluded $contentId</span></div>
-<div class="line">        $existingStateIds = array_values( array_intersect( $groupStateIds, $contentToStateMap[(<span class="keywordtype">int</span>) $contentId] ) );</div>
+<div class="line">        $existingStateIds = array_values( array_intersect( $groupStateIds, $contentToStateMap[(<span class="keywordtype">int</span>)$contentId] ) );</div>
 <div class="line">        <span class="keywordflow">if</span> ( !empty( $existingStateIds ) )</div>
 <div class="line">        {</div>
 <div class="line">            $oldStateContentList = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ObjectStateHandler.html#af16c5acec03287441bd2454734f37c1c">getObjectStateContentList</a>( $existingStateIds[0] );</div>
@@ -1232,7 +1233,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">            $priorityList[$groupState-&gt;id] = $index;</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        $priorityList[$objectState-&gt;id] = (int) $priority;</div>
+<div class="line">        $priorityList[$objectState-&gt;id] = (int)$priority;</div>
 <div class="line">        asort( $priorityList );</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">foreach</span> ( array_keys( $priorityList ) as $objectStatePriority =&gt; $objectStateId )</div>
@@ -1420,7 +1421,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory.html">InMemory</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ObjectStateHandler.html">ObjectStateHandler</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:54 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:17 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -159,7 +159,7 @@ Protected Attributes</h2></td></tr>
 <p>3) The query might be possible to optimize (remove empty statements), reduce singular and and or constructs…</p>
 <p>4) Additionally we might need a post-query filtering step, which filters content objects based on criteria, which could not be converted in to database statements. </p>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00045">45</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00044">44</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a725df1941bdb26c70152271a631aa52f"></a>
 <div class="memitem">
@@ -207,9 +207,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00083">83</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00082">82</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00066">eZ\Publish\Core\Persistence\Solr\Content\Search\Handler\$contentTypeHandler</a>, <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00059">eZ\Publish\Core\Persistence\Solr\Content\Search\Handler\$fieldRegistry</a>, <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00052">eZ\Publish\Core\Persistence\Solr\Content\Search\Handler\$gateway</a>, and <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00073">eZ\Publish\Core\Persistence\Solr\Content\Search\Handler\$objectStateHandler</a>.</p>
+<p>References <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00065">eZ\Publish\Core\Persistence\Solr\Content\Search\Handler\$contentTypeHandler</a>, <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00058">eZ\Publish\Core\Persistence\Solr\Content\Search\Handler\$fieldRegistry</a>, <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00051">eZ\Publish\Core\Persistence\Solr\Content\Search\Handler\$gateway</a>, and <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00072">eZ\Publish\Core\Persistence\Solr\Content\Search\Handler\$objectStateHandler</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;gateway            = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#afe11b34b41ea1e30a8f9ed3bcd258397">$gateway</a>;</div>
 <div class="line">        $this-&gt;fieldRegistry      = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#ababf52617d4e4ab20652320eb99fc852">$fieldRegistry</a>;</div>
@@ -244,7 +244,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Finds content objects for the given query.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000088">Todo:</a></b></dt><dd>define structs for the field filters</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000086">Todo:</a></b></dt><dd>define structs for the field filters</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">\eZ\Publish\API\Repository\Values\Content\Query</td><td class="paramname">$query</td><td></td></tr>
@@ -256,7 +256,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1Handler.html#aa48a771e880c0c58fbfb88866450372f">eZ\Publish\SPI\Persistence\Content\Search\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00102">102</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00101">101</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;gateway-&gt;findContent( $query, $fieldFilters );</div>
 <div class="line">    }</div>
@@ -305,7 +305,7 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000089">Todo:</a></b></dt><dd>define structs for the field filters </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000087">Todo:</a></b></dt><dd>define structs for the field filters </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">\eZ\Publish\API\Repository\Values\Content\Query\Criterion</td><td class="paramname">$criterion</td><td></td></tr>
@@ -317,9 +317,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1Handler.html#a946b80fc95dab43279da6e461b5777a2">eZ\Publish\SPI\Persistence\Content\Search\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00120">120</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00119">119</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00102">eZ\Publish\Core\Persistence\Solr\Content\Search\Handler\findContent()</a>.</p>
+<p>References <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00101">eZ\Publish\Core\Persistence\Solr\Content\Search\Handler\findContent()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $query = <span class="keyword">new</span> Query();</div>
 <div class="line">        $query-&gt;criterion = $criterion;</div>
@@ -373,9 +373,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1Handler.html#a6087c0361941c3cf597c606b466cd142">eZ\Publish\SPI\Persistence\Content\Search\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00157">157</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00156">156</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00172">eZ\Publish\Core\Persistence\Solr\Content\Search\Handler\mapContent()</a>.</p>
+<p>References <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00171">eZ\Publish\Core\Persistence\Solr\Content\Search\Handler\mapContent()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $document = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#acc6f0eeb0234471928252e7ad74a3aef">mapContent</a>( $content );</div>
 <div class="line">        $this-&gt;gateway-&gt;indexContent( $document );</div>
@@ -425,7 +425,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00172">172</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00171">171</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $document = array(</div>
 <div class="line">            <span class="keyword">new</span> Field(</div>
@@ -609,10 +609,10 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Purges all contents from the index</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000090">Todo:</a></b></dt><dd>: Make this public <a class="el" href="namespaceeZ_1_1Publish_1_1API.html">API</a>?</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000088">Todo:</a></b></dt><dd>: Make this public <a class="el" href="namespaceeZ_1_1Publish_1_1API.html">API</a>?</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00338">338</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00336">336</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;gateway-&gt;purgeIndex();</div>
 <div class="line">    }</div>
@@ -667,7 +667,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1Handler.html#a1d193794fffb828e02b38ff2dafb04b8">eZ\Publish\SPI\Persistence\Content\Search\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00145">145</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00144">144</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Not implemented yet.&quot;</span> );</div>
 <div class="line">    }</div>
@@ -693,7 +693,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00066">66</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00065">65</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 
 </div>
 </div>
@@ -715,7 +715,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00059">59</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00058">58</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 
 </div>
 </div>
@@ -737,7 +737,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00052">52</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00051">51</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 
 </div>
 </div>
@@ -759,7 +759,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00073">73</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html#l00072">72</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2Handler_8php_source.html">Handler.php</a>.</p>
 
 </div>
 </div>
@@ -772,7 +772,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr.html">Solr</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search.html">Search</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html">Handler</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:56 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:19 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

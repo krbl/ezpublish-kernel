@@ -1,6 +1,5 @@
 var NAVTREEINDEX37 =
 {
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a6759eeda3f2726b52662cd4a3f14b3ba":[3,0,0,1,1,8,10,21],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a7794bfe78056a419c987c650919f85c0":[3,0,0,1,1,8,10,38],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a819ead6edc7ba9d780b1399ec204d672":[3,0,0,1,1,8,10,36],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a83212cbbcbf0bc8887a619e7c514c315":[3,0,0,1,1,8,10,30],
@@ -249,5 +248,6 @@ var NAVTREEINDEX37 =
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService_1_1UpdateSectionSignal.html":[3,0,0,1,1,8,0,6,3],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService_1_1UpdateSectionSignal.html#a380e7ca00d2dbc0d405db8155c287add":[3,0,0,1,1,8,0,6,3,0],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService_1_1DeleteTrashItemSignal.html":[3,0,0,1,1,8,0,7,0],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService_1_1DeleteTrashItemSignal.html#a4a1b95b236370a86a8dd98e04d1dd0bf":[3,0,0,1,1,8,0,7,0,0]
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService_1_1DeleteTrashItemSignal.html#a4a1b95b236370a86a8dd98e04d1dd0bf":[3,0,0,1,1,8,0,7,0,0],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService_1_1EmptyTrashSignal.html":[3,0,0,1,1,8,0,7,1]
 };

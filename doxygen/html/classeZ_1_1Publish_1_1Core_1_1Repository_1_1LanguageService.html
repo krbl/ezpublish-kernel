@@ -158,7 +158,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00034">34</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00031">31</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aaa23da1249c4aa8e433c4a1ad74357d9"></a>
 <div class="memitem">
@@ -199,13 +199,14 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00058">58</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00055">55</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00044">eZ\Publish\Core\Repository\LanguageService\$languageHandler</a>, <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00039">eZ\Publish\Core\Repository\LanguageService\$repository</a>, and <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00049">eZ\Publish\Core\Repository\LanguageService\$settings</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00041">eZ\Publish\Core\Repository\LanguageService\$languageHandler</a>, <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00036">eZ\Publish\Core\Repository\LanguageService\$repository</a>, and <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00046">eZ\Publish\Core\Repository\LanguageService\$settings</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;repository = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1LanguageService.html#a1422183f8c7c27c8a491ec7853e4bce5">$repository</a>;</div>
 <div class="line">        $this-&gt;languageHandler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1LanguageService.html#a6799da5e5b1ffbadc14d83a432ca50ee">$languageHandler</a>;</div>
-<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1LanguageService.html#a8ce9311d897289bc10f95530ab0f185b">$settings</a> + array(<span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        <span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1LanguageService.html#a8ce9311d897289bc10f95530ab0f185b">$settings</a> + array(</div>
 <div class="line">            <span class="stringliteral">&#39;languages&#39;</span> =&gt; array( <span class="stringliteral">&#39;eng-GB&#39;</span> ),</div>
 <div class="line">        );</div>
 <div class="line">    }</div>
@@ -243,7 +244,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00395">395</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00393">393</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Language(</div>
 <div class="line">            array(</div>
@@ -299,9 +300,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LanguageService.html#a55439ecefdaa84b64e36da8a62834052">eZ\Publish\API\Repository\LanguageService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00077">77</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00075">75</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00395">eZ\Publish\Core\Repository\LanguageService\buildDomainObject()</a>, and <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00270">eZ\Publish\Core\Repository\LanguageService\loadLanguage()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00393">eZ\Publish\Core\Repository\LanguageService\buildDomainObject()</a>, and <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00268">eZ\Publish\Core\Repository\LanguageService\loadLanguage()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_string( $languageCreateStruct-&gt;name ) || empty( $languageCreateStruct-&gt;name ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;name&quot;</span>, $languageCreateStruct-&gt;name, <span class="stringliteral">&quot;LanguageCreateStruct&quot;</span> );</div>
@@ -391,9 +392,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LanguageService.html#acb7465987ef9f49446b4368023fd9817">eZ\Publish\API\Repository\LanguageService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00328">328</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00326">326</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00308">eZ\Publish\Core\Repository\LanguageService\loadLanguageById()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00306">eZ\Publish\Core\Repository\LanguageService\loadLanguageById()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $language-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $language-&gt;id, <span class="stringliteral">&quot;Language&quot;</span> );</div>
@@ -464,9 +465,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LanguageService.html#ace6106c4772257da64321d7f6eb87c09">eZ\Publish\API\Repository\LanguageService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00225">225</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00223">223</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00308">eZ\Publish\Core\Repository\LanguageService\loadLanguageById()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00306">eZ\Publish\Core\Repository\LanguageService\loadLanguageById()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $language-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $language-&gt;id );</div>
@@ -543,9 +544,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LanguageService.html#a91e2142ae857e5ac495a33c6ddb83f11">eZ\Publish\API\Repository\LanguageService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00182">182</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00180">180</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00308">eZ\Publish\Core\Repository\LanguageService\loadLanguageById()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00306">eZ\Publish\Core\Repository\LanguageService\loadLanguageById()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $language-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $language-&gt;id );</div>
@@ -609,7 +610,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LanguageService.html#acb9c3c06bb29073f72e71e11a71ab976">eZ\Publish\API\Repository\LanguageService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00361">361</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00359">359</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;settings[<span class="stringliteral">&#39;languages&#39;</span>][0];</div>
 <div class="line">    }</div>
@@ -632,7 +633,7 @@ Protected Attributes</h2></td></tr>
 <p>private This is currently only for internal use in Services</p>
 <dl class="section return"><dt>Returns</dt><dd>string[] </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00373">373</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00371">371</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;settings[<span class="stringliteral">&#39;languages&#39;</span>];</div>
 <div class="line">    }</div>
@@ -670,9 +671,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LanguageService.html#afe9720e712254e71b9eee8f7f4349d1b">eZ\Publish\API\Repository\LanguageService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00270">270</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00268">268</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00395">eZ\Publish\Core\Repository\LanguageService\buildDomainObject()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00393">eZ\Publish\Core\Repository\LanguageService\buildDomainObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_string( $languageCode ) || empty( $languageCode ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException( <span class="stringliteral">&quot;languageCode&quot;</span>, <span class="stringliteral">&quot;language code has an invalid value&quot;</span> );</div>
@@ -736,14 +737,14 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LanguageService.html#ab93ac0bdec72b1493aab8eab78840f3c">eZ\Publish\API\Repository\LanguageService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00308">308</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00306">306</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00395">eZ\Publish\Core\Repository\LanguageService\buildDomainObject()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00393">eZ\Publish\Core\Repository\LanguageService\buildDomainObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $languageId ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;languageId&quot;</span>, $languageId );</div>
 <div class="line"></div>
-<div class="line">        $language = $this-&gt;languageHandler-&gt;load( (<span class="keywordtype">int</span>) $languageId );</div>
+<div class="line">        $language = $this-&gt;languageHandler-&gt;load( (<span class="keywordtype">int</span>)$languageId );</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1LanguageService.html#a67797c0f4b7087791aa4345d47334c61">buildDomainObject</a>( $language );</div>
 <div class="line">    }</div>
@@ -789,9 +790,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LanguageService.html#a4f48dd96e061104b4f3a4585fa8c40c1">eZ\Publish\API\Repository\LanguageService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00284">284</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00282">282</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00395">eZ\Publish\Core\Repository\LanguageService\buildDomainObject()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00393">eZ\Publish\Core\Repository\LanguageService\buildDomainObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $languages = $this-&gt;languageHandler-&gt;loadAll();</div>
 <div class="line"></div>
@@ -834,7 +835,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LanguageService.html#a9c3432ea9f50ece1389907dac126e09b">eZ\Publish\API\Repository\LanguageService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00383">383</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00381">381</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> LanguageCreateStruct();</div>
 <div class="line">    }</div>
@@ -883,9 +884,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LanguageService.html#ab38e09f1a41fbbf6d9db32bd2dd07f5e">eZ\Publish\API\Repository\LanguageService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00136">136</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00134">134</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00308">eZ\Publish\Core\Repository\LanguageService\loadLanguageById()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00306">eZ\Publish\Core\Repository\LanguageService\loadLanguageById()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $language-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $language-&gt;id, <span class="stringliteral">&quot;Language&quot;</span> );</div>
@@ -954,7 +955,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00044">44</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00041">41</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
 
 </div>
 </div>
@@ -976,7 +977,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00039">39</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00036">36</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
 
 </div>
 </div>
@@ -998,7 +999,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00049">49</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LanguageService_8php_source.html#l00046">46</a> of file <a class="el" href="Core_2Repository_2LanguageService_8php_source.html">LanguageService.php</a>.</p>
 
 </div>
 </div>
@@ -1011,7 +1012,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Repository.html">Repository</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1LanguageService.html">LanguageService</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:57 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:20 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

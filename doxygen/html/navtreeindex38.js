@@ -1,6 +1,5 @@
 var NAVTREEINDEX38 =
 {
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService_1_1EmptyTrashSignal.html":[3,0,0,1,1,8,0,7,1],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService_1_1RecoverSignal.html":[3,0,0,1,1,8,0,7,2],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService_1_1RecoverSignal.html#a944cc40ab5875d258f9b5d4e4541d61b":[3,0,0,1,1,8,0,7,2,1],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService_1_1RecoverSignal.html#ad6faa2412cae1890a8cbdffbe6e273af":[3,0,0,1,1,8,0,7,2,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX38 =
 "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1CreateStruct.html#a46e6e5ae825455c107bf301cfb50bb6c":[3,0,0,1,2,3,0,1,1,1],
 "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1CreateStruct.html#a5580f6dc324d7f542f4f39c910cc1a25":[3,0,0,1,2,3,0,1,1,9],
 "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1CreateStruct.html#a59b42ec418adc78bb767dd719fee22d0":[3,0,0,1,2,3,0,1,1,4],
-"classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1CreateStruct.html#a914cd5bc8b496389540a96c8f82f02a7":[3,0,0,1,2,3,0,1,1,3]
+"classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1CreateStruct.html#a914cd5bc8b496389540a96c8f82f02a7":[3,0,0,1,2,3,0,1,1,3],
+"classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1CreateStruct.html#a9f4a4a540c552fdc1ed212d0f6fef821":[3,0,0,1,2,3,0,1,1,8]
 };

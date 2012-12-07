@@ -220,7 +220,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyCompatible.html#a0c92a3faaac54b256ed79b1c351dbce8">eZ\Publish\Core\MVC\Legacy\Templating\LegacyCompatible</a>.</p>
 
-<p>Definition at line <a class="el" href="LegacyAdapter_8php_source.html#l00097">97</a> of file <a class="el" href="LegacyAdapter_8php_source.html">LegacyAdapter.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacyAdapter_8php_source.html#l00089">89</a> of file <a class="el" href="LegacyAdapter_8php_source.html">LegacyAdapter.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( isset( $this-&gt;properties[$name] ) )</div>
 <div class="line">            <span class="keywordflow">return</span> $this-&gt;<span class="keywordtype">object</span>-&gt;$name;</div>
@@ -251,7 +251,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyCompatible.html#a481d5e394f9733d9aebf6fff40c9583f">eZ\Publish\Core\MVC\Legacy\Templating\LegacyCompatible</a>.</p>
 
-<p>Definition at line <a class="el" href="LegacyAdapter_8php_source.html#l00114">114</a> of file <a class="el" href="LegacyAdapter_8php_source.html">LegacyAdapter.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacyAdapter_8php_source.html#l00106">106</a> of file <a class="el" href="LegacyAdapter_8php_source.html">LegacyAdapter.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $getters = $this-&gt;getters;</div>
 <div class="line">        array_walk(</div>
@@ -293,15 +293,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="LegacyAdapter_8php_source.html#l00075">75</a> of file <a class="el" href="LegacyAdapter_8php_source.html">LegacyAdapter.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        <span class="keywordflow">if</span> (</div>
-<div class="line">            isset( $this-&gt;properties[$name] )</div>
-<div class="line">            || isset( $this-&gt;getters[<span class="stringliteral">&#39;get&#39;</span> . ucfirst( $name )] )</div>
-<div class="line">        )</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line">        }</div>
-<div class="line"></div>
-<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">        <span class="keywordflow">return</span> isset( $this-&gt;properties[$name] ) || isset( $this-&gt;getters[<span class="stringliteral">&#39;get&#39;</span> . ucfirst( $name )] );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 </div>
@@ -315,7 +307,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC.html">MVC</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating.html">Templating</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyAdapter.html">LegacyAdapter</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:53 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:16 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

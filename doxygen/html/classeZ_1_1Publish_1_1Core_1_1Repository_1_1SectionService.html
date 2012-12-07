@@ -157,7 +157,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00036">36</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00032">32</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aabd225e97a510bfc77e6f0c0127ca6d2"></a>
 <div class="memitem">
@@ -198,13 +198,14 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00060">60</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00056">56</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00041">eZ\Publish\Core\Repository\SectionService\$repository</a>, <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00046">eZ\Publish\Core\Repository\SectionService\$sectionHandler</a>, and <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00051">eZ\Publish\Core\Repository\SectionService\$settings</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00037">eZ\Publish\Core\Repository\SectionService\$repository</a>, <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00042">eZ\Publish\Core\Repository\SectionService\$sectionHandler</a>, and <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00047">eZ\Publish\Core\Repository\SectionService\$settings</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;repository = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1SectionService.html#aec31c67b1502e836192b511321555db1">$repository</a>;</div>
 <div class="line">        $this-&gt;sectionHandler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1SectionService.html#acec7965f2375c43ad673355efc0c537d">$sectionHandler</a>;</div>
-<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1SectionService.html#a172cba5eb1faf22708995045d993d9df">$settings</a> + array(<span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        <span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1SectionService.html#a172cba5eb1faf22708995045d993d9df">$settings</a> + array(</div>
 <div class="line">            <span class="comment">//&#39;defaultSetting&#39; =&gt; array(),</span></div>
 <div class="line">        );</div>
 <div class="line">    }</div>
@@ -252,9 +253,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1SectionService.html#ae91881ee8675a24178fc9ff0cc9be7e3">eZ\Publish\API\Repository\SectionService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00270">270</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00267">267</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00189">eZ\Publish\Core\Repository\SectionService\loadSection()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00186">eZ\Publish\Core\Repository\SectionService\loadSection()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $contentInfo-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $contentInfo-&gt;id, <span class="stringliteral">&quot;ContentInfo&quot;</span> );</div>
@@ -267,10 +268,13 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( $this-&gt;repository-&gt;canUser( <span class="stringliteral">&#39;section&#39;</span>, <span class="stringliteral">&#39;assign&#39;</span>, $loadedContentInfo, $loadedSection ) !== true )</div>
 <div class="line">        {</div>
-<div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> UnauthorizedException( <span class="stringliteral">&#39;section&#39;</span>, <span class="stringliteral">&#39;assign&#39;</span>, array(</div>
-<div class="line">                <span class="stringliteral">&#39;name&#39;</span> =&gt; $loadedSection-&gt;name,</div>
-<div class="line">                <span class="stringliteral">&#39;content-name&#39;</span> =&gt; $loadedContentInfo-&gt;name</div>
-<div class="line">            ) );</div>
+<div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> UnauthorizedException(</div>
+<div class="line">                <span class="stringliteral">&#39;section&#39;</span>, <span class="stringliteral">&#39;assign&#39;</span>,</div>
+<div class="line">                array(</div>
+<div class="line">                    <span class="stringliteral">&#39;name&#39;</span> =&gt; $loadedSection-&gt;name,</div>
+<div class="line">                    <span class="stringliteral">&#39;content-name&#39;</span> =&gt; $loadedContentInfo-&gt;name</div>
+<div class="line">                )</div>
+<div class="line">            );</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        $this-&gt;repository-&gt;beginTransaction();</div>
@@ -336,7 +340,7 @@ Protected Attributes</h2></td></tr>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Section(</div>
 <div class="line">            array(</div>
-<div class="line">                <span class="stringliteral">&#39;id&#39;</span> =&gt; (<span class="keywordtype">int</span>) $spiSection-&gt;id,</div>
+<div class="line">                <span class="stringliteral">&#39;id&#39;</span> =&gt; (<span class="keywordtype">int</span>)$spiSection-&gt;id,</div>
 <div class="line">                <span class="stringliteral">&#39;identifier&#39;</span> =&gt; $spiSection-&gt;identifier,</div>
 <div class="line">                <span class="stringliteral">&#39;name&#39;</span> =&gt; $spiSection-&gt;name</div>
 <div class="line">            )</div>
@@ -380,7 +384,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1SectionService.html#aedceda43af13a5ba4f1a1fe24bf5f32a">eZ\Publish\API\Repository\SectionService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00253">253</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00250">250</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $section-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $section-&gt;id, <span class="stringliteral">&quot;Section&quot;</span> );</div>
@@ -432,9 +436,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1SectionService.html#a2da989504e8bb6746fe6db37be6e6c50">eZ\Publish\API\Repository\SectionService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00079">79</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00076">76</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00368">eZ\Publish\Core\Repository\SectionService\buildDomainSectionObject()</a>, and <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00234">eZ\Publish\Core\Repository\SectionService\loadSectionByIdentifier()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00368">eZ\Publish\Core\Repository\SectionService\buildDomainSectionObject()</a>, and <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00231">eZ\Publish\Core\Repository\SectionService\loadSectionByIdentifier()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_string( $sectionCreateStruct-&gt;name ) || empty( $sectionCreateStruct-&gt;name ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;name&quot;</span>, $sectionCreateStruct-&gt;name, <span class="stringliteral">&quot;SectionCreateStruct&quot;</span> );</div>
@@ -520,7 +524,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00315">315</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00253">eZ\Publish\Core\Repository\SectionService\countAssignedContents()</a>, and <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00189">eZ\Publish\Core\Repository\SectionService\loadSection()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00250">eZ\Publish\Core\Repository\SectionService\countAssignedContents()</a>, and <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00186">eZ\Publish\Core\Repository\SectionService\loadSection()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $section-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $section-&gt;id, <span class="stringliteral">&quot;Section&quot;</span> );</div>
@@ -590,7 +594,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1SectionService.html#a4789d11e2db8c375a599e6a446c706f5">eZ\Publish\API\Repository\SectionService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00189">189</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00186">186</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
 
 <p>References <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00368">eZ\Publish\Core\Repository\SectionService\buildDomainSectionObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -659,7 +663,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1SectionService.html#a4b6a1723a215f3a56976da65bb291a65">eZ\Publish\API\Repository\SectionService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00234">234</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00231">231</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
 
 <p>References <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00368">eZ\Publish\Core\Repository\SectionService\buildDomainSectionObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -720,7 +724,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1SectionService.html#aa4ae7d4b228befc3855120be22c82048">eZ\Publish\API\Repository\SectionService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00208">208</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00205">205</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
 
 <p>References <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00368">eZ\Publish\Core\Repository\SectionService\buildDomainSectionObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -841,9 +845,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1SectionService.html#ab55bd1b288813ef5286d8ece0fa2d4ae">eZ\Publish\API\Repository\SectionService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00130">130</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00127">127</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00368">eZ\Publish\Core\Repository\SectionService\buildDomainSectionObject()</a>, <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00189">eZ\Publish\Core\Repository\SectionService\loadSection()</a>, and <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00234">eZ\Publish\Core\Repository\SectionService\loadSectionByIdentifier()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00368">eZ\Publish\Core\Repository\SectionService\buildDomainSectionObject()</a>, <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00186">eZ\Publish\Core\Repository\SectionService\loadSection()</a>, and <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00231">eZ\Publish\Core\Repository\SectionService\loadSectionByIdentifier()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $section-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $section-&gt;id, <span class="stringliteral">&quot;Section&quot;</span> );</div>
@@ -924,7 +928,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00041">41</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00037">37</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
 
 </div>
 </div>
@@ -946,7 +950,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00046">46</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00042">42</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
 
 </div>
 </div>
@@ -968,7 +972,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00051">51</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SectionService_8php_source.html#l00047">47</a> of file <a class="el" href="Core_2Repository_2SectionService_8php_source.html">SectionService.php</a>.</p>
 
 </div>
 </div>
@@ -981,7 +985,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Repository.html">Repository</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1SectionService.html">SectionService</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:57 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:20 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

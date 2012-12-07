@@ -141,7 +141,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html#l00020">20</a> of file <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html">RelationList.php</a>.</p>
+<p>Definition at line <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html#l00021">21</a> of file <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html">RelationList.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa5b04fa689aa3d36cd41dc038232cd29"></a>
 <div class="memitem">
@@ -164,7 +164,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html#l00032">32</a> of file <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html">RelationList.php</a>.</p>
+<p>Definition at line <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html#l00033">33</a> of file <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html">RelationList.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;db = $db;</div>
 <div class="line">    }</div>
@@ -190,7 +190,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter.html#ad266ad07454eb8043b80d08520ae273a">eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter</a>.</p>
 
-<p>Definition at line <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html#l00216">216</a> of file <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html">RelationList.php</a>.</p>
+<p>Definition at line <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html#l00217">217</a> of file <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html">RelationList.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="stringliteral">&#39;sort_key_string&#39;</span>;</div>
 <div class="line">    }</div>
@@ -233,7 +233,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter.html#aa5dafdf20e5ec322c1283520d8166b1b">eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter</a>.</p>
 
-<p>Definition at line <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html#l00169">169</a> of file <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html">RelationList.php</a>.</p>
+<p>Definition at line <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html#l00170">170</a> of file <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html">RelationList.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="comment">// default settings</span></div>
 <div class="line">        $fieldDef-&gt;fieldTypeConstraints-&gt;fieldSettings = array(</div>
@@ -256,19 +256,19 @@ Public Member Functions</h2></td></tr>
 <div class="line">            <span class="keywordflow">return</span>;</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( $selectionType = $dom-&gt;getElementsByTagName( <span class="stringliteral">&#39;selection_type&#39;</span> ) )</div>
-<div class="line">            $fieldSettings[<span class="stringliteral">&#39;selectionMethod&#39;</span>] = (<span class="keywordtype">int</span>)$selectionType-&gt;item( 0 )-&gt;getAttribute(<span class="stringliteral">&#39;value&#39;</span>);</div>
+<div class="line">            $fieldSettings[<span class="stringliteral">&#39;selectionMethod&#39;</span>] = (<span class="keywordtype">int</span>)$selectionType-&gt;item( 0 )-&gt;getAttribute( <span class="stringliteral">&#39;value&#39;</span> );</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> (</div>
 <div class="line">            ( $defaultLocation = $dom-&gt;getElementsByTagName( <span class="stringliteral">&#39;contentobject-placement&#39;</span> ) ) &amp;&amp;</div>
-<div class="line">            $defaultLocation-&gt;item( 0 )-&gt;hasAttribute(<span class="stringliteral">&#39;node-id&#39;</span>)</div>
+<div class="line">            $defaultLocation-&gt;item( 0 )-&gt;hasAttribute( <span class="stringliteral">&#39;node-id&#39;</span> )</div>
 <div class="line">        )</div>
-<div class="line">            $fieldSettings[<span class="stringliteral">&#39;selectionDefaultLocation&#39;</span>] = (<span class="keywordtype">int</span>)$defaultLocation-&gt;item( 0 )-&gt;getAttribute(<span class="stringliteral">&#39;node-id&#39;</span>);</div>
+<div class="line">            $fieldSettings[<span class="stringliteral">&#39;selectionDefaultLocation&#39;</span>] = (<span class="keywordtype">int</span>)$defaultLocation-&gt;item( 0 )-&gt;getAttribute( <span class="stringliteral">&#39;node-id&#39;</span> );</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( !( $constraints = $dom-&gt;getElementsByTagName( <span class="stringliteral">&#39;constraints&#39;</span> ) ) )</div>
 <div class="line">            <span class="keywordflow">return</span>;</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $constraints-&gt;item( 0 )-&gt;childNodes as $allowedClass )</div>
-<div class="line">            $fieldSettings[<span class="stringliteral">&#39;selectionContentTypes&#39;</span>][] = $allowedClass-&gt;getAttribute(<span class="stringliteral">&#39;contentclass-identifier&#39;</span>);</div>
+<div class="line">            $fieldSettings[<span class="stringliteral">&#39;selectionContentTypes&#39;</span>][] = $allowedClass-&gt;getAttribute( <span class="stringliteral">&#39;contentclass-identifier&#39;</span> );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 </div>
@@ -307,7 +307,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter.html#af08ae9a2b6b80b1cc1527675287625cd">eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter</a>.</p>
 
-<p>Definition at line <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html#l00099">99</a> of file <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html">RelationList.php</a>.</p>
+<p>Definition at line <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html#l00100">100</a> of file <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html">RelationList.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $fieldSettings = $fieldDef-&gt;fieldTypeConstraints-&gt;fieldSettings;</div>
 <div class="line">        $doc = <span class="keyword">new</span> DOMDocument( <span class="stringliteral">&#39;1.0&#39;</span>, <span class="stringliteral">&#39;utf-8&#39;</span> );</div>
@@ -387,7 +387,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter.html#ab4a6ca5c6c4fd22d7383492ab42b3554">eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter</a>.</p>
 
-<p>Definition at line <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html#l00043">43</a> of file <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html">RelationList.php</a>.</p>
+<p>Definition at line <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html#l00044">44</a> of file <a class="el" href="Persistence_2Legacy_2Content_2FieldValue_2Converter_2RelationList_8php_source.html">RelationList.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $doc = <span class="keyword">new</span> DOMDocument( <span class="stringliteral">&#39;1.0&#39;</span>, <span class="stringliteral">&#39;utf-8&#39;</span> );</div>
 <div class="line">        $root = $doc-&gt;createElement( <span class="stringliteral">&#39;related-objects&#39;</span> );</div>
@@ -397,7 +397,7 @@ Public Member Functions</h2></td></tr>
 <div class="line">        <span class="keywordflow">foreach</span> ( $this-&gt;getRelationXmlHashFromDB( $value-&gt;data[<span class="stringliteral">&#39;destinationContentIds&#39;</span>] ) as $row )</div>
 <div class="line">        {</div>
 <div class="line">            $relationItem = $doc-&gt;createElement( <span class="stringliteral">&#39;relation-item&#39;</span> );</div>
-<div class="line">            <span class="keywordflow">foreach</span>( self::dbAttributeMap() as $domAttrKey =&gt; $propertyKey )</div>
+<div class="line">            <span class="keywordflow">foreach</span> ( self::dbAttributeMap() as $domAttrKey =&gt; $propertyKey )</div>
 <div class="line">            {</div>
 <div class="line">                <span class="keywordflow">if</span> ( !isset( $row[$propertyKey] ) )</div>
 <div class="line">                    <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;Missing relation-item external data property: $propertyKey&quot;</span> );</div>
@@ -425,7 +425,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue.html">FieldValue</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter.html">Converter</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter_1_1RelationList.html">RelationList</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:55 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:17 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

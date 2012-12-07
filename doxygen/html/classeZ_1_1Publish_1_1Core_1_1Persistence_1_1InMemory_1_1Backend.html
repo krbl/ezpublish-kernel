@@ -142,7 +142,7 @@ Protected Attributes</h2></td></tr>
 <div class="textblock"><p>The Storage Engine backend for in memory storage Reads input from js files in provided directory and fills in memory db store.</p>
 <p>The in memory db store and also json representation have a one to one mapping to defined value objects. But only their plain properties, associations are not handled and all data is stored in separate "buckets" similar to how it would be in a RDBMS servers. </p>
 
-<p>Definition at line <a class="el" href="Backend_8php_source.html#l00026">26</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
+<p>Definition at line <a class="el" href="Backend_8php_source.html#l00027">27</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae518d0461df0a126aee9ca8e1fbeb7cc"></a>
 <div class="memitem">
@@ -166,9 +166,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Backend_8php_source.html#l00056">56</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
+<p>Definition at line <a class="el" href="Backend_8php_source.html#l00057">57</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
 
-<p>References <a class="el" href="Backend_8php_source.html#l00031">eZ\Publish\Core\Persistence\InMemory\Backend\$data</a>.</p>
+<p>References <a class="el" href="Backend_8php_source.html#l00032">eZ\Publish\Core\Persistence\InMemory\Backend\$data</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;data = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html#a396388ec12e4d174b7840cd7319c5bf8">$data</a> + <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html#a396388ec12e4d174b7840cd7319c5bf8">$this-&gt;data</a>;</div>
 <div class="line">    }</div>
@@ -191,9 +191,9 @@ Protected Attributes</h2></td></tr>
 <p>Begin transaction</p>
 <p>Begins an transaction, make sure you'll call commit or rollback when done, otherwise work will be lost. </p>
 
-<p>Definition at line <a class="el" href="Backend_8php_source.html#l00315">315</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
+<p>Definition at line <a class="el" href="Backend_8php_source.html#l00316">316</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
 
-<p>References <a class="el" href="Backend_8php_source.html#l00031">eZ\Publish\Core\Persistence\InMemory\Backend\$data</a>.</p>
+<p>References <a class="el" href="Backend_8php_source.html#l00032">eZ\Publish\Core\Persistence\InMemory\Backend\$data</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="comment">// copy current data to transaction stack</span></div>
 <div class="line">        $this-&gt;transactionDataStack[] = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html#a396388ec12e4d174b7840cd7319c5bf8">$this-&gt;data</a>;</div>
@@ -222,7 +222,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Backend_8php_source.html#l00328">328</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
+<p>Definition at line <a class="el" href="Backend_8php_source.html#l00329">329</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( empty( $this-&gt;transactionDataStack ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;No transactions in progress&quot;</span> );</div>
@@ -275,9 +275,9 @@ Protected Attributes</h2></td></tr>
 <p><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html#acb628adcf68c6e0f27135b4301019e8b">rawFind()</a></p>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p>Definition at line <a class="el" href="Backend_8php_source.html#l00304">304</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
+<p>Definition at line <a class="el" href="Backend_8php_source.html#l00305">305</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
 
-<p>References <a class="el" href="Backend_8php_source.html#l00366">eZ\Publish\Core\Persistence\InMemory\Backend\rawFind()</a>.</p>
+<p>References <a class="el" href="Backend_8php_source.html#l00367">eZ\Publish\Core\Persistence\InMemory\Backend\rawFind()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html#a2a2ae06ba0f486e6dcb61bab78a8bb01">count</a>( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html#acb628adcf68c6e0f27135b4301019e8b">rawFind</a>( $type, $match, $joinInfo ) );</div>
 <div class="line">    }</div>
@@ -350,9 +350,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Backend_8php_source.html#l00074">74</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
+<p>Definition at line <a class="el" href="Backend_8php_source.html#l00075">75</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
 
-<p>References <a class="el" href="Backend_8php_source.html#l00031">eZ\Publish\Core\Persistence\InMemory\Backend\$data</a>.</p>
+<p>References <a class="el" href="Backend_8php_source.html#l00032">eZ\Publish\Core\Persistence\InMemory\Backend\$data</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_scalar( $type ) || !isset( $this-&gt;data[$type] ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&#39;type&#39;</span>, $type );</div>
@@ -439,9 +439,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Backend_8php_source.html#l00255">255</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
+<p>Definition at line <a class="el" href="Backend_8php_source.html#l00256">256</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
 
-<p>References <a class="el" href="Backend_8php_source.html#l00272">eZ\Publish\Core\Persistence\InMemory\Backend\deleteByMatch()</a>.</p>
+<p>References <a class="el" href="Backend_8php_source.html#l00273">eZ\Publish\Core\Persistence\InMemory\Backend\deleteByMatch()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html#a7ae28ab69f063b64f28b93e50bbec410">deleteByMatch</a>( $type, array( $idColumn =&gt; $id ) );</div>
 <div class="line">    }</div>
@@ -499,7 +499,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Backend_8php_source.html#l00272">272</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
+<p>Definition at line <a class="el" href="Backend_8php_source.html#l00273">273</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_scalar( $type ) || !isset( $this-&gt;data[$type] ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&#39;type&#39;</span>, $type );</div>
@@ -572,9 +572,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>object[] </dd></dl>
 
-<p>Definition at line <a class="el" href="Backend_8php_source.html#l00176">176</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
+<p>Definition at line <a class="el" href="Backend_8php_source.html#l00177">177</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
 
-<p>References <a class="el" href="Backend_8php_source.html#l00366">eZ\Publish\Core\Persistence\InMemory\Backend\rawFind()</a>.</p>
+<p>References <a class="el" href="Backend_8php_source.html#l00367">eZ\Publish\Core\Persistence\InMemory\Backend\rawFind()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $items = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html#acb628adcf68c6e0f27135b4301019e8b">rawFind</a>( $type, $match, $joinInfo );</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $items as $key =&gt; $item )</div>
@@ -625,7 +625,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="Backend_8php_source.html#l00615">615</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
+<p>Definition at line <a class="el" href="Backend_8php_source.html#l00616">616</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( isset( $this-&gt;tempFieldTypeMapping[ $obj-&gt;type ] ) )</div>
 <div class="line">            <span class="keywordflow">return</span> $this-&gt;tempFieldTypeMapping[ $obj-&gt;type ];</div>
@@ -683,7 +683,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Backend_8php_source.html#l00127">127</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
+<p>Definition at line <a class="el" href="Backend_8php_source.html#l00128">128</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_scalar( $type ) || !isset( $this-&gt;data[$type] ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&#39;type&#39;</span>, $type );</div>
@@ -765,7 +765,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Backend_8php_source.html#l00366">366</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
+<p>Definition at line <a class="el" href="Backend_8php_source.html#l00367">367</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_scalar( $type ) || !isset( $this-&gt;data[$type] ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&#39;type&#39;</span>, $type );</div>
@@ -827,7 +827,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Backend_8php_source.html#l00344">344</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
+<p>Definition at line <a class="el" href="Backend_8php_source.html#l00345">345</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( empty( $this-&gt;transactionDataStack ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;No transactions in progress&quot;</span> );</div>
@@ -892,9 +892,9 @@ Protected Attributes</h2></td></tr>
 <p><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html#a3ec1f48513858e5a71d911a0ba806d4d">updateByMatch()</a></p>
 <dl class="section return"><dt>Returns</dt><dd>boolean False if data does not exist and can not be updated </dd></dl>
 
-<p>Definition at line <a class="el" href="Backend_8php_source.html#l00197">197</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
+<p>Definition at line <a class="el" href="Backend_8php_source.html#l00198">198</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
 
-<p>References <a class="el" href="Backend_8php_source.html#l00217">eZ\Publish\Core\Persistence\InMemory\Backend\updateByMatch()</a>.</p>
+<p>References <a class="el" href="Backend_8php_source.html#l00218">eZ\Publish\Core\Persistence\InMemory\Backend\updateByMatch()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html#a3ec1f48513858e5a71d911a0ba806d4d">updateByMatch</a>( $type, array( $idColumn =&gt; $id ), <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html#a396388ec12e4d174b7840cd7319c5bf8">$data</a>, $union, $idColumn );</div>
 <div class="line">    }</div>
@@ -972,9 +972,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>boolean False if data does not exist and can not be updated </dd></dl>
 
-<p>Definition at line <a class="el" href="Backend_8php_source.html#l00217">217</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
+<p>Definition at line <a class="el" href="Backend_8php_source.html#l00218">218</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
 
-<p>References <a class="el" href="Backend_8php_source.html#l00031">eZ\Publish\Core\Persistence\InMemory\Backend\$data</a>.</p>
+<p>References <a class="el" href="Backend_8php_source.html#l00032">eZ\Publish\Core\Persistence\InMemory\Backend\$data</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_scalar( $type ) || !isset( $this-&gt;data[$type] ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&#39;type&#39;</span>, $type );</div>
@@ -1035,7 +1035,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Backend_8php_source.html#l00031">31</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
+<p>Definition at line <a class="el" href="Backend_8php_source.html#l00032">32</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
 
 </div>
 </div>
@@ -1057,7 +1057,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Backend_8php_source.html#l00040">40</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
+<p>Definition at line <a class="el" href="Backend_8php_source.html#l00041">41</a> of file <a class="el" href="Backend_8php_source.html">Backend.php</a>.</p>
 
 </div>
 </div>
@@ -1070,7 +1070,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory.html">InMemory</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html">Backend</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:54 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:16 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

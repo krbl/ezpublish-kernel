@@ -106,59 +106,60 @@ $(document).ready(function(){initNavTree('Kernel_8php_source.html','');});
 <div class="contents">
 <a href="Kernel_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\MVC\Legacy;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use \ezpKernel,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    \ezpKernelHandler;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html">Kernel</a> <span class="keyword">extends</span> ezpKernel</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">private</span> $legacyRootDir;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">private</span> $webRootDir;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#ac24981a6f9105583f301e5f21705f464">   38</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#ac24981a6f9105583f301e5f21705f464">__construct</a>( ezpKernelHandler $kernelHandler, $legacyRootDir, $webRootDir )</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        $this-&gt;legacyRootDir = $legacyRootDir;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        $this-&gt;webRootDir = $webRootDir;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a9ff2420d72b590db96cd608ffdbaf44f">enterLegacyRootDir</a>();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#ac24981a6f9105583f301e5f21705f464">parent::__construct</a>( $kernelHandler );</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a2d2ed124b58cf86edc4e5e271fe1590d">leaveLegacyRootDir</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        $this-&gt;setUseExceptions( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a9ff2420d72b590db96cd608ffdbaf44f">   53</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a9ff2420d72b590db96cd608ffdbaf44f">enterLegacyRootDir</a>()</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        chdir( $this-&gt;legacyRootDir );</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a2d2ed124b58cf86edc4e5e271fe1590d">   61</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a2d2ed124b58cf86edc4e5e271fe1590d">leaveLegacyRootDir</a>()</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        chdir( $this-&gt;webRootDir );</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#ab512ef7cbc4be03c8ec210f6582175c4">   71</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#ab512ef7cbc4be03c8ec210f6582175c4">run</a>()</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a9ff2420d72b590db96cd608ffdbaf44f">enterLegacyRootDir</a>();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        $return = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#ab512ef7cbc4be03c8ec210f6582175c4">parent::run</a>();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a2d2ed124b58cf86edc4e5e271fe1590d">leaveLegacyRootDir</a>();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> $return;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a5a6366a7e7e49f607a92f951b05af52c">   89</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a5a6366a7e7e49f607a92f951b05af52c">runCallback</a>( \Closure $callback, $postReinitialize = <span class="keyword">true</span> )</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a9ff2420d72b590db96cd608ffdbaf44f">enterLegacyRootDir</a>();</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        $return = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a5a6366a7e7e49f607a92f951b05af52c">parent::runCallback</a>( $callback, $postReinitialize );</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a2d2ed124b58cf86edc4e5e271fe1590d">leaveLegacyRootDir</a>();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> $return;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use ezpKernel;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use ezpKernelHandler;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html">Kernel</a> <span class="keyword">extends</span> ezpKernel</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">private</span> $legacyRootDir;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">private</span> $webRootDir;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#ac24981a6f9105583f301e5f21705f464">   39</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#ac24981a6f9105583f301e5f21705f464">__construct</a>( ezpKernelHandler $kernelHandler, $legacyRootDir, $webRootDir )</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        $this-&gt;legacyRootDir = $legacyRootDir;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        $this-&gt;webRootDir = $webRootDir;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a9ff2420d72b590db96cd608ffdbaf44f">enterLegacyRootDir</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#ac24981a6f9105583f301e5f21705f464">parent::__construct</a>( $kernelHandler );</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a2d2ed124b58cf86edc4e5e271fe1590d">leaveLegacyRootDir</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        $this-&gt;setUseExceptions( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a9ff2420d72b590db96cd608ffdbaf44f">   54</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a9ff2420d72b590db96cd608ffdbaf44f">enterLegacyRootDir</a>()</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        chdir( $this-&gt;legacyRootDir );</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a2d2ed124b58cf86edc4e5e271fe1590d">   62</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a2d2ed124b58cf86edc4e5e271fe1590d">leaveLegacyRootDir</a>()</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        chdir( $this-&gt;webRootDir );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#ab512ef7cbc4be03c8ec210f6582175c4">   72</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#ab512ef7cbc4be03c8ec210f6582175c4">run</a>()</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a9ff2420d72b590db96cd608ffdbaf44f">enterLegacyRootDir</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        $return = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#ab512ef7cbc4be03c8ec210f6582175c4">parent::run</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a2d2ed124b58cf86edc4e5e271fe1590d">leaveLegacyRootDir</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">return</span> $return;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a5a6366a7e7e49f607a92f951b05af52c">   90</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a5a6366a7e7e49f607a92f951b05af52c">runCallback</a>( \Closure $callback, $postReinitialize = <span class="keyword">true</span> )</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a9ff2420d72b590db96cd608ffdbaf44f">enterLegacyRootDir</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        $return = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a5a6366a7e7e49f607a92f951b05af52c">parent::runCallback</a>( $callback, $postReinitialize );</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a2d2ed124b58cf86edc4e5e271fe1590d">leaveLegacyRootDir</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> $return;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_3f2bbbda4a8cf240a23a45721a8bf194.html">MVC</a></li><li class="navelem"><a class="el" href="dir_2d8a4b44c5251d3d84910f968efb6304.html">Legacy</a></li><li class="navelem"><a class="el" href="Kernel_8php.html">Kernel.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:48 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:10 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -155,7 +155,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00013">13</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
+<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00015">15</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5382d169891ffe812e6f8403527f51de"></a>
 <div class="memitem">
@@ -194,9 +194,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00041">41</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
+<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00043">43</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
 
-<p>References <a class="el" href="LocalFileService_8php_source.html#l00035">eZ\Publish\Core\FieldType\FileService\LocalFileService\$identifierPrefix</a>, <a class="el" href="LocalFileService_8php_source.html#l00020">eZ\Publish\Core\FieldType\FileService\LocalFileService\$installDir</a>, <a class="el" href="LocalFileService_8php_source.html#l00027">eZ\Publish\Core\FieldType\FileService\LocalFileService\$storageDir</a>, and <a class="el" href="LocalFileService_8php_source.html#l00041">eZ\Publish\Core\FieldType\FileService\LocalFileService\__construct()</a>.</p>
+<p>References <a class="el" href="LocalFileService_8php_source.html#l00037">eZ\Publish\Core\FieldType\FileService\LocalFileService\$identifierPrefix</a>, <a class="el" href="LocalFileService_8php_source.html#l00022">eZ\Publish\Core\FieldType\FileService\LocalFileService\$installDir</a>, <a class="el" href="LocalFileService_8php_source.html#l00029">eZ\Publish\Core\FieldType\FileService\LocalFileService\$storageDir</a>, and <a class="el" href="LocalFileService_8php_source.html#l00043">eZ\Publish\Core\FieldType\FileService\LocalFileService\__construct()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;installDir = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService_1_1LocalFileService.html#ad3c988a2af16f7def2a64f1e1cdd152c">$installDir</a>;</div>
 <div class="line">        $this-&gt;storageDir = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService_1_1LocalFileService.html#ac2a84f0e2ae3810f624fce87da342616">$storageDir</a>;</div>
@@ -264,9 +264,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00273">273</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
+<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00275">275</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
 
-<p>References <a class="el" href="LocalFileService_8php_source.html#l00273">eZ\Publish\Core\FieldType\FileService\LocalFileService\createDirectoryRecursive()</a>.</p>
+<p>References <a class="el" href="LocalFileService_8php_source.html#l00275">eZ\Publish\Core\FieldType\FileService\LocalFileService\createDirectoryRecursive()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( is_dir( $directory ) )</div>
 <div class="line">        {</div>
@@ -275,7 +275,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( $directory === <span class="stringliteral">&#39;&#39;</span> )</div>
 <div class="line">        {</div>
-<div class="line">            <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;Unable to create empty directory!&quot;</span> );</div>
+<div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException( <span class="stringliteral">&quot;Unable to create empty directory!&quot;</span> );</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService_1_1LocalFileService.html#a2cb23e1230dec40fdae911a0b22b3e16">createDirectoryRecursive</a>( dirname( $directory ) );</div>
@@ -284,14 +284,14 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( <span class="keyword">false</span> === $result )</div>
 <div class="line">        {</div>
-<div class="line">            <span class="keywordflow">throw</span> new  \RuntimeException( <span class="stringliteral">&quot;Could not create directory &#39;{$directory}&#39;.&quot;</span> );</div>
+<div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException( <span class="stringliteral">&quot;Could not create directory &#39;{$directory}&#39;.&quot;</span> );</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        $chmodResult = @chmod( $directory, 0775 );</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( <span class="keyword">false</span> === $chmodResult )</div>
 <div class="line">        {</div>
-<div class="line">            <span class="keywordflow">throw</span> new  \RuntimeException(</div>
+<div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException(</div>
 <div class="line">                <span class="stringliteral">&quot;Could not set permissions 0775 on directory &#39;{$directory}&#39;.&quot;</span></div>
 <div class="line">            );</div>
 <div class="line">        }</div>
@@ -345,9 +345,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService.html#a9e18a2bf6fc518ce61f390eb8f03f4fa">eZ\Publish\Core\FieldType\FileService</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00259">259</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
+<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00261">261</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
 
-<p>References <a class="el" href="LocalFileService_8php_source.html#l00055">eZ\Publish\Core\FieldType\FileService\LocalFileService\getFullPath()</a>.</p>
+<p>References <a class="el" href="LocalFileService_8php_source.html#l00057">eZ\Publish\Core\FieldType\FileService\LocalFileService\getFullPath()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> file_exists( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService_1_1LocalFileService.html#a2c47523466b4eeddbf85367067975b1d">getFullPath</a>( $storageIdentifier ) );</div>
 <div class="line">    }</div>
@@ -389,9 +389,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService.html#a50bf114a8418b2f9930f8dd34f0ce3dc">eZ\Publish\Core\FieldType\FileService</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00245">245</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
+<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00247">247</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
 
-<p>References <a class="el" href="LocalFileService_8php_source.html#l00055">eZ\Publish\Core\FieldType\FileService\LocalFileService\getFullPath()</a>.</p>
+<p>References <a class="el" href="LocalFileService_8php_source.html#l00057">eZ\Publish\Core\FieldType\FileService\LocalFileService\getFullPath()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> filesize(</div>
 <div class="line">            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService_1_1LocalFileService.html#a2c47523466b4eeddbf85367067975b1d">getFullPath</a>( $storageIdentifier )</div>
@@ -451,9 +451,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00055">55</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
+<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00057">57</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
 
-<p>References <a class="el" href="LocalFileService_8php_source.html#l00055">eZ\Publish\Core\FieldType\FileService\LocalFileService\getFullPath()</a>.</p>
+<p>References <a class="el" href="LocalFileService_8php_source.html#l00057">eZ\Publish\Core\FieldType\FileService\LocalFileService\getFullPath()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $allowLocal &amp;&amp; substr( $path, 0, 1 ) === <span class="charliteral">&#39;/&#39;</span> )</div>
 <div class="line">        {</div>
@@ -511,9 +511,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService.html#aa4e5b03a249b3d290d37782b24226c2f">eZ\Publish\Core\FieldType\FileService</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00226">226</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
+<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00228">228</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
 
-<p>References <a class="el" href="LocalFileService_8php_source.html#l00055">eZ\Publish\Core\FieldType\FileService\LocalFileService\getFullPath()</a>.</p>
+<p>References <a class="el" href="LocalFileService_8php_source.html#l00057">eZ\Publish\Core\FieldType\FileService\LocalFileService\getFullPath()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="comment">// Does not depend on GD</span></div>
 <div class="line">        $metaData = getimagesize( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService_1_1LocalFileService.html#a2c47523466b4eeddbf85367067975b1d">getFullPath</a>( $storageIdentifier ) );</div>
@@ -563,7 +563,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService.html#ae60dfd84f174f699cf7864f602035f79">eZ\Publish\Core\FieldType\FileService</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00206">206</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
+<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00208">208</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> ( !empty( $this-&gt;identifierPrefix )</div>
 <div class="line">            ? $this-&gt;identifierPrefix . <span class="charliteral">&#39;/&#39;</span></div>
@@ -615,9 +615,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService.html#a88b850dd014219f980bebbb390f88e40">eZ\Publish\Core\FieldType\FileService</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00135">135</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
+<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00137">137</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
 
-<p>References <a class="el" href="LocalFileService_8php_source.html#l00055">eZ\Publish\Core\FieldType\FileService\LocalFileService\getFullPath()</a>, and <a class="el" href="LocalFileService_8php_source.html#l00153">eZ\Publish\Core\FieldType\FileService\LocalFileService\removePathInternal()</a>.</p>
+<p>References <a class="el" href="LocalFileService_8php_source.html#l00057">eZ\Publish\Core\FieldType\FileService\LocalFileService\getFullPath()</a>, and <a class="el" href="LocalFileService_8php_source.html#l00155">eZ\Publish\Core\FieldType\FileService\LocalFileService\removePathInternal()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $fullPath = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService_1_1LocalFileService.html#a2c47523466b4eeddbf85367067975b1d">getFullPath</a>( $storageIdentifier );</div>
 <div class="line"></div>
@@ -685,9 +685,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00153">153</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
+<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00155">155</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
 
-<p>References <a class="el" href="LocalFileService_8php_source.html#l00153">eZ\Publish\Core\FieldType\FileService\LocalFileService\removePathInternal()</a>.</p>
+<p>References <a class="el" href="LocalFileService_8php_source.html#l00155">eZ\Publish\Core\FieldType\FileService\LocalFileService\removePathInternal()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( is_dir( $path ) )</div>
 <div class="line">        {</div>
@@ -699,7 +699,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">            {</div>
 <div class="line">                <span class="keywordflow">if</span> ( !$recursive )</div>
 <div class="line">                {</div>
-<div class="line">                    <span class="keywordflow">throw</span> new \RuntimeException(</div>
+<div class="line">                    <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException(</div>
 <div class="line">                        sprintf(</div>
 <div class="line">                            <span class="stringliteral">&#39;Cannot remove &quot;%s&quot;, because directory is not empty.&#39;</span>,</div>
 <div class="line">                            $path</div>
@@ -712,7 +712,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">            $rmdirResult = @rmdir( $path );</div>
 <div class="line">            <span class="keywordflow">if</span> ( <span class="keyword">false</span> === $rmdirResult )</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordflow">throw</span> new \RuntimeException(</div>
+<div class="line">                <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException(</div>
 <div class="line">                    sprintf( <span class="stringliteral">&#39;Could not remove directory &quot;%s&quot;&#39;</span>, $path )</div>
 <div class="line">                );</div>
 <div class="line">            }</div>
@@ -722,7 +722,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">            $unlinkResult = @unlink( $path );</div>
 <div class="line">            <span class="keywordflow">if</span> ( <span class="keyword">false</span> === $unlinkResult )</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordflow">throw</span> new \RuntimeException(</div>
+<div class="line">                <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException(</div>
 <div class="line">                    sprintf( <span class="stringliteral">&#39;Could not remove file &quot;%s&quot;&#39;</span>, $path )</div>
 <div class="line">                );</div>
 <div class="line">            }</div>
@@ -789,9 +789,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService.html#a489e5aabd9ab3fd708ffbb044a41f8bb">eZ\Publish\Core\FieldType\FileService</a>.</p>
 
-<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00073">73</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
+<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00075">75</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
 
-<p>References <a class="el" href="LocalFileService_8php_source.html#l00273">eZ\Publish\Core\FieldType\FileService\LocalFileService\createDirectoryRecursive()</a>, and <a class="el" href="LocalFileService_8php_source.html#l00055">eZ\Publish\Core\FieldType\FileService\LocalFileService\getFullPath()</a>.</p>
+<p>References <a class="el" href="LocalFileService_8php_source.html#l00275">eZ\Publish\Core\FieldType\FileService\LocalFileService\createDirectoryRecursive()</a>, and <a class="el" href="LocalFileService_8php_source.html#l00057">eZ\Publish\Core\FieldType\FileService\LocalFileService\getFullPath()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $fullSourcePath = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService_1_1LocalFileService.html#a2c47523466b4eeddbf85367067975b1d">getFullPath</a>( $sourcePath, <span class="keyword">true</span> );</div>
 <div class="line">        $fullTargetPath = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService_1_1LocalFileService.html#a2c47523466b4eeddbf85367067975b1d">getFullPath</a>( $storageIdentifier );</div>
@@ -810,7 +810,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( <span class="keyword">false</span> === $copyResult )</div>
 <div class="line">        {</div>
-<div class="line">            <span class="keywordflow">throw</span> new \RuntimeException(</div>
+<div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException(</div>
 <div class="line">                sprintf(</div>
 <div class="line">                    <span class="stringliteral">&#39;Could not copy &quot;%s&quot; to &quot;%s&quot;&#39;</span>,</div>
 <div class="line">                    $fullSourcePath,</div>
@@ -823,7 +823,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( <span class="keyword">false</span> === $chmodResult )</div>
 <div class="line">        {</div>
-<div class="line">            <span class="keywordflow">throw</span> new \RuntimeException(</div>
+<div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException(</div>
 <div class="line">                sprintf(</div>
 <div class="line">                    <span class="stringliteral">&#39;Could not change permissions of &quot;%s&quot; to &quot;%s&quot;&#39;</span>,</div>
 <div class="line">                    $fullTargetPath,</div>
@@ -867,7 +867,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00035">35</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
+<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00037">37</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
 
 </div>
 </div>
@@ -889,7 +889,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00020">20</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
+<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00022">22</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
 
 </div>
 </div>
@@ -911,7 +911,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00027">27</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
+<p>Definition at line <a class="el" href="LocalFileService_8php_source.html#l00029">29</a> of file <a class="el" href="LocalFileService_8php_source.html">LocalFileService.php</a>.</p>
 
 </div>
 </div>
@@ -924,7 +924,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1FieldType.html">FieldType</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService.html">FileService</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService_1_1LocalFileService.html">LocalFileService</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:53 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:15 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

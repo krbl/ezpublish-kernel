@@ -374,12 +374,12 @@ Protected Attributes</h2></td></tr>
 <div class="line">            $inputValue = <span class="keyword">new</span> Value( array( $inputValue-&gt;id ) );</div>
 <div class="line">        }</div>
 <div class="line">        <span class="comment">// content id</span></div>
-<div class="line">        elseif ( is_integer( $inputValue ) || is_string( $inputValue ) )</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( is_integer( $inputValue ) || is_string( $inputValue ) )</div>
 <div class="line">        {</div>
 <div class="line">            $inputValue = <span class="keyword">new</span> Value( array( $inputValue ) );</div>
 <div class="line">        }</div>
 <div class="line">        <span class="comment">// content id&#39;s</span></div>
-<div class="line">        elseif ( is_array( $inputValue ) )</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( is_array( $inputValue ) )</div>
 <div class="line">        {</div>
 <div class="line">            $inputValue = <span class="keyword">new</span> Value( $inputValue );</div>
 <div class="line">        }</div>
@@ -396,10 +396,10 @@ Protected Attributes</h2></td></tr>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">if</span> ( !is_integer( $destinationContentId ) &amp;&amp; !is_string( $destinationContentId ) )</div>
 <div class="line">            {</div>
-<div class="line">               <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentType(</div>
+<div class="line">                <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentType(</div>
 <div class="line">                    <span class="stringliteral">&quot;\$inputValue-&gt;destinationContentIds[$key]&quot;</span>,</div>
 <div class="line">                    <span class="stringliteral">&#39;string|int&#39;</span>,</div>
-<div class="line">                   $destinationContentId</div>
+<div class="line">                    $destinationContentId</div>
 <div class="line">                );</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
@@ -492,7 +492,7 @@ Protected Attributes</h2></td></tr>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $validationResult = array();</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">foreach</span>( array_keys( $fieldSettings ) as $setting )</div>
+<div class="line">        <span class="keywordflow">foreach</span> ( array_keys( $fieldSettings ) as $setting )</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">if</span> ( !in_array( $setting, array_keys( $this-&gt;settingsSchema ) ) )</div>
 <div class="line">            {</div>
@@ -609,7 +609,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1FieldType.html">FieldType</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1RelationList.html">RelationList</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1RelationList_1_1Type.html">Type</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:53 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:15 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -1,6 +1,6 @@
 var classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1TrashService =
 [
-    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1TrashService.html#a8332e3f76ccb5171541e7e18dd5d1299", null ],
+    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1TrashService.html#a15ae51d54448e277e7f0aa1d7a4a454a", null ],
     [ "buildTrashItem", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1TrashService.html#a476fe2a433c027619b4baf9f8d55cb20", null ],
     [ "deleteTrashItem", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1TrashService.html#a042f76be07eb6205fa0acd3c0956038c", null ],
     [ "emptyTrash", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1TrashService.html#a036631dd96fdefc80e83a325315b5c18", null ],

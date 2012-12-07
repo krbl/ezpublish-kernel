@@ -236,9 +236,8 @@ var hierarchy =
         [ "eZ\\Publish\\Core\\FieldType\\User\\Type", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1User_1_1Type.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\XmlText\\Type", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1Type.html", null ]
       ] ],
-      [ "eZ\\Publish\\Core\\Repository\\Values\\ContentType\\FieldType", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html", [
-        [ "eZ\\Publish\\Core\\REST\\Client\\FieldType", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1FieldType.html", null ]
-      ] ]
+      [ "eZ\\Publish\\Core\\Repository\\Values\\ContentType\\FieldType", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html", null ],
+      [ "eZ\\Publish\\Core\\REST\\Client\\FieldType", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1FieldType.html", null ]
     ] ],
     [ "eZ\\Publish\\API\\Repository\\FieldTypeService", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1FieldTypeService.html", [
       [ "eZ\\Publish\\Core\\Repository\\FieldTypeService", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1FieldTypeService.html", null ],
@@ -269,8 +268,9 @@ var hierarchy =
     ] ],
     [ "eZ\\Publish\\API\\Repository\\Repository", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html", [
       [ "eZ\\Publish\\Core\\Repository\\Repository", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Repository.html", null ],
-      [ "eZ\\Publish\\Core\\REST\\Client\\IntegrationTestRepository", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IntegrationTestRepository.html", null ],
-      [ "eZ\\Publish\\Core\\REST\\Client\\Repository", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Repository.html", null ],
+      [ "eZ\\Publish\\Core\\REST\\Client\\Repository", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Repository.html", [
+        [ "eZ\\Publish\\Core\\REST\\Client\\IntegrationTestRepository", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IntegrationTestRepository.html", null ]
+      ] ],
       [ "eZ\\Publish\\Core\\SignalSlot\\Repository", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html", null ]
     ] ],
     [ "eZ\\Publish\\API\\Repository\\RoleService", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1RoleService.html", [

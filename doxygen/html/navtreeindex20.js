@@ -1,6 +1,5 @@
 var NAVTREEINDEX20 =
 {
-"classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher_1_1UrlAlias.html#aa2474d4d2eb63e06e7fc8948563358ae":[3,0,0,1,1,4,2,9,0,0,0,4,1],
 "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Manager.html":[3,0,0,1,1,4,2,9,4],
 "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Manager.html#a01e6f3174ab3354fc4e430f1b2e0ad68":[3,0,0,1,1,4,2,9,4,9],
 "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Manager.html#a1250975a8a472ab5985ff84c6ca78637":[3,0,0,1,1,4,2,9,4,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX20 =
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a38040a4a98cc81fb1f2d71a90a19448c":[3,0,0,1,1,5,0,12,5],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a4db38d271130593a931d399cb9184221":[3,0,0,1,1,5,0,12,21],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a5695fc68cf229be7ab48096d3aab62de":[3,0,0,1,1,5,0,12,3],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a69b51748301117b2b4f9fbf49d002b70":[3,0,0,1,1,5,0,12,15]
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a69b51748301117b2b4f9fbf49d002b70":[3,0,0,1,1,5,0,12,15],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a7734ed679754e1360093cce2c609298e":[3,0,0,1,1,5,0,12,10]
 };

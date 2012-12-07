@@ -106,158 +106,159 @@ $(document).ready(function(){initNavTree('Core_2FieldType_2Page_2Type_8php_sourc
 <div class="contents">
 <a href="Core_2FieldType_2Page_2Type_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\FieldType\Page;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html">eZ\Publish\Core\FieldType\FieldType</a>,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Service.html">eZ\Publish\Core\FieldType\Page\Service</a> as PageService,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html">eZ\Publish\Core\FieldType\ValidationError</a>,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">eZ\Publish\Core\Base\Exceptions\InvalidArgumentType</a>,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    eZ\Publish\SPI\Persistence\Content\FieldValue;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html">Type</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html">FieldType</a></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#ae5a8f503d47e8ab43e58ef871c384569">   22</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#ae5a8f503d47e8ab43e58ef871c384569">$settingsSchema</a> = array(</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="stringliteral">&#39;defaultLayout&#39;</span> =&gt; array(</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="stringliteral">&#39;type&#39;</span> =&gt; <span class="stringliteral">&#39;string&#39;</span>,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="stringliteral">&#39;default&#39;</span> =&gt; <span class="stringliteral">&#39;&#39;</span>,</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        )</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    );</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a63c547f73dbcf07d05c4448effffac0d">   32</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a63c547f73dbcf07d05c4448effffac0d">$pageService</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a552e37142087a8f797973386cc8fabd1">   37</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a552e37142087a8f797973386cc8fabd1">__construct</a>( PageService <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a63c547f73dbcf07d05c4448effffac0d">$pageService</a> )</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        $this-&gt;pageService = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a63c547f73dbcf07d05c4448effffac0d">$pageService</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a5236498cb73d0db53e540057fabaa523">   47</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a5236498cb73d0db53e540057fabaa523">getFieldTypeIdentifier</a>()</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ezpage&quot;</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#aa5da1961f4aa13d03f88fa1105e13723">   59</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#aa5da1961f4aa13d03f88fa1105e13723">validateFieldSettings</a>( $fieldSettings )</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        $validationErrors = array();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">foreach</span> ( $fieldSettings as $name =&gt; $value )</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">if</span> ( isset( $this-&gt;settingsSchema[$name] ) )</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">switch</span> ( $name )</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;defaultLayout&#39;</span>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                        <span class="keywordflow">if</span> ( !in_array( $value, $this-&gt;pageService-&gt;getAvailableZoneTypes() ) )</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                        {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                            $validationErrors[] = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html">ValidationError</a>(</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                <span class="stringliteral">&quot;Setting &#39;%setting%&#39; is of unknown type&quot;</span>,</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                null,</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                                array(</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                    <span class="stringliteral">&#39;setting&#39;</span> =&gt; $name</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                )</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                            );</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                        }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                $validationErrors[] = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html">ValidationError</a>(</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    <span class="stringliteral">&quot;Setting &#39;%setting%&#39; is unknown&quot;</span>,</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    null,</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    array(</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                        <span class="stringliteral">&#39;setting&#39;</span> =&gt; $name</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    )</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                );</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> $validationErrors;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a91bb28313bff8539d76e0fd1fd2017bd">  106</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a91bb28313bff8539d76e0fd1fd2017bd">getEmptyValue</a>()</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Value.html">Value</a>();</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a42bde0429198550cbaf7268b80b2bf55">  118</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a42bde0429198550cbaf7268b80b2bf55">fromHash</a>( $hash )</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">if</span> ( $hash === null )</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">return</span> null;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Value.html">Value</a>( unserialize( $hash ) );</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a27564834184e8fd0556be1cd882794ef">  134</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a27564834184e8fd0556be1cd882794ef">toHash</a>( $value )</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    {</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html#a6205d987981a9595cc3d1322aa6ddd96">isEmptyValue</a>( $value ) )</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        {</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="keywordflow">return</span> null;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordflow">return</span> serialize( $value-&gt;page );</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a8e25a4b01150e7c63c3249f93446e877">  150</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a8e25a4b01150e7c63c3249f93446e877">fromPersistenceValue</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1FieldValue.html">FieldValue</a> $fieldValue )</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">if</span> ( $fieldValue-&gt;data === null )</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        {</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordflow">return</span> null;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        }</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Value.html">Value</a>( $fieldValue-&gt;data );</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a9eaf326e2a31995782b38977a9b9eeaf">  167</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a9eaf326e2a31995782b38977a9b9eeaf">toPersistenceValue</a>( $value )</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    {</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">if</span> ( $value === null )</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        {</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1FieldValue.html">FieldValue</a>(</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                array(</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                    <span class="stringliteral">&quot;data&quot;</span> =&gt; null,</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                    <span class="stringliteral">&quot;externalData&quot;</span> =&gt; null,</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                    <span class="stringliteral">&quot;sortKey&quot;</span> =&gt; null</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                )</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            );</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        }</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1FieldValue.html">FieldValue</a>(</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            array(</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                <span class="stringliteral">&quot;data&quot;</span> =&gt; $value-&gt;page,</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                <span class="stringliteral">&quot;externalData&quot;</span> =&gt; null,</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                <span class="stringliteral">&quot;sortKey&quot;</span> =&gt; $this-&gt;getSortInfo( $value )</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            )</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        );</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    }</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a3e8bac01b10e0b70a31ea1248526f566">  205</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a3e8bac01b10e0b70a31ea1248526f566">getSortInfo</a>( $value )</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    }</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="line"><a name="l00220"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a5511dd17d0fea49f99fe1ba044ad653e">  220</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a5511dd17d0fea49f99fe1ba044ad653e">getName</a>( $value )</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    {</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&#39;&#39;</span>;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    }</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
-<div class="line"><a name="l00232"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#ad36e808b38d098d8fc2da6abc1bc4607">  232</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#ad36e808b38d098d8fc2da6abc1bc4607">internalAcceptValue</a>( $inputValue )</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">if</span> ( !$inputValue instanceof <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Value.html">Value</a> )</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        {</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">InvalidArgumentType</a>(</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                <span class="stringliteral">&#39;$inputValue&#39;</span>,</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                <span class="stringliteral">&#39;eZ\\Publish\\Core\\FieldType\\Page\\Value&#39;</span>,</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                $inputValue</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            );</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        }</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordflow">return</span> $inputValue;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html">eZ\Publish\Core\FieldType\FieldType</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Service.html">eZ\Publish\Core\FieldType\Page\Service</a> as PageService;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html">eZ\Publish\Core\FieldType\ValidationError</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">eZ\Publish\Core\Base\Exceptions\InvalidArgumentType</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use eZ\Publish\SPI\Persistence\Content\FieldValue;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html">Type</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html">FieldType</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#ae5a8f503d47e8ab43e58ef871c384569">   23</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#ae5a8f503d47e8ab43e58ef871c384569">$settingsSchema</a> = array(</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="stringliteral">&#39;defaultLayout&#39;</span> =&gt; array(</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="stringliteral">&#39;type&#39;</span> =&gt; <span class="stringliteral">&#39;string&#39;</span>,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="stringliteral">&#39;default&#39;</span> =&gt; <span class="stringliteral">&#39;&#39;</span>,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        )</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    );</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a63c547f73dbcf07d05c4448effffac0d">   33</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a63c547f73dbcf07d05c4448effffac0d">$pageService</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a552e37142087a8f797973386cc8fabd1">   38</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a552e37142087a8f797973386cc8fabd1">__construct</a>( PageService <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a63c547f73dbcf07d05c4448effffac0d">$pageService</a> )</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        $this-&gt;pageService = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a63c547f73dbcf07d05c4448effffac0d">$pageService</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a5236498cb73d0db53e540057fabaa523">   48</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a5236498cb73d0db53e540057fabaa523">getFieldTypeIdentifier</a>()</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ezpage&quot;</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#aa5da1961f4aa13d03f88fa1105e13723">   60</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#aa5da1961f4aa13d03f88fa1105e13723">validateFieldSettings</a>( $fieldSettings )</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        $validationErrors = array();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">foreach</span> ( $fieldSettings as $name =&gt; $value )</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">if</span> ( isset( $this-&gt;settingsSchema[$name] ) )</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">switch</span> ( $name )</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&#39;defaultLayout&#39;</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                        <span class="keywordflow">if</span> ( !in_array( $value, $this-&gt;pageService-&gt;getAvailableZoneTypes() ) )</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                        {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                            $validationErrors[] = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html">ValidationError</a>(</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                <span class="stringliteral">&quot;Setting &#39;%setting%&#39; is of unknown type&quot;</span>,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                                null,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                array(</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                    <span class="stringliteral">&#39;setting&#39;</span> =&gt; $name</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                                )</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                            );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                $validationErrors[] = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html">ValidationError</a>(</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    <span class="stringliteral">&quot;Setting &#39;%setting%&#39; is unknown&quot;</span>,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    null,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    array(</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                        <span class="stringliteral">&#39;setting&#39;</span> =&gt; $name</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    )</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> $validationErrors;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a91bb28313bff8539d76e0fd1fd2017bd">  107</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a91bb28313bff8539d76e0fd1fd2017bd">getEmptyValue</a>()</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Value.html">Value</a>();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a42bde0429198550cbaf7268b80b2bf55">  119</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a42bde0429198550cbaf7268b80b2bf55">fromHash</a>( $hash )</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">if</span> ( $hash === null )</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Value.html">Value</a>( unserialize( $hash ) );</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a27564834184e8fd0556be1cd882794ef">  135</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a27564834184e8fd0556be1cd882794ef">toHash</a>( $value )</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html#a6205d987981a9595cc3d1322aa6ddd96">isEmptyValue</a>( $value ) )</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">return</span> serialize( $value-&gt;page );</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a8e25a4b01150e7c63c3249f93446e877">  151</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a8e25a4b01150e7c63c3249f93446e877">fromPersistenceValue</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1FieldValue.html">FieldValue</a> $fieldValue )</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">if</span> ( $fieldValue-&gt;data === null )</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Value.html">Value</a>( $fieldValue-&gt;data );</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a9eaf326e2a31995782b38977a9b9eeaf">  168</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a9eaf326e2a31995782b38977a9b9eeaf">toPersistenceValue</a>( $value )</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">if</span> ( $value === null )</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1FieldValue.html">FieldValue</a>(</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                array(</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                    <span class="stringliteral">&quot;data&quot;</span> =&gt; null,</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                    <span class="stringliteral">&quot;externalData&quot;</span> =&gt; null,</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                    <span class="stringliteral">&quot;sortKey&quot;</span> =&gt; null</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                )</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            );</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1FieldValue.html">FieldValue</a>(</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            array(</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                <span class="stringliteral">&quot;data&quot;</span> =&gt; $value-&gt;page,</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                <span class="stringliteral">&quot;externalData&quot;</span> =&gt; null,</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                <span class="stringliteral">&quot;sortKey&quot;</span> =&gt; $this-&gt;getSortInfo( $value )</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            )</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        );</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a3e8bac01b10e0b70a31ea1248526f566">  206</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a3e8bac01b10e0b70a31ea1248526f566">getSortInfo</a>( $value )</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a5511dd17d0fea49f99fe1ba044ad653e">  221</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#a5511dd17d0fea49f99fe1ba044ad653e">getName</a>( $value )</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&#39;&#39;</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#ad36e808b38d098d8fc2da6abc1bc4607">  233</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Type.html#ad36e808b38d098d8fc2da6abc1bc4607">internalAcceptValue</a>( $inputValue )</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordflow">if</span> ( !$inputValue instanceof <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Value.html">Value</a> )</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">InvalidArgumentType</a>(</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                <span class="stringliteral">&#39;$inputValue&#39;</span>,</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                <span class="stringliteral">&#39;eZ\\Publish\\Core\\FieldType\\Page\\Value&#39;</span>,</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                $inputValue</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            );</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">return</span> $inputValue;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_429826c28e0afa35fa370fabe902bc82.html">FieldType</a></li><li class="navelem"><a class="el" href="dir_8761198b1dd2fec83baa0944ce28623f.html">Page</a></li><li class="navelem"><a class="el" href="Core_2FieldType_2Page_2Type_8php.html">Type.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:47 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:09 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

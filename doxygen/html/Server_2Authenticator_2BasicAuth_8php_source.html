@@ -106,47 +106,48 @@ $(document).ready(function(){initNavTree('Server_2Authenticator_2BasicAuth_8php_
 <div class="contents">
 <a href="Server_2Authenticator_2BasicAuth_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator.html">   13</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator.html">eZ\Publish\Core\REST\Server\Authenticator</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator.html">eZ\Publish\Core\REST\Server\Authenticator</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use eZ\Publish\Core\REST\Server\Exceptions;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html">eZ\Publish\API\Repository\Repository</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;use \eZ\Publish\API\Repository\Exceptions\NotFoundException;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;use Qafoo\RMF;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator_1_1BasicAuth.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator_1_1BasicAuth.html">BasicAuth</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator.html">Authenticator</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator_1_1BasicAuth.html#a2cae47d080fa7da94eeafb295ffc4711">   34</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator.html#a41cce4e98ad2cc7db9d3f241189d42c7">__construct</a>( <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html">Repository</a> <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a9202b363fd05640f938dcadbaaaa02ad">$repository</a> )</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        $this-&gt;repository = <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a9202b363fd05640f938dcadbaaaa02ad">$repository</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator_1_1BasicAuth.html#af5b7fb0eee5b607b893f1c4014ce526f">   50</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator.html#af882f4cce7bbdc48bcec7e01a7a188c4">authenticate</a>( RMF\<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Request.html">Request</a> $request )</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            $this-&gt;repository-&gt;setCurrentUser(</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                $this-&gt;repository-&gt;getUserService()-&gt;loadUserByCredentials(</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    $request-&gt;username, $request-&gt;password</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                )</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            );</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">catch</span> ( \InvalidArgumentException $e )</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1NotFoundException.html">NotFoundException</a> $e )</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Exceptions_1_1AuthenticationFailedException.html">Exceptions\AuthenticationFailedException</a>();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator.html">eZ\Publish\Core\REST\Server\Authenticator</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use eZ\Publish\Core\REST\Server\Exceptions;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html">eZ\Publish\API\Repository\Repository</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1NotFoundException.html">eZ\Publish\API\Repository\Exceptions\NotFoundException</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;use Qafoo\RMF;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator_1_1BasicAuth.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator_1_1BasicAuth.html">BasicAuth</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator.html">Authenticator</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator_1_1BasicAuth.html#a2cae47d080fa7da94eeafb295ffc4711">   35</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator.html#a41cce4e98ad2cc7db9d3f241189d42c7">__construct</a>( <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html">Repository</a> <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a9202b363fd05640f938dcadbaaaa02ad">$repository</a> )</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        $this-&gt;repository = <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a9202b363fd05640f938dcadbaaaa02ad">$repository</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator_1_1BasicAuth.html#af5b7fb0eee5b607b893f1c4014ce526f">   51</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator.html#af882f4cce7bbdc48bcec7e01a7a188c4">authenticate</a>( RMF\<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Request.html">Request</a> $request )</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            $this-&gt;repository-&gt;setCurrentUser(</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                $this-&gt;repository-&gt;getUserService()-&gt;loadUserByCredentials(</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    $request-&gt;username, $request-&gt;password</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                )</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            );</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">catch</span> ( \InvalidArgumentException $e )</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1NotFoundException.html">NotFoundException</a> $e )</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Exceptions_1_1AuthenticationFailedException.html">Exceptions\AuthenticationFailedException</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_797398f06ec5dac6abf0352e0ae63d7a.html">REST</a></li><li class="navelem"><a class="el" href="dir_21fb5f37fbde5211f1530de5bf933d51.html">Server</a></li><li class="navelem"><a class="el" href="dir_6129538b5c03fad1373b9b9e60804548.html">Authenticator</a></li><li class="navelem"><a class="el" href="Server_2Authenticator_2BasicAuth_8php.html">BasicAuth.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:49 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:11 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

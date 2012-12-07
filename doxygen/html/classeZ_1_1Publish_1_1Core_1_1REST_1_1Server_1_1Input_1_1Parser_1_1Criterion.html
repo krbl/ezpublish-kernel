@@ -153,7 +153,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser.html">Parser</a> for <a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ViewInput.html">ViewInput</a> </p>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html#l00020">20</a> of file <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html">Criterion.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html#l00021">21</a> of file <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html">Criterion.php</a>.</p>
 </div><h2>Member Function Documentation</h2>
 <a class="anchor" id="a1ba029d363553447cbb3ebeb09a3db1c"></a>
 <div class="memitem">
@@ -201,16 +201,16 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html#l00041">41</a> of file <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html">Criterion.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html#l00042">42</a> of file <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html">Criterion.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html#l00054">eZ\Publish\Core\REST\Server\Input\Parser\Criterion\getCriterionMediaType()</a>, and <a class="el" href="ParsingDispatcher_8php_source.html#l00067">eZ\Publish\Core\REST\Common\Input\ParsingDispatcher\parse()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html#l00055">eZ\Publish\Core\REST\Server\Input\Parser\Criterion\getCriterionMediaType()</a>, and <a class="el" href="ParsingDispatcher_8php_source.html#l00067">eZ\Publish\Core\REST\Common\Input\ParsingDispatcher\parse()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $mediaType = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Criterion.html#a97805a483a1fc7956a52b7633a008bfc">getCriterionMediaType</a>( $criterionName );</div>
 <div class="line">        <span class="keywordflow">try</span></div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">return</span> $parsingDispatcher-&gt;parse( array( $criterionName =&gt; $criterionData ), $mediaType );</div>
 <div class="line">        }</div>
-<div class="line">        <span class="keywordflow">catch</span>( Exceptions\Parser $e )</div>
+<div class="line">        <span class="keywordflow">catch</span> ( Exceptions\Parser $e )</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exceptions\Parser( <span class="stringliteral">&quot;Invalid Criterion id &lt;$criterionName&gt; in &lt;AND&gt;&quot;</span>, 0, $e );</div>
 <div class="line">        }</div>
@@ -262,7 +262,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html#l00054">54</a> of file <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html">Criterion.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html#l00055">55</a> of file <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html">Criterion.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $criterionName = str_replace( <span class="stringliteral">&#39;Criterion&#39;</span>, <span class="stringliteral">&#39;&#39;</span>, $criterionName );</div>
 <div class="line">        <span class="keywordflow">if</span> ( isset( self::$criterionIdMap[$criterionName] ) )</div>
@@ -309,7 +309,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line">        <span class="stringliteral">&#39;NOT&#39;</span> =&gt; <span class="stringliteral">&#39;LogicalNot&#39;</span>,</div>
 <div class="line">    )</div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html#l00025">25</a> of file <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html">Criterion.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html#l00026">26</a> of file <a class="el" href="Core_2REST_2Server_2Input_2Parser_2Criterion_8php_source.html">Criterion.php</a>.</p>
 
 </div>
 </div>
@@ -322,7 +322,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html">REST</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server.html">Server</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input.html">Input</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser.html">Parser</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Criterion.html">Criterion</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:59 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:22 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -106,210 +106,211 @@ $(document).ready(function(){initNavTree('Output_2Generator_2Json_8php_source.ht
 <div class="contents">
 <a href="Output_2Generator_2Json_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html">eZ\Publish\Core\REST\Common\Output\Generator</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html">eZ\Publish\Core\REST\Common\Output\Generator</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html">Json</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html">Generator</a></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#ab047bfc3be657035ee93bb933daecdab">   23</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#ab047bfc3be657035ee93bb933daecdab">$json</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a0b48a569a23ccd846e9548314514ef2a">   30</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a0b48a569a23ccd846e9548314514ef2a">$fieldTypeHashGenerator</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a58cf3930626ef72f88b5829ece502f10">   37</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a58cf3930626ef72f88b5829ece502f10">$isEmpty</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a42db8e90d096814f54c4ad65da442265">   42</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a42db8e90d096814f54c4ad65da442265">__construct</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html">Json</a>\FieldTypeHashGenerator $fieldTypeHashGenerator )</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        $this-&gt;fieldTypeHashGenerator = $fieldTypeHashGenerator;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a5808a42e7a2c30111f5482282142cedd">   52</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a96c0abcb0e53d4865b5cf8c7a31a4b98">startDocument</a>( $data )</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a013651fb77ed2d57f433bd090f0b1020">checkStartDocument</a>( $data );</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#ac3585230b7b828259bbc23e8af0b00d4">isEmpty</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        $this-&gt;json = <span class="keyword">new</span> Json\Object();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a74694286c73cb9a83b0a49b373a75f9f">   66</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#ac3585230b7b828259bbc23e8af0b00d4">isEmpty</a>()</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> $this-&gt;isEmpty;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a12650bd3c28f130045183eac341bc2e6">   80</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a81c000ecd796c0c691a8d16fc8983d59">endDocument</a>( $data )</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a55805223023c100e0f3c628be4209126">checkEndDocument</a>( $data );</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        $this-&gt;json = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a6d39c2663d625ee63eb9e19c4ad30bd9">convertArrayObjects</a>( $this-&gt;json );</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span> json_encode( $this-&gt;json );</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a6d39c2663d625ee63eb9e19c4ad30bd9">   98</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a6d39c2663d625ee63eb9e19c4ad30bd9">convertArrayObjects</a>( $data )</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">if</span> ( $data instanceof <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html">Json</a>\ArrayObject )</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="comment">// @todo: Check if we need to convert arrays with only one single</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="comment">// element into non-arrays /cc cba</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            $data = $data-&gt;getArrayCopy();</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">foreach</span> ( $data as $key =&gt; $value )</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                $data[$key] = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a6d39c2663d625ee63eb9e19c4ad30bd9">convertArrayObjects</a>( $value );</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        elseif ( $data instanceof <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html">Json</a>\Object )</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">foreach</span> ( $data as $key =&gt; $value )</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                $data-&gt;$key = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a6d39c2663d625ee63eb9e19c4ad30bd9">convertArrayObjects</a>( $value );</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            }</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">return</span> $data;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a43c8ae2c6eb132f6824a53df8e569f4f">  127</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#afef20446230906ddb6b72075ff056979">startObjectElement</a>( $name, $mediaTypeName = null )</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#af24734a84d5d9e23aa169d0ee5b93fa1">checkStartObjectElement</a>( $name );</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#ac3585230b7b828259bbc23e8af0b00d4">isEmpty</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        $mediaTypeName = $mediaTypeName ?: $name;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        $object = <span class="keyword">new</span> Json\Object( $this-&gt;json );</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;json instanceof <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html">Json</a>\ArrayObject )</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        {</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            $this-&gt;json[] = $object;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            $this-&gt;json = $object;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        }</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        {</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            $this-&gt;json-&gt;$name = $object;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            $this-&gt;json = $object;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a31e47173dd7f3e2f2d99bec90bdf88aa">startAttribute</a>( <span class="stringliteral">&quot;media-type&quot;</span>, $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a5e458da266cdb2514bf383c945dd69f7">getMediaType</a>( $mediaTypeName ) );</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#acdadcab9fbfbf8f6ecdddb1fac2fc80d">endAttribute</a>( <span class="stringliteral">&quot;media-type&quot;</span> );</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#ac3b46a72aa61e122b73cd005a4d8f56d">  157</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a472acb47b211e5d2ce645bee06a4cf29">endObjectElement</a>( $name )</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    {</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a68b5c03bd56b436f914c2c0f0d8a9629">checkEndObjectElement</a>( $name );</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        $this-&gt;json = $this-&gt;json-&gt;getParent();</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a9b8d9fb76555fca412af98b33d725269">  169</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#ac3d2d3d84a090d361ba2abd8248fc756">startHashElement</a>( $name )</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    {</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#ac1d2ebd8889429641f0793b8d75df749">checkStartHashElement</a>( $name );</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#ac3585230b7b828259bbc23e8af0b00d4">isEmpty</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        $object = <span class="keyword">new</span> Json\Object( $this-&gt;json );</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;json instanceof <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html">Json</a>\ArrayObject )</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        {</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            $this-&gt;json[] = $object;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            $this-&gt;json = $object;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        }</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        {</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            $this-&gt;json-&gt;$name = $object;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            $this-&gt;json = $object;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        }</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    }</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#abc42844e3a8e5703873d57db4d2d1ea6">  194</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a53af1d148d293d7a1d4959cc205bfe84">endHashElement</a>( $name )</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a8fb202af129b1abf45225dad63027a2d">checkEndHashElement</a>( $name );</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        $this-&gt;json = $this-&gt;json-&gt;getParent();</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a3f3c978f52ba820e52e4e7d7dfae5889">  208</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a48b9483cc146d7208e0a11de64cbedd8">startValueElement</a>( $name, $value, $attributes = array() )</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    {</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a753602d9e1000a60b973b3fa392a4fde">checkStartValueElement</a>( $name );</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        $jsonValue = null;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordflow">if</span> ( empty( $attributes ) )</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        {</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            $jsonValue = $value;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        }</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            $jsonValue = <span class="keyword">new</span> Json\Object( $this-&gt;json );</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="keywordflow">foreach</span> ( $attributes as $attributeName =&gt; $attributeValue )</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            {</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                $jsonValue-&gt;{<span class="charliteral">&#39;_&#39;</span> . $attributeName} = $attributeValue;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            }</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            $jsonValue-&gt;{<span class="stringliteral">&#39;#text&#39;</span>} = $value;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        }</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;json instanceof Json\ArrayObject )</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        {</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            $this-&gt;json[] = $jsonValue;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        }</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            $this-&gt;json-&gt;$name = $jsonValue;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    }</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
-<div class="line"><a name="l00243"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a58f12553e539f9680d76a114d5c2b57d">  243</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> endValueElement( $name )</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    {</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        $this-&gt;checkEndValueElement( $name );</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    }</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
-<div class="line"><a name="l00253"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a182ea1307fae8c39d925f1210276aacb">  253</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> startList( $name )</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    {</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        $this-&gt;checkStartList( $name );</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        $array = <span class="keyword">new</span> Json\ArrayObject( $this-&gt;json );</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        $this-&gt;json-&gt;$name = $array;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        $this-&gt;json = $array;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    }</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
-<div class="line"><a name="l00268"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a024f8dd4fb0c0df45baa55ca3c65d447">  268</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> endList( $name )</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    {</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        $this-&gt;checkEndList( $name );</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        $this-&gt;json = $this-&gt;json-&gt;getParent();</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    }</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
-<div class="line"><a name="l00281"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a306285e80919b7e38cb0df3c1842b5ff">  281</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> startAttribute( $name, $value )</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    {</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        $this-&gt;checkStartAttribute( $name );</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        $this-&gt;json-&gt;{<span class="charliteral">&#39;_&#39;</span> . $name} = $value;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    }</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
-<div class="line"><a name="l00293"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#ae54068fc6e6e9e05d136b53a0933e385">  293</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> endAttribute( $name )</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    {</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        $this-&gt;checkEndAttribute( $name );</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    }</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
-<div class="line"><a name="l00305"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a17677e516d5dfc2c31ca5e73a8c6a680">  305</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> getMediaType( $name )</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    {</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordflow">return</span> $this-&gt;generateMediaType( $name, <span class="stringliteral">&#39;json&#39;</span> );</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    }</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
-<div class="line"><a name="l00318"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a997f08b012fa2ad72e5d7bad8cd082e9">  318</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> generateFieldTypeHash( $hashElementName, $hashValue )</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        $this-&gt;fieldTypeHashGenerator-&gt;generateHashValue(</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            $this-&gt;json,</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            $hashElementName,</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            $hashValue</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        );</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    }</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html">eZ\Publish\Core\REST\Common\Output\Generator</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html">Json</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html">Generator</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#ab047bfc3be657035ee93bb933daecdab">   24</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#ab047bfc3be657035ee93bb933daecdab">$json</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a0b48a569a23ccd846e9548314514ef2a">   31</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a0b48a569a23ccd846e9548314514ef2a">$fieldTypeHashGenerator</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a58cf3930626ef72f88b5829ece502f10">   38</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a58cf3930626ef72f88b5829ece502f10">$isEmpty</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a42db8e90d096814f54c4ad65da442265">   43</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a42db8e90d096814f54c4ad65da442265">__construct</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html">Json</a>\FieldTypeHashGenerator $fieldTypeHashGenerator )</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        $this-&gt;fieldTypeHashGenerator = $fieldTypeHashGenerator;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a5808a42e7a2c30111f5482282142cedd">   53</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a96c0abcb0e53d4865b5cf8c7a31a4b98">startDocument</a>( $data )</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a013651fb77ed2d57f433bd090f0b1020">checkStartDocument</a>( $data );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#ac3585230b7b828259bbc23e8af0b00d4">isEmpty</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        $this-&gt;json = <span class="keyword">new</span> Json\Object();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a74694286c73cb9a83b0a49b373a75f9f">   67</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#ac3585230b7b828259bbc23e8af0b00d4">isEmpty</a>()</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> $this-&gt;isEmpty;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a12650bd3c28f130045183eac341bc2e6">   81</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a81c000ecd796c0c691a8d16fc8983d59">endDocument</a>( $data )</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a55805223023c100e0f3c628be4209126">checkEndDocument</a>( $data );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        $this-&gt;json = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a6d39c2663d625ee63eb9e19c4ad30bd9">convertArrayObjects</a>( $this-&gt;json );</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> json_encode( $this-&gt;json );</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a6d39c2663d625ee63eb9e19c4ad30bd9">   99</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a6d39c2663d625ee63eb9e19c4ad30bd9">convertArrayObjects</a>( $data )</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span> ( $data instanceof <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html">Json</a>\ArrayObject )</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="comment">// @todo: Check if we need to convert arrays with only one single</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="comment">// element into non-arrays /cc cba</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            $data = $data-&gt;getArrayCopy();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">foreach</span> ( $data as $key =&gt; $value )</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                $data[$key] = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a6d39c2663d625ee63eb9e19c4ad30bd9">convertArrayObjects</a>( $value );</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $data instanceof <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html">Json</a>\Object )</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">foreach</span> ( $data as $key =&gt; $value )</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                $data-&gt;$key = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a6d39c2663d625ee63eb9e19c4ad30bd9">convertArrayObjects</a>( $value );</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">return</span> $data;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a43c8ae2c6eb132f6824a53df8e569f4f">  128</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#afef20446230906ddb6b72075ff056979">startObjectElement</a>( $name, $mediaTypeName = null )</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#af24734a84d5d9e23aa169d0ee5b93fa1">checkStartObjectElement</a>( $name );</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#ac3585230b7b828259bbc23e8af0b00d4">isEmpty</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        $mediaTypeName = $mediaTypeName ?: $name;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        $object = <span class="keyword">new</span> Json\Object( $this-&gt;json );</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;json instanceof <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html">Json</a>\ArrayObject )</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            $this-&gt;json[] = $object;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            $this-&gt;json = $object;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            $this-&gt;json-&gt;$name = $object;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            $this-&gt;json = $object;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a31e47173dd7f3e2f2d99bec90bdf88aa">startAttribute</a>( <span class="stringliteral">&quot;media-type&quot;</span>, $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a5e458da266cdb2514bf383c945dd69f7">getMediaType</a>( $mediaTypeName ) );</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#acdadcab9fbfbf8f6ecdddb1fac2fc80d">endAttribute</a>( <span class="stringliteral">&quot;media-type&quot;</span> );</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#ac3b46a72aa61e122b73cd005a4d8f56d">  158</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a472acb47b211e5d2ce645bee06a4cf29">endObjectElement</a>( $name )</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a68b5c03bd56b436f914c2c0f0d8a9629">checkEndObjectElement</a>( $name );</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        $this-&gt;json = $this-&gt;json-&gt;getParent();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a9b8d9fb76555fca412af98b33d725269">  170</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#ac3d2d3d84a090d361ba2abd8248fc756">startHashElement</a>( $name )</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#ac1d2ebd8889429641f0793b8d75df749">checkStartHashElement</a>( $name );</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#ac3585230b7b828259bbc23e8af0b00d4">isEmpty</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        $object = <span class="keyword">new</span> Json\Object( $this-&gt;json );</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;json instanceof <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html">Json</a>\ArrayObject )</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            $this-&gt;json[] = $object;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            $this-&gt;json = $object;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            $this-&gt;json-&gt;$name = $object;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            $this-&gt;json = $object;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#abc42844e3a8e5703873d57db4d2d1ea6">  195</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a53af1d148d293d7a1d4959cc205bfe84">endHashElement</a>( $name )</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a8fb202af129b1abf45225dad63027a2d">checkEndHashElement</a>( $name );</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        $this-&gt;json = $this-&gt;json-&gt;getParent();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a3f3c978f52ba820e52e4e7d7dfae5889">  209</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a48b9483cc146d7208e0a11de64cbedd8">startValueElement</a>( $name, $value, $attributes = array() )</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    {</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator.html#a753602d9e1000a60b973b3fa392a4fde">checkStartValueElement</a>( $name );</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        $jsonValue = null;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">if</span> ( empty( $attributes ) )</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            $jsonValue = $value;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            $jsonValue = <span class="keyword">new</span> Json\Object( $this-&gt;json );</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="keywordflow">foreach</span> ( $attributes as $attributeName =&gt; $attributeValue )</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                $jsonValue-&gt;{<span class="charliteral">&#39;_&#39;</span> . $attributeName} = $attributeValue;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            $jsonValue-&gt;{<span class="stringliteral">&#39;#text&#39;</span>} = $value;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;json instanceof Json\ArrayObject )</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            $this-&gt;json[] = $jsonValue;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            $this-&gt;json-&gt;$name = $jsonValue;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a58f12553e539f9680d76a114d5c2b57d">  244</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> endValueElement( $name )</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        $this-&gt;checkEndValueElement( $name );</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a182ea1307fae8c39d925f1210276aacb">  254</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> startList( $name )</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        $this-&gt;checkStartList( $name );</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        $array = <span class="keyword">new</span> Json\ArrayObject( $this-&gt;json );</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        $this-&gt;json-&gt;$name = $array;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        $this-&gt;json = $array;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    }</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a024f8dd4fb0c0df45baa55ca3c65d447">  269</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> endList( $name )</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    {</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        $this-&gt;checkEndList( $name );</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        $this-&gt;json = $this-&gt;json-&gt;getParent();</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00282"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a306285e80919b7e38cb0df3c1842b5ff">  282</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> startAttribute( $name, $value )</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        $this-&gt;checkStartAttribute( $name );</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        $this-&gt;json-&gt;{<span class="charliteral">&#39;_&#39;</span> . $name} = $value;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
+<div class="line"><a name="l00294"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#ae54068fc6e6e9e05d136b53a0933e385">  294</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> endAttribute( $name )</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    {</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        $this-&gt;checkEndAttribute( $name );</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    }</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a17677e516d5dfc2c31ca5e73a8c6a680">  306</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> getMediaType( $name )</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    {</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordflow">return</span> $this-&gt;generateMediaType( $name, <span class="stringliteral">&#39;json&#39;</span> );</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
+<div class="line"><a name="l00319"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a997f08b012fa2ad72e5d7bad8cd082e9">  319</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> generateFieldTypeHash( $hashElementName, $hashValue )</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    {</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        $this-&gt;fieldTypeHashGenerator-&gt;generateHashValue(</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            $this-&gt;json,</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            $hashElementName,</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            $hashValue</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        );</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_797398f06ec5dac6abf0352e0ae63d7a.html">REST</a></li><li class="navelem"><a class="el" href="dir_931ff6f23981df7536a5243dea720179.html">Common</a></li><li class="navelem"><a class="el" href="dir_66aecfdf75407dbb25f6ed723cb7503e.html">Output</a></li><li class="navelem"><a class="el" href="dir_f73d53f70b713817c8b503ff1c0a4c4e.html">Generator</a></li><li class="navelem"><a class="el" href="Output_2Generator_2Json_8php.html">Json.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:49 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:11 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

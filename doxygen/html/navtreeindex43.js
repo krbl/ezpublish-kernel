@@ -1,6 +1,5 @@
 var NAVTREEINDEX43 =
 {
-"interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewInterface.html#ada057b1e81a8f117bc9e44c326232ce8":[3,0,0,1,1,4,2,9,3,1],
 "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewInterface.html#ae25a310d34265b219f5879b6474ed9fe":[3,0,0,1,1,4,2,9,3,5],
 "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewInterface.html#ae534c7f1cabf4c4103577c3b95e8206c":[3,0,0,1,1,4,2,9,3,2],
 "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewInterface.html#af3f8c7ba9a99fb9b9ffc318da1f873b3":[3,0,0,1,1,4,2,9,3,0],
@@ -232,8 +231,8 @@ var NAVTREEINDEX43 =
 "interfaceeZ_1_1Publish_1_1SPI_1_1Variation_1_1VariationHandler.html#adf39386df2a41d018d098b8747233ac8":[3,0,0,1,2,4,1,0],
 "namespaceFieldTypeProviderInterface.html":[3,0,1],
 "namespaceFieldTypeProviderInterface.html":[2,0,1],
-"namespaceeZ.html":[2,0,0],
 "namespaceeZ.html":[3,0,0],
+"namespaceeZ.html":[2,0,0],
 "namespaceeZ_1_1Bundle.html":[3,0,0,0],
 "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle.html":[3,0,0,0,0],
 "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader.html":[3,0,0,0,0,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX43 =
 "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View.html":[3,0,0,0,0,5],
 "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View_1_1Provider.html":[3,0,0,0,0,5,0],
 "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View_1_1Provider_1_1Content.html":[3,0,0,0,0,5,0,0],
-"namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View_1_1Provider_1_1Location.html":[3,0,0,0,0,5,0,1]
+"namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View_1_1Provider_1_1Location.html":[3,0,0,0,0,5,0,1],
+"namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle.html":[3,0,0,0,1]
 };

@@ -136,7 +136,7 @@ $(document).ready(function(){initNavTree('Core_2FieldType_2RelationList_2Type_8p
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        $validationResult = array();</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">foreach</span>( array_keys( $fieldSettings ) as $setting )</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">foreach</span> ( array_keys( $fieldSettings ) as $setting )</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">if</span> ( !in_array( $setting, array_keys( $this-&gt;settingsSchema ) ) )</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            {</div>
@@ -199,12 +199,12 @@ $(document).ready(function(){initNavTree('Core_2FieldType_2RelationList_2Type_8p
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            $inputValue = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1RelationList_1_1Value.html">Value</a>( array( $inputValue-&gt;id ) );</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        }</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="comment">// content id</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        elseif ( is_integer( $inputValue ) || is_string( $inputValue ) )</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( is_integer( $inputValue ) || is_string( $inputValue ) )</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        {</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            $inputValue = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1RelationList_1_1Value.html">Value</a>( array( $inputValue ) );</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        }</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="comment">// content id&#39;s</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        elseif ( is_array( $inputValue ) )</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( is_array( $inputValue ) )</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        {</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            $inputValue = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1RelationList_1_1Value.html">Value</a>( $inputValue );</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
@@ -221,10 +221,10 @@ $(document).ready(function(){initNavTree('Core_2FieldType_2RelationList_2Type_8p
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        {</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="keywordflow">if</span> ( !is_integer( $destinationContentId ) &amp;&amp; !is_string( $destinationContentId ) )</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            {</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;               <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">InvalidArgumentType</a>(</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">InvalidArgumentType</a>(</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                    <span class="stringliteral">&quot;\$inputValue-&gt;destinationContentIds[$key]&quot;</span>,</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                    <span class="stringliteral">&#39;string|int&#39;</span>,</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                   $destinationContentId</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                    $destinationContentId</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                );</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            }</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
@@ -258,7 +258,7 @@ $(document).ready(function(){initNavTree('Core_2FieldType_2RelationList_2Type_8p
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_429826c28e0afa35fa370fabe902bc82.html">FieldType</a></li><li class="navelem"><a class="el" href="dir_f96b5e34a906648c13db0d340208837a.html">RelationList</a></li><li class="navelem"><a class="el" href="Core_2FieldType_2RelationList_2Type_8php.html">Type.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:47 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:09 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

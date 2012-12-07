@@ -106,61 +106,62 @@ $(document).ready(function(){initNavTree('UrlWildcardHandler_8php_source.html','
 <div class="contents">
 <a href="UrlWildcardHandler_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\Persistence\InMemory;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use eZ\Publish\SPI\Persistence\Content\UrlWildcard\Handler as UrlWildcardHandlerInterface,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1NotFoundException.html">eZ\Publish\Core\Base\Exceptions\NotFoundException</a>,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1NotImplementedException.html">eZ\Publish\API\Repository\Exceptions\NotImplementedException</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html">UrlWildcardHandler</a> <span class="keyword">implements</span> UrlWildcardHandlerInterface</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a8f601255e6ede15b7d62deac9d0b9873">   23</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a8f601255e6ede15b7d62deac9d0b9873">$handler</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#abf78ba20bf10adbadbda7f54df1815b3">   28</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#abf78ba20bf10adbadbda7f54df1815b3">$backend</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#ad1e7f8479034e592346219839819faea">   36</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#ad1e7f8479034e592346219839819faea">__construct</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Handler.html">Handler</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a8f601255e6ede15b7d62deac9d0b9873">$handler</a>, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html">Backend</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#abf78ba20bf10adbadbda7f54df1815b3">$backend</a> )</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        $this-&gt;handler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a8f601255e6ede15b7d62deac9d0b9873">$handler</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        $this-&gt;backend = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#abf78ba20bf10adbadbda7f54df1815b3">$backend</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a956d010e76d6313d210c6f5f88fc0aec">   51</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a956d010e76d6313d210c6f5f88fc0aec">create</a>( $sourceUrl, $destinationUrl, $forward = <span class="keyword">false</span> )</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> $this-&gt;backend-&gt;create(</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="stringliteral">&#39;Content\\UrlWildcard&#39;</span>,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            array(</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="stringliteral">&#39;sourceUrl&#39;</span> =&gt; $sourceUrl,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="stringliteral">&#39;destinationUrl&#39;</span> =&gt; $destinationUrl,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="stringliteral">&#39;forward&#39;</span> =&gt; (<span class="keywordtype">bool</span>)$forward</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            )</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        );</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a5ba971c13c65484286d47a07ae685f89">   70</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <span class="keyword">remove</span>( $id )</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        $this-&gt;backend-&gt;delete( <span class="stringliteral">&#39;Content\\UrlWildcard&#39;</span>, $id );</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a28ffb380c3969cd632c4edaec663a877">   84</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a28ffb380c3969cd632c4edaec663a877">load</a>( $id )</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> $this-&gt;backend-&gt;load( <span class="stringliteral">&#39;Content\\UrlWildcard&#39;</span>, $id );</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a363fcd607be6fa24778098a911c07293">   97</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a363fcd607be6fa24778098a911c07293">loadAll</a>( $offset = 0, $limit = -1 )</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        $list = $this-&gt;backend-&gt;find( <span class="stringliteral">&#39;Content\\UrlWildcard&#39;</span> );</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span> ( empty( $list ) || ( $offset === 0 &amp;&amp; $limit === -1 ) )</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">return</span> $list;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> array_slice( $list, $offset, ( $limit === -1 ? null : $limit ) );</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use eZ\Publish\SPI\Persistence\Content\UrlWildcard\Handler as UrlWildcardHandlerInterface;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1NotFoundException.html">eZ\Publish\Core\Base\Exceptions\NotFoundException</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1NotImplementedException.html">eZ\Publish\API\Repository\Exceptions\NotImplementedException</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html">UrlWildcardHandler</a> <span class="keyword">implements</span> UrlWildcardHandlerInterface</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a8f601255e6ede15b7d62deac9d0b9873">   24</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a8f601255e6ede15b7d62deac9d0b9873">$handler</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#abf78ba20bf10adbadbda7f54df1815b3">   29</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#abf78ba20bf10adbadbda7f54df1815b3">$backend</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#ad1e7f8479034e592346219839819faea">   37</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#ad1e7f8479034e592346219839819faea">__construct</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Handler.html">Handler</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a8f601255e6ede15b7d62deac9d0b9873">$handler</a>, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html">Backend</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#abf78ba20bf10adbadbda7f54df1815b3">$backend</a> )</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        $this-&gt;handler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a8f601255e6ede15b7d62deac9d0b9873">$handler</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        $this-&gt;backend = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#abf78ba20bf10adbadbda7f54df1815b3">$backend</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a956d010e76d6313d210c6f5f88fc0aec">   52</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a956d010e76d6313d210c6f5f88fc0aec">create</a>( $sourceUrl, $destinationUrl, $forward = <span class="keyword">false</span> )</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> $this-&gt;backend-&gt;create(</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="stringliteral">&#39;Content\\UrlWildcard&#39;</span>,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            array(</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="stringliteral">&#39;sourceUrl&#39;</span> =&gt; $sourceUrl,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="stringliteral">&#39;destinationUrl&#39;</span> =&gt; $destinationUrl,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="stringliteral">&#39;forward&#39;</span> =&gt; (<span class="keywordtype">bool</span>)$forward</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            )</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        );</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a5ba971c13c65484286d47a07ae685f89">   71</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <span class="keyword">remove</span>( $id )</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        $this-&gt;backend-&gt;delete( <span class="stringliteral">&#39;Content\\UrlWildcard&#39;</span>, $id );</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a28ffb380c3969cd632c4edaec663a877">   85</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a28ffb380c3969cd632c4edaec663a877">load</a>( $id )</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> $this-&gt;backend-&gt;load( <span class="stringliteral">&#39;Content\\UrlWildcard&#39;</span>, $id );</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a363fcd607be6fa24778098a911c07293">   98</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a363fcd607be6fa24778098a911c07293">loadAll</a>( $offset = 0, $limit = -1 )</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        $list = $this-&gt;backend-&gt;find( <span class="stringliteral">&#39;Content\\UrlWildcard&#39;</span> );</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">if</span> ( empty( $list ) || ( $offset === 0 &amp;&amp; $limit === -1 ) )</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">return</span> $list;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">return</span> array_slice( $list, $offset, ( $limit === -1 ? null : $limit ) );</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_1015c0c9ea9f233a345f6405868e3e61.html">Persistence</a></li><li class="navelem"><a class="el" href="dir_4df564e0180332f890b89108c9c66aa3.html">InMemory</a></li><li class="navelem"><a class="el" href="UrlWildcardHandler_8php.html">UrlWildcardHandler.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:48 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:10 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

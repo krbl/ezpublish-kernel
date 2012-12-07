@@ -154,7 +154,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>ezcDatabase based <a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language.html">Language</a> <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language_1_1Gateway.html">Gateway</a> </p>
 
-<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00019">19</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
+<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00020">20</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a060169e1987f5d6cae89bb5e0d600a3a"></a>
 <div class="memitem">
@@ -177,7 +177,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00033">33</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
+<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00034">34</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;dbHandler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language_1_1Gateway_1_1EzcDatabase.html#a4dc59d8a0574e8ced3fa70242726bb21">$dbHandler</a>;</div>
 <div class="line">    }</div>
@@ -209,11 +209,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language_1_1Gateway.html#ac112cccc81ed1ced765ce379bec448ae">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway</a>.</p>
 
-<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00232">232</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
+<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00233">233</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $query = $this-&gt;dbHandler-&gt;createSelectQuery();</div>
 <div class="line">        $query-&gt;select(</div>
-<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span>)</div>
+<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span> )</div>
 <div class="line">        )-&gt;from(</div>
 <div class="line">            $this-&gt;dbHandler-&gt;quoteTable( <span class="stringliteral">&quot;ezcobj_state&quot;</span> )</div>
 <div class="line">        )-&gt;where(</div>
@@ -237,7 +237,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        $query = $this-&gt;dbHandler-&gt;createSelectQuery();</div>
 <div class="line">        $query-&gt;select(</div>
-<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span>)</div>
+<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span> )</div>
 <div class="line">        )-&gt;from(</div>
 <div class="line">            $this-&gt;dbHandler-&gt;quoteTable( <span class="stringliteral">&quot;ezcobj_state_group&quot;</span> )</div>
 <div class="line">        )-&gt;where(</div>
@@ -261,7 +261,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        $query = $this-&gt;dbHandler-&gt;createSelectQuery();</div>
 <div class="line">        $query-&gt;select(</div>
-<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span>)</div>
+<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span> )</div>
 <div class="line">        )-&gt;from(</div>
 <div class="line">            $this-&gt;dbHandler-&gt;quoteTable( <span class="stringliteral">&quot;ezcobj_state_group_language&quot;</span> )</div>
 <div class="line">        )-&gt;where(</div>
@@ -279,7 +279,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        $query = $this-&gt;dbHandler-&gt;createSelectQuery();</div>
 <div class="line">        $query-&gt;select(</div>
-<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span>)</div>
+<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span> )</div>
 <div class="line">        )-&gt;from(</div>
 <div class="line">            $this-&gt;dbHandler-&gt;quoteTable( <span class="stringliteral">&quot;ezcobj_state_language&quot;</span> )</div>
 <div class="line">        )-&gt;where(</div>
@@ -297,7 +297,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        $query = $this-&gt;dbHandler-&gt;createSelectQuery();</div>
 <div class="line">        $query-&gt;select(</div>
-<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span>)</div>
+<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span> )</div>
 <div class="line">        )-&gt;from(</div>
 <div class="line">            $this-&gt;dbHandler-&gt;quoteTable( <span class="stringliteral">&quot;ezcontentclass&quot;</span> )</div>
 <div class="line">        )-&gt;where(</div>
@@ -321,7 +321,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        $query = $this-&gt;dbHandler-&gt;createSelectQuery();</div>
 <div class="line">        $query-&gt;select(</div>
-<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span>)</div>
+<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span> )</div>
 <div class="line">        )-&gt;from(</div>
 <div class="line">            $this-&gt;dbHandler-&gt;quoteTable( <span class="stringliteral">&quot;ezcontentclass_name&quot;</span> )</div>
 <div class="line">        )-&gt;where(</div>
@@ -339,7 +339,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        $query = $this-&gt;dbHandler-&gt;createSelectQuery();</div>
 <div class="line">        $query-&gt;select(</div>
-<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span>)</div>
+<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span> )</div>
 <div class="line">        )-&gt;from(</div>
 <div class="line">            $this-&gt;dbHandler-&gt;quoteTable( <span class="stringliteral">&quot;ezcontentobject&quot;</span> )</div>
 <div class="line">        )-&gt;where(</div>
@@ -363,7 +363,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        $query = $this-&gt;dbHandler-&gt;createSelectQuery();</div>
 <div class="line">        $query-&gt;select(</div>
-<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span>)</div>
+<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span> )</div>
 <div class="line">        )-&gt;from(</div>
 <div class="line">            $this-&gt;dbHandler-&gt;quoteTable( <span class="stringliteral">&quot;ezcontentobject_attribute&quot;</span> )</div>
 <div class="line">        )-&gt;where(</div>
@@ -381,7 +381,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        $query = $this-&gt;dbHandler-&gt;createSelectQuery();</div>
 <div class="line">        $query-&gt;select(</div>
-<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span>)</div>
+<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span> )</div>
 <div class="line">        )-&gt;from(</div>
 <div class="line">            $this-&gt;dbHandler-&gt;quoteTable( <span class="stringliteral">&quot;ezcontentobject_name&quot;</span> )</div>
 <div class="line">        )-&gt;where(</div>
@@ -399,7 +399,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        $query = $this-&gt;dbHandler-&gt;createSelectQuery();</div>
 <div class="line">        $query-&gt;select(</div>
-<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span>)</div>
+<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span> )</div>
 <div class="line">        )-&gt;from(</div>
 <div class="line">            $this-&gt;dbHandler-&gt;quoteTable( <span class="stringliteral">&quot;ezcontentobject_version&quot;</span> )</div>
 <div class="line">        )-&gt;where(</div>
@@ -423,7 +423,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        $query = $this-&gt;dbHandler-&gt;createSelectQuery();</div>
 <div class="line">        $query-&gt;select(</div>
-<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span>)</div>
+<div class="line">            $query-&gt;alias( $query-&gt;expr-&gt;count( <span class="stringliteral">&quot;*&quot;</span> ), <span class="stringliteral">&quot;count&quot;</span> )</div>
 <div class="line">        )-&gt;from(</div>
 <div class="line">            $this-&gt;dbHandler-&gt;quoteTable( <span class="stringliteral">&quot;ezurlalias_ml&quot;</span> )</div>
 <div class="line">        )-&gt;where(</div>
@@ -464,9 +464,9 @@ Protected Attributes</h2></td></tr>
 <p>Creates a <a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language.html">Language</a> find query</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00174">174</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
+<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00175">175</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
 
-<p>References <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00174">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\EzcDatabase\createFindQuery()</a>.</p>
+<p>References <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00175">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\EzcDatabase\createFindQuery()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $query = $this-&gt;dbHandler-&gt;createSelectQuery();</div>
 <div class="line">        $query-&gt;select(</div>
@@ -528,7 +528,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language_1_1Gateway.html#a332ea554903f0d0dea69563c60a32c79">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway</a>.</p>
 
-<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00210">210</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
+<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00211">211</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $query = $this-&gt;dbHandler-&gt;createDeleteQuery();</div>
 <div class="line">        $query-&gt;deleteFrom(</div>
@@ -569,9 +569,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language_1_1Gateway.html#aeda35d5d88b3bd6a598b45dd7557e51c">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway</a>.</p>
 
-<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00045">45</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
+<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00046">46</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
 
-<p>References <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00081">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\EzcDatabase\setCommonLanguageColumns()</a>.</p>
+<p>References <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00082">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\EzcDatabase\setCommonLanguageColumns()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $query = $this-&gt;dbHandler-&gt;createSelectQuery();</div>
 <div class="line">        $query-&gt;select(</div>
@@ -629,9 +629,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language_1_1Gateway.html#a90da671d3bb687ff0de7e59144a4cfe5">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway</a>.</p>
 
-<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00193">193</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
+<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00194">194</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
 
-<p>References <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00174">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\EzcDatabase\createFindQuery()</a>.</p>
+<p>References <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00175">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\EzcDatabase\createFindQuery()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $query = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language_1_1Gateway_1_1EzcDatabase.html#ab3be3789147c66d6cdf88141ecd48dfa">createFindQuery</a>();</div>
 <div class="line"></div>
@@ -678,9 +678,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language_1_1Gateway.html#a9c82a160b64b1bc63088292a981770cd">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway</a>.</p>
 
-<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00130">130</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
+<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00131">131</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
 
-<p>References <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00174">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\EzcDatabase\createFindQuery()</a>.</p>
+<p>References <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00175">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\EzcDatabase\createFindQuery()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $query = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language_1_1Gateway_1_1EzcDatabase.html#ab3be3789147c66d6cdf88141ecd48dfa">createFindQuery</a>();</div>
 <div class="line">        $query-&gt;where(</div>
@@ -733,9 +733,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language_1_1Gateway.html#a703a5d35b1ebbd26759fcfae6b903015">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway</a>.</p>
 
-<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00153">153</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
+<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00154">154</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
 
-<p>References <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00174">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\EzcDatabase\createFindQuery()</a>.</p>
+<p>References <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00175">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\EzcDatabase\createFindQuery()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $query = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language_1_1Gateway_1_1EzcDatabase.html#ab3be3789147c66d6cdf88141ecd48dfa">createFindQuery</a>();</div>
 <div class="line">        $query-&gt;where(</div>
@@ -805,9 +805,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00081">81</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
+<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00082">82</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
 
-<p>References <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00081">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\EzcDatabase\setCommonLanguageColumns()</a>.</p>
+<p>References <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00082">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\EzcDatabase\setCommonLanguageColumns()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $query-&gt;set(</div>
 <div class="line">            $this-&gt;dbHandler-&gt;quoteColumn( <span class="stringliteral">&#39;locale&#39;</span> ),</div>
@@ -873,9 +873,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language_1_1Gateway.html#a107b81e195af47f05e373c0ff29a73f1">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway</a>.</p>
 
-<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00106">106</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
+<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00107">107</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
 
-<p>References <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00081">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\EzcDatabase\setCommonLanguageColumns()</a>.</p>
+<p>References <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00082">eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway\EzcDatabase\setCommonLanguageColumns()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $query = $this-&gt;dbHandler-&gt;createUpdateQuery();</div>
 <div class="line">        $query-&gt;update( $this-&gt;dbHandler-&gt;quoteTable( <span class="stringliteral">&#39;ezcontent_language&#39;</span> ) );</div>
@@ -931,7 +931,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00026">26</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
+<p>Definition at line <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html#l00027">27</a> of file <a class="el" href="Content_2Language_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
 
 </div>
 </div>
@@ -944,7 +944,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language.html">Language</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language_1_1Gateway.html">Gateway</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language_1_1Gateway_1_1EzcDatabase.html">EzcDatabase</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:55 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:17 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -324,7 +324,8 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        $pcre = <span class="stringliteral">&#39;(^&#39;</span>;</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">do</span> {</div>
+<div class="line">        <span class="keywordflow">do</span></div>
+<div class="line">        {</div>
 <div class="line">            <span class="keywordflow">switch</span> ( <span class="keyword">true</span> )</div>
 <div class="line">            {</div>
 <div class="line">                <span class="keywordflow">case</span> preg_match( <span class="stringliteral">&#39;(^[^{]+)&#39;</span>, $pattern, $match ):</div>
@@ -345,7 +346,8 @@ Protected Attributes</h2></td></tr>
 <div class="line">                <span class="keywordflow">default</span>:</div>
 <div class="line">                    <span class="keywordflow">throw</span> <span class="keyword">new</span> Exceptions\InvalidArgumentException( <span class="stringliteral">&quot;Invalid pattern part: &#39;$pattern&#39;.&quot;</span> );</div>
 <div class="line">            }</div>
-<div class="line">        } <span class="keywordflow">while</span> ( $pattern );</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">while</span> ( $pattern );</div>
 <div class="line"></div>
 <div class="line">        $pcre .= <span class="stringliteral">&#39;$)S&#39;</span>;</div>
 <div class="line"></div>
@@ -414,7 +416,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1UrlHandler_1_1Prefixed.html#a73e9556e8683f0539549f90d658801a2">eZ\Publish\Core\REST\Common\UrlHandler\Prefixed</a>.</p>
 
-<p>Definition at line <a class="el" href="Pattern_8php_source.html#l00161">161</a> of file <a class="el" href="Pattern_8php_source.html">Pattern.php</a>.</p>
+<p>Definition at line <a class="el" href="Pattern_8php_source.html#l00163">163</a> of file <a class="el" href="Pattern_8php_source.html">Pattern.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !isset( $this-&gt;map[$type] ) )</div>
 <div class="line">        {</div>
@@ -423,11 +425,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        $url = $this-&gt;map[$type];</div>
 <div class="line">        preg_match_all(</div>
-<div class="line">            <span class="charliteral">&#39;(&#39;</span></div>
-<div class="line">                . self::STANDARD_VARIABLE_REGEX</div>
-<div class="line">                . <span class="charliteral">&#39;|&#39;</span></div>
-<div class="line">                . self::SLASHES_VARIABLE_REGEX</div>
-<div class="line">            . <span class="charliteral">&#39;)&#39;</span>,</div>
+<div class="line">            <span class="charliteral">&#39;(&#39;</span> . self::STANDARD_VARIABLE_REGEX . <span class="charliteral">&#39;|&#39;</span> . self::SLASHES_VARIABLE_REGEX . <span class="charliteral">&#39;)&#39;</span>,</div>
 <div class="line">            $url,</div>
 <div class="line">            $matches,</div>
 <div class="line">            PREG_SET_ORDER</div>
@@ -614,7 +612,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html">REST</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Common.html">Common</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1UrlHandler.html">UrlHandler</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1UrlHandler_1_1Pattern.html">Pattern</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:59 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:21 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

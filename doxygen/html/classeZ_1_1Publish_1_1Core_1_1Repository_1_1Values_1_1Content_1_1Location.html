@@ -216,11 +216,15 @@ Additional Inherited Members</h2></td></tr>
 <div class="line">                <span class="keywordflow">return</span> $this-&gt;contentInfo-&gt;id;</div>
 <div class="line">            <span class="keywordflow">case</span> <span class="stringliteral">&#39;path&#39;</span>:</div>
 <div class="line">                <span class="keywordflow">if</span> ( $this-&gt;path !== null )</div>
+<div class="line">                {</div>
 <div class="line">                    <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Location.html#a78f2393399a15680c57f0f6e4f4209ee">$this-&gt;path</a>;</div>
-<div class="line">                <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( isset( $this-&gt;pathString[1] ) &amp;&amp; $this-&gt;pathString[0] === <span class="charliteral">&#39;/&#39;</span> )</div>
+<div class="line">                }</div>
+<div class="line">                <span class="keywordflow">if</span> ( isset( $this-&gt;pathString[1] ) &amp;&amp; $this-&gt;pathString[0] === <span class="charliteral">&#39;/&#39;</span> )</div>
+<div class="line">                {</div>
 <div class="line">                    <span class="keywordflow">return</span> $this-&gt;path = explode( <span class="charliteral">&#39;/&#39;</span>, trim( $this-&gt;pathString, <span class="charliteral">&#39;/&#39;</span> ) );</div>
-<div class="line">                <span class="keywordflow">else</span></div>
-<div class="line">                    <span class="keywordflow">return</span> $this-&gt;path = array();</div>
+<div class="line">                }</div>
+<div class="line"></div>
+<div class="line">                <span class="keywordflow">return</span> $this-&gt;path = array();</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Location.html#a9ece3628e68bcadd454cf2cc0fcf1008">parent::__get</a>( $property );</div>
@@ -252,7 +256,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html#a02bf5e121b741b1d10a971025db3c43f">eZ\Publish\API\Repository\Values\ValueObject</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2Values_2Content_2Location_8php_source.html#l00088">88</a> of file <a class="el" href="Core_2Repository_2Values_2Content_2Location_8php_source.html">Location.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2Values_2Content_2Location_8php_source.html#l00092">92</a> of file <a class="el" href="Core_2Repository_2Values_2Content_2Location_8php_source.html">Location.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $property === <span class="stringliteral">&#39;contentId&#39;</span> || $property === <span class="stringliteral">&#39;path&#39;</span> )</div>
 <div class="line">            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -382,7 +386,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Repository.html">Repository</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Repository_1_1Values.html">Values</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Location.html">Location</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:58 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:20 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

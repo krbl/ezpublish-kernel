@@ -140,7 +140,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class wrapping the legacy kernel </p>
 
-<p>Definition at line <a class="el" href="Kernel_8php_source.html#l00017">17</a> of file <a class="el" href="Kernel_8php_source.html">Kernel.php</a>.</p>
+<p>Definition at line <a class="el" href="Kernel_8php_source.html#l00018">18</a> of file <a class="el" href="Kernel_8php_source.html">Kernel.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ac24981a6f9105583f301e5f21705f464"></a>
 <div class="memitem">
@@ -180,9 +180,9 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Kernel_8php_source.html#l00038">38</a> of file <a class="el" href="Kernel_8php_source.html">Kernel.php</a>.</p>
+<p>Definition at line <a class="el" href="Kernel_8php_source.html#l00039">39</a> of file <a class="el" href="Kernel_8php_source.html">Kernel.php</a>.</p>
 
-<p>References <a class="el" href="Kernel_8php_source.html#l00053">eZ\Publish\Core\MVC\Legacy\Kernel\enterLegacyRootDir()</a>, and <a class="el" href="Kernel_8php_source.html#l00061">eZ\Publish\Core\MVC\Legacy\Kernel\leaveLegacyRootDir()</a>.</p>
+<p>References <a class="el" href="Kernel_8php_source.html#l00054">eZ\Publish\Core\MVC\Legacy\Kernel\enterLegacyRootDir()</a>, and <a class="el" href="Kernel_8php_source.html#l00062">eZ\Publish\Core\MVC\Legacy\Kernel\leaveLegacyRootDir()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;legacyRootDir = $legacyRootDir;</div>
 <div class="line">        $this-&gt;webRootDir = $webRootDir;</div>
@@ -221,7 +221,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Changes the current working directory to the legacy root dir. Calling this method is mandatory to use legacy kernel since a lot of resources in <a class="el" href="namespaceeZ.html">eZ</a> <a class="el" href="namespaceeZ_1_1Publish.html">Publish</a> 4.x relatively defined. </p>
 
-<p>Definition at line <a class="el" href="Kernel_8php_source.html#l00053">53</a> of file <a class="el" href="Kernel_8php_source.html">Kernel.php</a>.</p>
+<p>Definition at line <a class="el" href="Kernel_8php_source.html#l00054">54</a> of file <a class="el" href="Kernel_8php_source.html">Kernel.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        chdir( $this-&gt;legacyRootDir );</div>
 <div class="line">    }</div>
@@ -253,7 +253,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Leaves the legacy root dir and switches back to the initial webroot dir. </p>
 
-<p>Definition at line <a class="el" href="Kernel_8php_source.html#l00061">61</a> of file <a class="el" href="Kernel_8php_source.html">Kernel.php</a>.</p>
+<p>Definition at line <a class="el" href="Kernel_8php_source.html#l00062">62</a> of file <a class="el" href="Kernel_8php_source.html">Kernel.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        chdir( $this-&gt;webRootDir );</div>
 <div class="line">    }</div>
@@ -286,9 +286,9 @@ Public Member Functions</h2></td></tr>
 <p>Runs current request through legacy kernel.</p>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="Kernel_8php_source.html#l00071">71</a> of file <a class="el" href="Kernel_8php_source.html">Kernel.php</a>.</p>
+<p>Definition at line <a class="el" href="Kernel_8php_source.html#l00072">72</a> of file <a class="el" href="Kernel_8php_source.html">Kernel.php</a>.</p>
 
-<p>References <a class="el" href="Kernel_8php_source.html#l00053">eZ\Publish\Core\MVC\Legacy\Kernel\enterLegacyRootDir()</a>, and <a class="el" href="Kernel_8php_source.html#l00061">eZ\Publish\Core\MVC\Legacy\Kernel\leaveLegacyRootDir()</a>.</p>
+<p>References <a class="el" href="Kernel_8php_source.html#l00054">eZ\Publish\Core\MVC\Legacy\Kernel\enterLegacyRootDir()</a>, and <a class="el" href="Kernel_8php_source.html#l00062">eZ\Publish\Core\MVC\Legacy\Kernel\leaveLegacyRootDir()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a9ff2420d72b590db96cd608ffdbaf44f">enterLegacyRootDir</a>();</div>
 <div class="line">        $return = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#ab512ef7cbc4be03c8ec210f6582175c4">parent::run</a>();</div>
@@ -342,9 +342,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>mixed The result of the callback </dd></dl>
 
-<p>Definition at line <a class="el" href="Kernel_8php_source.html#l00089">89</a> of file <a class="el" href="Kernel_8php_source.html">Kernel.php</a>.</p>
+<p>Definition at line <a class="el" href="Kernel_8php_source.html#l00090">90</a> of file <a class="el" href="Kernel_8php_source.html">Kernel.php</a>.</p>
 
-<p>References <a class="el" href="Kernel_8php_source.html#l00053">eZ\Publish\Core\MVC\Legacy\Kernel\enterLegacyRootDir()</a>, and <a class="el" href="Kernel_8php_source.html#l00061">eZ\Publish\Core\MVC\Legacy\Kernel\leaveLegacyRootDir()</a>.</p>
+<p>References <a class="el" href="Kernel_8php_source.html#l00054">eZ\Publish\Core\MVC\Legacy\Kernel\enterLegacyRootDir()</a>, and <a class="el" href="Kernel_8php_source.html#l00062">eZ\Publish\Core\MVC\Legacy\Kernel\leaveLegacyRootDir()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a9ff2420d72b590db96cd608ffdbaf44f">enterLegacyRootDir</a>();</div>
 <div class="line">        $return = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html#a5a6366a7e7e49f607a92f951b05af52c">parent::runCallback</a>( $callback, $postReinitialize );</div>
@@ -374,7 +374,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC.html">MVC</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html">Kernel</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:53 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:16 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

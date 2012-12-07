@@ -168,7 +168,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Configuration.html">Configuration</a> <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Configuration_1_1Parser_1_1Ini.html">Ini</a> <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1Base_1_1Configuration_1_1Parser.html">Parser</a> / writer </p>
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00022">22</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00023">23</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad3a7f01900bb2435e33b8538090393df"></a>
 <div class="memitem">
@@ -193,7 +193,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1Base_1_1Configuration_1_1Parser.html#a96c7dfd7e7a0519d35c7c5d2f85bd657">eZ\Publish\Core\Base\Configuration\Parser</a>.</p>
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00077">77</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00078">78</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( isset( $settings[<span class="stringliteral">&#39;IniParserStrict&#39;</span>] ) )</div>
 <div class="line">            $this-&gt;strictMode = $settings[<span class="stringliteral">&#39;IniParserStrict&#39;</span>];</div>
@@ -244,9 +244,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1Base_1_1Configuration_1_1Parser.html#a5e474a25db3f4d4434326ef0dff91a62">eZ\Publish\Core\Base\Configuration\Parser</a>.</p>
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00099">99</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00100">100</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 
-<p>References <a class="el" href="Ini_8php_source.html#l00176">eZ\Publish\Core\Base\Configuration\Parser\Ini\parseFileEzc()</a>, and <a class="el" href="Ini_8php_source.html#l00128">eZ\Publish\Core\Base\Configuration\Parser\Ini\parseFilePhp()</a>.</p>
+<p>References <a class="el" href="Ini_8php_source.html#l00177">eZ\Publish\Core\Base\Configuration\Parser\Ini\parseFileEzc()</a>, and <a class="el" href="Ini_8php_source.html#l00129">eZ\Publish\Core\Base\Configuration\Parser\Ini\parseFilePhp()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !$this-&gt;strictMode )</div>
 <div class="line">        {</div>
@@ -309,18 +309,22 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array Data structure for parsed ini file </dd></dl>
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00176">176</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00177">177</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2Base_2Configuration_8php_source.html#l00036">eZ\Publish\Core\Base\Configuration\CONFIG_CACHE_DIR</a>, <a class="el" href="Ini_8php_source.html#l00176">eZ\Publish\Core\Base\Configuration\Parser\Ini\parseFileEzc()</a>, and <a class="el" href="Ini_8php_source.html#l00375">eZ\Publish\Core\Base\Configuration\Parser\Ini\parserClearArraySupport()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2Base_2Configuration_8php_source.html#l00037">eZ\Publish\Core\Base\Configuration\CONFIG_CACHE_DIR</a>, <a class="el" href="Ini_8php_source.html#l00177">eZ\Publish\Core\Base\Configuration\Parser\Ini\parseFileEzc()</a>, and <a class="el" href="Ini_8php_source.html#l00380">eZ\Publish\Core\Base\Configuration\Parser\Ini\parserClearArraySupport()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="comment">// First some pre processing to normalize result with parse_ini_string result</span></div>
 <div class="line">        $fileContent = str_replace( array( <span class="stringliteral">&quot;\r\n&quot;</span>, <span class="stringliteral">&quot;\r&quot;</span> ), <span class="stringliteral">&quot;\n&quot;</span>, $fileContent . <span class="stringliteral">&quot;\n&quot;</span> );</div>
 <div class="line">        $fileContent = preg_replace( array( <span class="stringliteral">&#39;/^&lt;\?php[^\/]\/\*\s*/&#39;</span>, <span class="stringliteral">&#39;/\*\/[^\?]\?&gt;/&#39;</span> ), <span class="stringliteral">&#39;&#39;</span>, $fileContent );</div>
-<div class="line">        $fileContent = preg_replace_callback ( <span class="stringliteral">&#39;/\n\[(\w+):[^\]]+\]\n/&#39;</span> , <span class="keyword">function</span>( $matches )</div>
-<div class="line">        {</div>
-<div class="line">            <span class="comment">// replace &#39;:&#39; in section names as it is not supported by ezcConfigurationIniReader</span></div>
-<div class="line">            <span class="keywordflow">return</span> str_replace( <span class="charliteral">&#39;:&#39;</span>, <span class="stringliteral">&#39;__EXT__&#39;</span>, $matches[0] );</div>
-<div class="line">        }, $fileContent );</div>
+<div class="line">        $fileContent = preg_replace_callback(</div>
+<div class="line">            <span class="stringliteral">&#39;/\n\[(\w+):[^\]]+\]\n/&#39;</span>,</div>
+<div class="line">            <span class="keyword">function</span> ( $matches )</div>
+<div class="line">            {</div>
+<div class="line">                <span class="comment">// replace &#39;:&#39; in section names as it is not supported by ezcConfigurationIniReader</span></div>
+<div class="line">                <span class="keywordflow">return</span> str_replace( <span class="charliteral">&#39;:&#39;</span>, <span class="stringliteral">&#39;__EXT__&#39;</span>, $matches[0] );</div>
+<div class="line">            },</div>
+<div class="line">            $fileContent</div>
+<div class="line">        );</div>
 <div class="line">        $fileContent = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Configuration_1_1Parser_1_1Ini.html#a32072b86d50f1acb96ce394837760303">parserClearArraySupport</a>( $fileContent );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Create ini dir if it does not exist</span></div>
@@ -443,9 +447,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array|false Data structure for parsed ini file or false if it fails </dd></dl>
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00128">128</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00129">129</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 
-<p>References <a class="el" href="Ini_8php_source.html#l00128">eZ\Publish\Core\Base\Configuration\Parser\Ini\parseFilePhp()</a>, <a class="el" href="Ini_8php_source.html#l00375">eZ\Publish\Core\Base\Configuration\Parser\Ini\parserClearArraySupport()</a>, <a class="el" href="Ini_8php_source.html#l00262">eZ\Publish\Core\Base\Configuration\Parser\Ini\parserPhpDimensionArraySupport()</a>, and <a class="el" href="Ini_8php_source.html#l00331">eZ\Publish\Core\Base\Configuration\Parser\Ini\parserPhpQuoteSupport()</a>.</p>
+<p>References <a class="el" href="Ini_8php_source.html#l00129">eZ\Publish\Core\Base\Configuration\Parser\Ini\parseFilePhp()</a>, <a class="el" href="Ini_8php_source.html#l00380">eZ\Publish\Core\Base\Configuration\Parser\Ini\parserClearArraySupport()</a>, <a class="el" href="Ini_8php_source.html#l00267">eZ\Publish\Core\Base\Configuration\Parser\Ini\parserPhpDimensionArraySupport()</a>, and <a class="el" href="Ini_8php_source.html#l00336">eZ\Publish\Core\Base\Configuration\Parser\Ini\parserPhpQuoteSupport()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="comment">// First some pre processing to normalize result with ezc result (avoid &#39;true&#39; becoming &#39;1&#39;)</span></div>
 <div class="line">        $fileContent = str_replace(</div>
@@ -539,9 +543,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00433">433</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00438">438</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 
-<p>References <a class="el" href="Ini_8php_source.html#l00433">eZ\Publish\Core\Base\Configuration\Parser\Ini\parsePhpPostArrayFilter()</a>.</p>
+<p>References <a class="el" href="Ini_8php_source.html#l00438">eZ\Publish\Core\Base\Configuration\Parser\Ini\parsePhpPostArrayFilter()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $newArray = array();</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $array as $key =&gt; $value )</div>
@@ -622,9 +626,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>mixed </dd></dl>
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00395">395</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00400">400</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 
-<p>References <a class="el" href="Ini_8php_source.html#l00395">eZ\Publish\Core\Base\Configuration\Parser\Ini\parsePhpPostFilter()</a>.</p>
+<p>References <a class="el" href="Ini_8php_source.html#l00400">eZ\Publish\Core\Base\Configuration\Parser\Ini\parsePhpPostFilter()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $iniValue === self::TEMP_INI_TRUE_VAR )</div>
 <div class="line">            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -707,9 +711,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00375">375</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00380">380</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 
-<p>References <a class="el" href="Ini_8php_source.html#l00375">eZ\Publish\Core\Base\Configuration\Parser\Ini\parserClearArraySupport()</a>, and <a class="el" href="Publish_2Core_2Base_2Configuration_8php_source.html#l00043">eZ\Publish\Core\Base\Configuration\TEMP_INI_UNSET_VAR</a>.</p>
+<p>References <a class="el" href="Ini_8php_source.html#l00380">eZ\Publish\Core\Base\Configuration\Parser\Ini\parserClearArraySupport()</a>, and <a class="el" href="Publish_2Core_2Base_2Configuration_8php_source.html#l00044">eZ\Publish\Core\Base\Configuration\TEMP_INI_UNSET_VAR</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( preg_match_all( <span class="stringliteral">&quot;/^([\w_-]+)\[([\w_-]+)?\](\[([\w_-]+)?\])?$/m&quot;</span>, $fileContent, $valueArray ) )</div>
 <div class="line">        {</div>
@@ -776,9 +780,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00262">262</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00267">267</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 
-<p>References <a class="el" href="Ini_8php_source.html#l00262">eZ\Publish\Core\Base\Configuration\Parser\Ini\parserPhpDimensionArraySupport()</a>.</p>
+<p>References <a class="el" href="Ini_8php_source.html#l00267">eZ\Publish\Core\Base\Configuration\Parser\Ini\parserPhpDimensionArraySupport()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( preg_match_all( <span class="stringliteral">&quot;/^([\w_-]+)\[([\w_-]+)?\]\[([\w_-]+)?\](\[([\w_-]+)?\])?(\[([\w_-]+)?\])?(\[([\w_-]+)?\])?/m&quot;</span>, $fileContent, $valueArray, PREG_OFFSET_CAPTURE ) )</div>
 <div class="line">        {</div>
@@ -894,9 +898,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00331">331</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00336">336</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 
-<p>References <a class="el" href="Ini_8php_source.html#l00331">eZ\Publish\Core\Base\Configuration\Parser\Ini\parserPhpQuoteSupport()</a>.</p>
+<p>References <a class="el" href="Ini_8php_source.html#l00336">eZ\Publish\Core\Base\Configuration\Parser\Ini\parserPhpQuoteSupport()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( preg_match_all( <span class="stringliteral">&quot;/^([^=]+)=([^&#39;\n]+)?&#39;(([^&#39;\n]+)&#39;(([^&#39;\n]+)&#39;)?)?/m&quot;</span>, $fileContent, $valueArray, PREG_OFFSET_CAPTURE ) )</div>
 <div class="line">        {</div>
@@ -991,9 +995,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1Base_1_1Configuration_1_1Parser.html#a8638ef239a319c89aef45f850dda6cc4">eZ\Publish\Core\Base\Configuration\Parser</a>.</p>
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00468">468</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00473">473</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2Base_2Configuration_8php_source.html#l00043">eZ\Publish\Core\Base\Configuration\TEMP_INI_UNSET_VAR</a>, and <a class="el" href="Ini_8php_source.html#l00468">eZ\Publish\Core\Base\Configuration\Parser\Ini\write()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2Base_2Configuration_8php_source.html#l00044">eZ\Publish\Core\Base\Configuration\TEMP_INI_UNSET_VAR</a>, and <a class="el" href="Ini_8php_source.html#l00473">eZ\Publish\Core\Base\Configuration\Parser\Ini\write()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_writable( $fileName ) )</div>
 <div class="line">        {</div>
@@ -1093,7 +1097,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00070">70</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00071">71</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 
 </div>
 </div>
@@ -1115,7 +1119,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00065">65</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00066">66</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 
 </div>
 </div>
@@ -1137,7 +1141,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00060">60</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00061">61</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 
 </div>
 </div>
@@ -1151,7 +1155,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00038">38</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00039">39</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 
 </div>
 </div>
@@ -1165,7 +1169,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00046">46</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00047">47</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 
 </div>
 </div>
@@ -1179,7 +1183,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00053">53</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00054">54</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 
 </div>
 </div>
@@ -1193,7 +1197,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Ini_8php_source.html#l00030">30</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
+<p>Definition at line <a class="el" href="Ini_8php_source.html#l00031">31</a> of file <a class="el" href="Ini_8php_source.html">Ini.php</a>.</p>
 
 </div>
 </div>
@@ -1206,7 +1210,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Base.html">Base</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Base_1_1Configuration.html">Configuration</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Base_1_1Configuration_1_1Parser.html">Parser</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Configuration_1_1Parser_1_1Ini.html">Ini</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:52 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:14 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

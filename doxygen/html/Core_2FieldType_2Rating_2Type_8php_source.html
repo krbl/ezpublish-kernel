@@ -106,90 +106,91 @@ $(document).ready(function(){initNavTree('Core_2FieldType_2Rating_2Type_8php_sou
 <div class="contents">
 <a href="Core_2FieldType_2Rating_2Type_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating.html">   10</a></span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\FieldType\Rating;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html">eZ\Publish\Core\FieldType\FieldType</a>,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">eZ\Publish\Core\Base\Exceptions\InvalidArgumentType</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html">Type</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html">FieldType</a></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#ac4e630df020b34263bc96fd6d83c0850">   27</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#ac4e630df020b34263bc96fd6d83c0850">getEmptyValue</a>()</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Value.html">Value</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a87b91f5e362e3a46f13008cdc8cb535d">   39</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a87b91f5e362e3a46f13008cdc8cb535d">isEmptyValue</a>( $value )</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> $value === null;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a1035edceb4657a3f7d3b0abf0aadad06">   49</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a1035edceb4657a3f7d3b0abf0aadad06">getFieldTypeIdentifier</a>()</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ezsrrating&quot;</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#aa6d8b3ee69c9c0b171e0ad8bc05fac0d">   64</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#aa6d8b3ee69c9c0b171e0ad8bc05fac0d">getName</a>( $value )</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&#39;Implement this method&#39;</span> );</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a1db0f00c78126c63011f414757ad4e8c">   76</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a1db0f00c78126c63011f414757ad4e8c">internalAcceptValue</a>( $inputValue )</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> ( is_bool( $inputValue ) )</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            $inputValue = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Value.html">Value</a>( $inputValue );</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( !$inputValue instanceof <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Value.html">Value</a> )</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">InvalidArgumentType</a>(</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="stringliteral">&#39;$inputValue&#39;</span>,</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="stringliteral">&#39;eZ\\Publish\\Core\\FieldType\\Rating\\Value&#39;</span>,</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                $inputValue</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            );</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">if</span> ( !is_bool( $inputValue-&gt;isDisabled ) )</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">InvalidArgumentType</a>(</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="stringliteral">&#39;$inputValue-&gt;isDisabled&#39;</span>,</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <span class="stringliteral">&#39;boolean&#39;</span>,</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                $inputValue-&gt;isDisabled</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            );</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> $inputValue;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#ae36640939f9a12bf8ded51bd567d099d">  108</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#ae36640939f9a12bf8ded51bd567d099d">getSortInfo</a>( $value )</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#af499ff927b12da54dadd7d7e4653cfa4">  120</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#af499ff927b12da54dadd7d7e4653cfa4">fromHash</a>( $hash )</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Value.html">Value</a>( $hash );</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a492338552148c89500141c5d25070519">  132</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a492338552148c89500141c5d25070519">toHash</a>( $value )</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> $value-&gt;isDisabled;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a5dd501693788bd5410932de5887ff544">  142</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a5dd501693788bd5410932de5887ff544">isSearchable</a>()</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    {</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a24acefdb880befd66c2a4221a241619a">  154</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a24acefdb880befd66c2a4221a241619a">getIndexData</a>( $value )</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&#39;@todo: Implement&#39;</span> );</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html">eZ\Publish\Core\FieldType\FieldType</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">eZ\Publish\Core\Base\Exceptions\InvalidArgumentType</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html">Type</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html">FieldType</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#ac4e630df020b34263bc96fd6d83c0850">   28</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#ac4e630df020b34263bc96fd6d83c0850">getEmptyValue</a>()</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Value.html">Value</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a87b91f5e362e3a46f13008cdc8cb535d">   40</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a87b91f5e362e3a46f13008cdc8cb535d">isEmptyValue</a>( $value )</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">return</span> $value === null;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a1035edceb4657a3f7d3b0abf0aadad06">   50</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a1035edceb4657a3f7d3b0abf0aadad06">getFieldTypeIdentifier</a>()</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;ezsrrating&quot;</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#aa6d8b3ee69c9c0b171e0ad8bc05fac0d">   65</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#aa6d8b3ee69c9c0b171e0ad8bc05fac0d">getName</a>( $value )</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&#39;Implement this method&#39;</span> );</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a1db0f00c78126c63011f414757ad4e8c">   77</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a1db0f00c78126c63011f414757ad4e8c">internalAcceptValue</a>( $inputValue )</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">if</span> ( is_bool( $inputValue ) )</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            $inputValue = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Value.html">Value</a>( $inputValue );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( !$inputValue instanceof <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Value.html">Value</a> )</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">InvalidArgumentType</a>(</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="stringliteral">&#39;$inputValue&#39;</span>,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="stringliteral">&#39;eZ\\Publish\\Core\\FieldType\\Rating\\Value&#39;</span>,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                $inputValue</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            );</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">if</span> ( !is_bool( $inputValue-&gt;isDisabled ) )</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">InvalidArgumentType</a>(</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <span class="stringliteral">&#39;$inputValue-&gt;isDisabled&#39;</span>,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="stringliteral">&#39;boolean&#39;</span>,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                $inputValue-&gt;isDisabled</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            );</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> $inputValue;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#ae36640939f9a12bf8ded51bd567d099d">  109</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#ae36640939f9a12bf8ded51bd567d099d">getSortInfo</a>( $value )</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#af499ff927b12da54dadd7d7e4653cfa4">  121</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#af499ff927b12da54dadd7d7e4653cfa4">fromHash</a>( $hash )</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Value.html">Value</a>( $hash );</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a492338552148c89500141c5d25070519">  133</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a492338552148c89500141c5d25070519">toHash</a>( $value )</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">return</span> $value-&gt;isDisabled;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a5dd501693788bd5410932de5887ff544">  143</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a5dd501693788bd5410932de5887ff544">isSearchable</a>()</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a24acefdb880befd66c2a4221a241619a">  155</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Rating_1_1Type.html#a24acefdb880befd66c2a4221a241619a">getIndexData</a>( $value )</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&#39;@todo: Implement&#39;</span> );</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_429826c28e0afa35fa370fabe902bc82.html">FieldType</a></li><li class="navelem"><a class="el" href="dir_4730c8b8e285f2808fa0173845007bf4.html">Rating</a></li><li class="navelem"><a class="el" href="Core_2FieldType_2Rating_2Type_8php.html">Type.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:47 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:09 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

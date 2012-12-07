@@ -106,264 +106,265 @@ $(document).ready(function(){initNavTree('Core_2REST_2Server_2Controller_2Object
 <div class="contents">
 <a href="Core_2REST_2Server_2Controller_2ObjectState_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller.html">eZ\Publish\Core\REST\Server\Controller</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">eZ\Publish\Core\REST\Common\Message</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use eZ\Publish\Core\REST\Server\Values;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1RestObjectState.html">eZ\Publish\Core\REST\Common\Values\RestObjectState</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller.html">eZ\Publish\Core\REST\Server\Controller</a> as RestController;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ObjectStateService.html">eZ\Publish\API\Repository\ObjectStateService</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html">eZ\Publish\API\Repository\ContentService</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1ContentObjectStates.html">eZ\Publish\Core\REST\Common\Values\ContentObjectStates</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1NotFoundException.html">eZ\Publish\API\Repository\Exceptions\NotFoundException</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1InvalidArgumentException.html">eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Exceptions_1_1ForbiddenException.html">eZ\Publish\Core\REST\Server\Exceptions\ForbiddenException</a>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ObjectState_1_1ObjectState.html">ObjectState</a> <span class="keyword">extends</span> RestController</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a7ae82892f302d072ca7d64e5d14fa691">   34</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a7ae82892f302d072ca7d64e5d14fa691">$objectStateService</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#aa02c36aec6f74cac16cb298bbed0c8ff">   41</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#aa02c36aec6f74cac16cb298bbed0c8ff">$contentService</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#afe8486e09a708730a282f3539e831264">   49</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#afe8486e09a708730a282f3539e831264">__construct</a>( <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ObjectStateService.html">ObjectStateService</a> $objectStateService, <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html">ContentService</a> $contentService )</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        $this-&gt;objectStateService = $objectStateService;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        $this-&gt;contentService = $contentService;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#aceb9a6e6d0e6b6d2c91d9b14a7df3e33">   60</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#aceb9a6e6d0e6b6d2c91d9b14a7df3e33">createObjectStateGroup</a>()</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            $createdStateGroup = $this-&gt;objectStateService-&gt;createObjectStateGroup(</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                $this-&gt;inputDispatcher-&gt;parse(</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        array( <span class="stringliteral">&#39;Content-Type&#39;</span> =&gt; $this-&gt;request-&gt;contentType ),</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                        $this-&gt;request-&gt;body</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    )</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                )</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            );</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1InvalidArgumentException.html">InvalidArgumentException</a> $e )</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Exceptions_1_1ForbiddenException.html">ForbiddenException</a>( $e-&gt;getMessage() );</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1CreatedObjectStateGroup.html">Values\CreatedObjectStateGroup</a>(</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            array(</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="stringliteral">&#39;objectStateGroup&#39;</span> =&gt; $createdStateGroup</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            )</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        );</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#aece13a22364390f4bee9ef25aef80195">   90</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#aece13a22364390f4bee9ef25aef80195">createObjectState</a>()</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectstates&#39;</span>, $this-&gt;request-&gt;path );</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        $objectStateGroup = $this-&gt;objectStateService-&gt;loadObjectStateGroup( $values[<span class="stringliteral">&#39;objectstategroup&#39;</span>] );</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            $createdObjectState = $this-&gt;objectStateService-&gt;createObjectState(</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                $objectStateGroup,</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                $this-&gt;inputDispatcher-&gt;parse(</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                        array( <span class="stringliteral">&#39;Content-Type&#39;</span> =&gt; $this-&gt;request-&gt;contentType ),</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                        $this-&gt;request-&gt;body</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    )</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                )</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            );</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1InvalidArgumentException.html">InvalidArgumentException</a> $e )</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Exceptions_1_1ForbiddenException.html">ForbiddenException</a>( $e-&gt;getMessage() );</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1CreatedObjectState.html">Values\CreatedObjectState</a>(</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            array(</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                <span class="stringliteral">&#39;objectState&#39;</span> =&gt; <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1RestObjectState.html">RestObjectState</a>(</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    $createdObjectState,</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    $objectStateGroup-&gt;id</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                )</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            )</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        );</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a3511a6d3fa4b8548d31a9ba9df1722f2">  128</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a3511a6d3fa4b8548d31a9ba9df1722f2">loadObjectStateGroup</a>()</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectstategroup&#39;</span>, $this-&gt;request-&gt;path );</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">return</span> $this-&gt;objectStateService-&gt;loadObjectStateGroup( $values[<span class="stringliteral">&#39;objectstategroup&#39;</span>] );</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#abf98cd035bdfb234fd9d156179d70006">  139</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#abf98cd035bdfb234fd9d156179d70006">loadObjectState</a>()</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectstate&#39;</span>, $this-&gt;request-&gt;path );</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1RestObjectState.html">RestObjectState</a>(</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            $this-&gt;objectStateService-&gt;loadObjectState( $values[<span class="stringliteral">&#39;objectstate&#39;</span>] ),</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            $values[<span class="stringliteral">&#39;objectstategroup&#39;</span>]</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        );</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a9535faed67b6d82b96eb4fb009fb369a">  153</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a9535faed67b6d82b96eb4fb009fb369a">loadObjectStateGroups</a>()</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    {</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ObjectStateGroupList.html">Values\ObjectStateGroupList</a>(</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            $this-&gt;objectStateService-&gt;loadObjectStateGroups()</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        );</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#abd6f976b2fa1641438a3814588c2eb65">  165</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#abd6f976b2fa1641438a3814588c2eb65">loadObjectStates</a>()</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    {</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectstates&#39;</span>, $this-&gt;request-&gt;path );</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        $objectStateGroup = $this-&gt;objectStateService-&gt;loadObjectStateGroup( $values[<span class="stringliteral">&#39;objectstategroup&#39;</span>] );</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ObjectStateList.html">Values\ObjectStateList</a>(</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            $this-&gt;objectStateService-&gt;loadObjectStates( $objectStateGroup ),</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            $objectStateGroup-&gt;id</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        );</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a558cac2f380442b1149677e3d366b5e5">  181</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a558cac2f380442b1149677e3d366b5e5">deleteObjectStateGroup</a>()</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    {</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectstategroup&#39;</span>, $this-&gt;request-&gt;path );</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        $this-&gt;objectStateService-&gt;deleteObjectStateGroup(</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            $this-&gt;objectStateService-&gt;loadObjectStateGroup( $values[<span class="stringliteral">&#39;objectstategroup&#39;</span>] )</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        );</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1NoContent.html">Values\NoContent</a>();</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    }</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a07e6c0d2068cf3dbdaa8ca008267af20">  196</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a07e6c0d2068cf3dbdaa8ca008267af20">deleteObjectState</a>()</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    {</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectstate&#39;</span>, $this-&gt;request-&gt;path );</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        $this-&gt;objectStateService-&gt;deleteObjectState(</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            $this-&gt;objectStateService-&gt;loadObjectState( $values[<span class="stringliteral">&#39;objectstate&#39;</span>] )</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        );</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1NoContent.html">Values\NoContent</a>();</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
-<div class="line"><a name="l00211"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a7459fb9b70ef860597c1a030a53a2bcb">  211</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a7459fb9b70ef860597c1a030a53a2bcb">updateObjectStateGroup</a>()</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    {</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectstategroup&#39;</span>, $this-&gt;request-&gt;path );</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        $updateStruct = $this-&gt;inputDispatcher-&gt;parse(</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                array( <span class="stringliteral">&#39;Content-Type&#39;</span> =&gt; $this-&gt;request-&gt;contentType ),</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                $this-&gt;request-&gt;body</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            )</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        );</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        $objectStateGroup = $this-&gt;objectStateService-&gt;loadObjectStateGroup( $values[<span class="stringliteral">&#39;objectstategroup&#39;</span>] );</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        {</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            $updatedStateGroup = $this-&gt;objectStateService-&gt;updateObjectStateGroup( $objectStateGroup, $updateStruct );</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            <span class="keywordflow">return</span> $updatedStateGroup;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        }</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1InvalidArgumentException.html">InvalidArgumentException</a> $e )</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        {</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Exceptions_1_1ForbiddenException.html">ForbiddenException</a>( $e-&gt;getMessage() );</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        }</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
-<div class="line"><a name="l00239"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#add1e09c71c8f116b309a9b0d62592b33">  239</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#add1e09c71c8f116b309a9b0d62592b33">updateObjectState</a>()</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    {</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectstate&#39;</span>, $this-&gt;request-&gt;path );</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        $updateStruct = $this-&gt;inputDispatcher-&gt;parse(</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                array( <span class="stringliteral">&#39;Content-Type&#39;</span> =&gt; $this-&gt;request-&gt;contentType ),</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                $this-&gt;request-&gt;body</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            )</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        );</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        $objectState = $this-&gt;objectStateService-&gt;loadObjectState( $values[<span class="stringliteral">&#39;objectstate&#39;</span>] );</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        {</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            $updatedObjectState = $this-&gt;objectStateService-&gt;updateObjectState( $objectState, $updateStruct );</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1RestObjectState.html">RestObjectState</a>( $updatedObjectState, $values[<span class="stringliteral">&#39;objectstategroup&#39;</span>] );</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        }</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1InvalidArgumentException.html">InvalidArgumentException</a> $e )</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Exceptions_1_1ForbiddenException.html">ForbiddenException</a>( $e-&gt;getMessage() );</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    }</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
-<div class="line"><a name="l00267"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a6578c97d2e81fe53cca515964ecc6b9d">  267</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a6578c97d2e81fe53cca515964ecc6b9d">getObjectStatesForContent</a>()</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    {</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectObjectStates&#39;</span>, $this-&gt;request-&gt;path );</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        $groups = $this-&gt;objectStateService-&gt;loadObjectStateGroups();</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        $contentInfo = $this-&gt;contentService-&gt;loadContentInfo( $values[<span class="stringliteral">&#39;object&#39;</span>] );</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        $contentObjectStates = array();</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">foreach</span> ( $groups as $group )</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        {</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            {</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                $state = $this-&gt;objectStateService-&gt;getContentState( $contentInfo, $group );</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                $contentObjectStates[] = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1RestObjectState.html">RestObjectState</a>( $state, $group-&gt;id );</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            }</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1NotFoundException.html">NotFoundException</a> $e )</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            {</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                <span class="comment">// Do nothing</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            }</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        }</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1ContentObjectStates.html">ContentObjectStates</a>( $contentObjectStates );</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    }</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
-<div class="line"><a name="l00297"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#af22ce090ee3d684956a7837d84a0c2f1">  297</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#af22ce090ee3d684956a7837d84a0c2f1">setObjectStatesForContent</a>()</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    {</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectObjectStates&#39;</span>, $this-&gt;request-&gt;path );</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        $newObjectStates = $this-&gt;inputDispatcher-&gt;parse(</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                array( <span class="stringliteral">&#39;Content-Type&#39;</span> =&gt; $this-&gt;request-&gt;contentType ),</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                $this-&gt;request-&gt;body</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            )</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        );</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        $countByGroups = array();</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordflow">foreach</span> ( $newObjectStates as $newObjectState )</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            $groupId = (int) $newObjectState-&gt;groupId;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            if ( array_key_exists( $groupId, $countByGroups ) )</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            {</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                $countByGroups[$groupId]++;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            }</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            {</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                $countByGroups[$groupId] = 1;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            }</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        }</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="keywordflow">foreach</span> ( $countByGroups as $groupId =&gt; $count )</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        {</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <span class="keywordflow">if</span> ( $count &gt; 1 )</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            {</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Exceptions_1_1ForbiddenException.html">ForbiddenException</a>( <span class="stringliteral">&quot;Multiple object states provided for group with ID $groupId&quot;</span> );</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            }</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        }</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        $contentInfo = $this-&gt;contentService-&gt;loadContentInfo( $values[<span class="stringliteral">&#39;object&#39;</span>] );</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        $contentObjectStates = array();</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordflow">foreach</span> ( $newObjectStates as $newObjectState )</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        {</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            $objectStateGroup = $this-&gt;objectStateService-&gt;loadObjectStateGroup( $newObjectState-&gt;groupId );</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            $this-&gt;objectStateService-&gt;setContentState( $contentInfo, $objectStateGroup, $newObjectState-&gt;objectState );</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            $contentObjectStates[(int) $objectStateGroup-&gt;id] = $newObjectState;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        }</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1ContentObjectStates.html">ContentObjectStates</a>( $contentObjectStates );</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    }</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">eZ\Publish\Core\REST\Common\Message</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use eZ\Publish\Core\REST\Server\Values;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1RestObjectState.html">eZ\Publish\Core\REST\Common\Values\RestObjectState</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller.html">eZ\Publish\Core\REST\Server\Controller</a> as RestController;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ObjectStateService.html">eZ\Publish\API\Repository\ObjectStateService</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html">eZ\Publish\API\Repository\ContentService</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1ContentObjectStates.html">eZ\Publish\Core\REST\Common\Values\ContentObjectStates</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1NotFoundException.html">eZ\Publish\API\Repository\Exceptions\NotFoundException</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1InvalidArgumentException.html">eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Exceptions_1_1ForbiddenException.html">eZ\Publish\Core\REST\Server\Exceptions\ForbiddenException</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ObjectState_1_1ObjectState.html">ObjectState</a> <span class="keyword">extends</span> RestController</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a7ae82892f302d072ca7d64e5d14fa691">   35</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a7ae82892f302d072ca7d64e5d14fa691">$objectStateService</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#aa02c36aec6f74cac16cb298bbed0c8ff">   42</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#aa02c36aec6f74cac16cb298bbed0c8ff">$contentService</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#afe8486e09a708730a282f3539e831264">   50</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#afe8486e09a708730a282f3539e831264">__construct</a>( <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ObjectStateService.html">ObjectStateService</a> $objectStateService, <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html">ContentService</a> $contentService )</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        $this-&gt;objectStateService = $objectStateService;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        $this-&gt;contentService = $contentService;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#aceb9a6e6d0e6b6d2c91d9b14a7df3e33">   61</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#aceb9a6e6d0e6b6d2c91d9b14a7df3e33">createObjectStateGroup</a>()</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            $createdStateGroup = $this-&gt;objectStateService-&gt;createObjectStateGroup(</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                $this-&gt;inputDispatcher-&gt;parse(</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                        array( <span class="stringliteral">&#39;Content-Type&#39;</span> =&gt; $this-&gt;request-&gt;contentType ),</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                        $this-&gt;request-&gt;body</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    )</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                )</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1InvalidArgumentException.html">InvalidArgumentException</a> $e )</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Exceptions_1_1ForbiddenException.html">ForbiddenException</a>( $e-&gt;getMessage() );</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1CreatedObjectStateGroup.html">Values\CreatedObjectStateGroup</a>(</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            array(</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="stringliteral">&#39;objectStateGroup&#39;</span> =&gt; $createdStateGroup</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            )</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#aece13a22364390f4bee9ef25aef80195">   91</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#aece13a22364390f4bee9ef25aef80195">createObjectState</a>()</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectstates&#39;</span>, $this-&gt;request-&gt;path );</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        $objectStateGroup = $this-&gt;objectStateService-&gt;loadObjectStateGroup( $values[<span class="stringliteral">&#39;objectstategroup&#39;</span>] );</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            $createdObjectState = $this-&gt;objectStateService-&gt;createObjectState(</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                $objectStateGroup,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                $this-&gt;inputDispatcher-&gt;parse(</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                        array( <span class="stringliteral">&#39;Content-Type&#39;</span> =&gt; $this-&gt;request-&gt;contentType ),</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                        $this-&gt;request-&gt;body</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    )</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                )</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            );</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1InvalidArgumentException.html">InvalidArgumentException</a> $e )</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Exceptions_1_1ForbiddenException.html">ForbiddenException</a>( $e-&gt;getMessage() );</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1CreatedObjectState.html">Values\CreatedObjectState</a>(</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            array(</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="stringliteral">&#39;objectState&#39;</span> =&gt; <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1RestObjectState.html">RestObjectState</a>(</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    $createdObjectState,</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    $objectStateGroup-&gt;id</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                )</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            )</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        );</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a3511a6d3fa4b8548d31a9ba9df1722f2">  129</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a3511a6d3fa4b8548d31a9ba9df1722f2">loadObjectStateGroup</a>()</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectstategroup&#39;</span>, $this-&gt;request-&gt;path );</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">return</span> $this-&gt;objectStateService-&gt;loadObjectStateGroup( $values[<span class="stringliteral">&#39;objectstategroup&#39;</span>] );</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#abf98cd035bdfb234fd9d156179d70006">  140</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#abf98cd035bdfb234fd9d156179d70006">loadObjectState</a>()</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectstate&#39;</span>, $this-&gt;request-&gt;path );</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1RestObjectState.html">RestObjectState</a>(</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            $this-&gt;objectStateService-&gt;loadObjectState( $values[<span class="stringliteral">&#39;objectstate&#39;</span>] ),</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            $values[<span class="stringliteral">&#39;objectstategroup&#39;</span>]</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        );</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a9535faed67b6d82b96eb4fb009fb369a">  154</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a9535faed67b6d82b96eb4fb009fb369a">loadObjectStateGroups</a>()</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ObjectStateGroupList.html">Values\ObjectStateGroupList</a>(</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            $this-&gt;objectStateService-&gt;loadObjectStateGroups()</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        );</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#abd6f976b2fa1641438a3814588c2eb65">  166</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#abd6f976b2fa1641438a3814588c2eb65">loadObjectStates</a>()</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectstates&#39;</span>, $this-&gt;request-&gt;path );</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        $objectStateGroup = $this-&gt;objectStateService-&gt;loadObjectStateGroup( $values[<span class="stringliteral">&#39;objectstategroup&#39;</span>] );</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ObjectStateList.html">Values\ObjectStateList</a>(</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            $this-&gt;objectStateService-&gt;loadObjectStates( $objectStateGroup ),</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            $objectStateGroup-&gt;id</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        );</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a558cac2f380442b1149677e3d366b5e5">  182</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a558cac2f380442b1149677e3d366b5e5">deleteObjectStateGroup</a>()</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectstategroup&#39;</span>, $this-&gt;request-&gt;path );</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        $this-&gt;objectStateService-&gt;deleteObjectStateGroup(</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            $this-&gt;objectStateService-&gt;loadObjectStateGroup( $values[<span class="stringliteral">&#39;objectstategroup&#39;</span>] )</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        );</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1NoContent.html">Values\NoContent</a>();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a07e6c0d2068cf3dbdaa8ca008267af20">  197</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a07e6c0d2068cf3dbdaa8ca008267af20">deleteObjectState</a>()</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectstate&#39;</span>, $this-&gt;request-&gt;path );</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        $this-&gt;objectStateService-&gt;deleteObjectState(</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            $this-&gt;objectStateService-&gt;loadObjectState( $values[<span class="stringliteral">&#39;objectstate&#39;</span>] )</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        );</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1NoContent.html">Values\NoContent</a>();</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a7459fb9b70ef860597c1a030a53a2bcb">  212</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a7459fb9b70ef860597c1a030a53a2bcb">updateObjectStateGroup</a>()</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectstategroup&#39;</span>, $this-&gt;request-&gt;path );</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        $updateStruct = $this-&gt;inputDispatcher-&gt;parse(</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                array( <span class="stringliteral">&#39;Content-Type&#39;</span> =&gt; $this-&gt;request-&gt;contentType ),</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                $this-&gt;request-&gt;body</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            )</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        );</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        $objectStateGroup = $this-&gt;objectStateService-&gt;loadObjectStateGroup( $values[<span class="stringliteral">&#39;objectstategroup&#39;</span>] );</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            $updatedStateGroup = $this-&gt;objectStateService-&gt;updateObjectStateGroup( $objectStateGroup, $updateStruct );</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="keywordflow">return</span> $updatedStateGroup;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1InvalidArgumentException.html">InvalidArgumentException</a> $e )</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Exceptions_1_1ForbiddenException.html">ForbiddenException</a>( $e-&gt;getMessage() );</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#add1e09c71c8f116b309a9b0d62592b33">  240</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#add1e09c71c8f116b309a9b0d62592b33">updateObjectState</a>()</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectstate&#39;</span>, $this-&gt;request-&gt;path );</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        $updateStruct = $this-&gt;inputDispatcher-&gt;parse(</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                array( <span class="stringliteral">&#39;Content-Type&#39;</span> =&gt; $this-&gt;request-&gt;contentType ),</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                $this-&gt;request-&gt;body</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            )</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        );</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        $objectState = $this-&gt;objectStateService-&gt;loadObjectState( $values[<span class="stringliteral">&#39;objectstate&#39;</span>] );</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            $updatedObjectState = $this-&gt;objectStateService-&gt;updateObjectState( $objectState, $updateStruct );</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1RestObjectState.html">RestObjectState</a>( $updatedObjectState, $values[<span class="stringliteral">&#39;objectstategroup&#39;</span>] );</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        }</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1InvalidArgumentException.html">InvalidArgumentException</a> $e )</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Exceptions_1_1ForbiddenException.html">ForbiddenException</a>( $e-&gt;getMessage() );</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a6578c97d2e81fe53cca515964ecc6b9d">  268</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#a6578c97d2e81fe53cca515964ecc6b9d">getObjectStatesForContent</a>()</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    {</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectObjectStates&#39;</span>, $this-&gt;request-&gt;path );</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        $groups = $this-&gt;objectStateService-&gt;loadObjectStateGroups();</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        $contentInfo = $this-&gt;contentService-&gt;loadContentInfo( $values[<span class="stringliteral">&#39;object&#39;</span>] );</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        $contentObjectStates = array();</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">foreach</span> ( $groups as $group )</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                $state = $this-&gt;objectStateService-&gt;getContentState( $contentInfo, $group );</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                $contentObjectStates[] = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1RestObjectState.html">RestObjectState</a>( $state, $group-&gt;id );</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1NotFoundException.html">NotFoundException</a> $e )</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                <span class="comment">// Do nothing</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1ContentObjectStates.html">ContentObjectStates</a>( $contentObjectStates );</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#af22ce090ee3d684956a7837d84a0c2f1">  298</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1ObjectState.html#af22ce090ee3d684956a7837d84a0c2f1">setObjectStatesForContent</a>()</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        $values = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectObjectStates&#39;</span>, $this-&gt;request-&gt;path );</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        $newObjectStates = $this-&gt;inputDispatcher-&gt;parse(</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                array( <span class="stringliteral">&#39;Content-Type&#39;</span> =&gt; $this-&gt;request-&gt;contentType ),</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                $this-&gt;request-&gt;body</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            )</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        );</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        $countByGroups = array();</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordflow">foreach</span> ( $newObjectStates as $newObjectState )</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            $groupId = (int)$newObjectState-&gt;groupId;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            if ( array_key_exists( $groupId, $countByGroups ) )</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                $countByGroups[$groupId]++;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                $countByGroups[$groupId] = 1;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        }</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keywordflow">foreach</span> ( $countByGroups as $groupId =&gt; $count )</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        {</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            <span class="keywordflow">if</span> ( $count &gt; 1 )</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Exceptions_1_1ForbiddenException.html">ForbiddenException</a>( <span class="stringliteral">&quot;Multiple object states provided for group with ID $groupId&quot;</span> );</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        $contentInfo = $this-&gt;contentService-&gt;loadContentInfo( $values[<span class="stringliteral">&#39;object&#39;</span>] );</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        $contentObjectStates = array();</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <span class="keywordflow">foreach</span> ( $newObjectStates as $newObjectState )</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        {</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            $objectStateGroup = $this-&gt;objectStateService-&gt;loadObjectStateGroup( $newObjectState-&gt;groupId );</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            $this-&gt;objectStateService-&gt;setContentState( $contentInfo, $objectStateGroup, $newObjectState-&gt;objectState );</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            $contentObjectStates[(int)$objectStateGroup-&gt;id] = $newObjectState;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1ContentObjectStates.html">ContentObjectStates</a>( $contentObjectStates );</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_797398f06ec5dac6abf0352e0ae63d7a.html">REST</a></li><li class="navelem"><a class="el" href="dir_21fb5f37fbde5211f1530de5bf933d51.html">Server</a></li><li class="navelem"><a class="el" href="dir_04a688be788be7ab3f3f806053b35578.html">Controller</a></li><li class="navelem"><a class="el" href="Core_2REST_2Server_2Controller_2ObjectState_8php.html">ObjectState.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:47 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:09 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -106,50 +106,51 @@ $(document).ready(function(){initNavTree('AcceptHeaderVisitorDispatcher_8php_sou
 <div class="contents">
 <a href="AcceptHeaderVisitorDispatcher_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View.html">   10</a></span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\REST\Server\View;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Request.html">eZ\Publish\Core\REST\Server\Request</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Visitor.html">eZ\Publish\Core\REST\Common\Output\Visitor</a> as OutputVisitor;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use Qafoo\RMF\View\NowViewFoundException;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html">AcceptHeaderVisitorDispatcher</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html#a8668a1aa71260827138de1245a73d786">   26</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html#a8668a1aa71260827138de1245a73d786">$mapping</a> = array();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html#affe497dd4ed1f49b50be2634828f4493">   33</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html#affe497dd4ed1f49b50be2634828f4493">__construct</a>( array <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html#a8668a1aa71260827138de1245a73d786">$mapping</a> )</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">foreach</span> ( $mapping as $regexp =&gt; $visitor )</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html#a8524e83030b3f7994faf4916d1e057a1">addVisitor</a>( $regexp, $visitor );</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html#a8524e83030b3f7994faf4916d1e057a1">   47</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html#a8524e83030b3f7994faf4916d1e057a1">addVisitor</a>( $regexp, OutputVisitor $visitor )</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        $this-&gt;mapping[$regexp] = $visitor;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> dispatch( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Request.html">Request</a> $request, $result )</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">foreach</span> ( $request-&gt;mimetype as $mimeType )</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">foreach</span> ( $this-&gt;mapping as $regexp =&gt; $visitor )</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordflow">if</span> ( preg_match( $regexp, $mimeType[<span class="stringliteral">&#39;value&#39;</span>] ) )</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    <span class="keywordflow">return</span> $visitor-&gt;visit( $result );</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">throw</span> <span class="keyword">new</span> NowViewFoundException( <span class="stringliteral">&quot;No view mapping found.&quot;</span> );</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Request.html">eZ\Publish\Core\REST\Server\Request</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Visitor.html">eZ\Publish\Core\REST\Common\Output\Visitor</a> as OutputVisitor;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use Qafoo\RMF\View\NowViewFoundException;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html">AcceptHeaderVisitorDispatcher</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html#a8668a1aa71260827138de1245a73d786">   27</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html#a8668a1aa71260827138de1245a73d786">$mapping</a> = array();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html#affe497dd4ed1f49b50be2634828f4493">   34</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html#affe497dd4ed1f49b50be2634828f4493">__construct</a>( array <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html#a8668a1aa71260827138de1245a73d786">$mapping</a> )</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">foreach</span> ( $mapping as $regexp =&gt; $visitor )</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html#a8524e83030b3f7994faf4916d1e057a1">addVisitor</a>( $regexp, $visitor );</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html#a8524e83030b3f7994faf4916d1e057a1">   48</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View_1_1AcceptHeaderVisitorDispatcher.html#a8524e83030b3f7994faf4916d1e057a1">addVisitor</a>( $regexp, OutputVisitor $visitor )</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        $this-&gt;mapping[$regexp] = $visitor;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> dispatch( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Request.html">Request</a> $request, $result )</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">foreach</span> ( $request-&gt;mimetype as $mimeType )</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">foreach</span> ( $this-&gt;mapping as $regexp =&gt; $visitor )</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">if</span> ( preg_match( $regexp, $mimeType[<span class="stringliteral">&#39;value&#39;</span>] ) )</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    <span class="keywordflow">return</span> $visitor-&gt;visit( $result );</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">throw</span> <span class="keyword">new</span> NowViewFoundException( <span class="stringliteral">&quot;No view mapping found.&quot;</span> );</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_797398f06ec5dac6abf0352e0ae63d7a.html">REST</a></li><li class="navelem"><a class="el" href="dir_21fb5f37fbde5211f1530de5bf933d51.html">Server</a></li><li class="navelem"><a class="el" href="dir_e6f1283e9619161e7b6da3146d380cfb.html">View</a></li><li class="navelem"><a class="el" href="AcceptHeaderVisitorDispatcher_8php.html">AcceptHeaderVisitorDispatcher.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:50 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:12 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

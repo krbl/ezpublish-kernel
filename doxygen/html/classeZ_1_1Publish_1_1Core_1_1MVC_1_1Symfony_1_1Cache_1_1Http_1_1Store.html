@@ -187,8 +187,9 @@ Protected Attributes</h2></td></tr>
 <p>References <a class="el" href="Store_8php_source.html#l00026">eZ\Publish\Core\MVC\Symfony\Cache\Http\Store\$root</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;root = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store.html#ac0a78836b6ee7cbe7c09f45f66c035f7">$root</a>;</div>
-<div class="line">        <span class="keywordflow">if</span> (!is_dir($this-&gt;root)) {</div>
-<div class="line">            mkdir($this-&gt;root, 0777, <span class="keyword">true</span>);</div>
+<div class="line">        <span class="keywordflow">if</span> ( !is_dir( $this-&gt;root ) )</div>
+<div class="line">        {</div>
+<div class="line">            mkdir( $this-&gt;root, 0777, <span class="keyword">true</span> );</div>
 <div class="line">        }</div>
 <div class="line">        $this-&gt;keyCache = new \SplObjectStorage();</div>
 <div class="line">        $this-&gt;locks = array();</div>
@@ -211,18 +212,20 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Cleanups storage. </p>
 
-<p>Definition at line <a class="el" href="Store_8php_source.html#l00048">48</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
+<p>Definition at line <a class="el" href="Store_8php_source.html#l00049">49</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="comment">// unlock everything</span></div>
-<div class="line">        <span class="keywordflow">foreach</span> ($this-&gt;locks as $lock) {</div>
-<div class="line">            @unlink($lock);</div>
+<div class="line">        <span class="keywordflow">foreach</span> ( $this-&gt;locks as $lock )</div>
+<div class="line">        {</div>
+<div class="line">            @unlink( $lock );</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        $error = error_get_last();</div>
-<div class="line">        <span class="keywordflow">if</span> (1 === $error[<span class="stringliteral">&#39;type&#39;</span>] &amp;&amp; <span class="keyword">false</span> === headers_sent()) {</div>
+<div class="line">        <span class="keywordflow">if</span> ( 1 === $error[<span class="stringliteral">&#39;type&#39;</span>] &amp;&amp; <span class="keyword">false</span> === headers_sent() )</div>
+<div class="line">        {</div>
 <div class="line">            <span class="comment">// send a 503</span></div>
-<div class="line">            header(<span class="stringliteral">&#39;HTTP/1.0 503 Service Unavailable&#39;</span>);</div>
-<div class="line">            header(<span class="stringliteral">&#39;Retry-After: 10&#39;</span>);</div>
+<div class="line">            header( <span class="stringliteral">&#39;HTTP/1.0 503 Service Unavailable&#39;</span> );</div>
+<div class="line">            header( <span class="stringliteral">&#39;Retry-After: 10&#39;</span> );</div>
 <div class="line">            echo <span class="stringliteral">&#39;503 Service Unavailable&#39;</span>;</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
@@ -261,9 +264,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1LocationAwareStore.html#a21a2a40dff185cdb28b00f8e6b85303b">eZ\Publish\Core\MVC\Symfony\Cache\Http\LocationAwareStore</a>.</p>
 
-<p>Definition at line <a class="el" href="Store_8php_source.html#l00197">197</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
+<p>Definition at line <a class="el" href="Store_8php_source.html#l00212">212</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        <span class="keywordflow">return</span> <span class="stringliteral">&#39;en&#39;</span>.sha1($response-&gt;getContent());</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="stringliteral">&#39;en&#39;</span> . sha1( $response-&gt;getContent() );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -295,9 +298,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1LocationAwareStore.html#a037d07e50f9e334ade1f0b4fa64c939c">eZ\Publish\Core\MVC\Symfony\Cache\Http\LocationAwareStore</a>.</p>
 
-<p>Definition at line <a class="el" href="Store_8php_source.html#l00349">349</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
+<p>Definition at line <a class="el" href="Store_8php_source.html#l00381">381</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        <span class="keywordflow">return</span> $this-&gt;root.DIRECTORY_SEPARATOR.substr($key, 0, 2).DIRECTORY_SEPARATOR.substr($key, 2, 2).DIRECTORY_SEPARATOR.substr($key, 4, 2).DIRECTORY_SEPARATOR.substr($key, 6);</div>
+<div class="line">        <span class="keywordflow">return</span> $this-&gt;root . DIRECTORY_SEPARATOR . substr( $key, 0, 2 ) . DIRECTORY_SEPARATOR . substr( $key, 2, 2 ) . DIRECTORY_SEPARATOR . substr( $key, 4, 2 ) . DIRECTORY_SEPARATOR . substr( $key, 6 );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 <p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -334,35 +337,43 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Store_8php_source.html#l00207">207</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
+<p>Definition at line <a class="el" href="Store_8php_source.html#l00222">222</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $modified = <span class="keyword">false</span>;</div>
-<div class="line">        $key = $this-&gt;getCacheKey($request);</div>
+<div class="line">        $key = $this-&gt;getCacheKey( $request );</div>
 <div class="line"></div>
 <div class="line">        $entries = array();</div>
-<div class="line">        <span class="keywordflow">foreach</span> ($this-&gt;getMetadata($key) as $entry) {</div>
-<div class="line">            $response = $this-&gt;restoreResponse($entry[1]);</div>
-<div class="line">            <span class="keywordflow">if</span> ($response-&gt;isFresh()) {</div>
+<div class="line">        <span class="keywordflow">foreach</span> ( $this-&gt;getMetadata( $key ) as $entry )</div>
+<div class="line">        {</div>
+<div class="line">            $response = $this-&gt;restoreResponse( $entry[1] );</div>
+<div class="line">            <span class="keywordflow">if</span> ( $response-&gt;isFresh() )</div>
+<div class="line">            {</div>
 <div class="line">                $response-&gt;expire();</div>
 <div class="line">                $modified = <span class="keyword">true</span>;</div>
-<div class="line">                $entries[] = array($entry[0], $this-&gt;persistResponse($response));</div>
-<div class="line">            } <span class="keywordflow">else</span> {</div>
+<div class="line">                $entries[] = array( $entry[0], $this-&gt;persistResponse( $response ) );</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">else</span></div>
+<div class="line">            {</div>
 <div class="line">                $entries[] = $entry;</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">if</span> ($modified) {</div>
-<div class="line">            <span class="keywordflow">if</span> (<span class="keyword">false</span> === $this-&gt;save($key, serialize($entries))) {</div>
-<div class="line">                <span class="keywordflow">throw</span> new \RuntimeException(<span class="stringliteral">&#39;Unable to store the metadata.&#39;</span>);</div>
+<div class="line">        <span class="keywordflow">if</span> ( $modified )</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span> ( <span class="keyword">false</span> === $this-&gt;save( $key, serialize( $entries ) ) )</div>
+<div class="line">            {</div>
+<div class="line">                <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&#39;Unable to store the metadata.&#39;</span> );</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// As per the RFC, invalidate Location and Content-Location URLs if present</span></div>
-<div class="line">        <span class="keywordflow">foreach</span> (array(<span class="stringliteral">&#39;Location&#39;</span>, <span class="stringliteral">&#39;Content-Location&#39;</span>) as $header) {</div>
-<div class="line">            <span class="keywordflow">if</span> ($uri = $request-&gt;headers-&gt;get($header)) {</div>
-<div class="line">                $subRequest = Request::create($uri, <span class="stringliteral">&#39;get&#39;</span>, array(), array(), array(), $request-&gt;server-&gt;all());</div>
+<div class="line">        <span class="keywordflow">foreach</span> ( array( <span class="stringliteral">&#39;Location&#39;</span>, <span class="stringliteral">&#39;Content-Location&#39;</span> ) as $header )</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span> ( $uri = $request-&gt;headers-&gt;get( $header ) )</div>
+<div class="line">            {</div>
+<div class="line">                $subRequest = Request::create( $uri, <span class="stringliteral">&#39;get&#39;</span>, array(), array(), array(), $request-&gt;server-&gt;all() );</div>
 <div class="line"></div>
-<div class="line">                $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store.html#af79884d22749189e5c8bf98ec5c78057">invalidate</a>($subRequest);</div>
+<div class="line">                $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store.html#af79884d22749189e5c8bf98ec5c78057">invalidate</a>( $subRequest );</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
@@ -391,12 +402,13 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Boolean|string true if the lock is acquired, the path to the current lock otherwise </dd></dl>
 
-<p>Definition at line <a class="el" href="Store_8php_source.html#l00071">71</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
+<p>Definition at line <a class="el" href="Store_8php_source.html#l00074">74</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
 
-<p>References <a class="el" href="Store_8php_source.html#l00349">eZ\Publish\Core\MVC\Symfony\Cache\Http\Store\getPath()</a>.</p>
+<p>References <a class="el" href="Store_8php_source.html#l00381">eZ\Publish\Core\MVC\Symfony\Cache\Http\Store\getPath()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        <span class="keywordflow">if</span> (<span class="keyword">false</span> !== $lock = @fopen($path = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store.html#a4d57d4f3d6f1c828814213fb12739c0a">getPath</a>($this-&gt;getCacheKey($request).<span class="stringliteral">&#39;.lck&#39;</span>), <span class="charliteral">&#39;x&#39;</span>)) {</div>
-<div class="line">            fclose($lock);</div>
+<div class="line">        <span class="keywordflow">if</span> ( <span class="keyword">false</span> !== $lock = @fopen( $path = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store.html#a4d57d4f3d6f1c828814213fb12739c0a">getPath</a>( $this-&gt;getCacheKey( $request ) . <span class="stringliteral">&#39;.lck&#39;</span> ), <span class="charliteral">&#39;x&#39;</span> ) )</div>
+<div class="line">        {</div>
+<div class="line">            fclose( $lock );</div>
 <div class="line"></div>
 <div class="line">            $this-&gt;locks[] = $path;</div>
 <div class="line"></div>
@@ -441,33 +453,37 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Response|null A Response instance, or null if no cache entry was found </dd></dl>
 
-<p>Definition at line <a class="el" href="Store_8php_source.html#l00101">101</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
+<p>Definition at line <a class="el" href="Store_8php_source.html#l00105">105</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
 
-<p>References <a class="el" href="Store_8php_source.html#l00349">eZ\Publish\Core\MVC\Symfony\Cache\Http\Store\getPath()</a>.</p>
+<p>References <a class="el" href="Store_8php_source.html#l00381">eZ\Publish\Core\MVC\Symfony\Cache\Http\Store\getPath()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        $key = $this-&gt;getCacheKey($request);</div>
+<div class="line">        $key = $this-&gt;getCacheKey( $request );</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">if</span> (!$entries = $this-&gt;getMetadata($key)) {</div>
+<div class="line">        <span class="keywordflow">if</span> ( !$entries = $this-&gt;getMetadata( $key ) )</div>
+<div class="line">        {</div>
 <div class="line">            <span class="keywordflow">return</span> null;</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// find a cached entry that matches the request.</span></div>
 <div class="line">        $match = null;</div>
-<div class="line">        <span class="keywordflow">foreach</span> ($entries as $entry) {</div>
-<div class="line">            <span class="keywordflow">if</span> ($this-&gt;requestsMatch(isset($entry[1][<span class="stringliteral">&#39;vary&#39;</span>][0]) ? $entry[1][<span class="stringliteral">&#39;vary&#39;</span>][0] : <span class="stringliteral">&#39;&#39;</span>, $request-&gt;headers-&gt;all(), $entry[0])) {</div>
+<div class="line">        <span class="keywordflow">foreach</span> ( $entries as $entry )</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span> ( $this-&gt;requestsMatch( isset( $entry[1][<span class="stringliteral">&#39;vary&#39;</span>][0] ) ? $entry[1][<span class="stringliteral">&#39;vary&#39;</span>][0] : <span class="stringliteral">&#39;&#39;</span>, $request-&gt;headers-&gt;all(), $entry[0] ) )</div>
+<div class="line">            {</div>
 <div class="line">                $match = $entry;</div>
-<div class="line"></div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">if</span> (null === $match) {</div>
+<div class="line">        <span class="keywordflow">if</span> ( null === $match )</div>
+<div class="line">        {</div>
 <div class="line">            <span class="keywordflow">return</span> null;</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        list($req, $headers) = $match;</div>
-<div class="line">        <span class="keywordflow">if</span> (is_file($body = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store.html#a4d57d4f3d6f1c828814213fb12739c0a">getPath</a>($headers[<span class="stringliteral">&#39;x-content-digest&#39;</span>][0]))) {</div>
-<div class="line">            <span class="keywordflow">return</span> $this-&gt;restoreResponse($headers, $body);</div>
+<div class="line">        list( $req, $headers ) = $match;</div>
+<div class="line">        <span class="keywordflow">if</span> ( is_file( $body = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store.html#a4d57d4f3d6f1c828814213fb12739c0a">getPath</a>( $headers[<span class="stringliteral">&#39;x-content-digest&#39;</span>][0] ) ) )</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span> $this-&gt;restoreResponse( $headers, $body );</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// @todo the metaStore referenced an entity that doesn&#39;t exist in</span></div>
@@ -511,12 +527,13 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Boolean true if the URL exists and has been purged, false otherwise </dd></dl>
 
-<p>Definition at line <a class="el" href="Store_8php_source.html#l00293">293</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
+<p>Definition at line <a class="el" href="Store_8php_source.html#l00320">320</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
 
-<p>References <a class="el" href="Store_8php_source.html#l00349">eZ\Publish\Core\MVC\Symfony\Cache\Http\Store\getPath()</a>.</p>
+<p>References <a class="el" href="Store_8php_source.html#l00381">eZ\Publish\Core\MVC\Symfony\Cache\Http\Store\getPath()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        <span class="keywordflow">if</span> (is_file($path = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store.html#a4d57d4f3d6f1c828814213fb12739c0a">getPath</a>($this-&gt;getCacheKey(Request::create($url))))) {</div>
-<div class="line">            unlink($path);</div>
+<div class="line">        <span class="keywordflow">if</span> ( is_file( $path = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store.html#a4d57d4f3d6f1c828814213fb12739c0a">getPath</a>( $this-&gt;getCacheKey( Request::create( $url ) ) ) ) )</div>
+<div class="line">        {</div>
+<div class="line">            unlink( $path );</div>
 <div class="line"></div>
 <div class="line">            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">        }</div>
@@ -569,11 +586,11 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Store_8php_source.html#l00089">89</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
+<p>Definition at line <a class="el" href="Store_8php_source.html#l00093">93</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
 
-<p>References <a class="el" href="Store_8php_source.html#l00349">eZ\Publish\Core\MVC\Symfony\Cache\Http\Store\getPath()</a>.</p>
+<p>References <a class="el" href="Store_8php_source.html#l00381">eZ\Publish\Core\MVC\Symfony\Cache\Http\Store\getPath()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        <span class="keywordflow">return</span> @unlink($this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store.html#a4d57d4f3d6f1c828814213fb12739c0a">getPath</a>($this-&gt;getCacheKey($request).<span class="stringliteral">&#39;.lck&#39;</span>));</div>
+<div class="line">        <span class="keywordflow">return</span> @unlink( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store.html#a4d57d4f3d6f1c828814213fb12739c0a">getPath</a>( $this-&gt;getCacheKey( $request ) . <span class="stringliteral">&#39;.lck&#39;</span> ) );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 <p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -623,48 +640,55 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string The key under which the response is stored </dd></dl>
 
-<p>Definition at line <a class="el" href="Store_8php_source.html#l00145">145</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
+<p>Definition at line <a class="el" href="Store_8php_source.html#l00153">153</a> of file <a class="el" href="Store_8php_source.html">Store.php</a>.</p>
 
-<p>References <a class="el" href="Store_8php_source.html#l00197">eZ\Publish\Core\MVC\Symfony\Cache\Http\Store\generateContentDigest()</a>.</p>
+<p>References <a class="el" href="Store_8php_source.html#l00212">eZ\Publish\Core\MVC\Symfony\Cache\Http\Store\generateContentDigest()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        $key = $this-&gt;getCacheKey($request);</div>
-<div class="line">        $storedEnv = $this-&gt;persistRequest($request);</div>
+<div class="line">        $key = $this-&gt;getCacheKey( $request );</div>
+<div class="line">        $storedEnv = $this-&gt;persistRequest( $request );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// write the response body to the entity store if this is the original response</span></div>
-<div class="line">        <span class="keywordflow">if</span> (!$response-&gt;headers-&gt;has(<span class="stringliteral">&#39;X-Content-Digest&#39;</span>)) {</div>
-<div class="line">            $digest = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store.html#af751439f8a3339e095e14047a2fc88d7">generateContentDigest</a>($response);</div>
+<div class="line">        <span class="keywordflow">if</span> ( !$response-&gt;headers-&gt;has( <span class="stringliteral">&#39;X-Content-Digest&#39;</span> ) )</div>
+<div class="line">        {</div>
+<div class="line">            $digest = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store.html#af751439f8a3339e095e14047a2fc88d7">generateContentDigest</a>( $response );</div>
 <div class="line"></div>
-<div class="line">            <span class="keywordflow">if</span> (<span class="keyword">false</span> === $this-&gt;save($digest, $response-&gt;getContent())) {</div>
-<div class="line">                <span class="keywordflow">throw</span> new \RuntimeException(<span class="stringliteral">&#39;Unable to store the entity.&#39;</span>);</div>
+<div class="line">            <span class="keywordflow">if</span> ( <span class="keyword">false</span> === $this-&gt;save( $digest, $response-&gt;getContent() ) )</div>
+<div class="line">            {</div>
+<div class="line">                <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&#39;Unable to store the entity.&#39;</span> );</div>
 <div class="line">            }</div>
 <div class="line"></div>
-<div class="line">            $response-&gt;headers-&gt;set(<span class="stringliteral">&#39;X-Content-Digest&#39;</span>, $digest);</div>
+<div class="line">            $response-&gt;headers-&gt;set( <span class="stringliteral">&#39;X-Content-Digest&#39;</span>, $digest );</div>
 <div class="line"></div>
-<div class="line">            <span class="keywordflow">if</span> (!$response-&gt;headers-&gt;has(<span class="stringliteral">&#39;Transfer-Encoding&#39;</span>)) {</div>
-<div class="line">                $response-&gt;headers-&gt;set(<span class="stringliteral">&#39;Content-Length&#39;</span>, strlen($response-&gt;getContent()));</div>
+<div class="line">            <span class="keywordflow">if</span> ( !$response-&gt;headers-&gt;has( <span class="stringliteral">&#39;Transfer-Encoding&#39;</span> ) )</div>
+<div class="line">            {</div>
+<div class="line">                $response-&gt;headers-&gt;set( <span class="stringliteral">&#39;Content-Length&#39;</span>, strlen( $response-&gt;getContent() ) );</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// read existing cache entries, remove non-varying, and add this one to the list</span></div>
 <div class="line">        $entries = array();</div>
-<div class="line">        $vary = $response-&gt;headers-&gt;get(<span class="stringliteral">&#39;vary&#39;</span>);</div>
-<div class="line">        <span class="keywordflow">foreach</span> ($this-&gt;getMetadata($key) as $entry) {</div>
-<div class="line">            <span class="keywordflow">if</span> (!isset($entry[1][<span class="stringliteral">&#39;vary&#39;</span>][0])) {</div>
-<div class="line">                $entry[1][<span class="stringliteral">&#39;vary&#39;</span>] = array(<span class="stringliteral">&#39;&#39;</span>);</div>
+<div class="line">        $vary = $response-&gt;headers-&gt;get( <span class="stringliteral">&#39;vary&#39;</span> );</div>
+<div class="line">        <span class="keywordflow">foreach</span> ( $this-&gt;getMetadata( $key ) as $entry )</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span> ( !isset( $entry[1][<span class="stringliteral">&#39;vary&#39;</span>][0] ) )</div>
+<div class="line">            {</div>
+<div class="line">                $entry[1][<span class="stringliteral">&#39;vary&#39;</span>] = array( <span class="stringliteral">&#39;&#39;</span> );</div>
 <div class="line">            }</div>
 <div class="line"></div>
-<div class="line">            <span class="keywordflow">if</span> ($vary != $entry[1][<span class="stringliteral">&#39;vary&#39;</span>][0] || !$this-&gt;requestsMatch($vary, $entry[0], $storedEnv)) {</div>
+<div class="line">            <span class="keywordflow">if</span> ( $vary != $entry[1][<span class="stringliteral">&#39;vary&#39;</span>][0] || !$this-&gt;requestsMatch( $vary, $entry[0], $storedEnv ) )</div>
+<div class="line">            {</div>
 <div class="line">                $entries[] = $entry;</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        $headers = $this-&gt;persistResponse($response);</div>
-<div class="line">        unset($headers[<span class="stringliteral">&#39;age&#39;</span>]);</div>
+<div class="line">        $headers = $this-&gt;persistResponse( $response );</div>
+<div class="line">        unset( $headers[<span class="stringliteral">&#39;age&#39;</span>] );</div>
 <div class="line"></div>
-<div class="line">        array_unshift($entries, array($storedEnv, $headers));</div>
+<div class="line">        array_unshift( $entries, array( $storedEnv, $headers ) );</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">if</span> (<span class="keyword">false</span> === $this-&gt;save($key, serialize($entries))) {</div>
-<div class="line">            <span class="keywordflow">throw</span> new \RuntimeException(<span class="stringliteral">&#39;Unable to store the metadata.&#39;</span>);</div>
+<div class="line">        <span class="keywordflow">if</span> ( <span class="keyword">false</span> === $this-&gt;save( $key, serialize( $entries ) ) )</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&#39;Unable to store the metadata.&#39;</span> );</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">return</span> $key;</div>
@@ -715,7 +739,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC.html">MVC</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony.html">Symfony</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache.html">Cache</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http.html">Http</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store.html">Store</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:54 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:16 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

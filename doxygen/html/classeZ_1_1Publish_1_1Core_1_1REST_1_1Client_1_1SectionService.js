@@ -1,6 +1,6 @@
 var classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1SectionService =
 [
-    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1SectionService.html#a05c612abb1db5505137a6af43c6cbe97", null ],
+    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1SectionService.html#a81e81d3fab2d3735a38abfabf3fc5563", null ],
     [ "assignSection", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1SectionService.html#a988968c8c34de331a1a86d349860eba5", null ],
     [ "countAssignedContents", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1SectionService.html#a82ee6c235db67bcef65f6723962e96f5", null ],
     [ "createSection", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1SectionService.html#a9dd08d6c7d811e672506ca21ea482939", null ],

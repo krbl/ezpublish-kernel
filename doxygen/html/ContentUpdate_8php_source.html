@@ -107,11 +107,11 @@ $(document).ready(function(){initNavTree('ContentUpdate_8php_source.html','');})
 <a href="ContentUpdate_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\REST\Server\Input\Parser;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParsingDispatcher.html">eZ\Publish\Core\REST\Common\Input\ParsingDispatcher</a>,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    eZ\Publish\Core\REST\Common\Exceptions,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1RestContentMetadataUpdateStruct.html">eZ\Publish\Core\REST\Common\Values\RestContentMetadataUpdateStruct</a>,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    DateTime,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    Exception;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParsingDispatcher.html">eZ\Publish\Core\REST\Common\Input\ParsingDispatcher</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use eZ\Publish\Core\REST\Common\Exceptions;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1RestContentMetadataUpdateStruct.html">eZ\Publish\Core\REST\Common\Values\RestContentMetadataUpdateStruct</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use DateTime;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use Exception;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentUpdate.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentUpdate.html">ContentUpdate</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Base.html">Base</a></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
@@ -161,7 +161,7 @@ $(document).ready(function(){initNavTree('ContentUpdate_8php_source.html','');})
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            {</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                $parsedData[<span class="stringliteral">&#39;alwaysAvailable&#39;</span>] = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            elseif ( $data[<span class="stringliteral">&#39;alwaysAvailable&#39;</span>] === <span class="stringliteral">&#39;false&#39;</span> )</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $data[<span class="stringliteral">&#39;alwaysAvailable&#39;</span>] === <span class="stringliteral">&#39;false&#39;</span> )</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            {</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                $parsedData[<span class="stringliteral">&#39;alwaysAvailable&#39;</span>] = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            }</div>
@@ -184,7 +184,7 @@ $(document).ready(function(){initNavTree('ContentUpdate_8php_source.html','');})
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            {</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                $parsedData[<span class="stringliteral">&#39;modificationDate&#39;</span>] = <span class="keyword">new</span> DateTime( $data[<span class="stringliteral">&#39;modificationDate&#39;</span>] );</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">catch</span>( Exception $e )</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">catch</span> ( Exception $e )</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            {</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> Exceptions\Parser( <span class="stringliteral">&#39;Invalid format for &lt;modificationDate&gt; in &lt;ContentUpdate&gt;&#39;</span>, 0, $e );</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            }</div>
@@ -197,7 +197,7 @@ $(document).ready(function(){initNavTree('ContentUpdate_8php_source.html','');})
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            {</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                $parsedData[<span class="stringliteral">&#39;publishedDate&#39;</span>] = <span class="keyword">new</span> DateTime( $data[<span class="stringliteral">&#39;publishDate&#39;</span>] );</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">catch</span>( Exception $e )</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">catch</span> ( Exception $e )</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            {</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> Exceptions\Parser( <span class="stringliteral">&#39;Invalid format for &lt;publishDate&gt; in &lt;ContentUpdate&gt;&#39;</span>, 0, $e );</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            }</div>
@@ -212,7 +212,7 @@ $(document).ready(function(){initNavTree('ContentUpdate_8php_source.html','');})
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_797398f06ec5dac6abf0352e0ae63d7a.html">REST</a></li><li class="navelem"><a class="el" href="dir_21fb5f37fbde5211f1530de5bf933d51.html">Server</a></li><li class="navelem"><a class="el" href="dir_25a64006f6710014dd2cc0f366d75895.html">Input</a></li><li class="navelem"><a class="el" href="dir_9ae7671213fd0a64daa9e97972534324.html">Parser</a></li><li class="navelem"><a class="el" href="ContentUpdate_8php.html">ContentUpdate.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:49 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:11 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

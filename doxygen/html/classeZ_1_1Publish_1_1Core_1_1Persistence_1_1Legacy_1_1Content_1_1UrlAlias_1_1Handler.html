@@ -292,9 +292,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00940">940</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00938">938</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l01023">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\getWordSeparator()</a>.</p>
+<p>References <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l01021">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\getWordSeparator()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">switch</span> ( $method )</div>
 <div class="line">        {</div>
@@ -447,9 +447,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00867">867</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00865">865</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00940">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\cleanupText()</a>.</p>
+<p>References <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00938">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\cleanupText()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !isset( $transformation ) )</div>
 <div class="line">        {</div>
@@ -554,9 +554,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">            <span class="keywordflow">if</span> ( !isset( $newIdsMap[$oldParentAliasId] ) )</div>
 <div class="line">            {</div>
 <div class="line">                $newIdsMap[$oldParentAliasId] = $this-&gt;gateway-&gt;getNextId();</div>
-<div class="line"></div>
-<div class="line">         }</div>
-<div class="line"></div>
+<div class="line">            }</div>
 <div class="line"></div>
 <div class="line">            $row[<span class="stringliteral">&quot;action&quot;</span>] = $actionMap[$row[<span class="stringliteral">&quot;action&quot;</span>]];</div>
 <div class="line">            $row[<span class="stringliteral">&quot;parent&quot;</span>] = $newParentAliasId;</div>
@@ -826,7 +824,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00423">423</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00867">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\convertToAlias()</a>, <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00927">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\getHash()</a>, and <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00519">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\insertNopEntry()</a>.</p>
+<p>References <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00865">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\convertToAlias()</a>, <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00925">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\getHash()</a>, and <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00519">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\insertNopEntry()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $pathElements = explode( <span class="stringliteral">&quot;/&quot;</span>, $path );</div>
 <div class="line">        $topElement = array_pop( $pathElements );</div>
@@ -894,7 +892,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">        <span class="comment">// Row exists, check if it is reusable. There are 2 cases when this is possible:</span></div>
 <div class="line">        <span class="comment">// 1. NOP entry</span></div>
 <div class="line">        <span class="comment">// 2. history entry</span></div>
-<div class="line">        elseif ( $row[<span class="stringliteral">&quot;action&quot;</span>] == <span class="stringliteral">&quot;nop:&quot;</span> || $row[<span class="stringliteral">&quot;is_original&quot;</span>] == 0 )</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $row[<span class="stringliteral">&quot;action&quot;</span>] == <span class="stringliteral">&quot;nop:&quot;</span> || $row[<span class="stringliteral">&quot;is_original&quot;</span>] == 0 )</div>
 <div class="line">        {</div>
 <div class="line">            $data[<span class="stringliteral">&quot;lang_mask&quot;</span>] = $languageId | (int)$alwaysAvailable;</div>
 <div class="line">            <span class="comment">// If history is reused move link to id</span></div>
@@ -977,7 +975,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00799">799</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00797">797</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $originalLocations = $this-&gt;locationGateway-&gt;getSubtreeContent( $oldParentId );</div>
 <div class="line">        $copiedLocations = $this-&gt;locationGateway-&gt;getSubtreeContent( $newParentId );</div>
@@ -1033,7 +1031,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00927">927</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00925">925</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> md5( strtolower( $text ) );</div>
 <div class="line">    }</div>
@@ -1153,7 +1151,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00906">906</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00904">904</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $parentId === 0 )</div>
 <div class="line">        {</div>
@@ -1205,13 +1203,16 @@ Protected Attributes</h2></td></tr>
 <p>Returns word separator value</p>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l01023">1023</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l01021">1021</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">switch</span> ( $this-&gt;configuration[<span class="stringliteral">&quot;wordSeparatorName&quot;</span>] )</div>
 <div class="line">        {</div>
-<div class="line">            <span class="keywordflow">case</span> <span class="stringliteral">&quot;dash&quot;</span>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;-&quot;</span>;</div>
-<div class="line">            <span class="keywordflow">case</span> <span class="stringliteral">&quot;underscore&quot;</span>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;_&quot;</span>;</div>
-<div class="line">            <span class="keywordflow">case</span> <span class="stringliteral">&quot;space&quot;</span>: <span class="keywordflow">return</span> <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line">            <span class="keywordflow">case</span> <span class="stringliteral">&quot;dash&quot;</span>:</div>
+<div class="line">                <span class="keywordflow">return</span> <span class="stringliteral">&quot;-&quot;</span>;</div>
+<div class="line">            <span class="keywordflow">case</span> <span class="stringliteral">&quot;underscore&quot;</span>:</div>
+<div class="line">                <span class="keywordflow">return</span> <span class="stringliteral">&quot;_&quot;</span>;</div>
+<div class="line">            <span class="keywordflow">case</span> <span class="stringliteral">&quot;space&quot;</span>:</div>
+<div class="line">                <span class="keywordflow">return</span> <span class="stringliteral">&quot; &quot;</span>;</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">return</span> <span class="stringliteral">&quot;-&quot;</span>;</div>
@@ -1499,7 +1500,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00711">711</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00764">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\copySubtree()</a>, <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00799">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\getCopiedLocationsMap()</a>, and <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00739">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\getRealAliasId()</a>.</p>
+<p>References <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00764">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\copySubtree()</a>, <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00797">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\getCopiedLocationsMap()</a>, and <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00739">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\getRealAliasId()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $newParentAliasId = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a5c5aabe75296574d6776574f8dc78537">getRealAliasId</a>( $newLocationId );</div>
 <div class="line">        $oldParentAliasId = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a5c5aabe75296574d6776574f8dc78537">getRealAliasId</a>( $locationId );</div>
@@ -1550,9 +1551,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1UrlAlias_1_1Handler.html#a3d6f708347c5682c20e17180c9eb6501">eZ\Publish\SPI\Persistence\Content\UrlAlias\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00818">818</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00816">816</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00834">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\removeSubtree()</a>.</p>
+<p>References <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00832">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\removeSubtree()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $action = <span class="stringliteral">&quot;eznode:&quot;</span> . $locationId;</div>
 <div class="line">        $entry = $this-&gt;gateway-&gt;loadAutogeneratedEntry( $action );</div>
@@ -1686,7 +1687,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00608">608</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00927">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\getHash()</a>.</p>
+<p>References <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00925">eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler\getHash()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlHashes = array();</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( explode( <span class="stringliteral">&quot;/&quot;</span>, $url ) as $level =&gt; $text )</div>
@@ -1776,7 +1777,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00834">834</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html#l00832">832</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php_source.html">Handler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $entries = $this-&gt;gateway-&gt;loadAutogeneratedEntries( $parentId, <span class="keyword">true</span> );</div>
 <div class="line"></div>
@@ -1831,7 +1832,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">if</span> ( $urlAlias-&gt;isCustom )</div>
 <div class="line">            {</div>
-<div class="line">                list( $parentId, $textMD5 ) = explode( <span class="stringliteral">&quot;-&quot;</span> , $urlAlias-&gt;id );</div>
+<div class="line">                list( $parentId, $textMD5 ) = explode( <span class="stringliteral">&quot;-&quot;</span>, $urlAlias-&gt;id );</div>
 <div class="line">                <span class="keywordflow">if</span> ( !$this-&gt;gateway-&gt;removeCustomAlias( $parentId, $textMD5 ) )</div>
 <div class="line">                {</div>
 <div class="line">                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -1986,7 +1987,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias.html">UrlAlias</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html">Handler</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:56 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:19 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

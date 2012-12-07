@@ -107,91 +107,91 @@ $(document).ready(function(){initNavTree('Keyword_2KeywordStorage_2Gateway_2Lega
 <a href="Keyword_2KeywordStorage_2Gateway_2LegacyStorage_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno"><a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway.html">    3</a></span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\FieldType\Keyword\KeywordStorage\Gateway;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;use eZ\Publish\Core\FieldType\Keyword\KeywordStorage\Gateway,</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    eZ\Publish\SPI\Persistence\Content\Field;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html">LegacyStorage</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway.html">Gateway</a></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">   14</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#acc4f54622ea559d852d1e282f6017e2b">   25</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#acc4f54622ea559d852d1e282f6017e2b">setConnection</a>( $dbHandler )</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">// This obviously violates the Liskov substitution Principle, but with</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">// the given class design there is no sane other option. Actually the</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">// dbHandler *should* be passed to the constructor, and there should</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">// not be the need to post-inject it.</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">if</span> ( !<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a> instanceof \eZ\Publish\Core\Persistence\Legacy\EzcDbHandler )</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;Invalid dbHandler passed&quot;</span> );</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        $this-&gt;dbHandler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a4a95b4bffd841ff8eb3d7b615012e7ca">   46</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a4a95b4bffd841ff8eb3d7b615012e7ca">getConnection</a>()</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;dbHandler === null )</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;Missing database connection.&quot;</span> );</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> $this-&gt;dbHandler;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a8f1796014453541d4e4fb288af47b4c7">   61</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage.html#a185f959e0a73032f3b0c6f179b855ec6">storeFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field, $contentTypeID )</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        $existingKeywordMap = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#aef5b98dd0df9620a5c8c8a13627c88de">getExistingKeywords</a>( $field-&gt;value-&gt;externalData, $contentTypeID );</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#ad6833b3ce89d66ad818675d7902db118">deleteOldKeywordAssignements</a>( $field );</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#aa3c831d9e6c12dbc3f22ad9ac3be10a3">assignKeywords</a>(</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            $field-&gt;id,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            $this-&gt;insertKeywords(</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                array_diff_key(</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                    array_fill_keys( $field-&gt;value-&gt;externalData, <span class="keyword">true</span> ),</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    $existingKeywordMap</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                ),</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                $contentTypeID</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            ) + $existingKeywordMap</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        );</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a117827ba0b9caf1c4410fcfb25a1cf6a">   86</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage.html#a35c3a9467326e7436ed2067d499aa023">getFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field )</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        $field-&gt;value-&gt;externalData = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a85b89a6e9ca4c3709a77480a97935578">getAssignedKeywords</a>( $field-&gt;id );</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a2804c06aae21e17c0624c7933060dde5">   98</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a2804c06aae21e17c0624c7933060dde5">getContentTypeID</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field )</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a29a17f79a9c1847d5f20c37214287d1f">loadContentTypeID</a>( $field-&gt;fieldDefinitionId );</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a85b89a6e9ca4c3709a77480a97935578">  110</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a85b89a6e9ca4c3709a77480a97935578">getAssignedKeywords</a>( $fieldId )</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a> = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a4a95b4bffd841ff8eb3d7b615012e7ca">getConnection</a>();</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        $query = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a>-&gt;createSelectQuery();</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        $query-&gt;select( <span class="stringliteral">&quot;keyword&quot;</span> )</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            -&gt;from( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a>-&gt;quoteTable( <span class="stringliteral">&quot;ezkeyword&quot;</span> ) )</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            -&gt;innerJoin(</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a>-&gt;quoteTable( <span class="stringliteral">&quot;ezkeyword_attribute_link&quot;</span> ),</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                $query-&gt;expr-&gt;eq(</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;id&quot;</span>, <span class="stringliteral">&quot;ezkeyword&quot;</span> ),</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;keyword_id&quot;</span>, <span class="stringliteral">&quot;ezkeyword_attribute_link&quot;</span> )</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                )</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            )</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            -&gt;where(</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                $query-&gt;expr-&gt;eq(</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;objectattribute_id&quot;</span>, <span class="stringliteral">&quot;ezkeyword_attribute_link&quot;</span> ),</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                    $fieldId</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                )</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            );</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        $statement = $query-&gt;prepare();</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        $statement-&gt;execute();</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> $statement-&gt;fetchAll( \PDO::FETCH_COLUMN, 0 );</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;use eZ\Publish\Core\FieldType\Keyword\KeywordStorage\Gateway;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;use eZ\Publish\SPI\Persistence\Content\Field;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html">LegacyStorage</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway.html">Gateway</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">   15</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#acc4f54622ea559d852d1e282f6017e2b">   26</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#acc4f54622ea559d852d1e282f6017e2b">setConnection</a>( $dbHandler )</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">// This obviously violates the Liskov substitution Principle, but with</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">// the given class design there is no sane other option. Actually the</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">// dbHandler *should* be passed to the constructor, and there should</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="comment">// not be the need to post-inject it.</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">if</span> ( !<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a> instanceof \eZ\Publish\Core\Persistence\Legacy\EzcDbHandler )</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;Invalid dbHandler passed&quot;</span> );</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        $this-&gt;dbHandler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a4a95b4bffd841ff8eb3d7b615012e7ca">   47</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a4a95b4bffd841ff8eb3d7b615012e7ca">getConnection</a>()</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;dbHandler === null )</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;Missing database connection.&quot;</span> );</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> $this-&gt;dbHandler;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a8f1796014453541d4e4fb288af47b4c7">   62</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage.html#a185f959e0a73032f3b0c6f179b855ec6">storeFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field, $contentTypeID )</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        $existingKeywordMap = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#aef5b98dd0df9620a5c8c8a13627c88de">getExistingKeywords</a>( $field-&gt;value-&gt;externalData, $contentTypeID );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#ad6833b3ce89d66ad818675d7902db118">deleteOldKeywordAssignements</a>( $field );</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#aa3c831d9e6c12dbc3f22ad9ac3be10a3">assignKeywords</a>(</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            $field-&gt;id,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            $this-&gt;insertKeywords(</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                array_diff_key(</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    array_fill_keys( $field-&gt;value-&gt;externalData, <span class="keyword">true</span> ),</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    $existingKeywordMap</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                ),</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                $contentTypeID</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            ) + $existingKeywordMap</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a117827ba0b9caf1c4410fcfb25a1cf6a">   87</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage.html#a35c3a9467326e7436ed2067d499aa023">getFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field )</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        $field-&gt;value-&gt;externalData = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a85b89a6e9ca4c3709a77480a97935578">getAssignedKeywords</a>( $field-&gt;id );</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a2804c06aae21e17c0624c7933060dde5">   99</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a2804c06aae21e17c0624c7933060dde5">getContentTypeID</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field )</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a29a17f79a9c1847d5f20c37214287d1f">loadContentTypeID</a>( $field-&gt;fieldDefinitionId );</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a85b89a6e9ca4c3709a77480a97935578">  111</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a85b89a6e9ca4c3709a77480a97935578">getAssignedKeywords</a>( $fieldId )</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a> = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a4a95b4bffd841ff8eb3d7b615012e7ca">getConnection</a>();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        $query = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a>-&gt;createSelectQuery();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        $query-&gt;select( <span class="stringliteral">&quot;keyword&quot;</span> )</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            -&gt;from( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a>-&gt;quoteTable( <span class="stringliteral">&quot;ezkeyword&quot;</span> ) )</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            -&gt;innerJoin(</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a>-&gt;quoteTable( <span class="stringliteral">&quot;ezkeyword_attribute_link&quot;</span> ),</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                $query-&gt;expr-&gt;eq(</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;id&quot;</span>, <span class="stringliteral">&quot;ezkeyword&quot;</span> ),</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;keyword_id&quot;</span>, <span class="stringliteral">&quot;ezkeyword_attribute_link&quot;</span> )</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                )</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            )</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            -&gt;where(</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                $query-&gt;expr-&gt;eq(</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a0ca7ee514c40312c864c940d9954b69b">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;objectattribute_id&quot;</span>, <span class="stringliteral">&quot;ezkeyword_attribute_link&quot;</span> ),</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                    $fieldId</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                )</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            );</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        $statement = $query-&gt;prepare();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        $statement-&gt;execute();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">return</span> $statement-&gt;fetchAll( \PDO::FETCH_COLUMN, 0 );</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
 <div class="line"><a name="l00145"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a29a17f79a9c1847d5f20c37214287d1f">  145</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage_1_1Gateway_1_1LegacyStorage.html#a29a17f79a9c1847d5f20c37214287d1f">loadContentTypeID</a>( $fieldDefinitionId )</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    {</div>
@@ -335,7 +335,7 @@ $(document).ready(function(){initNavTree('Keyword_2KeywordStorage_2Gateway_2Lega
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_429826c28e0afa35fa370fabe902bc82.html">FieldType</a></li><li class="navelem"><a class="el" href="dir_357162b4d309ac7acb40cfa7df81f047.html">Keyword</a></li><li class="navelem"><a class="el" href="dir_db75d9af170a353c1490e91e44ccc83d.html">KeywordStorage</a></li><li class="navelem"><a class="el" href="dir_8fa81cffa678050f4bd50495d17275e6.html">Gateway</a></li><li class="navelem"><a class="el" href="Keyword_2KeywordStorage_2Gateway_2LegacyStorage_8php.html">LegacyStorage.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:47 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:09 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

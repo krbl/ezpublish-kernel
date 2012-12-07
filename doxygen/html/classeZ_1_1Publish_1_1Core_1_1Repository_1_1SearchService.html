@@ -146,7 +146,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00028">28</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00026">26</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af45b072e9c3cedc2d30380f6391351d1"></a>
 <div class="memitem">
@@ -187,13 +187,14 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00052">52</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00050">50</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00033">eZ\Publish\Core\Repository\SearchService\$repository</a>, <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00038">eZ\Publish\Core\Repository\SearchService\$searchHandler</a>, and <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00043">eZ\Publish\Core\Repository\SearchService\$settings</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00031">eZ\Publish\Core\Repository\SearchService\$repository</a>, <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00036">eZ\Publish\Core\Repository\SearchService\$searchHandler</a>, and <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00041">eZ\Publish\Core\Repository\SearchService\$settings</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;repository = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1SearchService.html#a5be3e93c902123ae7034384751cc6141">$repository</a>;</div>
 <div class="line">        $this-&gt;searchHandler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1SearchService.html#a69130ab2757a77e381615908281d2035">$searchHandler</a>;</div>
-<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1SearchService.html#a369304ec41d51d5a801e64f29481b801">$settings</a> + array(<span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        <span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1SearchService.html#a369304ec41d51d5a801e64f29481b801">$settings</a> + array(</div>
 <div class="line">            <span class="comment">//&#39;defaultSetting&#39; =&gt; array(),</span></div>
 <div class="line">        );</div>
 <div class="line">    }</div>
@@ -224,7 +225,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>boolean| </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00140">140</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00139">139</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $permissionCriterion = $this-&gt;getPermissionsCriterion();</div>
 <div class="line">        <span class="keywordflow">if</span> ( $permissionCriterion === <span class="keyword">true</span> || $permissionCriterion === <span class="keyword">false</span> )</div>
@@ -292,7 +293,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Finds content objects for the given query.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000099">Todo:</a></b></dt><dd>define structs for the field filters</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000097">Todo:</a></b></dt><dd>define structs for the field filters</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">\eZ\Publish\API\Repository\Values\Content\Query</td><td class="paramname">$query</td><td></td></tr>
@@ -305,9 +306,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1SearchService.html#aa94d069c9f5795dfea2fa7da79d2c825">eZ\Publish\API\Repository\SearchService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00073">73</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00072">72</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00140">eZ\Publish\Core\Repository\SearchService\addPermissionsCriterion()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00139">eZ\Publish\Core\Repository\SearchService\addPermissionsCriterion()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $filterOnUserPermissions &amp;&amp; !$this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1SearchService.html#adf2a3d97003bba5698bec3bd7e45cce6">addPermissionsCriterion</a>( $query-&gt;criterion ) )</div>
 <div class="line">        {</div>
@@ -375,7 +376,7 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000100">Todo:</a></b></dt><dd>define structs for the field filters </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000098">Todo:</a></b></dt><dd>define structs for the field filters </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">\eZ\Publish\API\Repository\Values\Content\Query\Criterion</td><td class="paramname">$criterion</td><td></td></tr>
@@ -388,9 +389,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1SearchService.html#abaaa3d9124a9f764b79fe8db9936a6c6">eZ\Publish\API\Repository\SearchService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00105">105</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00104">104</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00140">eZ\Publish\Core\Repository\SearchService\addPermissionsCriterion()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00139">eZ\Publish\Core\Repository\SearchService\addPermissionsCriterion()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $filterOnUserPermissions &amp;&amp; !$this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1SearchService.html#adf2a3d97003bba5698bec3bd7e45cce6">addPermissionsCriterion</a>( $criterion ) )</div>
 <div class="line">        {</div>
@@ -463,7 +464,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1SearchService.html#ac0f1f156f18734b9edf508872f1f8cd7">eZ\Publish\API\Repository\SearchService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00125">125</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00124">124</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line"></div>
 <div class="line">    }</div>
@@ -489,7 +490,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00033">33</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00031">31</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
 
 </div>
 </div>
@@ -511,7 +512,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00038">38</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00036">36</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
 
 </div>
 </div>
@@ -533,7 +534,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00043">43</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2SearchService_8php_source.html#l00041">41</a> of file <a class="el" href="Core_2Repository_2SearchService_8php_source.html">SearchService.php</a>.</p>
 
 </div>
 </div>
@@ -546,7 +547,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Repository.html">Repository</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1SearchService.html">SearchService</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:57 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:20 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

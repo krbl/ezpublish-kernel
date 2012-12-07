@@ -143,7 +143,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A legacy slot handling PublishVersionSignal. </p>
 
-<p>Definition at line <a class="el" href="LegacyPublishVersionSlot_8php_source.html#l00017">17</a> of file <a class="el" href="LegacyPublishVersionSlot_8php_source.html">LegacyPublishVersionSlot.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacyPublishVersionSlot_8php_source.html#l00018">18</a> of file <a class="el" href="LegacyPublishVersionSlot_8php_source.html">LegacyPublishVersionSlot.php</a>.</p>
 </div><h2>Member Function Documentation</h2>
 <a class="anchor" id="ad78a7b80d12dd8adb5489090bf074ce2"></a>
 <div class="memitem">
@@ -169,15 +169,16 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Slot.html#ab853b0bbb8b6046851d0640f75f5ca0b">eZ\Publish\Core\SignalSlot\Slot</a>.</p>
 
-<p>Definition at line <a class="el" href="LegacyPublishVersionSlot_8php_source.html#l00026">26</a> of file <a class="el" href="LegacyPublishVersionSlot_8php_source.html">LegacyPublishVersionSlot.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacyPublishVersionSlot_8php_source.html#l00027">27</a> of file <a class="el" href="LegacyPublishVersionSlot_8php_source.html">LegacyPublishVersionSlot.php</a>.</p>
 
-<p>References <a class="el" href="AbstractLegacySlot_8php_source.html#l00041">eZ\Publish\Core\SignalSlot\Slot\AbstractLegacySlot\getLegacyKernel()</a>.</p>
+<p>References <a class="el" href="AbstractLegacySlot_8php_source.html#l00042">eZ\Publish\Core\SignalSlot\Slot\AbstractLegacySlot\getLegacyKernel()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !$signal instanceof Signal\ContentService\PublishVersionSignal )</div>
 <div class="line">            <span class="keywordflow">return</span>;</div>
 <div class="line"></div>
 <div class="line">        $kernel = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Slot_1_1AbstractLegacySlot.html#acef99c2c27ccbf1f5bde7b3dd735d45c">getLegacyKernel</a>();</div>
-<div class="line">        $kernel-&gt;runCallback( <span class="keyword">function</span>() use( $signal )</div>
+<div class="line">        $kernel-&gt;runCallback(</div>
+<div class="line">            <span class="keyword">function</span>() use( $signal )</div>
 <div class="line">            {</div>
 <div class="line">                \eZContentCacheManager::clearContentCacheIfNeeded( $signal-&gt;contentId );</div>
 <div class="line">                $object = \eZContentObject::fetch( $signal-&gt;contentId );</div>
@@ -209,7 +210,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot.html">SignalSlot</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Slot.html">Slot</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Slot_1_1LegacyPublishVersionSlot.html">LegacyPublishVersionSlot</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:05:01 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:24 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

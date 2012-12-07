@@ -107,11 +107,11 @@ $(document).ready(function(){initNavTree('Bundle_2EzPublishLegacyBundle_2LegacyM
 <a href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2SiteAccess_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Bundle\EzPublishLegacyBundle\LegacyMapper;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1LegacyEvents.html">eZ\Publish\Core\MVC\Legacy\LegacyEvents</a>,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelWebHandlerEvent.html">eZ\Publish\Core\MVC\Legacy\Event\PreBuildKernelWebHandlerEvent</a>,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    \eZSiteAccess,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    Symfony\Component\EventDispatcher\EventSubscriberInterface,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    Symfony\Component\DependencyInjection\ContainerInterface;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1LegacyEvents.html">eZ\Publish\Core\MVC\Legacy\LegacyEvents</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelWebHandlerEvent.html">eZ\Publish\Core\MVC\Legacy\Event\PreBuildKernelWebHandlerEvent</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use eZSiteAccess;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use Symfony\Component\EventDispatcher\EventSubscriberInterface;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use Symfony\Component\DependencyInjection\ContainerInterface;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1SiteAccess.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1SiteAccess.html">SiteAccess</a> <span class="keyword">implements</span> EventSubscriberInterface</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
@@ -122,80 +122,79 @@ $(document).ready(function(){initNavTree('Bundle_2EzPublishLegacyBundle_2LegacyM
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        $this-&gt;container = $container;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1SiteAccess.html#a22e546e5c04b959d1e08b879aa63fc18">   34</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1SiteAccess.html#a22e546e5c04b959d1e08b879aa63fc18">getSubscribedEvents</a>()</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> array(</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1LegacyEvents.html#a02e40ca8d4fd4501939a12d17cffc38b">LegacyEvents::PRE_BUILD_LEGACY_KERNEL_WEB</a> =&gt; array( <span class="stringliteral">&#39;onBuildKernelWebHandler&#39;</span>, 128 )</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        );</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1SiteAccess.html#acdb80972cc1a745a99a2e67f5e2588b6">   48</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1SiteAccess.html#acdb80972cc1a745a99a2e67f5e2588b6">onBuildKernelWebHandler</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelWebHandlerEvent.html">PreBuildKernelWebHandlerEvent</a> $event )</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        $siteAccess = $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish.siteaccess&#39;</span> );</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        $request = $event-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelWebHandlerEvent.html#a797096070c035beecf4a5e4a7dbfe704">getRequest</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        $uriPart = array();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">// Convert matching type</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">switch</span> ( $siteAccess-&gt;matchingType )</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;default&#39;</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                $legacyAccessType = eZSiteAccess::TYPE_DEFAULT;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;env&#39;</span>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                $legacyAccessType = eZSiteAccess::TYPE_SERVER_VAR;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;uri:map&#39;</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;uri:element&#39;</span>:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;uri:text&#39;</span>:</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;uri:regexp&#39;</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                $legacyAccessType = eZSiteAccess::TYPE_URI;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;host:map&#39;</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;host:element&#39;</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;host:text&#39;</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;host:regexp&#39;</span>:</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                $legacyAccessType = eZSiteAccess::TYPE_HTTP_HOST;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;port&#39;</span>:</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                $legacyAccessType = eZSiteAccess::TYPE_PORT;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                $legacyAccessType = eZSiteAccess::TYPE_CUSTOM;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">// uri_part</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        $pathinfo = str_replace( $request-&gt;attributes-&gt;get( <span class="stringliteral">&#39;viewParametersString&#39;</span> ), <span class="stringliteral">&#39;&#39;</span>, $request-&gt;getPathInfo() );</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        $semanticPathinfo = $request-&gt;attributes-&gt;get( <span class="stringliteral">&#39;semanticPathinfo&#39;</span>, $pathinfo );</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">if</span> ( $pathinfo != $semanticPathinfo )</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            $aPathinfo = explode( <span class="charliteral">&#39;/&#39;</span>, substr( $pathinfo, 1 ) );</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            $aSemanticPathinfo = explode( <span class="charliteral">&#39;/&#39;</span>, substr( $semanticPathinfo, 1 ) );</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            $uriPart = array_diff( $aPathinfo, $aSemanticPathinfo );</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        $event-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelWebHandlerEvent.html#a2fbd61f6f9aa5420ef233b261525cab4">getParameters</a>()-&gt;set(</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="stringliteral">&#39;siteaccess&#39;</span>,</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            array(</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="stringliteral">&#39;name&#39;</span> =&gt; $siteAccess-&gt;name,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="stringliteral">&#39;type&#39;</span> =&gt; $legacyAccessType,</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="stringliteral">&#39;uri_part&#39;</span> =&gt; $uriPart</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            )</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        );</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1SiteAccess.html#a22e546e5c04b959d1e08b879aa63fc18">   33</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1SiteAccess.html#a22e546e5c04b959d1e08b879aa63fc18">getSubscribedEvents</a>()</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">return</span> array(</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1LegacyEvents.html#a02e40ca8d4fd4501939a12d17cffc38b">LegacyEvents::PRE_BUILD_LEGACY_KERNEL_WEB</a> =&gt; array( <span class="stringliteral">&#39;onBuildKernelWebHandler&#39;</span>, 128 )</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        );</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1SiteAccess.html#acdb80972cc1a745a99a2e67f5e2588b6">   47</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1SiteAccess.html#acdb80972cc1a745a99a2e67f5e2588b6">onBuildKernelWebHandler</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelWebHandlerEvent.html">PreBuildKernelWebHandlerEvent</a> $event )</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        $siteAccess = $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish.siteaccess&#39;</span> );</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        $request = $event-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelWebHandlerEvent.html#a797096070c035beecf4a5e4a7dbfe704">getRequest</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        $uriPart = array();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment">// Convert matching type</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">switch</span> ( $siteAccess-&gt;matchingType )</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;default&#39;</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                $legacyAccessType = eZSiteAccess::TYPE_DEFAULT;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;env&#39;</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                $legacyAccessType = eZSiteAccess::TYPE_SERVER_VAR;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;uri:map&#39;</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;uri:element&#39;</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;uri:text&#39;</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;uri:regexp&#39;</span>:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                $legacyAccessType = eZSiteAccess::TYPE_URI;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;host:map&#39;</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;host:element&#39;</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;host:text&#39;</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;host:regexp&#39;</span>:</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                $legacyAccessType = eZSiteAccess::TYPE_HTTP_HOST;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;port&#39;</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                $legacyAccessType = eZSiteAccess::TYPE_PORT;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                $legacyAccessType = eZSiteAccess::TYPE_CUSTOM;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">// uri_part</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        $pathinfo = str_replace( $request-&gt;attributes-&gt;get( <span class="stringliteral">&#39;viewParametersString&#39;</span> ), <span class="stringliteral">&#39;&#39;</span>, $request-&gt;getPathInfo() );</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        $semanticPathinfo = $request-&gt;attributes-&gt;get( <span class="stringliteral">&#39;semanticPathinfo&#39;</span>, $pathinfo );</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">if</span> ( $pathinfo != $semanticPathinfo )</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            $aPathinfo = explode( <span class="charliteral">&#39;/&#39;</span>, substr( $pathinfo, 1 ) );</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            $aSemanticPathinfo = explode( <span class="charliteral">&#39;/&#39;</span>, substr( $semanticPathinfo, 1 ) );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            $uriPart = array_diff( $aPathinfo, $aSemanticPathinfo );</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        $event-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelWebHandlerEvent.html#a2fbd61f6f9aa5420ef233b261525cab4">getParameters</a>()-&gt;set(</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="stringliteral">&#39;siteaccess&#39;</span>,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            array(</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="stringliteral">&#39;name&#39;</span> =&gt; $siteAccess-&gt;name,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="stringliteral">&#39;type&#39;</span> =&gt; $legacyAccessType,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="stringliteral">&#39;uri_part&#39;</span> =&gt; $uriPart</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            )</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        );</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_7d1318b3b939336ca41ef9847f488a7b.html">Bundle</a></li><li class="navelem"><a class="el" href="dir_718d53db4ed4f1a0c6ead7c49da4650d.html">EzPublishLegacyBundle</a></li><li class="navelem"><a class="el" href="dir_ba0653e5e0251332449ac7f7204a446a.html">LegacyMapper</a></li><li class="navelem"><a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2SiteAccess_8php.html">SiteAccess.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:46 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:08 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

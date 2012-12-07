@@ -106,65 +106,66 @@ $(document).ready(function(){initNavTree('Core_2Repository_2Values_2ContentType_
 <div class="contents">
 <a href="Core_2Repository_2Values_2ContentType_2FieldDefinition_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\Repository\Values\ContentType;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html">eZ\Publish\API\Repository\Values\ContentType\FieldDefinition</a> as APIFieldDefinition;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html">FieldDefinition</a> <span class="keyword">extends</span> APIFieldDefinition</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#acb64de3a79f07163dc4fe24d070c345c">   38</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#acb64de3a79f07163dc4fe24d070c345c">$names</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a362298fa51af28c67220225451ac40c7">   45</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a362298fa51af28c67220225451ac40c7">$descriptions</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a999270f7b3d30dce640d70a5934576a1">   52</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a999270f7b3d30dce640d70a5934576a1">$fieldSettings</a>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a5fcbcd691505f1a86e353cecd3dd467e">   59</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a5fcbcd691505f1a86e353cecd3dd467e">$validatorConfiguration</a>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a8473be87b2eb01fd2b65ceb1d14d38ba">   72</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a8473be87b2eb01fd2b65ceb1d14d38ba">getNames</a>()</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#acb64de3a79f07163dc4fe24d070c345c">$this-&gt;names</a>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a8801a08cd5be934fb62d43b2c9162283">   84</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a8801a08cd5be934fb62d43b2c9162283">getName</a>( $languageCode )</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">if</span> ( array_key_exists( $languageCode, $this-&gt;names ))</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">return</span> $this-&gt;names[$languageCode];</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">return</span> null;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a9f45dbe92fbf09c549081d98b213d314">  104</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a9f45dbe92fbf09c549081d98b213d314">getDescriptions</a>()</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a362298fa51af28c67220225451ac40c7">$this-&gt;descriptions</a>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#ae0ea2abe158ad4d559218b5badbb07ee">  116</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#ae0ea2abe158ad4d559218b5badbb07ee">getDescription</a>( $languageCode )</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">if</span> ( array_key_exists( $languageCode, $this-&gt;descriptions ) )</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordflow">return</span> $this-&gt;descriptions[$languageCode];</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> null;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#afb41fd58c2385cfe1a85f1ada2dca325">  131</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#afb41fd58c2385cfe1a85f1ada2dca325">getValidatorConfiguration</a>()</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    {</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a5fcbcd691505f1a86e353cecd3dd467e">$this-&gt;validatorConfiguration</a>;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00141"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a437f242ee61a0cecfafce221147c6592">  141</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a437f242ee61a0cecfafce221147c6592">getFieldSettings</a>()</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    {</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a999270f7b3d30dce640d70a5934576a1">$this-&gt;fieldSettings</a>;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html">eZ\Publish\API\Repository\Values\ContentType\FieldDefinition</a> as APIFieldDefinition;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html">FieldDefinition</a> <span class="keyword">extends</span> APIFieldDefinition</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#acb64de3a79f07163dc4fe24d070c345c">   39</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#acb64de3a79f07163dc4fe24d070c345c">$names</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a362298fa51af28c67220225451ac40c7">   46</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a362298fa51af28c67220225451ac40c7">$descriptions</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a999270f7b3d30dce640d70a5934576a1">   53</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a999270f7b3d30dce640d70a5934576a1">$fieldSettings</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a5fcbcd691505f1a86e353cecd3dd467e">   60</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a5fcbcd691505f1a86e353cecd3dd467e">$validatorConfiguration</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a8473be87b2eb01fd2b65ceb1d14d38ba">   73</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a8473be87b2eb01fd2b65ceb1d14d38ba">getNames</a>()</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#acb64de3a79f07163dc4fe24d070c345c">$this-&gt;names</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a8801a08cd5be934fb62d43b2c9162283">   85</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a8801a08cd5be934fb62d43b2c9162283">getName</a>( $languageCode )</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">if</span> ( array_key_exists( $languageCode, $this-&gt;names ) )</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">return</span> $this-&gt;names[$languageCode];</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a9f45dbe92fbf09c549081d98b213d314">  105</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a9f45dbe92fbf09c549081d98b213d314">getDescriptions</a>()</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a362298fa51af28c67220225451ac40c7">$this-&gt;descriptions</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#ae0ea2abe158ad4d559218b5badbb07ee">  117</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#ae0ea2abe158ad4d559218b5badbb07ee">getDescription</a>( $languageCode )</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">if</span> ( array_key_exists( $languageCode, $this-&gt;descriptions ) )</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">return</span> $this-&gt;descriptions[$languageCode];</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#afb41fd58c2385cfe1a85f1ada2dca325">  132</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#afb41fd58c2385cfe1a85f1ada2dca325">getValidatorConfiguration</a>()</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a5fcbcd691505f1a86e353cecd3dd467e">$this-&gt;validatorConfiguration</a>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a437f242ee61a0cecfafce221147c6592">  142</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a437f242ee61a0cecfafce221147c6592">getFieldSettings</a>()</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a999270f7b3d30dce640d70a5934576a1">$this-&gt;fieldSettings</a>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_57883f88f9071375c384973424cd03e2.html">Repository</a></li><li class="navelem"><a class="el" href="dir_06558907482d6d8886605d94ebed2074.html">Values</a></li><li class="navelem"><a class="el" href="dir_bb24af47f62ce42f6753b0452e58cfae.html">ContentType</a></li><li class="navelem"><a class="el" href="Core_2Repository_2Values_2ContentType_2FieldDefinition_8php.html">FieldDefinition.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:47 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:09 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

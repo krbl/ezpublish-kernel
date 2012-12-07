@@ -163,36 +163,35 @@ $(document).ready(function(){initNavTree('Core_2SignalSlot_2TrashService_8php_so
 <div class="line"><a name="l00131"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1TrashService.html#a28c1331b25ea0b795ae9febfcfc59b64">  131</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1TrashService.html#a28c1331b25ea0b795ae9febfcfc59b64">emptyTrash</a>()</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    {</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        $returnValue = $this-&gt;service-&gt;emptyTrash();</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        $this-&gt;signalDispatcher-&gt;emit(</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService_1_1EmptyTrashSignal.html">EmptyTrashSignal</a>( array() ) );</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">return</span> $returnValue;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1TrashService.html#abcf6c763f48b07ef0a21d2dd07d10941">  148</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1TrashService.html#abcf6c763f48b07ef0a21d2dd07d10941">deleteTrashItem</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1TrashItem.html">TrashItem</a> $trashItem )</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    {</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        $returnValue = $this-&gt;service-&gt;deleteTrashItem( $trashItem );</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        $this-&gt;signalDispatcher-&gt;emit(</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService_1_1DeleteTrashItemSignal.html">DeleteTrashItemSignal</a>(</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                array(</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                    <span class="stringliteral">&#39;trashItemId&#39;</span> =&gt; $trashItem-&gt;id,</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                )</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            )</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        );</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">return</span> $returnValue;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1TrashService.html#a2bba11f14332583c919df71508045df7">  170</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1TrashService.html#a2bba11f14332583c919df71508045df7">findTrashItems</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query.html">Query</a> $query )</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">return</span> $this-&gt;service-&gt;findTrashItems( $query );</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        $this-&gt;signalDispatcher-&gt;emit( <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService_1_1EmptyTrashSignal.html">EmptyTrashSignal</a>( array() ) );</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">return</span> $returnValue;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1TrashService.html#abcf6c763f48b07ef0a21d2dd07d10941">  147</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1TrashService.html#abcf6c763f48b07ef0a21d2dd07d10941">deleteTrashItem</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1TrashItem.html">TrashItem</a> $trashItem )</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        $returnValue = $this-&gt;service-&gt;deleteTrashItem( $trashItem );</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        $this-&gt;signalDispatcher-&gt;emit(</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService_1_1DeleteTrashItemSignal.html">DeleteTrashItemSignal</a>(</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                array(</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                    <span class="stringliteral">&#39;trashItemId&#39;</span> =&gt; $trashItem-&gt;id,</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                )</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            )</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        );</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">return</span> $returnValue;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1TrashService.html#a2bba11f14332583c919df71508045df7">  169</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1TrashService.html#a2bba11f14332583c919df71508045df7">findTrashItems</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query.html">Query</a> $query )</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">return</span> $this-&gt;service-&gt;findTrashItems( $query );</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_9732deb7e9f110e21591e3657ab68b18.html">SignalSlot</a></li><li class="navelem"><a class="el" href="Core_2SignalSlot_2TrashService_8php.html">TrashService.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:46 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:08 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

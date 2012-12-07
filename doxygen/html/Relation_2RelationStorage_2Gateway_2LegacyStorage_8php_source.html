@@ -106,96 +106,97 @@ $(document).ready(function(){initNavTree('Relation_2RelationStorage_2Gateway_2Le
 <div class="contents">
 <a href="Relation_2RelationStorage_2Gateway_2LegacyStorage_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway.html">   10</a></span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\FieldType\Relation\RelationStorage\Gateway;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use eZ\Publish\Core\FieldType\Relation\RelationStorage\Gateway,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    eZ\Publish\SPI\Persistence\Content\VersionInfo,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    eZ\Publish\SPI\Persistence\Content\Field,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Relation.html">eZ\Publish\API\Repository\Values\Content\Relation</a> as APIRelationValue;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html">LegacyStorage</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway.html">Gateway</a></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a1d27a6860ce42c9174bb87beda675a24">   21</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a1d27a6860ce42c9174bb87beda675a24">TABLE</a> = <span class="stringliteral">&quot;ezcontentobject_link&quot;</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">   28</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a6e5eb61f3902ed6a439fa6d42a965762">   39</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a6e5eb61f3902ed6a439fa6d42a965762">setConnection</a>( $dbHandler )</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">// This obviously violates the Liskov substitution Principle, but with</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">// the given class design there is no sane other option. Actually the</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">// dbHandler *should* be passed to the constructor, and there should</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// not be the need to post-inject it.</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">if</span> ( ! ( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a> instanceof \eZ\Publish\Core\Persistence\Legacy\EzcDbHandler ) )</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;Invalid dbHandler passed&quot;</span> );</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        $this-&gt;dbHandler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#af712104411c95c19d219fef872385243">   60</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#af712104411c95c19d219fef872385243">getConnection</a>()</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;dbHandler === null )</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;Missing database connection.&quot;</span> );</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> $this-&gt;dbHandler;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a9940ffae6ce02ab8fd2d286a11f60857">   72</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage.html#a67066147af36966653b5785d121fb6fb">storeFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field )</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a> = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#af712104411c95c19d219fef872385243">getConnection</a>();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">if</span> ( empty( $field-&gt;value-&gt;data[<span class="stringliteral">&#39;destinationContentId&#39;</span>] ) )</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">// insert relation to ezcontentobject_link</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        $q = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>-&gt;createInsertQuery();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        $q-&gt;insertInto(</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>-&gt;quoteTable( self::TABLE )</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;contentclassattribute_id&quot;</span> ),</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            $q-&gt;bindValue( $field-&gt;fieldDefinitionId, null, \PDO::PARAM_INT )</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;from_contentobject_id&quot;</span> ),</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            $q-&gt;bindValue( $versionInfo-&gt;contentInfo-&gt;id, null, \PDO::PARAM_INT )</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;from_contentobject_version&quot;</span> ),</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            $q-&gt;bindValue( $versionInfo-&gt;versionNo, null, \PDO::PARAM_INT )</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;op_code&quot;</span> ),</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            $q-&gt;bindValue( 0, null, \PDO::PARAM_INT )</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;relation_type&quot;</span> ),</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            $q-&gt;bindValue( APIRelationValue::FIELD, null, \PDO::PARAM_INT )</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;to_contentobject_id&quot;</span> ),</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            $q-&gt;bindValue( $field-&gt;value-&gt;data[<span class="stringliteral">&#39;destinationContentId&#39;</span>], null, \PDO::PARAM_INT )</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        );</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        $q-&gt;prepare()-&gt;execute();</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#afd75bc7614ef7e60ff19ba46ad01dd1d">  113</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage.html#a5d5377f9d28e1fdeb290dcf8d55c898b">getFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field )</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="comment">// @todo This is a bit ugly but it should do for now. A roundtrip to the DB isn&#39;t really needed here.</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        $field-&gt;value-&gt;externalData = $field-&gt;value-&gt;data;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a6e68cd03b1703d196d6749f0ce371d48">  122</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage.html#a671a9a23d55ab436eda321b6cd172f54">deleteFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, array $fieldId, array $context )</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="comment">// @todo implement when content deleting is fixed in the service</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use eZ\Publish\Core\FieldType\Relation\RelationStorage\Gateway;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use eZ\Publish\SPI\Persistence\Content\VersionInfo;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use eZ\Publish\SPI\Persistence\Content\Field;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Relation.html">eZ\Publish\API\Repository\Values\Content\Relation</a> as APIRelationValue;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html">LegacyStorage</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway.html">Gateway</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a1d27a6860ce42c9174bb87beda675a24">   22</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a1d27a6860ce42c9174bb87beda675a24">TABLE</a> = <span class="stringliteral">&quot;ezcontentobject_link&quot;</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">   29</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a6e5eb61f3902ed6a439fa6d42a965762">   40</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a6e5eb61f3902ed6a439fa6d42a965762">setConnection</a>( $dbHandler )</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">// This obviously violates the Liskov substitution Principle, but with</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">// the given class design there is no sane other option. Actually the</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// dbHandler *should* be passed to the constructor, and there should</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">// not be the need to post-inject it.</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">if</span> ( ! ( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a> instanceof \eZ\Publish\Core\Persistence\Legacy\EzcDbHandler ) )</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;Invalid dbHandler passed&quot;</span> );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        $this-&gt;dbHandler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#af712104411c95c19d219fef872385243">   61</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#af712104411c95c19d219fef872385243">getConnection</a>()</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;dbHandler === null )</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;Missing database connection.&quot;</span> );</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> $this-&gt;dbHandler;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a9940ffae6ce02ab8fd2d286a11f60857">   73</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage.html#a67066147af36966653b5785d121fb6fb">storeFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field )</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a> = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#af712104411c95c19d219fef872385243">getConnection</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">if</span> ( empty( $field-&gt;value-&gt;data[<span class="stringliteral">&#39;destinationContentId&#39;</span>] ) )</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">// insert relation to ezcontentobject_link</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        $q = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>-&gt;createInsertQuery();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        $q-&gt;insertInto(</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>-&gt;quoteTable( self::TABLE )</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;contentclassattribute_id&quot;</span> ),</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            $q-&gt;bindValue( $field-&gt;fieldDefinitionId, null, \PDO::PARAM_INT )</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;from_contentobject_id&quot;</span> ),</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            $q-&gt;bindValue( $versionInfo-&gt;contentInfo-&gt;id, null, \PDO::PARAM_INT )</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;from_contentobject_version&quot;</span> ),</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            $q-&gt;bindValue( $versionInfo-&gt;versionNo, null, \PDO::PARAM_INT )</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;op_code&quot;</span> ),</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            $q-&gt;bindValue( 0, null, \PDO::PARAM_INT )</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;relation_type&quot;</span> ),</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            $q-&gt;bindValue( APIRelationValue::FIELD, null, \PDO::PARAM_INT )</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a7c5ae056c1e33c32b9a51462d65e5859">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;to_contentobject_id&quot;</span> ),</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            $q-&gt;bindValue( $field-&gt;value-&gt;data[<span class="stringliteral">&#39;destinationContentId&#39;</span>], null, \PDO::PARAM_INT )</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        );</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        $q-&gt;prepare()-&gt;execute();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#afd75bc7614ef7e60ff19ba46ad01dd1d">  114</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage.html#a5d5377f9d28e1fdeb290dcf8d55c898b">getFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field )</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="comment">// @todo This is a bit ugly but it should do for now. A roundtrip to the DB isn&#39;t really needed here.</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        $field-&gt;value-&gt;externalData = $field-&gt;value-&gt;data;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html#a6e68cd03b1703d196d6749f0ce371d48">  123</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage.html#a671a9a23d55ab436eda321b6cd172f54">deleteFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, array $fieldId, array $context )</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="comment">// @todo implement when content deleting is fixed in the service</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_429826c28e0afa35fa370fabe902bc82.html">FieldType</a></li><li class="navelem"><a class="el" href="dir_cdec8ba0cf52b47b3a99b151dbe1f305.html">Relation</a></li><li class="navelem"><a class="el" href="dir_53965ab69776a1427fab1c46a5dbce4d.html">RelationStorage</a></li><li class="navelem"><a class="el" href="dir_734040ef7c997fb87b00189338d04653.html">Gateway</a></li><li class="navelem"><a class="el" href="Relation_2RelationStorage_2Gateway_2LegacyStorage_8php.html">LegacyStorage.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:47 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:09 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

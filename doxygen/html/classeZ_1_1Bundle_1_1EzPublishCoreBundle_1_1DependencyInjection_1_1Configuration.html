@@ -203,15 +203,15 @@ Public Member Functions</h2></td></tr>
 <div class="line">                            -&gt;info( <span class="stringliteral">&#39;Siteaccess match configuration. First key is the matcher class, value is passed to the matcher&#39;</span> )</div>
 <div class="line">                            -&gt;example(</div>
 <div class="line">                                array(</div>
-<div class="line">                                     <span class="stringliteral">&#39;Map\URI&#39;</span>      =&gt; array(</div>
-<div class="line">                                         <span class="stringliteral">&#39;foo&#39;</span>  =&gt; <span class="stringliteral">&#39;ezdemo_site&#39;</span>,</div>
-<div class="line">                                         <span class="stringliteral">&#39;ezdemo_site&#39;</span> =&gt; <span class="stringliteral">&#39;ezdemo_site&#39;</span>,</div>
-<div class="line">                                         <span class="stringliteral">&#39;ezdemo_site_admin&#39;</span> =&gt; <span class="stringliteral">&#39;ezdemo_site_admin&#39;</span></div>
-<div class="line">                                     ),</div>
-<div class="line">                                     <span class="stringliteral">&#39;Map\Host&#39;</span>     =&gt; array(</div>
-<div class="line">                                         <span class="stringliteral">&#39;ezpublish.dev&#39;</span>        =&gt; <span class="stringliteral">&#39;ezdemo_site&#39;</span>,</div>
-<div class="line">                                         <span class="stringliteral">&#39;admin.ezpublish.dev&#39;</span>  =&gt; <span class="stringliteral">&#39;ezdemo_site_admin&#39;</span></div>
-<div class="line">                                     )</div>
+<div class="line">                                    <span class="stringliteral">&#39;Map\\URI&#39;</span> =&gt; array(</div>
+<div class="line">                                        <span class="stringliteral">&#39;foo&#39;</span> =&gt; <span class="stringliteral">&#39;ezdemo_site&#39;</span>,</div>
+<div class="line">                                        <span class="stringliteral">&#39;ezdemo_site&#39;</span> =&gt; <span class="stringliteral">&#39;ezdemo_site&#39;</span>,</div>
+<div class="line">                                        <span class="stringliteral">&#39;ezdemo_site_admin&#39;</span> =&gt; <span class="stringliteral">&#39;ezdemo_site_admin&#39;</span></div>
+<div class="line">                                    ),</div>
+<div class="line">                                    <span class="stringliteral">&#39;Map\\Host&#39;</span> =&gt; array(</div>
+<div class="line">                                        <span class="stringliteral">&#39;ezpublish.dev&#39;</span> =&gt; <span class="stringliteral">&#39;ezdemo_site&#39;</span>,</div>
+<div class="line">                                        <span class="stringliteral">&#39;admin.ezpublish.dev&#39;</span> =&gt; <span class="stringliteral">&#39;ezdemo_site_admin&#39;</span></div>
+<div class="line">                                    )</div>
 <div class="line">                                )</div>
 <div class="line">                            )</div>
 <div class="line">                            -&gt;isRequired()</div>
@@ -220,8 +220,18 @@ Public Member Functions</h2></td></tr>
 <div class="line">                                -&gt;beforeNormalization()</div>
 <div class="line">                                    <span class="comment">// Value passed to the matcher should always be an array.</span></div>
 <div class="line">                                    <span class="comment">// If value is not an array, we transform it to a hash, with &#39;value&#39; as key.</span></div>
-<div class="line">                                    -&gt;ifTrue( <span class="keyword">function</span> ( $v ) { <span class="keywordflow">return</span> !is_array( $v ); } )</div>
-<div class="line">                                    -&gt;then( <span class="keyword">function</span> ( $v ) { <span class="keywordflow">return</span> array( <span class="stringliteral">&#39;value&#39;</span> =&gt; $v ); } )</div>
+<div class="line">                                    -&gt;ifTrue(</div>
+<div class="line">                                        <span class="keyword">function</span> ( $v )</div>
+<div class="line">                                        {</div>
+<div class="line">                                            <span class="keywordflow">return</span> !is_array( $v );</div>
+<div class="line">                                        }</div>
+<div class="line">                                    )</div>
+<div class="line">                                    -&gt;then(</div>
+<div class="line">                                        <span class="keyword">function</span> ( $v )</div>
+<div class="line">                                        {</div>
+<div class="line">                                            <span class="keywordflow">return</span> array( <span class="stringliteral">&#39;value&#39;</span> =&gt; $v );</div>
+<div class="line">                                        }</div>
+<div class="line">                                    )</div>
 <div class="line">                                -&gt;end()</div>
 <div class="line">                                -&gt;useAttributeAsKey( <span class="stringliteral">&#39;key&#39;</span> )</div>
 <div class="line">                                -&gt;prototype( <span class="stringliteral">&#39;variable&#39;</span> )-&gt;end()</div>
@@ -229,8 +239,7 @@ Public Member Functions</h2></td></tr>
 <div class="line">                        -&gt;end()</div>
 <div class="line">                    -&gt;end()</div>
 <div class="line">                -&gt;end()</div>
-<div class="line">            -&gt;end()</div>
-<div class="line">        ;</div>
+<div class="line">            -&gt;end();</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -298,7 +307,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle.html">EzPublishCoreBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection.html">DependencyInjection</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration.html">Configuration</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:51 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:13 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

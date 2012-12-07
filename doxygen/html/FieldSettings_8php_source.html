@@ -106,35 +106,36 @@ $(document).ready(function(){initNavTree('FieldSettings_8php_source.html','');})
 <div class="contents">
 <a href="FieldSettings_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\FieldType;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use ArrayObject,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1PropertyReadOnlyException.html">eZ\Publish\API\Repository\Exceptions\PropertyReadOnlyException</a>,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1PropertyNotFoundException.html">eZ\Publish\API\Repository\Exceptions\PropertyNotFoundException</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldSettings.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldSettings.html">FieldSettings</a> <span class="keyword">extends</span> ArrayObject</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldSettings.html#aedd5099ee770bc9eaa209c60b1a7ef65">   33</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldSettings.html#aedd5099ee770bc9eaa209c60b1a7ef65">offsetSet</a>( $index, $value )</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">if</span> ( !parent::offsetExists( $index ) )</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1PropertyReadOnlyException.html">PropertyReadOnlyException</a>( $index, __CLASS__ );</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldSettings.html#aedd5099ee770bc9eaa209c60b1a7ef65">parent::offsetSet</a>( $index, $value );</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldSettings.html#a60e6eb8402ce7b4babc737c990e11ce4">   50</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldSettings.html#a60e6eb8402ce7b4babc737c990e11ce4">offsetGet</a>( $index )</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span> ( !parent::offsetExists( $index ) )</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1PropertyNotFoundException.html">PropertyNotFoundException</a>( $index, __CLASS__ );</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldSettings.html#a60e6eb8402ce7b4babc737c990e11ce4">parent::offsetGet</a>( $index );</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use ArrayObject;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1PropertyReadOnlyException.html">eZ\Publish\API\Repository\Exceptions\PropertyReadOnlyException</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1PropertyNotFoundException.html">eZ\Publish\API\Repository\Exceptions\PropertyNotFoundException</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldSettings.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldSettings.html">FieldSettings</a> <span class="keyword">extends</span> ArrayObject</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldSettings.html#aedd5099ee770bc9eaa209c60b1a7ef65">   34</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldSettings.html#aedd5099ee770bc9eaa209c60b1a7ef65">offsetSet</a>( $index, $value )</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span> ( !parent::offsetExists( $index ) )</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1PropertyReadOnlyException.html">PropertyReadOnlyException</a>( $index, __CLASS__ );</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldSettings.html#aedd5099ee770bc9eaa209c60b1a7ef65">parent::offsetSet</a>( $index, $value );</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldSettings.html#a60e6eb8402ce7b4babc737c990e11ce4">   51</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldSettings.html#a60e6eb8402ce7b4babc737c990e11ce4">offsetGet</a>( $index )</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> ( !parent::offsetExists( $index ) )</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Exceptions_1_1PropertyNotFoundException.html">PropertyNotFoundException</a>( $index, __CLASS__ );</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldSettings.html#a60e6eb8402ce7b4babc737c990e11ce4">parent::offsetGet</a>( $index );</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_429826c28e0afa35fa370fabe902bc82.html">FieldType</a></li><li class="navelem"><a class="el" href="FieldSettings_8php.html">FieldSettings.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:47 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:10 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

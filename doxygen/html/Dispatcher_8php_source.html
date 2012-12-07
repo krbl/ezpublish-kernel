@@ -106,74 +106,75 @@ $(document).ready(function(){initNavTree('Dispatcher_8php_source.html','');});
 <div class="contents">
 <a href="Dispatcher_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input.html">   10</a></span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\REST\Common\Input;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">eZ\Publish\Core\REST\Common\Message</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use eZ\Publish\Core\REST\Common\Exceptions;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html">Dispatcher</a></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#a9521902dad069fb9ac487775ad94c6d5">   33</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#a9521902dad069fb9ac487775ad94c6d5">$handlers</a> = array();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#abbdca63534027e3ccc779791a034bbe1">   38</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#abbdca63534027e3ccc779791a034bbe1">$parsingDispatcher</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#ad493acb7da8fe2b49652795b4eef4a93">   46</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#ad493acb7da8fe2b49652795b4eef4a93">__construct</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParsingDispatcher.html">ParsingDispatcher</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#abbdca63534027e3ccc779791a034bbe1">$parsingDispatcher</a>, array <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#a9521902dad069fb9ac487775ad94c6d5">$handlers</a> = array() )</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        $this-&gt;parsingDispatcher = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#abbdca63534027e3ccc779791a034bbe1">$parsingDispatcher</a>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">foreach</span> ( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#a9521902dad069fb9ac487775ad94c6d5">$handlers</a> as $type =&gt; $handler )</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#ab8518e76b8f35a765b46b44487b664a6">addHandler</a>( $type, $handler );</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#ab8518e76b8f35a765b46b44487b664a6">   61</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#ab8518e76b8f35a765b46b44487b664a6">addHandler</a>( $type, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Handler.html">Handler</a> $handler )</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        $this-&gt;handlers[$type] = $handler;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#acc06cd592057febccc13f682a4ba11d0">   73</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#acc06cd592057febccc13f682a4ba11d0">parse</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a> $message )</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">if</span> ( !isset( $message-&gt;headers[<span class="stringliteral">&#39;Content-Type&#39;</span>] ) )</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html">Exceptions\Parser</a>( <span class="stringliteral">&#39;Missing Content-Type header in message.&#39;</span> );</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        $contentTypeParts = explode( <span class="charliteral">&#39;+&#39;</span>, $message-&gt;headers[<span class="stringliteral">&#39;Content-Type&#39;</span>] );</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">if</span> ( count( $contentTypeParts ) !== 2 )</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html">Exceptions\Parser</a>( <span class="stringliteral">&quot;No format specification in content type. Missing &#39;+(json|xml|…)&#39; in &#39;{$message-&gt;headers[&#39;Content-Type&#39;]}&#39;.&quot;</span> );</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        $media  = $contentTypeParts[0];</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        $format = $contentTypeParts[1];</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">if</span> ( !isset( $this-&gt;handlers[$format] ) )</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html">Exceptions\Parser</a>( <span class="stringliteral">&quot;Unknown format specification: &#39;{$format}&#39;.&quot;</span> );</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        $rawArray = $this-&gt;handlers[$format]-&gt;convert( $message-&gt;body );</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">// Only 1 XML root node</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        $rootNodeArray = reset( $rawArray );</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="comment">// @todo: This needs to be refactored in order to make the called URL</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="comment">// available to parsers in the server in a sane way</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span> ( isset( $message-&gt;headers[<span class="stringliteral">&#39;Url&#39;</span>] ) )</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            $rootNodeArray[<span class="stringliteral">&#39;__url&#39;</span>] = $message-&gt;headers[<span class="stringliteral">&#39;Url&#39;</span>];</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> $this-&gt;parsingDispatcher-&gt;parse(</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            $rootNodeArray, $media</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        );</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">eZ\Publish\Core\REST\Common\Message</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use eZ\Publish\Core\REST\Common\Exceptions;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html">Dispatcher</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#a9521902dad069fb9ac487775ad94c6d5">   34</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#a9521902dad069fb9ac487775ad94c6d5">$handlers</a> = array();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#abbdca63534027e3ccc779791a034bbe1">   39</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#abbdca63534027e3ccc779791a034bbe1">$parsingDispatcher</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#ad493acb7da8fe2b49652795b4eef4a93">   47</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#ad493acb7da8fe2b49652795b4eef4a93">__construct</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParsingDispatcher.html">ParsingDispatcher</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#abbdca63534027e3ccc779791a034bbe1">$parsingDispatcher</a>, array <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#a9521902dad069fb9ac487775ad94c6d5">$handlers</a> = array() )</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        $this-&gt;parsingDispatcher = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#abbdca63534027e3ccc779791a034bbe1">$parsingDispatcher</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">foreach</span> ( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#a9521902dad069fb9ac487775ad94c6d5">$handlers</a> as $type =&gt; $handler )</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#ab8518e76b8f35a765b46b44487b664a6">addHandler</a>( $type, $handler );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#ab8518e76b8f35a765b46b44487b664a6">   62</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#ab8518e76b8f35a765b46b44487b664a6">addHandler</a>( $type, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Handler.html">Handler</a> $handler )</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        $this-&gt;handlers[$type] = $handler;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#acc06cd592057febccc13f682a4ba11d0">   74</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#acc06cd592057febccc13f682a4ba11d0">parse</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a> $message )</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">if</span> ( !isset( $message-&gt;headers[<span class="stringliteral">&#39;Content-Type&#39;</span>] ) )</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html">Exceptions\Parser</a>( <span class="stringliteral">&#39;Missing Content-Type header in message.&#39;</span> );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        $contentTypeParts = explode( <span class="charliteral">&#39;+&#39;</span>, $message-&gt;headers[<span class="stringliteral">&#39;Content-Type&#39;</span>] );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">if</span> ( count( $contentTypeParts ) !== 2 )</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html">Exceptions\Parser</a>( <span class="stringliteral">&quot;No format specification in content type. Missing &#39;+(json|xml|…)&#39; in &#39;{$message-&gt;headers[&#39;Content-Type&#39;]}&#39;.&quot;</span> );</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        $media  = $contentTypeParts[0];</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        $format = $contentTypeParts[1];</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">if</span> ( !isset( $this-&gt;handlers[$format] ) )</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html">Exceptions\Parser</a>( <span class="stringliteral">&quot;Unknown format specification: &#39;{$format}&#39;.&quot;</span> );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        $rawArray = $this-&gt;handlers[$format]-&gt;convert( $message-&gt;body );</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="comment">// Only 1 XML root node</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        $rootNodeArray = reset( $rawArray );</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="comment">// @todo: This needs to be refactored in order to make the called URL</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="comment">// available to parsers in the server in a sane way</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">if</span> ( isset( $message-&gt;headers[<span class="stringliteral">&#39;Url&#39;</span>] ) )</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            $rootNodeArray[<span class="stringliteral">&#39;__url&#39;</span>] = $message-&gt;headers[<span class="stringliteral">&#39;Url&#39;</span>];</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> $this-&gt;parsingDispatcher-&gt;parse(</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            $rootNodeArray, $media</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        );</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_797398f06ec5dac6abf0352e0ae63d7a.html">REST</a></li><li class="navelem"><a class="el" href="dir_931ff6f23981df7536a5243dea720179.html">Common</a></li><li class="navelem"><a class="el" href="dir_19570892ab4420f265fea7bfcf40f2b5.html">Input</a></li><li class="navelem"><a class="el" href="Dispatcher_8php.html">Dispatcher.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:49 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:11 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -266,7 +266,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns cache dir for $locationId.</p>
 <p>This method is public only for unit tests. Use it only if you know what you are doing. </p>
 
-<p>Definition at line <a class="el" href="LocationAwareStore_8php_source.html#l00246">246</a> of file <a class="el" href="LocationAwareStore_8php_source.html">LocationAwareStore.php</a>.</p>
+<p>Definition at line <a class="el" href="LocationAwareStore_8php_source.html#l00245">245</a> of file <a class="el" href="LocationAwareStore_8php_source.html">LocationAwareStore.php</a>.</p>
 
 <p>References <a class="el" href="LocationAwareStore_8php_source.html#l00022">eZ\Publish\Core\MVC\Symfony\Cache\Http\LocationAwareStore\LOCATION_CACHE_DIR</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -306,7 +306,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns cache lock name for $locationId.</p>
 <p>This method is public only for unit tests. Use it only if you know what you are doing. </p>
 
-<p>Definition at line <a class="el" href="LocationAwareStore_8php_source.html#l00228">228</a> of file <a class="el" href="LocationAwareStore_8php_source.html">LocationAwareStore.php</a>.</p>
+<p>Definition at line <a class="el" href="LocationAwareStore_8php_source.html#l00227">227</a> of file <a class="el" href="LocationAwareStore_8php_source.html">LocationAwareStore.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $locationId = $locationId ?: <span class="stringliteral">&#39;all&#39;</span>;</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="stringliteral">&quot;$this-&gt;root/_ezloc_$locationId.purging&quot;</span>;</div>
@@ -351,7 +351,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="LocationAwareStore_8php_source.html#l00083">83</a> of file <a class="el" href="LocationAwareStore_8php_source.html">LocationAwareStore.php</a>.</p>
 
-<p>References <a class="el" href="LocationAwareStore_8php_source.html#l00046">eZ\Publish\Core\MVC\Symfony\Cache\Http\LocationAwareStore\getFilesystem()</a>, <a class="el" href="LocationAwareStore_8php_source.html#l00246">eZ\Publish\Core\MVC\Symfony\Cache\Http\LocationAwareStore\getLocationCacheDir()</a>, and <a class="el" href="LocationAwareStore_8php_source.html#l00228">eZ\Publish\Core\MVC\Symfony\Cache\Http\LocationAwareStore\getLocationCacheLockName()</a>.</p>
+<p>References <a class="el" href="LocationAwareStore_8php_source.html#l00046">eZ\Publish\Core\MVC\Symfony\Cache\Http\LocationAwareStore\getFilesystem()</a>, <a class="el" href="LocationAwareStore_8php_source.html#l00245">eZ\Publish\Core\MVC\Symfony\Cache\Http\LocationAwareStore\getLocationCacheDir()</a>, and <a class="el" href="LocationAwareStore_8php_source.html#l00227">eZ\Publish\Core\MVC\Symfony\Cache\Http\LocationAwareStore\getLocationCacheLockName()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( strpos( $key, static::LOCATION_CACHE_DIR ) === <span class="keyword">false</span> )</div>
 <div class="line">            <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1LocationAwareStore.html#a037d07e50f9e334ade1f0b4fa64c939c">parent::getPath</a>( $key );</div>
@@ -390,8 +390,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line">           substr( $key, 0, 2 ) . DIRECTORY_SEPARATOR .</div>
 <div class="line">           substr( $key, 2, 2 ) . DIRECTORY_SEPARATOR .</div>
 <div class="line">           substr( $key, 4, 2 ) . DIRECTORY_SEPARATOR .</div>
-<div class="line">           substr( $key, 6 )</div>
-<div class="line">        ;</div>
+<div class="line">           substr( $key, 6 );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 <p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -424,7 +423,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1ContentPurger.html#ac168e9a18f7c4b2459747cbcea15cb8c">eZ\Publish\Core\MVC\Symfony\Cache\Http\ContentPurger</a>.</p>
 
-<p>Definition at line <a class="el" href="LocationAwareStore_8php_source.html#l00169">169</a> of file <a class="el" href="LocationAwareStore_8php_source.html">LocationAwareStore.php</a>.</p>
+<p>Definition at line <a class="el" href="LocationAwareStore_8php_source.html#l00168">168</a> of file <a class="el" href="LocationAwareStore_8php_source.html">LocationAwareStore.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;purgeLocation( null );</div>
 <div class="line">    }</div>
@@ -466,9 +465,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1RequestAwarePurger.html#ac3a54ef91d611193f5f7ccb2a2e87186">eZ\Publish\Core\MVC\Symfony\Cache\Http\RequestAwarePurger</a>.</p>
 
-<p>Definition at line <a class="el" href="LocationAwareStore_8php_source.html#l00135">135</a> of file <a class="el" href="LocationAwareStore_8php_source.html">LocationAwareStore.php</a>.</p>
+<p>Definition at line <a class="el" href="LocationAwareStore_8php_source.html#l00134">134</a> of file <a class="el" href="LocationAwareStore_8php_source.html">LocationAwareStore.php</a>.</p>
 
-<p>References <a class="el" href="Store_8php_source.html#l00293">eZ\Publish\Core\MVC\Symfony\Cache\Http\Store\purge()</a>, and <a class="el" href="LocationAwareStore_8php_source.html#l00169">eZ\Publish\Core\MVC\Symfony\Cache\Http\LocationAwareStore\purgeAllContent()</a>.</p>
+<p>References <a class="el" href="Store_8php_source.html#l00320">eZ\Publish\Core\MVC\Symfony\Cache\Http\Store\purge()</a>, and <a class="el" href="LocationAwareStore_8php_source.html#l00168">eZ\Publish\Core\MVC\Symfony\Cache\Http\LocationAwareStore\purgeAllContent()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !$request-&gt;headers-&gt;has( <span class="stringliteral">&#39;X-Location-Id&#39;</span> ) &amp;&amp; !$request-&gt;headers-&gt;has( <span class="stringliteral">&#39;X-Group-Location-Id&#39;</span> ) )</div>
 <div class="line">        {</div>
@@ -570,7 +569,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC.html">MVC</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony.html">Symfony</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache.html">Cache</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http.html">Http</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1LocationAwareStore.html">LocationAwareStore</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:54 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:16 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

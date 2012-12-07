@@ -174,7 +174,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00052">52</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00047">47</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a29e917239eab21e84e44eb67664e6f24"></a>
 <div class="memitem">
@@ -215,13 +215,14 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00076">76</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00071">71</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00057">eZ\Publish\Core\Repository\LocationService\$repository</a>, and <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00067">eZ\Publish\Core\Repository\LocationService\$settings</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00052">eZ\Publish\Core\Repository\LocationService\$repository</a>, and <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00062">eZ\Publish\Core\Repository\LocationService\$settings</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;repository = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1LocationService.html#a41ce42b55ab9fe0c46391579f5dbcc7b">$repository</a>;</div>
 <div class="line">        $this-&gt;persistenceHandler = $handler;</div>
-<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1LocationService.html#a3c744089b0f461592f461ecfbebf7e66">$settings</a> + array(<span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        <span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1LocationService.html#a3c744089b0f461592f461ecfbebf7e66">$settings</a> + array(</div>
 <div class="line">            <span class="comment">//&#39;defaultSetting&#39; =&gt; array(),</span></div>
 <div class="line">        );</div>
 <div class="line">    }</div>
@@ -259,7 +260,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00872">872</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00871">871</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $spiLocation-&gt;id == 1 )<span class="comment">// Workaround for missing ContentInfo on root location</span></div>
 <div class="line">            $contentInfo = <span class="keyword">new</span> ContentInfo(</div>
@@ -270,9 +271,9 @@ Protected Attributes</h2></td></tr>
 <div class="line">                    <span class="stringliteral">&#39;mainLocationId&#39;</span> =&gt; 1,</div>
 <div class="line">                    <span class="stringliteral">&#39;contentType&#39;</span> =&gt; <span class="keyword">new</span> ContentType(</div>
 <div class="line">                        array(</div>
-<div class="line">                             <span class="stringliteral">&#39;identifier&#39;</span> =&gt; <span class="stringliteral">&#39;folder&#39;</span>,</div>
-<div class="line">                             <span class="stringliteral">&#39;isContainer&#39;</span> =&gt; <span class="keyword">true</span>,</div>
-<div class="line">                             <span class="stringliteral">&#39;fieldDefinitions&#39;</span> =&gt; array()</div>
+<div class="line">                            <span class="stringliteral">&#39;identifier&#39;</span> =&gt; <span class="stringliteral">&#39;folder&#39;</span>,</div>
+<div class="line">                            <span class="stringliteral">&#39;isContainer&#39;</span> =&gt; <span class="keyword">true</span>,</div>
+<div class="line">                            <span class="stringliteral">&#39;fieldDefinitions&#39;</span> =&gt; array()</div>
 <div class="line">                        )</div>
 <div class="line">                    )</div>
 <div class="line">                )</div>
@@ -283,16 +284,16 @@ Protected Attributes</h2></td></tr>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Location(</div>
 <div class="line">            array(</div>
 <div class="line">                <span class="stringliteral">&#39;contentInfo&#39;</span> =&gt; $contentInfo,</div>
-<div class="line">                <span class="stringliteral">&#39;id&#39;</span> =&gt; (<span class="keywordtype">int</span>) $spiLocation-&gt;id,</div>
-<div class="line">                <span class="stringliteral">&#39;priority&#39;</span> =&gt; (<span class="keywordtype">int</span>) $spiLocation-&gt;priority,</div>
-<div class="line">                <span class="stringliteral">&#39;hidden&#39;</span> =&gt; (<span class="keywordtype">bool</span>) $spiLocation-&gt;hidden,</div>
-<div class="line">                <span class="stringliteral">&#39;invisible&#39;</span> =&gt; (<span class="keywordtype">bool</span>) $spiLocation-&gt;invisible,</div>
+<div class="line">                <span class="stringliteral">&#39;id&#39;</span> =&gt; (<span class="keywordtype">int</span>)$spiLocation-&gt;id,</div>
+<div class="line">                <span class="stringliteral">&#39;priority&#39;</span> =&gt; (<span class="keywordtype">int</span>)$spiLocation-&gt;priority,</div>
+<div class="line">                <span class="stringliteral">&#39;hidden&#39;</span> =&gt; (<span class="keywordtype">bool</span>)$spiLocation-&gt;hidden,</div>
+<div class="line">                <span class="stringliteral">&#39;invisible&#39;</span> =&gt; (<span class="keywordtype">bool</span>)$spiLocation-&gt;invisible,</div>
 <div class="line">                <span class="stringliteral">&#39;remoteId&#39;</span> =&gt; $spiLocation-&gt;remoteId,</div>
-<div class="line">                <span class="stringliteral">&#39;parentLocationId&#39;</span> =&gt; (<span class="keywordtype">int</span>) $spiLocation-&gt;parentId,</div>
+<div class="line">                <span class="stringliteral">&#39;parentLocationId&#39;</span> =&gt; (<span class="keywordtype">int</span>)$spiLocation-&gt;parentId,</div>
 <div class="line">                <span class="stringliteral">&#39;pathString&#39;</span> =&gt; $spiLocation-&gt;pathString,</div>
-<div class="line">                <span class="stringliteral">&#39;depth&#39;</span> =&gt; (<span class="keywordtype">int</span>) $spiLocation-&gt;depth,</div>
-<div class="line">                <span class="stringliteral">&#39;sortField&#39;</span> =&gt; (<span class="keywordtype">int</span>) $spiLocation-&gt;sortField,</div>
-<div class="line">                <span class="stringliteral">&#39;sortOrder&#39;</span> =&gt; (<span class="keywordtype">int</span>) $spiLocation-&gt;sortOrder,</div>
+<div class="line">                <span class="stringliteral">&#39;depth&#39;</span> =&gt; (<span class="keywordtype">int</span>)$spiLocation-&gt;depth,</div>
+<div class="line">                <span class="stringliteral">&#39;sortField&#39;</span> =&gt; (<span class="keywordtype">int</span>)$spiLocation-&gt;sortField,</div>
+<div class="line">                <span class="stringliteral">&#39;sortOrder&#39;</span> =&gt; (<span class="keywordtype">int</span>)$spiLocation-&gt;sortOrder,</div>
 <div class="line">            )</div>
 <div class="line">        );</div>
 <div class="line">    }</div>
@@ -350,9 +351,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the newly created Location </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00408">408</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00404">404</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00872">eZ\Publish\Core\Repository\LocationService\buildDomainLocationObject()</a>, <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00192">eZ\Publish\Core\Repository\LocationService\loadLocation()</a>, <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00216">eZ\Publish\Core\Repository\LocationService\loadLocationByRemoteId()</a>, and <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00242">eZ\Publish\Core\Repository\LocationService\loadLocations()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00871">eZ\Publish\Core\Repository\LocationService\buildDomainLocationObject()</a>, <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00188">eZ\Publish\Core\Repository\LocationService\loadLocation()</a>, <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00212">eZ\Publish\Core\Repository\LocationService\loadLocationByRemoteId()</a>, and <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00238">eZ\Publish\Core\Repository\LocationService\loadLocations()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $contentInfo-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $contentInfo-&gt;id, <span class="stringliteral">&quot;ContentInfo&quot;</span> );</div>
@@ -387,7 +388,9 @@ Protected Attributes</h2></td></tr>
 <div class="line">                <span class="keywordflow">if</span> ( $existingLocation !== null )</div>
 <div class="line">                    <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException( <span class="stringliteral">&quot;locationCreateStruct&quot;</span>, <span class="stringliteral">&quot;location with provided remote ID already exists&quot;</span> );</div>
 <div class="line">            }</div>
-<div class="line">            <span class="keywordflow">catch</span> ( APINotFoundException $e ) {}</div>
+<div class="line">            <span class="keywordflow">catch</span> ( APINotFoundException $e )</div>
+<div class="line">            {</div>
+<div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line">        <span class="keywordflow">else</span></div>
 <div class="line">        {</div>
@@ -415,7 +418,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> UnauthorizedException( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;create&#39;</span> );</div>
 <div class="line"></div>
 <div class="line">        $createStruct = <span class="keyword">new</span> CreateStruct();</div>
-<div class="line">        $createStruct-&gt;priority = $locationCreateStruct-&gt;priority !== null ? (int) $locationCreateStruct-&gt;priority : null;</div>
+<div class="line">        $createStruct-&gt;priority = $locationCreateStruct-&gt;priority !== null ? (int)$locationCreateStruct-&gt;priority : null;</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// if we declare the new location as hidden, it is automatically invisible</span></div>
 <div class="line">        <span class="comment">// otherwise, it remains unhidden, and picks up visibility from parent</span></div>
@@ -424,20 +427,20 @@ Protected Attributes</h2></td></tr>
 <div class="line">            $createStruct-&gt;hidden = <span class="keyword">true</span>;</div>
 <div class="line">            $createStruct-&gt;invisible = <span class="keyword">true</span>;</div>
 <div class="line">        }</div>
-<div class="line">        elseif ( $loadedParentLocation-&gt;hidden || $loadedParentLocation-&gt;invisible )</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $loadedParentLocation-&gt;hidden || $loadedParentLocation-&gt;invisible )</div>
 <div class="line">        {</div>
 <div class="line">            $createStruct-&gt;invisible = <span class="keyword">true</span>;</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        $createStruct-&gt;remoteId = trim( $locationCreateStruct-&gt;remoteId );</div>
-<div class="line">        $createStruct-&gt;contentId = (int) $contentInfo-&gt;id;</div>
-<div class="line">        $createStruct-&gt;contentVersion = (<span class="keywordtype">int</span>) $contentInfo-&gt;currentVersionNo;</div>
+<div class="line">        $createStruct-&gt;contentId = (int)$contentInfo-&gt;id;</div>
+<div class="line">        $createStruct-&gt;contentVersion = (<span class="keywordtype">int</span>)$contentInfo-&gt;currentVersionNo;</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( $contentInfo-&gt;mainLocationId !== null )</div>
 <div class="line">            $createStruct-&gt;mainLocationId = $contentInfo-&gt;mainLocationId;</div>
 <div class="line"></div>
-<div class="line">        $createStruct-&gt;sortField = $locationCreateStruct-&gt;sortField !== null ? (int) $locationCreateStruct-&gt;sortField : APILocation::SORT_FIELD_NAME;</div>
-<div class="line">        $createStruct-&gt;sortOrder = $locationCreateStruct-&gt;sortOrder !== null ? (<span class="keywordtype">int</span>) $locationCreateStruct-&gt;sortOrder : APILocation::SORT_ORDER_ASC;</div>
+<div class="line">        $createStruct-&gt;sortField = $locationCreateStruct-&gt;sortField !== null ? (int)$locationCreateStruct-&gt;sortField : APILocation::SORT_FIELD_NAME;</div>
+<div class="line">        $createStruct-&gt;sortOrder = $locationCreateStruct-&gt;sortOrder !== null ? (<span class="keywordtype">int</span>)$locationCreateStruct-&gt;sortOrder : APILocation::SORT_ORDER_ASC;</div>
 <div class="line">        $createStruct-&gt;parentId = $loadedParentLocation-&gt;id;</div>
 <div class="line"></div>
 <div class="line">        $this-&gt;repository-&gt;beginTransaction();</div>
@@ -513,7 +516,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>|null </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00915">915</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00914">914</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $dateTime = <span class="keyword">new</span> DateTime();</div>
 <div class="line">        $dateTime-&gt;setTimestamp( $timestamp );</div>
@@ -544,9 +547,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00343">343</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00339">339</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00368">eZ\Publish\Core\Repository\LocationService\searchChildrenLocations()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00364">eZ\Publish\Core\Repository\LocationService\searchChildrenLocations()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $location-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $location-&gt;id, <span class="stringliteral">&quot;Location&quot;</span> );</div>
@@ -614,7 +617,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00930">930</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00929">929</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 
 <p>References <a class="el" href="Query_8php_source.html#l00019">eZ\Publish\API\Repository\Values\Content\Query\SORT_ASC</a>, and <a class="el" href="Query_8php_source.html#l00021">eZ\Publish\API\Repository\Values\Content\Query\SORT_DESC</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -705,7 +708,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00638">638</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00192">eZ\Publish\Core\Repository\LocationService\loadLocation()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00188">eZ\Publish\Core\Repository\LocationService\loadLocation()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $location-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $location-&gt;id, <span class="stringliteral">&quot;Location&quot;</span> );</div>
@@ -772,9 +775,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LocationService.html#a30a6acb2dd0de862ff9c3bb04cbbfebe">eZ\Publish\API\Repository\LocationService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00192">192</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00188">188</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00872">eZ\Publish\Core\Repository\LocationService\buildDomainLocationObject()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00871">eZ\Publish\Core\Repository\LocationService\buildDomainLocationObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $locationId ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;locationId&quot;</span>, $locationId );</div>
@@ -843,9 +846,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LocationService.html#a9cf5141f1422d32e19655b18d3de834a">eZ\Publish\API\Repository\LocationService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00216">216</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00212">212</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00872">eZ\Publish\Core\Repository\LocationService\buildDomainLocationObject()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00871">eZ\Publish\Core\Repository\LocationService\buildDomainLocationObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_string( $remoteId ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;remoteId&quot;</span>, $remoteId );</div>
@@ -922,9 +925,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00283">283</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00279">279</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00872">eZ\Publish\Core\Repository\LocationService\buildDomainLocationObject()</a>, and <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00368">eZ\Publish\Core\Repository\LocationService\searchChildrenLocations()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00871">eZ\Publish\Core\Repository\LocationService\buildDomainLocationObject()</a>, and <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00364">eZ\Publish\Core\Repository\LocationService\searchChildrenLocations()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $location-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $location-&gt;id, <span class="stringliteral">&quot;Location&quot;</span> );</div>
@@ -1030,9 +1033,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>[] An array of <a class="el" href="">Location</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00242">242</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00238">238</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00872">eZ\Publish\Core\Repository\LocationService\buildDomainLocationObject()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00871">eZ\Publish\Core\Repository\LocationService\buildDomainLocationObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $contentInfo-&gt;id ) )</div>
 <div class="line">        {</div>
@@ -1111,11 +1114,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LocationService.html#a4b65e29207e973bbe82ce4919992afad">eZ\Publish\API\Repository\LocationService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00846">846</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00845">845</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> LocationCreateStruct(</div>
 <div class="line">            array(</div>
-<div class="line">                <span class="stringliteral">&#39;parentLocationId&#39;</span> =&gt; (<span class="keywordtype">int</span>) $parentLocationId</div>
+<div class="line">                <span class="stringliteral">&#39;parentLocationId&#39;</span> =&gt; (<span class="keywordtype">int</span>)$parentLocationId</div>
 <div class="line">            )</div>
 <div class="line">        );</div>
 <div class="line">    }</div>
@@ -1139,7 +1142,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LocationService.html#a56ec2062ad1175289b201086e3555c29">eZ\Publish\API\Repository\LocationService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00860">860</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00859">859</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> LocationUpdateStruct();</div>
 <div class="line">    }</div>
@@ -1208,9 +1211,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00368">368</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00364">364</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00930">eZ\Publish\Core\Repository\LocationService\getSortClauseBySortField()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00929">eZ\Publish\Core\Repository\LocationService\getSortClauseBySortField()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $query = <span class="keyword">new</span> Query(</div>
 <div class="line">            array(</div>
@@ -1220,8 +1223,8 @@ Protected Attributes</h2></td></tr>
 <div class="line">                        <span class="keyword">new</span> CriterionStatus( CriterionStatus::STATUS_PUBLISHED ),</div>
 <div class="line">                    )</div>
 <div class="line">                ),</div>
-<div class="line">                <span class="stringliteral">&#39;offset&#39;</span> =&gt; ( $offset &gt;= 0 ? (<span class="keywordtype">int</span>) $offset : 0 ),</div>
-<div class="line">                <span class="stringliteral">&#39;limit&#39;</span> =&gt; ( $limit  &gt;= 0 ? (<span class="keywordtype">int</span>) $limit  : null )</div>
+<div class="line">                <span class="stringliteral">&#39;offset&#39;</span> =&gt; ( $offset &gt;= 0 ? (<span class="keywordtype">int</span>)$offset : 0 ),</div>
+<div class="line">                <span class="stringliteral">&#39;limit&#39;</span> =&gt; ( $limit &gt;= 0 ? (<span class="keywordtype">int</span>)$limit  : null )</div>
 <div class="line">            )</div>
 <div class="line">        );</div>
 <div class="line"></div>
@@ -1300,7 +1303,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00600">600</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00192">eZ\Publish\Core\Repository\LocationService\loadLocation()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00188">eZ\Publish\Core\Repository\LocationService\loadLocation()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $location1-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $location1-&gt;id, <span class="stringliteral">&quot;Location&quot;</span> );</div>
@@ -1373,7 +1376,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00673">673</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00192">eZ\Publish\Core\Repository\LocationService\loadLocation()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00188">eZ\Publish\Core\Repository\LocationService\loadLocation()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $location-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $location-&gt;id, <span class="stringliteral">&quot;Location&quot;</span> );</div>
@@ -1449,9 +1452,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the updated Location </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00538">538</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00536">536</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00192">eZ\Publish\Core\Repository\LocationService\loadLocation()</a>, and <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00216">eZ\Publish\Core\Repository\LocationService\loadLocationByRemoteId()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00188">eZ\Publish\Core\Repository\LocationService\loadLocation()</a>, and <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00212">eZ\Publish\Core\Repository\LocationService\loadLocationByRemoteId()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $location-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $location-&gt;id, <span class="stringliteral">&quot;Location&quot;</span> );</div>
@@ -1478,17 +1481,19 @@ Protected Attributes</h2></td></tr>
 <div class="line">                <span class="keywordflow">if</span> ( $existingLocation !== null )</div>
 <div class="line">                    <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException( <span class="stringliteral">&quot;locationUpdateStruct&quot;</span>, <span class="stringliteral">&quot;location with provided remote ID already exists&quot;</span> );</div>
 <div class="line">            }</div>
-<div class="line">            <span class="keywordflow">catch</span> ( APINotFoundException $e ) {}</div>
+<div class="line">            <span class="keywordflow">catch</span> ( APINotFoundException $e )</div>
+<div class="line">            {</div>
+<div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( !$this-&gt;repository-&gt;canUser( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;edit&#39;</span>, $loadedLocation-&gt;getContentInfo(), $loadedLocation ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> UnauthorizedException( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;edit&#39;</span> );</div>
 <div class="line"></div>
 <div class="line">        $updateStruct = <span class="keyword">new</span> UpdateStruct();</div>
-<div class="line">        $updateStruct-&gt;priority = $locationUpdateStruct-&gt;priority !== null ? (int) $locationUpdateStruct-&gt;priority : $loadedLocation-&gt;priority;</div>
+<div class="line">        $updateStruct-&gt;priority = $locationUpdateStruct-&gt;priority !== null ? (int)$locationUpdateStruct-&gt;priority : $loadedLocation-&gt;priority;</div>
 <div class="line">        $updateStruct-&gt;remoteId = $locationUpdateStruct-&gt;remoteId !== null ? trim( $locationUpdateStruct-&gt;remoteId ) : $loadedLocation-&gt;remoteId;</div>
-<div class="line">        $updateStruct-&gt;sortField = $locationUpdateStruct-&gt;sortField !== null ? (int) $locationUpdateStruct-&gt;sortField : $loadedLocation-&gt;sortField;</div>
-<div class="line">        $updateStruct-&gt;sortOrder = $locationUpdateStruct-&gt;sortOrder !== null ? (<span class="keywordtype">int</span>) $locationUpdateStruct-&gt;sortOrder : $loadedLocation-&gt;sortOrder;</div>
+<div class="line">        $updateStruct-&gt;sortField = $locationUpdateStruct-&gt;sortField !== null ? (int)$locationUpdateStruct-&gt;sortField : $loadedLocation-&gt;sortField;</div>
+<div class="line">        $updateStruct-&gt;sortOrder = $locationUpdateStruct-&gt;sortOrder !== null ? (<span class="keywordtype">int</span>)$locationUpdateStruct-&gt;sortOrder : $loadedLocation-&gt;sortOrder;</div>
 <div class="line"></div>
 <div class="line">        $this-&gt;repository-&gt;beginTransaction();</div>
 <div class="line">        <span class="keywordflow">try</span></div>
@@ -1537,7 +1542,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00062">62</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00057">57</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 
 </div>
 </div>
@@ -1559,7 +1564,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00057">57</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00052">52</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 
 </div>
 </div>
@@ -1581,7 +1586,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00067">67</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2LocationService_8php_source.html#l00062">62</a> of file <a class="el" href="Core_2Repository_2LocationService_8php_source.html">LocationService.php</a>.</p>
 
 </div>
 </div>
@@ -1594,7 +1599,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Repository.html">Repository</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1LocationService.html">LocationService</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:57 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:20 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

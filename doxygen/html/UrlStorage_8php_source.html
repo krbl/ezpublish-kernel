@@ -106,44 +106,45 @@ $(document).ready(function(){initNavTree('UrlStorage_8php_source.html','');});
 <div class="contents">
 <a href="UrlStorage_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\FieldType\Url;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1GatewayBasedStorage.html">eZ\Publish\Core\FieldType\GatewayBasedStorage</a>,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    eZ\Publish\SPI\Persistence\Content\VersionInfo,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    eZ\Publish\SPI\Persistence\Content\Field;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html">UrlStorage</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1GatewayBasedStorage.html">GatewayBasedStorage</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#a38177573d7f960cffc5fb1a60a809186">   25</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#a38177573d7f960cffc5fb1a60a809186">storeFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field, array $context )</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        $gateway = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1GatewayBasedStorage.html#ae3d32c56c1ce666534c10f0fedae806b">getGateway</a>( $context );</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> $gateway-&gt;storeFieldData( $versionInfo, $field );</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#af99b3732a751f6a8c233831800b5bf45">   42</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#af99b3732a751f6a8c233831800b5bf45">getFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field, array $context )</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        $gateway = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1GatewayBasedStorage.html#ae3d32c56c1ce666534c10f0fedae806b">getGateway</a>( $context );</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> $gateway-&gt;getFieldData( $field );</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#a426deba0aa0d6bee88c640dbc9f8ec96">   55</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#a426deba0aa0d6bee88c640dbc9f8ec96">deleteFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, array $fieldIds, array $context )</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#a98e47a35ac327b1d64582a212bd46280">   64</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#a98e47a35ac327b1d64582a212bd46280">hasFieldData</a>()</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#a1dc93aabf3eb11827e053eaa438c14e6">   73</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#a1dc93aabf3eb11827e053eaa438c14e6">getIndexData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field, array $context )</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1GatewayBasedStorage.html">eZ\Publish\Core\FieldType\GatewayBasedStorage</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use eZ\Publish\SPI\Persistence\Content\VersionInfo;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use eZ\Publish\SPI\Persistence\Content\Field;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html">UrlStorage</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1GatewayBasedStorage.html">GatewayBasedStorage</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#a38177573d7f960cffc5fb1a60a809186">   26</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#a38177573d7f960cffc5fb1a60a809186">storeFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field, array $context )</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        $gateway = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1GatewayBasedStorage.html#ae3d32c56c1ce666534c10f0fedae806b">getGateway</a>( $context );</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">return</span> $gateway-&gt;storeFieldData( $versionInfo, $field );</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#af99b3732a751f6a8c233831800b5bf45">   43</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#af99b3732a751f6a8c233831800b5bf45">getFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field, array $context )</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        $gateway = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1GatewayBasedStorage.html#ae3d32c56c1ce666534c10f0fedae806b">getGateway</a>( $context );</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">return</span> $gateway-&gt;getFieldData( $field );</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#a426deba0aa0d6bee88c640dbc9f8ec96">   56</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#a426deba0aa0d6bee88c640dbc9f8ec96">deleteFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, array $fieldIds, array $context )</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#a98e47a35ac327b1d64582a212bd46280">   65</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#a98e47a35ac327b1d64582a212bd46280">hasFieldData</a>()</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#a1dc93aabf3eb11827e053eaa438c14e6">   74</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html#a1dc93aabf3eb11827e053eaa438c14e6">getIndexData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field, array $context )</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_429826c28e0afa35fa370fabe902bc82.html">FieldType</a></li><li class="navelem"><a class="el" href="dir_0058b0585ae469d55d452182769dcf36.html">Url</a></li><li class="navelem"><a class="el" href="UrlStorage_8php.html">UrlStorage.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:48 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:10 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

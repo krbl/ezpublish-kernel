@@ -106,29 +106,30 @@ $(document).ready(function(){initNavTree('SPI_2Persistence_2Content_2Location_2T
 <div class="contents">
 <a href="SPI_2Persistence_2Content_2Location_2Trash_2Handler_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="namespaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash.html">   10</a></span>&#160;<span class="keyword">namespace </span>eZ\Publish\SPI\Persistence\Content\Location\Trash;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html">   16</a></span>&#160;<span class="keyword">interface </span><a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html">Handler</a></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html#acfc53676f201c2b0a7a97eda2c532e25">loadTrashItem</a>( $id );</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html#a3bbdc62b999f1339d571f43319e137dc">trashSubtree</a>( $locationId );</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html#a55824e6920b819964cd6994801f7978a">recover</a>( $trashedId, $newParentId );</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html#a8037cb888c9081daf3fb01f59703d7d6">findTrashItems</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion.html">Criterion</a> $criterion = null, $offset = 0, $limit = null, array $sort = null );</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html#a1b704f814d4d49595ab4ebaaf230b453">emptyTrash</a>();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html#a4aa1d3d21284977c67eab0e84c995732">deleteTrashItem</a>( $trashedId );</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use eZ\Publish\API\Repository\Values\Content\Query\Criterion;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html">   17</a></span>&#160;<span class="keyword">interface </span><a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html">Handler</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html#acfc53676f201c2b0a7a97eda2c532e25">loadTrashItem</a>( $id );</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html#a3bbdc62b999f1339d571f43319e137dc">trashSubtree</a>( $locationId );</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html#a55824e6920b819964cd6994801f7978a">recover</a>( $trashedId, $newParentId );</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html#a8037cb888c9081daf3fb01f59703d7d6">findTrashItems</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion.html">Criterion</a> $criterion = null, $offset = 0, $limit = null, array $sort = null );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html#a1b704f814d4d49595ab4ebaaf230b453">emptyTrash</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html#a4aa1d3d21284977c67eab0e84c995732">deleteTrashItem</a>( $trashedId );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_7ae1d97a722ff2bbf445d07e787b22a8.html">SPI</a></li><li class="navelem"><a class="el" href="dir_3856355977d83bc104445506f95d2b25.html">Persistence</a></li><li class="navelem"><a class="el" href="dir_3ab5ae7c2b250b2f430b0fce63fd14cb.html">Content</a></li><li class="navelem"><a class="el" href="dir_bb629add78db48b832c776494f5627da.html">Location</a></li><li class="navelem"><a class="el" href="dir_832b54d4fb003d435047fe5bae21c3c7.html">Trash</a></li><li class="navelem"><a class="el" href="SPI_2Persistence_2Content_2Location_2Trash_2Handler_8php.html">Handler.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:48 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:10 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

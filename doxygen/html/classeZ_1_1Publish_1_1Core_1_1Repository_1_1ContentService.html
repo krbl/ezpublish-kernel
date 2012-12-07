@@ -206,7 +206,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00068">68</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00065">65</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3cd5a21f8374a392a3d71ad38dce0e9a"></a>
 <div class="memitem">
@@ -247,13 +247,14 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00092">92</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00089">89</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00073">eZ\Publish\Core\Repository\ContentService\$repository</a>, and <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00083">eZ\Publish\Core\Repository\ContentService\$settings</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00070">eZ\Publish\Core\Repository\ContentService\$repository</a>, and <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00080">eZ\Publish\Core\Repository\ContentService\$settings</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;repository = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a584737e3238da4a67dcaa74131574560">$repository</a>;</div>
 <div class="line">        $this-&gt;persistenceHandler = $handler;</div>
-<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a01c80b97d4a84e3c873204fc8afc52a7">$settings</a> + array(<span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        <span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a01c80b97d4a84e3c873204fc8afc52a7">$settings</a> + array(</div>
 <div class="line">            <span class="comment">//&#39;defaultSetting&#39; =&gt; array(),</span></div>
 <div class="line">        );</div>
 <div class="line">    }</div>
@@ -304,7 +305,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l01548">1548</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l01917">eZ\Publish\Core\Repository\ContentService\buildRelationDomainObject()</a>, and <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00205">eZ\Publish\Core\Repository\ContentService\loadVersionInfoById()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l01917">eZ\Publish\Core\Repository\ContentService\buildRelationDomainObject()</a>, and <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00203">eZ\Publish\Core\Repository\ContentService\loadVersionInfoById()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $sourceVersion = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a166a660112d8d49a63d633d33881bd4e">loadVersionInfoById</a>(</div>
 <div class="line">            $sourceVersion-&gt;contentInfo-&gt;id,</div>
@@ -399,7 +400,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Builds a Content domain object from value object returned from persistence</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000093">Todo:</a></b></dt><dd>: Made public, since the search service also needs access to this method. Should be refactored into its own class together with the other build* methods.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000091">Todo:</a></b></dt><dd>: Made public, since the search service also needs access to this method. Should be refactored into its own class together with the other build* methods.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">\eZ\Publish\SPI\Persistence\Content</td><td class="paramname">$spiContent</td><td></td></tr>
@@ -460,7 +461,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Builds a ContentInfo domain object from value object returned from persistence</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000094">Todo:</a></b></dt><dd>: Made public, since the search service also needs access to this method. Should be refactored into its own class together with the other build* methods.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000092">Todo:</a></b></dt><dd>: Made public, since the search service also needs access to this method. Should be refactored into its own class together with the other build* methods.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">\eZ\Publish\SPI\Persistence\Content\ContentInfo</td><td class="paramname">$spiContentInfo</td><td></td></tr>
@@ -481,12 +482,12 @@ Protected Attributes</h2></td></tr>
 <div class="line">                <span class="stringliteral">&quot;currentVersionNo&quot;</span> =&gt; $spiContentInfo-&gt;currentVersionNo,</div>
 <div class="line">                <span class="stringliteral">&quot;published&quot;</span> =&gt; $spiContentInfo-&gt;isPublished,</div>
 <div class="line">                <span class="stringliteral">&quot;ownerId&quot;</span> =&gt; $spiContentInfo-&gt;ownerId,</div>
-<div class="line">                <span class="stringliteral">&quot;modificationDate&quot;</span> =&gt; $spiContentInfo-&gt;modificationDate == 0</div>
-<div class="line">                    ? null</div>
-<div class="line">                    : $this-&gt;getDateTime( $spiContentInfo-&gt;modificationDate ),</div>
-<div class="line">                <span class="stringliteral">&quot;publishedDate&quot;</span> =&gt; $spiContentInfo-&gt;publicationDate == 0</div>
-<div class="line">                    ? null</div>
-<div class="line">                    : $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a0dccfad219d6b6c6541994d95700c55d">getDateTime</a>( $spiContentInfo-&gt;publicationDate ),</div>
+<div class="line">                <span class="stringliteral">&quot;modificationDate&quot;</span> =&gt; $spiContentInfo-&gt;modificationDate == 0 ?</div>
+<div class="line">                    null :</div>
+<div class="line">                    $this-&gt;getDateTime( $spiContentInfo-&gt;modificationDate ),</div>
+<div class="line">                <span class="stringliteral">&quot;publishedDate&quot;</span> =&gt; $spiContentInfo-&gt;publicationDate == 0 ?</div>
+<div class="line">                    null :</div>
+<div class="line">                    $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a0dccfad219d6b6c6541994d95700c55d">getDateTime</a>( $spiContentInfo-&gt;publicationDate ),</div>
 <div class="line">                <span class="stringliteral">&quot;alwaysAvailable&quot;</span> =&gt; $spiContentInfo-&gt;alwaysAvailable,</div>
 <div class="line">                <span class="stringliteral">&quot;remoteId&quot;</span> =&gt; $spiContentInfo-&gt;remoteId,</div>
 <div class="line">                <span class="stringliteral">&quot;mainLanguageCode&quot;</span> =&gt; $spiContentInfo-&gt;mainLanguageCode,</div>
@@ -641,7 +642,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l01917">1917</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00134">eZ\Publish\Core\Repository\ContentService\internalLoadContentInfo()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00132">eZ\Publish\Core\Repository\ContentService\internalLoadContentInfo()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="comment">// @todo Should relations really be loaded w/o checking permissions just because User needs to be accessible??</span></div>
 <div class="line">        <span class="keywordflow">if</span> ( $sourceContentInfo === null )</div>
@@ -1062,7 +1063,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00905">905</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l01759">eZ\Publish\Core\Repository\ContentService\buildContentDomainObject()</a>, <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00113">eZ\Publish\Core\Repository\ContentService\loadContentInfo()</a>, <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00205">eZ\Publish\Core\Repository\ContentService\loadVersionInfoById()</a>, <a class="el" href="API_2Repository_2Values_2Content_2VersionInfo_8php_source.html#l00032">eZ\Publish\API\Repository\Values\Content\VersionInfo\STATUS_ARCHIVED</a>, and <a class="el" href="API_2Repository_2Values_2Content_2VersionInfo_8php_source.html#l00031">eZ\Publish\API\Repository\Values\Content\VersionInfo\STATUS_PUBLISHED</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l01759">eZ\Publish\Core\Repository\ContentService\buildContentDomainObject()</a>, <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00111">eZ\Publish\Core\Repository\ContentService\loadContentInfo()</a>, <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00203">eZ\Publish\Core\Repository\ContentService\loadVersionInfoById()</a>, <a class="el" href="API_2Repository_2Values_2Content_2VersionInfo_8php_source.html#l00032">eZ\Publish\API\Repository\Values\Content\VersionInfo\STATUS_ARCHIVED</a>, and <a class="el" href="API_2Repository_2Values_2Content_2VersionInfo_8php_source.html#l00031">eZ\Publish\API\Repository\Values\Content\VersionInfo\STATUS_PUBLISHED</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $contentInfo = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#ab89df555b6d042b5b8192de6a91cb9b1">loadContentInfo</a>( $contentInfo-&gt;id );</div>
 <div class="line"></div>
@@ -1095,7 +1096,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">            $versionNo = $versionInfo-&gt;versionNo;</div>
 <div class="line">        }</div>
-<div class="line">        elseif ( $contentInfo-&gt;published )</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $contentInfo-&gt;published )</div>
 <div class="line">        {</div>
 <div class="line">            $versionNo = $contentInfo-&gt;currentVersionNo;</div>
 <div class="line">        }</div>
@@ -1241,7 +1242,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l01603">1603</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00205">eZ\Publish\Core\Repository\ContentService\loadVersionInfoById()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00203">eZ\Publish\Core\Repository\ContentService\loadVersionInfoById()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $sourceVersion = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a166a660112d8d49a63d633d33881bd4e">loadVersionInfoById</a>(</div>
 <div class="line">            $sourceVersion-&gt;contentInfo-&gt;id,</div>
@@ -1526,7 +1527,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00318">318</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00316">316</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
 <p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l01759">eZ\Publish\Core\Repository\ContentService\buildContentDomainObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -1562,9 +1563,11 @@ Protected Attributes</h2></td></tr>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">foreach</span> ( $languages as $languageCode )</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordflow">if</span> ( !in_array(</div>
-<div class="line">                    $this-&gt;persistenceHandler-&gt;contentLanguageHandler()-&gt;loadByLanguageCode( $languageCode )-&gt;id,</div>
-<div class="line">                    $spiContent-&gt;versionInfo-&gt;languageIds )</div>
+<div class="line">                <span class="keywordflow">if</span> (</div>
+<div class="line">                    !in_array(</div>
+<div class="line">                        $this-&gt;persistenceHandler-&gt;contentLanguageHandler()-&gt;loadByLanguageCode( $languageCode )-&gt;id,</div>
+<div class="line">                        $spiContent-&gt;versionInfo-&gt;languageIds</div>
+<div class="line">                    )</div>
 <div class="line">                )</div>
 <div class="line">                {</div>
 <div class="line">                    <span class="keywordflow">throw</span> <span class="keyword">new</span> NotFoundException(</div>
@@ -1636,7 +1639,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00134">134</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00132">132</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
 <p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l01813">eZ\Publish\Core\Repository\ContentService\buildContentInfoDomainObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -1903,9 +1906,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#a4680cdbbca99cbedfcc49a269052f664">eZ\Publish\API\Repository\ContentService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00294">294</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00292">292</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00318">eZ\Publish\Core\Repository\ContentService\internalLoadContent()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00316">eZ\Publish\Core\Repository\ContentService\internalLoadContent()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $content = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a1b7e339dc6e930ef5e120a86af244522">internalLoadContent</a>( $contentId, $languages, $versionNo );</div>
 <div class="line"></div>
@@ -1987,9 +1990,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00252">252</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00250">250</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00294">eZ\Publish\Core\Repository\ContentService\loadContent()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00292">eZ\Publish\Core\Repository\ContentService\loadContent()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#aca7d9f693a3b0e3af6d7dbe4e4fdd25e">loadContent</a>(</div>
 <div class="line">            $contentInfo-&gt;id,</div>
@@ -2063,7 +2066,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00386">386</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00318">eZ\Publish\Core\Repository\ContentService\internalLoadContent()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00316">eZ\Publish\Core\Repository\ContentService\internalLoadContent()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $content = $this-&gt;repository-&gt;getSearchService()-&gt;findSingle( <span class="keyword">new</span> CriterionRemoteId( $remoteId ), array(), <span class="keyword">false</span> );</div>
 <div class="line">        <span class="keywordflow">if</span> ( !empty( $languages ) || $versionNo !== null )</div>
@@ -2129,9 +2132,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00271">271</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00269">269</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00294">eZ\Publish\Core\Repository\ContentService\loadContent()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00292">eZ\Publish\Core\Repository\ContentService\loadContent()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#aca7d9f693a3b0e3af6d7dbe4e4fdd25e">loadContent</a>(</div>
 <div class="line">            $versionInfo-&gt;getContentInfo()-&gt;id,</div>
@@ -2257,9 +2260,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#ae75df7ccf6a58e90787eae0260bebf46">eZ\Publish\API\Repository\ContentService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00113">113</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00111">111</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00134">eZ\Publish\Core\Repository\ContentService\internalLoadContentInfo()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00132">eZ\Publish\Core\Repository\ContentService\internalLoadContentInfo()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $contentInfo = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a0657088a1be09d2644cd20cf660999e9">internalLoadContentInfo</a>( $contentId );</div>
 <div class="line">        <span class="keywordflow">if</span> ( !$this-&gt;repository-&gt;canUser( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;read&#39;</span>, $contentInfo ) )</div>
@@ -2324,7 +2327,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#a2c4546cad66b8e8b7046fd45082a5363">eZ\Publish\API\Repository\ContentService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00164">164</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00162">162</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $content = $this-&gt;repository-&gt;getSearchService()-&gt;findSingle( <span class="keyword">new</span> CriterionRemoteId( $remoteId ), array(), <span class="keyword">false</span> );</div>
 <div class="line"></div>
@@ -2512,7 +2515,7 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000092">Todo:</a></b></dt><dd>TBD - filter by source version destination version and languages</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000090">Todo:</a></b></dt><dd>TBD - filter by source version destination version and languages</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>[]</dd></dl>
 <dl class="section since"><dt>Since</dt><dd>5.0 </dd></dl>
 
@@ -2564,9 +2567,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00187">187</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00185">185</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00205">eZ\Publish\Core\Repository\ContentService\loadVersionInfoById()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00203">eZ\Publish\Core\Repository\ContentService\loadVersionInfoById()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a166a660112d8d49a63d633d33881bd4e">loadVersionInfoById</a>( $contentInfo-&gt;id, $versionNo );</div>
 <div class="line">    }</div>
@@ -2627,9 +2630,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#a2e7e9750549890958df4b58532e83a7b">eZ\Publish\API\Repository\ContentService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00205">205</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00203">203</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l01847">eZ\Publish\Core\Repository\ContentService\buildVersionInfoDomainObject()</a>, and <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00113">eZ\Publish\Core\Repository\ContentService\loadContentInfo()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l01847">eZ\Publish\Core\Repository\ContentService\buildVersionInfoDomainObject()</a>, and <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00111">eZ\Publish\Core\Repository\ContentService\loadContentInfo()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $versionNo === null )</div>
 <div class="line">        {</div>
@@ -2940,7 +2943,7 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000091">Todo:</a></b></dt><dd>: this is legacy storage specific for updating ezcontentobject_tree.path_identification_string, to be removed</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000089">Todo:</a></b></dt><dd>: this is legacy storage specific for updating ezcontentobject_tree.path_identification_string, to be removed</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00837">837</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
@@ -3015,7 +3018,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l01243">1243</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l01279">eZ\Publish\Core\Repository\ContentService\internalPublishVersion()</a>, and <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00294">eZ\Publish\Core\Repository\ContentService\loadContent()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l01279">eZ\Publish\Core\Repository\ContentService\internalPublishVersion()</a>, and <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00292">eZ\Publish\Core\Repository\ContentService\loadContent()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $content = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#aca7d9f693a3b0e3af6d7dbe4e4fdd25e">loadContent</a>(</div>
 <div class="line">            $versionInfo-&gt;contentInfo-&gt;id,</div>
@@ -3134,7 +3137,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00724">724</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00294">eZ\Publish\Core\Repository\ContentService\loadContent()</a>, <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00113">eZ\Publish\Core\Repository\ContentService\loadContentInfo()</a>, <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00164">eZ\Publish\Core\Repository\ContentService\loadContentInfoByRemoteId()</a>, and <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00837">eZ\Publish\Core\Repository\ContentService\publishUrlAliasesForContent()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00292">eZ\Publish\Core\Repository\ContentService\loadContent()</a>, <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00111">eZ\Publish\Core\Repository\ContentService\loadContentInfo()</a>, <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00162">eZ\Publish\Core\Repository\ContentService\loadContentInfoByRemoteId()</a>, and <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00837">eZ\Publish\Core\Repository\ContentService\publishUrlAliasesForContent()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $propertyCount = 0;</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $contentMetadataUpdateStruct as $propertyName =&gt; $propertyValue )</div>
@@ -3185,17 +3188,17 @@ Protected Attributes</h2></td></tr>
 <div class="line">                    <span class="keyword">new</span> SPIMetadataUpdateStruct(</div>
 <div class="line">                        array(</div>
 <div class="line">                            <span class="stringliteral">&quot;ownerId&quot;</span> =&gt; $contentMetadataUpdateStruct-&gt;ownerId,</div>
-<div class="line">                            <span class="stringliteral">&quot;publicationDate&quot;</span> =&gt; isset( $contentMetadataUpdateStruct-&gt;publishedDate )</div>
-<div class="line">                                ? $contentMetadataUpdateStruct-&gt;publishedDate-&gt;getTimestamp()</div>
-<div class="line">                                : null,</div>
-<div class="line">                            <span class="stringliteral">&quot;modificationDate&quot;</span> =&gt; isset( $contentMetadataUpdateStruct-&gt;modificationDate )</div>
-<div class="line">                                ? $contentMetadataUpdateStruct-&gt;modificationDate-&gt;getTimestamp()</div>
-<div class="line">                                : null,</div>
-<div class="line">                            <span class="stringliteral">&quot;mainLanguageId&quot;</span> =&gt; isset( $contentMetadataUpdateStruct-&gt;mainLanguageCode )</div>
-<div class="line">                                ? $this-&gt;repository-&gt;getContentLanguageService()-&gt;loadLanguage(</div>
+<div class="line">                            <span class="stringliteral">&quot;publicationDate&quot;</span> =&gt; isset( $contentMetadataUpdateStruct-&gt;publishedDate ) ?</div>
+<div class="line">                                $contentMetadataUpdateStruct-&gt;publishedDate-&gt;getTimestamp() :</div>
+<div class="line">                                null,</div>
+<div class="line">                            <span class="stringliteral">&quot;modificationDate&quot;</span> =&gt; isset( $contentMetadataUpdateStruct-&gt;modificationDate ) ?</div>
+<div class="line">                                $contentMetadataUpdateStruct-&gt;modificationDate-&gt;getTimestamp() :</div>
+<div class="line">                                null,</div>
+<div class="line">                            <span class="stringliteral">&quot;mainLanguageId&quot;</span> =&gt; isset( $contentMetadataUpdateStruct-&gt;mainLanguageCode ) ?</div>
+<div class="line">                                $this-&gt;repository-&gt;getContentLanguageService()-&gt;loadLanguage(</div>
 <div class="line">                                    $contentMetadataUpdateStruct-&gt;mainLanguageCode</div>
-<div class="line">                                )-&gt;id</div>
-<div class="line">                                : null,</div>
+<div class="line">                                )-&gt;id :</div>
+<div class="line">                                null,</div>
 <div class="line">                            <span class="stringliteral">&quot;alwaysAvailable&quot;</span> =&gt; $contentMetadataUpdateStruct-&gt;alwaysAvailable,</div>
 <div class="line">                            <span class="stringliteral">&quot;remoteId&quot;</span> =&gt; $contentMetadataUpdateStruct-&gt;remoteId</div>
 <div class="line">                        )</div>
@@ -3221,7 +3224,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">                $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#a4522ab79ca7f19503f7e28b4af210a43">publishUrlAliasesForContent</a>( $content );</div>
 <div class="line">            }</div>
 <div class="line">            <span class="comment">// @todo: this is legacy storage specific for updating ezcontentobject_tree.path_identification_string, to be removed</span></div>
-<div class="line">            elseif ( isset( $contentMetadataUpdateStruct-&gt;mainLanguageCode )</div>
+<div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( isset( $contentMetadataUpdateStruct-&gt;mainLanguageCode )</div>
 <div class="line">                &amp;&amp; ( $loadedContentInfo-&gt;mainLanguageCode !== $contentMetadataUpdateStruct-&gt;mainLanguageCode ) )</div>
 <div class="line">            {</div>
 <div class="line">                $content = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html#aca7d9f693a3b0e3af6d7dbe4e4fdd25e">loadContent</a>( $loadedContentInfo-&gt;id );</div>
@@ -3271,7 +3274,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00078">78</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00075">75</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
 </div>
 </div>
@@ -3293,7 +3296,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00073">73</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00070">70</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
 </div>
 </div>
@@ -3315,7 +3318,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00083">83</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2ContentService_8php_source.html#l00080">80</a> of file <a class="el" href="Core_2Repository_2ContentService_8php_source.html">ContentService.php</a>.</p>
 
 </div>
 </div>
@@ -3328,7 +3331,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Repository.html">Repository</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1ContentService.html">ContentService</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:57 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:19 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

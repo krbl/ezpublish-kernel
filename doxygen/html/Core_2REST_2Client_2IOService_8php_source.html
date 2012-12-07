@@ -107,81 +107,82 @@ $(document).ready(function(){initNavTree('Core_2REST_2Client_2IOService_8php_sou
 <a href="Core_2REST_2Client_2IOService_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\REST\Client;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use \eZ\Publish\API\Repository\Values\IO\BinaryFile;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use \eZ\Publish\API\Repository\Values\IO\BinaryFileCreateStruct;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use \eZ\Publish\Core\REST\Common\UrlHandler;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use \eZ\Publish\Core\REST\Common\Input;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;use \eZ\Publish\Core\REST\Common\Output;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html">IOService</a> <span class="keyword">implements</span> <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html">\eZ\Publish\API\Repository\IOService</a>, <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Sessionable.html">Sessionable</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">private</span> $client;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">private</span> $inputDispatcher;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">private</span> $outputVisitor;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">private</span> <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a31844ca6673e433d6df961caecb22b12">$urlHandler</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#a021ccfe6ab54417c9483d3efa40c35cf">   52</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#a021ccfe6ab54417c9483d3efa40c35cf">__construct</a>( <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient.html">HttpClient</a> $client, Input\<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html">Dispatcher</a> $inputDispatcher, Output\<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Visitor.html">Visitor</a> $outputVisitor, <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1UrlHandler.html">UrlHandler</a> <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a31844ca6673e433d6df961caecb22b12">$urlHandler</a> )</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        $this-&gt;client          = $client;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        $this-&gt;inputDispatcher = $inputDispatcher;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        $this-&gt;outputVisitor   = $outputVisitor;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        $this-&gt;urlHandler      = <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a31844ca6673e433d6df961caecb22b12">$urlHandler</a>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#afbae191fe211450ce493dbc652dcf91c">   71</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#afbae191fe211450ce493dbc652dcf91c">setSession</a>( $id )</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;outputVisitor instanceof <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Sessionable.html">Sessionable</a> )</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            $this-&gt;outputVisitor-&gt;setSession( $id );</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#a89b2b328ceb1f11d2117b6be30c7a148">   88</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html#a9adec107b7ce50aaae3b5f7931685f05">newBinaryCreateStructFromUploadedFile</a>( array $uploadedFile )</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#a2a184558d969dd4a5f4dcfff1b6143b8">  102</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html#a113e52f148e7b4e6ea0b8bf88047d3c0">newBinaryCreateStructFromLocalFile</a>( $localFile )</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#abb86eb2baeb13f1c49c465d423ae3284">  114</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html#ab5bf2689145aae1d36d7271affbdfc85">createBinaryFile</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1IO_1_1BinaryFileCreateStruct.html">BinaryFileCreateStruct</a> $binaryFileCreateStruct )</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#add8f66bbfb823aedf3c6b824cd504d87">  124</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html#a7409106db5576eb2dcf79b7fadd056a9">deleteBinaryFile</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1IO_1_1BinaryFile.html">BinaryFile</a> $binaryFile )</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#af231623997ca57cca9303f0bc70a06a5">  138</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html#aa9b7b4e0a1a1a07a2e294fcbdacc4aeb">loadBinaryFile</a>( $binaryFileId )</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    {</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#a9c64a9efc45460f22359e666bfe51f4f">  150</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html#a01e7c9944893f89e7b2c1edaa335c37f">getFileInputStream</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1IO_1_1BinaryFile.html">BinaryFile</a> $binaryFile )</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#adf7b58905a88665e325d2cf7da256770">  162</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html#ab443c3e042b11bd92e648c2cec0bb23a">getFileContents</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1IO_1_1BinaryFile.html">BinaryFile</a> $binaryFile )</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    {</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html">eZ\Publish\API\Repository\IOService</a> as APIIOService;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1IO_1_1BinaryFile.html">eZ\Publish\API\Repository\Values\IO\BinaryFile</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1IO_1_1BinaryFileCreateStruct.html">eZ\Publish\API\Repository\Values\IO\BinaryFileCreateStruct</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1UrlHandler.html">eZ\Publish\Core\REST\Common\UrlHandler</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html">eZ\Publish\Core\REST\Common\Input\Dispatcher</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Visitor.html">eZ\Publish\Core\REST\Common\Output\Visitor</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html">IOService</a> <span class="keyword">implements</span> APIIOService, <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Sessionable.html">Sessionable</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">private</span> $client;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">private</span> $inputDispatcher;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">private</span> $outputVisitor;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">private</span> $urlHandler;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#a114707ce5c24a3c7e50ab459460a1101">   53</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#a114707ce5c24a3c7e50ab459460a1101">__construct</a>( <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient.html">HttpClient</a> $client, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html">Dispatcher</a> $inputDispatcher, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Visitor.html">Visitor</a> $outputVisitor, <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1UrlHandler.html">UrlHandler</a> $urlHandler )</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        $this-&gt;client          = $client;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        $this-&gt;inputDispatcher = $inputDispatcher;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        $this-&gt;outputVisitor   = $outputVisitor;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        $this-&gt;urlHandler      = $urlHandler;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#afbae191fe211450ce493dbc652dcf91c">   72</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#afbae191fe211450ce493dbc652dcf91c">setSession</a>( $id )</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;outputVisitor instanceof <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Sessionable.html">Sessionable</a> )</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            $this-&gt;outputVisitor-&gt;setSession( $id );</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#a89b2b328ceb1f11d2117b6be30c7a148">   89</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#a89b2b328ceb1f11d2117b6be30c7a148">newBinaryCreateStructFromUploadedFile</a>( array $uploadedFile )</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#a2a184558d969dd4a5f4dcfff1b6143b8">  103</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#a2a184558d969dd4a5f4dcfff1b6143b8">newBinaryCreateStructFromLocalFile</a>( $localFile )</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#abb86eb2baeb13f1c49c465d423ae3284">  115</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#abb86eb2baeb13f1c49c465d423ae3284">createBinaryFile</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1IO_1_1BinaryFileCreateStruct.html">BinaryFileCreateStruct</a> $binaryFileCreateStruct )</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#add8f66bbfb823aedf3c6b824cd504d87">  125</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#add8f66bbfb823aedf3c6b824cd504d87">deleteBinaryFile</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1IO_1_1BinaryFile.html">BinaryFile</a> $binaryFile )</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#af231623997ca57cca9303f0bc70a06a5">  139</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#af231623997ca57cca9303f0bc70a06a5">loadBinaryFile</a>( $binaryFileId )</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#a9c64a9efc45460f22359e666bfe51f4f">  151</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#a9c64a9efc45460f22359e666bfe51f4f">getFileInputStream</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1IO_1_1BinaryFile.html">BinaryFile</a> $binaryFile )</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#adf7b58905a88665e325d2cf7da256770">  163</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html#adf7b58905a88665e325d2cf7da256770">getFileContents</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1IO_1_1BinaryFile.html">BinaryFile</a> $binaryFile )</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_797398f06ec5dac6abf0352e0ae63d7a.html">REST</a></li><li class="navelem"><a class="el" href="dir_9cef613736a01ac9013b9c2ddd9ab4f7.html">Client</a></li><li class="navelem"><a class="el" href="Core_2REST_2Client_2IOService_8php.html">IOService.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:46 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:08 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

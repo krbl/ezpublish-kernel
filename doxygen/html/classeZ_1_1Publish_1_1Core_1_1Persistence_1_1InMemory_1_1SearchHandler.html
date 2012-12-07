@@ -225,7 +225,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Finds content objects for the given query.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000052">Todo:</a></b></dt><dd>define structs for the field filters</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000050">Todo:</a></b></dt><dd>define structs for the field filters</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">\eZ\Publish\API\Repository\Values\Content\Query</td><td class="paramname">$query</td><td></td></tr>
@@ -325,9 +325,11 @@ Protected Attributes</h2></td></tr>
 <div class="line">        $result-&gt;searchHits = array_map(</div>
 <div class="line">            <span class="keyword">function</span> ( $content )</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordflow">return</span> <span class="keyword">new</span> SearchHit( array(</div>
-<div class="line">                    <span class="stringliteral">&#39;valueObject&#39;</span> =&gt; $content,</div>
-<div class="line">                ) );</div>
+<div class="line">                <span class="keywordflow">return</span> <span class="keyword">new</span> SearchHit(</div>
+<div class="line">                    array(</div>
+<div class="line">                        <span class="stringliteral">&#39;valueObject&#39;</span> =&gt; $content,</div>
+<div class="line">                    )</div>
+<div class="line">                );</div>
 <div class="line">            },</div>
 <div class="line">            $result-&gt;searchHits</div>
 <div class="line">        );</div>
@@ -390,7 +392,7 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000053">Todo:</a></b></dt><dd>define structs for the field filters </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000051">Todo:</a></b></dt><dd>define structs for the field filters </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">\eZ\Publish\API\Repository\Values\Content\Query\Criterion</td><td class="paramname">$criterion</td><td></td></tr>
@@ -402,13 +404,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1Handler.html#a946b80fc95dab43279da6e461b5777a2">eZ\Publish\SPI\Persistence\Content\Search\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="SearchHandler_8php_source.html#l00203">203</a> of file <a class="el" href="SearchHandler_8php_source.html">SearchHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="SearchHandler_8php_source.html#l00205">205</a> of file <a class="el" href="SearchHandler_8php_source.html">SearchHandler.php</a>.</p>
 
 <p>References <a class="el" href="SearchHandler_8php_source.html#l00094">eZ\Publish\Core\Persistence\InMemory\SearchHandler\findContent()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        $list = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1SearchHandler.html#add6ae406d07165d0e25795713310204a">findContent</a>( <span class="keyword">new</span> Query( array(</div>
-<div class="line">            <span class="stringliteral">&#39;criterion&#39;</span> =&gt; $criterion,</div>
-<div class="line">        ) ) );</div>
+<div class="line">        $list = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1SearchHandler.html#add6ae406d07165d0e25795713310204a">findContent</a>( <span class="keyword">new</span> Query( array( <span class="stringliteral">&#39;criterion&#39;</span> =&gt; $criterion ) ) );</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( !$list-&gt;totalCount )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> NotFound( <span class="stringliteral">&#39;Content&#39;</span>, var_export( $criterion, <span class="keyword">true</span> ) );</div>
@@ -474,7 +474,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="SearchHandler_8php_source.html#l00246">246</a> of file <a class="el" href="SearchHandler_8php_source.html">SearchHandler.php</a>.</p>
 
-<p>References <a class="el" href="API_2Repository_2Values_2Content_2Query_2Criterion_2Operator_8php_source.html#l00027">eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator\IN</a>, <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00025">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_ARCHIVED</a>, <a class="el" href="API_2Repository_2Values_2Content_2Query_2Criterion_2Status_8php_source.html#l00036">eZ\Publish\API\Repository\Values\Content\Query\Criterion\Status\STATUS_ARCHIVED</a>, <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00022">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_DRAFT</a>, <a class="el" href="API_2Repository_2Values_2Content_2Query_2Criterion_2Status_8php_source.html#l00026">eZ\Publish\API\Repository\Values\Content\Query\Criterion\Status\STATUS_DRAFT</a>, <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00023">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_PUBLISHED</a>, and <a class="el" href="API_2Repository_2Values_2Content_2Query_2Criterion_2Status_8php_source.html#l00031">eZ\Publish\API\Repository\Values\Content\Query\Criterion\Status\STATUS_PUBLISHED</a>.</p>
+<p>References <a class="el" href="API_2Repository_2Values_2Content_2Query_2Criterion_2Operator_8php_source.html#l00027">eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator\IN</a>, <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00026">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_ARCHIVED</a>, <a class="el" href="API_2Repository_2Values_2Content_2Query_2Criterion_2Status_8php_source.html#l00037">eZ\Publish\API\Repository\Values\Content\Query\Criterion\Status\STATUS_ARCHIVED</a>, <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00023">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_DRAFT</a>, <a class="el" href="API_2Repository_2Values_2Content_2Query_2Criterion_2Status_8php_source.html#l00027">eZ\Publish\API\Repository\Values\Content\Query\Criterion\Status\STATUS_DRAFT</a>, <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00024">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_PUBLISHED</a>, and <a class="el" href="API_2Repository_2Values_2Content_2Query_2Criterion_2Status_8php_source.html#l00032">eZ\Publish\API\Repository\Values\Content\Query\Criterion\Status\STATUS_PUBLISHED</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $criteria as $criterion )</div>
 <div class="line">        {</div>
@@ -538,7 +538,6 @@ Protected Attributes</h2></td></tr>
 <div class="line">                        <span class="keywordflow">break</span>;</div>
 <div class="line">                    <span class="keywordflow">default</span>:</div>
 <div class="line">                        <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception( <span class="stringliteral">&quot;Unsupported StatusCriterion-&gt;value[0]: &quot;</span> . $criterion-&gt;value[0] );</div>
-<div class="line"></div>
 <div class="line">                }</div>
 <div class="line">            }</div>
 <div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $criterion instanceof ParentLocationId &amp;&amp; !isset( $match[<span class="stringliteral">&#39;locations&#39;</span>][<span class="stringliteral">&#39;parentId&#39;</span>] ) )</div>
@@ -712,7 +711,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory.html">InMemory</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1SearchHandler.html">SearchHandler</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:54 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:17 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -107,9 +107,9 @@ $(document).ready(function(){initNavTree('Bundle_2EzPublishCoreBundle_2Dependenc
 <a href="Bundle_2EzPublishCoreBundle_2DependencyInjection_2Configuration_2Parser_2Content_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\Parser;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\Parser,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    Symfony\Component\Config\Definition\Builder\NodeBuilder,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    Symfony\Component\DependencyInjection\ContainerBuilder;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\Parser;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use Symfony\Component\Config\Definition\Builder\NodeBuilder;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use Symfony\Component\DependencyInjection\ContainerBuilder;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1Content.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1Content.html">Content</a> <span class="keyword">implements</span> <a class="code" href="interfaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser.html">Parser</a></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
@@ -123,30 +123,29 @@ $(document).ready(function(){initNavTree('Bundle_2EzPublishCoreBundle_2Dependenc
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    -&gt;booleanNode( <span class="stringliteral">&#39;ttl_cache&#39;</span> )-&gt;defaultValue( <span class="keyword">false</span> )-&gt;end()</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    -&gt;scalarNode( <span class="stringliteral">&#39;default_ttl&#39;</span> )-&gt;info( <span class="stringliteral">&#39;Default value for TTL cache, in seconds&#39;</span> )-&gt;defaultValue( 60 )-&gt;end()</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                -&gt;end()</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            -&gt;end()</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        ;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1Content.html#a484ffe583254cc67bd2f08df1dccdc20">   50</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1Content.html#a484ffe583254cc67bd2f08df1dccdc20">registerInternalConfig</a>( array $config, ContainerBuilder $container )</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">foreach</span> ( $config[<span class="stringliteral">&#39;system&#39;</span>] as $sa =&gt; $settings )</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">if</span> ( !empty( $settings[<span class="stringliteral">&#39;content&#39;</span>] ) )</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                $container-&gt;setParameter( <span class="stringliteral">&quot;ezsettings.$sa.content.view_cache&quot;</span>, $settings[<span class="stringliteral">&#39;content&#39;</span>][<span class="stringliteral">&#39;view_cache&#39;</span>] );</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                $container-&gt;setParameter( <span class="stringliteral">&quot;ezsettings.$sa.content.ttl_cache&quot;</span>, $settings[<span class="stringliteral">&#39;content&#39;</span>][<span class="stringliteral">&#39;ttl_cache&#39;</span>] );</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                $container-&gt;setParameter( <span class="stringliteral">&quot;ezsettings.$sa.content.default_ttl&quot;</span>, $settings[<span class="stringliteral">&#39;content&#39;</span>][<span class="stringliteral">&#39;default_ttl&#39;</span>] );</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            -&gt;end();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1Content.html#a484ffe583254cc67bd2f08df1dccdc20">   49</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1Content.html#a484ffe583254cc67bd2f08df1dccdc20">registerInternalConfig</a>( array $config, ContainerBuilder $container )</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">foreach</span> ( $config[<span class="stringliteral">&#39;system&#39;</span>] as $sa =&gt; $settings )</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">if</span> ( !empty( $settings[<span class="stringliteral">&#39;content&#39;</span>] ) )</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                $container-&gt;setParameter( <span class="stringliteral">&quot;ezsettings.$sa.content.view_cache&quot;</span>, $settings[<span class="stringliteral">&#39;content&#39;</span>][<span class="stringliteral">&#39;view_cache&#39;</span>] );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                $container-&gt;setParameter( <span class="stringliteral">&quot;ezsettings.$sa.content.ttl_cache&quot;</span>, $settings[<span class="stringliteral">&#39;content&#39;</span>][<span class="stringliteral">&#39;ttl_cache&#39;</span>] );</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                $container-&gt;setParameter( <span class="stringliteral">&quot;ezsettings.$sa.content.default_ttl&quot;</span>, $settings[<span class="stringliteral">&#39;content&#39;</span>][<span class="stringliteral">&#39;default_ttl&#39;</span>] );</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_7d1318b3b939336ca41ef9847f488a7b.html">Bundle</a></li><li class="navelem"><a class="el" href="dir_b83d50569460189e95c49248ea8628dd.html">EzPublishCoreBundle</a></li><li class="navelem"><a class="el" href="dir_fec31bad8dd5df739ea27f3ecc6a504d.html">DependencyInjection</a></li><li class="navelem"><a class="el" href="dir_88b34f214c60b381c4a27c1b3e2fa1da.html">Configuration</a></li><li class="navelem"><a class="el" href="dir_c832f35016382f6318b98cc2dce67457.html">Parser</a></li><li class="navelem"><a class="el" href="Bundle_2EzPublishCoreBundle_2DependencyInjection_2Configuration_2Parser_2Content_8php.html">Content.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:45 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:07 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

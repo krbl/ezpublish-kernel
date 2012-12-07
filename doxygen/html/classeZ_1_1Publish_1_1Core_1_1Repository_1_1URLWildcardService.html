@@ -199,7 +199,8 @@ Protected Attributes</h2></td></tr>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;repository = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1URLWildcardService.html#a9833f8f5f4ad83b8b94870548cdb7d76">$repository</a>;</div>
 <div class="line">        $this-&gt;urlWildcardHandler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1URLWildcardService.html#aef81d0ddf09226312e04fbcf6beed482">$urlWildcardHandler</a>;</div>
-<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1URLWildcardService.html#a5a60408a60eb0cf45450fb94188ffa6f">$settings</a> + array(<span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        <span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1URLWildcardService.html#a5a60408a60eb0cf45450fb94188ffa6f">$settings</a> + array(</div>
 <div class="line">            <span class="comment">//&#39;defaultSetting&#39; =&gt; array(),</span></div>
 <div class="line">        );</div>
 <div class="line">    }</div>
@@ -237,7 +238,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html#l00137">137</a> of file <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html">URLWildcardService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html#l00138">138</a> of file <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html">URLWildcardService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="stringliteral">&quot;/&quot;</span> . trim( $url, <span class="stringliteral">&quot;/ &quot;</span> );</div>
 <div class="line">    }</div>
@@ -305,9 +306,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1URLWildcardService.html#a28accbc2d7076025ea453d21c7997170">eZ\Publish\API\Repository\URLWildcardService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html#l00078">78</a> of file <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html">URLWildcardService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html#l00079">79</a> of file <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html">URLWildcardService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html#l00137">eZ\Publish\Core\Repository\URLWildcardService\cleanUrl()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html#l00138">eZ\Publish\Core\Repository\URLWildcardService\cleanUrl()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $this-&gt;repository-&gt;hasAccess( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;urltranslator&#39;</span> ) !== true )</div>
 <div class="line">        {</div>
@@ -402,7 +403,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1URLWildcardService.html#a05c94183a334ae31b1152a42942e7bce">eZ\Publish\API\Repository\URLWildcardService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html#l00180">180</a> of file <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html">URLWildcardService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html#l00181">181</a> of file <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html">URLWildcardService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;buildUrlWildcardDomainObject(</div>
 <div class="line">            $this-&gt;urlWildcardHandler-&gt;load( $id )</div>
@@ -446,7 +447,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1URLWildcardService.html#a68aa0d35fab29b2018159643d53d8c56">eZ\Publish\API\Repository\URLWildcardService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html#l00195">195</a> of file <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html">URLWildcardService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html#l00196">196</a> of file <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html">URLWildcardService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $spiUrlWildcards = $this-&gt;urlWildcardHandler-&gt;loadAll(</div>
 <div class="line">            $offset,</div>
@@ -493,7 +494,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1URLWildcardService.html#a2793894fc3e946a0833cce1cd35afb5f">eZ\Publish\API\Repository\URLWildcardService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html#l00149">149</a> of file <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html">URLWildcardService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html#l00150">150</a> of file <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html">URLWildcardService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $this-&gt;repository-&gt;hasAccess( <span class="stringliteral">&#39;content&#39;</span>, <span class="stringliteral">&#39;urltranslator&#39;</span> ) !== true )</div>
 <div class="line">        {</div>
@@ -547,7 +548,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1URLWildcardService.html#a20e4e594c83c3a5d5ecf622f08812f71">eZ\Publish\API\Repository\URLWildcardService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html#l00221">221</a> of file <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html">URLWildcardService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html#l00222">222</a> of file <a class="el" href="Core_2Repository_2URLWildcardService_8php_source.html">URLWildcardService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $spiUrlWildcards = $this-&gt;urlWildcardHandler-&gt;loadAll();</div>
 <div class="line"></div>
@@ -655,7 +656,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Repository.html">Repository</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1URLWildcardService.html">URLWildcardService</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:58 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:20 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

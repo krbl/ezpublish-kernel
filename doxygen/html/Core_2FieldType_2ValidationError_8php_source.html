@@ -106,51 +106,52 @@ $(document).ready(function(){initNavTree('Core_2FieldType_2ValidationError_8php_
 <div class="contents">
 <a href="Core_2FieldType_2ValidationError_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\FieldType;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1ValidationError.html">eZ\Publish\SPI\FieldType\ValidationError</a> as ValidationErrorInterface,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    eZ\Publish\API\Repository\Values\Translation\Message,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    eZ\Publish\API\Repository\Values\Translation\Plural;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html">ValidationError</a> <span class="keyword">implements</span> ValidationErrorInterface</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#aa18b5a2b698925a587d450c5e58adf64">   23</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#aa18b5a2b698925a587d450c5e58adf64">$singular</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#abaab531114f90cd3bd5f48283e98ca55">   28</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#abaab531114f90cd3bd5f48283e98ca55">$plural</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#a0a5ba58d93524c609dc284423bce25c0">   33</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#a0a5ba58d93524c609dc284423bce25c0">$values</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#aadd8ea90cb9047415c7db746779de006">   40</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#aadd8ea90cb9047415c7db746779de006">__construct</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#aa18b5a2b698925a587d450c5e58adf64">$singular</a>, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#abaab531114f90cd3bd5f48283e98ca55">$plural</a> = null, array <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#a0a5ba58d93524c609dc284423bce25c0">$values</a> = array() )</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        $this-&gt;singular = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#aa18b5a2b698925a587d450c5e58adf64">$singular</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        $this-&gt;plural = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#abaab531114f90cd3bd5f48283e98ca55">$plural</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        $this-&gt;values = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#a0a5ba58d93524c609dc284423bce25c0">$values</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#a67a781dc6e1a0b2d5688bce08144e721">   52</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#a67a781dc6e1a0b2d5688bce08144e721">getTranslatableMessage</a>()</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">if</span> ( isset( $this-&gt;plural ) )</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Plural.html">Plural</a>(</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                $this-&gt;singular,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                $this-&gt;plural,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                $this-&gt;values</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            );</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Message.html">Message</a>(</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                $this-&gt;singular,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                $this-&gt;values</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            );</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1ValidationError.html">eZ\Publish\SPI\FieldType\ValidationError</a> as ValidationErrorInterface;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use eZ\Publish\API\Repository\Values\Translation\Message;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use eZ\Publish\API\Repository\Values\Translation\Plural;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html">ValidationError</a> <span class="keyword">implements</span> ValidationErrorInterface</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#aa18b5a2b698925a587d450c5e58adf64">   24</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#aa18b5a2b698925a587d450c5e58adf64">$singular</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#abaab531114f90cd3bd5f48283e98ca55">   29</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#abaab531114f90cd3bd5f48283e98ca55">$plural</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#a0a5ba58d93524c609dc284423bce25c0">   34</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#a0a5ba58d93524c609dc284423bce25c0">$values</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#aadd8ea90cb9047415c7db746779de006">   41</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#aadd8ea90cb9047415c7db746779de006">__construct</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#aa18b5a2b698925a587d450c5e58adf64">$singular</a>, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#abaab531114f90cd3bd5f48283e98ca55">$plural</a> = null, array <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#a0a5ba58d93524c609dc284423bce25c0">$values</a> = array() )</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        $this-&gt;singular = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#aa18b5a2b698925a587d450c5e58adf64">$singular</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        $this-&gt;plural = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#abaab531114f90cd3bd5f48283e98ca55">$plural</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        $this-&gt;values = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#a0a5ba58d93524c609dc284423bce25c0">$values</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#a67a781dc6e1a0b2d5688bce08144e721">   53</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1ValidationError.html#a67a781dc6e1a0b2d5688bce08144e721">getTranslatableMessage</a>()</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span> ( isset( $this-&gt;plural ) )</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Plural.html">Plural</a>(</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                $this-&gt;singular,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                $this-&gt;plural,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                $this-&gt;values</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            );</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                $this-&gt;singular,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                $this-&gt;values</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_429826c28e0afa35fa370fabe902bc82.html">FieldType</a></li><li class="navelem"><a class="el" href="Core_2FieldType_2ValidationError_8php.html">ValidationError.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:48 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:10 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

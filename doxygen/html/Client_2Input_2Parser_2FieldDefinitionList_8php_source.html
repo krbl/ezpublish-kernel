@@ -106,51 +106,52 @@ $(document).ready(function(){initNavTree('Client_2Input_2Parser_2FieldDefinition
 <div class="contents">
 <a href="Client_2Input_2Parser_2FieldDefinitionList_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\REST\Client\Input\Parser;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html">eZ\Publish\Core\REST\Common\Input\ParserTools</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html">eZ\Publish\Core\REST\Client\ContentTypeService</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html">eZ\Publish\Core\REST\Common\Input\Parser</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParsingDispatcher.html">eZ\Publish\Core\REST\Common\Input\ParsingDispatcher</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;use eZ\Publish\Core\REST\Client\Values;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html">FieldDefinitionList</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html">Parser</a></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#ad0a3277a824a5175f62855ea6cf616b3">   27</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#ad0a3277a824a5175f62855ea6cf616b3">$parserTools</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#aee8cc45c34efc5bf4202b6e15386d666">   32</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#aee8cc45c34efc5bf4202b6e15386d666">$contentTypeService</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#a5b4ed15b5610c54aa03a9354a007380a">   38</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#a5b4ed15b5610c54aa03a9354a007380a">__construct</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html">ParserTools</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#ad0a3277a824a5175f62855ea6cf616b3">$parserTools</a>, <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html">ContentTypeService</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#aee8cc45c34efc5bf4202b6e15386d666">$contentTypeService</a> )</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        $this-&gt;parserTools = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#ad0a3277a824a5175f62855ea6cf616b3">$parserTools</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        $this-&gt;contentTypeService = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#aee8cc45c34efc5bf4202b6e15386d666">$contentTypeService</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#a780a1ac24af589f4b97d17d344836298">   52</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#a780a1ac24af589f4b97d17d344836298">parse</a>( array $data, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParsingDispatcher.html">ParsingDispatcher</a> $parsingDispatcher )</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        $fieldDefinitionReferences = array();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">foreach</span> ( $data[<span class="stringliteral">&#39;FieldDefinition&#39;</span>] as $fieldDefinitionData )</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            $fieldDefinitionReferences[] = $this-&gt;parserTools-&gt;parseObjectElement(</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                $fieldDefinitionData,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                $parsingDispatcher</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            );</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1FieldDefinitionList.html">Values\FieldDefinitionList</a>(</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            $this-&gt;contentTypeService,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            $fieldDefinitionReferences</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        );</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html">eZ\Publish\Core\REST\Common\Input\ParserTools</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html">eZ\Publish\Core\REST\Client\ContentTypeService</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html">eZ\Publish\Core\REST\Common\Input\Parser</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParsingDispatcher.html">eZ\Publish\Core\REST\Common\Input\ParsingDispatcher</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;use eZ\Publish\Core\REST\Client\Values;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html">FieldDefinitionList</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html">Parser</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#ad0a3277a824a5175f62855ea6cf616b3">   28</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#ad0a3277a824a5175f62855ea6cf616b3">$parserTools</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#aee8cc45c34efc5bf4202b6e15386d666">   33</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#aee8cc45c34efc5bf4202b6e15386d666">$contentTypeService</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#a5b4ed15b5610c54aa03a9354a007380a">   39</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#a5b4ed15b5610c54aa03a9354a007380a">__construct</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html">ParserTools</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#ad0a3277a824a5175f62855ea6cf616b3">$parserTools</a>, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html">ContentTypeService</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#aee8cc45c34efc5bf4202b6e15386d666">$contentTypeService</a> )</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        $this-&gt;parserTools = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#ad0a3277a824a5175f62855ea6cf616b3">$parserTools</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        $this-&gt;contentTypeService = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#aee8cc45c34efc5bf4202b6e15386d666">$contentTypeService</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#a780a1ac24af589f4b97d17d344836298">   53</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html#a780a1ac24af589f4b97d17d344836298">parse</a>( array $data, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParsingDispatcher.html">ParsingDispatcher</a> $parsingDispatcher )</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        $fieldDefinitionReferences = array();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">foreach</span> ( $data[<span class="stringliteral">&#39;FieldDefinition&#39;</span>] as $fieldDefinitionData )</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            $fieldDefinitionReferences[] = $this-&gt;parserTools-&gt;parseObjectElement(</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                $fieldDefinitionData,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                $parsingDispatcher</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            );</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1FieldDefinitionList.html">Values\FieldDefinitionList</a>(</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            $this-&gt;contentTypeService,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            $fieldDefinitionReferences</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_797398f06ec5dac6abf0352e0ae63d7a.html">REST</a></li><li class="navelem"><a class="el" href="dir_9cef613736a01ac9013b9c2ddd9ab4f7.html">Client</a></li><li class="navelem"><a class="el" href="dir_e36339d95d2ff7f21427a7890d078906.html">Input</a></li><li class="navelem"><a class="el" href="dir_12b7f39c33f5bcb14f1c67034594d6de.html">Parser</a></li><li class="navelem"><a class="el" href="Client_2Input_2Parser_2FieldDefinitionList_8php.html">FieldDefinitionList.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:49 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:11 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

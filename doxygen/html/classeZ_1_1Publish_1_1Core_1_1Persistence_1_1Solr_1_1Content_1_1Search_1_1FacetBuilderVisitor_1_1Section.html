@@ -201,7 +201,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor.html#ac5bee51dc511a77eefe1cfd57c70b4de">eZ\Publish\Core\Persistence\Solr\Content\Search\FacetBuilderVisitor</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2FacetBuilderVisitor_2Section_8php_source.html#l00056">56</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2FacetBuilderVisitor_2Section_8php_source.html">Section.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2FacetBuilderVisitor_2Section_8php_source.html#l00058">58</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2FacetBuilderVisitor_2Section_8php_source.html">Section.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $facetBuilder instanceof FacetBuilder\SectionFacetBuilder;</div>
 <div class="line">    }</div>
@@ -247,10 +247,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>References <a class="el" href="FacetBuilderVisitor_8php_source.html#l00063">eZ\Publish\Core\Persistence\Solr\Content\Search\FacetBuilderVisitor\mapData()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Facet\SectionFacet( array(</div>
-<div class="line">            <span class="stringliteral">&#39;name&#39;</span>    =&gt; <span class="stringliteral">&#39;section&#39;</span>,</div>
-<div class="line">            <span class="stringliteral">&#39;entries&#39;</span> =&gt; $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor.html#acf13b20daa739c3fb9f9e1733ad37aae">mapData</a>( $data ),</div>
-<div class="line">        ) );</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Facet\SectionFacet(</div>
+<div class="line">            array(</div>
+<div class="line">                <span class="stringliteral">&#39;name&#39;</span>    =&gt; <span class="stringliteral">&#39;section&#39;</span>,</div>
+<div class="line">                <span class="stringliteral">&#39;entries&#39;</span> =&gt; $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor.html#acf13b20daa739c3fb9f9e1733ad37aae">mapData</a>( $data ),</div>
+<div class="line">            )</div>
+<div class="line">        );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -290,13 +292,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor.html#a41b19646cfff5c2fb4e719995d66b0ab">eZ\Publish\Core\Persistence\Solr\Content\Search\FacetBuilderVisitor</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2FacetBuilderVisitor_2Section_8php_source.html#l00068">68</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2FacetBuilderVisitor_2Section_8php_source.html">Section.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2FacetBuilderVisitor_2Section_8php_source.html#l00070">70</a> of file <a class="el" href="Core_2Persistence_2Solr_2Content_2Search_2FacetBuilderVisitor_2Section_8php_source.html">Section.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        <span class="keywordflow">return</span> http_build_query( array(</div>
-<div class="line">            <span class="stringliteral">&#39;facet.field&#39;</span>                =&gt; <span class="stringliteral">&#39;section_id&#39;</span>,</div>
-<div class="line">            <span class="stringliteral">&#39;f.section_id.facet.limit&#39;</span>    =&gt; $facetBuilder-&gt;limit,</div>
-<div class="line">            <span class="stringliteral">&#39;f.section_id.facet.mincount&#39;</span> =&gt; $facetBuilder-&gt;minCount,</div>
-<div class="line">        ) );</div>
+<div class="line">        <span class="keywordflow">return</span> http_build_query(</div>
+<div class="line">            array(</div>
+<div class="line">                <span class="stringliteral">&#39;facet.field&#39;</span>                =&gt; <span class="stringliteral">&#39;section_id&#39;</span>,</div>
+<div class="line">                <span class="stringliteral">&#39;f.section_id.facet.limit&#39;</span>    =&gt; $facetBuilder-&gt;limit,</div>
+<div class="line">                <span class="stringliteral">&#39;f.section_id.facet.mincount&#39;</span> =&gt; $facetBuilder-&gt;minCount,</div>
+<div class="line">            )</div>
+<div class="line">        );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 </div>
@@ -310,7 +314,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr.html">Solr</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search.html">Search</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor.html">FacetBuilderVisitor</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor_1_1Section.html">Section</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:57 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:19 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

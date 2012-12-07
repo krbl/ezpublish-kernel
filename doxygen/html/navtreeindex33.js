@@ -1,6 +1,5 @@
 var NAVTREEINDEX33 =
 {
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1RestFieldDefinition.html":[3,0,0,1,1,7,2,5,0,44],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1RestFieldDefinition.html#aab442df952e88f40c1658a8bb18d40ca":[3,0,0,1,1,7,2,5,0,44,2],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1RestFieldDefinition.html#ac5962cf1276bf89673fb7db2f5df3205":[3,0,0,1,1,7,2,5,0,44,0],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1RestFieldDefinition.html#afe560f2c6b13f038a11eab1e95c1db0d":[3,0,0,1,1,7,2,5,0,44,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX33 =
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1URLAliasRefList.html":[3,0,0,1,1,7,2,6,53],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1URLAliasRefList.html#a44fe221bf6201725f1efbeb56fbc370e":[3,0,0,1,1,7,2,6,53,1],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1URLAliasRefList.html#a9d279ac03bbd534c8dfb361458113014":[3,0,0,1,1,7,2,6,53,0],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1URLAliasRefList.html#ae36a4204d27460a86bcc05f8022b90cd":[3,0,0,1,1,7,2,6,53,2]
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1URLAliasRefList.html#ae36a4204d27460a86bcc05f8022b90cd":[3,0,0,1,1,7,2,6,53,2],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1URLWildcardList.html":[3,0,0,1,1,7,2,6,54]
 };

@@ -336,78 +336,80 @@ $(document).ready(function(){initNavTree('Core_2SignalSlot_2ContentTypeService_8
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    {</div>
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        $returnValue = $this-&gt;service-&gt;removeFieldDefinition( $contentTypeDraft, $fieldDefinition );</div>
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        $this-&gt;signalDispatcher-&gt;emit(</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1RemoveFieldDefinitionSignal.html">RemoveFieldDefinitionSignal</a>( array(</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                <span class="stringliteral">&#39;contentTypeDraftId&#39;</span> =&gt; $contentTypeDraft-&gt;id,</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                <span class="stringliteral">&#39;fieldDefinitionId&#39;</span> =&gt; $fieldDefinition-&gt;id,</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;            ) )</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        );</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        <span class="keywordflow">return</span> $returnValue;</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    }</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;</div>
-<div class="line"><a name="l00481"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#aac69ff78da63991045fa2ee0e13297a7">  481</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#aac69ff78da63991045fa2ee0e13297a7">updateFieldDefinition</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeDraft.html">ContentTypeDraft</a> $contentTypeDraft, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html">FieldDefinition</a> $fieldDefinition, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html">FieldDefinitionUpdateStruct</a> $fieldDefinitionUpdateStruct )</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    {</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        $returnValue = $this-&gt;service-&gt;updateFieldDefinition( $contentTypeDraft, $fieldDefinition, $fieldDefinitionUpdateStruct );</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        $this-&gt;signalDispatcher-&gt;emit(</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1UpdateFieldDefinitionSignal.html">UpdateFieldDefinitionSignal</a>(</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;                array(</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;                    <span class="stringliteral">&#39;contentTypeDraftId&#39;</span> =&gt; $contentTypeDraft-&gt;id,</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;                    <span class="stringliteral">&#39;fieldDefinitionId&#39;</span> =&gt; $fieldDefinition-&gt;id,</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;                )</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;            )</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        );</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        <span class="keywordflow">return</span> $returnValue;</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    }</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;</div>
-<div class="line"><a name="l00506"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a740f458933491b990bf91f0e5315f140">  506</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a740f458933491b990bf91f0e5315f140">publishContentTypeDraft</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeDraft.html">ContentTypeDraft</a> $contentTypeDraft )</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    {</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        $returnValue = $this-&gt;service-&gt;publishContentTypeDraft( $contentTypeDraft );</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;        $this-&gt;signalDispatcher-&gt;emit(</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1PublishContentTypeDraftSignal.html">PublishContentTypeDraftSignal</a>(</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;                array(</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;                    <span class="stringliteral">&#39;contentTypeDraftId&#39;</span> =&gt; $contentTypeDraft-&gt;id,</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;                )</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;            )</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        );</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        <span class="keywordflow">return</span> $returnValue;</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    }</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;</div>
-<div class="line"><a name="l00526"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a1f1e5655c9251933b6be51f0db74d488">  526</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a1f1e5655c9251933b6be51f0db74d488">newContentTypeGroupCreateStruct</a>( $identifier )</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    {</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;        <span class="keywordflow">return</span> $this-&gt;service-&gt;newContentTypeGroupCreateStruct( $identifier );</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    }</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;</div>
-<div class="line"><a name="l00538"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a17e46680f82774be6857ef9afc4585cf">  538</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a17e46680f82774be6857ef9afc4585cf">newContentTypeCreateStruct</a>( $identifier )</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    {</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        <span class="keywordflow">return</span> $this-&gt;service-&gt;newContentTypeCreateStruct( $identifier );</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    }</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;</div>
-<div class="line"><a name="l00548"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#abf2814b17b0588028d095cde2957d2d7">  548</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#abf2814b17b0588028d095cde2957d2d7">newContentTypeUpdateStruct</a>()</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    {</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;        <span class="keywordflow">return</span> $this-&gt;service-&gt;newContentTypeUpdateStruct();</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    }</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;</div>
-<div class="line"><a name="l00558"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a37d9cac42c351464e6c51d683ba9b4ce">  558</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a37d9cac42c351464e6c51d683ba9b4ce">newContentTypeGroupUpdateStruct</a>()</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    {</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        <span class="keywordflow">return</span> $this-&gt;service-&gt;newContentTypeGroupUpdateStruct();</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    }</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;</div>
-<div class="line"><a name="l00571"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a6593d841f462b322e063c60adfb7fa37">  571</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a6593d841f462b322e063c60adfb7fa37">newFieldDefinitionCreateStruct</a>( $identifier, $fieldTypeIdentifier )</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    {</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;        <span class="keywordflow">return</span> $this-&gt;service-&gt;newFieldDefinitionCreateStruct( $identifier, $fieldTypeIdentifier );</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    }</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;</div>
-<div class="line"><a name="l00581"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a86a9b246c045febd4dbb89acf40aebf8">  581</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a86a9b246c045febd4dbb89acf40aebf8">newFieldDefinitionUpdateStruct</a>()</div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    {</div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;        <span class="keywordflow">return</span> $this-&gt;service-&gt;newFieldDefinitionUpdateStruct();</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    }</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;}</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1RemoveFieldDefinitionSignal.html">RemoveFieldDefinitionSignal</a>(</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                array(</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                    <span class="stringliteral">&#39;contentTypeDraftId&#39;</span> =&gt; $contentTypeDraft-&gt;id,</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                    <span class="stringliteral">&#39;fieldDefinitionId&#39;</span> =&gt; $fieldDefinition-&gt;id,</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                )</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;            )</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        );</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        <span class="keywordflow">return</span> $returnValue;</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    }</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;</div>
+<div class="line"><a name="l00483"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#aac69ff78da63991045fa2ee0e13297a7">  483</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#aac69ff78da63991045fa2ee0e13297a7">updateFieldDefinition</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeDraft.html">ContentTypeDraft</a> $contentTypeDraft, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html">FieldDefinition</a> $fieldDefinition, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html">FieldDefinitionUpdateStruct</a> $fieldDefinitionUpdateStruct )</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;    {</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;        $returnValue = $this-&gt;service-&gt;updateFieldDefinition( $contentTypeDraft, $fieldDefinition, $fieldDefinitionUpdateStruct );</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;        $this-&gt;signalDispatcher-&gt;emit(</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1UpdateFieldDefinitionSignal.html">UpdateFieldDefinitionSignal</a>(</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;                array(</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;                    <span class="stringliteral">&#39;contentTypeDraftId&#39;</span> =&gt; $contentTypeDraft-&gt;id,</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;                    <span class="stringliteral">&#39;fieldDefinitionId&#39;</span> =&gt; $fieldDefinition-&gt;id,</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;                )</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;            )</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        );</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;        <span class="keywordflow">return</span> $returnValue;</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    }</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;</div>
+<div class="line"><a name="l00508"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a740f458933491b990bf91f0e5315f140">  508</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a740f458933491b990bf91f0e5315f140">publishContentTypeDraft</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeDraft.html">ContentTypeDraft</a> $contentTypeDraft )</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    {</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        $returnValue = $this-&gt;service-&gt;publishContentTypeDraft( $contentTypeDraft );</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        $this-&gt;signalDispatcher-&gt;emit(</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1PublishContentTypeDraftSignal.html">PublishContentTypeDraftSignal</a>(</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;                array(</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;                    <span class="stringliteral">&#39;contentTypeDraftId&#39;</span> =&gt; $contentTypeDraft-&gt;id,</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;                )</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;            )</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        );</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        <span class="keywordflow">return</span> $returnValue;</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    }</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;</div>
+<div class="line"><a name="l00528"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a1f1e5655c9251933b6be51f0db74d488">  528</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a1f1e5655c9251933b6be51f0db74d488">newContentTypeGroupCreateStruct</a>( $identifier )</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    {</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        <span class="keywordflow">return</span> $this-&gt;service-&gt;newContentTypeGroupCreateStruct( $identifier );</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    }</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;</div>
+<div class="line"><a name="l00540"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a17e46680f82774be6857ef9afc4585cf">  540</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a17e46680f82774be6857ef9afc4585cf">newContentTypeCreateStruct</a>( $identifier )</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    {</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;        <span class="keywordflow">return</span> $this-&gt;service-&gt;newContentTypeCreateStruct( $identifier );</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    }</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;</div>
+<div class="line"><a name="l00550"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#abf2814b17b0588028d095cde2957d2d7">  550</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#abf2814b17b0588028d095cde2957d2d7">newContentTypeUpdateStruct</a>()</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    {</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;        <span class="keywordflow">return</span> $this-&gt;service-&gt;newContentTypeUpdateStruct();</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    }</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;</div>
+<div class="line"><a name="l00560"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a37d9cac42c351464e6c51d683ba9b4ce">  560</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a37d9cac42c351464e6c51d683ba9b4ce">newContentTypeGroupUpdateStruct</a>()</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    {</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        <span class="keywordflow">return</span> $this-&gt;service-&gt;newContentTypeGroupUpdateStruct();</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;    }</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;</div>
+<div class="line"><a name="l00573"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a6593d841f462b322e063c60adfb7fa37">  573</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a6593d841f462b322e063c60adfb7fa37">newFieldDefinitionCreateStruct</a>( $identifier, $fieldTypeIdentifier )</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    {</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;        <span class="keywordflow">return</span> $this-&gt;service-&gt;newFieldDefinitionCreateStruct( $identifier, $fieldTypeIdentifier );</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    }</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;</div>
+<div class="line"><a name="l00583"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a86a9b246c045febd4dbb89acf40aebf8">  583</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentTypeService.html#a86a9b246c045febd4dbb89acf40aebf8">newFieldDefinitionUpdateStruct</a>()</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    {</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;        <span class="keywordflow">return</span> $this-&gt;service-&gt;newFieldDefinitionUpdateStruct();</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    }</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_9732deb7e9f110e21591e3657ab68b18.html">SignalSlot</a></li><li class="navelem"><a class="el" href="Core_2SignalSlot_2ContentTypeService_8php.html">ContentTypeService.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:46 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:08 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

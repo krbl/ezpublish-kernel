@@ -106,70 +106,71 @@ $(document).ready(function(){initNavTree('AuthorCollection_8php_source.html','')
 <div class="contents">
 <a href="AuthorCollection_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\FieldType\Author;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1Author.html">eZ\Publish\Core\FieldType\Author\Author</a>,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">eZ\Publish\Core\Base\Exceptions\InvalidArgumentType</a>,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    ArrayObject;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html">AuthorCollection</a> <span class="keyword">extends</span> ArrayObject</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#ad8b867404f79e829474ee72157662820">   24</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#ad8b867404f79e829474ee72157662820">__construct</a>( array $elements = array() )</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment">// Call parent constructor without $elements because all author elements</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">// must be given an id by $this-&gt;offsetSet()</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#ad8b867404f79e829474ee72157662820">parent::__construct</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">foreach</span> ( $elements as $i =&gt; $author )</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#ac58b733112842dd09597ef604ce33908">offsetSet</a>( $i, $author );</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#ac58b733112842dd09597ef604ce33908">   42</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#ac58b733112842dd09597ef604ce33908">offsetSet</a>( $offset, $value )</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">if</span> ( !$value instanceof <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1Author.html">Author</a> )</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">InvalidArgumentType</a>(</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="stringliteral">&#39;$value&#39;</span>,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="stringliteral">&#39;eZ\\Publish\\Core\\FieldType\\Author\\Author&#39;</span>,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                $value</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            );</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        $aAuthors = $this-&gt;getArrayCopy();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#ac58b733112842dd09597ef604ce33908">parent::offsetSet</a>( $offset, $value );</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span> ( !isset( $value-&gt;id ) || $value-&gt;id == -1 )</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">if</span> ( !empty( $aAuthors ) )</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                $value-&gt;id = end( $aAuthors )-&gt;id + 1;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                $value-&gt;id = 1;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#a2d1dac903a0bcc86291fd18b70f68f85">   73</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#a2d1dac903a0bcc86291fd18b70f68f85">removeAuthorsById</a>( array $authorIds )</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        $aAuthors = $this-&gt;getArrayCopy();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">foreach</span> ( $aAuthors as $i =&gt; $author )</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">if</span> ( in_array( $author-&gt;id, $authorIds ) )</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                unset( $aAuthors[$i] );</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        $this-&gt;exchangeArray( $aAuthors );</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1Author.html">eZ\Publish\Core\FieldType\Author\Author</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">eZ\Publish\Core\Base\Exceptions\InvalidArgumentType</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use ArrayObject;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html">AuthorCollection</a> <span class="keyword">extends</span> ArrayObject</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#ad8b867404f79e829474ee72157662820">   25</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#ad8b867404f79e829474ee72157662820">__construct</a>( array $elements = array() )</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">// Call parent constructor without $elements because all author elements</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">// must be given an id by $this-&gt;offsetSet()</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#ad8b867404f79e829474ee72157662820">parent::__construct</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">foreach</span> ( $elements as $i =&gt; $author )</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#ac58b733112842dd09597ef604ce33908">offsetSet</a>( $i, $author );</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#ac58b733112842dd09597ef604ce33908">   43</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#ac58b733112842dd09597ef604ce33908">offsetSet</a>( $offset, $value )</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">if</span> ( !$value instanceof <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1Author.html">Author</a> )</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">InvalidArgumentType</a>(</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="stringliteral">&#39;$value&#39;</span>,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="stringliteral">&#39;eZ\\Publish\\Core\\FieldType\\Author\\Author&#39;</span>,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                $value</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            );</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        $aAuthors = $this-&gt;getArrayCopy();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#ac58b733112842dd09597ef604ce33908">parent::offsetSet</a>( $offset, $value );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span> ( !isset( $value-&gt;id ) || $value-&gt;id == -1 )</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">if</span> ( !empty( $aAuthors ) )</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                $value-&gt;id = end( $aAuthors )-&gt;id + 1;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                $value-&gt;id = 1;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#a2d1dac903a0bcc86291fd18b70f68f85">   74</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html#a2d1dac903a0bcc86291fd18b70f68f85">removeAuthorsById</a>( array $authorIds )</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        $aAuthors = $this-&gt;getArrayCopy();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">foreach</span> ( $aAuthors as $i =&gt; $author )</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">if</span> ( in_array( $author-&gt;id, $authorIds ) )</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                unset( $aAuthors[$i] );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        $this-&gt;exchangeArray( $aAuthors );</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_429826c28e0afa35fa370fabe902bc82.html">FieldType</a></li><li class="navelem"><a class="el" href="dir_35f04f98d65d7ae192cec1b833f5cd44.html">Author</a></li><li class="navelem"><a class="el" href="AuthorCollection_8php.html">AuthorCollection.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:47 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:09 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

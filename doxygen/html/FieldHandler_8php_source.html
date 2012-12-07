@@ -106,150 +106,151 @@ $(document).ready(function(){initNavTree('FieldHandler_8php_source.html','');});
 <div class="contents">
 <a href="FieldHandler_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content.html">   10</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">eZ\Publish\Core\Persistence\Legacy\Content</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">eZ\Publish\SPI\Persistence\Content</a>,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    eZ\Publish\SPI\Persistence\Content\Type,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    eZ\Publish\SPI\Persistence\Content\VersionInfo,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    eZ\Publish\SPI\Persistence\Content\Field,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    eZ\Publish\SPI\Persistence\Content\UpdateStruct,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html">eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway</a> as TypeGateway;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html">FieldHandler</a></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ac724d51a29a828eecc96f46e3a0e41fc">   28</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ac724d51a29a828eecc96f46e3a0e41fc">$contentGateway</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a56e089cab3cf2465ecfa3f2cf49cd1c1">   35</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a56e089cab3cf2465ecfa3f2cf49cd1c1">$typeGateway</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ac15a9fb259493b669a42f66f5e28240d">   42</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ac15a9fb259493b669a42f66f5e28240d">$mapper</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#abb1a03ffd6bfed45245d03bbf527a52d">   49</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#abb1a03ffd6bfed45245d03bbf527a52d">$storageHandler</a>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a912bc3cef4e1a95dbeb68b15a6f7d3bf">   59</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a912bc3cef4e1a95dbeb68b15a6f7d3bf">__construct</a>(</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html">Gateway</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ac724d51a29a828eecc96f46e3a0e41fc">$contentGateway</a>,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        TypeGateway <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a56e089cab3cf2465ecfa3f2cf49cd1c1">$typeGateway</a>,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Mapper.html">Mapper</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ac15a9fb259493b669a42f66f5e28240d">$mapper</a>,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageHandler.html">StorageHandler</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#abb1a03ffd6bfed45245d03bbf527a52d">$storageHandler</a> )</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        $this-&gt;contentGateway = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ac724d51a29a828eecc96f46e3a0e41fc">$contentGateway</a>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        $this-&gt;typeGateway = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a56e089cab3cf2465ecfa3f2cf49cd1c1">$typeGateway</a>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        $this-&gt;mapper = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ac15a9fb259493b669a42f66f5e28240d">$mapper</a>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        $this-&gt;storageHandler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#abb1a03ffd6bfed45245d03bbf527a52d">$storageHandler</a>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a22e3c838d83bc103a81bf87bc561ba95">   78</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a22e3c838d83bc103a81bf87bc561ba95">createNewFields</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">Content</a> $content )</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">foreach</span> ( $content-&gt;fields as $field )</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a516c387a74902d612be88f7ed1248278">createNewField</a>( $field, $content );</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a35f2e3cec2aeb6486ccebc2f626da476">   93</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a35f2e3cec2aeb6486ccebc2f626da476">createExistingFieldsInNewVersion</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">Content</a> $content )</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">foreach</span> ( $content-&gt;fields as $field )</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a19e74876abc63504a8d3330e1da7f0dc">createExistingFieldInNewVersion</a>( $field, $content );</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a516c387a74902d612be88f7ed1248278">  111</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a516c387a74902d612be88f7ed1248278">createNewField</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field, <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">Content</a> $content )</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        $field-&gt;versionNo = $content-&gt;versionInfo-&gt;versionNo;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        $field-&gt;id = $this-&gt;contentGateway-&gt;insertNewField(</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            $content,</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            $field,</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            $this-&gt;mapper-&gt;convertToStorageValue( $field )</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        );</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="comment">// If the storage handler returns true, it means that $field value has been modified</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="comment">// So we need to update it in order to store those modifications</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="comment">// Field converter is called once again via the Mapper</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;storageHandler-&gt;storeFieldData( $content-&gt;versionInfo, $field ) === true )</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            $this-&gt;contentGateway-&gt;updateField(</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                $field,</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                $this-&gt;mapper-&gt;convertToStorageValue( $field )</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            );</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00141"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a19e74876abc63504a8d3330e1da7f0dc">  141</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a19e74876abc63504a8d3330e1da7f0dc">createExistingFieldInNewVersion</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field, <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">Content</a> $content )</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    {</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        $field-&gt;versionNo = $content-&gt;versionInfo-&gt;versionNo;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        $this-&gt;contentGateway-&gt;insertExistingField(</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            $content,</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            $field,</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            $this-&gt;mapper-&gt;convertToStorageValue( $field )</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        );</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="comment">// If the storage handler returns true, it means that $field value has been modified</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="comment">// So we need to update it in order to store those modifications</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="comment">// Field converter is called once again via the Mapper</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;storageHandler-&gt;storeFieldData( $content-&gt;versionInfo, $field ) === true )</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            $this-&gt;contentGateway-&gt;updateField(</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                $field,</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                $this-&gt;mapper-&gt;convertToStorageValue( $field )</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            );</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        }</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a36f72ceece2807273b67d1aae5d6fd92">  170</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a36f72ceece2807273b67d1aae5d6fd92">loadExternalFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">Content</a> $content )</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">foreach</span> ( $content-&gt;fields as $field )</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        {</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            $this-&gt;storageHandler-&gt;getFieldData( $content-&gt;versionInfo, $field );</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        }</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a613da325868af300ae88a5b11ee83cfd">  186</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a613da325868af300ae88a5b11ee83cfd">updateFields</a>( $content, <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1UpdateStruct.html">UpdateStruct</a> $updateStruct )</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">foreach</span> ( $updateStruct-&gt;fields as $field )</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            $field-&gt;versionNo = $content-&gt;versionInfo-&gt;versionNo;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">if</span> ( isset( $field-&gt;id ) )</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            {</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                $this-&gt;contentGateway-&gt;updateField(</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                    $field,</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                    $this-&gt;mapper-&gt;convertToStorageValue( $field )</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                );</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            }</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a516c387a74902d612be88f7ed1248278">createNewField</a>( $field, $content );</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            }</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="comment">// If the storage handler returns true, it means that $field value has been modified</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="comment">// So we need to update it in order to store those modifications</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="comment">// Field converter is called once again via the Mapper</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="keywordflow">if</span> ( $this-&gt;storageHandler-&gt;storeFieldData( $content-&gt;versionInfo, $field ) === true )</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            {</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                $this-&gt;contentGateway-&gt;updateField(</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                    $field,</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                    $this-&gt;mapper-&gt;convertToStorageValue( $field )</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                );</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            }</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        }</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    }</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00224"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ae73b186206b5fa2fe091eda5a65a69cc">  224</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ae73b186206b5fa2fe091eda5a65a69cc">deleteFields</a>( $contentId, <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html#a84b1b1ffdd9ab42ec9750189944f5638">$versionInfo</a> )</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    {</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordflow">foreach</span> ( $this-&gt;contentGateway-&gt;getFieldIdsByType( $contentId, $versionInfo-&gt;versionNo )</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            as $fieldType =&gt; $ids )</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        {</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            $this-&gt;storageHandler-&gt;deleteFieldData( $fieldType, $versionInfo, $ids );</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        }</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        $this-&gt;contentGateway-&gt;deleteFields( $contentId, $versionInfo-&gt;versionNo );</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">eZ\Publish\SPI\Persistence\Content</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use eZ\Publish\SPI\Persistence\Content\Type;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use eZ\Publish\SPI\Persistence\Content\VersionInfo;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use eZ\Publish\SPI\Persistence\Content\Field;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use eZ\Publish\SPI\Persistence\Content\UpdateStruct;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html">eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway</a> as TypeGateway;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html">FieldHandler</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ac724d51a29a828eecc96f46e3a0e41fc">   29</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ac724d51a29a828eecc96f46e3a0e41fc">$contentGateway</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a56e089cab3cf2465ecfa3f2cf49cd1c1">   36</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a56e089cab3cf2465ecfa3f2cf49cd1c1">$typeGateway</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ac15a9fb259493b669a42f66f5e28240d">   43</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ac15a9fb259493b669a42f66f5e28240d">$mapper</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#abb1a03ffd6bfed45245d03bbf527a52d">   50</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#abb1a03ffd6bfed45245d03bbf527a52d">$storageHandler</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a912bc3cef4e1a95dbeb68b15a6f7d3bf">   60</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a912bc3cef4e1a95dbeb68b15a6f7d3bf">__construct</a>(</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html">Gateway</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ac724d51a29a828eecc96f46e3a0e41fc">$contentGateway</a>,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        TypeGateway <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a56e089cab3cf2465ecfa3f2cf49cd1c1">$typeGateway</a>,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Mapper.html">Mapper</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ac15a9fb259493b669a42f66f5e28240d">$mapper</a>,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageHandler.html">StorageHandler</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#abb1a03ffd6bfed45245d03bbf527a52d">$storageHandler</a> )</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        $this-&gt;contentGateway = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ac724d51a29a828eecc96f46e3a0e41fc">$contentGateway</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        $this-&gt;typeGateway = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a56e089cab3cf2465ecfa3f2cf49cd1c1">$typeGateway</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        $this-&gt;mapper = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ac15a9fb259493b669a42f66f5e28240d">$mapper</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        $this-&gt;storageHandler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#abb1a03ffd6bfed45245d03bbf527a52d">$storageHandler</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a22e3c838d83bc103a81bf87bc561ba95">   79</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a22e3c838d83bc103a81bf87bc561ba95">createNewFields</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">Content</a> $content )</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">foreach</span> ( $content-&gt;fields as $field )</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a516c387a74902d612be88f7ed1248278">createNewField</a>( $field, $content );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a35f2e3cec2aeb6486ccebc2f626da476">   94</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a35f2e3cec2aeb6486ccebc2f626da476">createExistingFieldsInNewVersion</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">Content</a> $content )</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">foreach</span> ( $content-&gt;fields as $field )</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a19e74876abc63504a8d3330e1da7f0dc">createExistingFieldInNewVersion</a>( $field, $content );</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a516c387a74902d612be88f7ed1248278">  112</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a516c387a74902d612be88f7ed1248278">createNewField</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field, <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">Content</a> $content )</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        $field-&gt;versionNo = $content-&gt;versionInfo-&gt;versionNo;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        $field-&gt;id = $this-&gt;contentGateway-&gt;insertNewField(</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            $content,</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            $field,</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            $this-&gt;mapper-&gt;convertToStorageValue( $field )</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        );</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="comment">// If the storage handler returns true, it means that $field value has been modified</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="comment">// So we need to update it in order to store those modifications</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="comment">// Field converter is called once again via the Mapper</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;storageHandler-&gt;storeFieldData( $content-&gt;versionInfo, $field ) === true )</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            $this-&gt;contentGateway-&gt;updateField(</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                $field,</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                $this-&gt;mapper-&gt;convertToStorageValue( $field )</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            );</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a19e74876abc63504a8d3330e1da7f0dc">  142</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a19e74876abc63504a8d3330e1da7f0dc">createExistingFieldInNewVersion</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field, <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">Content</a> $content )</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        $field-&gt;versionNo = $content-&gt;versionInfo-&gt;versionNo;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        $this-&gt;contentGateway-&gt;insertExistingField(</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            $content,</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            $field,</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            $this-&gt;mapper-&gt;convertToStorageValue( $field )</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        );</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="comment">// If the storage handler returns true, it means that $field value has been modified</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="comment">// So we need to update it in order to store those modifications</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="comment">// Field converter is called once again via the Mapper</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;storageHandler-&gt;storeFieldData( $content-&gt;versionInfo, $field ) === true )</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            $this-&gt;contentGateway-&gt;updateField(</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                $field,</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                $this-&gt;mapper-&gt;convertToStorageValue( $field )</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            );</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a36f72ceece2807273b67d1aae5d6fd92">  171</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a36f72ceece2807273b67d1aae5d6fd92">loadExternalFieldData</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">Content</a> $content )</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">foreach</span> ( $content-&gt;fields as $field )</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            $this-&gt;storageHandler-&gt;getFieldData( $content-&gt;versionInfo, $field );</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a613da325868af300ae88a5b11ee83cfd">  187</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a613da325868af300ae88a5b11ee83cfd">updateFields</a>( $content, <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1UpdateStruct.html">UpdateStruct</a> $updateStruct )</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">foreach</span> ( $updateStruct-&gt;fields as $field )</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            $field-&gt;versionNo = $content-&gt;versionInfo-&gt;versionNo;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordflow">if</span> ( isset( $field-&gt;id ) )</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            {</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                $this-&gt;contentGateway-&gt;updateField(</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                    $field,</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                    $this-&gt;mapper-&gt;convertToStorageValue( $field )</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                );</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#a516c387a74902d612be88f7ed1248278">createNewField</a>( $field, $content );</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="comment">// If the storage handler returns true, it means that $field value has been modified</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="comment">// So we need to update it in order to store those modifications</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="comment">// Field converter is called once again via the Mapper</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="keywordflow">if</span> ( $this-&gt;storageHandler-&gt;storeFieldData( $content-&gt;versionInfo, $field ) === true )</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                $this-&gt;contentGateway-&gt;updateField(</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                    $field,</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                    $this-&gt;mapper-&gt;convertToStorageValue( $field )</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                );</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ae73b186206b5fa2fe091eda5a65a69cc">  225</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html#ae73b186206b5fa2fe091eda5a65a69cc">deleteFields</a>( $contentId, <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html#a84b1b1ffdd9ab42ec9750189944f5638">$versionInfo</a> )</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordflow">foreach</span> ( $this-&gt;contentGateway-&gt;getFieldIdsByType( $contentId, $versionInfo-&gt;versionNo )</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            as $fieldType =&gt; $ids )</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            $this-&gt;storageHandler-&gt;deleteFieldData( $fieldType, $versionInfo, $ids );</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        $this-&gt;contentGateway-&gt;deleteFields( $contentId, $versionInfo-&gt;versionNo );</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_1015c0c9ea9f233a345f6405868e3e61.html">Persistence</a></li><li class="navelem"><a class="el" href="dir_081400ae94d8719bc7da88bb283ff436.html">Legacy</a></li><li class="navelem"><a class="el" href="dir_62b1c3a52faa834cf05ef76e2ce76582.html">Content</a></li><li class="navelem"><a class="el" href="FieldHandler_8php.html">FieldHandler.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:48 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:10 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

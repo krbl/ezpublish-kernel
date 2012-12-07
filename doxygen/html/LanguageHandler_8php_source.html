@@ -106,80 +106,81 @@ $(document).ready(function(){initNavTree('LanguageHandler_8php_source.html','');
 <div class="contents">
 <a href="LanguageHandler_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\Persistence\InMemory;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use eZ\Publish\SPI\Persistence\Content\Language\Handler as LanguageHandlerInterface,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    eZ\Publish\SPI\Persistence\Content\Language,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    eZ\Publish\SPI\Persistence\Content\Language\CreateStruct,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1NotFoundException.html">eZ\Publish\Core\Base\Exceptions\NotFoundException</a> as NotFound,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    LogicException;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html">LanguageHandler</a> <span class="keyword">implements</span> LanguageHandlerInterface</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a013e307a562c17a30b7473a5648038a4">   25</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a013e307a562c17a30b7473a5648038a4">$handler</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#aafa7fc0c82a1fe45021418f30fb39819">   30</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#aafa7fc0c82a1fe45021418f30fb39819">$backend</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a176fffe235323adafc39c1f1a6822704">   38</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a176fffe235323adafc39c1f1a6822704">__construct</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Handler.html">Handler</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a013e307a562c17a30b7473a5648038a4">$handler</a>, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html">Backend</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#aafa7fc0c82a1fe45021418f30fb39819">$backend</a> )</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        $this-&gt;handler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a013e307a562c17a30b7473a5648038a4">$handler</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        $this-&gt;backend = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#aafa7fc0c82a1fe45021418f30fb39819">$backend</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#abec2ab4f13455c639f959cc020dbaf34">   51</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#abec2ab4f13455c639f959cc020dbaf34">create</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1CreateStruct.html">CreateStruct</a> $struct )</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> $this-&gt;backend-&gt;create( <span class="stringliteral">&#39;Content\\Language&#39;</span>, (array)$struct );</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a100e09d1d4b1e23e4a30c1797f16c13b">   61</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a100e09d1d4b1e23e4a30c1797f16c13b">update</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Language.html">Language</a> $struct )</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        $this-&gt;backend-&gt;update(</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="stringliteral">&#39;Content\\Language&#39;</span>,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            $struct-&gt;id,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            (array)$struct</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        );</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a0439ad3200e9ee6c65cc7d5f260f53f0">   79</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a0439ad3200e9ee6c65cc7d5f260f53f0">load</a>( $id )</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> $this-&gt;backend-&gt;load( <span class="stringliteral">&#39;Content\\Language&#39;</span>, $id );</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#aa3fa03cca1633b7038206701eed86eae">   93</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#aa3fa03cca1633b7038206701eed86eae">loadByLanguageCode</a>( $languageCode )</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        $languages = $this-&gt;backend-&gt;find( <span class="stringliteral">&#39;Content\\Language&#39;</span>, array( <span class="stringliteral">&#39;languageCode&#39;</span> =&gt; $languageCode ) );</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">if</span> ( empty( $languages ) )</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> NotFound( <span class="stringliteral">&#39;Content\\Language&#39;</span>, $languageCode );</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">return</span> $languages[0];</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a714d9f8dcb7be50d44adb99c32ad5170">  107</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a714d9f8dcb7be50d44adb99c32ad5170">loadAll</a>()</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        $languages = array();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">foreach</span> ( $this-&gt;backend-&gt;find( <span class="stringliteral">&#39;Content\\Language&#39;</span>, array() ) as  $language )</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            $languages[$language-&gt;languageCode] = $language;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">return</span> $languages;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#aab14d1a5e01dce69a7d61c0a1556249f">  124</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <span class="keyword">delete</span>( $id )</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        $versions = $this-&gt;backend-&gt;find( <span class="stringliteral">&#39;Content\\VersionInfo&#39;</span>, array( <span class="stringliteral">&#39;languageIds&#39;</span> =&gt; $id ) );</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">if</span> ( !empty( $versions ) )</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> LogicException( <span class="stringliteral">&quot;Deleting language logic error, some content still references that language and therefore it can&#39;t be deleted&quot;</span> );</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        $this-&gt;backend-&gt;delete( <span class="stringliteral">&#39;Content\\Language&#39;</span>, $id );</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use eZ\Publish\SPI\Persistence\Content\Language\Handler as LanguageHandlerInterface;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use eZ\Publish\SPI\Persistence\Content\Language;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use eZ\Publish\SPI\Persistence\Content\Language\CreateStruct;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1NotFoundException.html">eZ\Publish\Core\Base\Exceptions\NotFoundException</a> as NotFound;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use LogicException;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html">LanguageHandler</a> <span class="keyword">implements</span> LanguageHandlerInterface</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a013e307a562c17a30b7473a5648038a4">   26</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a013e307a562c17a30b7473a5648038a4">$handler</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#aafa7fc0c82a1fe45021418f30fb39819">   31</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#aafa7fc0c82a1fe45021418f30fb39819">$backend</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a176fffe235323adafc39c1f1a6822704">   39</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a176fffe235323adafc39c1f1a6822704">__construct</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Handler.html">Handler</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a013e307a562c17a30b7473a5648038a4">$handler</a>, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html">Backend</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#aafa7fc0c82a1fe45021418f30fb39819">$backend</a> )</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        $this-&gt;handler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a013e307a562c17a30b7473a5648038a4">$handler</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        $this-&gt;backend = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#aafa7fc0c82a1fe45021418f30fb39819">$backend</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#abec2ab4f13455c639f959cc020dbaf34">   52</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#abec2ab4f13455c639f959cc020dbaf34">create</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1CreateStruct.html">CreateStruct</a> $struct )</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> $this-&gt;backend-&gt;create( <span class="stringliteral">&#39;Content\\Language&#39;</span>, (array)$struct );</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a100e09d1d4b1e23e4a30c1797f16c13b">   62</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a100e09d1d4b1e23e4a30c1797f16c13b">update</a>( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Language.html">Language</a> $struct )</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        $this-&gt;backend-&gt;update(</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="stringliteral">&#39;Content\\Language&#39;</span>,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            $struct-&gt;id,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            (array)$struct</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a0439ad3200e9ee6c65cc7d5f260f53f0">   80</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a0439ad3200e9ee6c65cc7d5f260f53f0">load</a>( $id )</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> $this-&gt;backend-&gt;load( <span class="stringliteral">&#39;Content\\Language&#39;</span>, $id );</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#aa3fa03cca1633b7038206701eed86eae">   94</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#aa3fa03cca1633b7038206701eed86eae">loadByLanguageCode</a>( $languageCode )</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        $languages = $this-&gt;backend-&gt;find( <span class="stringliteral">&#39;Content\\Language&#39;</span>, array( <span class="stringliteral">&#39;languageCode&#39;</span> =&gt; $languageCode ) );</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">if</span> ( empty( $languages ) )</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> NotFound( <span class="stringliteral">&#39;Content\\Language&#39;</span>, $languageCode );</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> $languages[0];</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a714d9f8dcb7be50d44adb99c32ad5170">  108</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#a714d9f8dcb7be50d44adb99c32ad5170">loadAll</a>()</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        $languages = array();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">foreach</span> ( $this-&gt;backend-&gt;find( <span class="stringliteral">&#39;Content\\Language&#39;</span>, array() ) as  $language )</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            $languages[$language-&gt;languageCode] = $language;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">return</span> $languages;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html#aab14d1a5e01dce69a7d61c0a1556249f">  125</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <span class="keyword">delete</span>( $id )</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        $versions = $this-&gt;backend-&gt;find( <span class="stringliteral">&#39;Content\\VersionInfo&#39;</span>, array( <span class="stringliteral">&#39;languageIds&#39;</span> =&gt; $id ) );</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">if</span> ( !empty( $versions ) )</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> LogicException( <span class="stringliteral">&quot;Deleting language logic error, some content still references that language and therefore it can&#39;t be deleted&quot;</span> );</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        $this-&gt;backend-&gt;delete( <span class="stringliteral">&#39;Content\\Language&#39;</span>, $id );</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_1015c0c9ea9f233a345f6405868e3e61.html">Persistence</a></li><li class="navelem"><a class="el" href="dir_4df564e0180332f890b89108c9c66aa3.html">InMemory</a></li><li class="navelem"><a class="el" href="LanguageHandler_8php.html">LanguageHandler.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:48 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:10 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

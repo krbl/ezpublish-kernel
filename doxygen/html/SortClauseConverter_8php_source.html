@@ -106,85 +106,86 @@ $(document).ready(function(){initNavTree('SortClauseConverter_8php_source.html',
 <div class="contents">
 <a href="SortClauseConverter_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway.html">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query.html">eZ\Publish\API\Repository\Values\Content\Query</a>,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    ezcQuerySelect,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    RuntimeException;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html">SortClauseConverter</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#af4aa6d8a286c106cae5a32b02921ef50">   25</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#af4aa6d8a286c106cae5a32b02921ef50">$handlers</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a6564ccc4be6c47c7112e25f3c33489ea">   32</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a6564ccc4be6c47c7112e25f3c33489ea">$sortColumns</a> = array();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a8e13f6f0eeacb4f2af5bea2730e6e0e7">   41</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html#a1080c05b364ee34e372c8a648a8c244a">__construct</a>( array $handlers = array() )</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        $this-&gt;handlers = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#af4aa6d8a286c106cae5a32b02921ef50">$handlers</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a625bcae9759680b7cfc81f32445fba17">   54</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a625bcae9759680b7cfc81f32445fba17">applySelect</a>( ezcQuerySelect $query, array $sortClauses )</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        $sortColumn = array();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">foreach</span> ( $sortClauses as $nr =&gt; $sortClause )</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">foreach</span> ( $this-&gt;handlers as $handler )</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">if</span> ( $handler-&gt;accept( $sortClause ) )</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    <span class="keywordflow">foreach</span> ( (array)$handler-&gt;applySelect( $query, $sortClause, $nr ) as $column )</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                        $this-&gt;sortColumns[$column] = $sortClause-&gt;direction;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    <span class="keywordflow">continue</span> 2;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException( <span class="stringliteral">&#39;No handler available for sort clause: &#39;</span> . get_class( $sortClause ) );</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a126b6c26ab12dc96dab522bd96188691">   83</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a126b6c26ab12dc96dab522bd96188691">applyJoin</a>( ezcQuerySelect $query, array $sortClauses )</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">foreach</span> ( $sortClauses as $nr =&gt; $sortClause )</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">foreach</span> ( $this-&gt;handlers as $handler )</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="keywordflow">if</span> ( $handler-&gt;accept( $sortClause ) )</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    $handler-&gt;applyJoin( $query, $sortClause, $nr );</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    <span class="keywordflow">continue</span> 2;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException( <span class="stringliteral">&#39;No handler available for sort clause: &#39;</span> . get_class( $sortClause ) );</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a8ede085ec1285f28909ffea26d63f5b3">  108</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a8ede085ec1285f28909ffea26d63f5b3">applyOrderBy</a>( ezcQuerySelect $query, array $sortClauses )</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">foreach</span> ( $this-&gt;sortColumns as $column =&gt; $direction )</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            $query-&gt;orderBy(</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                $column,</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                $direction === <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query.html#a4bcd94044e034245bc817614b3057ede">Query::SORT_ASC</a> ? ezcQuerySelect::ASC : ezcQuerySelect::DESC</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            );</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="comment">// @todo Review needed</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="comment">// The following line was added because without it, loading sub user groups through the Public API</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="comment">// fails with the database error &quot;Unknown column sort_column_0&quot;. The change does not break any</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="comment">// integration tests or legacy persistence tests, but it can break something else, so review is needed</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="comment">// Discussion: https://github.com/ezsystems/ezp-next/commit/8749d0977307858c3e2a7d82f3be90fa21973357#L1R102</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        $this-&gt;sortColumns = array();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query.html">eZ\Publish\API\Repository\Values\Content\Query</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use ezcQuerySelect;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use RuntimeException;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html">SortClauseConverter</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#af4aa6d8a286c106cae5a32b02921ef50">   26</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#af4aa6d8a286c106cae5a32b02921ef50">$handlers</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a6564ccc4be6c47c7112e25f3c33489ea">   33</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a6564ccc4be6c47c7112e25f3c33489ea">$sortColumns</a> = array();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a8e13f6f0eeacb4f2af5bea2730e6e0e7">   42</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html#a1080c05b364ee34e372c8a648a8c244a">__construct</a>( array $handlers = array() )</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        $this-&gt;handlers = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#af4aa6d8a286c106cae5a32b02921ef50">$handlers</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a625bcae9759680b7cfc81f32445fba17">   55</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a625bcae9759680b7cfc81f32445fba17">applySelect</a>( ezcQuerySelect $query, array $sortClauses )</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        $sortColumn = array();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">foreach</span> ( $sortClauses as $nr =&gt; $sortClause )</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">foreach</span> ( $this-&gt;handlers as $handler )</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">if</span> ( $handler-&gt;accept( $sortClause ) )</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    <span class="keywordflow">foreach</span> ( (array)$handler-&gt;applySelect( $query, $sortClause, $nr ) as $column )</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                        $this-&gt;sortColumns[$column] = $sortClause-&gt;direction;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    <span class="keywordflow">continue</span> 2;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException( <span class="stringliteral">&#39;No handler available for sort clause: &#39;</span> . get_class( $sortClause ) );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a126b6c26ab12dc96dab522bd96188691">   84</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a126b6c26ab12dc96dab522bd96188691">applyJoin</a>( ezcQuerySelect $query, array $sortClauses )</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">foreach</span> ( $sortClauses as $nr =&gt; $sortClause )</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">foreach</span> ( $this-&gt;handlers as $handler )</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                <span class="keywordflow">if</span> ( $handler-&gt;accept( $sortClause ) )</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    $handler-&gt;applyJoin( $query, $sortClause, $nr );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    <span class="keywordflow">continue</span> 2;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException( <span class="stringliteral">&#39;No handler available for sort clause: &#39;</span> . get_class( $sortClause ) );</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a8ede085ec1285f28909ffea26d63f5b3">  109</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1SortClauseConverter.html#a8ede085ec1285f28909ffea26d63f5b3">applyOrderBy</a>( ezcQuerySelect $query, array $sortClauses )</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">foreach</span> ( $this-&gt;sortColumns as $column =&gt; $direction )</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            $query-&gt;orderBy(</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                $column,</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                $direction === <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query.html#a4bcd94044e034245bc817614b3057ede">Query::SORT_ASC</a> ? ezcQuerySelect::ASC : ezcQuerySelect::DESC</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            );</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="comment">// @todo Review needed</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="comment">// The following line was added because without it, loading sub user groups through the Public API</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="comment">// fails with the database error &quot;Unknown column sort_column_0&quot;. The change does not break any</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="comment">// integration tests or legacy persistence tests, but it can break something else, so review is needed</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="comment">// Discussion: https://github.com/ezsystems/ezp-next/commit/8749d0977307858c3e2a7d82f3be90fa21973357#L1R102</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        $this-&gt;sortColumns = array();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_1015c0c9ea9f233a345f6405868e3e61.html">Persistence</a></li><li class="navelem"><a class="el" href="dir_081400ae94d8719bc7da88bb283ff436.html">Legacy</a></li><li class="navelem"><a class="el" href="dir_62b1c3a52faa834cf05ef76e2ce76582.html">Content</a></li><li class="navelem"><a class="el" href="dir_f07a7b5d4fe68611c034cce5a42f7b03.html">Search</a></li><li class="navelem"><a class="el" href="dir_9291a949a02258207579d7aadd191c99.html">Gateway</a></li><li class="navelem"><a class="el" href="SortClauseConverter_8php.html">SortClauseConverter.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:49 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:11 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

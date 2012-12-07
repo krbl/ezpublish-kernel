@@ -107,19 +107,19 @@ $(document).ready(function(){initNavTree('ContentExtension_8php_source.html','')
 <a href="ContentExtension_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension.html">   10</a></span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\MVC\Symfony\Templating\Twig\Extension;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html">eZ\Publish\Core\Repository\Values\Content\Content</a>,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Field.html">eZ\Publish\API\Repository\Values\Content\Field</a>,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1VersionInfo.html">eZ\Publish\API\Repository\Values\Content\VersionInfo</a>,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1ConfigResolverInterface.html">eZ\Publish\Core\MVC\ConfigResolverInterface</a>,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    Symfony\Component\DependencyInjection\ContainerInterface,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Twig_Extension,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    Twig_Environment,</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    Twig_Function_Method,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    Twig_Filter_Method,</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    Twig_Template,</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    SplObjectStorage,</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    InvalidArgumentException,</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    LogicException;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html">eZ\Publish\Core\Repository\Values\Content\Content</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Field.html">eZ\Publish\API\Repository\Values\Content\Field</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1VersionInfo.html">eZ\Publish\API\Repository\Values\Content\VersionInfo</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1ConfigResolverInterface.html">eZ\Publish\Core\MVC\ConfigResolverInterface</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use Symfony\Component\DependencyInjection\ContainerInterface;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;use Twig_Extension;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;use Twig_Environment;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;use Twig_Function_Method;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;use Twig_Filter_Method;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;use Twig_Template;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;use SplObjectStorage;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;use InvalidArgumentException;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;use LogicException;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html">ContentExtension</a> <span class="keyword">extends</span> Twig_Extension</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
@@ -183,202 +183,192 @@ $(document).ready(function(){initNavTree('ContentExtension_8php_source.html','')
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&#39;ezpublish.content&#39;</span>;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    }</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae8146798095b76f2339c2ded88601ee5">  161</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae8146798095b76f2339c2ded88601ee5">renderField</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html">Content</a> $content, $fieldIdentifier, array $params = array() )</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a12606fcad9af0161c57ea386f1a8ba0f">  159</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a12606fcad9af0161c57ea386f1a8ba0f">getRenderFieldBlockParameters</a>(</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html">Content</a> $content, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Field.html">Field</a> $field, array $params = array()</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    )</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    {</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="comment">// Merging passed parameters to default ones</span></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        $params += array(</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="stringliteral">&#39;lang&#39;</span> =&gt; null,</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="stringliteral">&#39;editMode&#39;</span> =&gt; <span class="keyword">false</span>,</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="stringliteral">&#39;parameters&#39;</span> =&gt; array(), <span class="comment">// parameters dedicated to template processing</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="stringliteral">&#39;attr&#39;</span> =&gt; array() <span class="comment">// attributes to add on the enclosing HTML tags</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        );</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        $field = $content-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html#ae7bf24a7b779daa213ed40423c905af8">getField</a>( $fieldIdentifier, $params[<span class="stringliteral">&#39;lang&#39;</span>] );</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">if</span> ( !$field instanceof <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Field.html">Field</a> )</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException( <span class="stringliteral">&quot;Invalid field identifier &#39;$fieldIdentifier&#39; for content #{$content-&gt;contentInfo-&gt;id}&quot;</span> );</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        $versionInfo = $content-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html#a1b3756a8cea10846c4713cc05b0f506c">getVersionInfo</a>();</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        $contentInfo = $versionInfo-&gt;getContentInfo();</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        $contentType = $contentInfo-&gt;getContentType();</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="comment">// Adding Field, FieldSettings and ContentInfo objects to</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="comment">// parameters to be passed to the template</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        $params += array(</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="stringliteral">&#39;field&#39;</span>             =&gt; $field,</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="stringliteral">&#39;contentInfo&#39;</span>       =&gt; $contentInfo,</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="stringliteral">&#39;versionInfo&#39;</span>       =&gt; $versionInfo,</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="stringliteral">&#39;fieldSettings&#39;</span>     =&gt; $contentType-&gt;getFieldDefinition( $fieldIdentifier )-&gt;getFieldSettings()</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        );</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="comment">// Ensure that not edit metadata has been injected from the template</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        unset( $params[<span class="stringliteral">&#39;editMeta&#39;</span>] );</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">if</span> ( $params[<span class="stringliteral">&#39;editMode&#39;</span>] ?: $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a29a040af98e591133896bb12488a45fb">isInEditMode</a>() )</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="stringliteral">&#39;parameters&#39;</span> =&gt; array(), <span class="comment">// parameters dedicated to template processing</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="stringliteral">&#39;attr&#39;</span> =&gt; array() <span class="comment">// attributes to add on the enclosing HTML tags</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        );</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        $versionInfo = $content-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html#a1b3756a8cea10846c4713cc05b0f506c">getVersionInfo</a>();</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        $contentInfo = $versionInfo-&gt;getContentInfo();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        $contentType = $contentInfo-&gt;getContentType();</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="comment">// Adding Field, FieldSettings and ContentInfo objects to</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="comment">// parameters to be passed to the template</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        $params += array(</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="stringliteral">&#39;field&#39;</span> =&gt; $field,</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="stringliteral">&#39;contentInfo&#39;</span> =&gt; $contentInfo,</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="stringliteral">&#39;versionInfo&#39;</span> =&gt; $versionInfo,</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="stringliteral">&#39;fieldSettings&#39;</span> =&gt; $contentType</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                -&gt;getFieldDefinition( $field-&gt;fieldDefIdentifier )</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                -&gt;getFieldSettings()</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        );</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="comment">// make sure we can easily add class=&quot;&lt;fieldtypeidentifier&gt;-field&quot; to the</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="comment">// generated HTML</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">if</span> ( isset( $params[<span class="stringliteral">&#39;attr&#39;</span>][<span class="stringliteral">&#39;class&#39;</span>] ) )</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            $params[<span class="stringliteral">&#39;attr&#39;</span>][<span class="stringliteral">&#39;class&#39;</span>] .= <span class="charliteral">&#39; &#39;</span> . $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a2bdd181b6f7166dadac442c11edab319">getFieldTypeIdentifier</a>( $content, $field ) . <span class="stringliteral">&#39;-field&#39;</span>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        {</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            $params += array(</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                <span class="stringliteral">&#39;editMeta&#39;</span> =&gt; $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a00de6f69601cf1f5e3ed1de2f88d8112">getEditMetadata</a>( $content, $field )</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            );</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            $params[<span class="stringliteral">&#39;attr&#39;</span>][<span class="stringliteral">&#39;class&#39;</span>] = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a2bdd181b6f7166dadac442c11edab319">getFieldTypeIdentifier</a>( $content, $field ) . <span class="stringliteral">&#39;-field&#39;</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">return</span> $params;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="comment">// make we can easily add class=&quot;&lt;fieldtypeidentifier&gt;-field&quot; to the</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="comment">// generated HTML</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">if</span> ( isset( $params[<span class="stringliteral">&#39;attr&#39;</span>][<span class="stringliteral">&#39;class&#39;</span>] ) )</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            $params[<span class="stringliteral">&#39;attr&#39;</span>][<span class="stringliteral">&#39;class&#39;</span>] .= <span class="charliteral">&#39; &#39;</span> . $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a2bdd181b6f7166dadac442c11edab319">getFieldTypeIdentifier</a>( $content, $field ) . <span class="stringliteral">&#39;-field&#39;</span>;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        }</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        {</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            $params[<span class="stringliteral">&#39;attr&#39;</span>][<span class="stringliteral">&#39;class&#39;</span>] = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a2bdd181b6f7166dadac442c11edab319">getFieldTypeIdentifier</a>( $content, $field ) . <span class="stringliteral">&#39;-field&#39;</span>;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        }</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        $localTemplate = null;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">if</span> ( isset( $params[<span class="stringliteral">&#39;template&#39;</span>] ) )</div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae8146798095b76f2339c2ded88601ee5">  205</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae8146798095b76f2339c2ded88601ee5">renderField</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html">Content</a> $content, $fieldIdentifier, array $params = array() )</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        $lang = null;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">if</span> ( isset( $params[<span class="stringliteral">&#39;lang&#39;</span>] ) )</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        {</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="comment">// local override of the template</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="comment">// this template is put on the top the templates stack</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            $localTemplate = $params[<span class="stringliteral">&#39;template&#39;</span>];</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            unset( $params[<span class="stringliteral">&#39;template&#39;</span>] );</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        }</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="comment">// Getting instance of Twig_Template that will be used to render blocks</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;<span class="keyword">template</span> instanceof Twig_Template )</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        {</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            $tpl = reset( $this-&gt;resources );</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            $this-&gt;<span class="keyword">template</span> = $this-&gt;environment-&gt;loadTemplate( $tpl[<span class="stringliteral">&#39;template&#39;</span>] );</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<span class="keyword">template</span>-&gt;renderBlock(</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae17a1400836c72ef7ff299ead0c3ad29">getFieldBlockName</a>( $content, $field ),</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            $params,</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a0f9af516c3e41cf157565dc6eed19978">getBlocksByField</a>( $content, $field, $localTemplate )</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        );</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            $lang = $params[<span class="stringliteral">&#39;lang&#39;</span>];</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            unset( $params[<span class="stringliteral">&#39;lang&#39;</span>] );</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        $field = $content-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html#ae7bf24a7b779daa213ed40423c905af8">getField</a>( $fieldIdentifier, $lang );</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordflow">if</span> ( !$field instanceof <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Field.html">Field</a> )</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                <span class="stringliteral">&quot;Invalid field identifier &#39;$fieldIdentifier&#39; for content #{$content-&gt;contentInfo-&gt;id}&quot;</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            );</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        $localTemplate = null;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">if</span> ( isset( $params[<span class="stringliteral">&#39;template&#39;</span>] ) )</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="comment">// local override of the template</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="comment">// this template is put on the top the templates stack</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            $localTemplate = $params[<span class="stringliteral">&#39;template&#39;</span>];</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            unset( $params[<span class="stringliteral">&#39;template&#39;</span>] );</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        }</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
-<div class="line"><a name="l00233"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae3475536a0ecb3feab7f8ac2b1788e33">  233</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae3475536a0ecb3feab7f8ac2b1788e33">getXmlTextConverter</a>()</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    {</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordflow">if</span> ( !isset( $this-&gt;xmlTextConverter ) )</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            $this-&gt;xmlTextConverter = $this-&gt;container-&gt;get( <span class="stringliteral">&quot;ezpublish.fieldType.ezxmltext.converter.html5&quot;</span> );</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#af9115025ef4c0f0aab0ba5c09678e7df">$this-&gt;xmlTextConverter</a>;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    }</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
-<div class="line"><a name="l00248"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#af7efdbedd66416415f5b5676e4226b9e">  248</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#af7efdbedd66416415f5b5676e4226b9e">xmltextToHtml5</a>( $xmlData )</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    {</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae3475536a0ecb3feab7f8ac2b1788e33">getXmlTextConverter</a>()-&gt;convert( $xmlData );</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    }</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#aa484d70471cdb305b3c14fed62faaa2f">  262</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#aa484d70471cdb305b3c14fed62faaa2f">getImageVariation</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Field.html">Field</a> $field, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, $variationName )</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    {</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordflow">if</span> ( !isset( $this-&gt;imageVariationService ) )</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            $this-&gt;imageVariationService = $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish.fieldType.ezimage.variation_service&#39;</span> );</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordflow">return</span> $this-&gt;imageVariationService-&gt;getVariation( $field, $versionInfo, $variationName );</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    }</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
-<div class="line"><a name="l00279"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a612bf4e203398b5646a9c01d089a792b">  279</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a612bf4e203398b5646a9c01d089a792b">searchBlock</a>( $blockName, Twig_Template $tpl )</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    {</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="comment">// Current template might have parents, so we need to loop against</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="comment">// them to find a matching block</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">do</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        {</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordflow">foreach</span> ( $tpl-&gt;getBlocks() as $name =&gt; $block )</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                <span class="keywordflow">if</span> ( $name === $blockName )</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                    <span class="keywordflow">return</span> $block;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        }</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordflow">while</span> ( ( $tpl = $tpl-&gt;getParent( array() ) ) instanceof Twig_Template );</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">return</span> null;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    }</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
-<div class="line"><a name="l00312"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a0f9af516c3e41cf157565dc6eed19978">  312</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a0f9af516c3e41cf157565dc6eed19978">getBlocksByField</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html">Content</a> $content, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Field.html">Field</a> $field, $localTemplate = null )</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    {</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        $fieldBlockName = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae17a1400836c72ef7ff299ead0c3ad29">getFieldBlockName</a>( $content, $field );</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordflow">if</span> ( $localTemplate !== null )</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        {</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            $tpl = $this-&gt;environment-&gt;loadTemplate( $localTemplate );</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            $block = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a612bf4e203398b5646a9c01d089a792b">searchBlock</a>( $fieldBlockName, $tpl );</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            <span class="keywordflow">if</span> ( $block !== null )</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            {</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                <span class="keywordflow">return</span> array( $fieldBlockName =&gt; $block );</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            }</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        }</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;blocks-&gt;contains( $field ) )</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <span class="keywordflow">return</span> $this-&gt;blocks[$field];</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="comment">// Looping against available resources to find template blocks for $field</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a4f4d953ab0fa5459b3ccb9b324425fab">$blocks</a> = array();</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keywordflow">foreach</span> ( $this-&gt;resources as &amp;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ac40c72bb947c9dd3ab4cfe57463d28ac">$template</a> )</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        {</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            <span class="keywordflow">if</span> ( !$template instanceof Twig_Template )</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                $template = $this-&gt;environment-&gt;loadTemplate( $template[<span class="stringliteral">&#39;template&#39;</span>] );</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            $tpl = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ac40c72bb947c9dd3ab4cfe57463d28ac">$template</a>;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            $block = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a612bf4e203398b5646a9c01d089a792b">searchBlock</a>( $fieldBlockName, $tpl );</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            <span class="keywordflow">if</span> ( $block !== null )</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            {</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a4f4d953ab0fa5459b3ccb9b324425fab">$blocks</a>[$fieldBlockName] = $block;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            }</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        }</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="keywordflow">if</span> ( empty( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a4f4d953ab0fa5459b3ccb9b324425fab">$blocks</a> ) )</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> LogicException( <span class="stringliteral">&quot;Cannot find &#39;$fieldBlockName&#39; template block field type.&quot;</span> );</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        $this-&gt;blocks-&gt;attach( $field, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a4f4d953ab0fa5459b3ccb9b324425fab">$blocks</a> );</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a4f4d953ab0fa5459b3ccb9b324425fab">$blocks</a>;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        $params = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a12606fcad9af0161c57ea386f1a8ba0f">getRenderFieldBlockParameters</a>( $content, $field, $params );</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="comment">// Getting instance of Twig_Template that will be used to render blocks</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;<span class="keyword">template</span> instanceof Twig_Template )</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            $tpl = reset( $this-&gt;resources );</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            $this-&gt;<span class="keyword">template</span> = $this-&gt;environment-&gt;loadTemplate( $tpl[<span class="stringliteral">&#39;template&#39;</span>] );</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<span class="keyword">template</span>-&gt;renderBlock(</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae17a1400836c72ef7ff299ead0c3ad29">getFieldBlockName</a>( $content, $field ),</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            $params,</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a0f9af516c3e41cf157565dc6eed19978">getBlocksByField</a>( $content, $field, $localTemplate )</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        );</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae3475536a0ecb3feab7f8ac2b1788e33">  249</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae3475536a0ecb3feab7f8ac2b1788e33">getXmlTextConverter</a>()</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordflow">if</span> ( !isset( $this-&gt;xmlTextConverter ) )</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            $this-&gt;xmlTextConverter = $this-&gt;container-&gt;get( <span class="stringliteral">&quot;ezpublish.fieldType.ezxmltext.converter.html5&quot;</span> );</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#af9115025ef4c0f0aab0ba5c09678e7df">$this-&gt;xmlTextConverter</a>;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#af7efdbedd66416415f5b5676e4226b9e">  264</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#af7efdbedd66416415f5b5676e4226b9e">xmltextToHtml5</a>( $xmlData )</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    {</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae3475536a0ecb3feab7f8ac2b1788e33">getXmlTextConverter</a>()-&gt;convert( $xmlData );</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#aa484d70471cdb305b3c14fed62faaa2f">  278</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#aa484d70471cdb305b3c14fed62faaa2f">getImageVariation</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Field.html">Field</a> $field, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, $variationName )</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">if</span> ( !isset( $this-&gt;imageVariationService ) )</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            $this-&gt;imageVariationService = $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish.fieldType.ezimage.variation_service&#39;</span> );</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">return</span> $this-&gt;imageVariationService-&gt;getVariation( $field, $versionInfo, $variationName );</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00295"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a612bf4e203398b5646a9c01d089a792b">  295</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a612bf4e203398b5646a9c01d089a792b">searchBlock</a>( $blockName, Twig_Template $tpl )</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="comment">// Current template might have parents, so we need to loop against</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="comment">// them to find a matching block</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        {</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            <span class="keywordflow">foreach</span> ( $tpl-&gt;getBlocks() as $name =&gt; $block )</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            {</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                <span class="keywordflow">if</span> ( $name === $blockName )</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                    <span class="keywordflow">return</span> $block;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordflow">while</span> ( ( $tpl = $tpl-&gt;getParent( array() ) ) instanceof Twig_Template );</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
+<div class="line"><a name="l00328"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a0f9af516c3e41cf157565dc6eed19978">  328</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a0f9af516c3e41cf157565dc6eed19978">getBlocksByField</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html">Content</a> $content, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Field.html">Field</a> $field, $localTemplate = null )</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        $fieldBlockName = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae17a1400836c72ef7ff299ead0c3ad29">getFieldBlockName</a>( $content, $field );</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keywordflow">if</span> ( $localTemplate !== null )</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            $tpl = $this-&gt;environment-&gt;loadTemplate( $localTemplate );</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            $block = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a612bf4e203398b5646a9c01d089a792b">searchBlock</a>( $fieldBlockName, $tpl );</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            <span class="keywordflow">if</span> ( $block !== null )</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            {</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                <span class="keywordflow">return</span> array( $fieldBlockName =&gt; $block );</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;blocks-&gt;contains( $field ) )</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            <span class="keywordflow">return</span> $this-&gt;blocks[$field];</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="comment">// Looping against available resources to find template blocks for $field</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a4f4d953ab0fa5459b3ccb9b324425fab">$blocks</a> = array();</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        <span class="keywordflow">foreach</span> ( $this-&gt;resources as &amp;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ac40c72bb947c9dd3ab4cfe57463d28ac">$template</a> )</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        {</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            <span class="keywordflow">if</span> ( !$template instanceof Twig_Template )</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                $template = $this-&gt;environment-&gt;loadTemplate( $template[<span class="stringliteral">&#39;template&#39;</span>] );</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            $tpl = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ac40c72bb947c9dd3ab4cfe57463d28ac">$template</a>;</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
-<div class="line"><a name="l00361"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae17a1400836c72ef7ff299ead0c3ad29">  361</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae17a1400836c72ef7ff299ead0c3ad29">getFieldBlockName</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html">Content</a> $content, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Field.html">Field</a> $field )</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    {</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a2bdd181b6f7166dadac442c11edab319">getFieldTypeIdentifier</a>( $content, $field ) . <span class="stringliteral">&#39;_field&#39;</span>;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    }</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            $block = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a612bf4e203398b5646a9c01d089a792b">searchBlock</a>( $fieldBlockName, $tpl );</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            <span class="keywordflow">if</span> ( $block !== null )</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            {</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a4f4d953ab0fa5459b3ccb9b324425fab">$blocks</a>[$fieldBlockName] = $block;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            }</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keywordflow">if</span> ( empty( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a4f4d953ab0fa5459b3ccb9b324425fab">$blocks</a> ) )</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> LogicException( <span class="stringliteral">&quot;Cannot find &#39;$fieldBlockName&#39; template block field type.&quot;</span> );</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        $this-&gt;blocks-&gt;attach( $field, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a4f4d953ab0fa5459b3ccb9b324425fab">$blocks</a> );</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
-<div class="line"><a name="l00374"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a2bdd181b6f7166dadac442c11edab319">  374</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a2bdd181b6f7166dadac442c11edab319">getFieldTypeIdentifier</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html">Content</a> $content, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Field.html">Field</a> $field )</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    {</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="keywordflow">if</span> ( !isset( $this-&gt;fieldTypeIdentifiers[$field-&gt;fieldDefIdentifier] ) )</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        {</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            $this-&gt;fieldTypeIdentifiers[$field-&gt;fieldDefIdentifier] = $content</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                -&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html#a1b3756a8cea10846c4713cc05b0f506c">getVersionInfo</a>()</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                -&gt;getContentInfo()</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                -&gt;getContentType()</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                -&gt;getFieldDefinition( $field-&gt;fieldDefIdentifier )</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                -&gt;fieldTypeIdentifier;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        }</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <span class="keywordflow">return</span> $this-&gt;fieldTypeIdentifiers[$field-&gt;fieldDefIdentifier];</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    }</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;</div>
-<div class="line"><a name="l00396"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a29a040af98e591133896bb12488a45fb">  396</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a29a040af98e591133896bb12488a45fb">isInEditMode</a>()</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    {</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    }</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
-<div class="line"><a name="l00413"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a00de6f69601cf1f5e3ed1de2f88d8112">  413</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a00de6f69601cf1f5e3ed1de2f88d8112">getEditMetadata</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html">Content</a> $content, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Field.html">Field</a> $field )</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    {</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        $versionInfo = $content-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html#a1b3756a8cea10846c4713cc05b0f506c">getVersionInfo</a>();</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <span class="keywordflow">return</span> array(</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;            <span class="stringliteral">&#39;field-id&#39;</span>                  =&gt; $field-&gt;id,</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            <span class="stringliteral">&#39;field-identifier&#39;</span>          =&gt; $field-&gt;fieldDefIdentifier,</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            <span class="stringliteral">&#39;field-type-identifier&#39;</span>     =&gt; $this-&gt;getFieldTypeIdentifier( $content, $field ),</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            <span class="stringliteral">&#39;content-id&#39;</span>                =&gt; $versionInfo-&gt;getContentInfo()-&gt;id,</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            <span class="stringliteral">&#39;version&#39;</span>                   =&gt; $versionInfo-&gt;versionNo,</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;            <span class="stringliteral">&#39;locale-code&#39;</span>               =&gt; $field-&gt;languageCode</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        );</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    }</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;}</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a4f4d953ab0fa5459b3ccb9b324425fab">$blocks</a>;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    }</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;</div>
+<div class="line"><a name="l00377"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae17a1400836c72ef7ff299ead0c3ad29">  377</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#ae17a1400836c72ef7ff299ead0c3ad29">getFieldBlockName</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html">Content</a> $content, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Field.html">Field</a> $field )</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    {</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a2bdd181b6f7166dadac442c11edab319">getFieldTypeIdentifier</a>( $content, $field ) . <span class="stringliteral">&#39;_field&#39;</span>;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    }</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
+<div class="line"><a name="l00390"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a2bdd181b6f7166dadac442c11edab319">  390</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html#a2bdd181b6f7166dadac442c11edab319">getFieldTypeIdentifier</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html">Content</a> $content, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Field.html">Field</a> $field )</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    {</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        <span class="keywordflow">if</span> ( !isset( $this-&gt;fieldTypeIdentifiers[$field-&gt;fieldDefIdentifier] ) )</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        {</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            $this-&gt;fieldTypeIdentifiers[$field-&gt;fieldDefIdentifier] = $content</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                -&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html#a1b3756a8cea10846c4713cc05b0f506c">getVersionInfo</a>()</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                -&gt;getContentInfo()</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                -&gt;getContentType()</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                -&gt;getFieldDefinition( $field-&gt;fieldDefIdentifier )</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                -&gt;fieldTypeIdentifier;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        }</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keywordflow">return</span> $this-&gt;fieldTypeIdentifiers[$field-&gt;fieldDefIdentifier];</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    }</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_3f2bbbda4a8cf240a23a45721a8bf194.html">MVC</a></li><li class="navelem"><a class="el" href="dir_2823f14ad24d7d09ba467b2c5eb8153a.html">Symfony</a></li><li class="navelem"><a class="el" href="dir_457631d1010f903fa738aad5eb35125d.html">Templating</a></li><li class="navelem"><a class="el" href="dir_abfd652426fd95b8d9aba350d54d975b.html">Twig</a></li><li class="navelem"><a class="el" href="dir_f6ae31f7947f0077c4dae744610a666b.html">Extension</a></li><li class="navelem"><a class="el" href="ContentExtension_8php.html">ContentExtension.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:48 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:10 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

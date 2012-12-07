@@ -107,9 +107,9 @@ $(document).ready(function(){initNavTree('NameSchemaService_8php_source.html',''
 <a href="NameSchemaService_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\Repository;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html">eZ\Publish\API\Repository\Repository</a> as RepositoryInterface,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html">eZ\Publish\API\Repository\Values\Content\Content</a>,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">eZ\Publish\API\Repository\Values\ContentType\ContentType</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html">eZ\Publish\API\Repository\Repository</a> as RepositoryInterface;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html">eZ\Publish\API\Repository\Values\Content\Content</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">eZ\Publish\API\Repository\Values\ContentType\ContentType</a>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html">NameSchemaService</a></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
@@ -122,151 +122,151 @@ $(document).ready(function(){initNavTree('NameSchemaService_8php_source.html',''
 <div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#aa8e0e55b091ffff859827d78e7b96a1d">   67</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#aa8e0e55b091ffff859827d78e7b96a1d">__construct</a>( RepositoryInterface <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a7128c4368576d4edac4f0c8a34a56db0">$repository</a>, array <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#aa2a254b19ca8b1fe27ff3842b1a00c81">$settings</a> = array() )</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        $this-&gt;repository = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a7128c4368576d4edac4f0c8a34a56db0">$repository</a>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#aa2a254b19ca8b1fe27ff3842b1a00c81">$settings</a> + array(<span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="stringliteral">&#39;limit&#39;</span> =&gt; 150,</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="stringliteral">&#39;sequence&#39;</span> =&gt; <span class="stringliteral">&#39;...&#39;</span>,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        );</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a0ab7b9d410cf2d5b0dbb02d3cb5fa463">   83</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a0ab7b9d410cf2d5b0dbb02d3cb5fa463">resolveUrlAliasSchema</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html">Content</a> $content )</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a6361f0a5d6c6f565a454d33d7177c59e">resolve</a>(</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            strlen( $content-&gt;contentType-&gt;urlAliasSchema ) === 0</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                ? $content-&gt;contentType-&gt;nameSchema</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                : $content-&gt;contentType-&gt;urlAliasSchema,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            $content-&gt;contentType,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            $content-&gt;fields,</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            $content-&gt;versionInfo-&gt;languageCodes</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        );</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a16d0189f8c9f1e6637f22e88efeed958">  104</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a16d0189f8c9f1e6637f22e88efeed958">resolveNameSchema</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html">Content</a> $content, array $fieldMap = array(), array $languageCodes = array() )</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        $languageCodes = $languageCodes ?: $content-&gt;versionInfo-&gt;languageCodes;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a6361f0a5d6c6f565a454d33d7177c59e">resolve</a>(</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            $content-&gt;contentType-&gt;nameSchema,</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            $content-&gt;contentType,</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            $this-&gt;mergeFieldMap(</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                $content,</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                $fieldMap,</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                $languageCodes</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            ),</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            $languageCodes</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        );</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ab7ccfbb246fdc119a86e2031886dd9e5">  128</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ab7ccfbb246fdc119a86e2031886dd9e5">mergeFieldMap</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html">Content</a> $content, array $fieldMap, array $languageCodes )</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">if</span> ( empty( $fieldMap ) )</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        {</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">return</span> $content-&gt;fields;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        }</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        $mergedFieldMap = array();</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">foreach</span> ( $content-&gt;fields as $fieldIdentifier =&gt; $fieldLanguageMap )</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        {</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">foreach</span> ( $languageCodes as $languageCode )</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                $mergedFieldMap[$fieldIdentifier][$languageCode] = isset( $fieldMap[$fieldIdentifier][$languageCode] )</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                    ? $fieldMap[$fieldIdentifier][$languageCode]</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                    : $fieldLanguageMap[$languageCode];</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        }</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">return</span> $mergedFieldMap;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    }</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a6361f0a5d6c6f565a454d33d7177c59e">  160</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a6361f0a5d6c6f565a454d33d7177c59e">resolve</a>( $nameSchema, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">ContentType</a> $contentType, array $fieldMap, array $languageCodes )</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        list( $filteredNameSchema, $groupLookupTable ) = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ab81b3b6b13939eb7a9b0e0eb0fe48e50">filterNameSchema</a>( $nameSchema );</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        $tokens = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ae0eb4318b9a33d9d5ce44a7a5e7bd3af">extractTokens</a>( $filteredNameSchema );</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        $schemaIdentifiers = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ad8defa90ca59baa9301285cfe82b587c">getIdentifiers</a>( $nameSchema );</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        $names = array();</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">foreach</span> ( $languageCodes as $languageCode )</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        {</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="comment">// Fetch titles for language code</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            $titles = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#af9f1becf0e96e58b41514673c7b2fb28">getFieldTitles</a>( $schemaIdentifiers, $contentType, $fieldMap, $languageCode );</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            $name = $filteredNameSchema;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="comment">// Replace tokens with real values</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">foreach</span> ( $tokens as $token )</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                $string = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a039e98da0dcc7dfd9a281f8a9cb29752">resolveToken</a>( $token, $titles, $groupLookupTable );</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                $name = str_replace( $token, $string, $name );</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            }</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="comment">// Make sure length is not longer then $limit unless it&#39;s 0</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordflow">if</span> ( $this-&gt;settings[<span class="stringliteral">&quot;limit&quot;</span>] &amp;&amp; strlen( $name ) &gt; $this-&gt;settings[<span class="stringliteral">&quot;limit&quot;</span>] )</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            {</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                $name = rtrim( substr( $name, 0, $this-&gt;settings[<span class="stringliteral">&quot;limit&quot;</span>] - strlen( $this-&gt;settings[<span class="stringliteral">&quot;sequence&quot;</span>] ) ) ) . $this-&gt;settings[<span class="stringliteral">&quot;sequence&quot;</span>];</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            }</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            $names[$languageCode] = $name;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        }</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">return</span> $names;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#af9f1becf0e96e58b41514673c7b2fb28">  206</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#af9f1becf0e96e58b41514673c7b2fb28">getFieldTitles</a>( array $schemaIdentifiers, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">ContentType</a> $contentType, array $fieldMap, $languageCode )</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    {</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        $fieldTitles = array();</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">foreach</span> ( $schemaIdentifiers as $fieldDefinitionIdentifier )</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        {</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="keywordflow">if</span> ( isset( $fieldMap[$fieldDefinitionIdentifier][$languageCode] ) )</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            {</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                $fieldDefinition = $contentType-&gt;<a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html#ae985c774ac8ceaba8fe142fde01fb1c9">getFieldDefinition</a>( $fieldDefinitionIdentifier );</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                $fieldType = $this-&gt;repository-&gt;getFieldTypeService()-&gt;getFieldType(</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                    $fieldDefinition-&gt;fieldTypeIdentifier</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                );</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                $fieldTitles[$fieldDefinitionIdentifier] = $fieldType-&gt;getName(</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                    $fieldMap[$fieldDefinitionIdentifier][$languageCode]</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                );</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        }</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">return</span> $fieldTitles;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
-<div class="line"><a name="l00239"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ae0eb4318b9a33d9d5ce44a7a5e7bd3af">  239</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ae0eb4318b9a33d9d5ce44a7a5e7bd3af">extractTokens</a>( $nameSchema )</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    {</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        preg_match_all(</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="stringliteral">&quot;|&lt;([^&gt;]+)&gt;|U&quot;</span>,</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            $nameSchema,</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            $tokenArray</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        );</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keywordflow">return</span> $tokenArray[0];</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    }</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a039e98da0dcc7dfd9a281f8a9cb29752">  262</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a039e98da0dcc7dfd9a281f8a9cb29752">resolveToken</a>( $token, $titles, $groupLookupTable )</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    {</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        $replaceString = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        $tokenParts = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a22f8e30abd565c092d8bfde2aa06d91d">tokenParts</a>( $token );</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordflow">foreach</span> ( $tokenParts as $tokenPart )</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        {</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="keywordflow">if</span> ( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ac2e02bbd344dc2b4b8328ab764baa3d2">isTokenGroup</a>( $tokenPart ) )</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            {</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                $replaceString = $groupLookupTable[$tokenPart];</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                $groupTokenArray = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ae0eb4318b9a33d9d5ce44a7a5e7bd3af">extractTokens</a>( $replaceString );</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                <span class="keywordflow">foreach</span> ( $groupTokenArray as $groupToken )</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                {</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                    $replaceString = str_replace(</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                        $groupToken,</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a039e98da0dcc7dfd9a281f8a9cb29752">resolveToken</a>(</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                            $groupToken,</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                            $titles,</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                            $groupLookupTable</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                        ),</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                        $replaceString</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                    );</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                }</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#aa2a254b19ca8b1fe27ff3842b1a00c81">$settings</a> + array(</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="stringliteral">&#39;limit&#39;</span> =&gt; 150,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="stringliteral">&#39;sequence&#39;</span> =&gt; <span class="stringliteral">&#39;...&#39;</span>,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a0ab7b9d410cf2d5b0dbb02d3cb5fa463">   84</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a0ab7b9d410cf2d5b0dbb02d3cb5fa463">resolveUrlAliasSchema</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html">Content</a> $content )</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a6361f0a5d6c6f565a454d33d7177c59e">resolve</a>(</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            strlen( $content-&gt;contentType-&gt;urlAliasSchema ) === 0 ?</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                $content-&gt;contentType-&gt;nameSchema :</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                $content-&gt;contentType-&gt;urlAliasSchema,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            $content-&gt;contentType,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            $content-&gt;fields,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            $content-&gt;versionInfo-&gt;languageCodes</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        );</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a16d0189f8c9f1e6637f22e88efeed958">  105</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a16d0189f8c9f1e6637f22e88efeed958">resolveNameSchema</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html">Content</a> $content, array $fieldMap = array(), array $languageCodes = array() )</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        $languageCodes = $languageCodes ?: $content-&gt;versionInfo-&gt;languageCodes;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a6361f0a5d6c6f565a454d33d7177c59e">resolve</a>(</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            $content-&gt;contentType-&gt;nameSchema,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            $content-&gt;contentType,</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            $this-&gt;mergeFieldMap(</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                $content,</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                $fieldMap,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                $languageCodes</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            ),</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            $languageCodes</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        );</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ab7ccfbb246fdc119a86e2031886dd9e5">  129</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ab7ccfbb246fdc119a86e2031886dd9e5">mergeFieldMap</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html">Content</a> $content, array $fieldMap, array $languageCodes )</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">if</span> ( empty( $fieldMap ) )</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordflow">return</span> $content-&gt;fields;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        $mergedFieldMap = array();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">foreach</span> ( $content-&gt;fields as $fieldIdentifier =&gt; $fieldLanguageMap )</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordflow">foreach</span> ( $languageCodes as $languageCode )</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                $mergedFieldMap[$fieldIdentifier][$languageCode] = isset( $fieldMap[$fieldIdentifier][$languageCode] )</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                    ? $fieldMap[$fieldIdentifier][$languageCode]</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                    : $fieldLanguageMap[$languageCode];</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">return</span> $mergedFieldMap;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a6361f0a5d6c6f565a454d33d7177c59e">  161</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a6361f0a5d6c6f565a454d33d7177c59e">resolve</a>( $nameSchema, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">ContentType</a> $contentType, array $fieldMap, array $languageCodes )</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        list( $filteredNameSchema, $groupLookupTable ) = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ab81b3b6b13939eb7a9b0e0eb0fe48e50">filterNameSchema</a>( $nameSchema );</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        $tokens = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ae0eb4318b9a33d9d5ce44a7a5e7bd3af">extractTokens</a>( $filteredNameSchema );</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        $schemaIdentifiers = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ad8defa90ca59baa9301285cfe82b587c">getIdentifiers</a>( $nameSchema );</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        $names = array();</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">foreach</span> ( $languageCodes as $languageCode )</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="comment">// Fetch titles for language code</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            $titles = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#af9f1becf0e96e58b41514673c7b2fb28">getFieldTitles</a>( $schemaIdentifiers, $contentType, $fieldMap, $languageCode );</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            $name = $filteredNameSchema;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="comment">// Replace tokens with real values</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="keywordflow">foreach</span> ( $tokens as $token )</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                $string = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a039e98da0dcc7dfd9a281f8a9cb29752">resolveToken</a>( $token, $titles, $groupLookupTable );</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                $name = str_replace( $token, $string, $name );</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="comment">// Make sure length is not longer then $limit unless it&#39;s 0</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keywordflow">if</span> ( $this-&gt;settings[<span class="stringliteral">&quot;limit&quot;</span>] &amp;&amp; strlen( $name ) &gt; $this-&gt;settings[<span class="stringliteral">&quot;limit&quot;</span>] )</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                $name = rtrim( substr( $name, 0, $this-&gt;settings[<span class="stringliteral">&quot;limit&quot;</span>] - strlen( $this-&gt;settings[<span class="stringliteral">&quot;sequence&quot;</span>] ) ) ) . $this-&gt;settings[<span class="stringliteral">&quot;sequence&quot;</span>];</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            $names[$languageCode] = $name;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">return</span> $names;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#af9f1becf0e96e58b41514673c7b2fb28">  207</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#af9f1becf0e96e58b41514673c7b2fb28">getFieldTitles</a>( array $schemaIdentifiers, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">ContentType</a> $contentType, array $fieldMap, $languageCode )</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        $fieldTitles = array();</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordflow">foreach</span> ( $schemaIdentifiers as $fieldDefinitionIdentifier )</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keywordflow">if</span> ( isset( $fieldMap[$fieldDefinitionIdentifier][$languageCode] ) )</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                $fieldDefinition = $contentType-&gt;<a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html#ae985c774ac8ceaba8fe142fde01fb1c9">getFieldDefinition</a>( $fieldDefinitionIdentifier );</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                $fieldType = $this-&gt;repository-&gt;getFieldTypeService()-&gt;getFieldType(</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                    $fieldDefinition-&gt;fieldTypeIdentifier</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                );</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                $fieldTitles[$fieldDefinitionIdentifier] = $fieldType-&gt;getName(</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                    $fieldMap[$fieldDefinitionIdentifier][$languageCode]</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                );</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">return</span> $fieldTitles;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ae0eb4318b9a33d9d5ce44a7a5e7bd3af">  240</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ae0eb4318b9a33d9d5ce44a7a5e7bd3af">extractTokens</a>( $nameSchema )</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        preg_match_all(</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="stringliteral">&quot;|&lt;([^&gt;]+)&gt;|U&quot;</span>,</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            $nameSchema,</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            $tokenArray</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        );</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keywordflow">return</span> $tokenArray[0];</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a039e98da0dcc7dfd9a281f8a9cb29752">  263</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a039e98da0dcc7dfd9a281f8a9cb29752">resolveToken</a>( $token, $titles, $groupLookupTable )</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        $replaceString = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        $tokenParts = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a22f8e30abd565c092d8bfde2aa06d91d">tokenParts</a>( $token );</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordflow">foreach</span> ( $tokenParts as $tokenPart )</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        {</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            <span class="keywordflow">if</span> ( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ac2e02bbd344dc2b4b8328ab764baa3d2">isTokenGroup</a>( $tokenPart ) )</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                $replaceString = $groupLookupTable[$tokenPart];</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                $groupTokenArray = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#ae0eb4318b9a33d9d5ce44a7a5e7bd3af">extractTokens</a>( $replaceString );</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                <span class="keywordflow">foreach</span> ( $groupTokenArray as $groupToken )</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                    $replaceString = str_replace(</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                        $groupToken,</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html#a039e98da0dcc7dfd9a281f8a9cb29752">resolveToken</a>(</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                            $groupToken,</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                            $titles,</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                            $groupLookupTable</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                        ),</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                        $replaceString</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                    );</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                }</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                <span class="comment">// We want to stop after the first matching token part / identifier is found</span></div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                <span class="comment">// &lt;id1|id2&gt; if id1 has a value, id2 will not be used.</span></div>
@@ -370,7 +370,7 @@ $(document).ready(function(){initNavTree('NameSchemaService_8php_source.html',''
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_57883f88f9071375c384973424cd03e2.html">Repository</a></li><li class="navelem"><a class="el" href="NameSchemaService_8php.html">NameSchemaService.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:49 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:11 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

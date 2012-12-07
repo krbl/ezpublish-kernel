@@ -106,52 +106,53 @@ $(document).ready(function(){initNavTree('StorageRegistry_8php_source.html','');
 <div class="contents">
 <a href="StorageRegistry_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">eZ\Publish\Core\Persistence\Legacy\Content</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldStorage.html">eZ\Publish\SPI\FieldType\FieldStorage</a>,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1NullStorage.html">eZ\Publish\Core\FieldType\NullStorage</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html">StorageRegistry</a></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html#ac020204c9f7260d341d84cf5cd00d25a">   24</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html#ac020204c9f7260d341d84cf5cd00d25a">$storageMap</a> = array();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html#a09784f78f1e39a42c3670ec1306dfc5d">   38</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html#a09784f78f1e39a42c3670ec1306dfc5d">__construct</a>( array <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html#ac020204c9f7260d341d84cf5cd00d25a">$storageMap</a> )</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">foreach</span> ( $storageMap as $typeName =&gt; $storage )</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            $this-&gt;<span class="keyword">register</span>( $typeName, $storage );</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html#af4aec4d3341c2ccd20573d6e82213a37">   54</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <span class="keyword">register</span>( $typeName, $storage )</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        $this-&gt;storageMap[$typeName] = $storage;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html#a066ebfb907aba903e2a57315041a309d">   68</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html#a066ebfb907aba903e2a57315041a309d">getStorage</a>( $typeName )</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span> ( !isset( $this-&gt;storageMap[$typeName] ) )</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            $this-&gt;storageMap[$typeName] = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1NullStorage.html">NullStorage</a>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( !$this-&gt;storageMap[$typeName] instanceof <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldStorage.html">FieldStorage</a> )</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">if</span> ( !is_callable( $this-&gt;storageMap[$typeName] ) )</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;FieldStorage &#39;$typeName&#39; is neither callable or instance&quot;</span> );</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            $factory = $this-&gt;storageMap[$typeName];</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            $this-&gt;storageMap[$typeName] = call_user_func( $factory );</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> $this-&gt;storageMap[$typeName];</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldStorage.html">eZ\Publish\SPI\FieldType\FieldStorage</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1NullStorage.html">eZ\Publish\Core\FieldType\NullStorage</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html">StorageRegistry</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html#ac020204c9f7260d341d84cf5cd00d25a">   25</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html#ac020204c9f7260d341d84cf5cd00d25a">$storageMap</a> = array();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html#a09784f78f1e39a42c3670ec1306dfc5d">   39</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html#a09784f78f1e39a42c3670ec1306dfc5d">__construct</a>( array <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html#ac020204c9f7260d341d84cf5cd00d25a">$storageMap</a> )</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">foreach</span> ( $storageMap as $typeName =&gt; $storage )</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            $this-&gt;<span class="keyword">register</span>( $typeName, $storage );</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html#af4aec4d3341c2ccd20573d6e82213a37">   55</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <span class="keyword">register</span>( $typeName, $storage )</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        $this-&gt;storageMap[$typeName] = $storage;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html#a066ebfb907aba903e2a57315041a309d">   69</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html#a066ebfb907aba903e2a57315041a309d">getStorage</a>( $typeName )</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span> ( !isset( $this-&gt;storageMap[$typeName] ) )</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            $this-&gt;storageMap[$typeName] = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1NullStorage.html">NullStorage</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( !$this-&gt;storageMap[$typeName] instanceof <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldStorage.html">FieldStorage</a> )</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">if</span> ( !is_callable( $this-&gt;storageMap[$typeName] ) )</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;FieldStorage &#39;$typeName&#39; is neither callable or instance&quot;</span> );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            $factory = $this-&gt;storageMap[$typeName];</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            $this-&gt;storageMap[$typeName] = call_user_func( $factory );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span> $this-&gt;storageMap[$typeName];</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_1015c0c9ea9f233a345f6405868e3e61.html">Persistence</a></li><li class="navelem"><a class="el" href="dir_081400ae94d8719bc7da88bb283ff436.html">Legacy</a></li><li class="navelem"><a class="el" href="dir_62b1c3a52faa834cf05ef76e2ce76582.html">Content</a></li><li class="navelem"><a class="el" href="StorageRegistry_8php.html">StorageRegistry.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:49 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:11 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

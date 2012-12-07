@@ -173,14 +173,17 @@ Protected Attributes</h2></td></tr>
 <div class="line">            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1TransformationProcessor.html#a8584635f3f690c847226c3095cad2072">TransformationProcessor::T_WHITESPACE</a> =&gt; <span class="stringliteral">&#39;(\\A\\s+)&#39;</span>,</div>
 <div class="line">            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1TransformationProcessor.html#aa157f5e1aa7f0f4c4a5308918e3b435d">TransformationProcessor::T_SECTION</a> =&gt; <span class="stringliteral">&#39;(\\A(?P&lt;section&gt;[a-z0-9_-]+):\s*$)m&#39;</span>,</div>
 <div class="line">            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1TransformationProcessor.html#a14a0f30f03608f7a0462229bf756ab1d">TransformationProcessor::T_MAP</a> =&gt; <span class="stringliteral">&#39;(\\A(?P&lt;src&gt;&#39;</span> . $character . <span class="stringliteral">&#39;)\\s*=\\s*(?P&lt;dest&gt;&#39;</span> .  $character . <span class="stringliteral">&#39;))&#39;</span>,</div>
-<div class="line">            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1TransformationProcessor.html#a6c5c09c28521afbfe21d6ecd04e93db6">TransformationProcessor::T_REPLACE</a> =&gt; <span class="stringliteral">&#39;(\\A(?P&lt;srcStart&gt;&#39;</span> . $character . <span class="stringliteral">&#39;)\\s*-\\s*&#39;</span> .</div>
+<div class="line">            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1TransformationProcessor.html#a6c5c09c28521afbfe21d6ecd04e93db6">TransformationProcessor::T_REPLACE</a> =&gt;</div>
+<div class="line">                <span class="stringliteral">&#39;(\\A(?P&lt;srcStart&gt;&#39;</span> . $character . <span class="stringliteral">&#39;)\\s*-\\s*&#39;</span> .</div>
 <div class="line">                <span class="stringliteral">&#39;(?P&lt;srcEnd&gt;&#39;</span>   . $character . <span class="stringliteral">&#39;)\\s*=\\s*&#39;</span> .</div>
 <div class="line">                <span class="stringliteral">&#39;(?P&lt;dest&gt;&#39;</span>    .  $character . <span class="stringliteral">&#39;))&#39;</span>,</div>
-<div class="line">            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1TransformationProcessor.html#a95f5ec6adffffbc637ebbb12f0a69445">TransformationProcessor::T_TRANSPOSE</a> =&gt; <span class="stringliteral">&#39;(\\A(?P&lt;srcStart&gt;&#39;</span> . $character . <span class="stringliteral">&#39;)\\s*-\\s*&#39;</span> .</div>
+<div class="line">            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1TransformationProcessor.html#a95f5ec6adffffbc637ebbb12f0a69445">TransformationProcessor::T_TRANSPOSE</a> =&gt;</div>
+<div class="line">                <span class="stringliteral">&#39;(\\A(?P&lt;srcStart&gt;&#39;</span> . $character . <span class="stringliteral">&#39;)\\s*-\\s*&#39;</span> .</div>
 <div class="line">                <span class="stringliteral">&#39;(?P&lt;srcEnd&gt;&#39;</span>   . $character . <span class="stringliteral">&#39;)\\s*&#39;</span> .</div>
 <div class="line">                <span class="stringliteral">&#39;(?P&lt;op&gt;[+-])\\s*&#39;</span> .</div>
 <div class="line">                <span class="stringliteral">&#39;(?P&lt;dest&gt;&#39;</span> .     $character . <span class="stringliteral">&#39;))&#39;</span>,</div>
-<div class="line">            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1TransformationProcessor.html#ab77763ea9ee5b85c66a65ad0234f7a33">TransformationProcessor::T_TRANSPOSE_MODULO</a> =&gt; <span class="stringliteral">&#39;(\\A(?P&lt;srcStart&gt;&#39;</span> . $character . <span class="stringliteral">&#39;)\\s*-\\s*&#39;</span> .</div>
+<div class="line">            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1TransformationProcessor.html#ab77763ea9ee5b85c66a65ad0234f7a33">TransformationProcessor::T_TRANSPOSE_MODULO</a> =&gt;</div>
+<div class="line">                <span class="stringliteral">&#39;(\\A(?P&lt;srcStart&gt;&#39;</span> . $character . <span class="stringliteral">&#39;)\\s*-\\s*&#39;</span> .</div>
 <div class="line">                <span class="stringliteral">&#39;(?P&lt;srcEnd&gt;&#39;</span>   . $character . <span class="stringliteral">&#39;)\\s*%\\s*&#39;</span> .</div>
 <div class="line">                <span class="stringliteral">&#39;(?P&lt;modulo&gt;&#39;</span>   . $character . <span class="stringliteral">&#39;)\\s*&#39;</span> .</div>
 <div class="line">                <span class="stringliteral">&#39;(?P&lt;op&gt;[+-])\\s*&#39;</span> .</div>
@@ -221,9 +224,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00195">195</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html">Parser.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00200">200</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html">Parser.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00195">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\DefinitionBased\Parser\filterValues()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00200">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\DefinitionBased\Parser\filterValues()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $data as $key =&gt; $value )</div>
 <div class="line">        {</div>
@@ -282,13 +285,15 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00096">96</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html">Parser.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00099">99</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html">Parser.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00096">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\DefinitionBased\Parser\parse()</a>, and <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00110">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\DefinitionBased\Parser\parseString()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00099">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\DefinitionBased\Parser\parse()</a>, and <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00115">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\DefinitionBased\Parser\parseString()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1TransformationProces3df399f33e80a88489239b3571a3d473.html#a558cc62f11bb9409f282a46bad142933">parseString</a>( file_get_contents(</div>
-<div class="line">            $this-&gt;installDir . <span class="charliteral">&#39;/&#39;</span> . $file</div>
-<div class="line">        ) );</div>
+<div class="line">        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1TransformationProces3df399f33e80a88489239b3571a3d473.html#a558cc62f11bb9409f282a46bad142933">parseString</a>(</div>
+<div class="line">            file_get_contents(</div>
+<div class="line">                $this-&gt;installDir . <span class="charliteral">&#39;/&#39;</span> . $file</div>
+<div class="line">            )</div>
+<div class="line">        );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -337,9 +342,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00110">110</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html">Parser.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00115">115</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html">Parser.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00110">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\DefinitionBased\Parser\parseString()</a>, <a class="el" href="TransformationProcessor_8php_source.html#l00019">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\T_COMMENT</a>, <a class="el" href="TransformationProcessor_8php_source.html#l00021">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\T_SECTION</a>, <a class="el" href="TransformationProcessor_8php_source.html#l00020">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\T_WHITESPACE</a>, and <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00153">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\DefinitionBased\Parser\tokenize()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00115">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\DefinitionBased\Parser\parseString()</a>, <a class="el" href="TransformationProcessor_8php_source.html#l00019">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\T_COMMENT</a>, <a class="el" href="TransformationProcessor_8php_source.html#l00021">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\T_SECTION</a>, <a class="el" href="TransformationProcessor_8php_source.html#l00020">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\T_WHITESPACE</a>, and <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00158">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\DefinitionBased\Parser\tokenize()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $tokens = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1TransformationProces3df399f33e80a88489239b3571a3d473.html#a8a73ccbb33faf92d540acc2b8a01b5b0">tokenize</a>( $string );</div>
 <div class="line"></div>
@@ -428,9 +433,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00153">153</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html">Parser.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00158">158</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html">Parser.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00195">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\DefinitionBased\Parser\filterValues()</a>, and <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00153">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\DefinitionBased\Parser\tokenize()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00200">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\DefinitionBased\Parser\filterValues()</a>, and <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php_source.html#l00158">eZ\Publish\Core\Persistence\Legacy\Content\Search\TransformationProcessor\DefinitionBased\Parser\tokenize()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $string = preg_replace( <span class="stringliteral">&#39;(\\r\\n|\\r)&#39;</span>, <span class="stringliteral">&quot;\n&quot;</span>, $string );</div>
 <div class="line">        $tokens = array();</div>
@@ -543,7 +548,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search.html">Search</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1TransformationProcessor.html">TransformationProcessor</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1TransformationProcessor_1_1DefinitionBased.html">DefinitionBased</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1TransformationProces3df399f33e80a88489239b3571a3d473.html">Parser</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:56 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:18 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

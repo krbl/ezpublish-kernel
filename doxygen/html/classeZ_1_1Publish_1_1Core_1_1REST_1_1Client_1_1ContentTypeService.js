@@ -1,6 +1,6 @@
 var classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService =
 [
-    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#af90586c7f8be244741c2c622cf926cb5", null ],
+    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#aa35737cf5b30551452f08db1aaf8b673", null ],
     [ "addFieldDefinition", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#af6cf9ec4613dd1acda34d5ecaabab11d", null ],
     [ "assignContentTypeGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a3acb6260a9f1830e5ef9c1bac4bf5798", null ],
     [ "copyContentType", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a3f136f91121116eea1067ab6ff6c3383", null ],

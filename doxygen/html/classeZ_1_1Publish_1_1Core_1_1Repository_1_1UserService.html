@@ -184,7 +184,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00055">55</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00051">51</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a76df7b94d6d8a83ff1e2edf831d759a6"></a>
 <div class="memitem">
@@ -225,13 +225,14 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00079">79</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00075">75</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00060">eZ\Publish\Core\Repository\UserService\$repository</a>, <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00070">eZ\Publish\Core\Repository\UserService\$settings</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00065">eZ\Publish\Core\Repository\UserService\$userHandler</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00056">eZ\Publish\Core\Repository\UserService\$repository</a>, <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00066">eZ\Publish\Core\Repository\UserService\$settings</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00061">eZ\Publish\Core\Repository\UserService\$userHandler</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;repository = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1UserService.html#adc99fa4080a886ba5681ed62bb7f2574">$repository</a>;</div>
 <div class="line">        $this-&gt;userHandler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1UserService.html#a529de19efac12c3532aeb96f27e757af">$userHandler</a>;</div>
-<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1UserService.html#a1214c914e64f779d7fc75258f4476890">$settings</a> + array(<span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        <span class="comment">// Union makes sure default settings are ignored if provided in argument</span></div>
+<div class="line">        $this-&gt;settings = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1UserService.html#a1214c914e64f779d7fc75258f4476890">$settings</a> + array(</div>
 <div class="line">            <span class="stringliteral">&#39;anonymousUserID&#39;</span> =&gt; 10,</div>
 <div class="line">            <span class="stringliteral">&#39;defaultUserPlacement&#39;</span> =&gt; 12,</div>
 <div class="line">            <span class="stringliteral">&#39;userClassID&#39;</span> =&gt; 4,<span class="comment">// @todo Rename this settings to swap out &quot;Class&quot; for &quot;Type&quot;</span></div>
@@ -283,9 +284,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00803">803</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00800">800</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
-<p>References <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1UserService.html#a3d03923a8446b760aff8ddb4fb94c02d">eZ\Publish\API\Repository\UserService\loadUser()</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00160">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>.</p>
+<p>References <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1UserService.html#a3d03923a8446b760aff8ddb4fb94c02d">eZ\Publish\API\Repository\UserService\loadUser()</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00157">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $user-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $user-&gt;id, <span class="stringliteral">&quot;User&quot;</span> );</div>
@@ -378,9 +379,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01092">1092</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01089">1089</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00225">eZ\Publish\Core\Repository\UserService\searchSubGroups()</a>, and <a class="el" href="API_2Repository_2Values_2Content_2Location_8php_source.html#l00048">eZ\Publish\API\Repository\Values\Content\Location\SORT_ORDER_ASC</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00222">eZ\Publish\Core\Repository\UserService\searchSubGroups()</a>, and <a class="el" href="API_2Repository_2Values_2Content_2Location_8php_source.html#l00048">eZ\Publish\API\Repository\Values\Content\Location\SORT_ORDER_ASC</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $locationService = $this-&gt;repository-&gt;getLocationService();</div>
 <div class="line"></div>
@@ -469,7 +470,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01124">1124</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01121">1121</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $content === null )</div>
 <div class="line">            $content = $this-&gt;repository-&gt;getContentService()-&gt;internalLoadContent( $spiUser-&gt;id );</div>
@@ -555,7 +556,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string Generated password hash </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01152">1152</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01149">1149</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">switch</span> ( $type )</div>
 <div class="line">        {</div>
@@ -631,9 +632,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00405">405</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00402">402</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01124">eZ\Publish\Core\Repository\UserService\buildDomainUserObject()</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00160">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01121">eZ\Publish\Core\Repository\UserService\buildDomainUserObject()</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00157">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( empty( $parentGroups ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;parentGroups&quot;</span>, $parentGroups );</div>
@@ -833,9 +834,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00110">110</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00107">107</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01092">eZ\Publish\Core\Repository\UserService\buildDomainUserGroupObject()</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00160">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01089">eZ\Publish\Core\Repository\UserService\buildDomainUserGroupObject()</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00157">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $parentGroup-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $parentGroup-&gt;id, <span class="stringliteral">&quot;UserGroup&quot;</span> );</div>
@@ -915,7 +916,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00656">656</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00653">653</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
 <p>References <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1UserService.html#a3d03923a8446b760aff8ddb4fb94c02d">eZ\Publish\API\Repository\UserService\loadUser()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -978,9 +979,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00258">258</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00255">255</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00160">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00157">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $userGroup-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $userGroup-&gt;id, <span class="stringliteral">&quot;UserGroup&quot;</span> );</div>
@@ -1055,7 +1056,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01181">1181</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01178">1178</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
 <p>References <a class="el" href="Query_8php_source.html#l00019">eZ\Publish\API\Repository\Values\Content\Query\SORT_ASC</a>, <a class="el" href="Query_8php_source.html#l00021">eZ\Publish\API\Repository\Values\Content\Query\SORT_DESC</a>, <a class="el" href="API_2Repository_2Values_2Content_2Location_8php_source.html#l00038">eZ\Publish\API\Repository\Values\Content\Location\SORT_FIELD_DEPTH</a>, <a class="el" href="API_2Repository_2Values_2Content_2Location_8php_source.html#l00036">eZ\Publish\API\Repository\Values\Content\Location\SORT_FIELD_MODIFIED</a>, <a class="el" href="API_2Repository_2Values_2Content_2Location_8php_source.html#l00042">eZ\Publish\API\Repository\Values\Content\Location\SORT_FIELD_NAME</a>, <a class="el" href="API_2Repository_2Values_2Content_2Location_8php_source.html#l00034">eZ\Publish\API\Repository\Values\Content\Location\SORT_FIELD_PATH</a>, <a class="el" href="API_2Repository_2Values_2Content_2Location_8php_source.html#l00041">eZ\Publish\API\Repository\Values\Content\Location\SORT_FIELD_PRIORITY</a>, <a class="el" href="API_2Repository_2Values_2Content_2Location_8php_source.html#l00035">eZ\Publish\API\Repository\Values\Content\Location\SORT_FIELD_PUBLISHED</a>, <a class="el" href="API_2Repository_2Values_2Content_2Location_8php_source.html#l00037">eZ\Publish\API\Repository\Values\Content\Location\SORT_FIELD_SECTION</a>, and <a class="el" href="API_2Repository_2Values_2Content_2Location_8php_source.html#l00047">eZ\Publish\API\Repository\Values\Content\Location\SORT_ORDER_DESC</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -1134,7 +1135,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1UserService.html#aecad8186e1bcd0a7008938e7f319bb8d">eZ\Publish\API\Repository\UserService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00597">597</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00594">594</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
 <p>References <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1UserService.html#a3d03923a8446b760aff8ddb4fb94c02d">eZ\Publish\API\Repository\UserService\loadUser()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -1182,9 +1183,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00179">179</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00176">176</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01092">eZ\Publish\Core\Repository\UserService\buildDomainUserGroupObject()</a>, <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00160">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00225">eZ\Publish\Core\Repository\UserService\searchSubGroups()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01089">eZ\Publish\Core\Repository\UserService\buildDomainUserGroupObject()</a>, <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00157">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00222">eZ\Publish\Core\Repository\UserService\searchSubGroups()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $userGroup-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $userGroup-&gt;id, <span class="stringliteral">&quot;UserGroup&quot;</span> );</div>
@@ -1274,9 +1275,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1UserService.html#aafc27835de6084481cebb4d6651519be">eZ\Publish\API\Repository\UserService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00613">613</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00610">610</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01124">eZ\Publish\Core\Repository\UserService\buildDomainUserObject()</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01152">eZ\Publish\Core\Repository\UserService\createPasswordHash()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01121">eZ\Publish\Core\Repository\UserService\buildDomainUserObject()</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01149">eZ\Publish\Core\Repository\UserService\createPasswordHash()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_string( $login ) || empty( $login ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;login&quot;</span>, $login );</div>
@@ -1356,9 +1357,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1UserService.html#acccfc81a6ca6d3972ecd7acd379d3f16">eZ\Publish\API\Repository\UserService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00160">160</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00157">157</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01092">eZ\Publish\Core\Repository\UserService\buildDomainUserGroupObject()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01089">eZ\Publish\Core\Repository\UserService\buildDomainUserGroupObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $id );</div>
@@ -1420,9 +1421,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>[] </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00912">912</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00909">909</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01092">eZ\Publish\Core\Repository\UserService\buildDomainUserGroupObject()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01089">eZ\Publish\Core\Repository\UserService\buildDomainUserGroupObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $locationService = $this-&gt;repository-&gt;getLocationService();</div>
 <div class="line"></div>
@@ -1523,9 +1524,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>[] </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00965">965</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00962">962</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01124">eZ\Publish\Core\Repository\UserService\buildDomainUserObject()</a>, <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01181">eZ\Publish\Core\Repository\UserService\getSortClauseBySortField()</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00160">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01121">eZ\Publish\Core\Repository\UserService\buildDomainUserObject()</a>, <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01178">eZ\Publish\Core\Repository\UserService\getSortClauseBySortField()</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00157">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $loadedUserGroup = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1UserService.html#a640f9b85e0b2128e24ad696242b7b913">loadUserGroup</a>( $userGroup-&gt;id );</div>
 <div class="line"></div>
@@ -1546,8 +1547,8 @@ Protected Attributes</h2></td></tr>
 <div class="line">            )</div>
 <div class="line">        );</div>
 <div class="line"></div>
-<div class="line">        $searchQuery-&gt;offset = $offset &gt; 0 ? (int) $offset : 0;</div>
-<div class="line">        $searchQuery-&gt;limit = $limit &gt;= 1 ? (int) $limit : null;</div>
+<div class="line">        $searchQuery-&gt;offset = $offset &gt; 0 ? (int)$offset : 0;</div>
+<div class="line">        $searchQuery-&gt;limit = $limit &gt;= 1 ? (int)$limit : null;</div>
 <div class="line"></div>
 <div class="line">        $searchQuery-&gt;sortClauses = array(</div>
 <div class="line">            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1UserService.html#a941a732658a901463ed9fc76889a5a94">getSortClauseBySortField</a>( $mainGroupLocation-&gt;sortField, $mainGroupLocation-&gt;sortOrder )</div>
@@ -1617,9 +1618,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00287">287</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00284">284</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00160">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00157">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $userGroup-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $userGroup-&gt;id, <span class="stringliteral">&quot;UserGroup&quot;</span> );</div>
@@ -1727,7 +1728,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1UserService.html#a1843a2c279173653b8346afdba9a9ca1">eZ\Publish\API\Repository\UserService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01017">1017</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01014">1014</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $contentType === null )</div>
 <div class="line">        {</div>
@@ -1786,7 +1787,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1UserService.html#a9b11ff0703b71be530bdd273d61675f9">eZ\Publish\API\Repository\UserService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01047">1047</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01044">1044</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $contentType === null )</div>
 <div class="line">        {</div>
@@ -1823,7 +1824,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1UserService.html#a04cbf8c4861ece814ae21b1b54bc5974">eZ\Publish\API\Repository\UserService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01080">1080</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01077">1077</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> UserGroupUpdateStruct();</div>
 <div class="line">    }</div>
@@ -1847,7 +1848,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1UserService.html#a997da39ea99818a3de8a48f5f767da05">eZ\Publish\API\Repository\UserService</a>.</p>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01070">1070</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01067">1067</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> UserUpdateStruct();</div>
 <div class="line">    }</div>
@@ -1916,14 +1917,14 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00225">225</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00222">222</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01181">eZ\Publish\Core\Repository\UserService\getSortClauseBySortField()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01178">eZ\Publish\Core\Repository\UserService\getSortClauseBySortField()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $searchQuery = <span class="keyword">new</span> Query();</div>
 <div class="line"></div>
-<div class="line">        $searchQuery-&gt;offset = $offset &gt;= 0 ? (int) $offset : 0;</div>
-<div class="line">        $searchQuery-&gt;limit = $limit  &gt;= 0 ? (int) $limit  : null;</div>
+<div class="line">        $searchQuery-&gt;offset = $offset &gt;= 0 ? (int)$offset : 0;</div>
+<div class="line">        $searchQuery-&gt;limit = $limit &gt;= 0 ? (int)$limit  : null;</div>
 <div class="line"></div>
 <div class="line">        $searchQuery-&gt;criterion = <span class="keyword">new</span> CriterionLogicalAnd(</div>
 <div class="line">            array(</div>
@@ -2005,9 +2006,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00862">862</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00859">859</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
-<p>References <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1UserService.html#a3d03923a8446b760aff8ddb4fb94c02d">eZ\Publish\API\Repository\UserService\loadUser()</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00160">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>.</p>
+<p>References <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1UserService.html#a3d03923a8446b760aff8ddb4fb94c02d">eZ\Publish\API\Repository\UserService\loadUser()</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00157">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $user-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $user-&gt;id, <span class="stringliteral">&quot;User&quot;</span> );</div>
@@ -2103,7 +2104,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00691">691</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00688">688</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
 <p>References <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1UserService.html#a3d03923a8446b760aff8ddb4fb94c02d">eZ\Publish\API\Repository\UserService\loadUser()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -2192,7 +2193,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">                            $loadedUser-&gt;passwordHash,</div>
 <div class="line">                        <span class="stringliteral">&#39;hashAlgorithm&#39;</span> =&gt; $this-&gt;settings[<span class="stringliteral">&#39;hashType&#39;</span>],</div>
 <div class="line">                        <span class="stringliteral">&#39;isEnabled&#39;</span> =&gt; $userUpdateStruct-&gt;enabled !== null ? $userUpdateStruct-&gt;enabled : $loadedUser-&gt;enabled,</div>
-<div class="line">                        <span class="stringliteral">&#39;maxLogin&#39;</span> =&gt; $userUpdateStruct-&gt;maxLogin !== null ? (int) $userUpdateStruct-&gt;maxLogin : $loadedUser-&gt;maxLogin</div>
+<div class="line">                        <span class="stringliteral">&#39;maxLogin&#39;</span> =&gt; $userUpdateStruct-&gt;maxLogin !== null ? (int)$userUpdateStruct-&gt;maxLogin : $loadedUser-&gt;maxLogin</div>
 <div class="line">                    )</div>
 <div class="line">                )</div>
 <div class="line">            );</div>
@@ -2263,9 +2264,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00341">341</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00338">338</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01092">eZ\Publish\Core\Repository\UserService\buildDomainUserGroupObject()</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00160">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>.</p>
+<p>References <a class="el" href="Core_2Repository_2UserService_8php_source.html#l01089">eZ\Publish\Core\Repository\UserService\buildDomainUserGroupObject()</a>, and <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00157">eZ\Publish\Core\Repository\UserService\loadUserGroup()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !is_numeric( $userGroup-&gt;id ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&quot;id&quot;</span>, $userGroup-&gt;id, <span class="stringliteral">&quot;UserGroup&quot;</span> );</div>
@@ -2348,7 +2349,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00060">60</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00056">56</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
 </div>
 </div>
@@ -2370,7 +2371,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00070">70</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00066">66</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
 </div>
 </div>
@@ -2392,7 +2393,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00065">65</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2Repository_2UserService_8php_source.html#l00061">61</a> of file <a class="el" href="Core_2Repository_2UserService_8php_source.html">UserService.php</a>.</p>
 
 </div>
 </div>
@@ -2405,7 +2406,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Repository.html">Repository</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1UserService.html">UserService</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:58 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:20 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

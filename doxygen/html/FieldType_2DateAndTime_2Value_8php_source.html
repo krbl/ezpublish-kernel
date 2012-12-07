@@ -106,62 +106,63 @@ $(document).ready(function(){initNavTree('FieldType_2DateAndTime_2Value_8php_sou
 <div class="contents">
 <a href="FieldType_2DateAndTime_2Value_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\FieldType\DateAndTime;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Value.html">eZ\Publish\Core\FieldType\Value</a> as BaseValue,</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentValue.html">eZ\Publish\Core\Base\Exceptions\InvalidArgumentValue</a>,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">eZ\Publish\Core\Base\Exceptions\InvalidArgumentType</a>,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    Exception,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    DateTime;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html">Value</a> <span class="keyword">extends</span> BaseValue</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#abe5ec01d38781905f98abf914c5c9622">   27</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#abe5ec01d38781905f98abf914c5c9622">$value</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#a6aff7a15bd5a771f53c83cb91affc826">   34</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#a6aff7a15bd5a771f53c83cb91affc826">$stringFormat</a> = <span class="charliteral">&#39;U&#39;</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#a91369482a25349aedd3ad51f78522b66">   44</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#a91369482a25349aedd3ad51f78522b66">__construct</a>( DateTime $dateTime = null )</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        $this-&gt;value = $dateTime;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#a8ec3df77ae4a72f6d3c39c4c8475bd56">   56</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#a8ec3df77ae4a72f6d3c39c4c8475bd56">fromString</a>( $dateString )</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keyword">static</span>( <span class="keyword">new</span> DateTime( $dateString ) );</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">catch</span> ( Exception $e )</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentValue.html">InvalidArgumentValue</a>( <span class="stringliteral">&#39;$dateString&#39;</span>, $dateString, __CLASS__, $e );</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#a410bc413f58f81128231065c9ef11d0a">   75</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#a410bc413f58f81128231065c9ef11d0a">fromTimestamp</a>( $timestamp )</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keyword">static</span>( <span class="keyword">new</span> DateTime( <span class="stringliteral">&quot;@{$timestamp}&quot;</span> ) );</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">catch</span> ( Exception $e )</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentValue.html">InvalidArgumentValue</a>( <span class="stringliteral">&#39;$timestamp&#39;</span>, $timestamp, __CLASS__, $e );</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#ab9847f33626712f796c477321f2b6f4f">   90</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#ab9847f33626712f796c477321f2b6f4f">__toString</a>()</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;value instanceof DateTime )</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> $this-&gt;value-&gt;format( $this-&gt;stringFormat );</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Value.html">eZ\Publish\Core\FieldType\Value</a> as BaseValue;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentValue.html">eZ\Publish\Core\Base\Exceptions\InvalidArgumentValue</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html">eZ\Publish\Core\Base\Exceptions\InvalidArgumentType</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use Exception;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use DateTime;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html">Value</a> <span class="keyword">extends</span> BaseValue</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#abe5ec01d38781905f98abf914c5c9622">   28</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#abe5ec01d38781905f98abf914c5c9622">$value</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#a6aff7a15bd5a771f53c83cb91affc826">   35</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#a6aff7a15bd5a771f53c83cb91affc826">$stringFormat</a> = <span class="charliteral">&#39;U&#39;</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#a91369482a25349aedd3ad51f78522b66">   45</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#a91369482a25349aedd3ad51f78522b66">__construct</a>( DateTime $dateTime = null )</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        $this-&gt;value = $dateTime;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#a8ec3df77ae4a72f6d3c39c4c8475bd56">   57</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#a8ec3df77ae4a72f6d3c39c4c8475bd56">fromString</a>( $dateString )</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keyword">static</span>( <span class="keyword">new</span> DateTime( $dateString ) );</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">catch</span> ( Exception $e )</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentValue.html">InvalidArgumentValue</a>( <span class="stringliteral">&#39;$dateString&#39;</span>, $dateString, __CLASS__, $e );</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#a410bc413f58f81128231065c9ef11d0a">   76</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#a410bc413f58f81128231065c9ef11d0a">fromTimestamp</a>( $timestamp )</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keyword">static</span>( <span class="keyword">new</span> DateTime( <span class="stringliteral">&quot;@{$timestamp}&quot;</span> ) );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">catch</span> ( Exception $e )</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentValue.html">InvalidArgumentValue</a>( <span class="stringliteral">&#39;$timestamp&#39;</span>, $timestamp, __CLASS__, $e );</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#ab9847f33626712f796c477321f2b6f4f">   91</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html#ab9847f33626712f796c477321f2b6f4f">__toString</a>()</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;value instanceof DateTime )</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> $this-&gt;value-&gt;format( $this-&gt;stringFormat );</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_429826c28e0afa35fa370fabe902bc82.html">FieldType</a></li><li class="navelem"><a class="el" href="dir_b820350037769ddca18b92e6d10ea4e1.html">DateAndTime</a></li><li class="navelem"><a class="el" href="FieldType_2DateAndTime_2Value_8php.html">Value.php</a></li>
-    <li class="footer">Generated on Wed Dec 5 2012 00:04:47 for ezp-next by
+    <li class="footer">Generated on Fri Dec 7 2012 00:02:09 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -1,6 +1,6 @@
 var classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentService =
 [
-    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentService.html#a83229b774783b7993e5bee9a2ae3a70a", null ],
+    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentService.html#aa5bc3c19245c705de0d6f689db30d741", null ],
     [ "addRelation", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentService.html#ab8eab09265a308f39c5afb5c433ac367", null ],
     [ "addTranslationInfo", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentService.html#a22013cae154ceefac3b2b88cf76e5136", null ],
     [ "completeContentInfo", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentService.html#a9650d98187f4403b9d2dbfdf7908b846", null ],
