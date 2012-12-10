@@ -36,10 +36,10 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">1641</span></a></li>
+                <span class="label label-info">1642</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul><li>todo 
-                <span class="label label-info">178</span>
+                <span class="label label-info">176</span>
 </li></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
                 <span class="label label-info">10</span></a></li>
@@ -77,12 +77,11 @@
 <li class="nav-header protected">» Protected
                     <ul>
 <li class="method protected "><a href="#method_getBlocksByField" title="getBlocksByField :: Returns template blocks for $field."><span class="description">Returns template blocks for $field.</span><pre>getBlocksByField()</pre></a></li>
-<li class="method protected "><a href="#method_getEditMetadata" title="getEditMetadata :: Returns metadata needed for edition while using the editorial interface."><span class="description">Returns metadata needed for edition while using the editorial interface.</span><pre>getEditMetadata()</pre></a></li>
 <li class="method protected "><a href="#method_getFieldBlockName" title="getFieldBlockName :: Returns expected block name for $field, attached in $content."><span class="description">Returns expected block name for $field, attached in $content.</span><pre>getFieldBlockName()</pre></a></li>
 <li class="method protected "><a href="#method_getFieldTypeIdentifier" title="getFieldTypeIdentifier :: Returns the field type identifier for $field"><span class="description">Returns the field type identifier for $field</span><pre>getFieldTypeIdentifier()</pre></a></li>
+<li class="method protected "><a href="#method_getRenderFieldBlockParameters" title="getRenderFieldBlockParameters :: Generates the array of parameter to pass to the field template."><span class="description">Generates the array of parameter to pass to the field template.</span><pre>getRenderFieldBlockParameters()</pre></a></li>
 <li class="method protected "><a href="#method_getXmlTextConverter" title="getXmlTextConverter :: "><span class="description">getXmlTextConverter()
         </span><pre>getXmlTextConverter()</pre></a></li>
-<li class="method protected "><a href="#method_isInEditMode" title="isInEditMode :: Checks if we are in edit mode or not (editorial interface)."><span class="description">Checks if we are in edit mode or not (editorial interface).</span><pre>isInEditMode()</pre></a></li>
 <li class="method protected "><a href="#method_searchBlock" title="searchBlock :: Returns the block named $blockName in the given template."><span class="description">Returns the block named $blockName in the given template.</span><pre>searchBlock()</pre></a></li>
 </ul>
 </li>
@@ -292,30 +291,6 @@ Example: 'ezstring_field' will be relevant for a full view of ezstring field typ
 <div class="subelement response"><code>array</code></div>
 </div></div>
 </div>
-<a id="method_getEditMetadata"></a><div class="element clickable method protected method_getEditMetadata" data-toggle="collapse" data-target=".method_getEditMetadata .collapse">
-<h2>Returns metadata needed for edition while using the editorial interface.</h2>
-<pre>getEditMetadata(\eZ\Publish\Core\Repository\Values\Content\Content $content, \eZ\Publish\API\Repository\Values\Content\Field $field) : array</pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"><p>These will basically be rendered as HTML data attributes, prefixed by "data-ez".
-Example: data-ez-field-id="12345"</p></div>
-<table class="table table-bordered"><tr>
-<th>todo</th>
-<td>It would make sense to also ask for additional metadata supported by the field type</td>
-</tr></table>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$content</h4>
-<code><a href="../classes/eZ.Publish.Core.Repository.Values.Content.Content.html">\eZ\Publish\Core\Repository\Values\Content\Content</a></code>
-</div>
-<div class="subelement argument">
-<h4>$field</h4>
-<code><a href="../classes/eZ.Publish.API.Repository.Values.Content.Field.html">\eZ\Publish\API\Repository\Values\Content\Field</a></code>
-</div>
-<h3>Returns</h3>
-<div class="subelement response"><code>array</code></div>
-</div></div>
-</div>
 <a id="method_getFieldBlockName"></a><div class="element clickable method protected method_getFieldBlockName" data-toggle="collapse" data-target=".method_getFieldBlockName .collapse">
 <h2>Returns expected block name for $field, attached in $content.</h2>
 <pre>getFieldBlockName(\eZ\Publish\Core\Repository\Values\Content\Content $content, \eZ\Publish\API\Repository\Values\Content\Field $field) : string</pre>
@@ -354,6 +329,27 @@ Example: data-ez-field-id="12345"</p></div>
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
+<a id="method_getRenderFieldBlockParameters"></a><div class="element clickable method protected method_getRenderFieldBlockParameters" data-toggle="collapse" data-target=".method_getRenderFieldBlockParameters .collapse">
+<h2>Generates the array of parameter to pass to the field template.</h2>
+<pre>getRenderFieldBlockParameters(\eZ\Publish\Core\Repository\Values\Content\Content $content, \eZ\Publish\API\Repository\Values\Content\Field $field, array $params) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code><a href="../classes/eZ.Publish.Core.Repository.Values.Content.Content.html">\eZ\Publish\Core\Repository\Values\Content\Content</a></code>
+</div>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>\eZ\Publish\Core\Repository\Values\Content\Field</code><p>the Field to display</p></div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>An array of parameters to pass to the field view</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
 <a id="method_getXmlTextConverter"></a><div class="element clickable method protected method_getXmlTextConverter" data-toggle="collapse" data-target=".method_getXmlTextConverter .collapse">
 <h2>getXmlTextConverter()
         </h2>
@@ -363,20 +359,6 @@ Example: data-ez-field-id="12345"</p></div>
 <div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="../classes/eZ.Publish.Core.FieldType.XmlText.Converter.Html5.html">\eZ\Publish\Core\FieldType\XmlText\Converter\Html5</a></code></div>
-</div></div>
-</div>
-<a id="method_isInEditMode"></a><div class="element clickable method protected method_isInEditMode" data-toggle="collapse" data-target=".method_isInEditMode .collapse">
-<h2>Checks if we are in edit mode or not (editorial interface).</h2>
-<pre>isInEditMode() : boolean</pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered"><tr>
-<th>todo</th>
-<td>Needs to check in the session and via the API if current user has access to edit mode</td>
-</tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
 <a id="method_searchBlock"></a><div class="element clickable method protected method_searchBlock" data-toggle="collapse" data-target=".method_searchBlock .collapse">
@@ -459,7 +441,7 @@ found, returns null.</p></div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2012-12-03T13:42:26Z.<br></footer></div>
+            generated on 2012-12-10T13:44:04Z.<br></footer></div>
 </div>
 </body>
 </html>
