@@ -4,7 +4,7 @@ var dir_0bf8f1c22550a6d1b6a5092ea79b7f12 =
       [ "ContentTypeFacetBuilder", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1ContentTypeFacetBuilder.html", null ]
     ] ],
     [ "CriterionFacetBuilder.php", "CriterionFacetBuilder_8php.html", [
-      [ "CritierionFacetBuilder", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1CritierionFacetBuilder.html", null ]
+      [ "CriterionFacetBuilder", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1CriterionFacetBuilder.html", null ]
     ] ],
     [ "DateRangeFacetBuilder.php", "DateRangeFacetBuilder_8php.html", [
       [ "DateRangeFacetBuilder", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder" ]

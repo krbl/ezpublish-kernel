@@ -239,7 +239,7 @@ var NAVTREEINDEX12 =
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder.html#ac56100c3b868a39ef85cd7d93b58af1a":[3,0,0,1,0,0,1,0,0,5,0],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder.html#acd964ef5fc032effa7b2c073c70cc239":[3,0,0,1,0,0,1,0,0,5,3],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1ContentTypeFacetBuilder.html":[3,0,0,1,0,0,1,0,0,1,0],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1CritierionFacetBuilder.html":[3,0,0,1,0,0,1,0,0,1,1],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1CriterionFacetBuilder.html":[3,0,0,1,0,0,1,0,0,1,1],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html":[3,0,0,1,0,0,1,0,0,1,2],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#a0f0601de4fe4d73569102bc146d11654":[3,0,0,1,0,0,1,0,0,1,2,3],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#a4f61749194df6e2526acfa0047dfbd88":[3,0,0,1,0,0,1,0,0,1,2,1],

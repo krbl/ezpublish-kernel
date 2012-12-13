@@ -206,77 +206,75 @@ $(document).ready(function(){initNavTree('Publish_2Core_2MVC_2Symfony_2Routing_2
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        {</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> ResourceNotFoundException( $e-&gt;getMessage(), $e-&gt;getCode(), $e );</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">throw</span> <span class="keyword">new</span> ResourceNotFoundException( <span class="stringliteral">&quot;Could not match UrlAlias&quot;</span> );</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a246cd5bd7787d7674e3097e10bfd9481">  154</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a246cd5bd7787d7674e3097e10bfd9481">getRouteCollection</a>()</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> RouteCollection();</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a7935c0f1b70079c6ca5053db213b0bba">  184</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a7935c0f1b70079c6ca5053db213b0bba">generate</a>( $name, $parameters = array(), $absolute = <span class="keyword">false</span> )</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="comment">// Direct access to Location</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">if</span> ( $name instanceof <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Location.html">Location</a> )</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="keywordflow">return</span> $this-&gt;generator-&gt;generate( $name, $parameters, $absolute );</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        }</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="comment">// Normal route name</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">if</span> ( $name === self::URL_ALIAS_ROUTE_NAME )</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        {</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="comment">// We must have at least &#39;location&#39; or &#39;locationId&#39; to retrieve the UrlAlias</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="keywordflow">if</span> ( !isset( $parameters[<span class="stringliteral">&#39;location&#39;</span>] ) &amp;&amp; !isset( $parameters[<span class="stringliteral">&#39;locationId&#39;</span>] ) )</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            {</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                <span class="keywordflow">throw</span> new \InvalidArgumentException(</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                    <span class="stringliteral">&quot;When generating an UrlAlias route, either &#39;location&#39; or &#39;locationId must be provided.&quot;</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                );</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            }</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="comment">// Check if location is a valid Location object</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="keywordflow">if</span> ( isset( $parameters[<span class="stringliteral">&#39;location&#39;</span>] ) &amp;&amp; !$parameters[<span class="stringliteral">&#39;location&#39;</span>] instanceof Location )</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                <span class="keywordflow">throw</span> new \LogicException(</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                    <span class="stringliteral">&quot;When generating an UrlAlias route, &#39;location&#39; parameter must be a valid eZ\\Publish\\API\\Repository\\Values\\Content\\Location.&quot;</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                );</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            }</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            $location = isset( $parameters[<span class="stringliteral">&#39;location&#39;</span>] ) ? $parameters[<span class="stringliteral">&#39;location&#39;</span>] : $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a9849123b9676f7c62eefd4534614d74d">getRepository</a>()-&gt;getLocationService()-&gt;loadLocation( $parameters[<span class="stringliteral">&#39;locationId&#39;</span>] );</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            unset( $parameters[<span class="stringliteral">&#39;location&#39;</span>], $parameters[<span class="stringliteral">&#39;locationId&#39;</span>] );</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keywordflow">return</span> $this-&gt;generator-&gt;generate( $location, $parameters, $absolute );</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        }</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">throw</span> <span class="keyword">new</span> RouteNotFoundException( <span class="stringliteral">&#39;Could not match route&#39;</span> );</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    }</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
-<div class="line"><a name="l00219"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a15f4d03bad38a5f85b16db4fa885a5d9">  219</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a15f4d03bad38a5f85b16db4fa885a5d9">setContext</a>( RequestContext $context )</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    {</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        $this-&gt;requestContext = $context;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    }</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
-<div class="line"><a name="l00224"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#afd45f06c7d5c3af8497eff4a058cbda4">  224</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#afd45f06c7d5c3af8497eff4a058cbda4">getContext</a>()</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    {</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#ae37bcfd2edb50dbd4eea005bff03fe5f">$this-&gt;requestContext</a>;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    }</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
-<div class="line"><a name="l00238"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a5a19d01efe49c78dc688364e658c209a">  238</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a5a19d01efe49c78dc688364e658c209a">match</a>( $pathinfo )</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    {</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;The UrlAliasRouter doesn&#39;t support the match() method. Please use matchRequest() instead.&quot;</span> );</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    }</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
-<div class="line"><a name="l00253"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a143525dc35cf007658f5de166fa076c7">  253</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a143525dc35cf007658f5de166fa076c7">supports</a>( $name )</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    {</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordflow">return</span> $name instanceof <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Location.html">Location</a> || $name === <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a0d8873d0328b30574fe627af23fbc1f4">self::URL_ALIAS_ROUTE_NAME</a>;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    }</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;}</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a246cd5bd7787d7674e3097e10bfd9481">  152</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a246cd5bd7787d7674e3097e10bfd9481">getRouteCollection</a>()</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> RouteCollection();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a7935c0f1b70079c6ca5053db213b0bba">  182</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a7935c0f1b70079c6ca5053db213b0bba">generate</a>( $name, $parameters = array(), $absolute = <span class="keyword">false</span> )</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="comment">// Direct access to Location</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">if</span> ( $name instanceof <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Location.html">Location</a> )</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordflow">return</span> $this-&gt;generator-&gt;generate( $name, $parameters, $absolute );</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="comment">// Normal route name</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">if</span> ( $name === self::URL_ALIAS_ROUTE_NAME )</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="comment">// We must have at least &#39;location&#39; or &#39;locationId&#39; to retrieve the UrlAlias</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordflow">if</span> ( !isset( $parameters[<span class="stringliteral">&#39;location&#39;</span>] ) &amp;&amp; !isset( $parameters[<span class="stringliteral">&#39;locationId&#39;</span>] ) )</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <span class="keywordflow">throw</span> new \InvalidArgumentException(</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                    <span class="stringliteral">&quot;When generating an UrlAlias route, either &#39;location&#39; or &#39;locationId must be provided.&quot;</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                );</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="comment">// Check if location is a valid Location object</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keywordflow">if</span> ( isset( $parameters[<span class="stringliteral">&#39;location&#39;</span>] ) &amp;&amp; !$parameters[<span class="stringliteral">&#39;location&#39;</span>] instanceof Location )</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                <span class="keywordflow">throw</span> new \LogicException(</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                    <span class="stringliteral">&quot;When generating an UrlAlias route, &#39;location&#39; parameter must be a valid eZ\\Publish\\API\\Repository\\Values\\Content\\Location.&quot;</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                );</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            $location = isset( $parameters[<span class="stringliteral">&#39;location&#39;</span>] ) ? $parameters[<span class="stringliteral">&#39;location&#39;</span>] : $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a9849123b9676f7c62eefd4534614d74d">getRepository</a>()-&gt;getLocationService()-&gt;loadLocation( $parameters[<span class="stringliteral">&#39;locationId&#39;</span>] );</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            unset( $parameters[<span class="stringliteral">&#39;location&#39;</span>], $parameters[<span class="stringliteral">&#39;locationId&#39;</span>] );</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="keywordflow">return</span> $this-&gt;generator-&gt;generate( $location, $parameters, $absolute );</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordflow">throw</span> <span class="keyword">new</span> RouteNotFoundException( <span class="stringliteral">&#39;Could not match route&#39;</span> );</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a15f4d03bad38a5f85b16db4fa885a5d9">  217</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a15f4d03bad38a5f85b16db4fa885a5d9">setContext</a>( RequestContext $context )</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        $this-&gt;requestContext = $context;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#afd45f06c7d5c3af8497eff4a058cbda4">  222</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#afd45f06c7d5c3af8497eff4a058cbda4">getContext</a>()</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#ae37bcfd2edb50dbd4eea005bff03fe5f">$this-&gt;requestContext</a>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a5a19d01efe49c78dc688364e658c209a">  236</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a5a19d01efe49c78dc688364e658c209a">match</a>( $pathinfo )</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;The UrlAliasRouter doesn&#39;t support the match() method. Please use matchRequest() instead.&quot;</span> );</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a143525dc35cf007658f5de166fa076c7">  251</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a143525dc35cf007658f5de166fa076c7">supports</a>( $name )</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">return</span> $name instanceof <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Location.html">Location</a> || $name === <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a0d8873d0328b30574fe627af23fbc1f4">self::URL_ALIAS_ROUTE_NAME</a>;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_3f2bbbda4a8cf240a23a45721a8bf194.html">MVC</a></li><li class="navelem"><a class="el" href="dir_2823f14ad24d7d09ba467b2c5eb8153a.html">Symfony</a></li><li class="navelem"><a class="el" href="dir_18b3d37d23953d472e43ed79b5109afc.html">Routing</a></li><li class="navelem"><a class="el" href="Publish_2Core_2MVC_2Symfony_2Routing_2UrlAliasRouter_8php.html">UrlAliasRouter.php</a></li>
-    <li class="footer">Generated on Wed Dec 12 2012 00:02:35 for ezp-next by
+    <li class="footer">Generated on Thu Dec 13 2012 00:03:11 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

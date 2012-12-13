@@ -7,7 +7,7 @@ var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler =
     [ "createDraftFromVersion", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a0b76f540b3929eeb72d43a3eddd6e909", null ],
     [ "deleteContent", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a20f5e33489fd01eecb4529291b83b86e", null ],
     [ "deleteVersion", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a95594ba926df4c111f3c737afc539fb2", null ],
-    [ "internalCreate", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#aaddbae7c255b75b369e205879d813c8f", null ],
+    [ "internalCreate", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#adc360d53e71376f481bea988f7855a2c", null ],
     [ "listVersions", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#ac352e01dcec43c8b4e41a867676f4578", null ],
     [ "load", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#abe59291d328278535f3857343bcfb087", null ],
     [ "loadContentInfo", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#ad8433ff4d1ae78aab8f20a7467113853", null ],

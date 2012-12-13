@@ -212,10 +212,10 @@ var searchData=
   ['criterion',['Criterion',['../classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Criterion.html',1,'eZ::Publish::Core::REST::Server::Input::Parser']]],
   ['criterion',['Criterion',['../classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion.html',1,'eZ::Publish::API::Repository::Values::Content::Query']]],
   ['criterionfacet',['CriterionFacet',['../classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Search_1_1Facet_1_1CriterionFacet.html',1,'eZ::Publish::API::Repository::Values::Content::Search::Facet']]],
+  ['criterionfacetbuilder',['CriterionFacetBuilder',['../classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1CriterionFacetBuilder.html',1,'eZ::Publish::API::Repository::Values::Content::Query::FacetBuilder']]],
   ['criterionhandler',['CriterionHandler',['../classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler.html',1,'eZ::Publish::Core::Persistence::Legacy::Content::Search::Gateway']]],
   ['criterioninterface',['CriterionInterface',['../interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1CriterionInterface.html',1,'eZ::Publish::API::Repository::Values::Content::Query']]],
   ['criterionvisitor',['CriterionVisitor',['../classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor.html',1,'eZ::Publish::Core::Persistence::Solr::Content::Search']]],
-  ['critierionfacetbuilder',['CritierionFacetBuilder',['../classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1CritierionFacetBuilder.html',1,'eZ::Publish::API::Repository::Values::Content::Query::FacetBuilder']]],
   ['curl',['Curl',['../classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Curl.html',1,'eZ::Publish::Core::MVC::Symfony::Cache::Http']]],
   ['customfield',['CustomField',['../classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1FieldType_1_1CustomField.html',1,'eZ::Publish::SPI::Persistence::Content::Search::FieldType']]]
 ];

@@ -431,7 +431,7 @@ var hierarchy =
       [ "eZ\\Publish\\API\\Repository\\Values\\Content\\Query", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query.html", null ],
       [ "eZ\\Publish\\API\\Repository\\Values\\Content\\Query\\FacetBuilder", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder.html", [
         [ "eZ\\Publish\\API\\Repository\\Values\\Content\\Query\\FacetBuilder\\ContentTypeFacetBuilder", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1ContentTypeFacetBuilder.html", null ],
-        [ "eZ\\Publish\\API\\Repository\\Values\\Content\\Query\\FacetBuilder\\CritierionFacetBuilder", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1CritierionFacetBuilder.html", null ],
+        [ "eZ\\Publish\\API\\Repository\\Values\\Content\\Query\\FacetBuilder\\CriterionFacetBuilder", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1CriterionFacetBuilder.html", null ],
         [ "eZ\\Publish\\API\\Repository\\Values\\Content\\Query\\FacetBuilder\\DateRangeFacetBuilder", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html", null ],
         [ "eZ\\Publish\\API\\Repository\\Values\\Content\\Query\\FacetBuilder\\FieldFacetBuilder", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1FieldFacetBuilder.html", null ],
         [ "eZ\\Publish\\API\\Repository\\Values\\Content\\Query\\FacetBuilder\\FieldRangeFacetBuilder", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1FieldRangeFacetBuilder.html", null ],
