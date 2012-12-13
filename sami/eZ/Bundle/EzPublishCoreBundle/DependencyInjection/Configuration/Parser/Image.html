@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\Parser\Image | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../eZ/Bundle/EzPublishCoreBundle/DependencyInjection/Configuration/Parser.html">eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\Parser</a>\Image</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Image</strong>        extends <a href="../../../../../../eZ/Bundle/EzPublishCoreBundle/DependencyInjection/Configuration/AbstractParser.html"><abbr title="eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\AbstractParser">AbstractParser</abbr></a></p>
+
+            <div class="description">
+            <p>Configuration parser handling all basic configuration (aka &quot;Image&quot;)</p>
+            <p></p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>UNIQUE</td>
+                <td class="last">
+                    <p><em>With this option, AbstractParser::registerInternalConfigArray() will call array_unique() at the end of the merge process.</em></p>
+                    <p>This will only work<br />
+ with normal arrays (ie not hashes) containing scalar values.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MERGE_FROM_SECOND_LEVEL</td>
+                <td class="last">
+                    <p><em>With this option, AbstractParser::registerInternalConfigArray() will merge the hashes from the second level.</em></p>
+                    <p>For instance:<br />
+ array( &#039;full&#039; =&gt; array( 1, 2, 3 ) ) and array( &#039;full&#039; =&gt; array( 4, 5 ) )<br />
+ will result in array( &#039;full&#039; =&gt; array( 1, 2, 3, 4, 5 ) )</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setBaseKey">setBaseKey</a>(string $key)
+                    <p>Sets the base key of this parser.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../eZ/Bundle/EzPublishCoreBundle/DependencyInjection/Configuration/AbstractParser.html#method_setBaseKey"><abbr title="eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\AbstractParser">AbstractParser</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_addSemanticConfig">addSemanticConfig</a>(<abbr title="Symfony\Component\Config\Definition\Builder\NodeBuilder">NodeBuilder</abbr> $nodeBuilder)
+                    <p>Adds semantic configuration definition.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_registerInternalConfig">registerInternalConfig</a>(array $config, <abbr title="Symfony\Component\DependencyInjection\ContainerBuilder">ContainerBuilder</abbr> $container)
+                    <p>Translates parsed semantic config values from $config to internal key/value pairs.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setBaseKey">
+        <div class="location">in <a href="../../../../../../eZ/Bundle/EzPublishCoreBundle/DependencyInjection/Configuration/AbstractParser.html#method_setBaseKey"><abbr title="eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\AbstractParser">AbstractParser</abbr></a> at line 55</div>
+        <code>            public            
+    <strong>setBaseKey</strong>(string $key)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the base key of this parser.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addSemanticConfig">
+        <div class="location">at line 26</div>
+        <code>            public            void
+    <strong>addSemanticConfig</strong>(<abbr title="Symfony\Component\Config\Definition\Builder\NodeBuilder">NodeBuilder</abbr> $nodeBuilder)</code>
+    </h3>
+    <div class="details">
+        <p>Adds semantic configuration definition.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Symfony\Component\Config\Definition\Builder\NodeBuilder">NodeBuilder</abbr></td>
+                <td>$nodeBuilder</td>
+                <td>Node just under ezpublish.system.&lt;siteaccess&gt;</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_registerInternalConfig">
+        <div class="location">at line 96</div>
+        <code>            public            void
+    <strong>registerInternalConfig</strong>(array $config, <abbr title="Symfony\Component\DependencyInjection\ContainerBuilder">ContainerBuilder</abbr> $container)</code>
+    </h3>
+    <div class="details">
+        <p>Translates parsed semantic config values from $config to internal key/value pairs.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Symfony\Component\DependencyInjection\ContainerBuilder">ContainerBuilder</abbr></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

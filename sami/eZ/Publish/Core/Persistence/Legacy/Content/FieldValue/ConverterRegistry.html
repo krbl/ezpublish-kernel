@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/FieldValue.html">eZ\Publish\Core\Persistence\Legacy\Content\FieldValue</a>\ConverterRegistry</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ConverterRegistry</strong></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(array $converterMap)
+                    <p>Create converter registry with converter map</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_register">register</a>(string $typeName, mixed $converter)
+                    <p>Register a $converter for $typeName</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/FieldValue/Converter.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter">Converter</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getConverter">getConverter</a>(string $typeName)
+                    <p>Returns converter for $typeName</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 38</div>
+        <code>            public            
+    <strong>__construct</strong>(array $converterMap)</code>
+    </h3>
+    <div class="details">
+        <p>Create converter registry with converter map</p>
+        <p>In $converterMap a array consists of a mapping of field<br />
+ type names to object / callable is expected, in case of callable<br />
+ factory converter object should be returned on execution. The object<br />
+ is used to convert content fields and content type field definitions<br />
+ to the legacy storage engine. The given class names must derive the<br />
+ {@link \eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter}<br />
+ interface.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$converterMap</td>
+                <td>A map where key is field type name, and value is a callable factory to get Converter OR Converter object</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_register">
+        <div class="location">at line 51</div>
+        <code>            public            void
+    <strong>register</strong>(string $typeName, mixed $converter)</code>
+    </h3>
+    <div class="details">
+        <p>Register a $converter for $typeName</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$typeName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$converter</td>
+                <td>Callable or converter instance</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConverter">
+        <div class="location">at line 66</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/FieldValue/Converter.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter">Converter</abbr></a>
+    <strong>getConverter</strong>(string $typeName)</code>
+    </h3>
+    <div class="details">
+        <p>Returns converter for $typeName</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$typeName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/FieldValue/Converter.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter">Converter</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/FieldValue/Converter/Exception/NotFound.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\Exception\NotFound">NotFound</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td>When type is neither Converter instance or callable factory</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

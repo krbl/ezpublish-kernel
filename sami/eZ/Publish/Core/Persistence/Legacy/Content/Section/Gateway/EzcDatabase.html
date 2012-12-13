@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway\EzcDatabase | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Section/Gateway.html">eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway</a>\EzcDatabase</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>EzcDatabase</strong>        extends <a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Section/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway">Gateway</abbr></a></p>
+
+            <div class="description">
+            <p>Section Handler</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_insertSection">insertSection</a>(string $name, string $identifier)
+                    <p>Inserts a new section with $name and $identifier</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_updateSection">updateSection</a>(int $id, string $name, string $identifier)
+                    <p>Updates section with $id to have $name and $identifier</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway\string[]">string[]</abbr>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadSectionData">loadSectionData</a>(int $id)
+                    <p>Loads data for section with $id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway\string[]">string[]</abbr>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadAllSectionData">loadAllSectionData</a>()
+                    <p>Loads data for all sections</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway\string[]">string[]</abbr>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadSectionDataByIdentifier">loadSectionDataByIdentifier</a>(int $identifier)
+                    <p>Loads data for section with $identifier</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_countContentObjectsInSection">countContentObjectsInSection</a>(int $id)
+                    <p>Counts the number of content objects assigned to section with $id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_deleteSection">deleteSection</a>(int $id)
+                    <p>Deletes the Section with $id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_assignSectionToContent">assignSectionToContent</a>(int $sectionId, int $contentId)
+                    <p>Inserts the assignment of $contentId to $sectionId</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a> $dbHandler)
+                    <p>Creates a new EzcDatabase Section Gateway</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_insertSection">
+        <div class="location">at line 45</div>
+        <code>            public            int
+    <strong>insertSection</strong>(string $name, string $identifier)</code>
+    </h3>
+    <div class="details">
+        <p>Inserts a new section with $name and $identifier</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>The ID of the new section</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateSection">
+        <div class="location">at line 77</div>
+        <code>            public            void
+    <strong>updateSection</strong>(int $id, string $name, string $identifier)</code>
+    </h3>
+    <div class="details">
+        <p>Updates section with $id to have $name and $identifier</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadSectionData">
+        <div class="location">at line 105</div>
+        <code>            public            <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway\string[]">string[]</abbr>[]
+    <strong>loadSectionData</strong>(int $id)</code>
+    </h3>
+    <div class="details">
+        <p>Loads data for section with $id</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway\string[]">string[]</abbr>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadAllSectionData">
+        <div class="location">at line 132</div>
+        <code>            public            <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway\string[]">string[]</abbr>[]
+    <strong>loadAllSectionData</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads data for all sections</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway\string[]">string[]</abbr>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadSectionDataByIdentifier">
+        <div class="location">at line 156</div>
+        <code>            public            <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway\string[]">string[]</abbr>[]
+    <strong>loadSectionDataByIdentifier</strong>(int $identifier)</code>
+    </h3>
+    <div class="details">
+        <p>Loads data for section with $identifier</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway\string[]">string[]</abbr>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countContentObjectsInSection">
+        <div class="location">at line 185</div>
+        <code>            public            int
+    <strong>countContentObjectsInSection</strong>(int $id)</code>
+    </h3>
+    <div class="details">
+        <p>Counts the number of content objects assigned to section with $id</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteSection">
+        <div class="location">at line 217</div>
+        <code>            public            void
+    <strong>deleteSection</strong>(int $id)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes the Section with $id</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_assignSectionToContent">
+        <div class="location">at line 240</div>
+        <code>            public            void
+    <strong>assignSectionToContent</strong>(int $sectionId, int $contentId)</code>
+    </h3>
+    <div class="details">
+        <p>Inserts the assignment of $contentId to $sectionId</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$sectionId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 32</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a> $dbHandler)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new EzcDatabase Section Gateway</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a></td>
+                <td>$dbHandler</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\ExceptionConversion | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Gateway.html">eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway</a>\ExceptionConversion</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ExceptionConversion</strong>        extends <a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway">Gateway</abbr></a></p>
+
+            <div class="description">
+            <p>Base class for content type gateways.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_insertGroup">insertGroup</a>(<a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a> $group)
+                    <p>Inserts the given $group.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_updateGroup">updateGroup</a>(<a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group\UpdateStruct">UpdateStruct</abbr></a> $group)
+                    <p>Updates a group with data in $group.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_countTypesInGroup">countTypesInGroup</a>(int $groupId)
+                    <p>Returns the number of types in a certain group.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_countGroupsForType">countGroupsForType</a>(int $typeId, int $status)
+                    <p>Returns the number of Groups the type is assigned to.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_deleteGroup">deleteGroup</a>(int $groupId)
+                    <p>Deletes the Group with the given $groupId.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_loadGroupData">loadGroupData</a>(int $groupId)
+                    <p>Returns an array with data about the Group with $groupId.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_loadGroupDataByIdentifier">loadGroupDataByIdentifier</a>(int $identifier)
+                    <p>Returns an array with data about the Group with $identifier.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_loadAllGroupsData">loadAllGroupsData</a>()
+                    <p>Returns an array with data about all Group objects.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\string[]">string[]</abbr>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadTypesDataForGroup">loadTypesDataForGroup</a>(mixed $groupId, int $status)
+                    <p>Loads data for all Types in $status in $groupId.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_insertType">insertType</a>(<a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a> $type, mixed|null $typeId = null)
+                    <p>Inserts a new content type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_insertGroupAssignment">insertGroupAssignment</a>(mixed $typeId, int $status, mixed $groupId)
+                    <p>Insert assignment of $typeId to $groupId.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_deleteGroupAssignment">deleteGroupAssignment</a>(mixed $groupId, mixed $typeId, int $status)
+                    <p>Deletes a group assignments for a Type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_loadFieldDefinition">loadFieldDefinition</a>(mixed $id, int $status)
+                    <p>Loads an array with data about field definition referred $id and $status.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_insertFieldDefinition">insertFieldDefinition</a>(mixed $typeId, int $status, <a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition, <a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldDefinition.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition">StorageFieldDefinition</abbr></a> $storageFieldDef)
+                    <p>Inserts a $fieldDefinition for $typeId.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_deleteFieldDefinition">deleteFieldDefinition</a>(mixed $typeId, int $status, mixed $fieldDefinitionId)
+                    <p>Deletes a field definition.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_updateFieldDefinition">updateFieldDefinition</a>(mixed $typeId, int $status, <a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition, <a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldDefinition.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition">StorageFieldDefinition</abbr></a> $storageFieldDef)
+                    <p>Updates a $fieldDefinition for $typeId.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_updateType">updateType</a>(mixed $typeId, int $status, <a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\UpdateStruct">UpdateStruct</abbr></a> $updateStruct)
+                    <p>Update a type with $updateStruct.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_loadTypeData">loadTypeData</a>(mixed $typeId, int $status)
+                    <p>Loads an array with data about $typeId in $status.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\array(int=&gt;array(string=&gt;mixed))">array(int=&gt;array(string=&gt;mixed))</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_loadTypeDataByIdentifier">loadTypeDataByIdentifier</a>(string $identifier, int $status)
+                    <p>Loads an array with data about the type referred to by $identifier in $status.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\array(int=&gt;array(string=&gt;mixed))">array(int=&gt;array(string=&gt;mixed))</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_loadTypeDataByRemoteId">loadTypeDataByRemoteId</a>(mixed $remoteId, int $status)
+                    <p>Loads an array with data about the type referred to by $remoteId in $status.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_countInstancesOfType">countInstancesOfType</a>(int $typeId)
+                    <p>Counts the number of instances that exists of the identified type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(mixed $typeId, int $status)
+                    <p>Deletes a Type completely.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_deleteFieldDefinitionsForType">deleteFieldDefinitionsForType</a>(mixed $typeId, int $status)
+                    <p>Deletes all field definitions of a Type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_deleteType">deleteType</a>(mixed $typeId, int $status)
+                    <p>Deletes a the Type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_deleteGroupAssignmentsForType">deleteGroupAssignmentsForType</a>(mixed $typeId, int $status)
+                    <p>Deletes all group assignments for a Type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_publishTypeAndFields">publishTypeAndFields</a>(int $typeId, int $sourceStatus, int $targetStatus)
+                    <p>Publishes the Type with $typeId from $sourceVersion to $targetVersion, including its fields</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway">Gateway</abbr></a> $innerGateway)
+                    <p>Creates a new exception conversion gateway around $innerGateway</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_insertGroup">
+        <div class="location">at line 49</div>
+        <code>            public            mixed
+    <strong>insertGroup</strong>(<a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a> $group)</code>
+    </h3>
+    <div class="details">
+        <p>Inserts the given $group.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a></td>
+                <td>$group</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>Group ID</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateGroup">
+        <div class="location">at line 72</div>
+        <code>            public            void
+    <strong>updateGroup</strong>(<a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group\UpdateStruct">UpdateStruct</abbr></a> $group)</code>
+    </h3>
+    <div class="details">
+        <p>Updates a group with data in $group.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group\UpdateStruct">UpdateStruct</abbr></a></td>
+                <td>$group</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countTypesInGroup">
+        <div class="location">at line 95</div>
+        <code>            public            int
+    <strong>countTypesInGroup</strong>(int $groupId)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of types in a certain group.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$groupId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countGroupsForType">
+        <div class="location">at line 119</div>
+        <code>            public            int
+    <strong>countGroupsForType</strong>(int $typeId, int $status)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of Groups the type is assigned to.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$typeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteGroup">
+        <div class="location">at line 142</div>
+        <code>            public            void
+    <strong>deleteGroup</strong>(int $groupId)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes the Group with the given $groupId.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$groupId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadGroupData">
+        <div class="location">at line 165</div>
+        <code>            public            array
+    <strong>loadGroupData</strong>(int $groupId)</code>
+    </h3>
+    <div class="details">
+        <p>Returns an array with data about the Group with $groupId.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$groupId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadGroupDataByIdentifier">
+        <div class="location">at line 188</div>
+        <code>            public            array
+    <strong>loadGroupDataByIdentifier</strong>(int $identifier)</code>
+    </h3>
+    <div class="details">
+        <p>Returns an array with data about the Group with $identifier.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadAllGroupsData">
+        <div class="location">at line 209</div>
+        <code>            public            array
+    <strong>loadAllGroupsData</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns an array with data about all Group objects.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadTypesDataForGroup">
+        <div class="location">at line 233</div>
+        <code>            public            <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\string[]">string[]</abbr>[]
+    <strong>loadTypesDataForGroup</strong>(mixed $groupId, int $status)</code>
+    </h3>
+    <div class="details">
+        <p>Loads data for all Types in $status in $groupId.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$groupId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\string[]">string[]</abbr>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_insertType">
+        <div class="location">at line 257</div>
+        <code>            public            mixed
+    <strong>insertType</strong>(<a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a> $type, mixed|null $typeId = null)</code>
+    </h3>
+    <div class="details">
+        <p>Inserts a new content type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed|null</td>
+                <td>$typeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>Type ID</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_insertGroupAssignment">
+        <div class="location">at line 282</div>
+        <code>            public            void
+    <strong>insertGroupAssignment</strong>(mixed $typeId, int $status, mixed $groupId)</code>
+    </h3>
+    <div class="details">
+        <p>Insert assignment of $typeId to $groupId.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$typeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$groupId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteGroupAssignment">
+        <div class="location">at line 307</div>
+        <code>            public            void
+    <strong>deleteGroupAssignment</strong>(mixed $groupId, mixed $typeId, int $status)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes a group assignments for a Type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$groupId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$typeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadFieldDefinition">
+        <div class="location">at line 331</div>
+        <code>            public            array
+    <strong>loadFieldDefinition</strong>(mixed $id, int $status)</code>
+    </h3>
+    <div class="details">
+        <p>Loads an array with data about field definition referred $id and $status.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td>field definition id</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td>field definition status</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>Data rows.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_insertFieldDefinition">
+        <div class="location">at line 357</div>
+        <code>            public            mixed
+    <strong>insertFieldDefinition</strong>(mixed $typeId, int $status, <a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition, <a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldDefinition.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition">StorageFieldDefinition</abbr></a> $storageFieldDef)</code>
+    </h3>
+    <div class="details">
+        <p>Inserts a $fieldDefinition for $typeId.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$typeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a></td>
+                <td>$fieldDefinition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldDefinition.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition">StorageFieldDefinition</abbr></a></td>
+                <td>$storageFieldDef</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>Field definition ID</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteFieldDefinition">
+        <div class="location">at line 385</div>
+        <code>            public            void
+    <strong>deleteFieldDefinition</strong>(mixed $typeId, int $status, mixed $fieldDefinitionId)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes a field definition.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$typeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$fieldDefinitionId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateFieldDefinition">
+        <div class="location">at line 411</div>
+        <code>            public            void
+    <strong>updateFieldDefinition</strong>(mixed $typeId, int $status, <a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition, <a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldDefinition.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition">StorageFieldDefinition</abbr></a> $storageFieldDef)</code>
+    </h3>
+    <div class="details">
+        <p>Updates a $fieldDefinition for $typeId.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$typeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a></td>
+                <td>$fieldDefinition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldDefinition.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition">StorageFieldDefinition</abbr></a></td>
+                <td>$storageFieldDef</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateType">
+        <div class="location">at line 439</div>
+        <code>            public            void
+    <strong>updateType</strong>(mixed $typeId, int $status, <a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\UpdateStruct">UpdateStruct</abbr></a> $updateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Update a type with $updateStruct.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$typeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\UpdateStruct">UpdateStruct</abbr></a></td>
+                <td>$updateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadTypeData">
+        <div class="location">at line 463</div>
+        <code>            public            array
+    <strong>loadTypeData</strong>(mixed $typeId, int $status)</code>
+    </h3>
+    <div class="details">
+        <p>Loads an array with data about $typeId in $status.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$typeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>Data rows.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadTypeDataByIdentifier">
+        <div class="location">at line 488</div>
+        <code>            public            <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\array(int=&gt;array(string=&gt;mixed))">array(int=&gt;array(string=&gt;mixed))</abbr>
+    <strong>loadTypeDataByIdentifier</strong>(string $identifier, int $status)</code>
+    </h3>
+    <div class="details">
+        <p>Loads an array with data about the type referred to by $identifier in $status.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\array(int=&gt;array(string=&gt;mixed))">array(int=&gt;array(string=&gt;mixed))</abbr></td>
+            <td>Data rows.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadTypeDataByRemoteId">
+        <div class="location">at line 513</div>
+        <code>            public            <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\array(int=&gt;array(string=&gt;mixed))">array(int=&gt;array(string=&gt;mixed))</abbr>
+    <strong>loadTypeDataByRemoteId</strong>(mixed $remoteId, int $status)</code>
+    </h3>
+    <div class="details">
+        <p>Loads an array with data about the type referred to by $remoteId in $status.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$remoteId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway\array(int=&gt;array(string=&gt;mixed))">array(int=&gt;array(string=&gt;mixed))</abbr></td>
+            <td>Data rows.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countInstancesOfType">
+        <div class="location">at line 536</div>
+        <code>            public            int
+    <strong>countInstancesOfType</strong>(int $typeId)</code>
+    </h3>
+    <div class="details">
+        <p>Counts the number of instances that exists of the identified type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$typeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 560</div>
+        <code>            public            void
+    <strong>delete</strong>(mixed $typeId, int $status)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes a Type completely.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$typeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteFieldDefinitionsForType">
+        <div class="location">at line 584</div>
+        <code>            public            void
+    <strong>deleteFieldDefinitionsForType</strong>(mixed $typeId, int $status)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes all field definitions of a Type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$typeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteType">
+        <div class="location">at line 610</div>
+        <code>            public            void
+    <strong>deleteType</strong>(mixed $typeId, int $status)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes a the Type.</p>
+        <p>Does no delete the field definitions!</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$typeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteGroupAssignmentsForType">
+        <div class="location">at line 634</div>
+        <code>            public            void
+    <strong>deleteGroupAssignmentsForType</strong>(mixed $typeId, int $status)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes all group assignments for a Type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$typeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_publishTypeAndFields">
+        <div class="location">at line 660</div>
+        <code>            public            void
+    <strong>publishTypeAndFields</strong>(int $typeId, int $sourceStatus, int $targetStatus)</code>
+    </h3>
+    <div class="details">
+        <p>Publishes the Type with $typeId from $sourceVersion to $targetVersion, including its fields</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$typeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$sourceStatus</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$targetStatus</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 37</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway">Gateway</abbr></a> $innerGateway)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new exception conversion gateway around $innerGateway</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway">Gateway</abbr></a></td>
+                <td>$innerGateway</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

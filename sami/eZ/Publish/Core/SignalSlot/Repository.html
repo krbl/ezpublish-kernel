@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\SignalSlot\Repository | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../eZ/Publish/Core/SignalSlot.html">eZ\Publish\Core\SignalSlot</a>\Repository</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Repository</strong>        implements
+        <a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a></p>
+
+            <div class="description">
+            <p>Repository class</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository, <a href="../../../../eZ/Publish/Core/SignalSlot/SignalDispatcher.html"><abbr title="eZ\Publish\Core\SignalSlot\SignalDispatcher">SignalDispatcher</abbr></a> $signalDispatcher)
+                    <p>Constructor</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getCurrentUser">getCurrentUser</a>()
+                    <p>Get current user</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setCurrentUser">setCurrentUser</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user)
+                    <p>Sets the current user to the user with the given user id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean|array
+                </td>
+                <td class="last">
+                    <a href="#method_hasAccess">hasAccess</a>(string $module, string $function, <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user = null)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_canUser">canUser</a>(string $module, string $function, <a href="../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a> $object, <a href="../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a> $target = null)
+                    <p>Indicates if the current user is allowed to perform an action given by the function on the given objects</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/ContentService.html"><abbr title="eZ\Publish\API\Repository\ContentService">ContentService</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getContentService">getContentService</a>()
+                    <p>Get Content Service</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/LanguageService.html"><abbr title="eZ\Publish\API\Repository\LanguageService">LanguageService</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getContentLanguageService">getContentLanguageService</a>()
+                    <p>Get Content Language Service</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/ContentTypeService.html"><abbr title="eZ\Publish\API\Repository\ContentTypeService">ContentTypeService</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getContentTypeService">getContentTypeService</a>()
+                    <p>Get Content Type Service</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/LocationService.html"><abbr title="eZ\Publish\API\Repository\LocationService">LocationService</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getLocationService">getLocationService</a>()
+                    <p>Get Content Location Service</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/TrashService.html"><abbr title="eZ\Publish\API\Repository\TrashService">TrashService</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTrashService">getTrashService</a>()
+                    <p>Get Content Trash service</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/SectionService.html"><abbr title="eZ\Publish\API\Repository\SectionService">SectionService</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getSectionService">getSectionService</a>()
+                    <p>Get Content Section Service</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/UserService.html"><abbr title="eZ\Publish\API\Repository\UserService">UserService</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getUserService">getUserService</a>()
+                    <p>Get User Service</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/URLAliasService.html"><abbr title="eZ\Publish\API\Repository\URLAliasService">URLAliasService</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getURLAliasService">getURLAliasService</a>()
+                    <p>Get URLAliasService</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/URLWildcardService.html"><abbr title="eZ\Publish\API\Repository\URLWildcardService">URLWildcardService</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getURLWildcardService">getURLWildcardService</a>()
+                    <p>Get URLWildcardService</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/ObjectStateService.html"><abbr title="eZ\Publish\API\Repository\ObjectStateService">ObjectStateService</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getObjectStateService">getObjectStateService</a>()
+                    <p>Get ObjectStateService</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/IOService.html"><abbr title="eZ\Publish\API\Repository\IOService">IOService</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getIOService">getIOService</a>()
+                    <p>Get IO Service</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/RoleService.html"><abbr title="eZ\Publish\API\Repository\RoleService">RoleService</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getRoleService">getRoleService</a>()
+                    <p>Get RoleService</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/SearchService.html"><abbr title="eZ\Publish\API\Repository\SearchService">SearchService</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getSearchService">getSearchService</a>()
+                    <p>Get Search Service</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/FieldTypeService.html"><abbr title="eZ\Publish\API\Repository\FieldTypeService">FieldTypeService</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getFieldTypeService">getFieldTypeService</a>()
+                    <p>Get FieldTypeService</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/Core/Repository/NameSchemaService.html"><abbr title="eZ\Publish\Core\Repository\NameSchemaService">NameSchemaService</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getNameSchemaService">getNameSchemaService</a>()
+                    <p>Get NameSchemaResolverService</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_beginTransaction">beginTransaction</a>()
+                    <p>Begin transaction</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_commit">commit</a>()
+                    <p>Commit transaction</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_rollback">rollback</a>()
+                    <p>Rollback transaction</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createDateTime">createDateTime</a>(int $timestamp = null)
+                    <p>Only for internal use.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 151</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository, <a href="../../../../eZ/Publish/Core/SignalSlot/SignalDispatcher.html"><abbr title="eZ\Publish\Core\SignalSlot\SignalDispatcher">SignalDispatcher</abbr></a> $signalDispatcher)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor</p>
+        <p>Construct repository object from aggregated repository and signal<br />
+ dispatcher</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a></td>
+                <td>$repository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/Core/SignalSlot/SignalDispatcher.html"><abbr title="eZ\Publish\Core\SignalSlot\SignalDispatcher">SignalDispatcher</abbr></a></td>
+                <td>$signalDispatcher</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCurrentUser">
+        <div class="location">at line 162</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a>
+    <strong>getCurrentUser</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get current user</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setCurrentUser">
+        <div class="location">at line 173</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a>
+    <strong>setCurrentUser</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the current user to the user with the given user id</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasAccess">
+        <div class="location">at line 189</div>
+        <code>            public            boolean|array
+    <strong>hasAccess</strong>(string $module, string $function, <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td>The module, aka controller identifier to check permissions on</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$function</td>
+                <td>The function, aka the controller action to check permissions on</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean|array</td>
+            <td>Bool if user has full or no access, array if limitations if not</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_canUser">
+        <div class="location">at line 210</div>
+        <code>            public            boolean
+    <strong>canUser</strong>(string $module, string $function, <a href="../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a> $object, <a href="../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a> $target = null)</code>
+    </h3>
+    <div class="details">
+        <p>Indicates if the current user is allowed to perform an action given by the function on the given objects</p>
+        <p>Example: canUser( &#039;content&#039;, &#039;edit&#039;, $content, $location );<br />
+          This will check edit permission on content given the specific location, if skipped if will check on all<br />
+          locations.<br />
+<br />
+ Example2: canUser( &#039;section&#039;, &#039;assign&#039;, $content, $section );<br />
+           Check if user has access to assign $content to $section.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td>The module, aka controller identifier to check permissions on</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$function</td>
+                <td>The function, aka the controller action to check permissions on</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a></td>
+                <td>$object</td>
+                <td>The object to check if the user has access to</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a></td>
+                <td>$target</td>
+                <td>The location, parent or &quot;assignment&quot; value object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If any of the arguments are invalid</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>If value of the LimitationValue is unsupported</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getContentService">
+        <div class="location">at line 222</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/ContentService.html"><abbr title="eZ\Publish\API\Repository\ContentService">ContentService</abbr></a>
+    <strong>getContentService</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get Content Service</p>
+        <p>Get service object to perform operations on Content objects and it&#039;s aggregate members.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/ContentService.html"><abbr title="eZ\Publish\API\Repository\ContentService">ContentService</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getContentLanguageService">
+        <div class="location">at line 238</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/LanguageService.html"><abbr title="eZ\Publish\API\Repository\LanguageService">LanguageService</abbr></a>
+    <strong>getContentLanguageService</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get Content Language Service</p>
+        <p>Get service object to perform operations on Content language objects</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/LanguageService.html"><abbr title="eZ\Publish\API\Repository\LanguageService">LanguageService</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getContentTypeService">
+        <div class="location">at line 255</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/ContentTypeService.html"><abbr title="eZ\Publish\API\Repository\ContentTypeService">ContentTypeService</abbr></a>
+    <strong>getContentTypeService</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get Content Type Service</p>
+        <p>Get service object to perform operations on Content Type objects and it&#039;s aggregate members.<br />
+ ( Group, Field &amp; FieldCategory )</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/ContentTypeService.html"><abbr title="eZ\Publish\API\Repository\ContentTypeService">ContentTypeService</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLocationService">
+        <div class="location">at line 271</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/LocationService.html"><abbr title="eZ\Publish\API\Repository\LocationService">LocationService</abbr></a>
+    <strong>getLocationService</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get Content Location Service</p>
+        <p>Get service object to perform operations on Location objects and subtrees</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/LocationService.html"><abbr title="eZ\Publish\API\Repository\LocationService">LocationService</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTrashService">
+        <div class="location">at line 288</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/TrashService.html"><abbr title="eZ\Publish\API\Repository\TrashService">TrashService</abbr></a>
+    <strong>getTrashService</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get Content Trash service</p>
+        <p>Trash service allows to perform operations related to location trash<br />
+ (trash/untrash, load/list from trash...)</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/TrashService.html"><abbr title="eZ\Publish\API\Repository\TrashService">TrashService</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSectionService">
+        <div class="location">at line 304</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/SectionService.html"><abbr title="eZ\Publish\API\Repository\SectionService">SectionService</abbr></a>
+    <strong>getSectionService</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get Content Section Service</p>
+        <p>Get Section service that lets you manipulate section objects</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/SectionService.html"><abbr title="eZ\Publish\API\Repository\SectionService">SectionService</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUserService">
+        <div class="location">at line 320</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/UserService.html"><abbr title="eZ\Publish\API\Repository\UserService">UserService</abbr></a>
+    <strong>getUserService</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get User Service</p>
+        <p>Get service object to perform operations on Users and UserGroup</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/UserService.html"><abbr title="eZ\Publish\API\Repository\UserService">UserService</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getURLAliasService">
+        <div class="location">at line 334</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/URLAliasService.html"><abbr title="eZ\Publish\API\Repository\URLAliasService">URLAliasService</abbr></a>
+    <strong>getURLAliasService</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get URLAliasService</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/URLAliasService.html"><abbr title="eZ\Publish\API\Repository\URLAliasService">URLAliasService</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getURLWildcardService">
+        <div class="location">at line 348</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/URLWildcardService.html"><abbr title="eZ\Publish\API\Repository\URLWildcardService">URLWildcardService</abbr></a>
+    <strong>getURLWildcardService</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get URLWildcardService</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/URLWildcardService.html"><abbr title="eZ\Publish\API\Repository\URLWildcardService">URLWildcardService</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getObjectStateService">
+        <div class="location">at line 362</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/ObjectStateService.html"><abbr title="eZ\Publish\API\Repository\ObjectStateService">ObjectStateService</abbr></a>
+    <strong>getObjectStateService</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get ObjectStateService</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/ObjectStateService.html"><abbr title="eZ\Publish\API\Repository\ObjectStateService">ObjectStateService</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIOService">
+        <div class="location">at line 378</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/IOService.html"><abbr title="eZ\Publish\API\Repository\IOService">IOService</abbr></a>
+    <strong>getIOService</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get IO Service</p>
+        <p>Get service object to perform operations on binary files</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/IOService.html"><abbr title="eZ\Publish\API\Repository\IOService">IOService</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRoleService">
+        <div class="location">at line 389</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/RoleService.html"><abbr title="eZ\Publish\API\Repository\RoleService">RoleService</abbr></a>
+    <strong>getRoleService</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get RoleService</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/RoleService.html"><abbr title="eZ\Publish\API\Repository\RoleService">RoleService</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSearchService">
+        <div class="location">at line 403</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/SearchService.html"><abbr title="eZ\Publish\API\Repository\SearchService">SearchService</abbr></a>
+    <strong>getSearchService</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get Search Service</p>
+        <p>Get search service that lets you find content objects</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/SearchService.html"><abbr title="eZ\Publish\API\Repository\SearchService">SearchService</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFieldTypeService">
+        <div class="location">at line 417</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/FieldTypeService.html"><abbr title="eZ\Publish\API\Repository\FieldTypeService">FieldTypeService</abbr></a>
+    <strong>getFieldTypeService</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get FieldTypeService</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/FieldTypeService.html"><abbr title="eZ\Publish\API\Repository\FieldTypeService">FieldTypeService</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getNameSchemaService">
+        <div class="location">at line 435</div>
+        <code>            public            <a href="../../../../eZ/Publish/Core/Repository/NameSchemaService.html"><abbr title="eZ\Publish\Core\Repository\NameSchemaService">NameSchemaService</abbr></a>
+    <strong>getNameSchemaService</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get NameSchemaResolverService</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/Core/Repository/NameSchemaService.html"><abbr title="eZ\Publish\Core\Repository\NameSchemaService">NameSchemaService</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_beginTransaction">
+        <div class="location">at line 446</div>
+        <code>            public            
+    <strong>beginTransaction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Begin transaction</p>
+        <p>Begins an transaction, make sure you&#039;ll call commit or rollback when done,<br />
+ otherwise work will be lost.</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_commit">
+        <div class="location">at line 458</div>
+        <code>            public            
+    <strong>commit</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Commit transaction</p>
+        <p>Commit transaction, or throw exceptions if no transactions has been started.</p>
+        <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td>If no transaction has been started</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rollback">
+        <div class="location">at line 470</div>
+        <code>            public            
+    <strong>rollback</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Rollback transaction</p>
+        <p>Rollback transaction, or throw exceptions if no transactions has been started.</p>
+        <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td>If no transaction has been started</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createDateTime">
+        <div class="location">at line 484</div>
+        <code>            public            <a href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a>
+    <strong>createDateTime</strong>(int $timestamp = null)</code>
+    </h3>
+    <div class="details">
+        <p>Only for internal use.</p>
+        <p>Creates a \DateTime object for $timestamp in the current time zone</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$timestamp</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

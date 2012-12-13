@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\REST\Server\Controller\Content | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html">eZ\Publish\Core\REST\Server\Controller</a>\Content</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Content</strong>        extends <a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a></p>
+
+            <div class="description">
+            <p>Content controller</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setInputDispatcher">setInputDispatcher</a>(<a href="../../../../../../eZ/Publish/Core/REST/Common/Input/Dispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\Dispatcher">Dispatcher</abbr></a> $inputDispatcher)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html#method_setInputDispatcher"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setUrlHandler">setUrlHandler</a>(<a href="../../../../../../eZ/Publish/Core/REST/Common/UrlHandler/eZPublish.html"><abbr title="eZ\Publish\Core\REST\Common\UrlHandler\eZPublish">eZPublish</abbr></a> $urlHandler)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html#method_setUrlHandler"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRequest">setRequest</a>(<a href="../../../../../../eZ/Publish/Core/REST/Server/Request.html"><abbr title="eZ\Publish\Core\REST\Server\Request">Request</abbr></a> $request)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html#method_setRequest"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setContainer">setContainer</a>(<abbr title="Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html#method_setContainer"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../eZ/Publish/API/Repository/ContentService.html"><abbr title="eZ\Publish\API\Repository\ContentService">ContentService</abbr></a> $contentService, <a href="../../../../../../eZ/Publish/API/Repository/LocationService.html"><abbr title="eZ\Publish\API\Repository\LocationService">LocationService</abbr></a> $locationService, <a href="../../../../../../eZ/Publish/API/Repository/SectionService.html"><abbr title="eZ\Publish\API\Repository\SectionService">SectionService</abbr></a> $sectionService, <a href="../../../../../../eZ/Publish/API/Repository/SearchService.html"><abbr title="eZ\Publish\API\Repository\SearchService">SearchService</abbr></a> $searchService)
+                    <p>Construct controller</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/ContentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\ContentList">ContentList</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentInfoByRemoteId">loadContentInfoByRemoteId</a>()
+                    <p>Loads a content info by remote ID</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestContent">RestContent</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadContent">loadContent</a>()
+                    <p>Loads a content info, potentially with the current version embedded</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestContent">RestContent</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateContentMetadata">updateContentMetadata</a>()
+                    <p>Updates a content&#039;s metadata</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/TemporaryRedirect.html"><abbr title="eZ\Publish\Core\REST\Server\Values\TemporaryRedirect">TemporaryRedirect</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_redirectCurrentVersion">redirectCurrentVersion</a>()
+                    <p>Loads a specific version of a given content object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/Version.html"><abbr title="eZ\Publish\Core\REST\Server\Values\Version">Version</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentInVersion">loadContentInVersion</a>()
+                    <p>Loads a specific version of a given content object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedContent">CreatedContent</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createContent">createContent</a>()
+                    <p>Creates a new content draft assigned to the authenticated user.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_deleteContent">deleteContent</a>()
+                    <p>The content is deleted.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/ResourceCreated.html"><abbr title="eZ\Publish\Core\REST\Server\Values\ResourceCreated">ResourceCreated</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_copyContent">copyContent</a>()
+                    <p>Creates a new content object as copy under the given parent location given in the destination header.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/VersionList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\VersionList">VersionList</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentVersions">loadContentVersions</a>()
+                    <p>Returns a list of all versions of the content.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_deleteContentVersion">deleteContentVersion</a>()
+                    <p>The version is deleted</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedVersion.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedVersion">CreatedVersion</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createDraftFromVersion">createDraftFromVersion</a>()
+                    <p>The system creates a new draft version as a copy from the given version</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedVersion.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedVersion">CreatedVersion</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createDraftFromCurrentVersion">createDraftFromCurrentVersion</a>()
+                    <p>The system creates a new draft version as a copy from the current version</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/Version.html"><abbr title="eZ\Publish\Core\REST\Server\Values\Version">Version</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateVersion">updateVersion</a>()
+                    <p>A specific draft is updated.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_publishVersion">publishVersion</a>()
+                    <p>The content version is published</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/TemporaryRedirect.html"><abbr title="eZ\Publish\Core\REST\Server\Values\TemporaryRedirect">TemporaryRedirect</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_redirectCurrentVersionRelations">redirectCurrentVersionRelations</a>()
+                    <p>Redirects to the relations of the current version</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RelationList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RelationList">RelationList</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadVersionRelations">loadVersionRelations</a>()
+                    <p>Loads the relations of the given version</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestRelation.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestRelation">RestRelation</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadVersionRelation">loadVersionRelation</a>()
+                    <p>Loads a relation for the given content object and version</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_removeRelation">removeRelation</a>()
+                    <p>Deletes a relation of the given draft.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedRelation.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedRelation">CreatedRelation</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createRelation">createRelation</a>()
+                    <p>Creates a new relation of type COMMON for the given draft.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestExecutedView.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestExecutedView">RestExecutedView</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createView">createView</a>()
+                    <p>Creates and executes a content view</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setInputDispatcher">
+        <div class="location">in <a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html#method_setInputDispatcher"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a> at line 39</div>
+        <code>            public            
+    <strong>setInputDispatcher</strong>(<a href="../../../../../../eZ/Publish/Core/REST/Common/Input/Dispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\Dispatcher">Dispatcher</abbr></a> $inputDispatcher)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/REST/Common/Input/Dispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\Dispatcher">Dispatcher</abbr></a></td>
+                <td>$inputDispatcher</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setUrlHandler">
+        <div class="location">in <a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html#method_setUrlHandler"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a> at line 44</div>
+        <code>            public            
+    <strong>setUrlHandler</strong>(<a href="../../../../../../eZ/Publish/Core/REST/Common/UrlHandler/eZPublish.html"><abbr title="eZ\Publish\Core\REST\Common\UrlHandler\eZPublish">eZPublish</abbr></a> $urlHandler)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/REST/Common/UrlHandler/eZPublish.html"><abbr title="eZ\Publish\Core\REST\Common\UrlHandler\eZPublish">eZPublish</abbr></a></td>
+                <td>$urlHandler</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRequest">
+        <div class="location">in <a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html#method_setRequest"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a> at line 49</div>
+        <code>            public            
+    <strong>setRequest</strong>(<a href="../../../../../../eZ/Publish/Core/REST/Server/Request.html"><abbr title="eZ\Publish\Core\REST\Server\Request">Request</abbr></a> $request)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Request.html"><abbr title="eZ\Publish\Core\REST\Server\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setContainer">
+        <div class="location">in <a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html#method_setContainer"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a> at line 54</div>
+        <code>            public            
+    <strong>setContainer</strong>(<abbr title="Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 70</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../eZ/Publish/API/Repository/ContentService.html"><abbr title="eZ\Publish\API\Repository\ContentService">ContentService</abbr></a> $contentService, <a href="../../../../../../eZ/Publish/API/Repository/LocationService.html"><abbr title="eZ\Publish\API\Repository\LocationService">LocationService</abbr></a> $locationService, <a href="../../../../../../eZ/Publish/API/Repository/SectionService.html"><abbr title="eZ\Publish\API\Repository\SectionService">SectionService</abbr></a> $sectionService, <a href="../../../../../../eZ/Publish/API/Repository/SearchService.html"><abbr title="eZ\Publish\API\Repository\SearchService">SearchService</abbr></a> $searchService)</code>
+    </h3>
+    <div class="details">
+        <p>Construct controller</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/ContentService.html"><abbr title="eZ\Publish\API\Repository\ContentService">ContentService</abbr></a></td>
+                <td>$contentService</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/LocationService.html"><abbr title="eZ\Publish\API\Repository\LocationService">LocationService</abbr></a></td>
+                <td>$locationService</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/SectionService.html"><abbr title="eZ\Publish\API\Repository\SectionService">SectionService</abbr></a></td>
+                <td>$sectionService</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/SearchService.html"><abbr title="eZ\Publish\API\Repository\SearchService">SearchService</abbr></a></td>
+                <td>$searchService</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentInfoByRemoteId">
+        <div class="location">at line 83</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/ContentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\ContentList">ContentList</abbr></a>
+    <strong>loadContentInfoByRemoteId</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads a content info by remote ID</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/ContentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\ContentList">ContentList</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContent">
+        <div class="location">at line 105</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestContent">RestContent</abbr></a>
+    <strong>loadContent</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads a content info, potentially with the current version embedded</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestContent">RestContent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateContentMetadata">
+        <div class="location">at line 135</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestContent">RestContent</abbr></a>
+    <strong>updateContentMetadata</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Updates a content&#039;s metadata</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestContent">RestContent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_redirectCurrentVersion">
+        <div class="location">at line 191</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/TemporaryRedirect.html"><abbr title="eZ\Publish\Core\REST\Server\Values\TemporaryRedirect">TemporaryRedirect</abbr></a>
+    <strong>redirectCurrentVersion</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads a specific version of a given content object</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/TemporaryRedirect.html"><abbr title="eZ\Publish\Core\REST\Server\Values\TemporaryRedirect">TemporaryRedirect</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentInVersion">
+        <div class="location">at line 215</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/Version.html"><abbr title="eZ\Publish\Core\REST\Server\Values\Version">Version</abbr></a>
+    <strong>loadContentInVersion</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads a specific version of a given content object</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/Version.html"><abbr title="eZ\Publish\Core\REST\Server\Values\Version">Version</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createContent">
+        <div class="location">at line 249</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedContent">CreatedContent</abbr></a>
+    <strong>createContent</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new content draft assigned to the authenticated user.</p>
+        <p>If a different userId is given in the input it is assigned to the<br />
+ given user but this required special rights for the authenticated<br />
+ user (this is useful for content staging where the transfer process<br />
+ does not have to authenticate with the user which created the content<br />
+ object in the source server). The user has to publish the content if<br />
+ it should be visible.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedContent">CreatedContent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteContent">
+        <div class="location">at line 280</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a>
+    <strong>deleteContent</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>The content is deleted.</p>
+        <p>If the content has locations (which is required in 4.x)<br />
+ on delete all locations assigned the content object are deleted via delete subtree.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_copyContent">
+        <div class="location">at line 296</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/ResourceCreated.html"><abbr title="eZ\Publish\Core\REST\Server\Values\ResourceCreated">ResourceCreated</abbr></a>
+    <strong>copyContent</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new content object as copy under the given parent location given in the destination header.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/ResourceCreated.html"><abbr title="eZ\Publish\Core\REST\Server\Values\ResourceCreated">ResourceCreated</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentVersions">
+        <div class="location">at line 321</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/VersionList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\VersionList">VersionList</abbr></a>
+    <strong>loadContentVersions</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns a list of all versions of the content.</p>
+        <p>This method does not<br />
+ include fields and relations in the Version elements of the response.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/VersionList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\VersionList">VersionList</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteContentVersion">
+        <div class="location">at line 338</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a>
+    <strong>deleteContentVersion</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>The version is deleted</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createDraftFromVersion">
+        <div class="location">at line 364</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedVersion.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedVersion">CreatedVersion</abbr></a>
+    <strong>createDraftFromVersion</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>The system creates a new draft version as a copy from the given version</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedVersion.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedVersion">CreatedVersion</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createDraftFromCurrentVersion">
+        <div class="location">at line 390</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedVersion.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedVersion">CreatedVersion</abbr></a>
+    <strong>createDraftFromCurrentVersion</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>The system creates a new draft version as a copy from the current version</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedVersion.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedVersion">CreatedVersion</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateVersion">
+        <div class="location">at line 420</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/Version.html"><abbr title="eZ\Publish\Core\REST\Server\Values\Version">Version</abbr></a>
+    <strong>updateVersion</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>A specific draft is updated.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/Version.html"><abbr title="eZ\Publish\Core\REST\Server\Values\Version">Version</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_publishVersion">
+        <div class="location">at line 472</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a>
+    <strong>publishVersion</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>The content version is published</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_redirectCurrentVersionRelations">
+        <div class="location">at line 498</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/TemporaryRedirect.html"><abbr title="eZ\Publish\Core\REST\Server\Values\TemporaryRedirect">TemporaryRedirect</abbr></a>
+    <strong>redirectCurrentVersionRelations</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Redirects to the relations of the current version</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/TemporaryRedirect.html"><abbr title="eZ\Publish\Core\REST\Server\Values\TemporaryRedirect">TemporaryRedirect</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadVersionRelations">
+        <div class="location">at line 519</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RelationList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RelationList">RelationList</abbr></a>
+    <strong>loadVersionRelations</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads the relations of the given version</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RelationList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RelationList">RelationList</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadVersionRelation">
+        <div class="location">at line 555</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestRelation.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestRelation">RestRelation</abbr></a>
+    <strong>loadVersionRelation</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads a relation for the given content object and version</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestRelation.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestRelation">RestRelation</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeRelation">
+        <div class="location">at line 582</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a>
+    <strong>removeRelation</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Deletes a relation of the given draft.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createRelation">
+        <div class="location">at line 619</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedRelation.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedRelation">CreatedRelation</abbr></a>
+    <strong>createRelation</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new relation of type COMMON for the given draft.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedRelation.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedRelation">CreatedRelation</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createView">
+        <div class="location">at line 667</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestExecutedView.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestExecutedView">RestExecutedView</abbr></a>
+    <strong>createView</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Creates and executes a content view</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestExecutedView.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestExecutedView">RestExecutedView</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

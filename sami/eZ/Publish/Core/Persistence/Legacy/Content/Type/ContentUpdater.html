@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Persistence\Legacy\Content\Type\ContentUpdater | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type.html">eZ\Publish\Core\Persistence\Legacy\Content\Type</a>\ContentUpdater</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ContentUpdater</strong></p>
+
+            <div class="description">
+            <p>Class to update content objects to a new type version</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Search/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Search\Handler">Handler</abbr></a> $searchHandler, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway">Gateway</abbr></a> $contentGateway, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/FieldValue/ConverterRegistry.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry">ConverterRegistry</abbr></a> $converterRegistry, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler">StorageHandler</abbr></a> $storageHandler)
+                    <p>Creates a new content updater</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/ContentUpdater/Action.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\ContentUpdater\Action">Action</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_determineActions">determineActions</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a> $fromType, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a> $toType)
+                    <p>Determines the neccessary update actions</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_applyUpdates">applyUpdates</a>(mixed $contentTypeId, array $actions)
+                    <p>Applies all given updates</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 63</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Search/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Search\Handler">Handler</abbr></a> $searchHandler, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway">Gateway</abbr></a> $contentGateway, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/FieldValue/ConverterRegistry.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry">ConverterRegistry</abbr></a> $converterRegistry, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler">StorageHandler</abbr></a> $storageHandler)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new content updater</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Search/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Search\Handler">Handler</abbr></a></td>
+                <td>$searchHandler</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway">Gateway</abbr></a></td>
+                <td>$contentGateway</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/FieldValue/ConverterRegistry.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry">ConverterRegistry</abbr></a></td>
+                <td>$converterRegistry</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler">StorageHandler</abbr></a></td>
+                <td>$storageHandler</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_determineActions">
+        <div class="location">at line 83</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/ContentUpdater/Action.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\ContentUpdater\Action">Action</abbr></a>[]
+    <strong>determineActions</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a> $fromType, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a> $toType)</code>
+    </h3>
+    <div class="details">
+        <p>Determines the neccessary update actions</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a></td>
+                <td>$fromType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a></td>
+                <td>$toType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/ContentUpdater/Action.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\ContentUpdater\Action">Action</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_applyUpdates">
+        <div class="location">at line 142</div>
+        <code>            public            void
+    <strong>applyUpdates</strong>(mixed $contentTypeId, array $actions)</code>
+    </h3>
+    <div class="details">
+        <p>Applies all given updates</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentTypeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$actions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

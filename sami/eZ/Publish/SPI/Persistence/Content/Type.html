@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\SPI\Persistence\Content\Type | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../eZ/Publish/SPI/Persistence/Content.html">eZ\Publish\SPI\Persistence\Content</a>\Type</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Type</strong>        extends <a href="../../../../../eZ/Publish/SPI/Persistence/ValueObject.html"><abbr title="eZ\Publish\SPI\Persistence\ValueObject">ValueObject</abbr></a></p>
+
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>STATUS_DEFINED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>STATUS_DRAFT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>STATUS_MODIFIED</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_id">
+                                                            mixed
+                </td>
+                <td>$id</td>
+                <td class="last">Primary key: Content type ID</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_status">
+                                                            int
+                </td>
+                <td>$status</td>
+                <td class="last">Primary key: Status (legacy: &quot;version&quot;)</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_name">
+                                                            string[]
+                </td>
+                <td>$name</td>
+                <td class="last">Human readable name of the content type</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_description">
+                                                            string[]
+                </td>
+                <td>$description</td>
+                <td class="last">Human readable description of the content type</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_identifier">
+                                                            string
+                </td>
+                <td>$identifier</td>
+                <td class="last">String identifier of a type</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_created">
+                                                            int
+                </td>
+                <td>$created</td>
+                <td class="last">Creation date (timestamp)</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modified">
+                                                            int
+                </td>
+                <td>$modified</td>
+                <td class="last">Modification date (timestamp)</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_creatorId">
+                                                            mixed
+                </td>
+                <td>$creatorId</td>
+                <td class="last">Creator user id</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modifierId">
+                                                            mixed
+                </td>
+                <td>$modifierId</td>
+                <td class="last">Modifier user id</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_remoteId">
+                                                            string
+                </td>
+                <td>$remoteId</td>
+                <td class="last">Unique remote ID</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_urlAliasSchema">
+                                                            string
+                </td>
+                <td>$urlAliasSchema</td>
+                <td class="last">URL alias schema Same as {@link \eZ\Publish\SPI\Persistence\Content\Type::$nameSchema}.</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_nameSchema">
+                                                            string
+                </td>
+                <td>$nameSchema</td>
+                <td class="last">Name schema.</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_isContainer">
+                                                            boolean
+                </td>
+                <td>$isContainer</td>
+                <td class="last">Determines if the type is a container</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_initialLanguageId">
+                                                            mixed
+                </td>
+                <td>$initialLanguageId</td>
+                <td class="last">Initial language</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sortField">
+                                                            mixed
+                </td>
+                <td>$sortField</td>
+                <td class="last">Specifies which property the child locations should be sorted on by default when created</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sortOrder">
+                                                            mixed
+                </td>
+                <td>$sortOrder</td>
+                <td class="last">Specifies whether the sort order should be ascending or descending by default when created</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_groupIds">
+                                                            mixed[]
+                </td>
+                <td>$groupIds</td>
+                <td class="last">Contains an array of type group IDs</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_fieldDefinitions">
+                                                            <a href="../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a>[]
+                </td>
+                <td>$fieldDefinitions</td>
+                <td class="last">Content fields in this type</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultAlwaysAvailable">
+                                                            boolean
+                </td>
+                <td>$defaultAlwaysAvailable</td>
+                <td class="last"></td>
+            </tr>
+            </table>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

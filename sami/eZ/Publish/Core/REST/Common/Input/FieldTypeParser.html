@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\REST\Common\Input\FieldTypeParser | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../eZ/Publish/Core/REST/Common/Input.html">eZ\Publish\Core\REST\Common\Input</a>\FieldTypeParser</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>FieldTypeParser</strong></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../eZ/Publish/API/Repository/ContentService.html"><abbr title="eZ\Publish\API\Repository\ContentService">ContentService</abbr></a> $contentService, <a href="../../../../../../eZ/Publish/API/Repository/ContentTypeService.html"><abbr title="eZ\Publish\API\Repository\ContentTypeService">ContentTypeService</abbr></a> $contentTypeService, <a href="../../../../../../eZ/Publish/API/Repository/FieldTypeService.html"><abbr title="eZ\Publish\API\Repository\FieldTypeService">FieldTypeService</abbr></a> $fieldTypeService, <a href="../../../../../../eZ/Publish/Core/REST/Common/FieldTypeProcessorRegistry.html"><abbr title="eZ\Publish\Core\REST\Common\FieldTypeProcessorRegistry">FieldTypeProcessorRegistry</abbr></a> $fieldTypeProcessorRegistry)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_parseFieldValue">parseFieldValue</a>(string $contentInfoId, string $fieldDefIdentifier, mixed $value)
+                    <p>Parses the given $value for the field $fieldDefIdentifier in the content identified by $contentInfoId</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_parseValue">parseValue</a>(mixed $fieldTypeIdentifier, mixed $value)
+                    <p>Parses the given $value using the FieldType identified by $fieldTypeIdentifier</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_parseFieldSettings">parseFieldSettings</a>(string $fieldTypeIdentifier, mixed $settingsHash)
+                    <p>Parses the given $settingsHash using the FieldType identified by $fieldTypeIdentifier</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_parseValidatorConfiguration">parseValidatorConfiguration</a>(string $fieldTypeIdentifier, mixed $configurationHash)
+                    <p>Parses the given $configurationHash using the FieldType identified by $fieldTypeIdentifier</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 46</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../eZ/Publish/API/Repository/ContentService.html"><abbr title="eZ\Publish\API\Repository\ContentService">ContentService</abbr></a> $contentService, <a href="../../../../../../eZ/Publish/API/Repository/ContentTypeService.html"><abbr title="eZ\Publish\API\Repository\ContentTypeService">ContentTypeService</abbr></a> $contentTypeService, <a href="../../../../../../eZ/Publish/API/Repository/FieldTypeService.html"><abbr title="eZ\Publish\API\Repository\FieldTypeService">FieldTypeService</abbr></a> $fieldTypeService, <a href="../../../../../../eZ/Publish/Core/REST/Common/FieldTypeProcessorRegistry.html"><abbr title="eZ\Publish\Core\REST\Common\FieldTypeProcessorRegistry">FieldTypeProcessorRegistry</abbr></a> $fieldTypeProcessorRegistry)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/ContentService.html"><abbr title="eZ\Publish\API\Repository\ContentService">ContentService</abbr></a></td>
+                <td>$contentService</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/ContentTypeService.html"><abbr title="eZ\Publish\API\Repository\ContentTypeService">ContentTypeService</abbr></a></td>
+                <td>$contentTypeService</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/FieldTypeService.html"><abbr title="eZ\Publish\API\Repository\FieldTypeService">FieldTypeService</abbr></a></td>
+                <td>$fieldTypeService</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/REST/Common/FieldTypeProcessorRegistry.html"><abbr title="eZ\Publish\Core\REST\Common\FieldTypeProcessorRegistry">FieldTypeProcessorRegistry</abbr></a></td>
+                <td>$fieldTypeProcessorRegistry</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parseFieldValue">
+        <div class="location">at line 68</div>
+        <code>            public            mixed
+    <strong>parseFieldValue</strong>(string $contentInfoId, string $fieldDefIdentifier, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Parses the given $value for the field $fieldDefIdentifier in the content identified by $contentInfoId</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$contentInfoId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$fieldDefIdentifier</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parseValue">
+        <div class="location">at line 87</div>
+        <code>            public            mixed
+    <strong>parseValue</strong>(mixed $fieldTypeIdentifier, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Parses the given $value using the FieldType identified by $fieldTypeIdentifier</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$fieldTypeIdentifier</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parseFieldSettings">
+        <div class="location">at line 109</div>
+        <code>            public            mixed
+    <strong>parseFieldSettings</strong>(string $fieldTypeIdentifier, mixed $settingsHash)</code>
+    </h3>
+    <div class="details">
+        <p>Parses the given $settingsHash using the FieldType identified by $fieldTypeIdentifier</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$fieldTypeIdentifier</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$settingsHash</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parseValidatorConfiguration">
+        <div class="location">at line 124</div>
+        <code>            public            mixed
+    <strong>parseValidatorConfiguration</strong>(string $fieldTypeIdentifier, mixed $configurationHash)</code>
+    </h3>
+    <div class="details">
+        <p>Parses the given $configurationHash using the FieldType identified by $fieldTypeIdentifier</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$fieldTypeIdentifier</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$configurationHash</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

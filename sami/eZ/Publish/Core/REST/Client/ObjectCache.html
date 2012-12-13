@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\REST\Client\ObjectCache | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../eZ/Publish/Core/REST/Client.html">eZ\Publish\Core\REST\Client</a>\ObjectCache</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ObjectCache</strong></p>
+
+            <div class="description">
+            <p>Simple cache for value objects during a single request</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_store">store</a>(string $key, <a href="../../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a> $data)
+                    <p>Stores $data under $key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_restore">restore</a>(string $key)
+                    <p>Restores data stored under $key, returns null if $key is not found</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_clear">clear</a>(string $key)
+                    <p>Clears the data stored in $key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_clearAll">clearAll</a>()
+                    <p>Clears all cached items</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_store">
+        <div class="location">at line 34</div>
+        <code>            public            void
+    <strong>store</strong>(string $key, <a href="../../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a> $data)</code>
+    </h3>
+    <div class="details">
+        <p>Stores $data under $key</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_restore">
+        <div class="location">at line 46</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a>|null
+    <strong>restore</strong>(string $key)</code>
+    </h3>
+    <div class="details">
+        <p>Restores data stored under $key, returns null if $key is not found</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clear">
+        <div class="location">at line 62</div>
+        <code>            public            void
+    <strong>clear</strong>(string $key)</code>
+    </h3>
+    <div class="details">
+        <p>Clears the data stored in $key</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clearAll">
+        <div class="location">at line 72</div>
+        <code>            public            void
+    <strong>clearAll</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Clears all cached items</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

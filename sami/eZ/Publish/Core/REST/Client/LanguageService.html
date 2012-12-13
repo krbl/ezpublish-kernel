@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\REST\Client\LanguageService | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../eZ/Publish/Core/REST/Client.html">eZ\Publish\Core\REST\Client</a>\LanguageService</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>LanguageService</strong>        implements
+        <a href="../../../../../eZ/Publish/API/Repository/LanguageService.html"><abbr title="eZ\Publish\API\Repository\LanguageService">LanguageService</abbr></a>, <a href="../../../../../eZ/Publish/Core/REST/Client/Sessionable.html"><abbr title="eZ\Publish\Core\REST\Client\Sessionable">Sessionable</abbr></a></p>
+
+            <div class="description">
+            <p>Implementation of the {@link \eZ\Publish\API\Repository\LanguageService} interface.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../eZ/Publish/Core/REST/Client/ContentService.html"><abbr title="eZ\Publish\Core\REST\Client\ContentService">ContentService</abbr></a> $contentService, $defaultLanguageCode, <a href="../../../../../eZ/Publish/Core/REST/Client/HttpClient.html"><abbr title="eZ\Publish\Core\REST\Client\HttpClient">HttpClient</abbr></a> $client, <a href="../../../../../eZ/Publish/Core/REST/Common/Input/Dispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\Dispatcher">Dispatcher</abbr></a> $inputDispatcher, <a href="../../../../../eZ/Publish/Core/REST/Common/Output/Visitor.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Visitor">Visitor</abbr></a> $outputVisitor, <a href="../../../../../eZ/Publish/Core/REST/Common/UrlHandler.html"><abbr title="eZ\Publish\Core\REST\Common\UrlHandler">UrlHandler</abbr></a> $urlHandler)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSession">setSession</a>(mixed $id)
+                    <p>Set session ID</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createLanguage">createLanguage</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/Content/LanguageCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\LanguageCreateStruct">LanguageCreateStruct</abbr></a> $languageCreateStruct)
+                    <p>Creates the a new Language in the content repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateLanguageName">updateLanguageName</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a> $language, string $newName)
+                    <p>Changes the name of the language in the content repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_enableLanguage">enableLanguage</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a> $language)
+                    <p>Enables a language</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_disableLanguage">disableLanguage</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a> $language)
+                    <p>Disables a language</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadLanguage">loadLanguage</a>(string $languageCode)
+                    <p>Loads a Language from its language code ($languageCode)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadLanguages">loadLanguages</a>()
+                    <p>Loads all Languages</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadLanguageById">loadLanguageById</a>(int $languageId)
+                    <p>Loads a Language by its id ($languageId)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteLanguage">deleteLanguage</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a> $language)
+                    <p>Deletes  a language from content repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDefaultLanguageCode">getDefaultLanguageCode</a>()
+                    <p>Returns a configured default language code</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/Content/LanguageCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\LanguageCreateStruct">LanguageCreateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newLanguageCreateStruct">newLanguageCreateStruct</a>()
+                    <p>Instantiates an object to be used for creating languages</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 64</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../eZ/Publish/Core/REST/Client/ContentService.html"><abbr title="eZ\Publish\Core\REST\Client\ContentService">ContentService</abbr></a> $contentService, $defaultLanguageCode, <a href="../../../../../eZ/Publish/Core/REST/Client/HttpClient.html"><abbr title="eZ\Publish\Core\REST\Client\HttpClient">HttpClient</abbr></a> $client, <a href="../../../../../eZ/Publish/Core/REST/Common/Input/Dispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\Dispatcher">Dispatcher</abbr></a> $inputDispatcher, <a href="../../../../../eZ/Publish/Core/REST/Common/Output/Visitor.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Visitor">Visitor</abbr></a> $outputVisitor, <a href="../../../../../eZ/Publish/Core/REST/Common/UrlHandler.html"><abbr title="eZ\Publish\Core\REST\Common\UrlHandler">UrlHandler</abbr></a> $urlHandler)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/REST/Client/ContentService.html"><abbr title="eZ\Publish\Core\REST\Client\ContentService">ContentService</abbr></a></td>
+                <td>$contentService</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$defaultLanguageCode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/REST/Client/HttpClient.html"><abbr title="eZ\Publish\Core\REST\Client\HttpClient">HttpClient</abbr></a></td>
+                <td>$client</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/REST/Common/Input/Dispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\Dispatcher">Dispatcher</abbr></a></td>
+                <td>$inputDispatcher</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/REST/Common/Output/Visitor.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Visitor">Visitor</abbr></a></td>
+                <td>$outputVisitor</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/REST/Common/UrlHandler.html"><abbr title="eZ\Publish\Core\REST\Common\UrlHandler">UrlHandler</abbr></a></td>
+                <td>$urlHandler</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSession">
+        <div class="location">at line 85</div>
+        <code>            public            
+    <strong>setSession</strong>(mixed $id)</code>
+    </h3>
+    <div class="details">
+        <p>Set session ID</p>
+        <p>Only for testing</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td>tringid</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createLanguage">
+        <div class="location">at line 103</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a>
+    <strong>createLanguage</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/Content/LanguageCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\LanguageCreateStruct">LanguageCreateStruct</abbr></a> $languageCreateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Creates the a new Language in the content repository</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/LanguageCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\LanguageCreateStruct">LanguageCreateStruct</abbr></a></td>
+                <td>$languageCreateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>If user does not have access to content translations</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the languageCode already exists</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateLanguageName">
+        <div class="location">at line 118</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a>
+    <strong>updateLanguageName</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a> $language, string $newName)</code>
+    </h3>
+    <div class="details">
+        <p>Changes the name of the language in the content repository</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a></td>
+                <td>$language</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$newName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>If user does not have access to content translations</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_enableLanguage">
+        <div class="location">at line 130</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a>
+    <strong>enableLanguage</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a> $language)</code>
+    </h3>
+    <div class="details">
+        <p>Enables a language</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a></td>
+                <td>$language</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>If user does not have access to content translations</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_disableLanguage">
+        <div class="location">at line 142</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a>
+    <strong>disableLanguage</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a> $language)</code>
+    </h3>
+    <div class="details">
+        <p>Disables a language</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a></td>
+                <td>$language</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>If user does not have access to content translations</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadLanguage">
+        <div class="location">at line 156</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a>
+    <strong>loadLanguage</strong>(string $languageCode)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a Language from its language code ($languageCode)</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$languageCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if language could not be found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadLanguages">
+        <div class="location">at line 166</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a>[]
+    <strong>loadLanguages</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads all Languages</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadLanguageById">
+        <div class="location">at line 180</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a>
+    <strong>loadLanguageById</strong>(int $languageId)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a Language by its id ($languageId)</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$languageId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if language could not be found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteLanguage">
+        <div class="location">at line 195</div>
+        <code>            public            
+    <strong>deleteLanguage</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a> $language)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes  a language from content repository</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/Language.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Language">Language</abbr></a></td>
+                <td>$language</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if language can not be deleted because it is still assigned to some content / type / (...).</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>If user is not allowed to delete a language</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDefaultLanguageCode">
+        <div class="location">at line 205</div>
+        <code>            public            string
+    <strong>getDefaultLanguageCode</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns a configured default language code</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newLanguageCreateStruct">
+        <div class="location">at line 215</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/Content/LanguageCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\LanguageCreateStruct">LanguageCreateStruct</abbr></a>
+    <strong>newLanguageCreateStruct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates an object to be used for creating languages</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/LanguageCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\LanguageCreateStruct">LanguageCreateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

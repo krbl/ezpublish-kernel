@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../eZ/Bundle/EzPublishLegacyBundle/SetupWizard.html">eZ\Bundle\EzPublishLegacyBundle\SetupWizard</a>\ConfigurationConverter</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ConfigurationConverter</strong></p>
+
+            <div class="description">
+            <p>Handles conversionlegacy eZ Publish 4 parameters from a set of settings to a configuration array suitable for yml dumping</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../eZ/Bundle/EzPublishLegacyBundle/DependencyInjection/Configuration/LegacyConfigResolver.html"><abbr title="eZ\Bundle\EzPublishLegacyBundle\DependencyInjection\Configuration\LegacyConfigResolver">LegacyConfigResolver</abbr></a> $legacyResolver, <abbr title="eZ\Bundle\EzPublishLegacyBundle\SetupWizard\Closure">Closure</abbr> $legacyKernel, array $supportedPackages)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_fromLegacy">fromLegacy</a>(string $sitePackage, string $adminSiteaccess)
+                    <p>Converts from legacy settings to an array dumpable to ezpublish.yml</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getGroup">getGroup</a>($groupName, $file = null, $siteaccess = null)
+                    <p>Returns the contents of the legacy group $groupName.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getParameter">getParameter</a>(string $groupName, string $parameterName, string|null $file = null, string|null $siteaccess = null)
+                    <p>Returns the value of the legacy parameter $parameterName in $groupName.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 38</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../eZ/Bundle/EzPublishLegacyBundle/DependencyInjection/Configuration/LegacyConfigResolver.html"><abbr title="eZ\Bundle\EzPublishLegacyBundle\DependencyInjection\Configuration\LegacyConfigResolver">LegacyConfigResolver</abbr></a> $legacyResolver, <abbr title="eZ\Bundle\EzPublishLegacyBundle\SetupWizard\Closure">Closure</abbr> $legacyKernel, array $supportedPackages)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Bundle/EzPublishLegacyBundle/DependencyInjection/Configuration/LegacyConfigResolver.html"><abbr title="eZ\Bundle\EzPublishLegacyBundle\DependencyInjection\Configuration\LegacyConfigResolver">LegacyConfigResolver</abbr></a></td>
+                <td>$legacyResolver</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="eZ\Bundle\EzPublishLegacyBundle\SetupWizard\Closure">Closure</abbr></td>
+                <td>$legacyKernel</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$supportedPackages</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fromLegacy">
+        <div class="location">at line 54</div>
+        <code>            public            array
+    <strong>fromLegacy</strong>(string $sitePackage, string $adminSiteaccess)</code>
+    </h3>
+    <div class="details">
+        <p>Converts from legacy settings to an array dumpable to ezpublish.yml</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sitePackage</td>
+                <td>Name of the chosen install package</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$adminSiteaccess</td>
+                <td>Name of the admin siteaccess</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/Core/Base/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\Core\Base\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getGroup">
+        <div class="location">at line 295</div>
+        <code>            public            array
+    <strong>getGroup</strong>($groupName, $file = null, $siteaccess = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the contents of the legacy group $groupName.</p>
+        <p>If $file and<br />
+ $siteaccess are null, the global value is fetched with the legacy resolver.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$groupName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$siteaccess</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParameter">
+        <div class="location">at line 326</div>
+        <code>            public            array
+    <strong>getParameter</strong>(string $groupName, string $parameterName, string|null $file = null, string|null $siteaccess = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the value of the legacy parameter $parameterName in $groupName.</p>
+        <p>If $file and $siteaccess are null, the global value is fetched with the<br />
+ legacy resolver.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$groupName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$parameterName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$siteaccess</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\SignalSlot\URLWildcardService | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../eZ/Publish/Core/SignalSlot.html">eZ\Publish\Core\SignalSlot</a>\URLWildcardService</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>URLWildcardService</strong>        implements
+        <a href="../../../../eZ/Publish/API/Repository/URLWildcardService.html"><abbr title="eZ\Publish\API\Repository\URLWildcardService">URLWildcardService</abbr></a></p>
+
+            <div class="description">
+            <p>URLWildcardService class</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../eZ/Publish/API/Repository/URLWildcardService.html"><abbr title="eZ\Publish\API\Repository\URLWildcardService">URLWildcardService</abbr></a> $service, <a href="../../../../eZ/Publish/Core/SignalSlot/SignalDispatcher.html"><abbr title="eZ\Publish\Core\SignalSlot\SignalDispatcher">SignalDispatcher</abbr></a> $signalDispatcher)
+                    <p>Constructor</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\API\Repository\Values\Content\UrlWildcard">UrlWildcard</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(string $sourceUrl, string $destinationUrl, boolean $forward = false)
+                    <p>Creates a new url wildcard</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_remove">remove</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/URLWildcard.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLWildcard">URLWildcard</abbr></a> $urlWildcard)
+                    <p>Removes an url wildcard</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\API\Repository\Values\Content\UrlWildcard">UrlWildcard</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_load">load</a>(mixed $id)
+                    <p>Loads a url wild card</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\API\Repository\Values\Content\UrlWildcard">UrlWildcard</abbr>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadAll">loadAll</a>(int $offset, int $limit = -1)
+                    <p>Loads all url wild card (paged)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/URLWildcardTranslationResult.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLWildcardTranslationResult">URLWildcardTranslationResult</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_translate">translate</a>(mixed $url)
+                    <p>Translates an url to an existing uri resource based on the source/destination patterns of the url wildcard.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 47</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../eZ/Publish/API/Repository/URLWildcardService.html"><abbr title="eZ\Publish\API\Repository\URLWildcardService">URLWildcardService</abbr></a> $service, <a href="../../../../eZ/Publish/Core/SignalSlot/SignalDispatcher.html"><abbr title="eZ\Publish\Core\SignalSlot\SignalDispatcher">SignalDispatcher</abbr></a> $signalDispatcher)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor</p>
+        <p>Construct service object from aggregated service and signal<br />
+ dispatcher</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/URLWildcardService.html"><abbr title="eZ\Publish\API\Repository\URLWildcardService">URLWildcardService</abbr></a></td>
+                <td>$service</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/Core/SignalSlot/SignalDispatcher.html"><abbr title="eZ\Publish\Core\SignalSlot\SignalDispatcher">SignalDispatcher</abbr></a></td>
+                <td>$signalDispatcher</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">at line 68</div>
+        <code>            public            <abbr title="eZ\Publish\API\Repository\Values\Content\UrlWildcard">UrlWildcard</abbr>
+    <strong>create</strong>(string $sourceUrl, string $destinationUrl, boolean $forward = false)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new url wildcard</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sourceUrl</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$destinationUrl</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$forward</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\API\Repository\Values\Content\UrlWildcard">UrlWildcard</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the $sourceUrl pattern already exists</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to create url wildcards</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/ContentValidationException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\ContentValidationException">ContentValidationException</abbr></a></td>
+                <td>if the number of &quot;*&quot; patterns in $sourceUrl and the number of {\d} placeholders in $destinationUrl doesn&#039;t match or if the placeholders aren&#039;t a valid number sequence({1}/{2}/{3}), starting with 1.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_remove">
+        <div class="location">at line 88</div>
+        <code>            public            
+    <strong>remove</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/URLWildcard.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLWildcard">URLWildcard</abbr></a> $urlWildcard)</code>
+    </h3>
+    <div class="details">
+        <p>Removes an url wildcard</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/URLWildcard.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLWildcard">URLWildcard</abbr></a></td>
+                <td>$urlWildcard</td>
+                <td>the url wildcard to remove</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to remove url wildcards</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_load">
+        <div class="location">at line 110</div>
+        <code>            public            <abbr title="eZ\Publish\API\Repository\Values\Content\UrlWildcard">UrlWildcard</abbr>
+    <strong>load</strong>(mixed $id)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a url wild card</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\API\Repository\Values\Content\UrlWildcard">UrlWildcard</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if the url wild card was not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadAll">
+        <div class="location">at line 123</div>
+        <code>            public            <abbr title="eZ\Publish\API\Repository\Values\Content\UrlWildcard">UrlWildcard</abbr>[]
+    <strong>loadAll</strong>(int $offset, int $limit = -1)</code>
+    </h3>
+    <div class="details">
+        <p>Loads all url wild card (paged)</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\API\Repository\Values\Content\UrlWildcard">UrlWildcard</abbr>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_translate">
+        <div class="location">at line 141</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/URLWildcardTranslationResult.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLWildcardTranslationResult">URLWildcardTranslationResult</abbr></a>
+    <strong>translate</strong>(mixed $url)</code>
+    </h3>
+    <div class="details">
+        <p>Translates an url to an existing uri resource based on the source/destination patterns of the url wildcard.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/URLWildcardTranslationResult.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLWildcardTranslationResult">URLWildcardTranslationResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if the url could not be translated</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

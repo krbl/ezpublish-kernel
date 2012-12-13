@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Repository\TrashService | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../eZ/Publish/Core/Repository.html">eZ\Publish\Core\Repository</a>\TrashService</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>TrashService</strong>        implements
+        <a href="../../../../eZ/Publish/API/Repository/TrashService.html"><abbr title="eZ\Publish\API\Repository\TrashService">TrashService</abbr></a></p>
+
+            <div class="description">
+            <p>Trash service, used for managing trashed content</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository, <a href="../../../../eZ/Publish/SPI/Persistence/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Handler">Handler</abbr></a> $handler, array $settings = array())
+                    <p>Setups service with reference to repository object that created it &amp; corresponding handler</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/TrashItem.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TrashItem">TrashItem</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadTrashItem">loadTrashItem</a>(int $trashItemId)
+                    <p>Loads a trashed location object from its $id.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null|<a href="../../../../eZ/Publish/API/Repository/Values/Content/TrashItem.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TrashItem">TrashItem</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_trash">trash</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a> $location)
+                    <p>Sends $location and all its children to trash and returns the corresponding trash item.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_recover">recover</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/TrashItem.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TrashItem">TrashItem</abbr></a> $trashItem, <a href="../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a> $newParentLocation = null)
+                    <p>Recovers the $trashedLocation at its original place if possible.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_emptyTrash">emptyTrash</a>()
+                    <p>Empties trash.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteTrashItem">deleteTrashItem</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/TrashItem.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TrashItem">TrashItem</abbr></a> $trashItem)
+                    <p>Deletes a trash item.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/SearchResult.html"><abbr title="eZ\Publish\API\Repository\Values\Content\SearchResult">SearchResult</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_findTrashItems">findTrashItems</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/Query.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query">Query</abbr></a> $query)
+                    <p>Returns a collection of Trashed locations contained in the trash.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 57</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository, <a href="../../../../eZ/Publish/SPI/Persistence/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Handler">Handler</abbr></a> $handler, array $settings = array())</code>
+    </h3>
+    <div class="details">
+        <p>Setups service with reference to repository object that created it &amp; corresponding handler</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a></td>
+                <td>$repository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/SPI/Persistence/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Handler">Handler</abbr></a></td>
+                <td>$handler</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$settings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadTrashItem">
+        <div class="location">at line 79</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/TrashItem.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TrashItem">TrashItem</abbr></a>
+    <strong>loadTrashItem</strong>(int $trashItemId)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a trashed location object from its $id.</p>
+        <p>Note that $id is identical to original location, which has been previously trashed</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$trashItemId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/TrashItem.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TrashItem">TrashItem</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to read the trashed location</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>- if the location with the given id does not exist</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_trash">
+        <div class="location">at line 106</div>
+        <code>            public            null|<a href="../../../../eZ/Publish/API/Repository/Values/Content/TrashItem.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TrashItem">TrashItem</abbr></a>
+    <strong>trash</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a> $location)</code>
+    </h3>
+    <div class="details">
+        <p>Sends $location and all its children to trash and returns the corresponding trash item.</p>
+        <p>Content is left untouched.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a></td>
+                <td>$location</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null|<a href="../../../../eZ/Publish/API/Repository/Values/Content/TrashItem.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TrashItem">TrashItem</abbr></a></td>
+            <td>null if location was deleted, otherwise TrashItem</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to trash the given location</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_recover">
+        <div class="location">at line 144</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a>
+    <strong>recover</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/TrashItem.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TrashItem">TrashItem</abbr></a> $trashItem, <a href="../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a> $newParentLocation = null)</code>
+    </h3>
+    <div class="details">
+        <p>Recovers the $trashedLocation at its original place if possible.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/TrashItem.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TrashItem">TrashItem</abbr></a></td>
+                <td>$trashItem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a></td>
+                <td>$newParentLocation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a></td>
+            <td>the newly created or recovered location</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to recover the trash item at the parent location location If $newParentLocation is provided, $trashedLocation will be restored under it.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_emptyTrash">
+        <div class="location">at line 201</div>
+        <code>            public            
+    <strong>emptyTrash</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Empties trash.</p>
+        <p>All locations contained in the trash will be removed. Content objects will be removed<br />
+ if all locations of the content are gone.</p>
+        <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to empty the trash</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteTrashItem">
+        <div class="location">at line 229</div>
+        <code>            public            
+    <strong>deleteTrashItem</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/TrashItem.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TrashItem">TrashItem</abbr></a> $trashItem)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes a trash item.</p>
+        <p>The corresponding content object will be removed</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/TrashItem.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TrashItem">TrashItem</abbr></a></td>
+                <td>$trashItem</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to delete this trash item</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findTrashItems">
+        <div class="location">at line 259</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/SearchResult.html"><abbr title="eZ\Publish\API\Repository\Values\Content\SearchResult">SearchResult</abbr></a>
+    <strong>findTrashItems</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/Query.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query">Query</abbr></a> $query)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a collection of Trashed locations contained in the trash.</p>
+        <p>$query allows to filter/sort the elements to be contained in the collection.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Query.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query">Query</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/SearchResult.html"><abbr title="eZ\Publish\API\Repository\Values\Content\SearchResult">SearchResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

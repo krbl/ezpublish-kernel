@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\REST\Common\Output\Visitor | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../eZ/Publish/Core/REST/Common/Output.html">eZ\Publish\Core\REST\Common\Output</a>\Visitor</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Visitor</strong></p>
+
+            <div class="description">
+            <p>Visitor for view models</p>
+            <p></p>
+        </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_statusMap">
+                    static                                        <abbr title="eZ\Publish\Core\REST\Common\Output\array(int=&gt;string)">array(int=&gt;string)</abbr>
+                </td>
+                <td>$statusMap</td>
+                <td class="last">Mapping of status codes.</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../eZ/Publish/Core/REST/Common/Output/Generator.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Generator">Generator</abbr></a> $generator, array $visitors)
+                    <p>Construct from Generator and an array of concrete view model visitors</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addVisitor">addVisitor</a>(string $class, <a href="../../../../../../eZ/Publish/Core/REST/Common/Output/ValueObjectVisitor.html"><abbr title="eZ\Publish\Core\REST\Common\Output\ValueObjectVisitor">ValueObjectVisitor</abbr></a> $visitor)
+                    <p>Adds a new visitor for the given class</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setHeader">setHeader</a>(string $name, string $value)
+                    <p>Set HTTP response header</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setStatus">setStatus</a>(int $statusCode)
+                    <p>Sets the given status code in the corresponding header.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Common/Message.html"><abbr title="eZ\Publish\Core\REST\Common\Message">Message</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_visit">visit</a>(mixed $data)
+                    <p>Visit struct returned by controllers</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_visitValueObject">visitValueObject</a>(mixed $data)
+                    <p>Visit struct returned by controllers</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getMediaType">getMediaType</a>(string $type)
+                    <p>Generates a media type for $type based on the used generator.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 115</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../eZ/Publish/Core/REST/Common/Output/Generator.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Generator">Generator</abbr></a> $generator, array $visitors)</code>
+    </h3>
+    <div class="details">
+        <p>Construct from Generator and an array of concrete view model visitors</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/REST/Common/Output/Generator.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Generator">Generator</abbr></a></td>
+                <td>$generator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$visitors</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addVisitor">
+        <div class="location">at line 130</div>
+        <code>            public            
+    <strong>addVisitor</strong>(string $class, <a href="../../../../../../eZ/Publish/Core/REST/Common/Output/ValueObjectVisitor.html"><abbr title="eZ\Publish\Core\REST\Common\Output\ValueObjectVisitor">ValueObjectVisitor</abbr></a> $visitor)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a new visitor for the given class</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/REST/Common/Output/ValueObjectVisitor.html"><abbr title="eZ\Publish\Core\REST\Common\Output\ValueObjectVisitor">ValueObjectVisitor</abbr></a></td>
+                <td>$visitor</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setHeader">
+        <div class="location">at line 149</div>
+        <code>            public            
+    <strong>setHeader</strong>(string $name, string $value)</code>
+    </h3>
+    <div class="details">
+        <p>Set HTTP response header</p>
+        <p>Does not allow overwriting of response headers. The first definition of<br />
+ a header will be used.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setStatus">
+        <div class="location">at line 164</div>
+        <code>            public            
+    <strong>setStatus</strong>(int $statusCode)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the given status code in the corresponding header.</p>
+        <p>Note that headers are generally not overwritten!</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$statusCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_visit">
+        <div class="location">at line 184</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Common/Message.html"><abbr title="eZ\Publish\Core\REST\Common\Message">Message</abbr></a>
+    <strong>visit</strong>(mixed $data)</code>
+    </h3>
+    <div class="details">
+        <p>Visit struct returned by controllers</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Common/Message.html"><abbr title="eZ\Publish\Core\REST\Common\Message">Message</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_visitValueObject">
+        <div class="location">at line 231</div>
+        <code>            public            
+    <strong>visitValueObject</strong>(mixed $data)</code>
+    </h3>
+    <div class="details">
+        <p>Visit struct returned by controllers</p>
+        <p>Should be called from sub-visitors to visit nested objects.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMediaType">
+        <div class="location">at line 262</div>
+        <code>            public            string
+    <strong>getMediaType</strong>(string $type)</code>
+    </h3>
+    <div class="details">
+        <p>Generates a media type for $type based on the used generator.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>\eZ\Publish\Core\REST\Common\Generator::getMediaType()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

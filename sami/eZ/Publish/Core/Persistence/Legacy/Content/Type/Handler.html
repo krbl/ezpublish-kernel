@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Persistence\Legacy\Content\Type\Handler | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type.html">eZ\Publish\Core\Persistence\Legacy\Content\Type</a>\Handler</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Handler</strong>        implements
+        <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Handler">Handler</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway">Gateway</abbr></a> $contentTypeGateway, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Mapper.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Mapper">Mapper</abbr></a> $mapper, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Update/Handler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Update\Handler">Handler</abbr></a> $updateHandler)
+                    <p>Creates a new content type handler.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createGroup">createGroup</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group\CreateStruct">CreateStruct</abbr></a> $createStruct)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateGroup">updateGroup</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group\UpdateStruct">UpdateStruct</abbr></a> $struct)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteGroup">deleteGroup</a>(mixed $groupId)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadGroup">loadGroup</a>(mixed $groupId)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadGroupByIdentifier">loadGroupByIdentifier</a>(string $identifier)
+                    <p>Loads Type Group by identifer</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadAllGroups">loadAllGroups</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentTypes">loadContentTypes</a>(mixed $groupId, int $status)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_load">load</a>(int $contentTypeId, int $status = Type::STATUS_DEFINED)
+                    <p>Loads a content type by id and status</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadByIdentifier">loadByIdentifier</a>(string $identifier)
+                    <p>Loads a (defined) content type by identifier</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadByRemoteId">loadByRemoteId</a>(mixed $remoteId)
+                    <p>Loads a (defined) content type by remote id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\CreateStruct">CreateStruct</abbr></a> $createStruct)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_update">update</a>(mixed $typeId, int $status, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\UpdateStruct">UpdateStruct</abbr></a> $contentType)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(mixed $contentTypeId, int $status)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createDraft">createDraft</a>(mixed $modifierId, mixed $contentTypeId)
+                    <p>Creates a draft of existing defined content type</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_copy">copy</a>(mixed $userId, mixed $contentTypeId, int $status)
+                    <p>Copy a Type incl fields and group-relations from a given status to a new Type with status {@link Type::STATUS_DRAFT}</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_unlink">unlink</a>(mixed $groupId, mixed $contentTypeId, int $status)
+                    <p>Unlink a content type group from a content type</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_link">link</a>(mixed $groupId, mixed $contentTypeId, int $status)
+                    <p>Link a content type group with a content type</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getFieldDefinition">getFieldDefinition</a>(mixed $id, int $status)
+                    <p>Returns field definition for the given field definition id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_addFieldDefinition">addFieldDefinition</a>(mixed $contentTypeId, int $status, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition)
+                    <p>Adds a new field definition to an existing Type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_removeFieldDefinition">removeFieldDefinition</a>(mixed $contentTypeId, int $status, mixed $fieldDefinitionId)
+                    <p>Removes a field definition from an existing Type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_updateFieldDefinition">updateFieldDefinition</a>(mixed $contentTypeId, int $status, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition)
+                    <p>This method updates the given $fieldDefinition on a Type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_publish">publish</a>(mixed $contentTypeId)
+                    <p>Update content objects</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 57</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway">Gateway</abbr></a> $contentTypeGateway, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Mapper.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Mapper">Mapper</abbr></a> $mapper, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Update/Handler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Update\Handler">Handler</abbr></a> $updateHandler)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new content type handler.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway">Gateway</abbr></a></td>
+                <td>$contentTypeGateway</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Mapper.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Mapper">Mapper</abbr></a></td>
+                <td>$mapper</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Update/Handler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Update\Handler">Handler</abbr></a></td>
+                <td>$updateHandler</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createGroup">
+        <div class="location">at line 72</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a>
+    <strong>createGroup</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group\CreateStruct">CreateStruct</abbr></a> $createStruct)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group\CreateStruct">CreateStruct</abbr></a></td>
+                <td>$createStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateGroup">
+        <div class="location">at line 90</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a>
+    <strong>updateGroup</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group\UpdateStruct">UpdateStruct</abbr></a> $struct)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group\UpdateStruct">UpdateStruct</abbr></a></td>
+                <td>$struct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteGroup">
+        <div class="location">at line 104</div>
+        <code>            public            
+    <strong>deleteGroup</strong>(mixed $groupId)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$groupId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>If type group contains types</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If type group with id is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadGroup">
+        <div class="location">at line 120</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a>
+    <strong>loadGroup</strong>(mixed $groupId)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$groupId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If type group with id is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadGroupByIdentifier">
+        <div class="location">at line 141</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a>
+    <strong>loadGroupByIdentifier</strong>(string $identifier)</code>
+    </h3>
+    <div class="details">
+        <p>Loads Type Group by identifer</p>
+        <p>Legacy note: Uses name for identifier.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If type group with id is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadAllGroups">
+        <div class="location">at line 158</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a>[]
+    <strong>loadAllGroups</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentTypes">
+        <div class="location">at line 171</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>[]
+    <strong>loadContentTypes</strong>(mixed $groupId, int $status)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$groupId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td>One of Type::STATUS_DEFINED|Type::STATUS_DRAFT|Type::STATUS_MODIFIED</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_load">
+        <div class="location">at line 184</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>
+    <strong>load</strong>(int $contentTypeId, int $status = Type::STATUS_DEFINED)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a content type by id and status</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentTypeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td>One of Type::STATUS_DEFINED|Type::STATUS_DRAFT|Type::STATUS_MODIFIED</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If type with provided status is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadByIdentifier">
+        <div class="location">at line 204</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>
+    <strong>loadByIdentifier</strong>(string $identifier)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a (defined) content type by identifier</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If defined type is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadByRemoteId">
+        <div class="location">at line 221</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>
+    <strong>loadByRemoteId</strong>(mixed $remoteId)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a (defined) content type by remote id</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$remoteId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If defined type is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">at line 257</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>
+    <strong>create</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\CreateStruct">CreateStruct</abbr></a> $createStruct)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\CreateStruct">CreateStruct</abbr></a></td>
+                <td>$createStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_update">
+        <div class="location">at line 325</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>
+    <strong>update</strong>(mixed $typeId, int $status, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\UpdateStruct">UpdateStruct</abbr></a> $contentType)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$typeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td>One of Type::STATUS_DEFINED|Type::STATUS_DRAFT|Type::STATUS_MODIFIED</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\UpdateStruct">UpdateStruct</abbr></a></td>
+                <td>$contentType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 344</div>
+        <code>            public            boolean
+    <strong>delete</strong>(mixed $contentTypeId, int $status)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentTypeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td>One of Type::STATUS_DEFINED|Type::STATUS_DRAFT|Type::STATUS_MODIFIED</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>If type is defined and still has content</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If type is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createDraft">
+        <div class="location">at line 385</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>
+    <strong>createDraft</strong>(mixed $modifierId, mixed $contentTypeId)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a draft of existing defined content type</p>
+        <p>Updates modified date, sets $modifierId and status to Type::STATUS_DRAFT on the new returned draft.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$modifierId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentTypeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If type with defined status is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_copy">
+        <div class="location">at line 404</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>
+    <strong>copy</strong>(mixed $userId, mixed $contentTypeId, int $status)</code>
+    </h3>
+    <div class="details">
+        <p>Copy a Type incl fields and group-relations from a given status to a new Type with status {@link Type::STATUS_DRAFT}</p>
+        <p>New Content Type will have $userId as creator / modifier, created / modified should be updated, new remoteId created<br />
+ and identifier should be appended with &#039;_&#039; + the new remoteId or another unique number.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$userId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentTypeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td>One of Type::STATUS_DEFINED|Type::STATUS_DRAFT|Type::STATUS_MODIFIED</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If user or type with provided status is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_unlink">
+        <div class="location">at line 434</div>
+        <code>            public            
+    <strong>unlink</strong>(mixed $groupId, mixed $contentTypeId, int $status)</code>
+    </h3>
+    <div class="details">
+        <p>Unlink a content type group from a content type</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$groupId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentTypeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td>One of Type::STATUS_DEFINED|Type::STATUS_DRAFT|Type::STATUS_MODIFIED</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If group or type with provided status is not found</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>If $groupId is last group on $contentTypeId or not a group assigned to type</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_link">
+        <div class="location">at line 463</div>
+        <code>            public            
+    <strong>link</strong>(mixed $groupId, mixed $contentTypeId, int $status)</code>
+    </h3>
+    <div class="details">
+        <p>Link a content type group with a content type</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$groupId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentTypeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td>One of Type::STATUS_DEFINED|Type::STATUS_DRAFT|Type::STATUS_MODIFIED</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If group or type with provided status is not found</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>If type is already part of group</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFieldDefinition">
+        <div class="location">at line 482</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a>
+    <strong>getFieldDefinition</strong>(mixed $id, int $status)</code>
+    </h3>
+    <div class="details">
+        <p>Returns field definition for the given field definition id</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td>One of Type::STATUS_DEFINED|Type::STATUS_DRAFT|Type::STATUS_MODIFIED</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If field definition is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addFieldDefinition">
+        <div class="location">at line 513</div>
+        <code>            public            void
+    <strong>addFieldDefinition</strong>(mixed $contentTypeId, int $status, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a new field definition to an existing Type.</p>
+        <p>This method creates a new version of the Type with the $fieldDefinition<br />
+ added. It does not update existing content objects depending on the<br />
+ field (default) values.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentTypeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td>One of Type::STATUS_DEFINED|Type::STATUS_DRAFT|Type::STATUS_MODIFIED</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a></td>
+                <td>$fieldDefinition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If type is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeFieldDefinition">
+        <div class="location">at line 536</div>
+        <code>            public            boolean
+    <strong>removeFieldDefinition</strong>(mixed $contentTypeId, int $status, mixed $fieldDefinitionId)</code>
+    </h3>
+    <div class="details">
+        <p>Removes a field definition from an existing Type.</p>
+        <p>This method creates a new version of the Type with the field definition<br />
+ referred to by $fieldDefinitionId removed. It does not update existing<br />
+ content objects depending on the field (default) values.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentTypeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td>One of Type::STATUS_DEFINED|Type::STATUS_DRAFT|Type::STATUS_MODIFIED</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$fieldDefinitionId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If field is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateFieldDefinition">
+        <div class="location">at line 558</div>
+        <code>            public            void
+    <strong>updateFieldDefinition</strong>(mixed $contentTypeId, int $status, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition)</code>
+    </h3>
+    <div class="details">
+        <p>This method updates the given $fieldDefinition on a Type.</p>
+        <p>This method creates a new version of the Type with the updated<br />
+ $fieldDefinition. It does not update existing content objects depending<br />
+ on the<br />
+ field (default) values.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentTypeId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td>One of Type::STATUS_DEFINED|Type::STATUS_DRAFT|Type::STATUS_MODIFIED</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a></td>
+                <td>$fieldDefinition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If field is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_publish">
+        <div class="location">at line 583</div>
+        <code>            public            void
+    <strong>publish</strong>(mixed $contentTypeId)</code>
+    </h3>
+    <div class="details">
+        <p>Update content objects</p>
+        <p>Updates content objects, depending on the changed field definitions.<br />
+<br />
+ A content type has a state which tells if its content objects yet have<br />
+ been adapted.<br />
+<br />
+ Flags the content type as updated.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentTypeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If type with $contentTypeId and Type::STATUS_DRAFT is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

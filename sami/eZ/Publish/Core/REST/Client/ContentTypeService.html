@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\REST\Client\ContentTypeService | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../eZ/Publish/Core/REST/Client.html">eZ\Publish\Core\REST\Client</a>\ContentTypeService</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ContentTypeService</strong>        implements
+        <a href="../../../../../eZ/Publish/API/Repository/ContentTypeService.html"><abbr title="eZ\Publish\API\Repository\ContentTypeService">ContentTypeService</abbr></a>, <a href="../../../../../eZ/Publish/Core/REST/Client/Sessionable.html"><abbr title="eZ\Publish\Core\REST\Client\Sessionable">Sessionable</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../eZ/Publish/Core/REST/Client/HttpClient.html"><abbr title="eZ\Publish\Core\REST\Client\HttpClient">HttpClient</abbr></a> $client, <a href="../../../../../eZ/Publish/Core/REST/Common/Input/Dispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\Dispatcher">Dispatcher</abbr></a> $inputDispatcher, <a href="../../../../../eZ/Publish/Core/REST/Common/Output/Visitor.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Visitor">Visitor</abbr></a> $outputVisitor, <a href="../../../../../eZ/Publish/Core/REST/Common/UrlHandler.html"><abbr title="eZ\Publish\Core\REST\Common\UrlHandler">UrlHandler</abbr></a> $urlHandler)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSession">setSession</a>(mixed $id)
+                    <p>Set session ID</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createContentTypeGroup">createContentTypeGroup</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroupCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupCreateStruct">ContentTypeGroupCreateStruct</abbr></a> $contentTypeGroupCreateStruct)
+                    <p>Create a Content Type Group object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentTypeGroup">loadContentTypeGroup</a>(int $contentTypeGroupId)
+                    <p>Get a Content Type Group object by id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentTypeGroupByIdentifier">loadContentTypeGroupByIdentifier</a>(string $contentTypeGroupIdentifier)
+                    <p>Get a Content Type Group object by identifier</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentTypeGroups">loadContentTypeGroups</a>()
+                    <p>Get all Content Type Groups</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updateContentTypeGroup">updateContentTypeGroup</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a> $contentTypeGroup, <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroupUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupUpdateStruct">ContentTypeGroupUpdateStruct</abbr></a> $contentTypeGroupUpdateStruct)
+                    <p>Update a Content Type Group object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteContentTypeGroup">deleteContentTypeGroup</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a> $contentTypeGroup)
+                    <p>Delete a Content Type Group.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createContentType">createContentType</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeCreateStruct">ContentTypeCreateStruct</abbr></a> $contentTypeCreateStruct, array $contentTypeGroups)
+                    <p>Create a Content Type object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentTypeDraft">loadContentTypeDraft</a>(int $contentTypeId)
+                    <p>Get a Content Type object draft by id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updateContentTypeDraft">updateContentTypeDraft</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a> $contentTypeDraft, <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeUpdateStruct">ContentTypeUpdateStruct</abbr></a> $contentTypeUpdateStruct)
+                    <p>Update a Content Type object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addFieldDefinition">addFieldDefinition</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a> $contentTypeDraft, <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinitionCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionCreateStruct">FieldDefinitionCreateStruct</abbr></a> $fieldDefinitionCreateStruct)
+                    <p>Adds a new field definition to an existing content type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeFieldDefinition">removeFieldDefinition</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a> $contentTypeDraft, <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition)
+                    <p>Remove a field definition from an existing Type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updateFieldDefinition">updateFieldDefinition</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a> $contentTypeDraft, <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition, <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinitionUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionUpdateStruct">FieldDefinitionUpdateStruct</abbr></a> $fieldDefinitionUpdateStruct)
+                    <p>Update a field definition</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_publishContentTypeDraft">publishContentTypeDraft</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a> $contentTypeDraft)
+                    <p>Publish the content type and update content objects.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentType">loadContentType</a>(int $contentTypeId)
+                    <p>Get a Content Type object by id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadFieldDefinition">loadFieldDefinition</a>(string $fieldDefinitionId)
+                    <p>Loads a single field definition by $fieldDefinitionId</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\Core\REST\Client\FieldDefinitionList">FieldDefinitionList</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_loadFieldDefinitionList">loadFieldDefinitionList</a>(mixed $fieldDefinitionListReference)
+                    <p>Loads the FieldDefinitionList stored at $fieldDefinitionListReference</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentTypeByIdentifier">loadContentTypeByIdentifier</a>(string $identifier)
+                    <p>Get a Content Type object by identifier</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentTypeByRemoteId">loadContentTypeByRemoteId</a>(string $remoteId)
+                    <p>Get a Content Type object by id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentTypes">loadContentTypes</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a> $contentTypeGroup)
+                    <p>Get Content Type objects which belong to the given content type group</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createContentTypeDraft">createContentTypeDraft</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType)
+                    <p>Creates a draft from an existing content type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteContentType">deleteContentType</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType)
+                    <p>Delete a Content Type object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_copyContentType">copyContentType</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType, <a href="../../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user = null)
+                    <p>Copy Type incl fields and groupIds to a new Type object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_assignContentTypeGroup">assignContentTypeGroup</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType, <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a> $contentTypeGroup)
+                    <p>Assigns a content type to a content type group.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_unassignContentTypeGroup">unassignContentTypeGroup</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType, <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a> $contentTypeGroup)
+                    <p>Unassign a content type from a group.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroupCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupCreateStruct">ContentTypeGroupCreateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newContentTypeGroupCreateStruct">newContentTypeGroupCreateStruct</a>(string $identifier)
+                    <p>Instantiates a new content type group create class</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeCreateStruct">ContentTypeCreateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newContentTypeCreateStruct">newContentTypeCreateStruct</a>(string $identifier)
+                    <p>Instantiates a new content type create class</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeUpdateStruct">ContentTypeUpdateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newContentTypeUpdateStruct">newContentTypeUpdateStruct</a>()
+                    <p>Instantiates a new content type update struct</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroupUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupUpdateStruct">ContentTypeGroupUpdateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newContentTypeGroupUpdateStruct">newContentTypeGroupUpdateStruct</a>()
+                    <p>Instantiates a new content type update struct</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinitionCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionCreateStruct">FieldDefinitionCreateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newFieldDefinitionCreateStruct">newFieldDefinitionCreateStruct</a>($identifier, $fieldTypeIdentifier)
+                    <p>Instantiates a field definition create struct</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinitionUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionUpdateStruct">FieldDefinitionUpdateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newFieldDefinitionUpdateStruct">newFieldDefinitionUpdateStruct</a>()
+                    <p>Instantiates a field definition update class</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 69</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../eZ/Publish/Core/REST/Client/HttpClient.html"><abbr title="eZ\Publish\Core\REST\Client\HttpClient">HttpClient</abbr></a> $client, <a href="../../../../../eZ/Publish/Core/REST/Common/Input/Dispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\Dispatcher">Dispatcher</abbr></a> $inputDispatcher, <a href="../../../../../eZ/Publish/Core/REST/Common/Output/Visitor.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Visitor">Visitor</abbr></a> $outputVisitor, <a href="../../../../../eZ/Publish/Core/REST/Common/UrlHandler.html"><abbr title="eZ\Publish\Core\REST\Common\UrlHandler">UrlHandler</abbr></a> $urlHandler)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/REST/Client/HttpClient.html"><abbr title="eZ\Publish\Core\REST\Client\HttpClient">HttpClient</abbr></a></td>
+                <td>$client</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/REST/Common/Input/Dispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\Dispatcher">Dispatcher</abbr></a></td>
+                <td>$inputDispatcher</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/REST/Common/Output/Visitor.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Visitor">Visitor</abbr></a></td>
+                <td>$outputVisitor</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/REST/Common/UrlHandler.html"><abbr title="eZ\Publish\Core\REST\Common\UrlHandler">UrlHandler</abbr></a></td>
+                <td>$urlHandler</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSession">
+        <div class="location">at line 88</div>
+        <code>            public            
+    <strong>setSession</strong>(mixed $id)</code>
+    </h3>
+    <div class="details">
+        <p>Set session ID</p>
+        <p>Only for testing</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td>tringid</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createContentTypeGroup">
+        <div class="location">at line 106</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a>
+    <strong>createContentTypeGroup</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroupCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupCreateStruct">ContentTypeGroupCreateStruct</abbr></a> $contentTypeGroupCreateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Create a Content Type Group object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroupCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupCreateStruct">ContentTypeGroupCreateStruct</abbr></a></td>
+                <td>$contentTypeGroupCreateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to create a content type group</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If a group with the same identifier already exists</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentTypeGroup">
+        <div class="location">at line 120</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a>
+    <strong>loadContentTypeGroup</strong>(int $contentTypeGroupId)</code>
+    </h3>
+    <div class="details">
+        <p>Get a Content Type Group object by id</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentTypeGroupId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If group can not be found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentTypeGroupByIdentifier">
+        <div class="location">at line 134</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a>
+    <strong>loadContentTypeGroupByIdentifier</strong>(string $contentTypeGroupIdentifier)</code>
+    </h3>
+    <div class="details">
+        <p>Get a Content Type Group object by identifier</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$contentTypeGroupIdentifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If group can not be found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentTypeGroups">
+        <div class="location">at line 144</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a>[]
+    <strong>loadContentTypeGroups</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get all Content Type Groups</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateContentTypeGroup">
+        <div class="location">at line 158</div>
+        <code>            public            
+    <strong>updateContentTypeGroup</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a> $contentTypeGroup, <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroupUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupUpdateStruct">ContentTypeGroupUpdateStruct</abbr></a> $contentTypeGroupUpdateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Update a Content Type Group object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a></td>
+                <td>$contentTypeGroup</td>
+                <td>the content type group to be updated</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroupUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupUpdateStruct">ContentTypeGroupUpdateStruct</abbr></a></td>
+                <td>$contentTypeGroupUpdateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to create a content type group</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If the given identifier (if set) already exists</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteContentTypeGroup">
+        <div class="location">at line 173</div>
+        <code>            public            
+    <strong>deleteContentTypeGroup</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a> $contentTypeGroup)</code>
+    </h3>
+    <div class="details">
+        <p>Delete a Content Type Group.</p>
+        <p>This method only deletes an content type group which has content types without any content instances</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a></td>
+                <td>$contentTypeGroup</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to delete a content type group</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If  a to be deleted content type has instances</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createContentType">
+        <div class="location">at line 191</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a>
+    <strong>createContentType</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeCreateStruct">ContentTypeCreateStruct</abbr></a> $contentTypeCreateStruct, array $contentTypeGroups)</code>
+    </h3>
+    <div class="details">
+        <p>Create a Content Type object.</p>
+        <p>The content type is created in the state STATUS_DRAFT.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeCreateStruct">ContentTypeCreateStruct</abbr></a></td>
+                <td>$contentTypeCreateStruct</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$contentTypeGroups</td>
+                <td>Required array of {@link ContentTypeGroup} to link type with (must contain one)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>In case when - array of content type groups does not contain at least one content type group - identifier or remoteId in the content type create struct already exists - there is a duplicate field identifier in the content type create struct - content type create struct does not contain at least one field definition create struct</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentTypeDraft">
+        <div class="location">at line 205</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a>
+    <strong>loadContentTypeDraft</strong>(int $contentTypeId)</code>
+    </h3>
+    <div class="details">
+        <p>Get a Content Type object draft by id</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentTypeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If the content type draft owned by the current user can not be found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateContentTypeDraft">
+        <div class="location">at line 221</div>
+        <code>            public            
+    <strong>updateContentTypeDraft</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a> $contentTypeDraft, <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeUpdateStruct">ContentTypeUpdateStruct</abbr></a> $contentTypeUpdateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Update a Content Type object</p>
+        <p>Does not update fields (fieldDefinitions), use {@link updateFieldDefinition()} to update them.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a></td>
+                <td>$contentTypeDraft</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeUpdateStruct">ContentTypeUpdateStruct</abbr></a></td>
+                <td>$contentTypeUpdateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to update a content type</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If the given identifier or remoteId already exists.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addFieldDefinition">
+        <div class="location">at line 237</div>
+        <code>            public            
+    <strong>addFieldDefinition</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a> $contentTypeDraft, <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinitionCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionCreateStruct">FieldDefinitionCreateStruct</abbr></a> $fieldDefinitionCreateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a new field definition to an existing content type.</p>
+        <p>The content type must be in state DRAFT.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a></td>
+                <td>$contentTypeDraft</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinitionCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionCreateStruct">FieldDefinitionCreateStruct</abbr></a></td>
+                <td>$fieldDefinitionCreateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the identifier in already exists in the content type</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to edit a content type</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeFieldDefinition">
+        <div class="location">at line 251</div>
+        <code>            public            
+    <strong>removeFieldDefinition</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a> $contentTypeDraft, <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition)</code>
+    </h3>
+    <div class="details">
+        <p>Remove a field definition from an existing Type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a></td>
+                <td>$contentTypeDraft</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a></td>
+                <td>$fieldDefinition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If the given field definition does not belong to the given type</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to edit a content type</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateFieldDefinition">
+        <div class="location">at line 267</div>
+        <code>            public            
+    <strong>updateFieldDefinition</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a> $contentTypeDraft, <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition, <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinitionUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionUpdateStruct">FieldDefinitionUpdateStruct</abbr></a> $fieldDefinitionUpdateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Update a field definition</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a></td>
+                <td>$contentTypeDraft</td>
+                <td>the content type draft</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a></td>
+                <td>$fieldDefinition</td>
+                <td>the field definition which should be updated</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinitionUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionUpdateStruct">FieldDefinitionUpdateStruct</abbr></a></td>
+                <td>$fieldDefinitionUpdateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If the field id in the update struct is not found or does not belong to the content type of If the given identifier is used in an existing field of the given content type</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to edit a content type</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_publishContentTypeDraft">
+        <div class="location">at line 282</div>
+        <code>            public            
+    <strong>publishContentTypeDraft</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a> $contentTypeDraft)</code>
+    </h3>
+    <div class="details">
+        <p>Publish the content type and update content objects.</p>
+        <p>This method updates content objects, depending on the changed field definitions.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a></td>
+                <td>$contentTypeDraft</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>If the content type has no draft</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If the content type has no field definitions</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to publish a content type</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentType">
+        <div class="location">at line 296</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a>
+    <strong>loadContentType</strong>(int $contentTypeId)</code>
+    </h3>
+    <div class="details">
+        <p>Get a Content Type object by id</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentTypeId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If a content type with the given id and status DEFINED can not be found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadFieldDefinition">
+        <div class="location">at line 320</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a>
+    <strong>loadFieldDefinition</strong>(string $fieldDefinitionId)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a single field definition by $fieldDefinitionId</p>
+        <p>ATTENTION: This is not an API method and only meant for internal use in<br />
+ the REST Client implementation.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$fieldDefinitionId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadFieldDefinitionList">
+        <div class="location">at line 342</div>
+        <code>            public            <abbr title="eZ\Publish\Core\REST\Client\FieldDefinitionList">FieldDefinitionList</abbr>
+    <strong>loadFieldDefinitionList</strong>(mixed $fieldDefinitionListReference)</code>
+    </h3>
+    <div class="details">
+        <p>Loads the FieldDefinitionList stored at $fieldDefinitionListReference</p>
+        <p>ATTENTION: This is not an API method and only meant for internal use in<br />
+ the REST Client implementation.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$fieldDefinitionListReference</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\Core\REST\Client\FieldDefinitionList">FieldDefinitionList</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentTypeByIdentifier">
+        <div class="location">at line 363</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a>
+    <strong>loadContentTypeByIdentifier</strong>(string $identifier)</code>
+    </h3>
+    <div class="details">
+        <p>Get a Content Type object by identifier</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If content type with the given identifier and status DEFINED can not be found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentTypeByRemoteId">
+        <div class="location">at line 377</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a>
+    <strong>loadContentTypeByRemoteId</strong>(string $remoteId)</code>
+    </h3>
+    <div class="details">
+        <p>Get a Content Type object by id</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$remoteId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If content type with the given remote id and status DEFINED can not be found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentTypes">
+        <div class="location">at line 389</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a>[]
+    <strong>loadContentTypes</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a> $contentTypeGroup)</code>
+    </h3>
+    <div class="details">
+        <p>Get Content Type objects which belong to the given content type group</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a></td>
+                <td>$contentTypeGroup</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a>[]</td>
+            <td>Which have status DEFINED</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createContentTypeDraft">
+        <div class="location">at line 407</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a>
+    <strong>createContentTypeDraft</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a draft from an existing content type.</p>
+        <p>This is a complete copy of the content<br />
+ type which has the state STATUS_DRAFT.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a></td>
+                <td>$contentType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeDraft.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft">ContentTypeDraft</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to edit a content type</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>If there is already a draft assigned to another user</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteContentType">
+        <div class="location">at line 422</div>
+        <code>            public            
+    <strong>deleteContentType</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType)</code>
+    </h3>
+    <div class="details">
+        <p>Delete a Content Type object.</p>
+        <p>Deletes a content type if it has no instances</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a></td>
+                <td>$contentType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>If there exist content objects of this type</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to delete a content type</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_copyContentType">
+        <div class="location">at line 440</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a>
+    <strong>copyContentType</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType, <a href="../../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user = null)</code>
+    </h3>
+    <div class="details">
+        <p>Copy Type incl fields and groupIds to a new Type object</p>
+        <p>New Type will have $userId as creator / modifier, created / modified should be updated with current time,<br />
+ updated remoteId and identifier should be appended with &#039;_&#039; + unique string.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a></td>
+                <td>$contentType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+                <td>$user</td>
+                <td>if null the current user is used</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to copy a content type</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_assignContentTypeGroup">
+        <div class="location">at line 454</div>
+        <code>            public            
+    <strong>assignContentTypeGroup</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType, <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a> $contentTypeGroup)</code>
+    </h3>
+    <div class="details">
+        <p>Assigns a content type to a content type group.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a></td>
+                <td>$contentType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a></td>
+                <td>$contentTypeGroup</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to unlink a content type</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If the content type is already assigned the given group</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_unassignContentTypeGroup">
+        <div class="location">at line 469</div>
+        <code>            public            
+    <strong>unassignContentTypeGroup</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType, <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a> $contentTypeGroup)</code>
+    </h3>
+    <div class="details">
+        <p>Unassign a content type from a group.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a></td>
+                <td>$contentType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroup.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup">ContentTypeGroup</abbr></a></td>
+                <td>$contentTypeGroup</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to link a content type</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If the content type is not assigned this the given group.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>If $contentTypeGroup is the last group assigned to the content type</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newContentTypeGroupCreateStruct">
+        <div class="location">at line 481</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroupCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupCreateStruct">ContentTypeGroupCreateStruct</abbr></a>
+    <strong>newContentTypeGroupCreateStruct</strong>(string $identifier)</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates a new content type group create class</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroupCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupCreateStruct">ContentTypeGroupCreateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newContentTypeCreateStruct">
+        <div class="location">at line 493</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeCreateStruct">ContentTypeCreateStruct</abbr></a>
+    <strong>newContentTypeCreateStruct</strong>(string $identifier)</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates a new content type create class</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeCreateStruct">ContentTypeCreateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newContentTypeUpdateStruct">
+        <div class="location">at line 503</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeUpdateStruct">ContentTypeUpdateStruct</abbr></a>
+    <strong>newContentTypeUpdateStruct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates a new content type update struct</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeUpdateStruct">ContentTypeUpdateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newContentTypeGroupUpdateStruct">
+        <div class="location">at line 513</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroupUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupUpdateStruct">ContentTypeGroupUpdateStruct</abbr></a>
+    <strong>newContentTypeGroupUpdateStruct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates a new content type update struct</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentTypeGroupUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupUpdateStruct">ContentTypeGroupUpdateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newFieldDefinitionCreateStruct">
+        <div class="location">at line 526</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinitionCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionCreateStruct">FieldDefinitionCreateStruct</abbr></a>
+    <strong>newFieldDefinitionCreateStruct</strong>($identifier, $fieldTypeIdentifier)</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates a field definition create struct</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldTypeIdentifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinitionCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionCreateStruct">FieldDefinitionCreateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newFieldDefinitionUpdateStruct">
+        <div class="location">at line 536</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinitionUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionUpdateStruct">FieldDefinitionUpdateStruct</abbr></a>
+    <strong>newFieldDefinitionUpdateStruct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates a field definition update class</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinitionUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinitionUpdateStruct">FieldDefinitionUpdateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

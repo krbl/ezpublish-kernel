@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\MVC\Legacy\Kernel | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../eZ/Publish/Core/MVC/Legacy.html">eZ\Publish\Core\MVC\Legacy</a>\Kernel</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Kernel</strong>        extends <abbr title="ezpKernel">ezpKernel</abbr></p>
+
+            <div class="description">
+            <p>Class wrapping the legacy kernel</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<abbr title="ezpKernelHandler">ezpKernelHandler</abbr> $kernelHandler, string $legacyRootDir, string $webRootDir)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_enterLegacyRootDir">enterLegacyRootDir</a>()
+                    <p>Changes the current working directory to the legacy root dir.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_leaveLegacyRootDir">leaveLegacyRootDir</a>()
+                    <p>Leaves the legacy root dir and switches back to the initial webroot dir.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_run">run</a>()
+                    <p>Runs current request through legacy kernel.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_runCallback">runCallback</a>(<abbr title="eZ\Publish\Core\MVC\Legacy\Closure">Closure</abbr> $callback, boolean $postReinitialize = true)
+                    <p>Runs a callback function in the legacy kernel environment.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 39</div>
+        <code>            public            
+    <strong>__construct</strong>(<abbr title="ezpKernelHandler">ezpKernelHandler</abbr> $kernelHandler, string $legacyRootDir, string $webRootDir)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="ezpKernelHandler">ezpKernelHandler</abbr></td>
+                <td>$kernelHandler</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$legacyRootDir</td>
+                <td>Must be a absolute dir</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$webRootDir</td>
+                <td>Must be a absolute dir</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_enterLegacyRootDir">
+        <div class="location">at line 54</div>
+        <code>            public            
+    <strong>enterLegacyRootDir</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Changes the current working directory to the legacy root dir.</p>
+        <p>Calling this method is mandatory to use legacy kernel since a lot of resources in eZ Publish 4.x relatively defined.</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_leaveLegacyRootDir">
+        <div class="location">at line 62</div>
+        <code>            public            
+    <strong>leaveLegacyRootDir</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Leaves the legacy root dir and switches back to the initial webroot dir.</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_run">
+        <div class="location">at line 72</div>
+        <code>            public            array
+    <strong>run</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Runs current request through legacy kernel.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_runCallback">
+        <div class="location">at line 90</div>
+        <code>            public            mixed
+    <strong>runCallback</strong>(<abbr title="eZ\Publish\Core\MVC\Legacy\Closure">Closure</abbr> $callback, boolean $postReinitialize = true)</code>
+    </h3>
+    <div class="details">
+        <p>Runs a callback function in the legacy kernel environment.</p>
+        <p>This is useful to run eZ Publish 4.x code from a non-related context (like eZ Publish 5)</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="eZ\Publish\Core\MVC\Legacy\Closure">Closure</abbr></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$postReinitialize</td>
+                <td>Default is true. If set to false, the kernel environment will not be reinitialized. This can be useful to optimize several calls to the kernel within the same context.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The result of the callback</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content.html">eZ\Publish\Core\Persistence\Legacy\Content</a>\StorageHandler</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>StorageHandler</strong></p>
+
+            <div class="description">
+            <p>Handler for external storages</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageRegistry.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageRegistry">StorageRegistry</abbr></a> $storageRegistry, array $context)
+                    <p>Creates a new storage handler</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_storeFieldData">storeFieldData</a>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo, <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a> $field)
+                    <p>Stores data from $field in its corresponding external storage</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_getFieldData">getFieldData</a>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo, <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a> $field)
+                    <p>Fetches external data for $field from its corresponding external storage</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_deleteFieldData">deleteFieldData</a>(string $fieldType, <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo, array $ids)
+                    <p>Deletes data for field $ids from external storage of $fieldType</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 40</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageRegistry.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageRegistry">StorageRegistry</abbr></a> $storageRegistry, array $context)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new storage handler</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageRegistry.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageRegistry">StorageRegistry</abbr></a></td>
+                <td>$storageRegistry</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_storeFieldData">
+        <div class="location">at line 54</div>
+        <code>            public            void
+    <strong>storeFieldData</strong>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo, <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a> $field)</code>
+    </h3>
+    <div class="details">
+        <p>Stores data from $field in its corresponding external storage</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a></td>
+                <td>$versionInfo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a></td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFieldData">
+        <div class="location">at line 67</div>
+        <code>            public            void
+    <strong>getFieldData</strong>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo, <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a> $field)</code>
+    </h3>
+    <div class="details">
+        <p>Fetches external data for $field from its corresponding external storage</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a></td>
+                <td>$versionInfo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a></td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteFieldData">
+        <div class="location">at line 85</div>
+        <code>            public            void
+    <strong>deleteFieldData</strong>(string $fieldType, <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo, array $ids)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes data for field $ids from external storage of $fieldType</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$fieldType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a></td>
+                <td>$versionInfo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

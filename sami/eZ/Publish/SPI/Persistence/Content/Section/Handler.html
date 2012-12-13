@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\SPI\Persistence\Content\Section\Handler | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Section.html">eZ\Publish\SPI\Persistence\Content\Section</a>\Handler</h1>
+    </div>
+        <div class="content">
+                <p>interface    <strong>Handler</strong></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Section.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section">Section</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(string $name, string $identifier)
+                    <p>Creat a new section</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Section.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section">Section</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_update">update</a>(mixed $id, string $name, string $identifier)
+                    <p>Update name and identifier of a section</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Section.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section">Section</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_load">load</a>(mixed $id)
+                    <p>Get section data</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Section.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section">Section</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadAll">loadAll</a>()
+                    <p>Get all section data</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Section.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section">Section</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadByIdentifier">loadByIdentifier</a>(string $identifier)
+                    <p>Get section data by identifier</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(mixed $id)
+                    <p>Delete a section</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_assign">assign</a>(mixed $sectionId, mixed $contentId)
+                    <p>Assigns section to single content object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_assignmentsCount">assignmentsCount</a>(mixed $sectionId)
+                    <p>Number of content assignments a Section has</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_create">
+        <div class="location">at line 26</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Section.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section">Section</abbr></a>
+    <strong>create</strong>(string $name, string $identifier)</code>
+    </h3>
+    <div class="details">
+        <p>Creat a new section</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Section.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section">Section</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_update">
+        <div class="location">at line 37</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Section.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section">Section</abbr></a>
+    <strong>update</strong>(mixed $id, string $name, string $identifier)</code>
+    </h3>
+    <div class="details">
+        <p>Update name and identifier of a section</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Section.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section">Section</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_load">
+        <div class="location">at line 48</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Section.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section">Section</abbr></a>
+    <strong>load</strong>(mixed $id)</code>
+    </h3>
+    <div class="details">
+        <p>Get section data</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Section.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section">Section</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If section is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadAll">
+        <div class="location">at line 55</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Section.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section">Section</abbr></a>[]
+    <strong>loadAll</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get all section data</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Section.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section">Section</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadByIdentifier">
+        <div class="location">at line 66</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Section.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section">Section</abbr></a>
+    <strong>loadByIdentifier</strong>(string $identifier)</code>
+    </h3>
+    <div class="details">
+        <p>Get section data by identifier</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Section.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section">Section</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If section is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 77</div>
+        <code>            public            
+    <strong>delete</strong>(mixed $id)</code>
+    </h3>
+    <div class="details">
+        <p>Delete a section</p>
+        <p>Might throw an exception if the section is still associated with some<br />
+ content objects. Make sure that no content objects are associated with<br />
+ the section any more *before* calling this method.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_assign">
+        <div class="location">at line 85</div>
+        <code>            public            
+    <strong>assign</strong>(mixed $sectionId, mixed $contentId)</code>
+    </h3>
+    <div class="details">
+        <p>Assigns section to single content object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$sectionId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_assignmentsCount">
+        <div class="location">at line 94</div>
+        <code>            public            int
+    <strong>assignmentsCount</strong>(mixed $sectionId)</code>
+    </h3>
+    <div class="details">
+        <p>Number of content assignments a Section has</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$sectionId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\REST\Server\Controller\Role | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html">eZ\Publish\Core\REST\Server\Controller</a>\Role</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Role</strong>        extends <a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a></p>
+
+            <div class="description">
+            <p>Role controller</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setInputDispatcher">setInputDispatcher</a>(<a href="../../../../../../eZ/Publish/Core/REST/Common/Input/Dispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\Dispatcher">Dispatcher</abbr></a> $inputDispatcher)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html#method_setInputDispatcher"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setUrlHandler">setUrlHandler</a>(<a href="../../../../../../eZ/Publish/Core/REST/Common/UrlHandler/eZPublish.html"><abbr title="eZ\Publish\Core\REST\Common\UrlHandler\eZPublish">eZPublish</abbr></a> $urlHandler)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html#method_setUrlHandler"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setRequest">setRequest</a>(<a href="../../../../../../eZ/Publish/Core/REST/Server/Request.html"><abbr title="eZ\Publish\Core\REST\Server\Request">Request</abbr></a> $request)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html#method_setRequest"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setContainer">setContainer</a>(<abbr title="Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html#method_setContainer"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../eZ/Publish/API/Repository/RoleService.html"><abbr title="eZ\Publish\API\Repository\RoleService">RoleService</abbr></a> $roleService, <a href="../../../../../../eZ/Publish/API/Repository/UserService.html"><abbr title="eZ\Publish\API\Repository\UserService">UserService</abbr></a> $userService, <a href="../../../../../../eZ/Publish/API/Repository/LocationService.html"><abbr title="eZ\Publish\API\Repository\LocationService">LocationService</abbr></a> $locationService)
+                    <p>Construct controller</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedRole.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedRole">CreatedRole</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createRole">createRole</a>()
+                    <p>Create new role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleList">RoleList</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_listRoles">listRoles</a>()
+                    <p>Loads list of roles</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadRole">loadRole</a>()
+                    <p>Loads role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateRole">updateRole</a>()
+                    <p>Updates a role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_deleteRole">deleteRole</a>()
+                    <p>Delete a role by ID</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/PolicyList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\PolicyList">PolicyList</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadPolicies">loadPolicies</a>()
+                    <p>Loads the policies for the role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_deletePolicies">deletePolicies</a>()
+                    <p>Deletes all policies from a role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadPolicy">loadPolicy</a>()
+                    <p>Loads a policy</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedPolicy.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedPolicy">CreatedPolicy</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addPolicy">addPolicy</a>()
+                    <p>Adds a policy to role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updatePolicy">updatePolicy</a>()
+                    <p>Updates a policy</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_deletePolicy">deletePolicy</a>()
+                    <p>Delete a policy from role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_assignRoleToUser">assignRoleToUser</a>()
+                    <p>Assigns role to user</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_assignRoleToUserGroup">assignRoleToUserGroup</a>()
+                    <p>Assigns role to user group</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_unassignRoleFromUser">unassignRoleFromUser</a>()
+                    <p>Un-assigns role from user</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_unassignRoleFromUserGroup">unassignRoleFromUserGroup</a>()
+                    <p>Un-assigns role from user group</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadRoleAssignmentsForUser">loadRoleAssignmentsForUser</a>()
+                    <p>Loads role assignments for user</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadRoleAssignmentsForUserGroup">loadRoleAssignmentsForUserGroup</a>()
+                    <p>Loads role assignments for user group</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestUserRoleAssignment.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestUserRoleAssignment">RestUserRoleAssignment</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadRoleAssignmentForUser">loadRoleAssignmentForUser</a>()
+                    <p>Returns a role assignment to the given user</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestUserGroupRoleAssignment.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestUserGroupRoleAssignment">RestUserGroupRoleAssignment</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadRoleAssignmentForUserGroup">loadRoleAssignmentForUserGroup</a>()
+                    <p>Returns a role assignment to the given user group</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/PolicyList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\PolicyList">PolicyList</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_listPoliciesForUser">listPoliciesForUser</a>()
+                    <p>Search all policies which are applied to a given user</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setInputDispatcher">
+        <div class="location">in <a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html#method_setInputDispatcher"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a> at line 39</div>
+        <code>            public            
+    <strong>setInputDispatcher</strong>(<a href="../../../../../../eZ/Publish/Core/REST/Common/Input/Dispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\Dispatcher">Dispatcher</abbr></a> $inputDispatcher)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/REST/Common/Input/Dispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\Dispatcher">Dispatcher</abbr></a></td>
+                <td>$inputDispatcher</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setUrlHandler">
+        <div class="location">in <a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html#method_setUrlHandler"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a> at line 44</div>
+        <code>            public            
+    <strong>setUrlHandler</strong>(<a href="../../../../../../eZ/Publish/Core/REST/Common/UrlHandler/eZPublish.html"><abbr title="eZ\Publish\Core\REST\Common\UrlHandler\eZPublish">eZPublish</abbr></a> $urlHandler)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/REST/Common/UrlHandler/eZPublish.html"><abbr title="eZ\Publish\Core\REST\Common\UrlHandler\eZPublish">eZPublish</abbr></a></td>
+                <td>$urlHandler</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRequest">
+        <div class="location">in <a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html#method_setRequest"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a> at line 49</div>
+        <code>            public            
+    <strong>setRequest</strong>(<a href="../../../../../../eZ/Publish/Core/REST/Server/Request.html"><abbr title="eZ\Publish\Core\REST\Server\Request">Request</abbr></a> $request)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Request.html"><abbr title="eZ\Publish\Core\REST\Server\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setContainer">
+        <div class="location">in <a href="../../../../../../eZ/Publish/Core/REST/Server/Controller.html#method_setContainer"><abbr title="eZ\Publish\Core\REST\Server\Controller">Controller</abbr></a> at line 54</div>
+        <code>            public            
+    <strong>setContainer</strong>(<abbr title="Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 58</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../eZ/Publish/API/Repository/RoleService.html"><abbr title="eZ\Publish\API\Repository\RoleService">RoleService</abbr></a> $roleService, <a href="../../../../../../eZ/Publish/API/Repository/UserService.html"><abbr title="eZ\Publish\API\Repository\UserService">UserService</abbr></a> $userService, <a href="../../../../../../eZ/Publish/API/Repository/LocationService.html"><abbr title="eZ\Publish\API\Repository\LocationService">LocationService</abbr></a> $locationService)</code>
+    </h3>
+    <div class="details">
+        <p>Construct controller</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/RoleService.html"><abbr title="eZ\Publish\API\Repository\RoleService">RoleService</abbr></a></td>
+                <td>$roleService</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/UserService.html"><abbr title="eZ\Publish\API\Repository\UserService">UserService</abbr></a></td>
+                <td>$userService</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/LocationService.html"><abbr title="eZ\Publish\API\Repository\LocationService">LocationService</abbr></a></td>
+                <td>$locationService</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createRole">
+        <div class="location">at line 71</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedRole.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedRole">CreatedRole</abbr></a>
+    <strong>createRole</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Create new role</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedRole.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedRole">CreatedRole</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_listRoles">
+        <div class="location">at line 92</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleList">RoleList</abbr></a>
+    <strong>listRoles</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads list of roles</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleList">RoleList</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadRole">
+        <div class="location">at line 127</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>
+    <strong>loadRole</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads role</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateRole">
+        <div class="location">at line 138</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>
+    <strong>updateRole</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Updates a role</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteRole">
+        <div class="location">at line 158</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a>
+    <strong>deleteRole</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Delete a role by ID</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadPolicies">
+        <div class="location">at line 173</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/PolicyList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\PolicyList">PolicyList</abbr></a>
+    <strong>loadPolicies</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads the policies for the role</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/PolicyList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\PolicyList">PolicyList</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deletePolicies">
+        <div class="location">at line 187</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a>
+    <strong>deletePolicies</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Deletes all policies from a role</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadPolicy">
+        <div class="location">at line 206</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a>
+    <strong>loadPolicy</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads a policy</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addPolicy">
+        <div class="location">at line 225</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedPolicy.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedPolicy">CreatedPolicy</abbr></a>
+    <strong>addPolicy</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Adds a policy to role</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/CreatedPolicy.html"><abbr title="eZ\Publish\Core\REST\Server\Values\CreatedPolicy">CreatedPolicy</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updatePolicy">
+        <div class="location">at line 261</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a>
+    <strong>updatePolicy</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Updates a policy</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deletePolicy">
+        <div class="location">at line 291</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a>
+    <strong>deletePolicy</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Delete a policy from role</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/NoContent.html"><abbr title="eZ\Publish\Core\REST\Server\Values\NoContent">NoContent</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_assignRoleToUser">
+        <div class="location">at line 321</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a>
+    <strong>assignRoleToUser</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Assigns role to user</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_assignRoleToUserGroup">
+        <div class="location">at line 346</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a>
+    <strong>assignRoleToUserGroup</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Assigns role to user group</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_unassignRoleFromUser">
+        <div class="location">at line 373</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a>
+    <strong>unassignRoleFromUser</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Un-assigns role from user</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_unassignRoleFromUserGroup">
+        <div class="location">at line 391</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a>
+    <strong>unassignRoleFromUserGroup</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Un-assigns role from user group</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadRoleAssignmentsForUser">
+        <div class="location">at line 411</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a>
+    <strong>loadRoleAssignmentsForUser</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads role assignments for user</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadRoleAssignmentsForUserGroup">
+        <div class="location">at line 426</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a>
+    <strong>loadRoleAssignmentsForUserGroup</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads role assignments for user group</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RoleAssignmentList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RoleAssignmentList">RoleAssignmentList</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadRoleAssignmentForUser">
+        <div class="location">at line 444</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestUserRoleAssignment.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestUserRoleAssignment">RestUserRoleAssignment</abbr></a>
+    <strong>loadRoleAssignmentForUser</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns a role assignment to the given user</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestUserRoleAssignment.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestUserRoleAssignment">RestUserRoleAssignment</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadRoleAssignmentForUserGroup">
+        <div class="location">at line 467</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestUserGroupRoleAssignment.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestUserGroupRoleAssignment">RestUserGroupRoleAssignment</abbr></a>
+    <strong>loadRoleAssignmentForUserGroup</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns a role assignment to the given user group</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/RestUserGroupRoleAssignment.html"><abbr title="eZ\Publish\Core\REST\Server\Values\RestUserGroupRoleAssignment">RestUserGroupRoleAssignment</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_listPoliciesForUser">
+        <div class="location">at line 492</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/REST/Server/Values/PolicyList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\PolicyList">PolicyList</abbr></a>
+    <strong>listPoliciesForUser</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Search all policies which are applied to a given user</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/REST/Server/Values/PolicyList.html"><abbr title="eZ\Publish\Core\REST\Server\Values\PolicyList">PolicyList</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

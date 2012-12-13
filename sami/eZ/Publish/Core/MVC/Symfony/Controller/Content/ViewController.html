@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\MVC\Symfony\Controller\Content\ViewController | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Content.html">eZ\Publish\Core\MVC\Symfony\Controller\Content</a>\ViewController</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ViewController</strong>        extends <a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getParameter">getParameter</a>(string $parameterName, mixed $defaultValue = null)
+                    <p>Returns value for $parameterName and fallbacks to $defaultValue if not defined</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_getParameter"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasParameter">hasParameter</a>(string $parameterName)
+                    <p>Checks if $parameterName is defined</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_hasParameter"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/Core/MVC/ConfigResolverInterface.html"><abbr title="eZ\Publish\Core\MVC\ConfigResolverInterface">ConfigResolverInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getConfigResolver">getConfigResolver</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_getConfigResolver"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_render">render</a>(string $view, array $parameters = array(), <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr> $response = null)
+                    <p>Renders a view.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_render"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Symfony\Component\Templating\EngineInterface">EngineInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getTemplateEngine">getTemplateEngine</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_getTemplateEngine"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Symfony\Component\HttpKernel\Log\LoggerInterface">LoggerInterface</abbr>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getLogger">getLogger</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_getLogger"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getRepository">getRepository</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_getRepository"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getRequest">getRequest</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_getRequest"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getEventDispatcher">getEventDispatcher</a>()
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_getEventDispatcher"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isGranted">isGranted</a>(<a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Security/Authorization/Attribute.html"><abbr title="eZ\Publish\Core\MVC\Symfony\Security\Authorization\Attribute">Attribute</abbr></a> $attribute)
+                    <p>Checks if current user has granted access to provided attribute</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_isGranted"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/View/Manager.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\Manager">Manager</abbr></a> $viewManager)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_viewLocation">viewLocation</a>(int $locationId, string $viewType, boolean $layout = false)
+                    <p>Main action for viewing content through a location in the repository.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_viewContent">viewContent</a>(int $contentId, string $viewType, boolean $layout = false)
+                    <p>Main action for viewing content.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getParameter">
+        <div class="location">in <a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_getParameter"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a> at line 27</div>
+        <code>            public            mixed
+    <strong>getParameter</strong>(string $parameterName, mixed $defaultValue = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns value for $parameterName and fallbacks to $defaultValue if not defined</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$parameterName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$defaultValue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasParameter">
+        <div class="location">in <a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_hasParameter"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a> at line 42</div>
+        <code>            public            boolean
+    <strong>hasParameter</strong>(string $parameterName)</code>
+    </h3>
+    <div class="details">
+        <p>Checks if $parameterName is defined</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$parameterName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getConfigResolver">
+        <div class="location">in <a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_getConfigResolver"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a> at line 50</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/Core/MVC/ConfigResolverInterface.html"><abbr title="eZ\Publish\Core\MVC\ConfigResolverInterface">ConfigResolverInterface</abbr></a>
+    <strong>getConfigResolver</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/Core/MVC/ConfigResolverInterface.html"><abbr title="eZ\Publish\Core\MVC\ConfigResolverInterface">ConfigResolverInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_render">
+        <div class="location">in <a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_render"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a> at line 64</div>
+        <code>            public            <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+    <strong>render</strong>(string $view, array $parameters = array(), <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr> $response = null)</code>
+    </h3>
+    <div class="details">
+        <p>Renders a view.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$view</td>
+                <td>The view name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td>An array of parameters to pass to the view</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr></td>
+                <td>$response</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTemplateEngine">
+        <div class="location">in <a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_getTemplateEngine"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a> at line 78</div>
+        <code>            public            <abbr title="Symfony\Component\Templating\EngineInterface">EngineInterface</abbr>
+    <strong>getTemplateEngine</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Symfony\Component\Templating\EngineInterface">EngineInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLogger">
+        <div class="location">in <a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_getLogger"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a> at line 86</div>
+        <code>            public            <abbr title="Symfony\Component\HttpKernel\Log\LoggerInterface">LoggerInterface</abbr>|null
+    <strong>getLogger</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Symfony\Component\HttpKernel\Log\LoggerInterface">LoggerInterface</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRepository">
+        <div class="location">in <a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_getRepository"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a> at line 94</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a>
+    <strong>getRepository</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRequest">
+        <div class="location">in <a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_getRequest"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a> at line 102</div>
+        <code>            public            <abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr>
+    <strong>getRequest</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getEventDispatcher">
+        <div class="location">in <a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_getEventDispatcher"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a> at line 110</div>
+        <code>            public            <abbr title="Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr>
+    <strong>getEventDispatcher</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isGranted">
+        <div class="location">in <a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Controller/Controller.html#method_isGranted"><abbr title="eZ\Publish\Core\MVC\Symfony\Controller\Controller">Controller</abbr></a> at line 122</div>
+        <code>            public            boolean
+    <strong>isGranted</strong>(<a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Security/Authorization/Attribute.html"><abbr title="eZ\Publish\Core\MVC\Symfony\Security\Authorization\Attribute">Attribute</abbr></a> $attribute)</code>
+    </h3>
+    <div class="details">
+        <p>Checks if current user has granted access to provided attribute</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Security/Authorization/Attribute.html"><abbr title="eZ\Publish\Core\MVC\Symfony\Security\Authorization\Attribute">Attribute</abbr></a></td>
+                <td>$attribute</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 28</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/View/Manager.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\Manager">Manager</abbr></a> $viewManager)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/View/Manager.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\Manager">Manager</abbr></a></td>
+                <td>$viewManager</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_viewLocation">
+        <div class="location">at line 81</div>
+        <code>            public            <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+    <strong>viewLocation</strong>(int $locationId, string $viewType, boolean $layout = false)</code>
+    </h3>
+    <div class="details">
+        <p>Main action for viewing content through a location in the repository.</p>
+        <p>Response will be cached with HttpCache validation model (Etag)</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$locationId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$viewType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$layout</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Symfony\Component\Security\Core\Exception\AccessDeniedException">AccessDeniedException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_viewContent">
+        <div class="location">at line 154</div>
+        <code>            public            <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+    <strong>viewContent</strong>(int $contentId, string $viewType, boolean $layout = false)</code>
+    </h3>
+    <div class="details">
+        <p>Main action for viewing content.</p>
+        <p>Response will be cached with HttpCache validation model (Etag)</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$viewType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$layout</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Symfony\Component\Security\Core\Exception\AccessDeniedException">AccessDeniedException</abbr></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Persistence\InMemory\UrlAliasHandler | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../eZ/Publish/Core/Persistence/InMemory.html">eZ\Publish\Core\Persistence\InMemory</a>\UrlAliasHandler</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>UrlAliasHandler</strong>        implements
+        <a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias\Handler">Handler</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../eZ/Publish/Core/Persistence/InMemory/Handler.html"><abbr title="eZ\Publish\Core\Persistence\InMemory\Handler">Handler</abbr></a> $handler, <a href="../../../../../eZ/Publish/Core/Persistence/InMemory/Backend.html"><abbr title="eZ\Publish\Core\Persistence\InMemory\Backend">Backend</abbr></a> $backend)
+                    <p>Setups current handler instance with reference to Handler object that created it.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_publishUrlAliasForLocation">publishUrlAliasForLocation</a>(mixed $locationId, mixed $parentLocationId, string $name, string $languageCode, boolean $alwaysAvailable = false)
+                    <p>This method creates or updates an urlalias from a new or changed content name in a language (if published).</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_createNewAlias">createNewAlias</a>(mixed $linkId, array $data, string $languageCode, string $name, boolean $alwaysAvailable)
+                    <p>Creates new alias.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createCustomUrlAlias">createCustomUrlAlias</a>(mixed $locationId, string $path, boolean $forwarding = false, string $languageCode = null, boolean $alwaysAvailable = false)
+                    <p>Create a user chosen $alias pointing to $locationId in $languageCode.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createGlobalUrlAlias">createGlobalUrlAlias</a>(string $resource, string $path, boolean $forwarding = false, string $languageCode = null, boolean $alwaysAvailable = false)
+                    <p>Create a user chosen $alias pointing to a resource in $languageCode.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_listGlobalURLAliases">listGlobalURLAliases</a>(string|null $languageCode = null, int $offset, int $limit = -1)
+                    <p>List global aliases.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_listURLAliasesForLocation">listURLAliasesForLocation</a>(mixed $locationId, boolean $custom = false)
+                    <p>List of url entries of $urlType, pointing to $locationId.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_removeURLAliases">removeURLAliases</a>(array $urlAliases)
+                    <p>Removes url aliases.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_lookup">lookup</a>(string $url)
+                    <p>Looks up a url alias for the given url</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadUrlAlias">loadUrlAlias</a>(string $id)
+                    <p>Loads URL alias by given $id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_locationMoved">locationMoved</a>(mixed $locationId, mixed $oldParentId, mixed $newParentId)
+                    <p>Notifies the underlying engine that a location has moved.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_locationCopied">locationCopied</a>(mixed $locationId, mixed $oldParentId, mixed $newParentId)
+                    <p>Notifies the underlying engine that a location has moved.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_locationDeleted">locationDeleted</a>(mixed $locationId)
+                    <p>Notifies the underlying engine that a location was deleted or moved to trash</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 38</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../eZ/Publish/Core/Persistence/InMemory/Handler.html"><abbr title="eZ\Publish\Core\Persistence\InMemory\Handler">Handler</abbr></a> $handler, <a href="../../../../../eZ/Publish/Core/Persistence/InMemory/Backend.html"><abbr title="eZ\Publish\Core\Persistence\InMemory\Backend">Backend</abbr></a> $backend)</code>
+    </h3>
+    <div class="details">
+        <p>Setups current handler instance with reference to Handler object that created it.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/Persistence/InMemory/Handler.html"><abbr title="eZ\Publish\Core\Persistence\InMemory\Handler">Handler</abbr></a></td>
+                <td>$handler</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/Persistence/InMemory/Backend.html"><abbr title="eZ\Publish\Core\Persistence\InMemory\Backend">Backend</abbr></a></td>
+                <td>$backend</td>
+                <td>The storage engine backend</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_publishUrlAliasForLocation">
+        <div class="location">at line 60</div>
+        <code>            public            void
+    <strong>publishUrlAliasForLocation</strong>(mixed $locationId, mixed $parentLocationId, string $name, string $languageCode, boolean $alwaysAvailable = false)</code>
+    </h3>
+    <div class="details">
+        <p>This method creates or updates an urlalias from a new or changed content name in a language (if published).</p>
+        <p>It also can be used to create an alias for a new location of content.<br />
+ On update the old alias is linked to the new one (i.e. a history alias is generated).<br />
+<br />
+ $alwaysAvailable controls whether the url alias is accessible in all<br />
+ languages.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$locationId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$parentLocationId</td>
+                <td>In case of empty( $parentLocationId ), threat as root</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>the new name computed by the name schema or url alias schema</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$languageCode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$alwaysAvailable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>Does not return the UrlAlias created / updated with type URLAlias::LOCATION</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createNewAlias">
+        <div class="location">at line 147</div>
+        <code>            public            void
+    <strong>createNewAlias</strong>(mixed $linkId, array $data, string $languageCode, string $name, boolean $alwaysAvailable)</code>
+    </h3>
+    <div class="details">
+        <p>Creates new alias.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$linkId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$languageCode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$alwaysAvailable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createCustomUrlAlias">
+        <div class="location">at line 279</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a>
+    <strong>createCustomUrlAlias</strong>(mixed $locationId, string $path, boolean $forwarding = false, string $languageCode = null, boolean $alwaysAvailable = false)</code>
+    </h3>
+    <div class="details">
+        <p>Create a user chosen $alias pointing to $locationId in $languageCode.</p>
+        <p>If $languageCode is null the $alias is created in the system&#039;s default<br />
+ language. $alwaysAvailable makes the alias available in all languages.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$locationId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$forwarding</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$languageCode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$alwaysAvailable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createGlobalUrlAlias">
+        <div class="location">at line 308</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a>
+    <strong>createGlobalUrlAlias</strong>(string $resource, string $path, boolean $forwarding = false, string $languageCode = null, boolean $alwaysAvailable = false)</code>
+    </h3>
+    <div class="details">
+        <p>Create a user chosen $alias pointing to a resource in $languageCode.</p>
+        <p>This method does not handle location resources - if a user enters a location target<br />
+ the createCustomUrlAlias method has to be used.<br />
+<br />
+ If $languageCode is null the $alias is created in the system&#039;s default<br />
+ language. $alwaysAvailable makes the alias available in all languages.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$resource</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$forwarding</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$languageCode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$alwaysAvailable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_listGlobalURLAliases">
+        <div class="location">at line 463</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a>[]
+    <strong>listGlobalURLAliases</strong>(string|null $languageCode = null, int $offset, int $limit = -1)</code>
+    </h3>
+    <div class="details">
+        <p>List global aliases.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string|null</td>
+                <td>$languageCode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_listURLAliasesForLocation">
+        <div class="location">at line 501</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a>[]
+    <strong>listURLAliasesForLocation</strong>(mixed $locationId, boolean $custom = false)</code>
+    </h3>
+    <div class="details">
+        <p>List of url entries of $urlType, pointing to $locationId.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$locationId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$custom</td>
+                <td>if true the user generated aliases are listed otherwise the autogenerated</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeURLAliases">
+        <div class="location">at line 560</div>
+        <code>            public            boolean
+    <strong>removeURLAliases</strong>(array $urlAliases)</code>
+    </h3>
+    <div class="details">
+        <p>Removes url aliases.</p>
+        <p>Autogenerated aliases are not removed by this method.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$urlAliases</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_lookup">
+        <div class="location">at line 583</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a>
+    <strong>lookup</strong>(string $url)</code>
+    </h3>
+    <div class="details">
+        <p>Looks up a url alias for the given url</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadUrlAlias">
+        <div class="location">at line 635</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a>
+    <strong>loadUrlAlias</strong>(string $id)</code>
+    </h3>
+    <div class="details">
+        <p>Loads URL alias by given $id</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias">UrlAlias</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_locationMoved">
+        <div class="location">at line 649</div>
+        <code>            public            
+    <strong>locationMoved</strong>(mixed $locationId, mixed $oldParentId, mixed $newParentId)</code>
+    </h3>
+    <div class="details">
+        <p>Notifies the underlying engine that a location has moved.</p>
+        <p>This method triggers the change of the autogenerated aliases</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$locationId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$oldParentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$newParentId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_locationCopied">
+        <div class="location">at line 767</div>
+        <code>            public            
+    <strong>locationCopied</strong>(mixed $locationId, mixed $oldParentId, mixed $newParentId)</code>
+    </h3>
+    <div class="details">
+        <p>Notifies the underlying engine that a location has moved.</p>
+        <p>This method triggers the creation of the autogenerated aliases for the copied locations</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$locationId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$oldParentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$newParentId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_locationDeleted">
+        <div class="location">at line 833</div>
+        <code>            public            
+    <strong>locationDeleted</strong>(mixed $locationId)</code>
+    </h3>
+    <div class="details">
+        <p>Notifies the underlying engine that a location was deleted or moved to trash</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$locationId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

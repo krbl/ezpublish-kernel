@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Persistence\Legacy\User\Gateway\ExceptionConversion | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/User/Gateway.html">eZ\Publish\Core\Persistence\Legacy\User\Gateway</a>\ExceptionConversion</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ExceptionConversion</strong>        extends <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/User/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\User\Gateway">Gateway</abbr></a></p>
+
+            <div class="description">
+            <p>Base class for user gateways.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_createUser">createUser</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/User.html"><abbr title="eZ\Publish\SPI\Persistence\User">User</abbr></a> $user)
+                    <p>Create user</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteUser">deleteUser</a>(mixed $userId)
+                    <p>Delete user with the given ID.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_load">load</a>(mixed $userId)
+                    <p>Loads user with user ID.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_loadByLoginOrMail">loadByLoginOrMail</a>(string $login, string|null $email = null)
+                    <p>Loads user with user ID.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updateUser">updateUser</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/User.html"><abbr title="eZ\Publish\SPI\Persistence\User">User</abbr></a> $user)
+                    <p>Update the user information specified by the user struct</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_assignRole">assignRole</a>(mixed $contentId, mixed $roleId, array $limitation)
+                    <p>Assigns role to user with given limitation</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeRole">removeRole</a>(mixed $contentId, mixed $roleId)
+                    <p>Remove role from user</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/User/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\User\Gateway">Gateway</abbr></a> $innerGateway)
+                    <p>Creates a new exception conversion gateway around $innerGateway</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_createUser">
+        <div class="location">at line 44</div>
+        <code>            public            mixed
+    <strong>createUser</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/User.html"><abbr title="eZ\Publish\SPI\Persistence\User">User</abbr></a> $user)</code>
+    </h3>
+    <div class="details">
+        <p>Create user</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/User.html"><abbr title="eZ\Publish\SPI\Persistence\User">User</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteUser">
+        <div class="location">at line 65</div>
+        <code>            public            
+    <strong>deleteUser</strong>(mixed $userId)</code>
+    </h3>
+    <div class="details">
+        <p>Delete user with the given ID.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$userId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_load">
+        <div class="location">at line 88</div>
+        <code>            public            array
+    <strong>load</strong>(mixed $userId)</code>
+    </h3>
+    <div class="details">
+        <p>Loads user with user ID.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$userId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadByLoginOrMail">
+        <div class="location">at line 112</div>
+        <code>            public            array
+    <strong>loadByLoginOrMail</strong>(string $login, string|null $email = null)</code>
+    </h3>
+    <div class="details">
+        <p>Loads user with user ID.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$login</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateUser">
+        <div class="location">at line 133</div>
+        <code>            public            
+    <strong>updateUser</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/User.html"><abbr title="eZ\Publish\SPI\Persistence\User">User</abbr></a> $user)</code>
+    </h3>
+    <div class="details">
+        <p>Update the user information specified by the user struct</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/User.html"><abbr title="eZ\Publish\SPI\Persistence\User">User</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_assignRole">
+        <div class="location">at line 156</div>
+        <code>            public            
+    <strong>assignRole</strong>(mixed $contentId, mixed $roleId, array $limitation)</code>
+    </h3>
+    <div class="details">
+        <p>Assigns role to user with given limitation</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$roleId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$limitation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeRole">
+        <div class="location">at line 178</div>
+        <code>            public            
+    <strong>removeRole</strong>(mixed $contentId, mixed $roleId)</code>
+    </h3>
+    <div class="details">
+        <p>Remove role from user</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$roleId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 32</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/User/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\User\Gateway">Gateway</abbr></a> $innerGateway)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new exception conversion gateway around $innerGateway</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/User/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\User\Gateway">Gateway</abbr></a></td>
+                <td>$innerGateway</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

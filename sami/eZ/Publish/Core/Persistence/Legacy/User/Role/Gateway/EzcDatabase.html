@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Persistence\Legacy\User\Role\Gateway\EzcDatabase | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/User/Role/Gateway.html">eZ\Publish\Core\Persistence\Legacy\User\Role\Gateway</a>\EzcDatabase</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>EzcDatabase</strong>        extends <a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/User/Role/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\User\Role\Gateway">Gateway</abbr></a></p>
+
+            <div class="description">
+            <p>Base class for content type gateways.</p>
+            <p></p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>GROUP_TYPE_ID</td>
+                <td class="last">
+                    <p><em>Internal type ID for user groups</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../../eZ/Publish/SPI/Persistence/User/Role.html"><abbr title="eZ\Publish\SPI\Persistence\User\Role">Role</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createRole">createRole</a>(<a href="../../../../../../../../eZ/Publish/SPI/Persistence/User/Role.html"><abbr title="eZ\Publish\SPI\Persistence\User\Role">Role</abbr></a> $role)
+                    <p>Create new role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_loadRole">loadRole</a>(mixed $roleId)
+                    <p>Loads a specified role by $roleId</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_loadRoleByIdentifier">loadRoleByIdentifier</a>(string $identifier)
+                    <p>Loads a specified role by $identifier</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_loadRoles">loadRoles</a>()
+                    <p>Loads all roles</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_loadRolesForContentObjects">loadRolesForContentObjects</a>(array $contentIds)
+                    <p>Loads all roles associated with the given content objects</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_loadRoleAssignmentsByGroupId">loadRoleAssignmentsByGroupId</a>(mixed $groupId, boolean $inherited = false)
+                    <p>Loads role assignments for specified content ID</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\Core\Persistence\Legacy\User\Role\Gateway\UserPolicy">UserPolicy</abbr>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadPoliciesByUserId">loadPoliciesByUserId</a>(mixed $userId)
+                    <p>Returns the user policies associated with the user</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updateRole">updateRole</a>(<a href="../../../../../../../../eZ/Publish/SPI/Persistence/User/RoleUpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\User\RoleUpdateStruct">RoleUpdateStruct</abbr></a> $role)
+                    <p>Update role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteRole">deleteRole</a>(mixed $roleId)
+                    <p>Delete the specified role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_addPolicy">addPolicy</a>(mixed $roleId, <a href="../../../../../../../../eZ/Publish/SPI/Persistence/User/Policy.html"><abbr title="eZ\Publish\SPI\Persistence\User\Policy">Policy</abbr></a> $policy)
+                    <p>Adds a policy to a role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_addPolicyLimitations">addPolicyLimitations</a>(int $policyId, array $limitations)
+                    <p>Adds limitations to an existing policy</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_removePolicy">removePolicy</a>(mixed $policyId)
+                    <p>Removes a policy from a role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_removePolicyLimitations">removePolicyLimitations</a>(mixed $policyId)
+                    <p>Removes a policy from a role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a> $handler)
+                    <p>Construct from database handler</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_createRole">
+        <div class="location">at line 54</div>
+        <code>            public            <a href="../../../../../../../../eZ/Publish/SPI/Persistence/User/Role.html"><abbr title="eZ\Publish\SPI\Persistence\User\Role">Role</abbr></a>
+    <strong>createRole</strong>(<a href="../../../../../../../../eZ/Publish/SPI/Persistence/User/Role.html"><abbr title="eZ\Publish\SPI\Persistence\User\Role">Role</abbr></a> $role)</code>
+    </h3>
+    <div class="details">
+        <p>Create new role</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../../eZ/Publish/SPI/Persistence/User/Role.html"><abbr title="eZ\Publish\SPI\Persistence\User\Role">Role</abbr></a></td>
+                <td>$role</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../../eZ/Publish/SPI/Persistence/User/Role.html"><abbr title="eZ\Publish\SPI\Persistence\User\Role">Role</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadRole">
+        <div class="location">at line 89</div>
+        <code>            public            array
+    <strong>loadRole</strong>(mixed $roleId)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a specified role by $roleId</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$roleId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadRoleByIdentifier">
+        <div class="location">at line 147</div>
+        <code>            public            array
+    <strong>loadRoleByIdentifier</strong>(string $identifier)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a specified role by $identifier</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadRoles">
+        <div class="location">at line 203</div>
+        <code>            public            array
+    <strong>loadRoles</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads all roles</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadRolesForContentObjects">
+        <div class="location">at line 256</div>
+        <code>            public            array
+    <strong>loadRolesForContentObjects</strong>(array $contentIds)</code>
+    </h3>
+    <div class="details">
+        <p>Loads all roles associated with the given content objects</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$contentIds</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadRoleAssignmentsByGroupId">
+        <div class="location">at line 324</div>
+        <code>            public            array
+    <strong>loadRoleAssignmentsByGroupId</strong>(mixed $groupId, boolean $inherited = false)</code>
+    </h3>
+    <div class="details">
+        <p>Loads role assignments for specified content ID</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$groupId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$inherited</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadPoliciesByUserId">
+        <div class="location">at line 370</div>
+        <code>            public            <abbr title="eZ\Publish\Core\Persistence\Legacy\User\Role\Gateway\UserPolicy">UserPolicy</abbr>[]
+    <strong>loadPoliciesByUserId</strong>(mixed $userId)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the user policies associated with the user</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$userId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\Core\Persistence\Legacy\User\Role\Gateway\UserPolicy">UserPolicy</abbr>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateRole">
+        <div class="location">at line 459</div>
+        <code>            public            
+    <strong>updateRole</strong>(<a href="../../../../../../../../eZ/Publish/SPI/Persistence/User/RoleUpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\User\RoleUpdateStruct">RoleUpdateStruct</abbr></a> $role)</code>
+    </h3>
+    <div class="details">
+        <p>Update role</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../../eZ/Publish/SPI/Persistence/User/RoleUpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\User\RoleUpdateStruct">RoleUpdateStruct</abbr></a></td>
+                <td>$role</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteRole">
+        <div class="location">at line 481</div>
+        <code>            public            
+    <strong>deleteRole</strong>(mixed $roleId)</code>
+    </h3>
+    <div class="details">
+        <p>Delete the specified role</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$roleId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addPolicy">
+        <div class="location">at line 503</div>
+        <code>            public            void
+    <strong>addPolicy</strong>(mixed $roleId, <a href="../../../../../../../../eZ/Publish/SPI/Persistence/User/Policy.html"><abbr title="eZ\Publish\SPI\Persistence\User\Policy">Policy</abbr></a> $policy)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a policy to a role</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$roleId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../../eZ/Publish/SPI/Persistence/User/Policy.html"><abbr title="eZ\Publish\SPI\Persistence\User\Policy">Policy</abbr></a></td>
+                <td>$policy</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addPolicyLimitations">
+        <div class="location">at line 549</div>
+        <code>            public            void
+    <strong>addPolicyLimitations</strong>(int $policyId, array $limitations)</code>
+    </h3>
+    <div class="details">
+        <p>Adds limitations to an existing policy</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$policyId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$limitations</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removePolicy">
+        <div class="location">at line 599</div>
+        <code>            public            void
+    <strong>removePolicy</strong>(mixed $policyId)</code>
+    </h3>
+    <div class="details">
+        <p>Removes a policy from a role</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$policyId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removePolicyLimitations">
+        <div class="location">at line 622</div>
+        <code>            public            void
+    <strong>removePolicyLimitations</strong>(mixed $policyId)</code>
+    </h3>
+    <div class="details">
+        <p>Removes a policy from a role</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$policyId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 42</div>
+        <code>            public            void
+    <strong>__construct</strong>(<a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a> $handler)</code>
+    </h3>
+    <div class="details">
+        <p>Construct from database handler</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a></td>
+                <td>$handler</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

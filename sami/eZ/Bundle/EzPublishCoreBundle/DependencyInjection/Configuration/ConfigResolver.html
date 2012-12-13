@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\ConfigResolver | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../eZ/Bundle/EzPublishCoreBundle/DependencyInjection/Configuration.html">eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration</a>\ConfigResolver</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ConfigResolver</strong>        implements
+        <a href="../../../../../eZ/Publish/Core/MVC/ConfigResolverInterface.html"><abbr title="eZ\Publish\Core\MVC\ConfigResolverInterface">ConfigResolverInterface</abbr></a></p>
+
+            <div class="description">
+            <p>This class will help you get settings for a specific scope.</p>
+            <p>This is useful to get a setting for a specific siteaccess for example.<br />
+<br />
+ It will check the different scopes available for a given namespace to find the appropriate parameter.<br />
+ To work, the dynamic setting must comply internally to the following name format : &quot;&lt;namespace&gt;.&lt;scope&gt;.parameter.name&quot;.<br />
+<br />
+ - &lt;namespace&gt; is the namespace for your dynamic setting. Defaults to &quot;ezsettings&quot;, but can be anything.<br />
+ - &lt;scope&gt; is basically the siteaccess name you want your parameter value to apply to.<br />
+   Can also be &quot;global&quot; for a global override.<br />
+   Another scope is used internally: &quot;default&quot;. This is the generic fallback.<br />
+<br />
+ The resolve scope order is the following:<br />
+ 1. &quot;global&quot;<br />
+ 2. SiteAccess name<br />
+ 3. &quot;default&quot;</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>SCOPE_GLOBAL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SCOPE_DEFAULT</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UNDEFINED_STRATEGY_EXCEPTION</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>UNDEFINED_STRATEGY_NULL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../eZ/Publish/Core/MVC/Symfony/SiteAccess.html"><abbr title="eZ\Publish\Core\MVC\Symfony\SiteAccess">SiteAccess</abbr></a> $siteAccess, array $groupsBySiteAccess, <abbr title="Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container, string $defaultNamespace, int $undefinedStrategy = self::UNDEFINED_STRATEGY_EXCEPTION)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setUndefinedStrategy">setUndefinedStrategy</a>(int $undefinedStrategy)
+                    <p>Sets the strategy to use if an undefined parameter is being asked.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getUndefinedStrategy">getUndefinedStrategy</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasParameter">hasParameter</a>(string $paramName, string $namespace = null, string $scope = null)
+                    <p>Checks if $paramName exists in $namespace</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getParameter">getParameter</a>(string $paramName, string $namespace = null, string $scope = null)
+                    <p>Returns value for $paramName, in $namespace.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDefaultNamespace">setDefaultNamespace</a>(string $defaultNamespace)
+                    <p>Changes the default namespace to look parameter into.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDefaultNamespace">getDefaultNamespace</a>()
+                    <p>Returns the current default namespace.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 77</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../eZ/Publish/Core/MVC/Symfony/SiteAccess.html"><abbr title="eZ\Publish\Core\MVC\Symfony\SiteAccess">SiteAccess</abbr></a> $siteAccess, array $groupsBySiteAccess, <abbr title="Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr> $container, string $defaultNamespace, int $undefinedStrategy = self::UNDEFINED_STRATEGY_EXCEPTION)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/MVC/Symfony/SiteAccess.html"><abbr title="eZ\Publish\Core\MVC\Symfony\SiteAccess">SiteAccess</abbr></a></td>
+                <td>$siteAccess</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$groupsBySiteAccess</td>
+                <td>SiteAccess groups, indexed by siteaccess.</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Symfony\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$defaultNamespace</td>
+                <td>The default namespace</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$undefinedStrategy</td>
+                <td>Strategy to use when encountering undefined parameters. Must be one of - ConfigResolver::UNDEFINED_STRATEGY_EXCEPTION (throw an exception) - ConfigResolver::UNDEFINED_STRATEGY_NULL (return null)</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setUndefinedStrategy">
+        <div class="location">at line 102</div>
+        <code>            public            
+    <strong>setUndefinedStrategy</strong>(int $undefinedStrategy)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the strategy to use if an undefined parameter is being asked.</p>
+        <p>Can be one of:<br />
+  - ConfigResolver::UNDEFINED_STRATEGY_EXCEPTION (throw an exception)<br />
+  - ConfigResolver::UNDEFINED_STRATEGY_NULL (return null)<br />
+<br />
+ Defaults to ConfigResolver::UNDEFINED_STRATEGY_EXCEPTION.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$undefinedStrategy</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getUndefinedStrategy">
+        <div class="location">at line 110</div>
+        <code>            public            int
+    <strong>getUndefinedStrategy</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasParameter">
+        <div class="location">at line 125</div>
+        <code>            public            boolean
+    <strong>hasParameter</strong>(string $paramName, string $namespace = null, string $scope = null)</code>
+    </h3>
+    <div class="details">
+        <p>Checks if $paramName exists in $namespace</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$paramName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td>If null, the default namespace should be used.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$scope</td>
+                <td>The scope you need $paramName value for. It&#039;s typically the siteaccess name. If null, the current siteaccess name will be used.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParameter">
+        <div class="location">at line 151</div>
+        <code>            public            mixed
+    <strong>getParameter</strong>(string $paramName, string $namespace = null, string $scope = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns value for $paramName, in $namespace.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$paramName</td>
+                <td>The parameter name, without $prefix and the current scope (i.e. siteaccess name).</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td>Namespace for the parameter name. If null, the default namespace will be used.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$scope</td>
+                <td>The scope you need $paramName value for. It&#039;s typically the siteaccess name. If null, the current siteaccess name will be used.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDefaultNamespace">
+        <div class="location">at line 214</div>
+        <code>            public            
+    <strong>setDefaultNamespace</strong>(string $defaultNamespace)</code>
+    </h3>
+    <div class="details">
+        <p>Changes the default namespace to look parameter into.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$defaultNamespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDefaultNamespace">
+        <div class="location">at line 222</div>
+        <code>            public            string
+    <strong>getDefaultNamespace</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the current default namespace.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

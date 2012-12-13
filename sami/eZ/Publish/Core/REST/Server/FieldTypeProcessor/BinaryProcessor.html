@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\REST\Server\FieldTypeProcessor\BinaryProcessor | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../eZ/Publish/Core/REST/Server/FieldTypeProcessor.html">eZ\Publish\Core\REST\Server\FieldTypeProcessor</a>\BinaryProcessor</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>BinaryProcessor</strong>        extends <a href="../../../../../../eZ/Publish/Core/REST/Server/FieldTypeProcessor/BinaryInputProcessor.html"><abbr title="eZ\Publish\Core\REST\Server\FieldTypeProcessor\BinaryInputProcessor">BinaryInputProcessor</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $temporaryDirectory, string $urlTemplate)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_preProcessHash">preProcessHash</a>(array $incomingValueHash)
+                    <p>Perform manipulations on a received $incomingValueHash</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../eZ/Publish/Core/REST/Server/FieldTypeProcessor/BinaryInputProcessor.html#method_preProcessHash"><abbr title="eZ\Publish\Core\REST\Server\FieldTypeProcessor\BinaryInputProcessor">BinaryInputProcessor</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_postProcessHash">postProcessHash</a>(mixed $outgoingValueHash)
+                    <p>Perform manipulations on an a generated $outgoingValueHash</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 28</div>
+        <code>            public            
+    <strong>__construct</strong>(string $temporaryDirectory, string $urlTemplate)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$temporaryDirectory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$urlTemplate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_preProcessHash">
+        <div class="location">in <a href="../../../../../../eZ/Publish/Core/REST/Server/FieldTypeProcessor/BinaryInputProcessor.html#method_preProcessHash"><abbr title="eZ\Publish\Core\REST\Server\FieldTypeProcessor\BinaryInputProcessor">BinaryInputProcessor</abbr></a> at line 42</div>
+        <code>            public            array
+    <strong>preProcessHash</strong>(array $incomingValueHash)</code>
+    </h3>
+    <div class="details">
+        <p>Perform manipulations on a received $incomingValueHash</p>
+        <p>This method is called by the REST server to allow a field type to pre<br />
+ process the given $incomingValueHash before it is handled by {@link<br />
+ eZ\Publish\SPI\FieldType\FieldType::fromHash()}. The $incomingValueHash<br />
+ can be expected to conform to the rules that need to apply to hashes<br />
+ accepted by fromHash(). The return value of this method replaces the<br />
+ $incomingValueHash.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$incomingValueHash</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>Pre processed hash</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_postProcessHash">
+        <div class="location">at line 48</div>
+        <code>            public            mixed
+    <strong>postProcessHash</strong>(mixed $outgoingValueHash)</code>
+    </h3>
+    <div class="details">
+        <p>Perform manipulations on an a generated $outgoingValueHash</p>
+        <p>This method is called by the REST server to allow a field type to post<br />
+ process the given $outgoingValueHash, which was previously generated<br />
+ using {@link eZ\Publish\SPI\FieldType\FieldType::toHash()}, before it is<br />
+ sent to the client. The return value of this method replaces<br />
+ $outgoingValueHash and must obey to the same rules as the original<br />
+ $outgoingValueHash.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$outgoingValueHash</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>Post processed hash</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Repository\SectionService | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../eZ/Publish/Core/Repository.html">eZ\Publish\Core\Repository</a>\SectionService</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>SectionService</strong>        implements
+        <a href="../../../../eZ/Publish/API/Repository/SectionService.html"><abbr title="eZ\Publish\API\Repository\SectionService">SectionService</abbr></a></p>
+
+            <div class="description">
+            <p>Section service, used for section operations</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository, <a href="../../../../eZ/Publish/SPI/Persistence/Content/Section/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section\Handler">Handler</abbr></a> $sectionHandler, array $settings = array())
+                    <p>Setups service with reference to repository object that created it &amp; corresponding handler</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createSection">createSection</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/SectionCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\SectionCreateStruct">SectionCreateStruct</abbr></a> $sectionCreateStruct)
+                    <p>Creates the a new Section in the content repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateSection">updateSection</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a> $section, <a href="../../../../eZ/Publish/API/Repository/Values/Content/SectionUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\SectionUpdateStruct">SectionUpdateStruct</abbr></a> $sectionUpdateStruct)
+                    <p>Updates the given in the content repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadSection">loadSection</a>(int $sectionId)
+                    <p>Loads a Section from its id ($sectionId)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadSections">loadSections</a>()
+                    <p>Loads all sections</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadSectionByIdentifier">loadSectionByIdentifier</a>(string $sectionIdentifier)
+                    <p>Loads a Section from its identifier ($sectionIdentifier)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_countAssignedContents">countAssignedContents</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a> $section)
+                    <p>Counts the contents which $section is assigned to</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_assignSection">assignSection</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo, <a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a> $section)
+                    <p>Assigns the content to the given section this method overrides the current assigned section</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteSection">deleteSection</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a> $section)
+                    <p>Deletes $section from content repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/SectionCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\SectionCreateStruct">SectionCreateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newSectionCreateStruct">newSectionCreateStruct</a>()
+                    <p>Instantiates a new SectionCreateStruct</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/SectionUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\SectionUpdateStruct">SectionUpdateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newSectionUpdateStruct">newSectionUpdateStruct</a>()
+                    <p>Instantiates a new SectionUpdateStruct</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 56</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository, <a href="../../../../eZ/Publish/SPI/Persistence/Content/Section/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section\Handler">Handler</abbr></a> $sectionHandler, array $settings = array())</code>
+    </h3>
+    <div class="details">
+        <p>Setups service with reference to repository object that created it &amp; corresponding handler</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a></td>
+                <td>$repository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/SPI/Persistence/Content/Section/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section\Handler">Handler</abbr></a></td>
+                <td>$sectionHandler</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$settings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createSection">
+        <div class="location">at line 76</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a>
+    <strong>createSection</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/SectionCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\SectionCreateStruct">SectionCreateStruct</abbr></a> $sectionCreateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Creates the a new Section in the content repository</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/SectionCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\SectionCreateStruct">SectionCreateStruct</abbr></a></td>
+                <td>$sectionCreateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a></td>
+            <td>The newly created section</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>If the current user user is not allowed to create a section</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If the new identifier in $sectionCreateStruct already exists</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateSection">
+        <div class="location">at line 127</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a>
+    <strong>updateSection</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a> $section, <a href="../../../../eZ/Publish/API/Repository/Values/Content/SectionUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\SectionUpdateStruct">SectionUpdateStruct</abbr></a> $sectionUpdateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the given in the content repository</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a></td>
+                <td>$section</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/SectionUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\SectionUpdateStruct">SectionUpdateStruct</abbr></a></td>
+                <td>$sectionUpdateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>If the current user user is not allowed to create a section</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If the new identifier already exists (if set in the update struct)</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadSection">
+        <div class="location">at line 186</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a>
+    <strong>loadSection</strong>(int $sectionId)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a Section from its id ($sectionId)</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$sectionId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if section could not be found</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>If the current user user is not allowed to read a section</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadSections">
+        <div class="location">at line 205</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a>[]
+    <strong>loadSections</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads all sections</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a>[]</td>
+            <td>of {@link \eZ\Publish\API\Repository\Values\Content\Section}</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>If the current user user is not allowed to read a section</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadSectionByIdentifier">
+        <div class="location">at line 231</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a>
+    <strong>loadSectionByIdentifier</strong>(string $sectionIdentifier)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a Section from its identifier ($sectionIdentifier)</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sectionIdentifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if section could not be found</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>If the current user user is not allowed to read a section</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_countAssignedContents">
+        <div class="location">at line 250</div>
+        <code>            public            int
+    <strong>countAssignedContents</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a> $section)</code>
+    </h3>
+    <div class="details">
+        <p>Counts the contents which $section is assigned to</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a></td>
+                <td>$section</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_assignSection">
+        <div class="location">at line 267</div>
+        <code>            public            
+    <strong>assignSection</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo, <a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a> $section)</code>
+    </h3>
+    <div class="details">
+        <p>Assigns the content to the given section this method overrides the current assigned section</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a></td>
+                <td>$contentInfo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a></td>
+                <td>$section</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>If user does not have access to view provided object</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteSection">
+        <div class="location">at line 315</div>
+        <code>            public            
+    <strong>deleteSection</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a> $section)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes $section from content repository</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Section.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Section">Section</abbr></a></td>
+                <td>$section</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If the specified section is not found</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>If the current user user is not allowed to delete a section</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>if section can not be deleted because it is still assigned to some contents.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newSectionCreateStruct">
+        <div class="location">at line 346</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/SectionCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\SectionCreateStruct">SectionCreateStruct</abbr></a>
+    <strong>newSectionCreateStruct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates a new SectionCreateStruct</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/SectionCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\SectionCreateStruct">SectionCreateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newSectionUpdateStruct">
+        <div class="location">at line 356</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/SectionUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\SectionUpdateStruct">SectionUpdateStruct</abbr></a>
+    <strong>newSectionUpdateStruct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates a new SectionUpdateStruct</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/SectionUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\SectionUpdateStruct">SectionUpdateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

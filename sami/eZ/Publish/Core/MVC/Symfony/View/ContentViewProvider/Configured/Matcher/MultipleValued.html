@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\MVC\Symfony\View\ContentViewProvider\Configured\Matcher\MultipleValued | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../../../../eZ/Publish/Core/MVC/Symfony/View/ContentViewProvider/Configured/Matcher.html">eZ\Publish\Core\MVC\Symfony\View\ContentViewProvider\Configured\Matcher</a>\MultipleValued</h1>
+    </div>
+        <div class="content">
+                <p>abstract class    <strong>MultipleValued</strong>        extends <a href="../../../../../../../../../eZ/Publish/Core/MVC/RepositoryAware.html"><abbr title="eZ\Publish\Core\MVC\RepositoryAware">RepositoryAware</abbr></a>        implements
+        <a href="../../../../../../../../../eZ/Publish/Core/MVC/Symfony/View/ContentViewProvider/Configured/Matcher.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\ContentViewProvider\Configured\Matcher">Matcher</abbr></a></p>
+
+            <div class="description">
+            <p>Abstract class for basic matchers to be used with View\Provider\Content\Configured, accepting multiple values to match against.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setRepository">setRepository</a>(<a href="../../../../../../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../../../../eZ/Publish/Core/MVC/RepositoryAware.html#method_setRepository"><abbr title="eZ\Publish\Core\MVC\RepositoryAware">RepositoryAware</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setMatchingConfig">setMatchingConfig</a>(mixed $matchingConfig)
+                    <p>Registers the matching configuration for the matcher.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getValues">getValues</a>()
+                    <p>Returns matcher&#039;s values</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getRepository">getRepository</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setRepository">
+        <div class="location">in <a href="../../../../../../../../../eZ/Publish/Core/MVC/RepositoryAware.html#method_setRepository"><abbr title="eZ\Publish\Core\MVC\RepositoryAware">RepositoryAware</abbr></a> at line 24</div>
+        <code>            public            void
+    <strong>setRepository</strong>(<a href="../../../../../../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a></td>
+                <td>$repository</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setMatchingConfig">
+        <div class="location">at line 35</div>
+        <code>            public            void
+    <strong>setMatchingConfig</strong>(mixed $matchingConfig)</code>
+    </h3>
+    <div class="details">
+        <p>Registers the matching configuration for the matcher.</p>
+        <p>It&#039;s up to the implementor to validate $matchingConfig since it can be anything configured by the end-developer.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$matchingConfig</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>Should be thrown if $matchingConfig is not valid.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getValues">
+        <div class="location">at line 46</div>
+        <code>            public            array
+    <strong>getValues</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns matcher&#039;s values</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRepository">
+        <div class="location">at line 54</div>
+        <code>            public            <a href="../../../../../../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a>
+    <strong>getRepository</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

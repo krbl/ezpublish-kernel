@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\REST\Client\URLAliasService | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../eZ/Publish/Core/REST/Client.html">eZ\Publish\Core\REST\Client</a>\URLAliasService</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>URLAliasService</strong>        implements
+        <a href="../../../../../eZ/Publish/API/Repository/URLAliasService.html"><abbr title="eZ\Publish\API\Repository\URLAliasService">URLAliasService</abbr></a>, <a href="../../../../../eZ/Publish/Core/REST/Client/Sessionable.html"><abbr title="eZ\Publish\Core\REST\Client\Sessionable">Sessionable</abbr></a></p>
+
+            <div class="description">
+            <p>Implementation of the {@link \eZ\Publish\API\Repository\URLAliasService} interface.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../eZ/Publish/Core/REST/Client/HttpClient.html"><abbr title="eZ\Publish\Core\REST\Client\HttpClient">HttpClient</abbr></a> $client, <a href="../../../../../eZ/Publish/Core/REST/Common/Input/Dispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\Dispatcher">Dispatcher</abbr></a> $inputDispatcher, <a href="../../../../../eZ/Publish/Core/REST/Common/Output/Visitor.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Visitor">Visitor</abbr></a> $outputVisitor, <a href="../../../../../eZ/Publish/Core/REST/Common/UrlHandler.html"><abbr title="eZ\Publish\Core\REST\Common\UrlHandler">UrlHandler</abbr></a> $urlHandler)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSession">setSession</a>(mixed $id)
+                    <p>Set session ID</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createUrlAlias">createUrlAlias</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a> $location, string $path, string $languageCode, boolean $forwarding = false, boolean $alwaysAvailable = false)
+                    <p>Create a user chosen $alias pointing to $location in $languageCode.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createGlobalUrlAlias">createGlobalUrlAlias</a>(string $resource, string $path, string $languageCode, boolean $forwarding = false, boolean $alwaysAvailable = false)
+                    <p>Create a user chosen $alias pointing to a resource in $languageCode.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_listLocationAliases">listLocationAliases</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a> $location, boolean $custom = true, string $languageCode = null)
+                    <p>List of url aliases pointing to $location.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_listGlobalAliases">listGlobalAliases</a>(string $languageCode = null, int $offset, int $limit = -1)
+                    <p>List global aliases</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_removeAliases">removeAliases</a>(array $aliasList)
+                    <p>Removes urls aliases.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_lookup">lookup</a>(string $url, string $languageCode = null)
+                    <p>looks up the URLAlias for the given url.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_reverseLookup">reverseLookup</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a> $location, string $languageCode = null)
+                    <p>Returns the URL alias for the given location in the given language.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_load">load</a>(string $id)
+                    <p>Loads URL alias by given $id</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 53</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../eZ/Publish/Core/REST/Client/HttpClient.html"><abbr title="eZ\Publish\Core\REST\Client\HttpClient">HttpClient</abbr></a> $client, <a href="../../../../../eZ/Publish/Core/REST/Common/Input/Dispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\Dispatcher">Dispatcher</abbr></a> $inputDispatcher, <a href="../../../../../eZ/Publish/Core/REST/Common/Output/Visitor.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Visitor">Visitor</abbr></a> $outputVisitor, <a href="../../../../../eZ/Publish/Core/REST/Common/UrlHandler.html"><abbr title="eZ\Publish\Core\REST\Common\UrlHandler">UrlHandler</abbr></a> $urlHandler)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/REST/Client/HttpClient.html"><abbr title="eZ\Publish\Core\REST\Client\HttpClient">HttpClient</abbr></a></td>
+                <td>$client</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/REST/Common/Input/Dispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\Dispatcher">Dispatcher</abbr></a></td>
+                <td>$inputDispatcher</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/REST/Common/Output/Visitor.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Visitor">Visitor</abbr></a></td>
+                <td>$outputVisitor</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/REST/Common/UrlHandler.html"><abbr title="eZ\Publish\Core\REST\Common\UrlHandler">UrlHandler</abbr></a></td>
+                <td>$urlHandler</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSession">
+        <div class="location">at line 70</div>
+        <code>            public            
+    <strong>setSession</strong>(mixed $id)</code>
+    </h3>
+    <div class="details">
+        <p>Set session ID</p>
+        <p>Only for testing</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td>tringid</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createUrlAlias">
+        <div class="location">at line 95</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a>
+    <strong>createUrlAlias</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a> $location, string $path, string $languageCode, boolean $forwarding = false, boolean $alwaysAvailable = false)</code>
+    </h3>
+    <div class="details">
+        <p>Create a user chosen $alias pointing to $location in $languageCode.</p>
+        <p>This method runs URL filters and transformers before storing them.<br />
+ Hence the path returned in the URLAlias Value may differ from the given.<br />
+ $alwaysAvailable makes the alias available in all languages.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a></td>
+                <td>$location</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$languageCode</td>
+                <td>the languageCode for which this alias is valid</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$forwarding</td>
+                <td>if true a redirect is performed</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$alwaysAvailable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the path already exists for the given language</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createGlobalUrlAlias">
+        <div class="location">at line 121</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a>
+    <strong>createGlobalUrlAlias</strong>(string $resource, string $path, string $languageCode, boolean $forwarding = false, boolean $alwaysAvailable = false)</code>
+    </h3>
+    <div class="details">
+        <p>Create a user chosen $alias pointing to a resource in $languageCode.</p>
+        <p>This method does not handle location resources - if a user enters a location target<br />
+ the createCustomUrlAlias method has to be used.<br />
+ This method runs URL filters and and transformers before storing them.<br />
+ Hence the path returned in the URLAlias Value may differ from the given.<br />
+<br />
+ $alwaysAvailable makes the alias available in all languages.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$resource</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$languageCode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$forwarding</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$alwaysAvailable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the path already exists for the given language or if resource is not valid</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_listLocationAliases">
+        <div class="location">at line 135</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a>[]
+    <strong>listLocationAliases</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a> $location, boolean $custom = true, string $languageCode = null)</code>
+    </h3>
+    <div class="details">
+        <p>List of url aliases pointing to $location.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a></td>
+                <td>$location</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$custom</td>
+                <td>if true the user generated aliases are listed otherwise the autogenerated</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$languageCode</td>
+                <td>filters those which are valid for the given language</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_listGlobalAliases">
+        <div class="location">at line 149</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a>[]
+    <strong>listGlobalAliases</strong>(string $languageCode = null, int $offset, int $limit = -1)</code>
+    </h3>
+    <div class="details">
+        <p>List global aliases</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$languageCode</td>
+                <td>filters those which are valid for the given language</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeAliases">
+        <div class="location">at line 166</div>
+        <code>            public            void
+    <strong>removeAliases</strong>(array $aliasList)</code>
+    </h3>
+    <div class="details">
+        <p>Removes urls aliases.</p>
+        <p>This method does not remove autogenerated aliases for locations.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$aliasList</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if alias list contains autogenerated alias</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_lookup">
+        <div class="location">at line 181</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a>
+    <strong>lookup</strong>(string $url, string $languageCode = null)</code>
+    </h3>
+    <div class="details">
+        <p>looks up the URLAlias for the given url.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$languageCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if the path does not exist or is not valid for the given language</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_reverseLookup">
+        <div class="location">at line 198</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a>
+    <strong>reverseLookup</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a> $location, string $languageCode = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the URL alias for the given location in the given language.</p>
+        <p>If $languageCode is null the method returns the url alias in the most prioritized language.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a></td>
+                <td>$location</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$languageCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if no url alias exist for the given language</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_load">
+        <div class="location">at line 212</div>
+        <code>            public            <a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a>
+    <strong>load</strong>(string $id)</code>
+    </h3>
+    <div class="details">
+        <p>Loads URL alias by given $id</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/API/Repository/Values/Content/URLAlias.html"><abbr title="eZ\Publish\API\Repository\Values\Content\URLAlias">URLAlias</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

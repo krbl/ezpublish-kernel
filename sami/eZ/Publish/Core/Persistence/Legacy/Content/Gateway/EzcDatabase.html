@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Persistence\Legacy\Content\Gateway\EzcDatabase | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Gateway.html">eZ\Publish\Core\Persistence\Legacy\Content\Gateway</a>\EzcDatabase</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>EzcDatabase</strong>        extends <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway">Gateway</abbr></a></p>
+
+            <div class="description">
+            <p>ezcDatabase based content gateway</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getContext">getContext</a>()
+                    <p>Get context definition for external storage layers</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_insertContentObject">insertContentObject</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\CreateStruct">CreateStruct</abbr></a> $struct, mixed $currentVersionNo = 1)
+                    <p>Inserts a new content object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_insertVersion">insertVersion</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo, array $fields)
+                    <p>Inserts a new version.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_updateContent">updateContent</a>(int $contentId, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/MetadataUpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\MetadataUpdateStruct">MetadataUpdateStruct</abbr></a> $struct)
+                    <p>Updates an existing content identified by $contentId in respect to $struct</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_updateVersion">updateVersion</a>(int $contentId, int $versionNo, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UpdateStruct">UpdateStruct</abbr></a> $struct)
+                    <p>Updates version $versionNo for content identified by $contentId, in respect to $struct</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_updateAlwaysAvailableFlag">updateAlwaysAvailableFlag</a>(int $contentId, boolean $newAlwaysAvailable)
+                    <p>Updates &quot;always available&quot; flag for content identified by $contentId, in respect to $alwaysAvailable.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_setStatus">setStatus</a>(int $contentId, int $version, int $status)
+                    <p>Sets the state of object identified by $contentId and $version to $state.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_insertNewField">insertNewField</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a> $field, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldValue.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue">StorageFieldValue</abbr></a> $value)
+                    <p>Inserts a new field.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_insertExistingField">insertExistingField</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a> $field, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldValue.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue">StorageFieldValue</abbr></a> $value)
+                    <p>Inserts an existing field.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_updateField">updateField</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a> $field, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldValue.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue">StorageFieldValue</abbr></a> $value)
+                    <p>Updates an existing field</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_updateNonTranslatableField">updateNonTranslatableField</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a> $field, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldValue.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue">StorageFieldValue</abbr></a> $value, int $contentId)
+                    <p>Updates an existing, non-translatable field</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_load">load</a>(mixed $contentId, mixed $version, string[] $translations = null)
+                    <p>Loads data for a content object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentInfo">loadContentInfo</a>(int $contentId)
+                    <p>Loads info for content identified by $contentId.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_loadVersionInfo">loadVersionInfo</a>(int $contentId, int $versionNo)
+                    <p>Loads version info for content identified by $contentId and $versionNo.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\string[]">string[]</abbr>[]
+                </td>
+                <td class="last">
+                    <a href="#method_listVersionsForUser">listVersionsForUser</a>(int $userId, int $status = VersionInfo::STATUS_DRAFT)
+                    <p>Returns data for all versions with given status created by the given $userId</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\string[]">string[]</abbr>[]
+                </td>
+                <td class="last">
+                    <a href="#method_listVersions">listVersions</a>(mixed $contentId)
+                    <p>Returns all version data for the given $contentId</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getLastVersionNumber">getLastVersionNumber</a>(int $contentId)
+                    <p>Returns last version number for content identified by $contentId</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int[]
+                </td>
+                <td class="last">
+                    <a href="#method_getAllLocationIds">getAllLocationIds</a>(int $contentId)
+                    <p>Returns all IDs for locations that refer to $contentId</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\int[]">int[]</abbr>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getFieldIdsByType">getFieldIdsByType</a>(int $contentId, int|null $versionNo = null)
+                    <p>Returns all field IDs of $contentId grouped by their type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_deleteRelations">deleteRelations</a>(int $contentId, int|null $versionNo = null)
+                    <p>Deletes relations to and from $contentId.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_deleteField">deleteField</a>(int $fieldId, int $version)
+                    <p>Deletes the field with the given $fieldId</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_deleteFields">deleteFields</a>(int $contentId, int|null $versionNo = null)
+                    <p>Deletes all fields of $contentId in all versions.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_deleteVersions">deleteVersions</a>(int $contentId, int|null $versionNo = null)
+                    <p>Deletes all versions of $contentId.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_deleteNames">deleteNames</a>(int $contentId, int|null $versionNo = null)
+                    <p>Deletes all names of $contentId.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setName">setName</a>(int $contentId, int $version, string $name, string $language)
+                    <p>Sets the content object name</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_deleteContent">deleteContent</a>(int $contentId)
+                    <p>Deletes the actual content object referred to by $contentId</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_loadLatestPublishedData">loadLatestPublishedData</a>(mixed $contentId)
+                    <p>Loads data for the latest published version of the content identified by $contentId</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\string[]">string[]</abbr>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadRelations">loadRelations</a>(int $contentId, int $contentVersionNo = null, int $relationType = null)
+                    <p>Loads data of related to/from $contentId</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\mixed[]">mixed[]</abbr>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadReverseRelations">loadReverseRelations</a>(int $toContentId, int $relationType = null)
+                    <p>Loads data of related to/from $contentId</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_deleteRelation">deleteRelation</a>(int $relationId)
+                    <p>Deletes the relation with the given $relationId</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_insertRelation">insertRelation</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Relation/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct">CreateStruct</abbr></a> $createStruct)
+                    <p>Inserts a new relation database record</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a> $db, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Gateway/EzcDatabase/QueryBuilder.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\EzcDatabase\QueryBuilder">QueryBuilder</abbr></a> $queryBuilder, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Language/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Language\Handler">Handler</abbr></a> $languageHandler, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Language/MaskGenerator.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator">MaskGenerator</abbr></a> $languageMaskGenerator)
+                    <p>Creates a new gateway based on $db</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getContext">
+        <div class="location">at line 88</div>
+        <code>            public            array
+    <strong>getContext</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get context definition for external storage layers</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_insertContentObject">
+        <div class="location">at line 104</div>
+        <code>            public            int
+    <strong>insertContentObject</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\CreateStruct">CreateStruct</abbr></a> $struct, mixed $currentVersionNo = 1)</code>
+    </h3>
+    <div class="details">
+        <p>Inserts a new content object.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\CreateStruct">CreateStruct</abbr></a></td>
+                <td>$struct</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$currentVersionNo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>ID</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_insertVersion">
+        <div class="location">at line 204</div>
+        <code>            public            int
+    <strong>insertVersion</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo, array $fields)</code>
+    </h3>
+    <div class="details">
+        <p>Inserts a new version.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a></td>
+                <td>$versionInfo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$fields</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>ID</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateContent">
+        <div class="location">at line 264</div>
+        <code>            public            void
+    <strong>updateContent</strong>(int $contentId, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/MetadataUpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\MetadataUpdateStruct">MetadataUpdateStruct</abbr></a> $struct)</code>
+    </h3>
+    <div class="details">
+        <p>Updates an existing content identified by $contentId in respect to $struct</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/MetadataUpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\MetadataUpdateStruct">MetadataUpdateStruct</abbr></a></td>
+                <td>$struct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateVersion">
+        <div class="location">at line 336</div>
+        <code>            public            void
+    <strong>updateVersion</strong>(int $contentId, int $versionNo, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UpdateStruct">UpdateStruct</abbr></a> $struct)</code>
+    </h3>
+    <div class="details">
+        <p>Updates version $versionNo for content identified by $contentId, in respect to $struct</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$versionNo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UpdateStruct">UpdateStruct</abbr></a></td>
+                <td>$struct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateAlwaysAvailableFlag">
+        <div class="location">at line 377</div>
+        <code>            public            
+    <strong>updateAlwaysAvailableFlag</strong>(int $contentId, boolean $newAlwaysAvailable)</code>
+    </h3>
+    <div class="details">
+        <p>Updates &quot;always available&quot; flag for content identified by $contentId, in respect to $alwaysAvailable.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$newAlwaysAvailable</td>
+                <td>New &quot;always available&quot; value</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setStatus">
+        <div class="location">at line 476</div>
+        <code>            public            boolean
+    <strong>setStatus</strong>(int $contentId, int $version, int $status)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the state of object identified by $contentId and $version to $state.</p>
+        <p>The $status can be one of STATUS_DRAFT, STATUS_PUBLISHED, STATUS_ARCHIVED</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_insertNewField">
+        <div class="location">at line 545</div>
+        <code>            public            int
+    <strong>insertNewField</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a> $field, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldValue.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue">StorageFieldValue</abbr></a> $value)</code>
+    </h3>
+    <div class="details">
+        <p>Inserts a new field.</p>
+        <p>Only used when a new field is created (i.e. a new object or a field in a<br />
+ new language!). After that, field IDs need to stay the same, only the<br />
+ version number changes.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a></td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldValue.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue">StorageFieldValue</abbr></a></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>ID</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_insertExistingField">
+        <div class="location">at line 575</div>
+        <code>            public            void
+    <strong>insertExistingField</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a> $field, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldValue.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue">StorageFieldValue</abbr></a> $value)</code>
+    </h3>
+    <div class="details">
+        <p>Inserts an existing field.</p>
+        <p>Used to insert a field with an exsting ID but a new version number.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a></td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldValue.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue">StorageFieldValue</abbr></a></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateField">
+        <div class="location">at line 654</div>
+        <code>            public            void
+    <strong>updateField</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a> $field, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldValue.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue">StorageFieldValue</abbr></a> $value)</code>
+    </h3>
+    <div class="details">
+        <p>Updates an existing field</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a></td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldValue.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue">StorageFieldValue</abbr></a></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateNonTranslatableField">
+        <div class="location">at line 714</div>
+        <code>            public            void
+    <strong>updateNonTranslatableField</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a> $field, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldValue.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue">StorageFieldValue</abbr></a> $value, int $contentId)</code>
+    </h3>
+    <div class="details">
+        <p>Updates an existing, non-translatable field</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a></td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldValue.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue">StorageFieldValue</abbr></a></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_load">
+        <div class="location">at line 753</div>
+        <code>            public            array
+    <strong>load</strong>(mixed $contentId, mixed $version, string[] $translations = null)</code>
+    </h3>
+    <div class="details">
+        <p>Loads data for a content object</p>
+        <p>Returns an array with the relevant data.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$version</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string[]</td>
+                <td>$translations</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentInfo">
+        <div class="location">at line 815</div>
+        <code>            public            array
+    <strong>loadContentInfo</strong>(int $contentId)</code>
+    </h3>
+    <div class="details">
+        <p>Loads info for content identified by $contentId.</p>
+        <p>Will basically return a hash containing all field values for ezcontentobject table plus following keys:<br />
+  - always_available =&gt; Boolean indicating if content&#039;s language mask contains alwaysAvailable bit field<br />
+  - main_language_code =&gt; Language code for main (initial) language. E.g. &quot;eng-GB&quot;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Base/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\Core\Base\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadVersionInfo">
+        <div class="location">at line 866</div>
+        <code>            public            array
+    <strong>loadVersionInfo</strong>(int $contentId, int $versionNo)</code>
+    </h3>
+    <div class="details">
+        <p>Loads version info for content identified by $contentId and $versionNo.</p>
+        <p>Will basically return a hash containing all field values from ezcontentobject_version table plus following keys:<br />
+  - names =&gt; Hash of content object names. Key is the language code, value is the name.<br />
+  - languages =&gt; Hash of language ids. Key is the language code (e.g. &quot;eng-GB&quot;), value is the language numeric id without the always available bit.<br />
+  - initial_language_code =&gt; Language code for initial language in this version.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$versionNo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_listVersionsForUser">
+        <div class="location">at line 895</div>
+        <code>            public            <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\string[]">string[]</abbr>[]
+    <strong>listVersionsForUser</strong>(int $userId, int $status = VersionInfo::STATUS_DRAFT)</code>
+    </h3>
+    <div class="details">
+        <p>Returns data for all versions with given status created by the given $userId</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$userId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\string[]">string[]</abbr>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_listVersions">
+        <div class="location">at line 926</div>
+        <code>            public            <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\string[]">string[]</abbr>[]
+    <strong>listVersions</strong>(mixed $contentId)</code>
+    </h3>
+    <div class="details">
+        <p>Returns all version data for the given $contentId</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\string[]">string[]</abbr>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLastVersionNumber">
+        <div class="location">at line 951</div>
+        <code>            public            int
+    <strong>getLastVersionNumber</strong>(int $contentId)</code>
+    </h3>
+    <div class="details">
+        <p>Returns last version number for content identified by $contentId</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAllLocationIds">
+        <div class="location">at line 978</div>
+        <code>            public            int[]
+    <strong>getAllLocationIds</strong>(int $contentId)</code>
+    </h3>
+    <div class="details">
+        <p>Returns all IDs for locations that refer to $contentId</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFieldIdsByType">
+        <div class="location">at line 1007</div>
+        <code>            public            <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\int[]">int[]</abbr>[]
+    <strong>getFieldIdsByType</strong>(int $contentId, int|null $versionNo = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns all field IDs of $contentId grouped by their type.</p>
+        <p>If $versionNo is set only field IDs for that version are returned.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$versionNo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\int[]">int[]</abbr>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteRelations">
+        <div class="location">at line 1056</div>
+        <code>            public            void
+    <strong>deleteRelations</strong>(int $contentId, int|null $versionNo = null)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes relations to and from $contentId.</p>
+        <p>If $versionNo is set only relations for that version are deleted.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$versionNo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteField">
+        <div class="location">at line 1105</div>
+        <code>            public            void
+    <strong>deleteField</strong>(int $fieldId, int $version)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes the field with the given $fieldId</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$fieldId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteFields">
+        <div class="location">at line 1135</div>
+        <code>            public            void
+    <strong>deleteFields</strong>(int $contentId, int|null $versionNo = null)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes all fields of $contentId in all versions.</p>
+        <p>If $versionNo is set only fields for that version are deleted.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$versionNo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteVersions">
+        <div class="location">at line 1168</div>
+        <code>            public            void
+    <strong>deleteVersions</strong>(int $contentId, int|null $versionNo = null)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes all versions of $contentId.</p>
+        <p>If $versionNo is set only that version is deleted.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$versionNo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteNames">
+        <div class="location">at line 1201</div>
+        <code>            public            void
+    <strong>deleteNames</strong>(int $contentId, int|null $versionNo = null)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes all names of $contentId.</p>
+        <p>If $versionNo is set only names for that version are deleted.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$versionNo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setName">
+        <div class="location">at line 1235</div>
+        <code>            public            void
+    <strong>setName</strong>(int $contentId, int $version, string $name, string $language)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the content object name</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$language</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteContent">
+        <div class="location">at line 1305</div>
+        <code>            public            void
+    <strong>deleteContent</strong>(int $contentId)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes the actual content object referred to by $contentId</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadLatestPublishedData">
+        <div class="location">at line 782</div>
+        <code>            public            array
+    <strong>loadLatestPublishedData</strong>(mixed $contentId)</code>
+    </h3>
+    <div class="details">
+        <p>Loads data for the latest published version of the content identified by $contentId</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadRelations">
+        <div class="location">at line 1330</div>
+        <code>            public            <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\string[]">string[]</abbr>[]
+    <strong>loadRelations</strong>(int $contentId, int $contentVersionNo = null, int $relationType = null)</code>
+    </h3>
+    <div class="details">
+        <p>Loads data of related to/from $contentId</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$contentVersionNo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$relationType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\string[]">string[]</abbr>[]</td>
+            <td>array of relation data</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadReverseRelations">
+        <div class="location">at line 1394</div>
+        <code>            public            <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\mixed[]">mixed[]</abbr>[]
+    <strong>loadReverseRelations</strong>(int $toContentId, int $relationType = null)</code>
+    </h3>
+    <div class="details">
+        <p>Loads data of related to/from $contentId</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$toContentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$relationType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\mixed[]">mixed[]</abbr>[]</td>
+            <td>Content data, array structured like {see \eZ\Publish\Core\Persistence\Legacy\Content\Gateway::load()}</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteRelation">
+        <div class="location">at line 1483</div>
+        <code>            public            void
+    <strong>deleteRelation</strong>(int $relationId)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes the relation with the given $relationId</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$relationId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_insertRelation">
+        <div class="location">at line 1444</div>
+        <code>            public            int
+    <strong>insertRelation</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Relation/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct">CreateStruct</abbr></a> $createStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Inserts a new relation database record</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Relation/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct">CreateStruct</abbr></a></td>
+                <td>$createStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>ID the inserted ID</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 71</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a> $db, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Gateway/EzcDatabase/QueryBuilder.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\EzcDatabase\QueryBuilder">QueryBuilder</abbr></a> $queryBuilder, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Language/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Language\Handler">Handler</abbr></a> $languageHandler, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Language/MaskGenerator.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator">MaskGenerator</abbr></a> $languageMaskGenerator)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new gateway based on $db</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a></td>
+                <td>$db</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Gateway/EzcDatabase/QueryBuilder.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway\EzcDatabase\QueryBuilder">QueryBuilder</abbr></a></td>
+                <td>$queryBuilder</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Language/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Language\Handler">Handler</abbr></a></td>
+                <td>$languageHandler</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Language/MaskGenerator.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator">MaskGenerator</abbr></a></td>
+                <td>$languageMaskGenerator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

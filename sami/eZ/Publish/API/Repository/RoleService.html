@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\API\Repository\RoleService | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../../../eZ/Publish/API/Repository.html">eZ\Publish\API\Repository</a>\RoleService</h1>
+    </div>
+        <div class="content">
+                <p>interface    <strong>RoleService</strong></p>
+
+            <div class="description">
+            <p>This service provides methods for managing Roles and Policies</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createRole">createRole</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/RoleCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\RoleCreateStruct">RoleCreateStruct</abbr></a> $roleCreateStruct)
+                    <p>Creates a new Role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateRole">updateRole</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role, <a href="../../../../eZ/Publish/API/Repository/Values/User/RoleUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\RoleUpdateStruct">RoleUpdateStruct</abbr></a> $roleUpdateStruct)
+                    <p>Updates the name of the role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addPolicy">addPolicy</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role, <a href="../../../../eZ/Publish/API/Repository/Values/User/PolicyCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\PolicyCreateStruct">PolicyCreateStruct</abbr></a> $policyCreateStruct)
+                    <p>Adds a new policy to the role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_removePolicy">removePolicy</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role, <a href="../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a> $policy)
+                    <p>removes a policy from the role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updatePolicy">updatePolicy</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a> $policy, <a href="../../../../eZ/Publish/API/Repository/Values/User/PolicyUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\PolicyUpdateStruct">PolicyUpdateStruct</abbr></a> $policyUpdateStruct)
+                    <p>Updates the limitations of a policy.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadRole">loadRole</a>(mixed $id)
+                    <p>Loads a role for the given id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadRoleByIdentifier">loadRoleByIdentifier</a>(string $identifier)
+                    <p>Loads a role for the given identifier</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadRoles">loadRoles</a>()
+                    <p>Loads all roles</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteRole">deleteRole</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role)
+                    <p>Deletes the given role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadPoliciesByUserId">loadPoliciesByUserId</a>(mixed $userId)
+                    <p>Loads all policies from roles which are assigned to a user or to user groups to which the user belongs</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_assignRoleToUserGroup">assignRoleToUserGroup</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role, <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup, <a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation/RoleLimitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation\RoleLimitation">RoleLimitation</abbr></a> $roleLimitation = null)
+                    <p>Assigns a role to the given user group</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_unassignRoleFromUserGroup">unassignRoleFromUserGroup</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role, <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup)
+                    <p>removes a role from the given user group.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_assignRoleToUser">assignRoleToUser</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role, <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user, <a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation/RoleLimitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation\RoleLimitation">RoleLimitation</abbr></a> $roleLimitation = null)
+                    <p>Assigns a role to the given user</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_unassignRoleFromUser">unassignRoleFromUser</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role, <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user)
+                    <p>removes a role from the given user.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/RoleAssignment.html"><abbr title="eZ\Publish\API\Repository\Values\User\RoleAssignment">RoleAssignment</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getRoleAssignments">getRoleAssignments</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role)
+                    <p>Returns the assigned user and user groups to this role</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/UserRoleAssignment.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserRoleAssignment">UserRoleAssignment</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getRoleAssignmentsForUser">getRoleAssignmentsForUser</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user)
+                    <p>Returns the roles assigned to the given user</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroupRoleAssignment.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroupRoleAssignment">UserGroupRoleAssignment</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getRoleAssignmentsForUserGroup">getRoleAssignmentsForUserGroup</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup)
+                    <p>Returns the roles assigned to the given user group</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/RoleCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\RoleCreateStruct">RoleCreateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newRoleCreateStruct">newRoleCreateStruct</a>(string $name)
+                    <p>Instantiates a role create class</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/PolicyCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\PolicyCreateStruct">PolicyCreateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newPolicyCreateStruct">newPolicyCreateStruct</a>(string $module, string $function)
+                    <p>Instantiates a policy create class</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/PolicyUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\PolicyUpdateStruct">PolicyUpdateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newPolicyUpdateStruct">newPolicyUpdateStruct</a>()
+                    <p>Instantiates a policy update class</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/RoleUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\RoleUpdateStruct">RoleUpdateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newRoleUpdateStruct">newRoleUpdateStruct</a>()
+                    <p>Instantiates a policy update class</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/SPI/Limitation/Type.html"><abbr title="eZ\Publish\SPI\Limitation\Type">Type</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getLimitationType">getLimitationType</a>(string $identifier)
+                    <p>Returns the LimitationType registered with the given identifier</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/SPI/Limitation/Type.html"><abbr title="eZ\Publish\SPI\Limitation\Type">Type</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getLimitationTypesByModuleFunction">getLimitationTypesByModuleFunction</a>(string $module, string $function)
+                    <p>Returns the LimitationType&#039;s assigned to a given module/function</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_createRole">
+        <div class="location">at line 39</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>
+    <strong>createRole</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/RoleCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\RoleCreateStruct">RoleCreateStruct</abbr></a> $roleCreateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new Role</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/RoleCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\RoleCreateStruct">RoleCreateStruct</abbr></a></td>
+                <td>$roleCreateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to create a role</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the name of the role already exists</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateRole">
+        <div class="location">at line 52</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>
+    <strong>updateRole</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role, <a href="../../../../eZ/Publish/API/Repository/Values/User/RoleUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\RoleUpdateStruct">RoleUpdateStruct</abbr></a> $roleUpdateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the name of the role</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a></td>
+                <td>$role</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/RoleUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\RoleUpdateStruct">RoleUpdateStruct</abbr></a></td>
+                <td>$roleUpdateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to update a role</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the name of the role already exists</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addPolicy">
+        <div class="location">at line 64</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>
+    <strong>addPolicy</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role, <a href="../../../../eZ/Publish/API/Repository/Values/User/PolicyCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\PolicyCreateStruct">PolicyCreateStruct</abbr></a> $policyCreateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a new policy to the role</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a></td>
+                <td>$role</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/PolicyCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\PolicyCreateStruct">PolicyCreateStruct</abbr></a></td>
+                <td>$policyCreateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to add  a policy</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removePolicy">
+        <div class="location">at line 76</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>
+    <strong>removePolicy</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role, <a href="../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a> $policy)</code>
+    </h3>
+    <div class="details">
+        <p>removes a policy from the role</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a></td>
+                <td>$role</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a></td>
+                <td>$policy</td>
+                <td>the policy to remove from the role</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a></td>
+            <td>the updated role</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to remove a policy</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updatePolicy">
+        <div class="location">at line 89</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a>
+    <strong>updatePolicy</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a> $policy, <a href="../../../../eZ/Publish/API/Repository/Values/User/PolicyUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\PolicyUpdateStruct">PolicyUpdateStruct</abbr></a> $policyUpdateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the limitations of a policy.</p>
+        <p>The module and function cannot be changed and<br />
+ the limitations are replaced by the ones in $roleUpdateStruct</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a></td>
+                <td>$policy</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/PolicyUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\PolicyUpdateStruct">PolicyUpdateStruct</abbr></a></td>
+                <td>$policyUpdateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to u�date a policy</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadRole">
+        <div class="location">at line 101</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>
+    <strong>loadRole</strong>(mixed $id)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a role for the given id</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to read this role</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if a role with the given name was not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadRoleByIdentifier">
+        <div class="location">at line 113</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>
+    <strong>loadRoleByIdentifier</strong>(string $identifier)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a role for the given identifier</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to read this role</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if a role with the given name was not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadRoles">
+        <div class="location">at line 122</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>[]
+    <strong>loadRoles</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads all roles</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to read the roles</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteRole">
+        <div class="location">at line 131</div>
+        <code>            public            
+    <strong>deleteRole</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes the given role</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a></td>
+                <td>$role</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to delete this role</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadPoliciesByUserId">
+        <div class="location">at line 142</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a>[]
+    <strong>loadPoliciesByUserId</strong>(mixed $userId)</code>
+    </h3>
+    <div class="details">
+        <p>Loads all policies from roles which are assigned to a user or to user groups to which the user belongs</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$userId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Policy.html"><abbr title="eZ\Publish\API\Repository\Values\User\Policy">Policy</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if a user with the given id was not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_assignRoleToUserGroup">
+        <div class="location">at line 153</div>
+        <code>            public            
+    <strong>assignRoleToUserGroup</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role, <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup, <a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation/RoleLimitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation\RoleLimitation">RoleLimitation</abbr></a> $roleLimitation = null)</code>
+    </h3>
+    <div class="details">
+        <p>Assigns a role to the given user group</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a></td>
+                <td>$role</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a></td>
+                <td>$userGroup</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation/RoleLimitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation\RoleLimitation">RoleLimitation</abbr></a></td>
+                <td>$roleLimitation</td>
+                <td>an optional role limitation (which is either a subtree limitation or section limitation)</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to assign a role</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_unassignRoleFromUserGroup">
+        <div class="location">at line 164</div>
+        <code>            public            
+    <strong>unassignRoleFromUserGroup</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role, <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup)</code>
+    </h3>
+    <div class="details">
+        <p>removes a role from the given user group.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a></td>
+                <td>$role</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a></td>
+                <td>$userGroup</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to remove a role</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If the role is not assigned to the given user group</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_assignRoleToUser">
+        <div class="location">at line 175</div>
+        <code>            public            
+    <strong>assignRoleToUser</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role, <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user, <a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation/RoleLimitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation\RoleLimitation">RoleLimitation</abbr></a> $roleLimitation = null)</code>
+    </h3>
+    <div class="details">
+        <p>Assigns a role to the given user</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a></td>
+                <td>$role</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation/RoleLimitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation\RoleLimitation">RoleLimitation</abbr></a></td>
+                <td>$roleLimitation</td>
+                <td>an optional role limitation (which is either a subtree limitation or section limitation)</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to assign a role</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_unassignRoleFromUser">
+        <div class="location">at line 186</div>
+        <code>            public            
+    <strong>unassignRoleFromUser</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role, <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user)</code>
+    </h3>
+    <div class="details">
+        <p>removes a role from the given user.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a></td>
+                <td>$role</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to remove a role</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If the role is not assigned to the user</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRoleAssignments">
+        <div class="location">at line 197</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/RoleAssignment.html"><abbr title="eZ\Publish\API\Repository\Values\User\RoleAssignment">RoleAssignment</abbr></a>[]
+    <strong>getRoleAssignments</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a> $role)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the assigned user and user groups to this role</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Role.html"><abbr title="eZ\Publish\API\Repository\Values\User\Role">Role</abbr></a></td>
+                <td>$role</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/RoleAssignment.html"><abbr title="eZ\Publish\API\Repository\Values\User\RoleAssignment">RoleAssignment</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to read a role</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRoleAssignmentsForUser">
+        <div class="location">at line 208</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/UserRoleAssignment.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserRoleAssignment">UserRoleAssignment</abbr></a>[]
+    <strong>getRoleAssignmentsForUser</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the roles assigned to the given user</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserRoleAssignment.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserRoleAssignment">UserRoleAssignment</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to read a user</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRoleAssignmentsForUserGroup">
+        <div class="location">at line 219</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroupRoleAssignment.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroupRoleAssignment">UserGroupRoleAssignment</abbr></a>[]
+    <strong>getRoleAssignmentsForUserGroup</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the roles assigned to the given user group</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a></td>
+                <td>$userGroup</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroupRoleAssignment.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroupRoleAssignment">UserGroupRoleAssignment</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to read a user group</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newRoleCreateStruct">
+        <div class="location">at line 228</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/RoleCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\RoleCreateStruct">RoleCreateStruct</abbr></a>
+    <strong>newRoleCreateStruct</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates a role create class</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/RoleCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\RoleCreateStruct">RoleCreateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newPolicyCreateStruct">
+        <div class="location">at line 238</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/PolicyCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\PolicyCreateStruct">PolicyCreateStruct</abbr></a>
+    <strong>newPolicyCreateStruct</strong>(string $module, string $function)</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates a policy create class</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$function</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/PolicyCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\PolicyCreateStruct">PolicyCreateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newPolicyUpdateStruct">
+        <div class="location">at line 245</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/PolicyUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\PolicyUpdateStruct">PolicyUpdateStruct</abbr></a>
+    <strong>newPolicyUpdateStruct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates a policy update class</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/PolicyUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\PolicyUpdateStruct">PolicyUpdateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newRoleUpdateStruct">
+        <div class="location">at line 252</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/RoleUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\RoleUpdateStruct">RoleUpdateStruct</abbr></a>
+    <strong>newRoleUpdateStruct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates a policy update class</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/RoleUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\RoleUpdateStruct">RoleUpdateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLimitationType">
+        <div class="location">at line 263</div>
+        <code>            public            <a href="../../../../eZ/Publish/SPI/Limitation/Type.html"><abbr title="eZ\Publish\SPI\Limitation\Type">Type</abbr></a>
+    <strong>getLimitationType</strong>(string $identifier)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the LimitationType registered with the given identifier</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/SPI/Limitation/Type.html"><abbr title="eZ\Publish\SPI\Limitation\Type">Type</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if there is no LimitationType with $identifier</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLimitationTypesByModuleFunction">
+        <div class="location">at line 280</div>
+        <code>            public            <a href="../../../../eZ/Publish/SPI/Limitation/Type.html"><abbr title="eZ\Publish\SPI\Limitation\Type">Type</abbr></a>[]
+    <strong>getLimitationTypesByModuleFunction</strong>(string $module, string $function)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the LimitationType&#039;s assigned to a given module/function</p>
+        <p>Typically used for:<br />
+  - Internal validation limitation value use on Policies<br />
+  - Role admin gui for editing policy limitations incl list limitation options via valueSchema()</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td>Legacy name of &quot;controller&quot;, it&#039;s a unique identifier like &quot;content&quot;</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$function</td>
+                <td>Legacy name of a controller &quot;action&quot;, it&#039;s a unique within the controller like &quot;read&quot;</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/SPI/Limitation/Type.html"><abbr title="eZ\Publish\SPI\Limitation\Type">Type</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>If module/function to limitation type mapping refers to a non existing identifier.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

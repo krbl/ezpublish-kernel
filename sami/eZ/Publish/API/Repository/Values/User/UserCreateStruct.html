@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\API\Repository\Values\User\UserCreateStruct | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../eZ/Publish/API/Repository/Values/User.html">eZ\Publish\API\Repository\Values\User</a>\UserCreateStruct</h1>
+    </div>
+        <div class="content">
+                <p>abstract class    <strong>UserCreateStruct</strong>        extends <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/ContentCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentCreateStruct">ContentCreateStruct</abbr></a></p>
+
+            <div class="description">
+            <p>This class is used to create a new user in the repository</p>
+            <p></p>
+        </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_contentType">
+                                                            
+                </td>
+                <td>$contentType</td>
+                <td class="last">The content type for which the new content is created</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sectionId">
+                                                            mixed
+                </td>
+                <td>$sectionId</td>
+                <td class="last">The section the content is assigned to.</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ownerId">
+                                                            mixed
+                </td>
+                <td>$ownerId</td>
+                <td class="last">The owner of the content.</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_alwaysAvailable">
+                                                            boolean
+                </td>
+                <td>$alwaysAvailable</td>
+                <td class="last">Indicates if the content object is shown in the mainlanguage if its not present in an other requested language</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_remoteId">
+                                                            string
+                </td>
+                <td>$remoteId</td>
+                <td class="last">Remote identifier used as a custom identifier for the object</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mainLanguageCode">
+                                                            
+                </td>
+                <td>$mainLanguageCode</td>
+                <td class="last">the main language code for the content.</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modificationDate">
+                                                            <a href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a>
+                </td>
+                <td>$modificationDate</td>
+                <td class="last">Modification date.</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_login">
+                                                            
+                </td>
+                <td>$login</td>
+                <td class="last">User login</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_email">
+                                                            
+                </td>
+                <td>$email</td>
+                <td class="last">User E-Mail address</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_password">
+                                                            
+                </td>
+                <td>$password</td>
+                <td class="last">The plain password</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_enabled">
+                                                            boolean
+                </td>
+                <td>$enabled</td>
+                <td class="last">Indicates if the user is enabled after creation</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setField">setField</a>(string $fieldDefIdentifier, mixed $value, string|null $language = null)
+                    <p>Adds a field to the field collection.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../eZ/Publish/API/Repository/Values/Content/ContentCreateStruct.html#method_setField"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentCreateStruct">ContentCreateStruct</abbr></a></small></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setField">
+        <div class="location">in <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/ContentCreateStruct.html#method_setField"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentCreateStruct">ContentCreateStruct</abbr></a> at line 92</div>
+        <code>    abstract        public            
+    <strong>setField</strong>(string $fieldDefIdentifier, mixed $value, string|null $language = null)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a field to the field collection.</p>
+        <p>This method could also be implemented by a magic setter so that<br />
+ $fields[$fieldDefIdentifier][$language] = $value or without language $fields[$fieldDefIdentifier] = $value<br />
+ is an equivalent call.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$fieldDefIdentifier</td>
+                <td>the identifier of the field definition</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>Either a plain value which is understandable by the corresponding field type or an instance of a Value class provided by the field type</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$language</td>
+                <td>If not given on a translatable field the initial language is used</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Persistence\Legacy\EzcDbHandler\Pgsql | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html">eZ\Publish\Core\Persistence\Legacy\EzcDbHandler</a>\Pgsql</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Pgsql</strong>        extends <a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a></p>
+
+            <div class="description">
+            <p>Wrapper class for the zeta components database handler, providing some additional utility functions.</p>
+            <p>Functions as a full proxy to the zeta components database class.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<abbr title="ezcDbHandler">ezcDbHandler</abbr> $ezcDbHandler)
+                    <p>Construct from zeta components database handler</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html#method___construct"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(string|<abbr title="eZ\Publish\Core\Persistence\Legacy\mixed[]$dbParams">mixed[]$dbParams</abbr> $dbParams)
+                    <p>Factory for getting EzcDbHandler handler object</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html#method_create"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method___call">__call</a>(string $method, array $parameters)
+                    <p>Proxy methods to the aggregated DB handler</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html#method___call"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_aliasedColumn">aliasedColumn</a>(<abbr title="ezcQuerySelect">ezcQuerySelect</abbr> $query, string $columnName, string|null $tableName = null)
+                    <p>Creates an alias for $tableName, $columnName in $query.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html#method_aliasedColumn"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_quoteColumn">quoteColumn</a>(string $columnName, string $tableName = null)
+                    <p>Returns a qualified identifier for $columnName in $tableName.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html#method_quoteColumn"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_quoteTable">quoteTable</a>(string $tableName)
+                    <p>Returns a qualified identifier for $tableName.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html#method_quoteTable"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getAutoIncrementValue">getAutoIncrementValue</a>(string $table, string $column)
+                    <p>Get auto increment value</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getSequenceName">getSequenceName</a>(string $table, string $column)
+                    <p>Returns the name of the affected sequence</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html#method___construct"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a> at line 39</div>
+        <code>            public            
+    <strong>__construct</strong>(<abbr title="ezcDbHandler">ezcDbHandler</abbr> $ezcDbHandler)</code>
+    </h3>
+    <div class="details">
+        <p>Construct from zeta components database handler</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="ezcDbHandler">ezcDbHandler</abbr></td>
+                <td>$ezcDbHandler</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">in <a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html#method_create"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a> at line 65</div>
+        <code>        static    public            <a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a>
+    <strong>create</strong>(string|<abbr title="eZ\Publish\Core\Persistence\Legacy\mixed[]$dbParams">mixed[]$dbParams</abbr> $dbParams)</code>
+    </h3>
+    <div class="details">
+        <p>Factory for getting EzcDbHandler handler object</p>
+        <p>Will use postgres or sqlite specific wrappers if dsn indicates such databases.<br />
+<br />
+ The DSN (data source name) defines which database to use. It&#039;s format is<br />
+ defined by the Apache Zeta Components Database component. Examples are:<br />
+<br />
+ - mysql://root:secret@localhost/ezp<br />
+   For the MySQL database &quot;ezp&quot; on localhost, which will be accessed<br />
+   using user &quot;root&quot; with password &quot;secret&quot;<br />
+ - sqlite://:memory:<br />
+   for a SQLite in memory database (used e.g. for unit tests)<br />
+<br />
+ For further information on the database setup, please refer to<br />
+ {see http://incubator.apache.org/zetacomponents/documentation/trunk/Database/tutorial.html#handler-usage}</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string|<abbr title="eZ\Publish\Core\Persistence\Legacy\mixed[]$dbParams">mixed[]$dbParams</abbr></td>
+                <td>$dbParams</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___call">
+        <div class="location">in <a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html#method___call"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a> at line 110</div>
+        <code>            public            mixed
+    <strong>__call</strong>(string $method, array $parameters)</code>
+    </h3>
+    <div class="details">
+        <p>Proxy methods to the aggregated DB handler</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_aliasedColumn">
+        <div class="location">in <a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html#method_aliasedColumn"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a> at line 124</div>
+        <code>            public            string
+    <strong>aliasedColumn</strong>(<abbr title="ezcQuerySelect">ezcQuerySelect</abbr> $query, string $columnName, string|null $tableName = null)</code>
+    </h3>
+    <div class="details">
+        <p>Creates an alias for $tableName, $columnName in $query.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="ezcQuerySelect">ezcQuerySelect</abbr></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$columnName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$tableName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_quoteColumn">
+        <div class="location">in <a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html#method_quoteColumn"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a> at line 143</div>
+        <code>            public            string
+    <strong>quoteColumn</strong>(string $columnName, string $tableName = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a qualified identifier for $columnName in $tableName.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$columnName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tableName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_quoteTable">
+        <div class="location">in <a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/EzcDbHandler.html#method_quoteTable"><abbr title="eZ\Publish\Core\Persistence\Legacy\EzcDbHandler">EzcDbHandler</abbr></a> at line 159</div>
+        <code>            public            string
+    <strong>quoteTable</strong>(string $tableName)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a qualified identifier for $tableName.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$tableName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAutoIncrementValue">
+        <div class="location">at line 34</div>
+        <code>            public            mixed
+    <strong>getAutoIncrementValue</strong>(string $table, string $column)</code>
+    </h3>
+    <div class="details">
+        <p>Get auto increment value</p>
+        <p>Returns the value used for autoincrement tables. Usually this will just<br />
+ be null. In case for sequence based RDBMS this method can return a<br />
+ proper value for the given column.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSequenceName">
+        <div class="location">at line 47</div>
+        <code>            public            string
+    <strong>getSequenceName</strong>(string $table, string $column)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the name of the affected sequence</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

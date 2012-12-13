@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\SPI\Persistence\Content\Handler | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../../../../eZ/Publish/SPI/Persistence/Content.html">eZ\Publish\SPI\Persistence\Content</a>\Handler</h1>
+    </div>
+        <div class="content">
+                <p>interface    <strong>Handler</strong></p>
+
+            <div class="description">
+            <p>The Content Handler interface defines content operations on the storage engine.</p>
+            <p>The basic operations which are performed on content objects are collected in<br />
+ this interface. Typically this interface would be used by a service managing<br />
+ business logic for content objects.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(<a href="../../../../../eZ/Publish/SPI/Persistence/Content/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\CreateStruct">CreateStruct</abbr></a> $content)
+                    <p>Creates a new Content entity in the storage engine.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createDraftFromVersion">createDraftFromVersion</a>(mixed $contentId, mixed $srcVersion, mixed $userId)
+                    <p>Creates a new draft version from $contentId in $srcVersion number.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_load">load</a>(int|string $id, int|string $version, string[] $translations = null)
+                    <p>Returns the raw data of a content object identified by $id, in a struct.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content/ContentInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\ContentInfo">ContentInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentInfo">loadContentInfo</a>(int|string $contentId)
+                    <p>Returns the metadata object for a content identified by $contentId.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadVersionInfo">loadVersionInfo</a>(int|string $contentId, int $versionNo)
+                    <p>Returns the version object for a content/version identified by $contentId and $versionNo</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadDraftsForUser">loadDraftsForUser</a>(int $userId)
+                    <p>Returns all versions with draft status created by the given $userId</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_setStatus">setStatus</a>(int $contentId, int $status, int $version)
+                    <p>Sets the status of object identified by $contentId and $version to $status.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content/ContentInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\ContentInfo">ContentInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateMetadata">updateMetadata</a>(int $contentId, <a href="../../../../../eZ/Publish/SPI/Persistence/Content/MetadataUpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\MetadataUpdateStruct">MetadataUpdateStruct</abbr></a> $content)
+                    <p>Updates a content object meta data, identified by $contentId</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateContent">updateContent</a>(int $contentId, int $versionNo, <a href="../../../../../eZ/Publish/SPI/Persistence/Content/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UpdateStruct">UpdateStruct</abbr></a> $content)
+                    <p>Updates a content version, identified by $contentId and $versionNo</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_deleteContent">deleteContent</a>(int $contentId)
+                    <p>Deletes all versions and fields, all locations (subtree), and all relations.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_deleteVersion">deleteVersion</a>(int $contentId, int $versionNo)
+                    <p>Deletes given version, its fields, node assignment, relations and names.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_listVersions">listVersions</a>(int $contentId)
+                    <p>Returns the versions for $contentId</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_copy">copy</a>(mixed $contentId, mixed|null $versionNo = null)
+                    <p>Copy Content with Fields and Versions from $contentId in $version.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content/Relation.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation">Relation</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addRelation">addRelation</a>(<a href="../../../../../eZ/Publish/SPI/Persistence/Content/Relation/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct">CreateStruct</abbr></a> $createStruct)
+                    <p>Creates a relation between $sourceContentId in $sourceContentVersionNo and $destinationContentId with a specific $type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeRelation">removeRelation</a>(mixed $relationId)
+                    <p>Removes a relation by relation Id.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content/Relation.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation">Relation</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadRelations">loadRelations</a>(mixed $sourceContentId, mixed|null $sourceContentVersionNo = null, int|null $type = null)
+                    <p>Loads relations from $sourceContentId.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content/Relation.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation">Relation</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadReverseRelations">loadReverseRelations</a>(mixed $destinationContentId, int|null $type = null)
+                    <p>Loads relations from $contentId.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_publish">publish</a>(int $contentId, int $versionNo, <a href="../../../../../eZ/Publish/SPI/Persistence/Content/MetadataUpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\MetadataUpdateStruct">MetadataUpdateStruct</abbr></a> $metaDataUpdateStruct)
+                    <p>Performs the publishing operations required to set the version identified by $updateStruct-&gt;versionNo and $updateStruct-&gt;id as the published one.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_create">
+        <div class="location">at line 36</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a>
+    <strong>create</strong>(<a href="../../../../../eZ/Publish/SPI/Persistence/Content/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\CreateStruct">CreateStruct</abbr></a> $content)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new Content entity in the storage engine.</p>
+        <p>The values contained inside the $content will form the basis of stored<br />
+ entity.<br />
+<br />
+ Will contain always a complete list of fields.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\CreateStruct">CreateStruct</abbr></a></td>
+                <td>$content</td>
+                <td>Content creation struct.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a></td>
+            <td>Content value object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createDraftFromVersion">
+        <div class="location">at line 50</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a>
+    <strong>createDraftFromVersion</strong>(mixed $contentId, mixed $srcVersion, mixed $userId)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new draft version from $contentId in $srcVersion number.</p>
+        <p>Copies all fields from $contentId in $srcVersion and creates a new<br />
+ version of the referred Content from it.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$srcVersion</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$userId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_load">
+        <div class="location">at line 69</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a>
+    <strong>load</strong>(int|string $id, int|string $version, string[] $translations = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the raw data of a content object identified by $id, in a struct.</p>
+        <p>A version to load must be specified. If you want to load the current<br />
+ version of a content object use SearchHandler::findSingle() with the<br />
+ ContentId criterion.<br />
+<br />
+ Optionally a translation filter may be specified. If specified only the<br />
+ translations with the listed language codes will be retrieved. If not,<br />
+ all translations will be retrieved.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int|string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|string</td>
+                <td>$version</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string[]</td>
+                <td>$translations</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a></td>
+            <td>Content value object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentInfo">
+        <div class="location">at line 78</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content/ContentInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\ContentInfo">ContentInfo</abbr></a>
+    <strong>loadContentInfo</strong>(int|string $contentId)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the metadata object for a content identified by $contentId.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int|string</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/ContentInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\ContentInfo">ContentInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadVersionInfo">
+        <div class="location">at line 90</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a>
+    <strong>loadVersionInfo</strong>(int|string $contentId, int $versionNo)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the version object for a content/version identified by $contentId and $versionNo</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int|string</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$versionNo</td>
+                <td>Version number to load</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If version is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadDraftsForUser">
+        <div class="location">at line 99</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a>[]
+    <strong>loadDraftsForUser</strong>(int $userId)</code>
+    </h3>
+    <div class="details">
+        <p>Returns all versions with draft status created by the given $userId</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$userId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setStatus">
+        <div class="location">at line 113</div>
+        <code>            public            boolean
+    <strong>setStatus</strong>(int $contentId, int $status, int $version)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the status of object identified by $contentId and $version to $status.</p>
+        <p>The $status can be one of VersionInfo::STATUS_DRAFT, VersionInfo::STATUS_PUBLISHED, VersionInfo::STATUS_ARCHIVED<br />
+ When status is set to VersionInfo::STATUS_PUBLISHED content status is updated to ContentInfo::STATUS_PUBLISHED</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateMetadata">
+        <div class="location">at line 123</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content/ContentInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\ContentInfo">ContentInfo</abbr></a>
+    <strong>updateMetadata</strong>(int $contentId, <a href="../../../../../eZ/Publish/SPI/Persistence/Content/MetadataUpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\MetadataUpdateStruct">MetadataUpdateStruct</abbr></a> $content)</code>
+    </h3>
+    <div class="details">
+        <p>Updates a content object meta data, identified by $contentId</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/MetadataUpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\MetadataUpdateStruct">MetadataUpdateStruct</abbr></a></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/ContentInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\ContentInfo">ContentInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateContent">
+        <div class="location">at line 134</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a>
+    <strong>updateContent</strong>(int $contentId, int $versionNo, <a href="../../../../../eZ/Publish/SPI/Persistence/Content/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UpdateStruct">UpdateStruct</abbr></a> $content)</code>
+    </h3>
+    <div class="details">
+        <p>Updates a content version, identified by $contentId and $versionNo</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$versionNo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UpdateStruct">UpdateStruct</abbr></a></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteContent">
+        <div class="location">at line 146</div>
+        <code>            public            boolean
+    <strong>deleteContent</strong>(int $contentId)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes all versions and fields, all locations (subtree), and all relations.</p>
+        <p>Removes the relations, but not the related objects. All subtrees of the<br />
+ assigned nodes of this content objects are removed (recursively).</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteVersion">
+        <div class="location">at line 158</div>
+        <code>            public            boolean
+    <strong>deleteVersion</strong>(int $contentId, int $versionNo)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes given version, its fields, node assignment, relations and names.</p>
+        <p>Removes the relations, but not the related objects.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$versionNo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_listVersions">
+        <div class="location">at line 167</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a>[]
+    <strong>listVersions</strong>(int $contentId)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the versions for $contentId</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_copy">
+        <div class="location">at line 182</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a>
+    <strong>copy</strong>(mixed $contentId, mixed|null $versionNo = null)</code>
+    </h3>
+    <div class="details">
+        <p>Copy Content with Fields and Versions from $contentId in $version.</p>
+        <p>Copies all fields from $contentId in $version (or all versions if false)<br />
+ to a new object which is returned. Version numbers are maintained.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed|null</td>
+                <td>$versionNo</td>
+                <td>Copy all versions if left null</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If content or version is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRelation">
+        <div class="location">at line 194</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content/Relation.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation">Relation</abbr></a>
+    <strong>addRelation</strong>(<a href="../../../../../eZ/Publish/SPI/Persistence/Content/Relation/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct">CreateStruct</abbr></a> $createStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a relation between $sourceContentId in $sourceContentVersionNo and $destinationContentId with a specific $type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/Relation/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct">CreateStruct</abbr></a></td>
+                <td>$createStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/Relation.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation">Relation</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeRelation">
+        <div class="location">at line 203</div>
+        <code>            public            
+    <strong>removeRelation</strong>(mixed $relationId)</code>
+    </h3>
+    <div class="details">
+        <p>Removes a relation by relation Id.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$relationId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadRelations">
+        <div class="location">at line 216</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content/Relation.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation">Relation</abbr></a>[]
+    <strong>loadRelations</strong>(mixed $sourceContentId, mixed|null $sourceContentVersionNo = null, int|null $type = null)</code>
+    </h3>
+    <div class="details">
+        <p>Loads relations from $sourceContentId.</p>
+        <p>Optionally, loads only those with $type and $sourceContentVersionNo.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$sourceContentId</td>
+                <td>Source Content ID</td>
+            </tr>
+                    <tr>
+                <td>mixed|null</td>
+                <td>$sourceContentVersionNo</td>
+                <td>Source Content Version, null if not specified</td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$type</td>
+                <td>{see \eZ\Publish\API\Repository\Values\Content\Relation::COMMON, \eZ\Publish\API\Repository\Values\Content\Relation::EMBED, \eZ\Publish\API\Repository\Values\Content\Relation::LINK, \eZ\Publish\API\Repository\Values\Content\Relation::FIELD}</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/Relation.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation">Relation</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadReverseRelations">
+        <div class="location">at line 230</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content/Relation.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation">Relation</abbr></a>[]
+    <strong>loadReverseRelations</strong>(mixed $destinationContentId, int|null $type = null)</code>
+    </h3>
+    <div class="details">
+        <p>Loads relations from $contentId.</p>
+        <p>Optionally, loads only those with $type.<br />
+<br />
+ Only loads relations against published versions.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$destinationContentId</td>
+                <td>Destination Content ID</td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$type</td>
+                <td>{see \eZ\Publish\API\Repository\Values\Content\Relation::COMMON, \eZ\Publish\API\Repository\Values\Content\Relation::EMBED, \eZ\Publish\API\Repository\Values\Content\Relation::LINK, \eZ\Publish\API\Repository\Values\Content\Relation::FIELD}</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/Relation.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation">Relation</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_publish">
+        <div class="location">at line 242</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a>
+    <strong>publish</strong>(int $contentId, int $versionNo, <a href="../../../../../eZ/Publish/SPI/Persistence/Content/MetadataUpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\MetadataUpdateStruct">MetadataUpdateStruct</abbr></a> $metaDataUpdateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Performs the publishing operations required to set the version identified by $updateStruct-&gt;versionNo and $updateStruct-&gt;id as the published one.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$versionNo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/MetadataUpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\MetadataUpdateStruct">MetadataUpdateStruct</abbr></a></td>
+                <td>$metaDataUpdateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a></td>
+            <td>The published Content</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

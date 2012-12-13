@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\MVC\Symfony\Security\Authorization\Attribute | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../../eZ/Publish/Core/MVC/Symfony/Security/Authorization.html">eZ\Publish\Core\MVC\Symfony\Security\Authorization</a>\Attribute</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Attribute</strong></p>
+
+            <div class="description">
+            <p>Authorization attribute class to be used with SecurityContextInterface::isGranted().</p>
+            <p>$module represents the global scope you want to check access to (e.g. &quot;content&quot;)<br />
+ $function represents the feature inside $module (e.g. &quot;read&quot;)<br />
+ $limitations are optional limitations to check against (e.g. array( &#039;SectionID&#039; =&gt; 3 ))<br />
+<br />
+ Usage example:<br />
+ &lt;code&gt;<br />
+ use eZ\Publish\Core\MVC\Symfony\Security\Authorization\Attribute as AuthorizationAttribute;<br />
+<br />
+ // From inside a controller<br />
+ // Will check if current user has access to content/read for section 3 (media)<br />
+ $hasAccess = $this-&gt;isGranted(<br />
+     new AuthorizationAttribute( &#039;content&#039;, &#039;read&#039;, array( &#039;SectionID&#039; =&gt; 3 ) )<br />
+ );<br />
+ &lt;/code&gt;</p>
+        </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_module">
+                                                            string
+                </td>
+                <td>$module</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_function">
+                                                            string
+                </td>
+                <td>$function</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_limitations">
+                                                            array
+                </td>
+                <td>$limitations</td>
+                <td class="last"></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $module = null, string $function = null, array $limitations = array())
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method___toString">__toString</a>()
+                    <p>String representation so that it&#039;s understandable by basic voters</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 52</div>
+        <code>            public            
+    <strong>__construct</strong>(string $module = null, string $function = null, array $limitations = array())</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$module</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$function</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$limitations</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___toString">
+        <div class="location">at line 64</div>
+        <code>            public            string
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>String representation so that it&#039;s understandable by basic voters</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

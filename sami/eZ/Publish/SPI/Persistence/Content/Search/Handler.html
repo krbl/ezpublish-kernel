@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\SPI\Persistence\Content\Search\Handler | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Search.html">eZ\Publish\SPI\Persistence\Content\Search</a>\Handler</h1>
+    </div>
+        <div class="content">
+                <p>abstract class    <strong>Handler</strong></p>
+
+            <div class="description">
+            <p>The Content Search handler retrieves sets of of Content objects, based on a set of criteria.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Search/SearchResult.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Search\SearchResult">SearchResult</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_findContent">findContent</a>(<a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Query.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query">Query</abbr></a> $query, array $fieldFilters = array())
+                    <p>Finds content objects for the given query.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_findSingle">findSingle</a>(<a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a> $criterion, array $fieldFilters = array())
+                    <p>Performs a query for a single content object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_suggest">suggest</a>($prefix, $fieldPaths = array(), $limit = 10, <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a> $filter = null)
+                    <p>Suggests a list of values for the given prefix</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_indexContent">indexContent</a>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content)
+                    <p>Indexes a content object</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_findContent">
+        <div class="location">at line 33</div>
+        <code>    abstract        public            <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Search/SearchResult.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Search\SearchResult">SearchResult</abbr></a>
+    <strong>findContent</strong>(<a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Query.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query">Query</abbr></a> $query, array $fieldFilters = array())</code>
+    </h3>
+    <div class="details">
+        <p>Finds content objects for the given query.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Query.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query">Query</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$fieldFilters</td>
+                <td>- a map of filters for the returned fields. Currently supported: &lt;code&gt;array(&quot;languages&quot; =&gt; array(&lt;language1&gt;,..))&lt;/code&gt;.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Search/SearchResult.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Search\SearchResult">SearchResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findSingle">
+        <div class="location">at line 48</div>
+        <code>    abstract        public            <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+    <strong>findSingle</strong>(<a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a> $criterion, array $fieldFilters = array())</code>
+    </h3>
+    <div class="details">
+        <p>Performs a query for a single content object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a></td>
+                <td>$criterion</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$fieldFilters</td>
+                <td>- a map of filters for the returned fields. Currently supported: &lt;code&gt;array(&quot;languages&quot; =&gt; array(&lt;language1&gt;,..))&lt;/code&gt;.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if the object was not found by the query or due to permissions</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if there is more than than one result matching the criterions</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_suggest">
+        <div class="location">at line 58</div>
+        <code>    abstract        public            
+    <strong>suggest</strong>($prefix, $fieldPaths = array(), $limit = 10, <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a> $filter = null)</code>
+    </h3>
+    <div class="details">
+        <p>Suggests a list of values for the given prefix</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$fieldPaths</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$limit</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a></td>
+                <td>$filter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_indexContent">
+        <div class="location">at line 67</div>
+        <code>    abstract        public            void
+    <strong>indexContent</strong>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content)</code>
+    </h3>
+    <div class="details">
+        <p>Indexes a content object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

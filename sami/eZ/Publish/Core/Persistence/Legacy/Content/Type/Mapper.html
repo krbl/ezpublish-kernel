@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Persistence\Legacy\Content\Type\Mapper | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type.html">eZ\Publish\Core\Persistence\Legacy\Content\Type</a>\Mapper</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Mapper</strong></p>
+
+            <div class="description">
+            <p>Mapper for Content Type Handler.</p>
+            <p>Performs mapping of Type objects.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/FieldValue/ConverterRegistry.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry">ConverterRegistry</abbr></a> $converterRegistry)
+                    <p>Creates a new content type mapper</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createGroupFromCreateStruct">createGroupFromCreateStruct</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group\CreateStruct">CreateStruct</abbr></a> $struct)
+                    <p>Creates a Group from its create struct.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_extractGroupsFromRows">extractGroupsFromRows</a>(array $rows)
+                    <p>Extracts Group objects from the given $rows.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\array(Type)">array(Type)</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_extractTypesFromRows">extractTypesFromRows</a>(array $rows)
+                    <p>Extracts types and related data from the given $rows.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_extractFieldFromRow">extractFieldFromRow</a>(array $row)
+                    <p>Creates a FieldDefinition from the data in $row.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createTypeFromCreateStruct">createTypeFromCreateStruct</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\CreateStruct">CreateStruct</abbr></a> $createStruct)
+                    <p>Maps properties from $struct to $type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\CreateStruct">CreateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createCreateStructFromType">createCreateStructFromType</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a> $type)
+                    <p>Creates a create struct from an existing $type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_toStorageFieldDefinition">toStorageFieldDefinition</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a> $fieldDef, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldDefinition.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition">StorageFieldDefinition</abbr></a> $storageFieldDef)
+                    <p>Maps $fieldDef to the legacy storage specific StorageFieldDefinition</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_toFieldDefinition">toFieldDefinition</a>(<a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldDefinition.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition">StorageFieldDefinition</abbr></a> $storageFieldDef, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a> $fieldDef)
+                    <p>Maps a FieldDefinition from the given $storageFieldDef</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 39</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/FieldValue/ConverterRegistry.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry">ConverterRegistry</abbr></a> $converterRegistry)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new content type mapper</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/FieldValue/ConverterRegistry.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry">ConverterRegistry</abbr></a></td>
+                <td>$converterRegistry</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createGroupFromCreateStruct">
+        <div class="location">at line 53</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a>
+    <strong>createGroupFromCreateStruct</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group\CreateStruct">CreateStruct</abbr></a> $struct)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a Group from its create struct.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group\CreateStruct">CreateStruct</abbr></a></td>
+                <td>$struct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_extractGroupsFromRows">
+        <div class="location">at line 78</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a>[]
+    <strong>extractGroupsFromRows</strong>(array $rows)</code>
+    </h3>
+    <div class="details">
+        <p>Extracts Group objects from the given $rows.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$rows</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Group.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Group">Group</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_extractTypesFromRows">
+        <div class="location">at line 105</div>
+        <code>            public            <abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\array(Type)">array(Type)</abbr>
+    <strong>extractTypesFromRows</strong>(array $rows)</code>
+    </h3>
+    <div class="details">
+        <p>Extracts types and related data from the given $rows.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$rows</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\array(Type)">array(Type)</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_extractFieldFromRow">
+        <div class="location">at line 184</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a>
+    <strong>extractFieldFromRow</strong>(array $row)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a FieldDefinition from the data in $row.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$row</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createTypeFromCreateStruct">
+        <div class="location">at line 267</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a>
+    <strong>createTypeFromCreateStruct</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\CreateStruct">CreateStruct</abbr></a> $createStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Maps properties from $struct to $type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\CreateStruct">CreateStruct</abbr></a></td>
+                <td>$createStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createCreateStructFromType">
+        <div class="location">at line 300</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\CreateStruct">CreateStruct</abbr></a>
+    <strong>createCreateStructFromType</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a> $type)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a create struct from an existing $type.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\CreateStruct">CreateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toStorageFieldDefinition">
+        <div class="location">at line 334</div>
+        <code>            public            void
+    <strong>toStorageFieldDefinition</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a> $fieldDef, <a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldDefinition.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition">StorageFieldDefinition</abbr></a> $storageFieldDef)</code>
+    </h3>
+    <div class="details">
+        <p>Maps $fieldDef to the legacy storage specific StorageFieldDefinition</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a></td>
+                <td>$fieldDef</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldDefinition.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition">StorageFieldDefinition</abbr></a></td>
+                <td>$storageFieldDef</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toFieldDefinition">
+        <div class="location">at line 354</div>
+        <code>            public            void
+    <strong>toFieldDefinition</strong>(<a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldDefinition.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition">StorageFieldDefinition</abbr></a> $storageFieldDef, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a> $fieldDef)</code>
+    </h3>
+    <div class="details">
+        <p>Maps a FieldDefinition from the given $storageFieldDef</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldDefinition.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition">StorageFieldDefinition</abbr></a></td>
+                <td>$storageFieldDef</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/FieldDefinition.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition">FieldDefinition</abbr></a></td>
+                <td>$fieldDef</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

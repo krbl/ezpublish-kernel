@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\MVC\Symfony\View\Manager | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../eZ/Publish/Core/MVC/Symfony/View.html">eZ\Publish\Core\MVC\Symfony\View</a>\Manager</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Manager</strong></p>
+
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>VIEW_TYPE_FULL</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>VIEW_TYPE_LINE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<abbr title="Symfony\Component\Templating\EngineInterface">EngineInterface</abbr> $templateEngine, <abbr title="Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr> $eventDispatcher, <a href="../../../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository, $viewBaseLayout, <abbr title="Symfony\Component\HttpKernel\Log\LoggerInterface">LoggerInterface</abbr> $logger = null)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addContentViewProvider">addContentViewProvider</a>(<a href="../../../../../../eZ/Publish/Core/MVC/Symfony/View/Provider/Content.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\Provider\Content">Content</abbr></a> $viewProvider, int $priority)
+                    <p>Registers $viewProvider as a valid content view provider.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addLocationViewProvider">addLocationViewProvider</a>(<a href="../../../../../../eZ/Publish/Core/MVC/Symfony/View/Provider/Location.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\Provider\Location">Location</abbr></a> $viewProvider, int $priority)
+                    <p>Registers $viewProvider as a valid location view provider.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/MVC/Symfony/View/Provider/Content.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\Provider\Content">Content</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getAllContentViewProviders">getAllContentViewProviders</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/MVC/Symfony/View/Provider/Location.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\Provider\Location">Location</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getAllLocationViewProviders">getAllLocationViewProviders</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_renderContent">renderContent</a>(<a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a> $content, string $viewType = self::VIEW_TYPE_FULL, array $parameters = array())
+                    <p>Renders $content by selecting the right template.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_renderLocation">renderLocation</a>(<a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a> $location, string $viewType = self::VIEW_TYPE_FULL, array $parameters = array())
+                    <p>Renders $location by selecting the right template for $viewType.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_renderContentView">renderContentView</a>(<a href="../../../../../../eZ/Publish/Core/MVC/Symfony/View/ContentViewInterface.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\ContentViewInterface">ContentViewInterface</abbr></a> $view, array $defaultParams = array())
+                    <p>Renders passed ContentView object via the template engine.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 80</div>
+        <code>            public            
+    <strong>__construct</strong>(<abbr title="Symfony\Component\Templating\EngineInterface">EngineInterface</abbr> $templateEngine, <abbr title="Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr> $eventDispatcher, <a href="../../../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository, $viewBaseLayout, <abbr title="Symfony\Component\HttpKernel\Log\LoggerInterface">LoggerInterface</abbr> $logger = null)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Symfony\Component\Templating\EngineInterface">EngineInterface</abbr></td>
+                <td>$templateEngine</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Symfony\Component\EventDispatcher\EventDispatcherInterface">EventDispatcherInterface</abbr></td>
+                <td>$eventDispatcher</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a></td>
+                <td>$repository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$viewBaseLayout</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Symfony\Component\HttpKernel\Log\LoggerInterface">LoggerInterface</abbr></td>
+                <td>$logger</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addContentViewProvider">
+        <div class="location">at line 111</div>
+        <code>            public            
+    <strong>addContentViewProvider</strong>(<a href="../../../../../../eZ/Publish/Core/MVC/Symfony/View/Provider/Content.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\Provider\Content">Content</abbr></a> $viewProvider, int $priority)</code>
+    </h3>
+    <div class="details">
+        <p>Registers $viewProvider as a valid content view provider.</p>
+        <p>When this view provider will be called in the chain depends on $priority. The highest $priority is, the earliest the router will be called.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/MVC/Symfony/View/Provider/Content.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\Provider\Content">Content</abbr></a></td>
+                <td>$viewProvider</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$priority</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addLocationViewProvider">
+        <div class="location">at line 123</div>
+        <code>            public            
+    <strong>addLocationViewProvider</strong>(<a href="../../../../../../eZ/Publish/Core/MVC/Symfony/View/Provider/Location.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\Provider\Location">Location</abbr></a> $viewProvider, int $priority)</code>
+    </h3>
+    <div class="details">
+        <p>Registers $viewProvider as a valid location view provider.</p>
+        <p>When this view provider will be called in the chain depends on $priority. The highest $priority is, the earliest the router will be called.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/MVC/Symfony/View/Provider/Location.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\Provider\Location">Location</abbr></a></td>
+                <td>$viewProvider</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$priority</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAllContentViewProviders">
+        <div class="location">at line 131</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/MVC/Symfony/View/Provider/Content.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\Provider\Content">Content</abbr></a>[]
+    <strong>getAllContentViewProviders</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/MVC/Symfony/View/Provider/Content.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\Provider\Content">Content</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAllLocationViewProviders">
+        <div class="location">at line 142</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/MVC/Symfony/View/Provider/Location.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\Provider\Location">Location</abbr></a>[]
+    <strong>getAllLocationViewProviders</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/MVC/Symfony/View/Provider/Location.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\Provider\Location">Location</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_renderContent">
+        <div class="location">at line 182</div>
+        <code>            public            string
+    <strong>renderContent</strong>(<a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a> $content, string $viewType = self::VIEW_TYPE_FULL, array $parameters = array())</code>
+    </h3>
+    <div class="details">
+        <p>Renders $content by selecting the right template.</p>
+        <p>$content will be injected in the selected template.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$viewType</td>
+                <td>Variation of display for your content. Default is &#039;full&#039;.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td>Parameters to pass to the template called to render the view. By default, it&#039;s empty. &#039;content&#039; entry is reserved for the Content that is rendered.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_renderLocation">
+        <div class="location">at line 212</div>
+        <code>            public            string
+    <strong>renderLocation</strong>(<a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a> $location, string $viewType = self::VIEW_TYPE_FULL, array $parameters = array())</code>
+    </h3>
+    <div class="details">
+        <p>Renders $location by selecting the right template for $viewType.</p>
+        <p>$content and $location will be injected in the selected template.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Location.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Location">Location</abbr></a></td>
+                <td>$location</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$viewType</td>
+                <td>Variation of display for your content. Default is &#039;full&#039;.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td>Parameters to pass to the template called to render the view. By default, it&#039;s empty. &#039;location&#039; and &#039;content&#039; entries are reserved for the Location (and its Content) that is viewed.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_renderContentView">
+        <div class="location">at line 237</div>
+        <code>            public            string
+    <strong>renderContentView</strong>(<a href="../../../../../../eZ/Publish/Core/MVC/Symfony/View/ContentViewInterface.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\ContentViewInterface">ContentViewInterface</abbr></a> $view, array $defaultParams = array())</code>
+    </h3>
+    <div class="details">
+        <p>Renders passed ContentView object via the template engine.</p>
+        <p>If $view&#039;s template identifier is a closure, then it is called directly and the result is returned as is.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/MVC/Symfony/View/ContentViewInterface.html"><abbr title="eZ\Publish\Core\MVC\Symfony\View\ContentViewInterface">ContentViewInterface</abbr></a></td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$defaultParams</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\MVC\Symfony\View\ContentViewInterface | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../../../../../eZ/Publish/Core/MVC/Symfony/View.html">eZ\Publish\Core\MVC\Symfony\View</a>\ContentViewInterface</h1>
+    </div>
+        <div class="content">
+                <p>interface    <strong>ContentViewInterface</strong></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTemplateIdentifier">setTemplateIdentifier</a>(string|<a href="http://php.net/Closure"><abbr title="Closure">Closure</abbr></a> $templateIdentifier)
+                    <p>Sets $templateIdentifier to the content view.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string|<a href="http://php.net/Closure"><abbr title="Closure">Closure</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getTemplateIdentifier">getTemplateIdentifier</a>()
+                    <p>Returns the registered template identifier.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setParameters">setParameters</a>(array $parameters)
+                    <p>Sets $parameters that will later be injected to the template/closure.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addParameters">addParameters</a>(array $parameters)
+                    <p>Adds a hash of parameters to the existing parameters.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getParameters">getParameters</a>()
+                    <p>Returns registered parameters.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasParameter">hasParameter</a>(string $parameterName)
+                    <p>Checks if $parameterName exists.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getParameter">getParameter</a>(string $parameterName)
+                    <p>Returns parameter value by $parameterName.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_setTemplateIdentifier">
+        <div class="location">at line 25</div>
+        <code>            public            
+    <strong>setTemplateIdentifier</strong>(string|<a href="http://php.net/Closure"><abbr title="Closure">Closure</abbr></a> $templateIdentifier)</code>
+    </h3>
+    <div class="details">
+        <p>Sets $templateIdentifier to the content view.</p>
+        <p>Can be either a valid template identifier such as &quot;MyBundle:subfolder:my_template.html.twig&quot; or a closure.<br />
+ In the case of a closure, it will receive an array of parameters as an argument and must return the result to display.<br />
+<br />
+ Must throw a \eZ\Publish\Core\Base\Exceptions\InvalidArgumentType exception if $templateIdentifier is invalid.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string|<a href="http://php.net/Closure"><abbr title="Closure">Closure</abbr></a></td>
+                <td>$templateIdentifier</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/Base/Exceptions/InvalidArgumentType.html"><abbr title="eZ\Publish\Core\Base\Exceptions\InvalidArgumentType">InvalidArgumentType</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTemplateIdentifier">
+        <div class="location">at line 32</div>
+        <code>            public            string|<a href="http://php.net/Closure"><abbr title="Closure">Closure</abbr></a>
+    <strong>getTemplateIdentifier</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the registered template identifier.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|<a href="http://php.net/Closure"><abbr title="Closure">Closure</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setParameters">
+        <div class="location">at line 40</div>
+        <code>            public            
+    <strong>setParameters</strong>(array $parameters)</code>
+    </h3>
+    <div class="details">
+        <p>Sets $parameters that will later be injected to the template/closure.</p>
+        <p>If some parameters were already present, $parameters will replace them.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td>Hash of parameters</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addParameters">
+        <div class="location">at line 47</div>
+        <code>            public            
+    <strong>addParameters</strong>(array $parameters)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a hash of parameters to the existing parameters.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParameters">
+        <div class="location">at line 54</div>
+        <code>            public            array
+    <strong>getParameters</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns registered parameters.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasParameter">
+        <div class="location">at line 63</div>
+        <code>            public            boolean
+    <strong>hasParameter</strong>(string $parameterName)</code>
+    </h3>
+    <div class="details">
+        <p>Checks if $parameterName exists.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$parameterName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParameter">
+        <div class="location">at line 75</div>
+        <code>            public            mixed
+    <strong>getParameter</strong>(string $parameterName)</code>
+    </h3>
+    <div class="details">
+        <p>Returns parameter value by $parameterName.</p>
+        <p>Throws an \InvalidArgumentException if $parameterName is not set.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$parameterName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

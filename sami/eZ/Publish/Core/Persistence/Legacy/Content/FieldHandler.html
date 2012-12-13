@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Persistence\Legacy\Content\FieldHandler | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content.html">eZ\Publish\Core\Persistence\Legacy\Content</a>\FieldHandler</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>FieldHandler</strong></p>
+
+            <div class="description">
+            <p>Field Handler.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway">Gateway</abbr></a> $contentGateway, <a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway">Gateway</abbr></a> $typeGateway, <a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Mapper.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Mapper">Mapper</abbr></a> $mapper, <a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler">StorageHandler</abbr></a> $storageHandler)
+                    <p>Creates a new Field Handler</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_createNewFields">createNewFields</a>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content)
+                    <p>Creates new fields in the database from $content</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_createExistingFieldsInNewVersion">createExistingFieldsInNewVersion</a>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content)
+                    <p>Creates existing fields in a new version for $content</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_createExistingFieldInNewVersion">createExistingFieldInNewVersion</a>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a> $field, <a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content)
+                    <p>Creates an existing field in a new version, no new ID is generated</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_loadExternalFieldData">loadExternalFieldData</a>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content)
+                    <p>Performs external loads for the fields in $content</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_updateFields">updateFields</a>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content, <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UpdateStruct">UpdateStruct</abbr></a> $updateStruct)
+                    <p>Updates the fields in for content identified by $contentId and $versionNo in the database in respect to $updateStruct</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_deleteFields">deleteFields</a>(int $contentId, <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo)
+                    <p>Deletes the fields for $contentId in $versionInfo from the database</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 60</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway">Gateway</abbr></a> $contentGateway, <a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway">Gateway</abbr></a> $typeGateway, <a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Mapper.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Mapper">Mapper</abbr></a> $mapper, <a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler">StorageHandler</abbr></a> $storageHandler)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new Field Handler</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Gateway">Gateway</abbr></a></td>
+                <td>$contentGateway</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway">Gateway</abbr></a></td>
+                <td>$typeGateway</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Mapper.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Mapper">Mapper</abbr></a></td>
+                <td>$mapper</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageHandler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler">StorageHandler</abbr></a></td>
+                <td>$storageHandler</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createNewFields">
+        <div class="location">at line 79</div>
+        <code>            public            void
+    <strong>createNewFields</strong>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content)</code>
+    </h3>
+    <div class="details">
+        <p>Creates new fields in the database from $content</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createExistingFieldsInNewVersion">
+        <div class="location">at line 94</div>
+        <code>            public            void
+    <strong>createExistingFieldsInNewVersion</strong>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content)</code>
+    </h3>
+    <div class="details">
+        <p>Creates existing fields in a new version for $content</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createExistingFieldInNewVersion">
+        <div class="location">at line 142</div>
+        <code>            public            void
+    <strong>createExistingFieldInNewVersion</strong>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a> $field, <a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content)</code>
+    </h3>
+    <div class="details">
+        <p>Creates an existing field in a new version, no new ID is generated</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a></td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadExternalFieldData">
+        <div class="location">at line 171</div>
+        <code>            public            void
+    <strong>loadExternalFieldData</strong>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content)</code>
+    </h3>
+    <div class="details">
+        <p>Performs external loads for the fields in $content</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateFields">
+        <div class="location">at line 187</div>
+        <code>            public            void
+    <strong>updateFields</strong>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content, <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UpdateStruct">UpdateStruct</abbr></a> $updateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the fields in for content identified by $contentId and $versionNo in the database in respect to $updateStruct</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/UpdateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UpdateStruct">UpdateStruct</abbr></a></td>
+                <td>$updateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteFields">
+        <div class="location">at line 225</div>
+        <code>            public            void
+    <strong>deleteFields</strong>(int $contentId, <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes the fields for $contentId in $versionInfo from the database</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a></td>
+                <td>$versionInfo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

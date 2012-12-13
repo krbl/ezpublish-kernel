@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Bundle\EzPublishLegacyBundle\DependencyInjection\Configuration\LegacyConfigResolver | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../eZ/Bundle/EzPublishLegacyBundle/DependencyInjection/Configuration.html">eZ\Bundle\EzPublishLegacyBundle\DependencyInjection\Configuration</a>\LegacyConfigResolver</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>LegacyConfigResolver</strong>        implements
+        <a href="../../../../../eZ/Publish/Core/MVC/ConfigResolverInterface.html"><abbr title="eZ\Publish\Core\MVC\ConfigResolverInterface">ConfigResolverInterface</abbr></a></p>
+
+            <div class="description">
+            <p>Configuration resolver for eZ Publish legacy.</p>
+            <p>Will help you get settings from the legacy kernel (old ini files).<br />
+<br />
+ &lt;code&gt;<br />
+ // From a controller<br />
+ $legacyResolver = $this-&gt;container-&gt;get( &#039;ezpublish_legacy.config.resolver&#039; );<br />
+ // Get [DebugSettings].DebugOutput from site.ini<br />
+ $debugOutput = $legacyResolver-&gt;getParameter( &#039;DebugSettings.DebugOutput&#039; );<br />
+ // Get [ImageMagick].ExecutablePath from image.ini<br />
+ $imageMagickPath = $legacyResolver-&gt;getParameter( &#039;ImageMagick.ExecutablePath&#039;, &#039;image&#039; );<br />
+ // Get [DatabaseSettings].Database from site.ini, for ezdemo_site_admin siteaccess<br />
+ $databaseName = $legacyResolver-&gt;getParameter( &#039;DatabaseSettings.Database&#039;, &#039;site&#039;, &#039;ezdemo_site_admin&#039; );<br />
+<br />
+ // Note that the examples above are also applicable for hasParameter().<br />
+ &lt;/code&gt;</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<abbr title="eZ\Bundle\EzPublishLegacyBundle\DependencyInjection\Configuration\Closure">Closure</abbr> $legacyKernelClosure, $defaultNamespace)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getParameter">getParameter</a>(string $paramName, string $namespace = null, string $scope = null)
+                    <p>Returns value for $paramName, in $namespace.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getGroup">getGroup</a>(string $groupName, string $namespace = null, string $scope = null)
+                    <p>Returns values for $groupName, in $namespace.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasParameter">hasParameter</a>(string $paramName, string $namespace = null, string $scope = null)
+                    <p>Checks if $paramName exists in $namespace</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDefaultNamespace">setDefaultNamespace</a>(string $defaultNamespace)
+                    <p>Changes the default namespace to look parameter into.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getDefaultNamespace">getDefaultNamespace</a>()
+                    <p>Returns the current default namespace.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 45</div>
+        <code>            public            
+    <strong>__construct</strong>(<abbr title="eZ\Bundle\EzPublishLegacyBundle\DependencyInjection\Configuration\Closure">Closure</abbr> $legacyKernelClosure, $defaultNamespace)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="eZ\Bundle\EzPublishLegacyBundle\DependencyInjection\Configuration\Closure">Closure</abbr></td>
+                <td>$legacyKernelClosure</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$defaultNamespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getParameter">
+        <div class="location">at line 72</div>
+        <code>            public            mixed
+    <strong>getParameter</strong>(string $paramName, string $namespace = null, string $scope = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns value for $paramName, in $namespace.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$paramName</td>
+                <td>String containing dot separated INI group name and param name. Must follow the following format: &lt;iniGroupName&gt;.&lt;paramName&gt;</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td>The legacy INI file name, without the suffix (i.e. without &quot;.ini&quot;).</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$scope</td>
+                <td>A specific siteaccess to look into. Defaults to the current siteaccess.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getGroup">
+        <div class="location">at line 112</div>
+        <code>            public            array
+    <strong>getGroup</strong>(string $groupName, string $namespace = null, string $scope = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns values for $groupName, in $namespace.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$groupName</td>
+                <td>String containing an INI group name.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td>The legacy INI file name, without the suffix (i.e. without &quot;.ini&quot;).</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$scope</td>
+                <td>A specific siteaccess to look into. Defaults to the current siteaccess.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/MVC/Exception/ParameterNotFoundException.html"><abbr title="eZ\Publish\Core\MVC\Exception\ParameterNotFoundException">ParameterNotFoundException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasParameter">
+        <div class="location">at line 147</div>
+        <code>            public            boolean
+    <strong>hasParameter</strong>(string $paramName, string $namespace = null, string $scope = null)</code>
+    </h3>
+    <div class="details">
+        <p>Checks if $paramName exists in $namespace</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$paramName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td>If null, the default namespace should be used.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$scope</td>
+                <td>The scope you need $paramName value for.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDefaultNamespace">
+        <div class="location">at line 176</div>
+        <code>            public            
+    <strong>setDefaultNamespace</strong>(string $defaultNamespace)</code>
+    </h3>
+    <div class="details">
+        <p>Changes the default namespace to look parameter into.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$defaultNamespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDefaultNamespace">
+        <div class="location">at line 186</div>
+        <code>            public            string
+    <strong>getDefaultNamespace</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the current default namespace.</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

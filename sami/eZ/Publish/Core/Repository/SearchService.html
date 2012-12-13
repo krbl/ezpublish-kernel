@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Repository\SearchService | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../eZ/Publish/Core/Repository.html">eZ\Publish\Core\Repository</a>\SearchService</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>SearchService</strong>        implements
+        <a href="../../../../eZ/Publish/API/Repository/SearchService.html"><abbr title="eZ\Publish\API\Repository\SearchService">SearchService</abbr></a></p>
+
+            <div class="description">
+            <p>Search service</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository, <a href="../../../../eZ/Publish/SPI/Persistence/Content/Search/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Search\Handler">Handler</abbr></a> $searchHandler, array $settings = array())
+                    <p>Setups service with reference to repository object that created it &amp; corresponding handler</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Search/SearchResult.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Search\SearchResult">SearchResult</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_findContent">findContent</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/Query.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query">Query</abbr></a> $query, array $fieldFilters = array(), boolean $filterOnUserPermissions = true)
+                    <p>Finds content objects for the given query.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_findSingle">findSingle</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a> $criterion, array $fieldFilters = array(), boolean $filterOnUserPermissions = true)
+                    <p>Performs a query for a single content object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_suggest">suggest</a>(string $prefix, string[] $fieldPaths = array(), int $limit = 10, <a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a> $filter = null)
+                    <p>Suggests a list of values for the given prefix</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean|<a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addPermissionsCriterion">addPermissionsCriterion</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a> $criterion)
+                    <p>Adds content, read Permission criteria if needed and return false if no access at all</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean|<a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getPermissionsCriterion">getPermissionsCriterion</a>($module = &#039;content&#039;, $function = &#039;read&#039;)
+                    <p>Get content-read Permission criteria if needed and return false if no access at all</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 50</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository, <a href="../../../../eZ/Publish/SPI/Persistence/Content/Search/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Search\Handler">Handler</abbr></a> $searchHandler, array $settings = array())</code>
+    </h3>
+    <div class="details">
+        <p>Setups service with reference to repository object that created it &amp; corresponding handler</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a></td>
+                <td>$repository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/SPI/Persistence/Content/Search/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Search\Handler">Handler</abbr></a></td>
+                <td>$searchHandler</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$settings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findContent">
+        <div class="location">at line 72</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Search/SearchResult.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Search\SearchResult">SearchResult</abbr></a>
+    <strong>findContent</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/Query.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query">Query</abbr></a> $query, array $fieldFilters = array(), boolean $filterOnUserPermissions = true)</code>
+    </h3>
+    <div class="details">
+        <p>Finds content objects for the given query.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Query.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query">Query</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$fieldFilters</td>
+                <td>- a map of filters for the returned fields. Currently supported: &lt;code&gt;array(&quot;languages&quot; =&gt; array(&lt;language1&gt;,..))&lt;/code&gt;.</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$filterOnUserPermissions</td>
+                <td>if true only the objects which is the user allowed to read are returned.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Search/SearchResult.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Search\SearchResult">SearchResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findSingle">
+        <div class="location">at line 104</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+    <strong>findSingle</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a> $criterion, array $fieldFilters = array(), boolean $filterOnUserPermissions = true)</code>
+    </h3>
+    <div class="details">
+        <p>Performs a query for a single content object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a></td>
+                <td>$criterion</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$fieldFilters</td>
+                <td>- a map of filters for the returned fields. Currently supported: &lt;code&gt;array(&quot;languages&quot; =&gt; array(&lt;language1&gt;,..))&lt;/code&gt;.</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$filterOnUserPermissions</td>
+                <td>if true only the objects which is the user allowed to read are returned.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if the object was not found by the query or due to permissions</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if there is more than than one result matching the criterions</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_suggest">
+        <div class="location">at line 124</div>
+        <code>            public            
+    <strong>suggest</strong>(string $prefix, string[] $fieldPaths = array(), int $limit = 10, <a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a> $filter = null)</code>
+    </h3>
+    <div class="details">
+        <p>Suggests a list of values for the given prefix</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string[]</td>
+                <td>$fieldPaths</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a></td>
+                <td>$filter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addPermissionsCriterion">
+        <div class="location">at line 139</div>
+        <code>            public            boolean|<a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a>
+    <strong>addPermissionsCriterion</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a> $criterion)</code>
+    </h3>
+    <div class="details">
+        <p>Adds content, read Permission criteria if needed and return false if no access at all</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a></td>
+                <td>$criterion</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean|<a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPermissionsCriterion">
+        <div class="location">at line 174</div>
+        <code>            public            boolean|<a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a>
+    <strong>getPermissionsCriterion</strong>($module = &#039;content&#039;, $function = &#039;read&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Get content-read Permission criteria if needed and return false if no access at all</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$module</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$function</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean|<a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td>If empty array of limitations are provided from hasAccess()</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

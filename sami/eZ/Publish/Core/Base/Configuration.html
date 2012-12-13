@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Base\Configuration | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../eZ/Publish/Core/Base.html">eZ\Publish\Core\Base</a>\Configuration</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Configuration</strong></p>
+
+            <div class="description">
+            <p>Configuration instance class</p>
+            <p>A configuration class with override setting support that uses parsers to deal with<br />
+ files so you can support ini/yaml/xml/json given it is defined when setting up the class.<br />
+<br />
+ By default values are cached to a raw php files and files are not read again unless<br />
+ development mode is on and some file has been removed or modified since cache was created.</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>CONFIG_CACHE_DIR</td>
+                <td class="last">
+                    <p><em>Constant path to directory for configuration cache</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TEMP_INI_UNSET_VAR</td>
+                <td class="last">
+                    <p><em>Constant string used as a temporary unset variable during ini parsing</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CONFIG_CACHE_REV</td>
+                <td class="last">
+                    <p><em>Constant integer to check against configuration cache format revision</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $moduleName, array $paths, array $globalConfiguration)
+                    <p>Create instance of Configuration</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getDirs">getDirs</a>(string $scope = null)
+                    <p>Get raw instance override path list data.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_reload">reload</a>()
+                    <p>Reload cache data conditionally if path hash has changed on current instance</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_load">load</a>(boolean|null $hasCache = null, boolean $useCache = null)
+                    <p>Loads the configuration from cache or from source (if $useCache is false or there is no cache)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed|null
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(string $section, string $key, mixed $fallBackValue = null)
+                    <p>Gets a configuration value, or $fallBackValue if undefined Triggers warning if key is not set and $fallBackValue is null</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|null
+                </td>
+                <td class="last">
+                    <a href="#method_getSection">getSection</a>(string $section, mixed $fallBackValue = null)
+                    <p>Gets a configuration values for a section or $fallBackValue if undefined Triggers warning if section is not set and $fallBackValue is null</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAll">getAll</a>()
+                    <p>Gets all section and configuration value</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_set">set</a>(string $section, string $key, mixed $value = null)
+                    <p>Gets a configuration value, or null if not set.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_has">has</a>(string $section, string $key = null)
+                    <p>Checks if a configuration section and optionally key is set.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_hasValue">hasValue</a>(string $section, string $key)
+                    <p>Checks if a configuration section &amp; key is set and has a value.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 106</div>
+        <code>            public            
+    <strong>__construct</strong>(string $moduleName, array $paths, array $globalConfiguration)</code>
+    </h3>
+    <div class="details">
+        <p>Create instance of Configuration</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$moduleName</td>
+                <td>The name of the module (and in case of ini files, same as ini filename w/o suffix)</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$paths</td>
+                <td>Paths to look for settings in.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$globalConfiguration</td>
+                <td>Global settings for module</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDirs">
+        <div class="location">at line 127</div>
+        <code>            public            array
+    <strong>getDirs</strong>(string $scope = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get raw instance override path list data.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$scope</td>
+                <td>See {@link $globalPaths} for scope values (first level keys)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="InvalidArgumentValue">InvalidArgumentValue</abbr></td>
+                <td>If scope has wrong value</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_reload">
+        <div class="location">at line 154</div>
+        <code>            public            
+    <strong>reload</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Reload cache data conditionally if path hash has changed on current instance</p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_load">
+        <div class="location">at line 166</div>
+        <code>            public            
+    <strong>load</strong>(boolean|null $hasCache = null, boolean $useCache = null)</code>
+    </h3>
+    <div class="details">
+        <p>Loads the configuration from cache or from source (if $useCache is false or there is no cache)</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean|null</td>
+                <td>$hasCache</td>
+                <td>Lets you specify if there is a cache file, will check if null and $useCache is true</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$useCache</td>
+                <td>Will skip using cached config files (slow), when null depends on [ini]\use-cache setting</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">at line 499</div>
+        <code>            public            mixed|null
+    <strong>get</strong>(string $section, string $key, mixed $fallBackValue = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets a configuration value, or $fallBackValue if undefined Triggers warning if key is not set and $fallBackValue is null</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$section</td>
+                <td>The configuration section to get value for</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>The configuration key to get value for</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$fallBackValue</td>
+                <td>value to return if setting is undefined.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed|null</td>
+            <td>(null if key is undefined and no $fallBackValue is provided)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSection">
+        <div class="location">at line 521</div>
+        <code>            public            array|null
+    <strong>getSection</strong>(string $section, mixed $fallBackValue = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets a configuration values for a section or $fallBackValue if undefined Triggers warning if section is not set and $fallBackValue is null</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$section</td>
+                <td>The configuration section to get value for</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$fallBackValue</td>
+                <td>value to return if section is undefined.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|null</td>
+            <td>(null if key is undefined and no $fallBackValue is provided)</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAll">
+        <div class="location">at line 539</div>
+        <code>            public            array
+    <strong>getAll</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets all section and configuration value</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_set">
+        <div class="location">at line 553</div>
+        <code>            public            boolean
+    <strong>set</strong>(string $section, string $key, mixed $value = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets a configuration value, or null if not set.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$section</td>
+                <td>The configuration section to get value for</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>The configuration key to get value for</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>value to return if setting is not defined.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>Return true if section existed and was overwritten</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_has">
+        <div class="location">at line 573</div>
+        <code>            public            boolean
+    <strong>has</strong>(string $section, string $key = null)</code>
+    </h3>
+    <div class="details">
+        <p>Checks if a configuration section and optionally key is set.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$section</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>Optional, only checks if section exists if null</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>Return true if setting exist</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasValue">
+        <div class="location">at line 590</div>
+        <code>            public            boolean
+    <strong>hasValue</strong>(string $section, string $key)</code>
+    </h3>
+    <div class="details">
+        <p>Checks if a configuration section &amp; key is set and has a value.</p>
+        <p>(ie. a check using !empty())</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$section</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>Return true if setting exist and has value</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

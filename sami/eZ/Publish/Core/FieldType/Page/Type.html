@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\FieldType\Page\Type | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../eZ/Publish/Core/FieldType/Page.html">eZ\Publish\Core\FieldType\Page</a>\Type</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Type</strong>        extends <a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getSettingsSchema">getSettingsSchema</a>()
+                    <p>Returns a schema for the settings expected by the FieldType</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_getSettingsSchema"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getValidatorConfigurationSchema">getValidatorConfigurationSchema</a>()
+                    <p>Returns a schema for the validator configuration expected by the FieldType</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_getValidatorConfigurationSchema"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/FieldType/ValidationError.html"><abbr title="eZ\Publish\SPI\FieldType\ValidationError">ValidationError</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_validate">validate</a>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition, <a href="../../../../../eZ/Publish/Core/FieldType/Value.html"><abbr title="eZ\Publish\Core\FieldType\Value">Value</abbr></a> $fieldValue)
+                    <p>Validates a field based on the validator configuration in the field definition</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_validate"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/FieldType/ValidationError.html"><abbr title="eZ\Publish\SPI\FieldType\ValidationError">ValidationError</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_validateValidatorConfiguration">validateValidatorConfiguration</a>(mixed $validatorConfiguration)
+                    <p>Validates the validatorConfiguration of a FieldDefinitionCreateStruct or FieldDefinitionUpdateStruct</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_validateValidatorConfiguration"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/FieldType/ValidationError.html"><abbr title="eZ\Publish\SPI\FieldType\ValidationError">ValidationError</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_validateFieldSettings">validateFieldSettings</a>(mixed $fieldSettings)
+                    <p>Validates the fieldSettings of a FieldDefinitionCreateStruct or FieldDefinitionUpdateStruct</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/Persistence/Content/FieldValue.html"><abbr title="eZ\Publish\SPI\Persistence\Content\FieldValue">FieldValue</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_toPersistenceValue">toPersistenceValue</a>(mixed $value)
+                    <p>Converts a $value to a persistence value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_fromPersistenceValue">fromPersistenceValue</a>(<a href="../../../../../eZ/Publish/SPI/Persistence/Content/FieldValue.html"><abbr title="eZ\Publish\SPI\Persistence\Content\FieldValue">FieldValue</abbr></a> $fieldValue)
+                    <p>Converts a persistence $fieldValue to a Value</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isSearchable">isSearchable</a>()
+                    <p>Indicates if the field type supports indexing and sort keys for searching</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_isSearchable"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isEmptyValue">isEmptyValue</a>(mixed $value)
+                    <p>Returns if the given $value is considered empty by the field type</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_isEmptyValue"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/Core/FieldType/Value.html"><abbr title="eZ\Publish\Core\FieldType\Value">Value</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_acceptValue">acceptValue</a>(mixed $inputValue)
+                    <p>Potentially builds and checks the type and structure of the $inputValue.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_acceptValue"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|<abbr title="eZ\Publish\Core\FieldType\hash">hash</abbr>|scalar|null
+                </td>
+                <td class="last">
+                    <a href="#method_fieldSettingsToHash">fieldSettingsToHash</a>(mixed $fieldSettings)
+                    <p>Converts the given $fieldSettings to a simple hash format</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_fieldSettingsToHash"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_fieldSettingsFromHash">fieldSettingsFromHash</a>(array|<abbr title="eZ\Publish\Core\FieldType\hash">hash</abbr>|scalar|null $fieldSettingsHash)
+                    <p>Converts the given $fieldSettingsHash to field settings of the type</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_fieldSettingsFromHash"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|<abbr title="eZ\Publish\Core\FieldType\hash">hash</abbr>|scalar|null
+                </td>
+                <td class="last">
+                    <a href="#method_validatorConfigurationToHash">validatorConfigurationToHash</a>(mixed $validatorConfiguration)
+                    <p>Converts the given $validatorConfiguration to a simple hash format</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_validatorConfigurationToHash"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_validatorConfigurationFromHash">validatorConfigurationFromHash</a>(array|<abbr title="eZ\Publish\Core\FieldType\hash">hash</abbr>|scalar|null $validatorConfigurationHash)
+                    <p>Converts the given $validatorConfigurationHash to a validator configuration of the type</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_validatorConfigurationFromHash"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../eZ/Publish/Core/FieldType/Page/Service.html"><abbr title="eZ\Publish\Core\FieldType\Page\Service">Service</abbr></a> $pageService)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getFieldTypeIdentifier">getFieldTypeIdentifier</a>()
+                    <p>Returns the field type identifier for this field type</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getEmptyValue">getEmptyValue</a>()
+                    <p>Returns the empty value for this field type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_fromHash">fromHash</a>(mixed $hash)
+                    <p>Converts an $hash to the Value defined by the field type</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_toHash">toHash</a>(mixed $value)
+                    <p>Converts the given $value into a plain hash format</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getName">getName</a>(mixed $value)
+                    <p>Returns a human readable string representation from the given $value</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getSettingsSchema">
+        <div class="location">in <a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_getSettingsSchema"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a> at line 67</div>
+        <code>            public            mixed
+    <strong>getSettingsSchema</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns a schema for the settings expected by the FieldType</p>
+        <p>Returns an arbitrary value, representing a schema for the settings of<br />
+ the FieldType.<br />
+<br />
+ Explanation: There are no possible generic schemas for defining settings<br />
+ input, which is why no schema for the return value of this method is<br />
+ defined. It is up to the implementer to define and document a schema for<br />
+ the return value and document it. In addition, it is necessary that all<br />
+ consumers of this interface (e.g. Public API, REST API, GUIs, ...)<br />
+ provide plugin mechanisms to hook adapters for the specific FieldType<br />
+ into. These adapters then need to be either shipped with the FieldType<br />
+ or need to be implemented by a third party. If there is no adapter<br />
+ available for a specific FieldType, it will not be usable with the<br />
+ consumer.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getValidatorConfigurationSchema">
+        <div class="location">in <a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_getValidatorConfigurationSchema"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a> at line 98</div>
+        <code>            public            mixed
+    <strong>getValidatorConfigurationSchema</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns a schema for the validator configuration expected by the FieldType</p>
+        <p>Returns an arbitrary value, representing a schema for the validator<br />
+ configuration of the FieldType.<br />
+<br />
+ Explanation: There are no possible generic schemas for defining settings<br />
+ input, which is why no schema for the return value of this method is<br />
+ defined. It is up to the implementer to define and document a schema for<br />
+ the return value and document it. In addition, it is necessary that all<br />
+ consumers of this interface (e.g. Public API, REST API, GUIs, ...)<br />
+ provide plugin mechanisms to hook adapters for the specific FieldType<br />
+ into. These adapters then need to be either shipped with the FieldType<br />
+ or need to be implemented by a third party. If there is no adapter<br />
+ available for a specific FieldType, it will not be usable with the<br />
+ consumer.<br />
+<br />
+ Best practice:<br />
+<br />
+ It is considered best practice to return a hash map, which contains<br />
+ rudimentary settings structures, like e.g. for the &quot;ezstring&quot; FieldType<br />
+<br />
+ &lt;code&gt;<br />
+  array(<br />
+      &#039;stringLength&#039; =&gt; array(<br />
+          &#039;minStringLength&#039; =&gt; array(<br />
+              &#039;type&#039;    =&gt; &#039;int&#039;,<br />
+              &#039;default&#039; =&gt; 0,<br />
+          ),<br />
+          &#039;maxStringLength&#039; =&gt; array(<br />
+              &#039;type&#039;    =&gt; &#039;int&#039;<br />
+              &#039;default&#039; =&gt; null,<br />
+          )<br />
+      ),<br />
+  );<br />
+ &lt;/code&gt;</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>FieldTypeInterface::getValidatorConfigurationSchema()</td>
+                <td>This implementation returns a three dimensional map containing for each validator configuration referenced by identifier a map of supported parameters which are defined by a type and a default value (see example). &lt;code&gt; array( &#039;stringLength&#039; =&gt; array( &#039;minStringLength&#039; =&gt; array( &#039;type&#039;    =&gt; &#039;int&#039;, &#039;default&#039; =&gt; 0, ), &#039;maxStringLength&#039; =&gt; array( &#039;type&#039;    =&gt; &#039;int&#039; &#039;default&#039; =&gt; null, ) ), ); &lt;/code&gt;</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_validate">
+        <div class="location">in <a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_validate"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a> at line 117</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/FieldType/ValidationError.html"><abbr title="eZ\Publish\SPI\FieldType\ValidationError">ValidationError</abbr></a>[]
+    <strong>validate</strong>(<a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition, <a href="../../../../../eZ/Publish/Core/FieldType/Value.html"><abbr title="eZ\Publish\Core\FieldType\Value">Value</abbr></a> $fieldValue)</code>
+    </h3>
+    <div class="details">
+        <p>Validates a field based on the validator configuration in the field definition</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a></td>
+                <td>$fieldDefinition</td>
+                <td>The field definition of the field</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/FieldType/Value.html"><abbr title="eZ\Publish\Core\FieldType\Value">Value</abbr></a></td>
+                <td>$fieldValue</td>
+                <td>The field for which an action is performed</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/FieldType/ValidationError.html"><abbr title="eZ\Publish\SPI\FieldType\ValidationError">ValidationError</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_validateValidatorConfiguration">
+        <div class="location">in <a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_validateValidatorConfiguration"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a> at line 133</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/FieldType/ValidationError.html"><abbr title="eZ\Publish\SPI\FieldType\ValidationError">ValidationError</abbr></a>[]
+    <strong>validateValidatorConfiguration</strong>(mixed $validatorConfiguration)</code>
+    </h3>
+    <div class="details">
+        <p>Validates the validatorConfiguration of a FieldDefinitionCreateStruct or FieldDefinitionUpdateStruct</p>
+        <p>This methods determines if the given $validatorConfiguration is<br />
+ structurally correct and complies to the validator configuration schema<br />
+ returned by {@link getValidatorConfigurationSchema()}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$validatorConfiguration</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/FieldType/ValidationError.html"><abbr title="eZ\Publish\SPI\FieldType\ValidationError">ValidationError</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_validateFieldSettings">
+        <div class="location">at line 60</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/FieldType/ValidationError.html"><abbr title="eZ\Publish\SPI\FieldType\ValidationError">ValidationError</abbr></a>[]
+    <strong>validateFieldSettings</strong>(mixed $fieldSettings)</code>
+    </h3>
+    <div class="details">
+        <p>Validates the fieldSettings of a FieldDefinitionCreateStruct or FieldDefinitionUpdateStruct</p>
+        <p>This methods determines if the given $fieldSettings are structurally<br />
+ correct and comply to the settings schema returned by {@link<br />
+ getSettingsSchema()}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$fieldSettings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/FieldType/ValidationError.html"><abbr title="eZ\Publish\SPI\FieldType\ValidationError">ValidationError</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toPersistenceValue">
+        <div class="location">at line 168</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/Persistence/Content/FieldValue.html"><abbr title="eZ\Publish\SPI\Persistence\Content\FieldValue">FieldValue</abbr></a>
+    <strong>toPersistenceValue</strong>(mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Converts a $value to a persistence value.</p>
+        <p>In this method the field type puts the data which is stored in the field of content in the repository<br />
+ into the property FieldValue::data. The format of $data is a primitive, an array (map) or an object, which<br />
+ is then canonically converted to e.g. json/xml structures by future storage engines without<br />
+ further conversions. For mapping the $data to the legacy database an appropriate Converter<br />
+ (implementing eZ\Publish\Core\Persistence\Legacy\FieldValue\Converter) has implemented for the field<br />
+ type. Note: $data should only hold data which is actually stored in the field. It must not<br />
+ hold data which is stored externally.<br />
+<br />
+ The $externalData property in the FieldValue is used for storing data externally by the<br />
+ FieldStorage interface method storeFieldData.<br />
+<br />
+ The FieldValuer::sortKey is build by the field type for using by sort operations.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value of the field type</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/FieldValue.html"><abbr title="eZ\Publish\SPI\Persistence\Content\FieldValue">FieldValue</abbr></a></td>
+            <td>the value processed by the storage engine</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fromPersistenceValue">
+        <div class="location">at line 151</div>
+        <code>            public            mixed
+    <strong>fromPersistenceValue</strong>(<a href="../../../../../eZ/Publish/SPI/Persistence/Content/FieldValue.html"><abbr title="eZ\Publish\SPI\Persistence\Content\FieldValue">FieldValue</abbr></a> $fieldValue)</code>
+    </h3>
+    <div class="details">
+        <p>Converts a persistence $fieldValue to a Value</p>
+        <p>This method builds a field type value from the $data and $externalData properties.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/SPI/Persistence/Content/FieldValue.html"><abbr title="eZ\Publish\SPI\Persistence\Content\FieldValue">FieldValue</abbr></a></td>
+                <td>$fieldValue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isSearchable">
+        <div class="location">in <a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_isSearchable"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a> at line 235</div>
+        <code>            public            boolean
+    <strong>isSearchable</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Indicates if the field type supports indexing and sort keys for searching</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isEmptyValue">
+        <div class="location">in <a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_isEmptyValue"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a> at line 251</div>
+        <code>            public            boolean
+    <strong>isEmptyValue</strong>(mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Returns if the given $value is considered empty by the field type</p>
+        <p>Usually, only the value returned by {@link getEmptyValue()} is<br />
+ considered empty. The given $value can be safely assumed to have already<br />
+ been processed by {@link acceptValue()}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_acceptValue">
+        <div class="location">in <a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_acceptValue"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a> at line 277</div>
+        <code>final            public            <a href="../../../../../eZ/Publish/Core/FieldType/Value.html"><abbr title="eZ\Publish\Core\FieldType\Value">Value</abbr></a>
+    <strong>acceptValue</strong>(mixed $inputValue)</code>
+    </h3>
+    <div class="details">
+        <p>Potentially builds and checks the type and structure of the $inputValue.</p>
+        <p>This method first inspects $inputValue and convert it into a dedicated<br />
+ value object.<br />
+<br />
+ After that, the value is checked for structural validity.<br />
+ Note that this does not include validation after the rules<br />
+ from validators, but only plausibility checks for the general data<br />
+ format.<br />
+<br />
+ Note that this method must also cope with the empty value for the field<br />
+ type as e.g. returned by {@link getEmptyValue()}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$inputValue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/Core/FieldType/Value.html"><abbr title="eZ\Publish\Core\FieldType\Value">Value</abbr></a></td>
+            <td>The potentially converted and structurally plausible value.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the parameter is not of the supported value sub type</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the value does not match the expected structure</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fieldSettingsToHash">
+        <div class="location">in <a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_fieldSettingsToHash"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a> at line 307</div>
+        <code>            public            array|<abbr title="eZ\Publish\Core\FieldType\hash">hash</abbr>|scalar|null
+    <strong>fieldSettingsToHash</strong>(mixed $fieldSettings)</code>
+    </h3>
+    <div class="details">
+        <p>Converts the given $fieldSettings to a simple hash format</p>
+        <p>See the class description for more details on a hash format.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$fieldSettings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|<abbr title="eZ\Publish\Core\FieldType\hash">hash</abbr>|scalar|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fieldSettingsFromHash">
+        <div class="location">in <a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_fieldSettingsFromHash"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a> at line 326</div>
+        <code>            public            mixed
+    <strong>fieldSettingsFromHash</strong>(array|<abbr title="eZ\Publish\Core\FieldType\hash">hash</abbr>|scalar|null $fieldSettingsHash)</code>
+    </h3>
+    <div class="details">
+        <p>Converts the given $fieldSettingsHash to field settings of the type</p>
+        <p>This is the reverse operation of {@link fieldSettingsToHash()}.<br />
+ See the class description for more details on a hash format.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array|<abbr title="eZ\Publish\Core\FieldType\hash">hash</abbr>|scalar|null</td>
+                <td>$fieldSettingsHash</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_validatorConfigurationToHash">
+        <div class="location">in <a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_validatorConfigurationToHash"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a> at line 342</div>
+        <code>            public            array|<abbr title="eZ\Publish\Core\FieldType\hash">hash</abbr>|scalar|null
+    <strong>validatorConfigurationToHash</strong>(mixed $validatorConfiguration)</code>
+    </h3>
+    <div class="details">
+        <p>Converts the given $validatorConfiguration to a simple hash format</p>
+        <p>See the class description for more details on a hash format.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$validatorConfiguration</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|<abbr title="eZ\Publish\Core\FieldType\hash">hash</abbr>|scalar|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_validatorConfigurationFromHash">
+        <div class="location">in <a href="../../../../../eZ/Publish/Core/FieldType/FieldType.html#method_validatorConfigurationFromHash"><abbr title="eZ\Publish\Core\FieldType\FieldType">FieldType</abbr></a> at line 360</div>
+        <code>            public            mixed
+    <strong>validatorConfigurationFromHash</strong>(array|<abbr title="eZ\Publish\Core\FieldType\hash">hash</abbr>|scalar|null $validatorConfigurationHash)</code>
+    </h3>
+    <div class="details">
+        <p>Converts the given $validatorConfigurationHash to a validator configuration of the type</p>
+        <p>See the class description for more details on a hash format.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array|<abbr title="eZ\Publish\Core\FieldType\hash">hash</abbr>|scalar|null</td>
+                <td>$validatorConfigurationHash</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 38</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../eZ/Publish/Core/FieldType/Page/Service.html"><abbr title="eZ\Publish\Core\FieldType\Page\Service">Service</abbr></a> $pageService)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/FieldType/Page/Service.html"><abbr title="eZ\Publish\Core\FieldType\Page\Service">Service</abbr></a></td>
+                <td>$pageService</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFieldTypeIdentifier">
+        <div class="location">at line 48</div>
+        <code>            public            string
+    <strong>getFieldTypeIdentifier</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the field type identifier for this field type</p>
+        <p>This identifier should be globally unique and the implementer of a<br />
+ FieldType must take care for the uniqueness. It is therefore recommended<br />
+ to prefix the field-type identifier by a unique string that identifies<br />
+ the implementer. A good identifier could for example take your companies main<br />
+ domain name as a prefix in reverse order.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getEmptyValue">
+        <div class="location">at line 107</div>
+        <code>            public            mixed
+    <strong>getEmptyValue</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the empty value for this field type.</p>
+        <p>This value will be used, if no value was provided for a field of this<br />
+ type and no default value was specified in the field definition. It is<br />
+ also used to determine that a user intentionally (or unintentionally) did not<br />
+ set a non-empty value.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fromHash">
+        <div class="location">at line 119</div>
+        <code>            public            mixed
+    <strong>fromHash</strong>(mixed $hash)</code>
+    </h3>
+    <div class="details">
+        <p>Converts an $hash to the Value defined by the field type</p>
+        <p>This is the reverse operation to {@link toHash()}. At least the hash<br />
+ format generated by {@link toHash()} must be converted in reverse.<br />
+ Additional formats might be supported in the rare case that this is<br />
+ necessary. See the class description for more details on a hash format.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$hash</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_toHash">
+        <div class="location">at line 135</div>
+        <code>            public            mixed
+    <strong>toHash</strong>(mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Converts the given $value into a plain hash format</p>
+        <p>Converts the given $value into a plain hash format, which can be used to<br />
+ transfer the value through plain text formats, e.g. XML, which do not<br />
+ support complex structures like objects. See the class level doc block<br />
+ for additional information. See the class description for more details on a hash format.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getName">
+        <div class="location">at line 221</div>
+        <code>            public            mixed
+    <strong>getName</strong>(mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a human readable string representation from the given $value</p>
+        <p>It will be used to generate content name and url alias if current field<br />
+ is designated to be used in the content name/urlAlias pattern.<br />
+<br />
+ The used $value can be assumed to be already accepted by {@link<br />
+ acceptValue()}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Persistence\Legacy\Content\Type\Update\Handler\DeferredLegacy | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Update/Handler.html">eZ\Publish\Core\Persistence\Legacy\Content\Type\Update\Handler</a>\DeferredLegacy</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>DeferredLegacy</strong>        extends <a href="../../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Update/Handler.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Update\Handler">Handler</abbr></a></p>
+
+            <div class="description">
+            <p>DeferredLegacy based type update handler</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_updateContentObjects">updateContentObjects</a>(<a href="../../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a> $fromType, <a href="../../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a> $toType)
+                    <p>Updates existing content objects from $fromType to $toType</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_deleteOldType">deleteOldType</a>(<a href="../../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a> $fromType)
+                    <p>Deletes $fromType and all of its field definitions</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_publishNewType">publishNewType</a>(<a href="../../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a> $toType, int $newStatus)
+                    <p>Publishes $toType to $newStatus</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway">Gateway</abbr></a> $contentTypeGateway)
+                    <p>Creates a new content type update handler</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_updateContentObjects">
+        <div class="location">at line 43</div>
+        <code>            public            void
+    <strong>updateContentObjects</strong>(<a href="../../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a> $fromType, <a href="../../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a> $toType)</code>
+    </h3>
+    <div class="details">
+        <p>Updates existing content objects from $fromType to $toType</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a></td>
+                <td>$fromType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a></td>
+                <td>$toType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteOldType">
+        <div class="location">at line 54</div>
+        <code>            public            void
+    <strong>deleteOldType</strong>(<a href="../../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a> $fromType)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes $fromType and all of its field definitions</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a></td>
+                <td>$fromType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_publishNewType">
+        <div class="location">at line 66</div>
+        <code>            public            void
+    <strong>publishNewType</strong>(<a href="../../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a> $toType, int $newStatus)</code>
+    </h3>
+    <div class="details">
+        <p>Publishes $toType to $newStatus</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../../../eZ/Publish/SPI/Persistence/Content/Type.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type">Type</abbr></a></td>
+                <td>$toType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$newStatus</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 30</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway">Gateway</abbr></a> $contentTypeGateway)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new content type update handler</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/Type/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway">Gateway</abbr></a></td>
+                <td>$contentTypeGateway</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

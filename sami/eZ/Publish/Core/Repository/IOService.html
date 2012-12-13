@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Repository\IOService | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../eZ/Publish/Core/Repository.html">eZ\Publish\Core\Repository</a>\IOService</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>IOService</strong>        implements
+        <a href="../../../../eZ/Publish/API/Repository/IOService.html"><abbr title="eZ\Publish\API\Repository\IOService">IOService</abbr></a>, <a href="../../../../eZ/Publish/Core/MVC/Legacy/LegacyKernelAware.html"><abbr title="eZ\Publish\Core\MVC\Legacy\LegacyKernelAware">LegacyKernelAware</abbr></a></p>
+
+            <div class="description">
+            <p>The io service for managing binary files</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository, <a href="../../../../eZ/Publish/SPI/IO/Handler.html"><abbr title="eZ\Publish\SPI\IO\Handler">Handler</abbr></a> $handler, array $settings = array())
+                    <p>Setups service with reference to repository object that created it &amp; corresponding handler</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_setLegacyKernel">setLegacyKernel</a>(<a href="../../../../eZ/Publish/Core/MVC/Legacy/Kernel.html"><abbr title="eZ\Publish\Core\MVC\Legacy\Kernel">Kernel</abbr></a> $legacyKernel)
+                    <p>Injects the legacy kernel instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFileCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFileCreateStruct">BinaryFileCreateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newBinaryCreateStructFromUploadedFile">newBinaryCreateStructFromUploadedFile</a>(array $uploadedFile)
+                    <p>Creates a BinaryFileCreateStruct object from the uploaded file $uploadedFile</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFileCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFileCreateStruct">BinaryFileCreateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newBinaryCreateStructFromLocalFile">newBinaryCreateStructFromLocalFile</a>(string $localFile)
+                    <p>Creates a BinaryFileCreateStruct object from $localFile</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFile.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFile">BinaryFile</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createBinaryFile">createBinaryFile</a>(<a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFileCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFileCreateStruct">BinaryFileCreateStruct</abbr></a> $binaryFileCreateStruct)
+                    <p>Creates a  binary file in the the repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteBinaryFile">deleteBinaryFile</a>(<a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFile.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFile">BinaryFile</abbr></a> $binaryFile)
+                    <p>Deletes the BinaryFile with $path</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFile.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFile">BinaryFile</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadBinaryFile">loadBinaryFile</a>(string $binaryFileid)
+                    <p>Loads the binary file with $id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\Core\Repository\resource">resource</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getFileInputStream">getFileInputStream</a>(<a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFile.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFile">BinaryFile</abbr></a> $binaryFile)
+                    <p>Returns a read (mode: rb) file resource to the binary file identified by $path</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getFileContents">getFileContents</a>(<a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFile.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFile">BinaryFile</abbr></a> $binaryFile)
+                    <p>Returns the content of the binary file</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 58</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository, <a href="../../../../eZ/Publish/SPI/IO/Handler.html"><abbr title="eZ\Publish\SPI\IO\Handler">Handler</abbr></a> $handler, array $settings = array())</code>
+    </h3>
+    <div class="details">
+        <p>Setups service with reference to repository object that created it &amp; corresponding handler</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a></td>
+                <td>$repository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/SPI/IO/Handler.html"><abbr title="eZ\Publish\SPI\IO\Handler">Handler</abbr></a></td>
+                <td>$handler</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$settings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setLegacyKernel">
+        <div class="location">at line 75</div>
+        <code>            public            void
+    <strong>setLegacyKernel</strong>(<a href="../../../../eZ/Publish/Core/MVC/Legacy/Kernel.html"><abbr title="eZ\Publish\Core\MVC\Legacy\Kernel">Kernel</abbr></a> $legacyKernel)</code>
+    </h3>
+    <div class="details">
+        <p>Injects the legacy kernel instance.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/Core/MVC/Legacy/Kernel.html"><abbr title="eZ\Publish\Core\MVC\Legacy\Kernel">Kernel</abbr></a></td>
+                <td>$legacyKernel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newBinaryCreateStructFromUploadedFile">
+        <div class="location">at line 99</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFileCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFileCreateStruct">BinaryFileCreateStruct</abbr></a>
+    <strong>newBinaryCreateStructFromUploadedFile</strong>(array $uploadedFile)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a BinaryFileCreateStruct object from the uploaded file $uploadedFile</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$uploadedFile</td>
+                <td>The $_POST hash of an uploaded file</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFileCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFileCreateStruct">BinaryFileCreateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>When given an invalid uploaded file</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newBinaryCreateStructFromLocalFile">
+        <div class="location">at line 130</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFileCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFileCreateStruct">BinaryFileCreateStruct</abbr></a>
+    <strong>newBinaryCreateStructFromLocalFile</strong>(string $localFile)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a BinaryFileCreateStruct object from $localFile</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$localFile</td>
+                <td>Path to local file</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFileCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFileCreateStruct">BinaryFileCreateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>When given a non existing / unreadable file</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createBinaryFile">
+        <div class="location">at line 159</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFile.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFile">BinaryFile</abbr></a>
+    <strong>createBinaryFile</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFileCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFileCreateStruct">BinaryFileCreateStruct</abbr></a> $binaryFileCreateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a  binary file in the the repository</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFileCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFileCreateStruct">BinaryFileCreateStruct</abbr></a></td>
+                <td>$binaryFileCreateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFile.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFile">BinaryFile</abbr></a></td>
+            <td>The created BinaryFile object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteBinaryFile">
+        <div class="location">at line 188</div>
+        <code>            public            
+    <strong>deleteBinaryFile</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFile.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFile">BinaryFile</abbr></a> $binaryFile)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes the BinaryFile with $path</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFile.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFile">BinaryFile</abbr></a></td>
+                <td>$binaryFile</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadBinaryFile">
+        <div class="location">at line 206</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFile.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFile">BinaryFile</abbr></a>
+    <strong>loadBinaryFile</strong>(string $binaryFileid)</code>
+    </h3>
+    <div class="details">
+        <p>Loads the binary file with $id</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$binaryFileid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFile.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFile">BinaryFile</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFileInputStream">
+        <div class="location">at line 224</div>
+        <code>            public            <abbr title="eZ\Publish\Core\Repository\resource">resource</abbr>
+    <strong>getFileInputStream</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFile.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFile">BinaryFile</abbr></a> $binaryFile)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a read (mode: rb) file resource to the binary file identified by $path</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFile.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFile">BinaryFile</abbr></a></td>
+                <td>$binaryFile</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\Core\Repository\resource">resource</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFileContents">
+        <div class="location">at line 240</div>
+        <code>            public            string
+    <strong>getFileContents</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFile.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFile">BinaryFile</abbr></a> $binaryFile)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the content of the binary file</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/IO/BinaryFile.html"><abbr title="eZ\Publish\API\Repository\Values\IO\BinaryFile">BinaryFile</abbr></a></td>
+                <td>$binaryFile</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

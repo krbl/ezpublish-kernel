@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Repository\Values\User\UserGroup | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../eZ/Publish/Core/Repository/Values/User.html">eZ\Publish\Core\Repository\Values\User</a>\UserGroup</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>UserGroup</strong>        extends <a href="../../../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a></p>
+
+            <div class="description">
+            <p>This class represents a user group</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getVersionInfo">getVersionInfo</a>()
+                    <p>Returns the VersionInfo for this version</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getFieldValue">getFieldValue</a>(string $fieldDefIdentifier, string $languageCode = null)
+                    <p>Returns a field value for the given value $version-&gt;fields[$fieldDefId][$languageCode] is an equivalent call if no language is given on a translatable field this method returns the value of the initial language of the version if present, otherwise null.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Relation.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Relation">Relation</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getRelations">getRelations</a>()
+                    <p>Returns the outgoing relations</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Field.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Field">Field</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getFields">getFields</a>()
+                    <p>This method returns the complete fields collection</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Field.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Field">Field</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getFieldsByLanguage">getFieldsByLanguage</a>(string $languageCode = null)
+                    <p>This method returns the fields for a given language and non translatable fields</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method___get">__get</a>(string $property)
+                    <p>Magic getter for retrieving convenience properties</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method___isset">__isset</a>(string $property)
+                    <p>Magic isset for signaling existence of convenience properties</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getVersionInfo">
+        <div class="location">at line 31</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a>
+    <strong>getVersionInfo</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the VersionInfo for this version</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFieldValue">
+        <div class="location">at line 48</div>
+        <code>            public            mixed
+    <strong>getFieldValue</strong>(string $fieldDefIdentifier, string $languageCode = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a field value for the given value $version-&gt;fields[$fieldDefId][$languageCode] is an equivalent call if no language is given on a translatable field this method returns the value of the initial language of the version if present, otherwise null.</p>
+        <p>On non translatable fields this method ignores the languageCode parameter.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$fieldDefIdentifier</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$languageCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>a primitive type or a field type Value object depending on the field type.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRelations">
+        <div class="location">at line 58</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Relation.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Relation">Relation</abbr></a>[]
+    <strong>getRelations</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the outgoing relations</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Relation.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Relation">Relation</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFields">
+        <div class="location">at line 68</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Field.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Field">Field</abbr></a>[]
+    <strong>getFields</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>This method returns the complete fields collection</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Field.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Field">Field</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFieldsByLanguage">
+        <div class="location">at line 82</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Field.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Field">Field</abbr></a>[]
+    <strong>getFieldsByLanguage</strong>(string $languageCode = null)</code>
+    </h3>
+    <div class="details">
+        <p>This method returns the fields for a given language and non translatable fields</p>
+        <p>If note set the initialLanguage of the content version is used.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$languageCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Field.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Field">Field</abbr></a>[]</td>
+            <td>with field identifier as keys</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___get">
+        <div class="location">at line 109</div>
+        <code>            public            mixed
+    <strong>__get</strong>(string $property)</code>
+    </h3>
+    <div class="details">
+        <p>Magic getter for retrieving convenience properties</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$property</td>
+                <td>The name of the property to retrieve</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___isset">
+        <div class="location">at line 147</div>
+        <code>            public            boolean
+    <strong>__isset</strong>(string $property)</code>
+    </h3>
+    <div class="details">
+        <p>Magic isset for signaling existence of convenience properties</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$property</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

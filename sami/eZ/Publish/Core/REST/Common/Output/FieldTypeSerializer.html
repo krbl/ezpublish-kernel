@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\REST\Common\Output\FieldTypeSerializer | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../eZ/Publish/Core/REST/Common/Output.html">eZ\Publish\Core\REST\Common\Output</a>\FieldTypeSerializer</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>FieldTypeSerializer</strong></p>
+
+            <div class="description">
+            <p>Serializes FieldType related data for REST output.</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../eZ/Publish/API/Repository/FieldTypeService.html"><abbr title="eZ\Publish\API\Repository\FieldTypeService">FieldTypeService</abbr></a> $fieldTypeService, <a href="../../../../../../eZ/Publish/Core/REST/Common/FieldTypeProcessorRegistry.html"><abbr title="eZ\Publish\Core\REST\Common\FieldTypeProcessorRegistry">FieldTypeProcessorRegistry</abbr></a> $fieldTypeProcessorRegistry)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_serializeFieldValue">serializeFieldValue</a>(<a href="../../../../../../eZ/Publish/Core/REST/Common/Output/Generator.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Generator">Generator</abbr></a> $generator, <a href="../../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType, <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Field.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Field">Field</abbr></a> $field)
+                    <p>Serializes the field value of $field through $generator</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_serializeFieldDefaultValue">serializeFieldDefaultValue</a>(<a href="../../../../../../eZ/Publish/Core/REST/Common/Output/Generator.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Generator">Generator</abbr></a> $generator, <a href="../../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition, mixed $defaultValue)
+                    <p>Serializes the $defaultValue for $fieldDefIdentifier through $generator</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_serializeFieldSettings">serializeFieldSettings</a>(<a href="../../../../../../eZ/Publish/Core/REST/Common/Output/Generator.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Generator">Generator</abbr></a> $generator, <a href="../../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition, mixed $settings)
+                    <p>Serializes $settings as fieldSettings for $fieldDefinition using $generator</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_serializeValidatorConfiguration">serializeValidatorConfiguration</a>(<a href="../../../../../../eZ/Publish/Core/REST/Common/Output/Generator.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Generator">Generator</abbr></a> $generator, <a href="../../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition, mixed $validatorConfiguration)
+                    <p>Serializes $validatorConfiguration for $fieldDefinition using $generator</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 41</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../eZ/Publish/API/Repository/FieldTypeService.html"><abbr title="eZ\Publish\API\Repository\FieldTypeService">FieldTypeService</abbr></a> $fieldTypeService, <a href="../../../../../../eZ/Publish/Core/REST/Common/FieldTypeProcessorRegistry.html"><abbr title="eZ\Publish\Core\REST\Common\FieldTypeProcessorRegistry">FieldTypeProcessorRegistry</abbr></a> $fieldTypeProcessorRegistry)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/FieldTypeService.html"><abbr title="eZ\Publish\API\Repository\FieldTypeService">FieldTypeService</abbr></a></td>
+                <td>$fieldTypeService</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/REST/Common/FieldTypeProcessorRegistry.html"><abbr title="eZ\Publish\Core\REST\Common\FieldTypeProcessorRegistry">FieldTypeProcessorRegistry</abbr></a></td>
+                <td>$fieldTypeProcessorRegistry</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_serializeFieldValue">
+        <div class="location">at line 54</div>
+        <code>            public            
+    <strong>serializeFieldValue</strong>(<a href="../../../../../../eZ/Publish/Core/REST/Common/Output/Generator.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Generator">Generator</abbr></a> $generator, <a href="../../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType, <a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Field.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Field">Field</abbr></a> $field)</code>
+    </h3>
+    <div class="details">
+        <p>Serializes the field value of $field through $generator</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/REST/Common/Output/Generator.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Generator">Generator</abbr></a></td>
+                <td>$generator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a></td>
+                <td>$contentType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/Values/Content/Field.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Field">Field</abbr></a></td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_serializeFieldDefaultValue">
+        <div class="location">at line 73</div>
+        <code>            public            
+    <strong>serializeFieldDefaultValue</strong>(<a href="../../../../../../eZ/Publish/Core/REST/Common/Output/Generator.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Generator">Generator</abbr></a> $generator, <a href="../../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition, mixed $defaultValue)</code>
+    </h3>
+    <div class="details">
+        <p>Serializes the $defaultValue for $fieldDefIdentifier through $generator</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/REST/Common/Output/Generator.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Generator">Generator</abbr></a></td>
+                <td>$generator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a></td>
+                <td>$fieldDefinition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$defaultValue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_serializeFieldSettings">
+        <div class="location">at line 91</div>
+        <code>            public            
+    <strong>serializeFieldSettings</strong>(<a href="../../../../../../eZ/Publish/Core/REST/Common/Output/Generator.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Generator">Generator</abbr></a> $generator, <a href="../../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition, mixed $settings)</code>
+    </h3>
+    <div class="details">
+        <p>Serializes $settings as fieldSettings for $fieldDefinition using $generator</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/REST/Common/Output/Generator.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Generator">Generator</abbr></a></td>
+                <td>$generator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a></td>
+                <td>$fieldDefinition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$settings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_serializeValidatorConfiguration">
+        <div class="location">at line 109</div>
+        <code>            public            
+    <strong>serializeValidatorConfiguration</strong>(<a href="../../../../../../eZ/Publish/Core/REST/Common/Output/Generator.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Generator">Generator</abbr></a> $generator, <a href="../../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a> $fieldDefinition, mixed $validatorConfiguration)</code>
+    </h3>
+    <div class="details">
+        <p>Serializes $validatorConfiguration for $fieldDefinition using $generator</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/REST/Common/Output/Generator.html"><abbr title="eZ\Publish\Core\REST\Common\Output\Generator">Generator</abbr></a></td>
+                <td>$generator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/Values/ContentType/FieldDefinition.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\FieldDefinition">FieldDefinition</abbr></a></td>
+                <td>$fieldDefinition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$validatorConfiguration</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

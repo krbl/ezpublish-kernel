@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator\Specifications | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion/Operator.html">eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator</a>\Specifications</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Specifications</strong></p>
+
+            <div class="description">
+            <p>This class is used by Criteria to describe which operators they support</p>
+            <p>Instances of this class are returned in an array by the {see Criterion::getSpecifications()} method</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>FORMAT_SINGLE</td>
+                <td class="last">
+                    <p><em>Criterion input type description constants.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FORMAT_ARRAY</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_INTEGER</td>
+                <td class="last">
+                    <p><em>Criterion input value type description constants.</em></p>
+                    <p>Used by {see getDescription()} to say which type of values an operator expects</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_STRING</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_BOOLEAN</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_operator">
+                                                            
+                </td>
+                <td>$operator</td>
+                <td class="last">Specified operator, as one of the Operator::* constants</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_valueFormat">
+                                                            
+                </td>
+                <td>$valueFormat</td>
+                <td class="last">Format supported for the Criterion value, either single (INPUT_TYPE_SINGLE) or multiple (INPUT_TYPE_ARRAY)</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_valueTypes">
+                                                            int
+                </td>
+                <td>$valueTypes</td>
+                <td class="last">Accepted values types, specifying what type of variables are accepted as a value</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_valueCount">
+                                                            int
+                </td>
+                <td>$valueCount</td>
+                <td class="last">Limitation on the number of items as the value</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $operator, string $valueFormat, int $valueTypes = null, int $valueCount = null)
+                    <p>Creates a new Specifications object</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 74</div>
+        <code>            public            
+    <strong>__construct</strong>(string $operator, string $valueFormat, int $valueTypes = null, int $valueCount = null)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new Specifications object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td>The specified operator, as one of the Operator::* constants</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$valueFormat</td>
+                <td>The accepted value format, either {see self::FORMAT_ARRAY} or {see self::FORMAT_SINGLE}</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$valueTypes</td>
+                <td>The supported value types, as a bit field of the {see self::TYPES_*} constants</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$valueCount</td>
+                <td>The required number of values, when the accepted format is {see self::FORMAT_ARRAY}</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

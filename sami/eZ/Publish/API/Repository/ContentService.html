@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\API\Repository\ContentService | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../../../eZ/Publish/API/Repository.html">eZ\Publish\API\Repository</a>\ContentService</h1>
+    </div>
+        <div class="content">
+                <p>interface    <strong>ContentService</strong></p>
+
+            <div class="description">
+            <p>This class provides service methods for managing content</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentInfo">loadContentInfo</a>(int $contentId)
+                    <p>Loads a content info object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentInfoByRemoteId">loadContentInfoByRemoteId</a>(string $remoteId)
+                    <p>Loads a content info object for the given remoteId.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadVersionInfo">loadVersionInfo</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo, int $versionNo = null)
+                    <p>Loads a version info of the given content object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadVersionInfoById">loadVersionInfoById</a>(int $contentId, int $versionNo = null)
+                    <p>Loads a version info of the given content object id.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentByContentInfo">loadContentByContentInfo</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo, array $languages = null, int $versionNo = null)
+                    <p>Loads content in a version for the given content info object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentByVersionInfo">loadContentByVersionInfo</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo, array $languages = null)
+                    <p>Loads content in the version given by version info.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadContent">loadContent</a>(int $contentId, array $languages = null, int $versionNo = null)
+                    <p>Loads content in a version of the given content object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentByRemoteId">loadContentByRemoteId</a>(string $remoteId, array $languages = null, int $versionNo = null)
+                    <p>Loads content in a version for the content object reference by the given remote id.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createContent">createContent</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentCreateStruct">ContentCreateStruct</abbr></a> $contentCreateStruct, array $locationCreateStructs = array())
+                    <p>Creates a new content draft assigned to the authenticated user.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateContentMetadata">updateContentMetadata</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo, <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentMetadataUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentMetadataUpdateStruct">ContentMetadataUpdateStruct</abbr></a> $contentMetadataUpdateStruct)
+                    <p>Updates the metadata.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteContent">deleteContent</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo)
+                    <p>Deletes a content object including all its versions and locations including their subtrees.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createContentDraft">createContentDraft</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo, <a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo = null, <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user = null)
+                    <p>Creates a draft from a published or archived version.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadContentDrafts">loadContentDrafts</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user = null)
+                    <p>Loads drafts for a user.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_translateVersion">translateVersion</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationInfo">TranslationInfo</abbr></a> $translationInfo, <a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationValues.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationValues">TranslationValues</abbr></a> $translationValues, <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user = null)
+                    <p>Translate a version</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateContent">updateContent</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo, <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentUpdateStruct">ContentUpdateStruct</abbr></a> $contentUpdateStruct)
+                    <p>Updates the fields of a draft.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_publishVersion">publishVersion</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo)
+                    <p>Publishes a content version</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteVersion">deleteVersion</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo)
+                    <p>removes the given version</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadVersions">loadVersions</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo)
+                    <p>Loads all versions for the given content</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_copyContent">copyContent</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo, <a href="../../../../eZ/Publish/API/Repository/Values/Content/LocationCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\LocationCreateStruct">LocationCreateStruct</abbr></a> $destinationLocationCreateStruct, <a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo = null)
+                    <p>Copies the content to a new location.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Relation.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Relation">Relation</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadRelations">loadRelations</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo)
+                    <p>Loads all outgoing relations for the given version</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Relation.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Relation">Relation</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadReverseRelations">loadReverseRelations</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo)
+                    <p>Loads all incoming relations for a content object.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Relation.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Relation">Relation</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_addRelation">addRelation</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $sourceVersion, <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $destinationContent)
+                    <p>Adds a relation of type common.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteRelation">deleteRelation</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $sourceVersion, <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $destinationContent)
+                    <p>Removes a relation of type COMMON from a draft.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addTranslationInfo">addTranslationInfo</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationInfo">TranslationInfo</abbr></a> $translationInfo)
+                    <p>Adds translation information to the content object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationInfo">TranslationInfo</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadTranslationInfos">loadTranslationInfos</a>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo, array $filter = array())
+                    <p>lists the translations done on this content object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentCreateStruct">ContentCreateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newContentCreateStruct">newContentCreateStruct</a>(<a href="../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType, string $mainLanguageCode)
+                    <p>Instantiates a new content create struct object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentMetadataUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentMetadataUpdateStruct">ContentMetadataUpdateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newContentMetadataUpdateStruct">newContentMetadataUpdateStruct</a>()
+                    <p>Instantiates a new content meta data update struct</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentUpdateStruct">ContentUpdateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newContentUpdateStruct">newContentUpdateStruct</a>()
+                    <p>Instantiates a new content update struct</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationInfo">TranslationInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newTranslationInfo">newTranslationInfo</a>()
+                    <p>Instantiates a new TranslationInfo object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationValues.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationValues">TranslationValues</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newTranslationValues">newTranslationValues</a>()
+                    <p>Instantiates a Translation object</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_loadContentInfo">
+        <div class="location">at line 45</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a>
+    <strong>loadContentInfo</strong>(int $contentId)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a content info object.</p>
+        <p>To load fields use loadContent</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to read the content</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>- if the content with the given id does not exist</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentInfoByRemoteId">
+        <div class="location">at line 59</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a>
+    <strong>loadContentInfoByRemoteId</strong>(string $remoteId)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a content info object for the given remoteId.</p>
+        <p>To load fields use loadContent</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$remoteId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to read the content</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>- if the content with the given remote id does not exist</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadVersionInfo">
+        <div class="location">at line 74</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a>
+    <strong>loadVersionInfo</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo, int $versionNo = null)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a version info of the given content object.</p>
+        <p>If no version number is given, the method returns the current version</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a></td>
+                <td>$contentInfo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$versionNo</td>
+                <td>the version number. If not given the current version is returned.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>- if the version with the given number does not exist</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to load this version</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadVersionInfoById">
+        <div class="location">at line 89</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a>
+    <strong>loadVersionInfoById</strong>(int $contentId, int $versionNo = null)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a version info of the given content object id.</p>
+        <p>If no version number is given, the method returns the current version</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$versionNo</td>
+                <td>the version number. If not given the current version is returned.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>- if the version with the given number does not exist</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to load this version</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentByContentInfo">
+        <div class="location">at line 105</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+    <strong>loadContentByContentInfo</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo, array $languages = null, int $versionNo = null)</code>
+    </h3>
+    <div class="details">
+        <p>Loads content in a version for the given content info object.</p>
+        <p>If no version number is given, the method returns the current version</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a></td>
+                <td>$contentInfo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$languages</td>
+                <td>A language filter for fields. If not given all languages are returned</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$versionNo</td>
+                <td>the version number. If not given the current version is returned.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>- if version with the given number does not exist</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to load this version</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentByVersionInfo">
+        <div class="location">at line 117</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+    <strong>loadContentByVersionInfo</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo, array $languages = null)</code>
+    </h3>
+    <div class="details">
+        <p>Loads content in the version given by version info.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a></td>
+                <td>$versionInfo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$languages</td>
+                <td>A language filter for fields. If not given all languages are returned</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to load this version</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContent">
+        <div class="location">at line 133</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+    <strong>loadContent</strong>(int $contentId, array $languages = null, int $versionNo = null)</code>
+    </h3>
+    <div class="details">
+        <p>Loads content in a version of the given content object.</p>
+        <p>If no version number is given, the method returns the current version</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$contentId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$languages</td>
+                <td>A language filter for fields. If not given all languages are returned</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$versionNo</td>
+                <td>the version number. If not given the current version is returned.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if the content or version with the given id and languages does not exist</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to load this version</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentByRemoteId">
+        <div class="location">at line 149</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+    <strong>loadContentByRemoteId</strong>(string $remoteId, array $languages = null, int $versionNo = null)</code>
+    </h3>
+    <div class="details">
+        <p>Loads content in a version for the content object reference by the given remote id.</p>
+        <p>If no version is given, the method returns the current version</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$remoteId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$languages</td>
+                <td>A language filter for fields. If not given all languages are returned</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$versionNo</td>
+                <td>the version number. If not given the current version is returned.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>- if the content or version with the given remote id does not exist</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to load this version</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createContent">
+        <div class="location">at line 173</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+    <strong>createContent</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentCreateStruct">ContentCreateStruct</abbr></a> $contentCreateStruct, array $locationCreateStructs = array())</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new content draft assigned to the authenticated user.</p>
+        <p>If a different userId is given in $contentCreateStruct it is assigned to the given user<br />
+ but this required special rights for the authenticated user<br />
+ (this is useful for content staging where the transfer process does not<br />
+ have to authenticate with the user which created the content object in the source server).<br />
+ The user has to publish the draft if it should be visible.<br />
+ In 4.x at least one location has to be provided in the location creation array.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentCreateStruct">ContentCreateStruct</abbr></a></td>
+                <td>$contentCreateStruct</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$locationCreateStructs</td>
+                <td>an array of {@link \eZ\Publish\API\Repository\Values\Content\LocationCreateStruct} for each location parent under which a location should be created for the content</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a></td>
+            <td>- the newly created content draft</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to create the content in the given location</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if there is a provided remoteId which exists in the system or there is no location provided (4.x) or multiple locations are under the same parent or if the a field value is not accepted by the field type</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/ContentFieldValidationException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\ContentFieldValidationException">ContentFieldValidationException</abbr></a></td>
+                <td>if a field in the $contentCreateStruct is not valid</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/ContentValidationException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\ContentValidationException">ContentValidationException</abbr></a></td>
+                <td>if a required field is missing or is set to an empty value</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateContentMetadata">
+        <div class="location">at line 188</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+    <strong>updateContentMetadata</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo, <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentMetadataUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentMetadataUpdateStruct">ContentMetadataUpdateStruct</abbr></a> $contentMetadataUpdateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the metadata.</p>
+        <p>(see {@link ContentMetadataUpdateStruct}) of a content object - to update fields use updateContent</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a></td>
+                <td>$contentInfo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentMetadataUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentMetadataUpdateStruct">ContentMetadataUpdateStruct</abbr></a></td>
+                <td>$contentMetadataUpdateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a></td>
+            <td>the content with the updated attributes</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to update the content meta data</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the remoteId in $contentMetadataUpdateStruct is set but already exists</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteContent">
+        <div class="location">at line 197</div>
+        <code>            public            
+    <strong>deleteContent</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes a content object including all its versions and locations including their subtrees.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a></td>
+                <td>$contentInfo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to delete the content (in one of the locations of the given content object)</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createContentDraft">
+        <div class="location">at line 214</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+    <strong>createContentDraft</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo, <a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo = null, <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user = null)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a draft from a published or archived version.</p>
+        <p>If no version is given, the current published version is used.<br />
+ 4.x: The draft is created with the initialLanguage code of the source version or if not present with the main language.<br />
+ It can be changed on updating the version.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a></td>
+                <td>$contentInfo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a></td>
+                <td>$versionInfo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+                <td>$user</td>
+                <td>if set given user is used to create the draft - otherwise the current user is used</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a></td>
+            <td>- the newly created content draft</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to create the draft</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadContentDrafts">
+        <div class="location">at line 227</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a>[]
+    <strong>loadContentDrafts</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user = null)</code>
+    </h3>
+    <div class="details">
+        <p>Loads drafts for a user.</p>
+        <p>If no user is given the drafts for the authenticated user a returned</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a>[]</td>
+            <td>the drafts ({@link VersionInfo}) owned by the given user</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to load the draft list</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_translateVersion">
+        <div class="location">at line 249</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+    <strong>translateVersion</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationInfo">TranslationInfo</abbr></a> $translationInfo, <a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationValues.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationValues">TranslationValues</abbr></a> $translationValues, <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user = null)</code>
+    </h3>
+    <div class="details">
+        <p>Translate a version</p>
+        <p>updates the destination version given in $translationInfo with the provided translated fields in $translationValues</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationInfo">TranslationInfo</abbr></a></td>
+                <td>$translationInfo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationValues.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationValues">TranslationValues</abbr></a></td>
+                <td>$translationValues</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+                <td>$user</td>
+                <td>If set, this user is taken as modifier of the version</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a></td>
+            <td>the content draft with the translated fields</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to update this version</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>if the given destiantioon version is not a draft</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/ContentValidationException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\ContentValidationException">ContentValidationException</abbr></a></td>
+                <td>if a required field is set to an empty value</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/ContentFieldValidationException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\ContentFieldValidationException">ContentFieldValidationException</abbr></a></td>
+                <td>if a field in the $translationValues is not valid</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateContent">
+        <div class="location">at line 265</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+    <strong>updateContent</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo, <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentUpdateStruct">ContentUpdateStruct</abbr></a> $contentUpdateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the fields of a draft.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a></td>
+                <td>$versionInfo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentUpdateStruct">ContentUpdateStruct</abbr></a></td>
+                <td>$contentUpdateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a></td>
+            <td>the content draft with the updated fields</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to update this version</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>if the version is not a draft</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/ContentFieldValidationException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\ContentFieldValidationException">ContentFieldValidationException</abbr></a></td>
+                <td>if a field in the $contentUpdateStruct is not valid</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/ContentValidationException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\ContentValidationException">ContentValidationException</abbr></a></td>
+                <td>if a required field is set to an empty value</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if a field value is not accepted by the field type</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_publishVersion">
+        <div class="location">at line 277</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+    <strong>publishVersion</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo)</code>
+    </h3>
+    <div class="details">
+        <p>Publishes a content version</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a></td>
+                <td>$versionInfo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to publish this version</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>if the version is not a draft</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteVersion">
+        <div class="location">at line 287</div>
+        <code>            public            
+    <strong>deleteVersion</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo)</code>
+    </h3>
+    <div class="details">
+        <p>removes the given version</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a></td>
+                <td>$versionInfo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>if the version is in state published</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to remove this version</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadVersions">
+        <div class="location">at line 298</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a>[]
+    <strong>loadVersions</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo)</code>
+    </h3>
+    <div class="details">
+        <p>Loads all versions for the given content</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a></td>
+                <td>$contentInfo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a>[]</td>
+            <td>an array of {@link \eZ\Publish\API\Repository\Values\Content\VersionInfo} sorted by creation date</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to list versions</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_copyContent">
+        <div class="location">at line 312</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+    <strong>copyContent</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo, <a href="../../../../eZ/Publish/API/Repository/Values/Content/LocationCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\LocationCreateStruct">LocationCreateStruct</abbr></a> $destinationLocationCreateStruct, <a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo = null)</code>
+    </h3>
+    <div class="details">
+        <p>Copies the content to a new location.</p>
+        <p>If no version is given,<br />
+ all versions are copied, otherwise only the given version.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a></td>
+                <td>$contentInfo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/LocationCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\LocationCreateStruct">LocationCreateStruct</abbr></a></td>
+                <td>$destinationLocationCreateStruct</td>
+                <td>the target location where the content is copied to</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a></td>
+                <td>$versionInfo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to copy the content to the given location</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadRelations">
+        <div class="location">at line 323</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Relation.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Relation">Relation</abbr></a>[]
+    <strong>loadRelations</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $versionInfo)</code>
+    </h3>
+    <div class="details">
+        <p>Loads all outgoing relations for the given version</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a></td>
+                <td>$versionInfo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Relation.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Relation">Relation</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to read this version</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadReverseRelations">
+        <div class="location">at line 336</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Relation.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Relation">Relation</abbr></a>[]
+    <strong>loadReverseRelations</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo)</code>
+    </h3>
+    <div class="details">
+        <p>Loads all incoming relations for a content object.</p>
+        <p>The relations come only from published versions of the source content objects</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a></td>
+                <td>$contentInfo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Relation.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Relation">Relation</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to read this version</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addRelation">
+        <div class="location">at line 352</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Relation.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Relation">Relation</abbr></a>
+    <strong>addRelation</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $sourceVersion, <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $destinationContent)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a relation of type common.</p>
+        <p>The source of the relation is the content and version<br />
+ referenced by $versionInfo.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a></td>
+                <td>$sourceVersion</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a></td>
+                <td>$destinationContent</td>
+                <td>the destination of the relation</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Relation.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Relation">Relation</abbr></a></td>
+            <td>the newly created relation</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed to edit this version</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>if the version is not a draft</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteRelation">
+        <div class="location">at line 364</div>
+        <code>            public            
+    <strong>deleteRelation</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a> $sourceVersion, <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $destinationContent)</code>
+    </h3>
+    <div class="details">
+        <p>Removes a relation of type COMMON from a draft.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/VersionInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\VersionInfo">VersionInfo</abbr></a></td>
+                <td>$sourceVersion</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a></td>
+                <td>$destinationContent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed edit this version</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>if the version is not a draft</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if there is no relation of type COMMON for the given destination</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addTranslationInfo">
+        <div class="location">at line 377</div>
+        <code>            public            
+    <strong>addTranslationInfo</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationInfo">TranslationInfo</abbr></a> $translationInfo)</code>
+    </h3>
+    <div class="details">
+        <p>Adds translation information to the content object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationInfo">TranslationInfo</abbr></a></td>
+                <td>$translationInfo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed add a translation info</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadTranslationInfos">
+        <div class="location">at line 393</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationInfo">TranslationInfo</abbr></a>[]
+    <strong>loadTranslationInfos</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a> $contentInfo, array $filter = array())</code>
+    </h3>
+    <div class="details">
+        <p>lists the translations done on this content object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentInfo">ContentInfo</abbr></a></td>
+                <td>$contentInfo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$filter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationInfo">TranslationInfo</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the user is not allowed read translation infos</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newContentCreateStruct">
+        <div class="location">at line 403</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentCreateStruct">ContentCreateStruct</abbr></a>
+    <strong>newContentCreateStruct</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType, string $mainLanguageCode)</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates a new content create struct object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a></td>
+                <td>$contentType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$mainLanguageCode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentCreateStruct">ContentCreateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newContentMetadataUpdateStruct">
+        <div class="location">at line 410</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentMetadataUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentMetadataUpdateStruct">ContentMetadataUpdateStruct</abbr></a>
+    <strong>newContentMetadataUpdateStruct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates a new content meta data update struct</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentMetadataUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentMetadataUpdateStruct">ContentMetadataUpdateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newContentUpdateStruct">
+        <div class="location">at line 416</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentUpdateStruct">ContentUpdateStruct</abbr></a>
+    <strong>newContentUpdateStruct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates a new content update struct</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/ContentUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\Content\ContentUpdateStruct">ContentUpdateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newTranslationInfo">
+        <div class="location">at line 422</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationInfo">TranslationInfo</abbr></a>
+    <strong>newTranslationInfo</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates a new TranslationInfo object</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationInfo.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationInfo">TranslationInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newTranslationValues">
+        <div class="location">at line 428</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationValues.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationValues">TranslationValues</abbr></a>
+    <strong>newTranslationValues</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Instantiates a Translation object</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/TranslationValues.html"><abbr title="eZ\Publish\API\Repository\Values\Content\TranslationValues">TranslationValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

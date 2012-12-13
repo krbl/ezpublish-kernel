@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\IO\LegacyHandler | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../eZ/Publish/Core/IO.html">eZ\Publish\Core\IO</a>\LegacyHandler</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>LegacyHandler</strong>        implements
+        <a href="../../../../eZ/Publish/SPI/IO/Handler.html"><abbr title="eZ\Publish\SPI\IO\Handler">Handler</abbr></a></p>
+
+            <div class="description">
+            <p>Legacy Io/Storage handler, based on eZ Cluster</p>
+            <p>Due to the legacy API, this handler has a few limitations:<br />
+ - ctime is not really supported, and will always have the same value as mtime<br />
+ - mtime can not be modified, and will always automatically be set depending on the server time upon each write operation</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../eZ/Publish/Core/MVC/Legacy/Kernel.html"><abbr title="eZ\Publish\Core\MVC\Legacy\Kernel">Kernel</abbr></a> $legacyKernel)
+                    <p>Created Legacy handler instance</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/SPI/IO/BinaryFile.html"><abbr title="eZ\Publish\SPI\IO\BinaryFile">BinaryFile</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(<a href="../../../../eZ/Publish/SPI/IO/BinaryFileCreateStruct.html"><abbr title="eZ\Publish\SPI\IO\BinaryFileCreateStruct">BinaryFileCreateStruct</abbr></a> $createFilestruct)
+                    <p>Creates and stores a new BinaryFile based on the BinaryFileCreateStruct $file</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(string $path)
+                    <p>Deletes the existing BinaryFile with path $path</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/SPI/IO/BinaryFile.html"><abbr title="eZ\Publish\SPI\IO\BinaryFile">BinaryFile</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_update">update</a>(string $path, <a href="../../../../eZ/Publish/SPI/IO/BinaryFileUpdateStruct.html"><abbr title="eZ\Publish\SPI\IO\BinaryFileUpdateStruct">BinaryFileUpdateStruct</abbr></a> $updateFileStruct)
+                    <p>Updates the file identified by $path with data from $updateFile</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_exists">exists</a>(string $path)
+                    <p>Checks if the BinaryFile with path $path exists</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/SPI/IO/BinaryFile.html"><abbr title="eZ\Publish\SPI\IO\BinaryFile">BinaryFile</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_load">load</a>(string $path)
+                    <p>Loads the BinaryFile identified by $path</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="eZ\Publish\Core\IO\resource">resource</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getFileResource">getFileResource</a>(string $path)
+                    <p>Returns a file resource to the BinaryFile identified by $path</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getFileContents">getFileContents</a>(string $path)
+                    <p>Returns the contents of the BinaryFile identified by $path</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 55</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../eZ/Publish/Core/MVC/Legacy/Kernel.html"><abbr title="eZ\Publish\Core\MVC\Legacy\Kernel">Kernel</abbr></a> $legacyKernel)</code>
+    </h3>
+    <div class="details">
+        <p>Created Legacy handler instance</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/Core/MVC/Legacy/Kernel.html"><abbr title="eZ\Publish\Core\MVC\Legacy\Kernel">Kernel</abbr></a></td>
+                <td>$legacyKernel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">at line 69</div>
+        <code>            public            <a href="../../../../eZ/Publish/SPI/IO/BinaryFile.html"><abbr title="eZ\Publish\SPI\IO\BinaryFile">BinaryFile</abbr></a>
+    <strong>create</strong>(<a href="../../../../eZ/Publish/SPI/IO/BinaryFileCreateStruct.html"><abbr title="eZ\Publish\SPI\IO\BinaryFileCreateStruct">BinaryFileCreateStruct</abbr></a> $createFilestruct)</code>
+    </h3>
+    <div class="details">
+        <p>Creates and stores a new BinaryFile based on the BinaryFileCreateStruct $file</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/SPI/IO/BinaryFileCreateStruct.html"><abbr title="eZ\Publish\SPI\IO\BinaryFileCreateStruct">BinaryFileCreateStruct</abbr></a></td>
+                <td>$createFilestruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/SPI/IO/BinaryFile.html"><abbr title="eZ\Publish\SPI\IO\BinaryFile">BinaryFile</abbr></a></td>
+            <td>The newly created BinaryFile object</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If the target path already exists</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 105</div>
+        <code>            public            
+    <strong>delete</strong>(string $path)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes the existing BinaryFile with path $path</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If the file doesn&#039;t exist</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_update">
+        <div class="location">at line 133</div>
+        <code>            public            <a href="../../../../eZ/Publish/SPI/IO/BinaryFile.html"><abbr title="eZ\Publish\SPI\IO\BinaryFile">BinaryFile</abbr></a>
+    <strong>update</strong>(string $path, <a href="../../../../eZ/Publish/SPI/IO/BinaryFileUpdateStruct.html"><abbr title="eZ\Publish\SPI\IO\BinaryFileUpdateStruct">BinaryFileUpdateStruct</abbr></a> $updateFileStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the file identified by $path with data from $updateFile</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/SPI/IO/BinaryFileUpdateStruct.html"><abbr title="eZ\Publish\SPI\IO\BinaryFileUpdateStruct">BinaryFileUpdateStruct</abbr></a></td>
+                <td>$updateFileStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/SPI/IO/BinaryFile.html"><abbr title="eZ\Publish\SPI\IO\BinaryFile">BinaryFile</abbr></a></td>
+            <td>The updated BinaryFile</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If the source path doesn&#039;t exist</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If the target path already exists</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_exists">
+        <div class="location">at line 187</div>
+        <code>            public            boolean
+    <strong>exists</strong>(string $path)</code>
+    </h3>
+    <div class="details">
+        <p>Checks if the BinaryFile with path $path exists</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_load">
+        <div class="location">at line 208</div>
+        <code>            public            <a href="../../../../eZ/Publish/SPI/IO/BinaryFile.html"><abbr title="eZ\Publish\SPI\IO\BinaryFile">BinaryFile</abbr></a>
+    <strong>load</strong>(string $path)</code>
+    </h3>
+    <div class="details">
+        <p>Loads the BinaryFile identified by $path</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/SPI/IO/BinaryFile.html"><abbr title="eZ\Publish\SPI\IO\BinaryFile">BinaryFile</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If no file identified by $path exists</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFileResource">
+        <div class="location">at line 258</div>
+        <code>            public            <abbr title="eZ\Publish\Core\IO\resource">resource</abbr>
+    <strong>getFileResource</strong>(string $path)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a file resource to the BinaryFile identified by $path</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="eZ\Publish\Core\IO\resource">resource</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>If no file identified by $path exists</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFileContents">
+        <div class="location">at line 272</div>
+        <code>            public            string
+    <strong>getFileContents</strong>(string $path)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the contents of the BinaryFile identified by $path</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if the file couldn&#039;t be found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

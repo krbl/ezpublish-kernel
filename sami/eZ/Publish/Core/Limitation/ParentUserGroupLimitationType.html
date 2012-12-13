@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Limitation\ParentUserGroupLimitationType | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../eZ/Publish/Core/Limitation.html">eZ\Publish\Core\Limitation</a>\ParentUserGroupLimitationType</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ParentUserGroupLimitationType</strong>        implements
+        <a href="../../../../eZ/Publish/SPI/Limitation/Type.html"><abbr title="eZ\Publish\SPI\Limitation\Type">Type</abbr></a></p>
+
+            <div class="description">
+            <p>ParentUserGroupLimitation is a Content limitation</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_acceptValue">acceptValue</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation">Limitation</abbr></a> $limitationValue, <a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository)
+                    <p>Accepts a Limitation value</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation">Limitation</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_buildValue">buildValue</a>(array $limitationValues)
+                    <p>Create the Limitation Value</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_evaluate">evaluate</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation">Limitation</abbr></a> $value, <a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository, <a href="../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a> $object, <a href="../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a> $target = null)
+                    <p>Evaluate permission against content and placement</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/CriterionInterface.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\CriterionInterface">CriterionInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getCriterion">getCriterion</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation">Limitation</abbr></a> $value, <a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository)
+                    <p>Returns Criterion for use in find() query</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed[]|int
+                </td>
+                <td class="last">
+                    <a href="#method_valueSchema">valueSchema</a>(<a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository)
+                    <p>Returns info on valid $limitationValues</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_acceptValue">
+        <div class="location">at line 40</div>
+        <code>            public            boolean
+    <strong>acceptValue</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation">Limitation</abbr></a> $limitationValue, <a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository)</code>
+    </h3>
+    <div class="details">
+        <p>Accepts a Limitation value</p>
+        <p>Makes sure LimitationValue object is of correct type and that -&gt;limitationValues<br />
+ is valid according to valueSchema().</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation">Limitation</abbr></a></td>
+                <td>$limitationValue</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a></td>
+                <td>$repository</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildValue">
+        <div class="location">at line 52</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation">Limitation</abbr></a>
+    <strong>buildValue</strong>(array $limitationValues)</code>
+    </h3>
+    <div class="details">
+        <p>Create the Limitation Value</p>
+        <p>The is the api to create values as Limitation type needs value knowledge anyway in acceptValue,<br />
+ the reverse relation is provided by means of identifier lookup (Value has identifier, and so does RoleService).</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$limitationValues</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation">Limitation</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_evaluate">
+        <div class="location">at line 76</div>
+        <code>            public            boolean
+    <strong>evaluate</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation">Limitation</abbr></a> $value, <a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository, <a href="../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a> $object, <a href="../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a> $target = null)</code>
+    </h3>
+    <div class="details">
+        <p>Evaluate permission against content and placement</p>
+        <p>NOTE: Repository is provided because not everything is available via the value object(s),<br />
+ but use of repository in limitation functions should be avoided for performance reasons<br />
+ if possible, especially when using un-cached parts of the api.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation">Limitation</abbr></a></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a></td>
+                <td>$repository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a></td>
+                <td>$object</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/ValueObject.html"><abbr title="eZ\Publish\API\Repository\Values\ValueObject">ValueObject</abbr></a></td>
+                <td>$target</td>
+                <td>The location, parent or &quot;assignment&quot; value object</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If any of the arguments are invalid Example: If LimitationValue is instance of ContentTypeLimitationValue, and Type is SectionLimitationType.</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/BadStateException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\BadStateException">BadStateException</abbr></a></td>
+                <td>If value of the LimitationValue is unsupported Example if OwnerLimitationValue-&gt;limitationValues[0] is not one of: [ 1,  2 ]</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCriterion">
+        <div class="location">at line 130</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/CriterionInterface.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\CriterionInterface">CriterionInterface</abbr></a>
+    <strong>getCriterion</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation">Limitation</abbr></a> $value, <a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository)</code>
+    </h3>
+    <div class="details">
+        <p>Returns Criterion for use in find() query</p>
+        <p>NOTE: Repository is provided because not everything is available via the limitation value,<br />
+ but use of repository in limitation functions should be avoided for performance reasons<br />
+ if possible, especially when using un-cached parts of the api.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/Limitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation">Limitation</abbr></a></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a></td>
+                <td>$repository</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/Content/Query/CriterionInterface.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\CriterionInterface">CriterionInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_valueSchema">
+        <div class="location">at line 143</div>
+        <code>            public            mixed[]|int
+    <strong>valueSchema</strong>(<a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a> $repository)</code>
+    </h3>
+    <div class="details">
+        <p>Returns info on valid $limitationValues</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a></td>
+                <td>$repository</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed[]|int</td>
+            <td>In case of array, a hash with key as valid limitations value and value as human readable name of that option, in case of int on of VALUE_SCHEMA_ constants.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

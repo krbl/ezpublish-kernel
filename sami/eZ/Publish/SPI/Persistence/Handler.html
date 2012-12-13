@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\SPI\Persistence\Handler | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../../../eZ/Publish/SPI/Persistence.html">eZ\Publish\SPI\Persistence</a>\Handler</h1>
+    </div>
+        <div class="content">
+                <p>interface    <strong>Handler</strong></p>
+
+            <div class="description">
+            <p>The main handler for Storage Engine</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/SPI/Persistence/Content/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Handler">Handler</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_contentHandler">contentHandler</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/SPI/Persistence/Content/Search/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Search\Handler">Handler</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_searchHandler">searchHandler</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/SPI/Persistence/Content/Type/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Handler">Handler</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_contentTypeHandler">contentTypeHandler</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/SPI/Persistence/Content/Language/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Language\Handler">Handler</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_contentLanguageHandler">contentLanguageHandler</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/SPI/Persistence/Content/Location/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Location\Handler">Handler</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_locationHandler">locationHandler</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/SPI/Persistence/Content/ObjectState/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\ObjectState\Handler">Handler</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_objectStateHandler">objectStateHandler</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/SPI/Persistence/Content/Location/Trash/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Location\Trash\Handler">Handler</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_trashHandler">trashHandler</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/SPI/Persistence/User/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\User\Handler">Handler</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_userHandler">userHandler</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/SPI/Persistence/Content/Section/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section\Handler">Handler</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_sectionHandler">sectionHandler</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias\Handler">Handler</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_urlAliasHandler">urlAliasHandler</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/SPI/Persistence/Content/UrlWildcard/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlWildcard\Handler">Handler</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_urlWildcardHandler">urlWildcardHandler</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_beginTransaction">beginTransaction</a>()
+                    <p>Begin transaction</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_commit">commit</a>()
+                    <p>Commit transaction</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_rollback">rollback</a>()
+                    <p>Rollback transaction</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_contentHandler">
+        <div class="location">at line 20</div>
+        <code>            public            <a href="../../../../eZ/Publish/SPI/Persistence/Content/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Handler">Handler</abbr></a>
+    <strong>contentHandler</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/SPI/Persistence/Content/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Handler">Handler</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_searchHandler">
+        <div class="location">at line 25</div>
+        <code>            public            <a href="../../../../eZ/Publish/SPI/Persistence/Content/Search/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Search\Handler">Handler</abbr></a>
+    <strong>searchHandler</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/SPI/Persistence/Content/Search/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Search\Handler">Handler</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_contentTypeHandler">
+        <div class="location">at line 30</div>
+        <code>            public            <a href="../../../../eZ/Publish/SPI/Persistence/Content/Type/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Handler">Handler</abbr></a>
+    <strong>contentTypeHandler</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/SPI/Persistence/Content/Type/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Handler">Handler</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_contentLanguageHandler">
+        <div class="location">at line 35</div>
+        <code>            public            <a href="../../../../eZ/Publish/SPI/Persistence/Content/Language/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Language\Handler">Handler</abbr></a>
+    <strong>contentLanguageHandler</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/SPI/Persistence/Content/Language/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Language\Handler">Handler</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_locationHandler">
+        <div class="location">at line 40</div>
+        <code>            public            <a href="../../../../eZ/Publish/SPI/Persistence/Content/Location/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Location\Handler">Handler</abbr></a>
+    <strong>locationHandler</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/SPI/Persistence/Content/Location/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Location\Handler">Handler</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_objectStateHandler">
+        <div class="location">at line 45</div>
+        <code>            public            <a href="../../../../eZ/Publish/SPI/Persistence/Content/ObjectState/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\ObjectState\Handler">Handler</abbr></a>
+    <strong>objectStateHandler</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/SPI/Persistence/Content/ObjectState/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\ObjectState\Handler">Handler</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_trashHandler">
+        <div class="location">at line 50</div>
+        <code>            public            <a href="../../../../eZ/Publish/SPI/Persistence/Content/Location/Trash/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Location\Trash\Handler">Handler</abbr></a>
+    <strong>trashHandler</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/SPI/Persistence/Content/Location/Trash/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Location\Trash\Handler">Handler</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_userHandler">
+        <div class="location">at line 55</div>
+        <code>            public            <a href="../../../../eZ/Publish/SPI/Persistence/User/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\User\Handler">Handler</abbr></a>
+    <strong>userHandler</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/SPI/Persistence/User/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\User\Handler">Handler</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sectionHandler">
+        <div class="location">at line 60</div>
+        <code>            public            <a href="../../../../eZ/Publish/SPI/Persistence/Content/Section/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section\Handler">Handler</abbr></a>
+    <strong>sectionHandler</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/SPI/Persistence/Content/Section/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Section\Handler">Handler</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_urlAliasHandler">
+        <div class="location">at line 65</div>
+        <code>            public            <a href="../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias\Handler">Handler</abbr></a>
+    <strong>urlAliasHandler</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/SPI/Persistence/Content/UrlAlias/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlAlias\Handler">Handler</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_urlWildcardHandler">
+        <div class="location">at line 70</div>
+        <code>            public            <a href="../../../../eZ/Publish/SPI/Persistence/Content/UrlWildcard/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlWildcard\Handler">Handler</abbr></a>
+    <strong>urlWildcardHandler</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/SPI/Persistence/Content/UrlWildcard/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlWildcard\Handler">Handler</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_beginTransaction">
+        <div class="location">at line 78</div>
+        <code>            public            
+    <strong>beginTransaction</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Begin transaction</p>
+        <p>Begins an transaction, make sure you&#039;ll call commit or rollback when done,<br />
+ otherwise work will be lost.</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_commit">
+        <div class="location">at line 87</div>
+        <code>            public            
+    <strong>commit</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Commit transaction</p>
+        <p>Commit transaction, or throw exceptions if no transactions has been started.</p>
+        <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td>If no transaction has been started</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rollback">
+        <div class="location">at line 96</div>
+        <code>            public            
+    <strong>rollback</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Rollback transaction</p>
+        <p>Rollback transaction, or throw exceptions if no transactions has been started.</p>
+        <div class="tags">
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/RuntimeException"><abbr title="RuntimeException">RuntimeException</abbr></a></td>
+                <td>If no transaction has been started</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

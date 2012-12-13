@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\REST\Common\Input\ParserTools | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../eZ/Publish/Core/REST/Common/Input.html">eZ\Publish\Core\REST\Common\Input</a>\ParserTools</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ParserTools</strong></p>
+
+            <div class="description">
+            <p>Tools object to be used in Input Parsers</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_parseObjectElement">parseObjectElement</a>(array $objectElement, <a href="../../../../../../eZ/Publish/Core/REST/Common/Input/ParsingDispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\ParsingDispatcher">ParsingDispatcher</abbr></a> $parsingDispatcher)
+                    <p>Parses the given $objectElement, if it contains embedded data</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isEmbeddedObject">isEmbeddedObject</a>(array $objectElement)
+                    <p>Returns if the given $objectElement has embedded object data or is only a reference</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_parseTranslatableList">parseTranslatableList</a>(array $listElement)
+                    <p>Parses a translatable list, like names or descriptions</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_parseBooleanValue">parseBooleanValue</a>(string $stringValue)
+                    <p>Parses a boolean from $stringValue</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_parseStatus">parseStatus</a>(string $contentTypeStatus)
+                    <p>Parses the content types status from $contentTypeStatus</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_parseDefaultSortField">parseDefaultSortField</a>(string $defaultSortFieldString)
+                    <p>Parses the default sort field from the given $defaultSortFieldString</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_parseDefaultSortOrder">parseDefaultSortOrder</a>(string $defaultSortOrderString)
+                    <p>Parses the default sort order from the given $defaultSortOrderString</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/API/Repository/Values/User/Limitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation">Limitation</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_parseLimitation">parseLimitation</a>(array $limitation)
+                    <p>Parses the input structure to Limitation object</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_parseObjectElement">
+        <div class="location">at line 30</div>
+        <code>            public            mixed
+    <strong>parseObjectElement</strong>(array $objectElement, <a href="../../../../../../eZ/Publish/Core/REST/Common/Input/ParsingDispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\ParsingDispatcher">ParsingDispatcher</abbr></a> $parsingDispatcher)</code>
+    </h3>
+    <div class="details">
+        <p>Parses the given $objectElement, if it contains embedded data</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$objectElement</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/REST/Common/Input/ParsingDispatcher.html"><abbr title="eZ\Publish\Core\REST\Common\Input\ParsingDispatcher">ParsingDispatcher</abbr></a></td>
+                <td>$parsingDispatcher</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isEmbeddedObject">
+        <div class="location">at line 50</div>
+        <code>            public            boolean
+    <strong>isEmbeddedObject</strong>(array $objectElement)</code>
+    </h3>
+    <div class="details">
+        <p>Returns if the given $objectElement has embedded object data or is only a reference</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$objectElement</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parseTranslatableList">
+        <div class="location">at line 70</div>
+        <code>            public            array
+    <strong>parseTranslatableList</strong>(array $listElement)</code>
+    </h3>
+    <div class="details">
+        <p>Parses a translatable list, like names or descriptions</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$listElement</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parseBooleanValue">
+        <div class="location">at line 87</div>
+        <code>            public            boolean
+    <strong>parseBooleanValue</strong>(string $stringValue)</code>
+    </h3>
+    <div class="details">
+        <p>Parses a boolean from $stringValue</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$stringValue</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parseStatus">
+        <div class="location">at line 107</div>
+        <code>            public            int
+    <strong>parseStatus</strong>(string $contentTypeStatus)</code>
+    </h3>
+    <div class="details">
+        <p>Parses the content types status from $contentTypeStatus</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$contentTypeStatus</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parseDefaultSortField">
+        <div class="location">at line 129</div>
+        <code>            public            int
+    <strong>parseDefaultSortField</strong>(string $defaultSortFieldString)</code>
+    </h3>
+    <div class="details">
+        <p>Parses the default sort field from the given $defaultSortFieldString</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$defaultSortFieldString</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parseDefaultSortOrder">
+        <div class="location">at line 169</div>
+        <code>            public            int
+    <strong>parseDefaultSortOrder</strong>(string $defaultSortOrderString)</code>
+    </h3>
+    <div class="details">
+        <p>Parses the default sort order from the given $defaultSortOrderString</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$defaultSortOrderString</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_parseLimitation">
+        <div class="location">at line 189</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/API/Repository/Values/User/Limitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation">Limitation</abbr></a>
+    <strong>parseLimitation</strong>(array $limitation)</code>
+    </h3>
+    <div class="details">
+        <p>Parses the input structure to Limitation object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$limitation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/API/Repository/Values/User/Limitation.html"><abbr title="eZ\Publish\API\Repository\Values\User\Limitation">Limitation</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

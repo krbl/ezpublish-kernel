@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\SPI\Persistence\Content\UrlWildcard\Handler | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/UrlWildcard.html">eZ\Publish\SPI\Persistence\Content\UrlWildcard</a>\Handler</h1>
+    </div>
+        <div class="content">
+                <p>interface    <strong>Handler</strong></p>
+
+            <div class="description">
+            <p>The UrlWildcard Handler interface provides nice urls with wildcards management.</p>
+            <p>Its methods operate on a representation of the url alias data structure held<br />
+ inside a storage engine.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/UrlWildcard.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlWildcard">UrlWildcard</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(string $sourceUrl, string $destinationUrl, boolean $forward = false)
+                    <p>Creates a new url wildcard</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_remove">remove</a>(mixed $id)
+                    <p>removes an url wildcard</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/UrlWildcard.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlWildcard">UrlWildcard</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_load">load</a>(mixed $id)
+                    <p>Loads a url wild card</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/UrlWildcard.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlWildcard">UrlWildcard</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadAll">loadAll</a>(int $offset, int $limit = -1)
+                    <p>Loads all url wild card (paged)</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_create">
+        <div class="location">at line 29</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/UrlWildcard.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlWildcard">UrlWildcard</abbr></a>
+    <strong>create</strong>(string $sourceUrl, string $destinationUrl, boolean $forward = false)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new url wildcard</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$sourceUrl</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$destinationUrl</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$forward</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/UrlWildcard.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlWildcard">UrlWildcard</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_remove">
+        <div class="location">at line 38</div>
+        <code>            public            
+    <strong>remove</strong>(mixed $id)</code>
+    </h3>
+    <div class="details">
+        <p>removes an url wildcard</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if the url wild card was not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_load">
+        <div class="location">at line 49</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/UrlWildcard.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlWildcard">UrlWildcard</abbr></a>
+    <strong>load</strong>(mixed $id)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a url wild card</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/UrlWildcard.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlWildcard">UrlWildcard</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if the url wild card was not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadAll">
+        <div class="location">at line 59</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/UrlWildcard.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlWildcard">UrlWildcard</abbr></a>[]
+    <strong>loadAll</strong>(int $offset, int $limit = -1)</code>
+    </h3>
+    <div class="details">
+        <p>Loads all url wild card (paged)</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/UrlWildcard.html"><abbr title="eZ\Publish\SPI\Persistence\Content\UrlWildcard">UrlWildcard</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

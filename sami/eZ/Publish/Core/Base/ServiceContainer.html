@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Base\ServiceContainer | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../eZ/Publish/Core/Base.html">eZ\Publish\Core\Base</a>\ServiceContainer</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>ServiceContainer</strong>        implements
+        <a href="../../../../eZ/Publish/API/Container.html"><abbr title="eZ\Publish\API\Container">Container</abbr></a></p>
+
+            <div class="description">
+            <p>Service container class</p>
+            <p>A dependency injection container that uses configuration for defining dependencies.<br />
+<br />
+ Usage:<br />
+<br />
+     $sc = new eZ\Publish\Core\Base\ServiceContainer( $configManager-&gt;getConfiguration( &#039;service&#039; )-&gt;getAll() );<br />
+     $sc-&gt;getRepository-&gt;getContentService()...;<br />
+<br />
+ Or overriding $dependencies (in unit tests):<br />
+ ( $dependencies keys should have same value as service.ini &quot;arguments&quot; values explained bellow )<br />
+<br />
+     $sc = new eZ\Publish\Core\Base\ServiceContainer(<br />
+         $configManager-&gt;getConfiguration( &#039;service&#039; )-&gt;getAll(),<br />
+         array(<br />
+             &#039;@persistence_handler&#039; =&gt; new \eZ\Publish\Core\Persistence\InMemory\Handler()<br />
+         )<br />
+     );<br />
+     $sc-&gt;getRepository-&gt;getContentService()...;<br />
+<br />
+ Settings are defined in service.ini like the following example:<br />
+<br />
+     [repository]<br />
+     class=eZ\Publish\Core\Base\Repository<br />
+     arguments[persistence_handler]=@persistence_handler_inmemory<br />
+<br />
+     [persistence_handler_inmemory]<br />
+     class=eZ\Publish\Core\Persistence\InMemory\Handler<br />
+<br />
+     # see \eZ\Publish\Core\settings\service.ini For more options and examples.<br />
+<br />
+ &quot;arguments&quot; values in service.ini can start with either @ in case of other services being dependency, $ if a<br />
+ predefined global variable is to be used ( currently: $_SERVER, $_REQUEST, $_COOKIE, $_FILES )<br />
+ or plain scalar if that is to be given directly as argument value.<br />
+ If the argument value starts with %, then it is a lazy loaded service provided as a callback (closure).</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(array $settings, array $dependencies = array())
+                    <p>Construct object with optional configuration overrides</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getRepository">getRepository</a>()
+                    <p>Get Repository object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getVariable">getVariable</a>(string $variable)
+                    <p>Get a variable dependency</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    object
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(string $serviceName)
+                    <p>Get service by name</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 78</div>
+        <code>            public            
+    <strong>__construct</strong>(array $settings, array $dependencies = array())</code>
+    </h3>
+    <div class="details">
+        <p>Construct object with optional configuration overrides</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$settings</td>
+                <td>Services settings</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$dependencies</td>
+                <td>Optional initial dependencies</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRepository">
+        <div class="location">at line 113</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a>
+    <strong>getRepository</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get Repository object</p>
+        <p>Public API for</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Repository.html"><abbr title="eZ\Publish\API\Repository\Repository">Repository</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getVariable">
+        <div class="location">at line 129</div>
+        <code>            public            mixed
+    <strong>getVariable</strong>(string $variable)</code>
+    </h3>
+    <div class="details">
+        <p>Get a variable dependency</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$variable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/Core/Base/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\Core\Base\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">at line 153</div>
+        <code>            public            object
+    <strong>get</strong>(string $serviceName)</code>
+    </h3>
+    <div class="details">
+        <p>Get service by name</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$serviceName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/Core/Base/Exceptions/BadConfiguration.html"><abbr title="eZ\Publish\Core\Base\Exceptions\BadConfiguration">BadConfiguration</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/Core/Base/Exceptions/MissingClass.html"><abbr title="eZ\Publish\Core\Base\Exceptions\MissingClass">MissingClass</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

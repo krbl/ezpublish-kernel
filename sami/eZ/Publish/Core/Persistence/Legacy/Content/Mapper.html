@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Persistence\Legacy\Content\Mapper | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content.html">eZ\Publish\Core\Persistence\Legacy\Content</a>\Mapper</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Mapper</strong></p>
+
+            <div class="description">
+            <p>Mapper for Content Handler.</p>
+            <p>Performs mapping of Content objects.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/FieldValue/ConverterRegistry.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry">ConverterRegistry</abbr></a> $converterRegistry, <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Language/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Language\Handler">Handler</abbr></a> $languageHandler)
+                    <p>Creates a new mapper.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createVersionInfoFromCreateStruct">createVersionInfoFromCreateStruct</a>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\CreateStruct">CreateStruct</abbr></a> $struct, mixed $versionNo)
+                    <p>Creates a new version for the given $struct and $versionNo</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createVersionInfoForContent">createVersionInfoForContent</a>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content, mixed $versionNo, mixed $userId)
+                    <p>Creates a new version for the given $content</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldValue.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue">StorageFieldValue</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_convertToStorageValue">convertToStorageValue</a>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a> $field)
+                    <p>Converts value of $field to storage value</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_extractContentFromRows">extractContentFromRows</a>(array $rows)
+                    <p>Extracts Content objects (and nested) from database result $rows</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/ContentInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\ContentInfo">ContentInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_extractContentInfoFromRow">extractContentInfoFromRow</a>(array $row, string $prefix = &#039;&#039;)
+                    <p>Extracts a ContentInfo object from $row</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_extractVersionInfoListFromRows">extractVersionInfoListFromRows</a>(array $rows)
+                    <p>Extracts a VersionInfo object from $row</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_extractLanguageIdsFromMask">extractLanguageIdsFromMask</a>(int $languageMask)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\CreateStruct">CreateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createCreateStructFromContent">createCreateStructFromContent</a>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content)
+                    <p>Creates CreateStruct from $content</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_extractRelationsFromRows">extractRelationsFromRows</a>(array $rows)
+                    <p>Extracts relation objects from $rows</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Relation.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation">Relation</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createRelationFromCreateStruct">createRelationFromCreateStruct</a>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Relation/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct">CreateStruct</abbr></a> $struct)
+                    <p>Creates a Content from the given $struct</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 50</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/FieldValue/ConverterRegistry.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry">ConverterRegistry</abbr></a> $converterRegistry, <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Language/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Language\Handler">Handler</abbr></a> $languageHandler)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new mapper.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/FieldValue/ConverterRegistry.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry">ConverterRegistry</abbr></a></td>
+                <td>$converterRegistry</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Language/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Language\Handler">Handler</abbr></a></td>
+                <td>$languageHandler</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createVersionInfoFromCreateStruct">
+        <div class="location">at line 95</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a>
+    <strong>createVersionInfoFromCreateStruct</strong>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\CreateStruct">CreateStruct</abbr></a> $struct, mixed $versionNo)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new version for the given $struct and $versionNo</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\CreateStruct">CreateStruct</abbr></a></td>
+                <td>$struct</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$versionNo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createVersionInfoForContent">
+        <div class="location">at line 132</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a>
+    <strong>createVersionInfoForContent</strong>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content, mixed $versionNo, mixed $userId)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new version for the given $content</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$versionNo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$userId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_convertToStorageValue">
+        <div class="location">at line 156</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldValue.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue">StorageFieldValue</abbr></a>
+    <strong>convertToStorageValue</strong>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a> $field)</code>
+    </h3>
+    <div class="details">
+        <p>Converts value of $field to storage value</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Field.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Field">Field</abbr></a></td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/Core/Persistence/Legacy/Content/StorageFieldValue.html"><abbr title="eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue">StorageFieldValue</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_extractContentFromRows">
+        <div class="location">at line 180</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a>[]
+    <strong>extractContentFromRows</strong>(array $rows)</code>
+    </h3>
+    <div class="details">
+        <p>Extracts Content objects (and nested) from database result $rows</p>
+        <p>Expects database rows to be indexed by keys of the format<br />
+<br />
+      &quot;$tableName_$columnName&quot;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$rows</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_extractContentInfoFromRow">
+        <div class="location">at line 239</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/ContentInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\ContentInfo">ContentInfo</abbr></a>
+    <strong>extractContentInfoFromRow</strong>(array $row, string $prefix = &#039;&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Extracts a ContentInfo object from $row</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$row</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td>Prefix for row keys, which are initially mapped by ezcontentobject fields</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/ContentInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\ContentInfo">ContentInfo</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_extractVersionInfoListFromRows">
+        <div class="location">at line 293</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a>[]
+    <strong>extractVersionInfoListFromRows</strong>(array $rows)</code>
+    </h3>
+    <div class="details">
+        <p>Extracts a VersionInfo object from $row</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$rows</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/VersionInfo.html"><abbr title="eZ\Publish\SPI\Persistence\Content\VersionInfo">VersionInfo</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_extractLanguageIdsFromMask">
+        <div class="location">at line 330</div>
+        <code>            public            array
+    <strong>extractLanguageIdsFromMask</strong>(int $languageMask)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$languageMask</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createCreateStructFromContent">
+        <div class="location">at line 410</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\CreateStruct">CreateStruct</abbr></a>
+    <strong>createCreateStructFromContent</strong>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content)</code>
+    </h3>
+    <div class="details">
+        <p>Creates CreateStruct from $content</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\CreateStruct">CreateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_extractRelationsFromRows">
+        <div class="location">at line 436</div>
+        <code>            public            
+    <strong>extractRelationsFromRows</strong>(array $rows)</code>
+    </h3>
+    <div class="details">
+        <p>Extracts relation objects from $rows</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$rows</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createRelationFromCreateStruct">
+        <div class="location">at line 484</div>
+        <code>            public            <a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Relation.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation">Relation</abbr></a>
+    <strong>createRelationFromCreateStruct</strong>(<a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Relation/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct">CreateStruct</abbr></a> $struct)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a Content from the given $struct</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Relation/CreateStruct.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct">CreateStruct</abbr></a></td>
+                <td>$struct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../eZ/Publish/SPI/Persistence/Content/Relation.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Relation">Relation</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

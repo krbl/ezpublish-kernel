@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\FieldType\Validator\EmailAddressValidator | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../eZ/Publish/Core/FieldType/Validator.html">eZ\Publish\Core\FieldType\Validator</a>\EmailAddressValidator</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>EmailAddressValidator</strong>        extends <a href="../../../../../eZ/Publish/Core/FieldType/Validator.html"><abbr title="eZ\Publish\Core\FieldType\Validator">Validator</abbr></a></p>
+
+            <div class="description">
+            <p>Validator for checking validity of email addresses.</p>
+            <p>Both form and MX record validity checking are provided</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getConstraintsSchema">getConstraintsSchema</a>()
+                    <p>Returns a schema for supported validator configurations.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../eZ/Publish/Core/FieldType/Validator.html#method_getConstraintsSchema"><abbr title="eZ\Publish\Core\FieldType\Validator">Validator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_validateConstraints">validateConstraints</a>(mixed $constraints)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_validate">validate</a>(<a href="../../../../../eZ/Publish/Core/FieldType/Value.html"><abbr title="eZ\Publish\Core\FieldType\Value">Value</abbr></a> $value)
+                    <p>Perform validation on $value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../eZ/Publish/SPI/FieldType/ValidationError.html"><abbr title="eZ\Publish\SPI\FieldType\ValidationError">ValidationError</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getMessage">getMessage</a>()
+                    <p>Returns array of messages on performed validations.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../eZ/Publish/Core/FieldType/Validator.html#method_getMessage"><abbr title="eZ\Publish\Core\FieldType\Validator">Validator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_initializeWithConstraints">initializeWithConstraints</a>(array $constraints)
+                    <p>Initialized an instance of Validator, with earlier configured constraints.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../eZ/Publish/Core/FieldType/Validator.html#method_initializeWithConstraints"><abbr title="eZ\Publish\Core\FieldType\Validator">Validator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method___get">__get</a>(string $name)
+                    <p>Magic getter.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../eZ/Publish/Core/FieldType/Validator.html#method___get"><abbr title="eZ\Publish\Core\FieldType\Validator">Validator</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___set">__set</a>(string $name, mixed $value)
+                    <p>Magic setter.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../eZ/Publish/Core/FieldType/Validator.html#method___set"><abbr title="eZ\Publish\Core\FieldType\Validator">Validator</abbr></a></small></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_getConstraintsSchema">
+        <div class="location">in <a href="../../../../../eZ/Publish/Core/FieldType/Validator.html#method_getConstraintsSchema"><abbr title="eZ\Publish\Core\FieldType\Validator">Validator</abbr></a> at line 79</div>
+        <code>            public            
+    <strong>getConstraintsSchema</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns a schema for supported validator configurations.</p>
+        <p>This implementation returns a three dimensional map containing for each validator configuration<br />
+ referenced by identifier a map of supported parameters which are defined by a type and a default value<br />
+ (see example).<br />
+ Example:<br />
+ &lt;code&gt;<br />
+  array(<br />
+      &#039;stringLength&#039; =&gt; array(<br />
+          &#039;minStringLength&#039; =&gt; array(<br />
+              &#039;type&#039;    =&gt; &#039;int&#039;,<br />
+              &#039;default&#039; =&gt; 0,<br />
+          ),<br />
+          &#039;maxStringLength&#039; =&gt; array(<br />
+              &#039;type&#039;    =&gt; &#039;int&#039;<br />
+              &#039;default&#039; =&gt; null,<br />
+          )<br />
+      ),<br />
+  );<br />
+ &lt;/code&gt;<br />
+ The validator identifier.</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_validateConstraints">
+        <div class="location">at line 42</div>
+        <code>            public            mixed
+    <strong>validateConstraints</strong>(mixed $constraints)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$constraints</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_validate">
+        <div class="location">at line 91</div>
+        <code>            public            boolean
+    <strong>validate</strong>(<a href="../../../../../eZ/Publish/Core/FieldType/Value.html"><abbr title="eZ\Publish\Core\FieldType\Value">Value</abbr></a> $value)</code>
+    </h3>
+    <div class="details">
+        <p>Perform validation on $value.</p>
+        <p>Will return true when all constraints are matched. If one or more<br />
+ constraints fail, the method will return false.<br />
+<br />
+ When a check against a constraint has failed, an entry will be added to the<br />
+ $errors array.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/Core/FieldType/Value.html"><abbr title="eZ\Publish\Core\FieldType\Value">Value</abbr></a></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMessage">
+        <div class="location">in <a href="../../../../../eZ/Publish/Core/FieldType/Validator.html#method_getMessage"><abbr title="eZ\Publish\Core\FieldType\Validator">Validator</abbr></a> at line 113</div>
+        <code>            public            <a href="../../../../../eZ/Publish/SPI/FieldType/ValidationError.html"><abbr title="eZ\Publish\SPI\FieldType\ValidationError">ValidationError</abbr></a>[]
+    <strong>getMessage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns array of messages on performed validations.</p>
+        <p>When no validation errors occurred, the returned array should be empty.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../eZ/Publish/SPI/FieldType/ValidationError.html"><abbr title="eZ\Publish\SPI\FieldType\ValidationError">ValidationError</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_initializeWithConstraints">
+        <div class="location">in <a href="../../../../../eZ/Publish/Core/FieldType/Validator.html#method_initializeWithConstraints"><abbr title="eZ\Publish\Core\FieldType\Validator">Validator</abbr></a> at line 127</div>
+        <code>            public            void
+    <strong>initializeWithConstraints</strong>(array $constraints)</code>
+    </h3>
+    <div class="details">
+        <p>Initialized an instance of Validator, with earlier configured constraints.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$constraints</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___get">
+        <div class="location">in <a href="../../../../../eZ/Publish/Core/FieldType/Validator.html#method___get"><abbr title="eZ\Publish\Core\FieldType\Validator">Validator</abbr></a> at line 158</div>
+        <code>            public            mixed
+    <strong>__get</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Magic getter.</p>
+        <p>Returns constraint value, from its $name</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/PropertyNotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\PropertyNotFoundException">PropertyNotFoundException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method___set">
+        <div class="location">in <a href="../../../../../eZ/Publish/Core/FieldType/Validator.html#method___set"><abbr title="eZ\Publish\Core\FieldType\Validator">Validator</abbr></a> at line 177</div>
+        <code>            public            
+    <strong>__set</strong>(string $name, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Magic setter.</p>
+        <p>Sets $value to constraint, identified by $name</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../eZ/Publish/API/Repository/Exceptions/PropertyNotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\PropertyNotFoundException">PropertyNotFoundException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

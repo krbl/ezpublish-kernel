@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\API\Repository\UserService | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../../../eZ/Publish/API/Repository.html">eZ\Publish\API\Repository</a>\UserService</h1>
+    </div>
+        <div class="content">
+                <p>interface    <strong>UserService</strong></p>
+
+            <div class="description">
+            <p>This service provides methods for managing users and user groups</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createUserGroup">createUserGroup</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroupCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroupCreateStruct">UserGroupCreateStruct</abbr></a> $userGroupCreateStruct, <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $parentGroup)
+                    <p>Creates a new user group using the data provided in the ContentCreateStruct parameter</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadUserGroup">loadUserGroup</a>(int $id)
+                    <p>Loads a user group for the given id</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadSubUserGroups">loadSubUserGroups</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup)
+                    <p>Loads the sub groups of a user group</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteUserGroup">deleteUserGroup</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup)
+                    <p>Removes a user group</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_moveUserGroup">moveUserGroup</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup, <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $newParent)
+                    <p>Moves the user group to another parent</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateUserGroup">updateUserGroup</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup, <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroupUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroupUpdateStruct">UserGroupUpdateStruct</abbr></a> $userGroupUpdateStruct)
+                    <p>Updates the group profile with fields and meta data</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_createUser">createUser</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/UserCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserCreateStruct">UserCreateStruct</abbr></a> $userCreateStruct, array $parentGroups)
+                    <p>Create a new user.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadUser">loadUser</a>(int $userId)
+                    <p>Loads a user</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadAnonymousUser">loadAnonymousUser</a>()
+                    <p>Loads anonymous user</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_loadUserByCredentials">loadUserByCredentials</a>(string $login, string $password)
+                    <p>Loads a user for the given login and password</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_deleteUser">deleteUser</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user)
+                    <p>This method deletes a user</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_updateUser">updateUser</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user, <a href="../../../../eZ/Publish/API/Repository/Values/User/UserUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserUpdateStruct">UserUpdateStruct</abbr></a> $userUpdateStruct)
+                    <p>Updates a user</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_assignUserToUserGroup">assignUserToUserGroup</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user, <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup)
+                    <p>Assigns a new user group to the user</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_unAssignUserFromUserGroup">unAssignUserFromUserGroup</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user, <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup)
+                    <p>Removes a user group from the user</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadUserGroupsOfUser">loadUserGroupsOfUser</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user)
+                    <p>Loads the user groups the user belongs to</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_loadUsersOfUserGroup">loadUsersOfUserGroup</a>(<a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup, int $offset, int $limit = -1)
+                    <p>Loads the users of a user group</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/UserCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserCreateStruct">UserCreateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newUserCreateStruct">newUserCreateStruct</a>(string $login, string $email, string $password, string $mainLanguageCode, <a href="../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType = null)
+                    <p>Instantiate a user create class</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroupCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroupCreateStruct">UserGroupCreateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newUserGroupCreateStruct">newUserGroupCreateStruct</a>(string $mainLanguageCode, null|<a href="../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType = null)
+                    <p>Instantiate a user group create class</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/UserUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserUpdateStruct">UserUpdateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newUserUpdateStruct">newUserUpdateStruct</a>()
+                    <p>Instantiate a new user update struct</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroupUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroupUpdateStruct">UserGroupUpdateStruct</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_newUserGroupUpdateStruct">newUserGroupUpdateStruct</a>()
+                    <p>Instantiate a new user group update struct</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_createUserGroup">
+        <div class="location">at line 46</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a>
+    <strong>createUserGroup</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroupCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroupCreateStruct">UserGroupCreateStruct</abbr></a> $userGroupCreateStruct, <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $parentGroup)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new user group using the data provided in the ContentCreateStruct parameter</p>
+        <p>In 4.x in the content type parameter in the profile is ignored<br />
+ - the content type is determined via configuration and can be set to null.<br />
+ The returned version is published.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroupCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroupCreateStruct">UserGroupCreateStruct</abbr></a></td>
+                <td>$userGroupCreateStruct</td>
+                <td>a structure for setting all necessary data to create this user group</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a></td>
+                <td>$parentGroup</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to create a user group</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the input structure has invalid data</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/ContentFieldValidationException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\ContentFieldValidationException">ContentFieldValidationException</abbr></a></td>
+                <td>if a field in the $userGroupCreateStruct is not valid</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/ContentValidationException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\ContentValidationException">ContentValidationException</abbr></a></td>
+                <td>if a required field is missing or set to an empty value</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadUserGroup">
+        <div class="location">at line 58</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a>
+    <strong>loadUserGroup</strong>(int $id)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a user group for the given id</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to create a user group</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if the user group with the given id was not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadSubUserGroups">
+        <div class="location">at line 69</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a>[]
+    <strong>loadSubUserGroups</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup)</code>
+    </h3>
+    <div class="details">
+        <p>Loads the sub groups of a user group</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a></td>
+                <td>$userGroup</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to read the user group</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteUserGroup">
+        <div class="location">at line 80</div>
+        <code>            public            
+    <strong>deleteUserGroup</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup)</code>
+    </h3>
+    <div class="details">
+        <p>Removes a user group</p>
+        <p>the users which are not assigned to other groups will be deleted.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a></td>
+                <td>$userGroup</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to create a user group</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_moveUserGroup">
+        <div class="location">at line 90</div>
+        <code>            public            
+    <strong>moveUserGroup</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup, <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $newParent)</code>
+    </h3>
+    <div class="details">
+        <p>Moves the user group to another parent</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a></td>
+                <td>$userGroup</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a></td>
+                <td>$newParent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to move the user group</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateUserGroup">
+        <div class="location">at line 108</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a>
+    <strong>updateUserGroup</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup, <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroupUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroupUpdateStruct">UserGroupUpdateStruct</abbr></a> $userGroupUpdateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the group profile with fields and meta data</p>
+        <p>4.x: If the versionUpdateStruct is set in $userGroupUpdateStruct, this method internally creates a content draft, updates ts with the provided data<br />
+ and publishes the draft. If a draft is explicitly required, the user group can be updated via the content service methods.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a></td>
+                <td>$userGroup</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroupUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroupUpdateStruct">UserGroupUpdateStruct</abbr></a></td>
+                <td>$userGroupUpdateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to move the user group</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/ContentFieldValidationException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\ContentFieldValidationException">ContentFieldValidationException</abbr></a></td>
+                <td>if a field in the $userGroupUpdateStruct is not valid</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/ContentValidationException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\ContentValidationException">ContentValidationException</abbr></a></td>
+                <td>if a required field is set empty</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if a field value is not accepted by the field type</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createUser">
+        <div class="location">at line 124</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a>
+    <strong>createUser</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/UserCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserCreateStruct">UserCreateStruct</abbr></a> $userCreateStruct, array $parentGroups)</code>
+    </h3>
+    <div class="details">
+        <p>Create a new user.</p>
+        <p>The created user is published by this method</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserCreateStruct">UserCreateStruct</abbr></a></td>
+                <td>$userCreateStruct</td>
+                <td>the data used for creating the user</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parentGroups</td>
+                <td>the groups of type {@link \eZ\Publish\API\Repository\Values\User\UserGroup} which are assigned to the user after creation</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to move the user group</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/ContentFieldValidationException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\ContentFieldValidationException">ContentFieldValidationException</abbr></a></td>
+                <td>if a field in the $userCreateStruct is not valid</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/ContentValidationException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\ContentValidationException">ContentValidationException</abbr></a></td>
+                <td>if a required field is missing or set  to an empty value</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if a field value is not accepted by the field type if a user with provided login already exists</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadUser">
+        <div class="location">at line 135</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a>
+    <strong>loadUser</strong>(int $userId)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a user</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$userId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if a user with the given id was not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadAnonymousUser">
+        <div class="location">at line 144</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a>
+    <strong>loadAnonymousUser</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Loads anonymous user</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadUserByCredentials">
+        <div class="location">at line 156</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a>
+    <strong>loadUserByCredentials</strong>(string $login, string $password)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a user for the given login and password</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$login</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>the plain password</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if a user with the given credentials was not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_deleteUser">
+        <div class="location">at line 165</div>
+        <code>            public            
+    <strong>deleteUser</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user)</code>
+    </h3>
+    <div class="details">
+        <p>This method deletes a user</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to delete the user</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_updateUser">
+        <div class="location">at line 183</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a>
+    <strong>updateUser</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user, <a href="../../../../eZ/Publish/API/Repository/Values/User/UserUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserUpdateStruct">UserUpdateStruct</abbr></a> $userUpdateStruct)</code>
+    </h3>
+    <div class="details">
+        <p>Updates a user</p>
+        <p>4.x: If the versionUpdateStruct is set in the user update structure, this method internally creates a content draft, updates ts with the provided data<br />
+ and publishes the draft. If a draft is explicitly required, the user group can be updated via the content service methods.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserUpdateStruct">UserUpdateStruct</abbr></a></td>
+                <td>$userUpdateStruct</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to update the user</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/ContentFieldValidationException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\ContentFieldValidationException">ContentFieldValidationException</abbr></a></td>
+                <td>if a field in the $userUpdateStruct is not valid</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/ContentValidationException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\ContentValidationException">ContentValidationException</abbr></a></td>
+                <td>if a required field is set empty</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if a field value is not accepted by the field type</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_assignUserToUserGroup">
+        <div class="location">at line 195</div>
+        <code>            public            
+    <strong>assignUserToUserGroup</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user, <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup)</code>
+    </h3>
+    <div class="details">
+        <p>Assigns a new user group to the user</p>
+        <p>If the user is already in the given user group this method does nothing.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a></td>
+                <td>$userGroup</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to assign the user group to the user</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_unAssignUserFromUserGroup">
+        <div class="location">at line 206</div>
+        <code>            public            
+    <strong>unAssignUserFromUserGroup</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user, <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup)</code>
+    </h3>
+    <div class="details">
+        <p>Removes a user group from the user</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a></td>
+                <td>$userGroup</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to remove the user group from the user</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the user is not in the given user group</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadUserGroupsOfUser">
+        <div class="location">at line 217</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a>[]
+    <strong>loadUserGroupsOfUser</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a> $user)</code>
+    </h3>
+    <div class="details">
+        <p>Loads the user groups the user belongs to</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed read the user or user group</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadUsersOfUserGroup">
+        <div class="location">at line 230</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a>[]
+    <strong>loadUsersOfUserGroup</strong>(<a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a> $userGroup, int $offset, int $limit = -1)</code>
+    </h3>
+    <div class="details">
+        <p>Loads the users of a user group</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroup.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroup">UserGroup</abbr></a></td>
+                <td>$userGroup</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/User.html"><abbr title="eZ\Publish\API\Repository\Values\User\User">User</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Exceptions/UnauthorizedException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\UnauthorizedException">UnauthorizedException</abbr></a></td>
+                <td>if the authenticated user is not allowed to read the users or user group</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newUserCreateStruct">
+        <div class="location">at line 243</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/UserCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserCreateStruct">UserCreateStruct</abbr></a>
+    <strong>newUserCreateStruct</strong>(string $login, string $email, string $password, string $mainLanguageCode, <a href="../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType = null)</code>
+    </h3>
+    <div class="details">
+        <p>Instantiate a user create class</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$login</td>
+                <td>the login of the new user</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td>the email of the new user</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>the plain password of the new user</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$mainLanguageCode</td>
+                <td>the main language for the underlying content object</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a></td>
+                <td>$contentType</td>
+                <td>5.x the content type for the underlying content object. In 4.x it is ignored and taken from the configuration</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserCreateStruct">UserCreateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newUserGroupCreateStruct">
+        <div class="location">at line 253</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroupCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroupCreateStruct">UserGroupCreateStruct</abbr></a>
+    <strong>newUserGroupCreateStruct</strong>(string $mainLanguageCode, null|<a href="../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a> $contentType = null)</code>
+    </h3>
+    <div class="details">
+        <p>Instantiate a user group create class</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$mainLanguageCode</td>
+                <td>The main language for the underlying content object</td>
+            </tr>
+                    <tr>
+                <td>null|<a href="../../../../eZ/Publish/API/Repository/Values/ContentType/ContentType.html"><abbr title="eZ\Publish\API\Repository\Values\ContentType\ContentType">ContentType</abbr></a></td>
+                <td>$contentType</td>
+                <td>5.x the content type for the underlying content object. In 4.x it is ignored and taken from the configuration</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroupCreateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroupCreateStruct">UserGroupCreateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newUserUpdateStruct">
+        <div class="location">at line 260</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/UserUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserUpdateStruct">UserUpdateStruct</abbr></a>
+    <strong>newUserUpdateStruct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Instantiate a new user update struct</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserUpdateStruct">UserUpdateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_newUserGroupUpdateStruct">
+        <div class="location">at line 267</div>
+        <code>            public            <a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroupUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroupUpdateStruct">UserGroupUpdateStruct</abbr></a>
+    <strong>newUserGroupUpdateStruct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Instantiate a new user group update struct</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../eZ/Publish/API/Repository/Values/User/UserGroupUpdateStruct.html"><abbr title="eZ\Publish\API\Repository\Values\User\UserGroupUpdateStruct">UserGroupUpdateStruct</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

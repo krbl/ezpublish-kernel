@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\Persistence\Solr\Content\Search\Handler | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../../eZ/Publish/Core/Persistence/Solr/Content/Search.html">eZ\Publish\Core\Persistence\Solr\Content\Search</a>\Handler</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Handler</strong>        extends <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Search/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Search\Handler">Handler</abbr></a></p>
+
+            <div class="description">
+            <p>The Content Search handler retrieves sets of of Content objects, based on a set of criteria.</p>
+            <p>The basic idea of this class is to do the following:<br />
+<br />
+ 1) The find methods retrieve a recursive set of filters, which define which<br />
+ content objects to retrieve from the database. Those may be combined using<br />
+ boolean operators.<br />
+<br />
+ 2) This recursive criterion definition is visited into a query, which limits<br />
+ the content retrieved from the database. We might not be able to create<br />
+ sensible queries from all criterion definitions.<br />
+<br />
+ 3) The query might be possible to optimize (remove empty statements),<br />
+ reduce singular and and or constructs…<br />
+<br />
+ 4) Additionally we might need a post-query filtering step, which filters<br />
+ content objects based on criteria, which could not be converted in to<br />
+ database statements.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/API/Repository/Values/Content/Search/SearchResult.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Search\SearchResult">SearchResult</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_findContent">findContent</a>(<a href="../../../../../../../eZ/Publish/API/Repository/Values/Content/Query.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query">Query</abbr></a> $query, array $fieldFilters = array())
+                    <p>Finds content objects for the given query.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_findSingle">findSingle</a>(<a href="../../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a> $criterion, array $fieldFilters = array())
+                    <p>Performs a query for a single content object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_suggest">suggest</a>(string $prefix, string[] $fieldPaths = array(), int $limit = 10, <a href="../../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a> $filter = null)
+                    <p>Suggests a list of values for the given prefix</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_indexContent">indexContent</a>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content)
+                    <p>Indexes a content object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../../../../eZ/Publish/Core/Persistence/Solr/Content/Search/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Solr\Content\Search\Gateway">Gateway</abbr></a> $gateway, <a href="../../../../../../../eZ/Publish/Core/Persistence/Solr/Content/Search/FieldRegistry.html"><abbr title="eZ\Publish\Core\Persistence\Solr\Content\Search\FieldRegistry">FieldRegistry</abbr></a> $fieldRegistry, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Handler">Handler</abbr></a> $contentTypeHandler, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/ObjectState/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\ObjectState\Handler">Handler</abbr></a> $objectStateHandler)
+                    <p>Creates a new content handler.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_purgeIndex">purgeIndex</a>()
+                    <p>Purges all contents from the index</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_findContent">
+        <div class="location">at line 101</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/API/Repository/Values/Content/Search/SearchResult.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Search\SearchResult">SearchResult</abbr></a>
+    <strong>findContent</strong>(<a href="../../../../../../../eZ/Publish/API/Repository/Values/Content/Query.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query">Query</abbr></a> $query, array $fieldFilters = array())</code>
+    </h3>
+    <div class="details">
+        <p>Finds content objects for the given query.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Values/Content/Query.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query">Query</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$fieldFilters</td>
+                <td>- a map of filters for the returned fields. Currently supported: &lt;code&gt;array(&quot;languages&quot; =&gt; array(&lt;language1&gt;,..))&lt;/code&gt;.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/API/Repository/Values/Content/Search/SearchResult.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Search\SearchResult">SearchResult</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_findSingle">
+        <div class="location">at line 119</div>
+        <code>            public            <a href="../../../../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a>
+    <strong>findSingle</strong>(<a href="../../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a> $criterion, array $fieldFilters = array())</code>
+    </h3>
+    <div class="details">
+        <p>Performs a query for a single content object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a></td>
+                <td>$criterion</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$fieldFilters</td>
+                <td>- a map of filters for the returned fields. Currently supported: &lt;code&gt;array(&quot;languages&quot; =&gt; array(&lt;language1&gt;,..))&lt;/code&gt;.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../eZ/Publish/API/Repository/Values/Content/Content.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Content">Content</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/NotFoundException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\NotFoundException">NotFoundException</abbr></a></td>
+                <td>if the object was not found by the query or due to permissions</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Exceptions/InvalidArgumentException.html"><abbr title="eZ\Publish\API\Repository\Exceptions\InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if there is more than than one result matching the criterions</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_suggest">
+        <div class="location">at line 144</div>
+        <code>            public            
+    <strong>suggest</strong>(string $prefix, string[] $fieldPaths = array(), int $limit = 10, <a href="../../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a> $filter = null)</code>
+    </h3>
+    <div class="details">
+        <p>Suggests a list of values for the given prefix</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string[]</td>
+                <td>$fieldPaths</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a></td>
+                <td>$filter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_indexContent">
+        <div class="location">at line 156</div>
+        <code>            public            void
+    <strong>indexContent</strong>(<a href="../../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a> $content)</code>
+    </h3>
+    <div class="details">
+        <p>Indexes a content object</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content.html"><abbr title="eZ\Publish\SPI\Persistence\Content">Content</abbr></a></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 82</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../../../../../eZ/Publish/Core/Persistence/Solr/Content/Search/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Solr\Content\Search\Gateway">Gateway</abbr></a> $gateway, <a href="../../../../../../../eZ/Publish/Core/Persistence/Solr/Content/Search/FieldRegistry.html"><abbr title="eZ\Publish\Core\Persistence\Solr\Content\Search\FieldRegistry">FieldRegistry</abbr></a> $fieldRegistry, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Handler">Handler</abbr></a> $contentTypeHandler, <a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/ObjectState/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\ObjectState\Handler">Handler</abbr></a> $objectStateHandler)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new content handler.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Solr/Content/Search/Gateway.html"><abbr title="eZ\Publish\Core\Persistence\Solr\Content\Search\Gateway">Gateway</abbr></a></td>
+                <td>$gateway</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/Core/Persistence/Solr/Content/Search/FieldRegistry.html"><abbr title="eZ\Publish\Core\Persistence\Solr\Content\Search\FieldRegistry">FieldRegistry</abbr></a></td>
+                <td>$fieldRegistry</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/Type/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\Type\Handler">Handler</abbr></a></td>
+                <td>$contentTypeHandler</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../../../../eZ/Publish/SPI/Persistence/Content/ObjectState/Handler.html"><abbr title="eZ\Publish\SPI\Persistence\Content\ObjectState\Handler">Handler</abbr></a></td>
+                <td>$objectStateHandler</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_purgeIndex">
+        <div class="location">at line 336</div>
+        <code>            public            void
+    <strong>purgeIndex</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Purges all contents from the index</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

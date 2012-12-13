@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\API\Repository\Values\Content\Query\Criterion\UserMetadata | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html">eZ\Publish\API\Repository\Values\Content\Query\Criterion</a>\UserMetadata</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>UserMetadata</strong>        extends <a href="../../../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a>        implements
+        <a href="../../../../../../../../eZ/Publish/API/Repository/Values/Content/Query/CriterionInterface.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\CriterionInterface">CriterionInterface</abbr></a></p>
+
+            <div class="description">
+            <p>A criterion that matches content based on one of the user metadata (owner, creator, modifier)</p>
+            <p>Supported Operators:<br />
+ EQ, IN: Matches the provided user ID(s) against the user IDs in the database<br />
+<br />
+ Example:<br />
+ &lt;code&gt;<br />
+ $createdCriterion = new Criterion\UserMetadata(<br />
+     Criterion\UserMetadata::CREATOR,<br />
+     Operator::IN,<br />
+     array( 10, 14 )<br />
+ );<br />
+ &lt;/code&gt;</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>OWNER</td>
+                <td class="last">
+                    <p><em>UserMetadata target: Owner user</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>GROUP</td>
+                <td class="last">
+                    <p><em>UserMetadata target: Owner user group</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CREATOR</td>
+                <td class="last">
+                    <p><em>UserMetadata target: Creator</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MODIFIER</td>
+                <td class="last">
+                    <p><em>UserMetadata target: Modifier</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_operator">
+                                                            string
+                </td>
+                <td>$operator</td>
+                <td class="last">The operator used by the Criterion</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_value">
+                                                            <abbr title="eZ\Publish\API\Repository\Values\Content\Query\array(int">array(int</abbr>|<abbr title="eZ\Publish\API\Repository\Values\Content\Query\string)">string)</abbr>
+                </td>
+                <td>$value</td>
+                <td class="last">The value(s) matched by the criteria</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_target">
+                                                            string
+                </td>
+                <td>$target</td>
+                <td class="last">The target used by the criteria (field, metadata...)</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $target, string $operator, mixed $value)
+                    <p>Performs operator validation based on the Criterion specifications returned by {see getSpecifications()}</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_createFromQueryBuilder">createFromQueryBuilder</a>($target, $operator, $value)
+                    <p></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html#method_createFromQueryBuilder"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion/Operator/Specifications.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator\Specifications">Specifications</abbr></a>[]
+                </td>
+                <td class="last">
+                    <a href="#method_getSpecifications">getSpecifications</a>()
+                    <p>Criterion description function.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 64</div>
+        <code>            public            
+    <strong>__construct</strong>(string $target, string $operator, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Performs operator validation based on the Criterion specifications returned by {see getSpecifications()}</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$target</td>
+                <td>One of UserMetadata::OWNER, UserMetadata::GROUP, UserMetadata::CREATED or UserMetadata::MODIFIED</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td>One of the Operator constants</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The match value, either as an array of as a single value, depending on the operator</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the provided operator isn&#039;t supported</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createFromQueryBuilder">
+        <div class="location">in <a href="../../../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion.html#method_createFromQueryBuilder"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion">Criterion</abbr></a> at line 157</div>
+        <code>        static    public            
+    <strong>createFromQueryBuilder</strong>($target, $operator, $value)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$target</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSpecifications">
+        <div class="location">at line 73</div>
+        <code>            public            <a href="../../../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion/Operator/Specifications.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator\Specifications">Specifications</abbr></a>[]
+    <strong>getSpecifications</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Criterion description function.</p>
+        <p>Returns the combination of the Criterion&#039;s supported operator/value,<br />
+ as an array of eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator\Specifications objects<br />
+ - Operator is one supported Operator, as an Operator::* constant<br />
+ - ValueType is the type of input value this operator requires, either array or single<br />
+ - SupportedTypes is an array of types the operator will accept<br />
+ - ValueCountLimitation is an integer saying how many values are expected.<br />
+<br />
+ &lt;code&gt;<br />
+ // IN and EQ are supported<br />
+ return array(<br />
+     // The EQ operator expects a single value, either as an integer or a string<br />
+     new Specifications(<br />
+         Operator::EQ,<br />
+         Specifications::INPUT_TYPE_SINGLE,<br />
+         array( Specifications::INPUT_VALUE_INTEGER, Specifications::INPUT_VALUE_STRING ),<br />
+     ),<br />
+     // The IN operator expects an array of values, of either integers or strings<br />
+     new Specifications(<br />
+         Operator::IN,<br />
+         Specifications::INPUT_TYPE_ARRAY,<br />
+         array( Specifications::INPUT_VALUE_INTEGER, Specifications::INPUT_VALUE_STRING )<br />
+     )<br />
+ )*<br />
+ &lt;/code&gt;</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../../../../../../eZ/Publish/API/Repository/Values/Content/Query/Criterion/Operator/Specifications.html"><abbr title="eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator\Specifications">Specifications</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

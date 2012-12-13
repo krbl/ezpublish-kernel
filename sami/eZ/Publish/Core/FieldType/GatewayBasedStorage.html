@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>eZ\Publish\Core\FieldType\GatewayBasedStorage | eZ Publish 5 API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../../classes.html">Classes</a></li>
+                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">eZ Publish 5 API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../../eZ/Publish/Core/FieldType.html">eZ\Publish\Core\FieldType</a>\GatewayBasedStorage</h1>
+    </div>
+        <div class="content">
+                <p>abstract class    <strong>GatewayBasedStorage</strong>        implements
+        <a href="../../../../eZ/Publish/SPI/FieldType/FieldStorage.html"><abbr title="eZ\Publish\SPI\FieldType\FieldStorage">FieldStorage</abbr></a></p>
+
+            <div class="description">
+            <p>Storage gateway base class to be used by FieldType storages</p>
+            <p>This class gives a common basis to realized gateway based storage<br />
+ dispatching. It is intened to deal as a base class for FieldType storages,<br />
+ giving a common infrastructure to handle multiple gateways, based on the<br />
+ context provided by the SPI.<br />
+<br />
+ The method {@link getGateway()} is used in derived classes to retrieve the<br />
+ correct gateway implementation, based on the context. The method {@link<br />
+ getPersistenceHandler()} can be used to retrieve the SPI persistence<br />
+ handler. It is encouraged, to use this object to retrieve any eZ Publish<br />
+ internal data objects, in order to allow caching.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(array $gateways)
+                    <p>Construct from gateways</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_addGateway">addGateway</a>(string $identifier, <a href="../../../../eZ/Publish/Core/FieldType/StorageGateway.html"><abbr title="eZ\Publish\Core\FieldType\StorageGateway">StorageGateway</abbr></a> $gateway)
+                    <p>Adds a storage $gateway assigned to the given $identifier</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 42</div>
+        <code>            public            
+    <strong>__construct</strong>(array $gateways)</code>
+    </h3>
+    <div class="details">
+        <p>Construct from gateways</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$gateways</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addGateway">
+        <div class="location">at line 58</div>
+        <code>            public            void
+    <strong>addGateway</strong>(string $identifier, <a href="../../../../eZ/Publish/Core/FieldType/StorageGateway.html"><abbr title="eZ\Publish\Core\FieldType\StorageGateway">StorageGateway</abbr></a> $gateway)</code>
+    </h3>
+    <div class="details">
+        <p>Adds a storage $gateway assigned to the given $identifier</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$identifier</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../eZ/Publish/Core/FieldType/StorageGateway.html"><abbr title="eZ\Publish\Core\FieldType\StorageGateway">StorageGateway</abbr></a></td>
+                <td>$gateway</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>
