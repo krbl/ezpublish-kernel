@@ -1,7 +1,5 @@
 var NAVTREEINDEX8 =
 {
-"RelationCreate_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,4,0,19],
-"RelationList_2RelationListStorage_2Gateway_2LegacyStorage_8php.html":[4,0,0,0,0,0,0,0,0,1,1,1,19,0,0,0],
 "RelationList_2RelationListStorage_2Gateway_2LegacyStorage_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,1,19,0,0,0],
 "RelationStorage_8php.html":[4,0,0,0,0,0,0,0,0,1,1,1,18,1],
 "RelationStorage_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,1,18,1],
@@ -211,8 +209,8 @@ var NAVTREEINDEX8 =
 "Server_2Values_2SectionList_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,49],
 "Server_2View_2Visitor_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,7,2],
 "Server_2View_2Visitor_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,7,2],
-"ServiceContainer_8php.html":[4,0,0,0,0,0,0,0,0,1,1,0,5],
-"ServiceContainer_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,0,5],
+"ServiceContainer_8php.html":[4,0,0,0,0,0,0,0,0,1,1,0,4],
+"ServiceContainer_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,0,4],
 "Service_8php.html":[4,0,0,0,0,0,0,0,0,1,1,1,15,1],
 "Service_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,1,15,1],
 "SessionInitByPostListener_8php.html":[4,0,0,0,0,0,0,0,0,0,0,3,1],
@@ -249,5 +247,7 @@ var NAVTREEINDEX8 =
 "Slot_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,16],
 "SortClauseConverter_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,5,0,6],
 "SortClauseConverter_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,5,0,6],
-"SortClauseHandler_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,5,0,7]
+"SortClauseHandler_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,5,0,7],
+"SortClauseHandler_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,5,0,7],
+"SortClauseVisitor_2Aggregate_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,4,0]
 };

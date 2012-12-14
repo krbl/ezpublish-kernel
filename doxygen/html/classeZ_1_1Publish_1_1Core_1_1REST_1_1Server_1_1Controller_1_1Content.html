@@ -277,9 +277,9 @@ Protected Attributes</h2></td></tr>
 <p>Creates a new content object as copy under the given parent location given in the destination header.</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00296">296</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00309">309</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00296">eZ\Publish\Core\REST\Server\Controller\Content\copyContent()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00309">eZ\Publish\Core\REST\Server\Controller\Content\copyContent()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;object&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line">        $destinationValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;location&#39;</span>, $this-&gt;request-&gt;destination );</div>
@@ -337,9 +337,9 @@ Protected Attributes</h2></td></tr>
 <p>Creates a new content draft assigned to the authenticated user. If a different userId is given in the input it is assigned to the given user but this required special rights for the authenticated user (this is useful for content staging where the transfer process does not have to authenticate with the user which created the content object in the source server). The user has to publish the content if it should be visible.</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00249">249</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00253">253</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00249">eZ\Publish\Core\REST\Server\Controller\Content\createContent()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00253">eZ\Publish\Core\REST\Server\Controller\Content\createContent()</a>, and <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00706">eZ\Publish\Core\REST\Server\Controller\Content\getMediaType()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $contentCreate = $this-&gt;inputDispatcher-&gt;parse(</div>
 <div class="line">            <span class="keyword">new</span> Message(</div>
@@ -353,12 +353,21 @@ Protected Attributes</h2></td></tr>
 <div class="line">            array( $contentCreate-&gt;locationCreateStruct )</div>
 <div class="line">        );</div>
 <div class="line"></div>
+<div class="line">        $contentValue = null;</div>
+<div class="line">        $relations = null;</div>
+<div class="line">        <span class="keywordflow">if</span> ( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content.html#ad6cd47cbf6d0931d16472c467ce9c11c">getMediaType</a>( $this-&gt;request ) === <span class="stringliteral">&#39;application/vnd.ez.api.content&#39;</span> )</div>
+<div class="line">        {</div>
+<div class="line">            $contentValue = $content;</div>
+<div class="line">            $relations = $this-&gt;contentService-&gt;loadRelations( $contentValue-&gt;getVersionInfo() );</div>
+<div class="line">        }</div>
+<div class="line"></div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\CreatedContent(</div>
 <div class="line">            array(</div>
 <div class="line">                <span class="stringliteral">&#39;content&#39;</span> =&gt; <span class="keyword">new</span> Values\RestContent(</div>
 <div class="line">                    $content-&gt;contentInfo,</div>
 <div class="line">                    null,</div>
-<div class="line">                    $this-&gt;getMediaType( $this-&gt;request ) === <span class="stringliteral">&#39;application/vnd.ez.api.content&#39;</span> ? $content : null</div>
+<div class="line">                    $contentValue,</div>
+<div class="line">                    $relations</div>
 <div class="line">                )</div>
 <div class="line">            )</div>
 <div class="line">        );</div>
@@ -371,7 +380,7 @@ Protected Attributes</h2></td></tr>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content_a0e86997ec6c1dd934607d69ecd44bd40_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content_a0e86997ec6c1dd934607d69ecd44bd40_cgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content_a0e86997ec6c1dd934607d69ecd44bd40_cgraph" id="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content_a0e86997ec6c1dd934607d69ecd44bd40_cgraph">
-</map>
+<area shape="rect" id="node4" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content.html#ad6cd47cbf6d0931d16472c467ce9c11c" title="eZ\\Publish\\Core\\REST\l\\Server\\Controller\\Content\l\\getMediaType" alt="" coords="243,29,432,93"/></map>
 </div>
 </p>
 
@@ -403,9 +412,9 @@ Protected Attributes</h2></td></tr>
 <p>The system creates a new draft version as a copy from the current version</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00390">390</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00404">404</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00390">eZ\Publish\Core\REST\Server\Controller\Content\createDraftFromCurrentVersion()</a>, and <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00023">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_DRAFT</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00404">eZ\Publish\Core\REST\Server\Controller\Content\createDraftFromCurrentVersion()</a>, and <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00023">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_DRAFT</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectCurrentVersion&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -424,7 +433,8 @@ Protected Attributes</h2></td></tr>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\CreatedVersion(</div>
 <div class="line">            array(</div>
 <div class="line">                <span class="stringliteral">&#39;version&#39;</span> =&gt; <span class="keyword">new</span> Values\Version(</div>
-<div class="line">                    $contentDraft</div>
+<div class="line">                    $contentDraft,</div>
+<div class="line">                    $this-&gt;contentService-&gt;loadRelations( $contentDraft-&gt;getVersionInfo() )</div>
 <div class="line">                )</div>
 <div class="line">            )</div>
 <div class="line">        );</div>
@@ -469,9 +479,9 @@ Protected Attributes</h2></td></tr>
 <p>The system creates a new draft version as a copy from the given version</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00364">364</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00377">377</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00364">eZ\Publish\Core\REST\Server\Controller\Content\createDraftFromVersion()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00377">eZ\Publish\Core\REST\Server\Controller\Content\createDraftFromVersion()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectVersion&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -486,7 +496,8 @@ Protected Attributes</h2></td></tr>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\CreatedVersion(</div>
 <div class="line">            array(</div>
 <div class="line">                <span class="stringliteral">&#39;version&#39;</span> =&gt; <span class="keyword">new</span> Values\Version(</div>
-<div class="line">                    $contentDraft</div>
+<div class="line">                    $contentDraft,</div>
+<div class="line">                    $this-&gt;contentService-&gt;loadRelations( $contentDraft-&gt;getVersionInfo() )</div>
 <div class="line">                )</div>
 <div class="line">            )</div>
 <div class="line">        );</div>
@@ -531,9 +542,9 @@ Protected Attributes</h2></td></tr>
 <p>Creates a new relation of type COMMON for the given draft.</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00619">619</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00637">637</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00619">eZ\Publish\Core\REST\Server\Controller\Content\createRelation()</a>, and <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00023">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_DRAFT</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00637">eZ\Publish\Core\REST\Server\Controller\Content\createRelation()</a>, and <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00023">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_DRAFT</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectVersionRelations&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line">        $destinationContentId = $updateStruct = $this-&gt;inputDispatcher-&gt;parse(</div>
@@ -615,9 +626,9 @@ Protected Attributes</h2></td></tr>
 <p>Creates and executes a content view</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00667">667</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00685">685</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00667">eZ\Publish\Core\REST\Server\Controller\Content\createView()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00685">eZ\Publish\Core\REST\Server\Controller\Content\createView()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $viewInput = $this-&gt;inputDispatcher-&gt;parse(</div>
 <div class="line">            <span class="keyword">new</span> Message(</div>
@@ -672,9 +683,9 @@ Protected Attributes</h2></td></tr>
 <p>The content is deleted. If the content has locations (which is required in 4.x) on delete all locations assigned the content object are deleted via delete subtree.</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00280">280</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00293">293</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00280">eZ\Publish\Core\REST\Server\Controller\Content\deleteContent()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00293">eZ\Publish\Core\REST\Server\Controller\Content\deleteContent()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;object&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -724,9 +735,9 @@ Protected Attributes</h2></td></tr>
 <p>The version is deleted</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00338">338</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00351">351</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00338">eZ\Publish\Core\REST\Server\Controller\Content\deleteContentVersion()</a>, and <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00024">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_PUBLISHED</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00351">eZ\Publish\Core\REST\Server\Controller\Content\deleteContentVersion()</a>, and <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00024">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_PUBLISHED</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectVersion&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -794,9 +805,9 @@ Protected Attributes</h2></td></tr>
 <p>Extracts the requested media type from $request</p>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00688">688</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00706">706</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00688">eZ\Publish\Core\REST\Server\Controller\Content\getMediaType()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00706">eZ\Publish\Core\REST\Server\Controller\Content\getMediaType()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $this-&gt;request-&gt;mimetype as $mimeType )</div>
 <div class="line">        {</div>
@@ -826,7 +837,7 @@ Protected Attributes</h2></td></tr>
 <div id="dynsection-21-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content_ad6cd47cbf6d0931d16472c467ce9c11c_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content_ad6cd47cbf6d0931d16472c467ce9c11c_icgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content_ad6cd47cbf6d0931d16472c467ce9c11c_icgraph" id="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content_ad6cd47cbf6d0931d16472c467ce9c11c_icgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content.html#a89c96cba176ac7c86150116d10faa624" title="eZ\\Publish\\Core\\REST\l\\Server\\Controller\\Content\l\\loadContent" alt="" coords="243,29,432,93"/></map>
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content.html#a89c96cba176ac7c86150116d10faa624" title="eZ\\Publish\\Core\\REST\l\\Server\\Controller\\Content\l\\loadContent" alt="" coords="243,29,432,93"/><area shape="rect" id="node6" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content.html#a0e86997ec6c1dd934607d69ecd44bd40" title="eZ\\Publish\\Core\\REST\l\\Server\\Controller\\Content\l\\createContent" alt="" coords="243,141,432,205"/></map>
 </div>
 </p>
 
@@ -849,7 +860,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00105">105</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00688">eZ\Publish\Core\REST\Server\Controller\Content\getMediaType()</a>, and <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00105">eZ\Publish\Core\REST\Server\Controller\Content\loadContent()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00706">eZ\Publish\Core\REST\Server\Controller\Content\getMediaType()</a>, and <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00105">eZ\Publish\Core\REST\Server\Controller\Content\loadContent()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $questionMark = strpos( $this-&gt;request-&gt;path, <span class="charliteral">&#39;?&#39;</span> );</div>
 <div class="line">        $requestPath = $questionMark !== <span class="keyword">false</span> ? substr( $this-&gt;request-&gt;path, 0, $questionMark ) : $this-&gt;request-&gt;path;</div>
@@ -860,6 +871,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">        $mainLocation = $this-&gt;locationService-&gt;loadLocation( $contentInfo-&gt;mainLocationId );</div>
 <div class="line"></div>
 <div class="line">        $contentVersion = null;</div>
+<div class="line">        $relations = null;</div>
 <div class="line">        <span class="keywordflow">if</span> ( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content.html#ad6cd47cbf6d0931d16472c467ce9c11c">getMediaType</a>( $this-&gt;request ) === <span class="stringliteral">&#39;application/vnd.ez.api.content&#39;</span> )</div>
 <div class="line">        {</div>
 <div class="line">            $languages = null;</div>
@@ -869,9 +881,10 @@ Protected Attributes</h2></td></tr>
 <div class="line">            }</div>
 <div class="line"></div>
 <div class="line">            $contentVersion = $this-&gt;contentService-&gt;loadContent( $urlValues[<span class="stringliteral">&#39;object&#39;</span>], $languages );</div>
+<div class="line">            $relations = $this-&gt;contentService-&gt;loadRelations( $contentVersion-&gt;getVersionInfo() );</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\RestContent( $contentInfo, $mainLocation, $contentVersion, $this-&gt;request-&gt;path );</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\RestContent( $contentInfo, $mainLocation, $contentVersion, $relations, $this-&gt;request-&gt;path );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 <p><div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -971,9 +984,9 @@ Protected Attributes</h2></td></tr>
 <p>Loads a specific version of a given content object</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00215">215</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00217">217</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00215">eZ\Publish\Core\REST\Server\Controller\Content\loadContentInVersion()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00217">eZ\Publish\Core\REST\Server\Controller\Content\loadContentInVersion()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $questionMark = strpos( $this-&gt;request-&gt;path, <span class="charliteral">&#39;?&#39;</span> );</div>
 <div class="line">        $requestPath = $questionMark !== <span class="keyword">false</span> ? substr( $this-&gt;request-&gt;path, 0, $questionMark ) : $this-&gt;request-&gt;path;</div>
@@ -986,12 +999,14 @@ Protected Attributes</h2></td></tr>
 <div class="line">            $languages = explode( <span class="charliteral">&#39;,&#39;</span>, $this-&gt;request-&gt;variables[<span class="stringliteral">&#39;languages&#39;</span>] );</div>
 <div class="line">        }</div>
 <div class="line"></div>
+<div class="line">        $content = $this-&gt;contentService-&gt;loadContent(</div>
+<div class="line">            $urlValues[<span class="stringliteral">&#39;object&#39;</span>],</div>
+<div class="line">            $languages,</div>
+<div class="line">            $urlValues[<span class="stringliteral">&#39;version&#39;</span>]</div>
+<div class="line">        );</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\Version(</div>
-<div class="line">            $this-&gt;contentService-&gt;loadContent(</div>
-<div class="line">                $urlValues[<span class="stringliteral">&#39;object&#39;</span>],</div>
-<div class="line">                $languages,</div>
-<div class="line">                $urlValues[<span class="stringliteral">&#39;version&#39;</span>]</div>
-<div class="line">            ),</div>
+<div class="line">            $content,</div>
+<div class="line">            $this-&gt;contentService-&gt;loadRelations( $content-&gt;getVersionInfo() ),</div>
 <div class="line">            $this-&gt;request-&gt;path</div>
 <div class="line">        );</div>
 <div class="line">    }</div>
@@ -1035,9 +1050,9 @@ Protected Attributes</h2></td></tr>
 <p>Returns a list of all versions of the content. This method does not include fields and relations in the Version elements of the response.</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00321">321</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00334">334</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00321">eZ\Publish\Core\REST\Server\Controller\Content\loadContentVersions()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00334">eZ\Publish\Core\REST\Server\Controller\Content\loadContentVersions()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectVersions&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -1088,9 +1103,9 @@ Protected Attributes</h2></td></tr>
 <p>Loads a relation for the given content object and version</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00555">555</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00573">573</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00555">eZ\Publish\Core\REST\Server\Controller\Content\loadVersionRelation()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00573">eZ\Publish\Core\REST\Server\Controller\Content\loadVersionRelation()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectVersionRelation&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -1151,9 +1166,9 @@ Protected Attributes</h2></td></tr>
 <p>Loads the relations of the given version</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00519">519</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00537">537</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00519">eZ\Publish\Core\REST\Server\Controller\Content\loadVersionRelations()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00537">eZ\Publish\Core\REST\Server\Controller\Content\loadVersionRelations()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $questionMark = strpos( $this-&gt;request-&gt;path, <span class="charliteral">&#39;?&#39;</span> );</div>
 <div class="line">        $requestPath = $questionMark !== <span class="keyword">false</span> ? substr( $this-&gt;request-&gt;path, 0, $questionMark ) : $this-&gt;request-&gt;path;</div>
@@ -1223,9 +1238,9 @@ Protected Attributes</h2></td></tr>
 <p>The content version is published</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00472">472</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00490">490</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00472">eZ\Publish\Core\REST\Server\Controller\Content\publishVersion()</a>, and <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00023">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_DRAFT</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00490">eZ\Publish\Core\REST\Server\Controller\Content\publishVersion()</a>, and <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00023">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_DRAFT</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectVersion&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -1285,9 +1300,9 @@ Protected Attributes</h2></td></tr>
 <p>Loads a specific version of a given content object</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00191">191</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00193">193</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00191">eZ\Publish\Core\REST\Server\Controller\Content\redirectCurrentVersion()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00193">eZ\Publish\Core\REST\Server\Controller\Content\redirectCurrentVersion()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectCurrentVersion&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -1345,9 +1360,9 @@ Protected Attributes</h2></td></tr>
 <p>Redirects to the relations of the current version</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00498">498</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00516">516</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00498">eZ\Publish\Core\REST\Server\Controller\Content\redirectCurrentVersionRelations()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00516">eZ\Publish\Core\REST\Server\Controller\Content\redirectCurrentVersionRelations()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectrelations&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -1402,9 +1417,9 @@ Protected Attributes</h2></td></tr>
 <p>Deletes a relation of the given draft.</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00582">582</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00600">600</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00582">eZ\Publish\Core\REST\Server\Controller\Content\removeRelation()</a>, and <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00023">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_DRAFT</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00600">eZ\Publish\Core\REST\Server\Controller\Content\removeRelation()</a>, and <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00023">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_DRAFT</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;objectVersionRelation&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -1475,9 +1490,9 @@ Protected Attributes</h2></td></tr>
 <p>Updates a content's metadata</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00135">135</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00137">137</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00135">eZ\Publish\Core\REST\Server\Controller\Content\updateContentMetadata()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00137">eZ\Publish\Core\REST\Server\Controller\Content\updateContentMetadata()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $updateStruct = $this-&gt;inputDispatcher-&gt;parse(</div>
 <div class="line">            <span class="keyword">new</span> Message(</div>
@@ -1567,9 +1582,9 @@ Protected Attributes</h2></td></tr>
 <p>A specific draft is updated.</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00420">420</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00435">435</a> of file <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html">Content.php</a>.</p>
 
-<p>References <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00023">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_DRAFT</a>, and <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00420">eZ\Publish\Core\REST\Server\Controller\Content\updateVersion()</a>.</p>
+<p>References <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00023">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_DRAFT</a>, and <a class="el" href="Publish_2Core_2REST_2Server_2Controller_2Content_8php_source.html#l00435">eZ\Publish\Core\REST\Server\Controller\Content\updateVersion()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $questionMark = strpos( $this-&gt;request-&gt;path, <span class="charliteral">&#39;?&#39;</span> );</div>
 <div class="line">        $requestPath = $questionMark !== <span class="keyword">false</span> ? substr( $this-&gt;request-&gt;path, 0, $questionMark ) : $this-&gt;request-&gt;path;</div>
@@ -1606,12 +1621,15 @@ Protected Attributes</h2></td></tr>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Reload the content to handle languages GET parameter</span></div>
+<div class="line">        $content = $this-&gt;contentService-&gt;loadContent(</div>
+<div class="line">            $urlValues[<span class="stringliteral">&#39;object&#39;</span>],</div>
+<div class="line">            $languages,</div>
+<div class="line">            $versionInfo-&gt;versionNo</div>
+<div class="line">        );</div>
+<div class="line"></div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\Version(</div>
-<div class="line">            $this-&gt;contentService-&gt;loadContent(</div>
-<div class="line">                $urlValues[<span class="stringliteral">&#39;object&#39;</span>],</div>
-<div class="line">                $languages,</div>
-<div class="line">                $versionInfo-&gt;versionNo</div>
-<div class="line">            ),</div>
+<div class="line">            $content,</div>
+<div class="line">            $this-&gt;contentService-&gt;loadRelations( $content-&gt;getVersionInfo() ),</div>
 <div class="line">            $this-&gt;request-&gt;path</div>
 <div class="line">        );</div>
 <div class="line">    }</div>
@@ -1738,7 +1756,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html">REST</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server.html">Server</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller.html">Controller</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content.html">Content</a></li>
-    <li class="footer">Generated on Thu Dec 13 2012 00:03:28 for ezp-next by
+    <li class="footer">Generated on Fri Dec 14 2012 00:03:37 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

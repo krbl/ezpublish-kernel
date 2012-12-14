@@ -350,7 +350,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Content_2Mapper_8php_source.html#l00132">132</a> of file <a class="el" href="Content_2Mapper_8php_source.html">Mapper.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2SPI_2Persistence_2Content_8php_source.html#l00028">eZ\Publish\SPI\Persistence\Content\$versionInfo</a>, and <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00023">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_DRAFT</a>.</p>
+<p>References <a class="el" href="Publish_2SPI_2Persistence_2Content_8php_source.html#l00027">eZ\Publish\SPI\Persistence\Content\$versionInfo</a>, and <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00023">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_DRAFT</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html#a84b1b1ffdd9ab42ec9750189944f5638">$versionInfo</a> = <span class="keyword">new</span> VersionInfo;</div>
 <div class="line"></div>
@@ -404,7 +404,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Content_2Mapper_8php_source.html#l00095">95</a> of file <a class="el" href="Content_2Mapper_8php_source.html">Mapper.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2SPI_2Persistence_2Content_8php_source.html#l00028">eZ\Publish\SPI\Persistence\Content\$versionInfo</a>, and <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00023">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_DRAFT</a>.</p>
+<p>References <a class="el" href="Publish_2SPI_2Persistence_2Content_8php_source.html#l00027">eZ\Publish\SPI\Persistence\Content\$versionInfo</a>, and <a class="el" href="SPI_2Persistence_2Content_2VersionInfo_8php_source.html#l00023">eZ\Publish\SPI\Persistence\Content\VersionInfo\STATUS_DRAFT</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html#a84b1b1ffdd9ab42ec9750189944f5638">$versionInfo</a> = <span class="keyword">new</span> VersionInfo;</div>
 <div class="line"></div>
@@ -460,7 +460,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Content_2Mapper_8php_source.html#l00180">180</a> of file <a class="el" href="Content_2Mapper_8php_source.html">Mapper.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2SPI_2Persistence_2Content_8php_source.html#l00042">eZ\Publish\SPI\Persistence\Content\$fields</a>, <a class="el" href="Publish_2SPI_2Persistence_2Content_8php_source.html#l00028">eZ\Publish\SPI\Persistence\Content\$versionInfo</a>, <a class="el" href="Content_2Mapper_8php_source.html#l00239">eZ\Publish\Core\Persistence\Legacy\Content\Mapper\extractContentInfoFromRow()</a>, and <a class="el" href="Content_2Mapper_8php_source.html#l00354">eZ\Publish\Core\Persistence\Legacy\Content\Mapper\extractFieldFromRow()</a>.</p>
+<p>References <a class="el" href="Publish_2SPI_2Persistence_2Content_8php_source.html#l00034">eZ\Publish\SPI\Persistence\Content\$fields</a>, <a class="el" href="Publish_2SPI_2Persistence_2Content_8php_source.html#l00027">eZ\Publish\SPI\Persistence\Content\$versionInfo</a>, <a class="el" href="Content_2Mapper_8php_source.html#l00239">eZ\Publish\Core\Persistence\Legacy\Content\Mapper\extractContentInfoFromRow()</a>, and <a class="el" href="Content_2Mapper_8php_source.html#l00354">eZ\Publish\Core\Persistence\Legacy\Content\Mapper\extractFieldFromRow()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $contentInfos = array();</div>
 <div class="line">        $versionInfos = array();</div>
@@ -877,20 +877,20 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Content_2Mapper_8php_source.html#l00436">436</a> of file <a class="el" href="Content_2Mapper_8php_source.html">Mapper.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2SPI_2Persistence_2Content_8php_source.html#l00035">eZ\Publish\SPI\Persistence\Content\$relations</a>, and <a class="el" href="Content_2Mapper_8php_source.html#l00459">eZ\Publish\Core\Persistence\Legacy\Content\Mapper\extractRelationFromRow()</a>.</p>
+<p>References <a class="el" href="Content_2Mapper_8php_source.html#l00459">eZ\Publish\Core\Persistence\Legacy\Content\Mapper\extractRelationFromRow()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html#a614dd086139d2a550970388c04a5b868">$relations</a> = array();</div>
+<div class="line">        $relations = array();</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $rows as $row )</div>
 <div class="line">        {</div>
 <div class="line">            $id = (int)$row[<span class="stringliteral">&#39;ezcontentobject_link_id&#39;</span>];</div>
-<div class="line">            <span class="keywordflow">if</span> ( !isset( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html#a614dd086139d2a550970388c04a5b868">$relations</a>[$id] ) )</div>
+<div class="line">            <span class="keywordflow">if</span> ( !isset( $relations[$id] ) )</div>
 <div class="line">            {</div>
-<div class="line">                <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html#a614dd086139d2a550970388c04a5b868">$relations</a>[$id] = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Mapper.html#a4b417bf752fd6c43b0e060624fc29449">extractRelationFromRow</a>( $row );</div>
+<div class="line">                $relations[$id] = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Mapper.html#a4b417bf752fd6c43b0e060624fc29449">extractRelationFromRow</a>( $row );</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html#a614dd086139d2a550970388c04a5b868">$relations</a>;</div>
+<div class="line">        <span class="keywordflow">return</span> $relations;</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 <p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -930,7 +930,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Content_2Mapper_8php_source.html#l00293">293</a> of file <a class="el" href="Content_2Mapper_8php_source.html">Mapper.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2SPI_2Persistence_2Content_8php_source.html#l00028">eZ\Publish\SPI\Persistence\Content\$versionInfo</a>, <a class="el" href="Content_2Mapper_8php_source.html#l00239">eZ\Publish\Core\Persistence\Legacy\Content\Mapper\extractContentInfoFromRow()</a>, and <a class="el" href="Content_2Mapper_8php_source.html#l00330">eZ\Publish\Core\Persistence\Legacy\Content\Mapper\extractLanguageIdsFromMask()</a>.</p>
+<p>References <a class="el" href="Publish_2SPI_2Persistence_2Content_8php_source.html#l00027">eZ\Publish\SPI\Persistence\Content\$versionInfo</a>, <a class="el" href="Content_2Mapper_8php_source.html#l00239">eZ\Publish\Core\Persistence\Legacy\Content\Mapper\extractContentInfoFromRow()</a>, and <a class="el" href="Content_2Mapper_8php_source.html#l00330">eZ\Publish\Core\Persistence\Legacy\Content\Mapper\extractLanguageIdsFromMask()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $versionInfoList = array();</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $rows as $row )</div>
@@ -1027,7 +1027,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Mapper.html">Mapper</a></li>
-    <li class="footer">Generated on Thu Dec 13 2012 00:03:23 for ezp-next by
+    <li class="footer">Generated on Fri Dec 14 2012 00:03:32 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

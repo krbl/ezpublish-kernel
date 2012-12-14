@@ -92,8 +92,6 @@ var NAVTREEINDEX1 =
 "ChainRoutingPass_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,2,0,2],
 "Checkbox_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,0,0,3],
 "Checkbox_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,0,0,3],
-"ClassLoader_8php.html":[4,0,0,0,0,0,0,0,0,1,1,0,2],
-"ClassLoader_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,0,2],
 "Client_2HttpClient_2Authentication_2BasicAuth_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,1,0,0],
 "Client_2HttpClient_2Authentication_2BasicAuth_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,1,0,0],
 "Client_2Input_2Parser_2ContentList_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,2],
@@ -138,8 +136,8 @@ var NAVTREEINDEX1 =
 "ConfigurationConverter_8php_source.html":[4,0,0,0,0,0,0,0,0,0,1,5,0],
 "ConfigurationDumper_8php.html":[4,0,0,0,0,0,0,0,0,0,1,5,1],
 "ConfigurationDumper_8php_source.html":[4,0,0,0,0,0,0,0,0,0,1,5,1],
-"ConfigurationManager_8php.html":[4,0,0,0,0,0,0,0,0,1,1,0,4],
-"ConfigurationManager_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,0,4],
+"ConfigurationManager_8php.html":[4,0,0,0,0,0,0,0,0,1,1,0,3],
+"ConfigurationManager_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,0,3],
 "ConfiguredLocalFileService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,11],
 "ConfiguredLocalFileService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,11],
 "ConfiguredLocalImageService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,4,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX1 =
 "Content_2UrlWildcard_2Gateway_2EzcDatabase_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,9,0,1],
 "Content_2UrlWildcard_2Gateway_2EzcDatabase_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,9,0,1],
 "Content_2UrlWildcard_2Mapper_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,9,3],
-"Content_2UrlWildcard_2Mapper_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,9,3]
+"Content_2UrlWildcard_2Mapper_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,9,3],
+"Controller_2Trash_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,1,7],
+"Controller_2Trash_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,1,7]
 };

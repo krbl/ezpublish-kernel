@@ -22,7 +22,6 @@ var classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentService =
     [ "loadContentInfo", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentService.html#a14a73d0a622ebba660d9d59a17de31c5", null ],
     [ "loadContentInfoByRemoteId", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentService.html#ab421ac37b549872211544ebc26988987", null ],
     [ "loadRelations", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentService.html#abe650f896ea3d95509f4874edd0045a1", null ],
-    [ "loadRelationsByListId", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentService.html#a1941a0ae67d0f64bf88de8078a96ef21", null ],
     [ "loadReverseRelations", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentService.html#a76f9e7d715adae3724d182484bd99a22", null ],
     [ "loadTranslationInfos", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentService.html#a0fabfc7199e2b0dab39a9077d416b984", null ],
     [ "loadVersionInfo", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentService.html#a11c0b368c79eff8d275f0797c4b84c0b", null ],

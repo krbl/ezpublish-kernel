@@ -1,16 +1,13 @@
 var NAVTREEINDEX12 =
 {
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#a9b773541b8aa4c41f5935c1fec052e21":[3,0,0,1,0,0,1,1,9,9],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#aa2a3fb469ed71dd51eb303cf72d7a578":[3,0,0,1,0,0,1,1,9,8],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#aca42f8145f10014b4189d42aa70feb78":[3,0,0,1,0,0,1,1,9,10],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#ad69ea6066e8cd9cdce7dde96ce5c386e":[3,0,0,1,0,0,1,1,9,1],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#af918ab81710157113dd06e961afd4ec1":[3,0,0,1,0,0,1,1,9,5],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html":[3,0,0,1,0,0,1,0,2],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html#a48aff9182eb4ba16343df418ad5b4555":[3,0,0,1,0,0,1,0,2,3],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html#a6a4e8b692e7d66501616ae5369fda9c4":[3,0,0,1,0,0,1,0,2,2],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html#a8646e8c4f3e150178dd129783861be85":[3,0,0,1,0,0,1,0,2,0],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html#acac847e80ac66445c22e4bc454a5fd4a":[3,0,0,1,0,0,1,0,2,1],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html#ae924926693b3b0978a5c70a1bacdd4bf":[3,0,0,1,0,0,1,0,2,4],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html#ae924926693b3b0978a5c70a1bacdd4bf":[3,0,0,1,0,0,1,0,2,3],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentCreateStruct.html":[3,0,0,1,0,0,1,0,3],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentCreateStruct.html#a0542c0ae2db3090e10b4dcef8f092fac":[3,0,0,1,0,0,1,0,3,5],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentCreateStruct.html#a145988a21abb6605a360cd9f0a382b0d":[3,0,0,1,0,0,1,0,3,4],
@@ -249,5 +246,8 @@ var NAVTREEINDEX12 =
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#ac71dcf8c325b3656bf97413f8b13d1af":[3,0,0,1,0,0,1,0,0,1,2,0],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#ad8ed02267e87c2c88485cba9a28d6aee":[3,0,0,1,0,0,1,0,0,1,2,6],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1FieldFacetBuilder.html":[3,0,0,1,0,0,1,0,0,1,3],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1FieldFacetBuilder.html#a226fc393859a5b454bf0752e51ded3ba":[3,0,0,1,0,0,1,0,0,1,3,2]
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1FieldFacetBuilder.html#a226fc393859a5b454bf0752e51ded3ba":[3,0,0,1,0,0,1,0,0,1,3,2],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1FieldFacetBuilder.html#a25c8ac10c9bd4b9b64266b25fbee839d":[3,0,0,1,0,0,1,0,0,1,3,6],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1FieldFacetBuilder.html#a27a2368cb51adb7fc781c779b5a7bcd5":[3,0,0,1,0,0,1,0,0,1,3,0],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1FieldFacetBuilder.html#a3bd413c612935df8acc20397c1e8ca41":[3,0,0,1,0,0,1,0,0,1,3,1]
 };

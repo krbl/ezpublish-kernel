@@ -1,7 +1,5 @@
 var NAVTREEINDEX9 =
 {
-"SortClauseHandler_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,5,0,7],
-"SortClauseVisitor_2Aggregate_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,4,0],
 "SortClauseVisitor_2Aggregate_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,4,0],
 "SortClauseVisitor_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,12],
 "SortClauseVisitor_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,12],
@@ -249,5 +247,7 @@ var NAVTREEINDEX9 =
 "Values_2CreatedRole_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,14],
 "Values_2CreatedSection_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,15],
 "Values_2CreatedSection_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,15],
-"Values_2CreatedURLAlias_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,16]
+"Values_2CreatedURLAlias_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,16],
+"Values_2CreatedURLAlias_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,16],
+"Values_2CreatedURLWildcard_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,17]
 };

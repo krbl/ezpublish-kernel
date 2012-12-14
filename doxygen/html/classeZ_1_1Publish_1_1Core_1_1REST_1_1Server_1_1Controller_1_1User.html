@@ -297,9 +297,9 @@ Protected Attributes</h2></td></tr>
 <p>Assigns the user to a user group</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00774">774</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00825">825</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00774">eZ\Publish\Core\REST\Server\Controller\User\assignUserToUserGroup()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00825">eZ\Publish\Core\REST\Server\Controller\User\assignUserToUserGroup()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;userGroupAssign&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -342,7 +342,12 @@ Protected Attributes</h2></td></tr>
 <div class="line">        {</div>
 <div class="line">            $userGroupContentInfo = $userGroup-&gt;getVersionInfo()-&gt;getContentInfo();</div>
 <div class="line">            $userGroupLocation = $this-&gt;locationService-&gt;loadLocation( $userGroupContentInfo-&gt;mainLocationId );</div>
-<div class="line">            $restUserGroups[] = <span class="keyword">new</span> Values\RestUserGroup( $userGroup, $userGroupContentInfo, $userGroupLocation );</div>
+<div class="line">            $restUserGroups[] = <span class="keyword">new</span> Values\RestUserGroup(</div>
+<div class="line">                $userGroup,</div>
+<div class="line">                $userGroupContentInfo,</div>
+<div class="line">                $userGroupLocation,</div>
+<div class="line">                $this-&gt;contentService-&gt;loadRelations( $userGroup-&gt;getVersionInfo() )</div>
+<div class="line">            );</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\UserGroupRefList(</div>
@@ -391,9 +396,9 @@ Protected Attributes</h2></td></tr>
 <p>Create a new user group in the given group</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00227">227</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00230">230</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00227">eZ\Publish\Core\REST\Server\Controller\User\createUser()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00230">eZ\Publish\Core\REST\Server\Controller\User\createUser()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;groupUsers&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -425,7 +430,8 @@ Protected Attributes</h2></td></tr>
 <div class="line">                <span class="stringliteral">&#39;user&#39;</span> =&gt; <span class="keyword">new</span> Values\RestUser(</div>
 <div class="line">                    $createdUser,</div>
 <div class="line">                    $createdContentInfo,</div>
-<div class="line">                    $createdLocation</div>
+<div class="line">                    $createdLocation,</div>
+<div class="line">                    $this-&gt;contentService-&gt;loadRelations( $createdUser-&gt;getVersionInfo() )</div>
 <div class="line">                )</div>
 <div class="line">            )</div>
 <div class="line">        );</div>
@@ -470,9 +476,9 @@ Protected Attributes</h2></td></tr>
 <p>Create a new user group under the given parent To create a top level group use /user/groups/subgroups</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00172">172</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00174">174</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00172">eZ\Publish\Core\REST\Server\Controller\User\createUserGroup()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00174">eZ\Publish\Core\REST\Server\Controller\User\createUserGroup()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">try</span></div>
 <div class="line">        {</div>
@@ -516,7 +522,8 @@ Protected Attributes</h2></td></tr>
 <div class="line">                <span class="stringliteral">&#39;userGroup&#39;</span> =&gt; <span class="keyword">new</span> Values\RestUserGroup(</div>
 <div class="line">                    $createdUserGroup,</div>
 <div class="line">                    $createdContentInfo,</div>
-<div class="line">                    $createdLocation</div>
+<div class="line">                    $createdLocation,</div>
+<div class="line">                    $this-&gt;contentService-&gt;loadRelations( $createdUserGroup-&gt;getVersionInfo() )</div>
 <div class="line">                )</div>
 <div class="line">            )</div>
 <div class="line">        );</div>
@@ -561,9 +568,9 @@ Protected Attributes</h2></td></tr>
 <p>Given user is deleted</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00387">387</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00393">393</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00387">eZ\Publish\Core\REST\Server\Controller\User\deleteUser()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00393">eZ\Publish\Core\REST\Server\Controller\User\deleteUser()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;user&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -620,9 +627,9 @@ Protected Attributes</h2></td></tr>
 <p>Given user group is deleted</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00358">358</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00364">364</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00358">eZ\Publish\Core\REST\Server\Controller\User\deleteUserGroup()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00364">eZ\Publish\Core\REST\Server\Controller\User\deleteUserGroup()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;group&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -693,9 +700,9 @@ Protected Attributes</h2></td></tr>
 <p>Extracts the requested media type from $request</p>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00845">845</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00901">901</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00845">eZ\Publish\Core\REST\Server\Controller\User\getMediaType()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00901">eZ\Publish\Core\REST\Server\Controller\User\getMediaType()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $this-&gt;request-&gt;mimetype as $mimeType )</div>
 <div class="line">        {</div>
@@ -795,9 +802,9 @@ Protected Attributes</h2></td></tr>
 <p>Returns a list of the sub groups</p>
 <dl class="section return"><dt>Returns</dt><dd>| </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00627">627</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00658">658</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00845">eZ\Publish\Core\REST\Server\Controller\User\getMediaType()</a>, and <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00627">eZ\Publish\Core\REST\Server\Controller\User\loadSubUserGroups()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00901">eZ\Publish\Core\REST\Server\Controller\User\getMediaType()</a>, and <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00658">eZ\Publish\Core\REST\Server\Controller\User\loadSubUserGroups()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;groupSubgroups&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -816,7 +823,12 @@ Protected Attributes</h2></td></tr>
 <div class="line">        {</div>
 <div class="line">            $subGroupContentInfo = $subGroup-&gt;getVersionInfo()-&gt;getContentInfo();</div>
 <div class="line">            $subGroupLocation = $this-&gt;locationService-&gt;loadLocation( $subGroupContentInfo-&gt;mainLocationId );</div>
-<div class="line">            $restUserGroups[] = <span class="keyword">new</span> Values\RestUserGroup( $subGroup, $subGroupContentInfo, $subGroupLocation );</div>
+<div class="line">            $restUserGroups[] = <span class="keyword">new</span> Values\RestUserGroup(</div>
+<div class="line">                $subGroup,</div>
+<div class="line">                $subGroupContentInfo,</div>
+<div class="line">                $subGroupLocation,</div>
+<div class="line">                $this-&gt;contentService-&gt;loadRelations( $subGroup-&gt;getVersionInfo() )</div>
+<div class="line">            );</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1User.html#a84bd49c37aac8fa6be37df34a17646f6">getMediaType</a>( $this-&gt;request ) === <span class="stringliteral">&#39;application/vnd.ez.api.usergrouplist&#39;</span> )</div>
@@ -866,9 +878,9 @@ Protected Attributes</h2></td></tr>
 <p>Loads a user for the given ID</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00148">148</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00149">149</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00148">eZ\Publish\Core\REST\Server\Controller\User\loadUser()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00149">eZ\Publish\Core\REST\Server\Controller\User\loadUser()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;user&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -882,7 +894,8 @@ Protected Attributes</h2></td></tr>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\RestUser(</div>
 <div class="line">            $user,</div>
 <div class="line">            $userContentInfo,</div>
-<div class="line">            $userMainLocation</div>
+<div class="line">            $userMainLocation,</div>
+<div class="line">            $this-&gt;contentService-&gt;loadRelations( $user-&gt;getVersionInfo() )</div>
 <div class="line">        );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
@@ -925,15 +938,20 @@ Protected Attributes</h2></td></tr>
 <p>Loads a user by its remote ID</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00437">437</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00443">443</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00437">eZ\Publish\Core\REST\Server\Controller\User\loadUserByRemoteId()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00443">eZ\Publish\Core\REST\Server\Controller\User\loadUserByRemoteId()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $contentInfo = $this-&gt;contentService-&gt;loadContentInfoByRemoteId( $this-&gt;request-&gt;variables[<span class="stringliteral">&#39;remoteId&#39;</span>] );</div>
 <div class="line">        $user = $this-&gt;userService-&gt;loadUser( $contentInfo-&gt;id );</div>
 <div class="line">        $userLocation = $this-&gt;locationService-&gt;loadLocation( $contentInfo-&gt;mainLocationId );</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\RestUser( $user, $contentInfo, $userLocation );</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\RestUser(</div>
+<div class="line">            $user,</div>
+<div class="line">            $contentInfo,</div>
+<div class="line">            $userLocation,</div>
+<div class="line">            $this-&gt;contentService-&gt;loadRelations( $user-&gt;getVersionInfo() )</div>
+<div class="line">        );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 <p><div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -975,9 +993,9 @@ Protected Attributes</h2></td></tr>
 <p>Loads drafts assigned to user</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00560">560</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00591">591</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00560">eZ\Publish\Core\REST\Server\Controller\User\loadUserDrafts()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00591">eZ\Publish\Core\REST\Server\Controller\User\loadUserDrafts()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;userDrafts&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -1044,7 +1062,8 @@ Protected Attributes</h2></td></tr>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\RestUserGroup(</div>
 <div class="line">            $userGroup,</div>
 <div class="line">            $userGroup-&gt;getVersionInfo()-&gt;getContentInfo(),</div>
-<div class="line">            $userGroupLocation</div>
+<div class="line">            $userGroupLocation,</div>
+<div class="line">            $this-&gt;contentService-&gt;loadRelations( $userGroup-&gt;getVersionInfo() )</div>
 <div class="line">        );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
@@ -1087,15 +1106,20 @@ Protected Attributes</h2></td></tr>
 <p>Loads a user group by its remote ID</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00517">517</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00538">538</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00517">eZ\Publish\Core\REST\Server\Controller\User\loadUserGroupByRemoteId()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00538">eZ\Publish\Core\REST\Server\Controller\User\loadUserGroupByRemoteId()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $contentInfo = $this-&gt;contentService-&gt;loadContentInfoByRemoteId( $this-&gt;request-&gt;variables[<span class="stringliteral">&#39;remoteId&#39;</span>] );</div>
 <div class="line">        $userGroup = $this-&gt;userService-&gt;loadUserGroup( $contentInfo-&gt;id );</div>
 <div class="line">        $userGroupLocation = $this-&gt;locationService-&gt;loadLocation( $contentInfo-&gt;mainLocationId );</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\RestUserGroup( $userGroup, $contentInfo, $userGroupLocation );</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\RestUserGroup(</div>
+<div class="line">            $userGroup,</div>
+<div class="line">            $contentInfo,</div>
+<div class="line">            $userGroupLocation,</div>
+<div class="line">            $this-&gt;contentService-&gt;loadRelations( $userGroup-&gt;getVersionInfo() )</div>
+<div class="line">        );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 <p><div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1137,9 +1161,9 @@ Protected Attributes</h2></td></tr>
 <p>Loads user groups</p>
 <dl class="section return"><dt>Returns</dt><dd>| </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00480">480</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00496">496</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00845">eZ\Publish\Core\REST\Server\Controller\User\getMediaType()</a>, <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00517">eZ\Publish\Core\REST\Server\Controller\User\loadUserGroupByRemoteId()</a>, <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00480">eZ\Publish\Core\REST\Server\Controller\User\loadUserGroups()</a>, and <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00531">eZ\Publish\Core\REST\Server\Controller\User\loadUserGroupsAssignedToRole()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00901">eZ\Publish\Core\REST\Server\Controller\User\getMediaType()</a>, <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00538">eZ\Publish\Core\REST\Server\Controller\User\loadUserGroupByRemoteId()</a>, <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00496">eZ\Publish\Core\REST\Server\Controller\User\loadUserGroups()</a>, and <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00557">eZ\Publish\Core\REST\Server\Controller\User\loadUserGroupsAssignedToRole()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $restUserGroups = array();</div>
 <div class="line">        <span class="keywordflow">if</span> ( isset( $this-&gt;request-&gt;variables[<span class="stringliteral">&#39;id&#39;</span>] ) )</div>
@@ -1149,7 +1173,12 @@ Protected Attributes</h2></td></tr>
 <div class="line">            $userGroupMainLocation = $this-&gt;locationService-&gt;loadLocation( $userGroupContentInfo-&gt;mainLocationId );</div>
 <div class="line"></div>
 <div class="line">            $restUserGroups = array(</div>
-<div class="line">                <span class="keyword">new</span> Values\RestUserGroup( $userGroup, $userGroupContentInfo, $userGroupMainLocation )</div>
+<div class="line">                <span class="keyword">new</span> Values\RestUserGroup(</div>
+<div class="line">                    $userGroup,</div>
+<div class="line">                    $userGroupContentInfo,</div>
+<div class="line">                    $userGroupMainLocation,</div>
+<div class="line">                    $this-&gt;contentService-&gt;loadRelations( $userGroup-&gt;getVersionInfo() )</div>
+<div class="line">                )</div>
 <div class="line">            );</div>
 <div class="line">        }</div>
 <div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( isset( $this-&gt;request-&gt;variables[<span class="stringliteral">&#39;roleId&#39;</span>] ) )</div>
@@ -1210,9 +1239,9 @@ Protected Attributes</h2></td></tr>
 <p>Loads a list of user groups assigned to role</p>
 <dl class="section return"><dt>Returns</dt><dd>[] </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00531">531</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00557">557</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00531">eZ\Publish\Core\REST\Server\Controller\User\loadUserGroupsAssignedToRole()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00557">eZ\Publish\Core\REST\Server\Controller\User\loadUserGroupsAssignedToRole()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $roleValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;role&#39;</span>, $this-&gt;request-&gt;variables[<span class="stringliteral">&#39;roleId&#39;</span>] );</div>
 <div class="line"></div>
@@ -1229,7 +1258,12 @@ Protected Attributes</h2></td></tr>
 <div class="line">                $userGroupContentInfo = $userGroup-&gt;getVersionInfo()-&gt;getContentInfo();</div>
 <div class="line">                $userGroupLocation = $this-&gt;locationService-&gt;loadLocation( $userGroupContentInfo-&gt;mainLocationId );</div>
 <div class="line"></div>
-<div class="line">                $restUserGroups[] = <span class="keyword">new</span> Values\RestUserGroup( $userGroup, $userGroupContentInfo, $userGroupLocation );</div>
+<div class="line">                $restUserGroups[] = <span class="keyword">new</span> Values\RestUserGroup(</div>
+<div class="line">                    $userGroup,</div>
+<div class="line">                    $userGroupContentInfo,</div>
+<div class="line">                    $userGroupLocation,</div>
+<div class="line">                    $this-&gt;contentService-&gt;loadRelations( $userGroup-&gt;getVersionInfo() )</div>
+<div class="line">                );</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line"></div>
@@ -1275,9 +1309,9 @@ Protected Attributes</h2></td></tr>
 <p>Returns a list of user groups the user belongs to. The returned list includes the resources for unassigning a user group if the user is in multiple groups.</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00664">664</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00700">700</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00664">eZ\Publish\Core\REST\Server\Controller\User\loadUserGroupsOfUser()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00700">eZ\Publish\Core\REST\Server\Controller\User\loadUserGroupsOfUser()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;userGroups&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -1289,7 +1323,12 @@ Protected Attributes</h2></td></tr>
 <div class="line">        {</div>
 <div class="line">            $userGroupContentInfo = $userGroup-&gt;getVersionInfo()-&gt;getContentInfo();</div>
 <div class="line">            $userGroupLocation = $this-&gt;locationService-&gt;loadLocation( $userGroupContentInfo-&gt;mainLocationId );</div>
-<div class="line">            $restUserGroups[] = <span class="keyword">new</span> Values\RestUserGroup( $userGroup, $userGroupContentInfo, $userGroupLocation );</div>
+<div class="line">            $restUserGroups[] = <span class="keyword">new</span> Values\RestUserGroup(</div>
+<div class="line">                $userGroup,</div>
+<div class="line">                $userGroupContentInfo,</div>
+<div class="line">                $userGroupLocation,</div>
+<div class="line">                $this-&gt;contentService-&gt;loadRelations( $userGroup-&gt;getVersionInfo() )</div>
+<div class="line">            );</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\UserGroupRefList( $restUserGroups, $this-&gt;request-&gt;path, $urlValues[<span class="stringliteral">&#39;user&#39;</span>] );</div>
@@ -1334,9 +1373,9 @@ Protected Attributes</h2></td></tr>
 <p>Loads users</p>
 <dl class="section return"><dt>Returns</dt><dd>| </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00410">410</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00416">416</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00845">eZ\Publish\Core\REST\Server\Controller\User\getMediaType()</a>, <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00437">eZ\Publish\Core\REST\Server\Controller\User\loadUserByRemoteId()</a>, <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00410">eZ\Publish\Core\REST\Server\Controller\User\loadUsers()</a>, and <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00451">eZ\Publish\Core\REST\Server\Controller\User\loadUsersAssignedToRole()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00901">eZ\Publish\Core\REST\Server\Controller\User\getMediaType()</a>, <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00443">eZ\Publish\Core\REST\Server\Controller\User\loadUserByRemoteId()</a>, <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00416">eZ\Publish\Core\REST\Server\Controller\User\loadUsers()</a>, and <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00462">eZ\Publish\Core\REST\Server\Controller\User\loadUsersAssignedToRole()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $restUsers = array();</div>
 <div class="line">        <span class="keywordflow">if</span> ( isset( $this-&gt;request-&gt;variables[<span class="stringliteral">&#39;roleId&#39;</span>] ) )</div>
@@ -1397,9 +1436,9 @@ Protected Attributes</h2></td></tr>
 <p>Loads a list of users assigned to role</p>
 <dl class="section return"><dt>Returns</dt><dd>[] </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00451">451</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00462">462</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00451">eZ\Publish\Core\REST\Server\Controller\User\loadUsersAssignedToRole()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00462">eZ\Publish\Core\REST\Server\Controller\User\loadUsersAssignedToRole()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $roleValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;role&#39;</span>, $this-&gt;request-&gt;variables[<span class="stringliteral">&#39;roleId&#39;</span>] );</div>
 <div class="line"></div>
@@ -1416,7 +1455,12 @@ Protected Attributes</h2></td></tr>
 <div class="line">                $userContentInfo = $user-&gt;getVersionInfo()-&gt;getContentInfo();</div>
 <div class="line">                $userLocation = $this-&gt;locationService-&gt;loadLocation( $userContentInfo-&gt;mainLocationId );</div>
 <div class="line"></div>
-<div class="line">                $restUsers[] = <span class="keyword">new</span> Values\RestUser( $user, $userContentInfo, $userLocation );</div>
+<div class="line">                $restUsers[] = <span class="keyword">new</span> Values\RestUser(</div>
+<div class="line">                    $user,</div>
+<div class="line">                    $userContentInfo,</div>
+<div class="line">                    $userLocation,</div>
+<div class="line">                    $this-&gt;contentService-&gt;loadRelations( $user-&gt;getVersionInfo() )</div>
+<div class="line">                );</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line"></div>
@@ -1462,9 +1506,9 @@ Protected Attributes</h2></td></tr>
 <p>Loads the users of the group with the given path</p>
 <dl class="section return"><dt>Returns</dt><dd>| </dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00687">687</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00728">728</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00845">eZ\Publish\Core\REST\Server\Controller\User\getMediaType()</a>, and <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00687">eZ\Publish\Core\REST\Server\Controller\User\loadUsersFromGroup()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00901">eZ\Publish\Core\REST\Server\Controller\User\getMediaType()</a>, and <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00728">eZ\Publish\Core\REST\Server\Controller\User\loadUsersFromGroup()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $questionMark = strpos( $this-&gt;request-&gt;path, <span class="charliteral">&#39;?&#39;</span> );</div>
 <div class="line">        $requestPath = $questionMark !== <span class="keyword">false</span> ? substr( $this-&gt;request-&gt;path, 0, $questionMark ) : $this-&gt;request-&gt;path;</div>
@@ -1493,7 +1537,12 @@ Protected Attributes</h2></td></tr>
 <div class="line">        {</div>
 <div class="line">            $userContentInfo = $user-&gt;getVersionInfo()-&gt;getContentInfo();</div>
 <div class="line">            $userLocation = $this-&gt;locationService-&gt;loadLocation( $userContentInfo-&gt;mainLocationId );</div>
-<div class="line">            $restUsers[] = <span class="keyword">new</span> Values\RestUser( $user, $userContentInfo, $userLocation );</div>
+<div class="line">            $restUsers[] = <span class="keyword">new</span> Values\RestUser(</div>
+<div class="line">                $user,</div>
+<div class="line">                $userContentInfo,</div>
+<div class="line">                $userLocation,</div>
+<div class="line">                $this-&gt;contentService-&gt;loadRelations( $user-&gt;getVersionInfo() )</div>
+<div class="line">            );</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1User.html#a84bd49c37aac8fa6be37df34a17646f6">getMediaType</a>( $this-&gt;request ) === <span class="stringliteral">&#39;application/vnd.ez.api.userlist&#39;</span> )</div>
@@ -1543,9 +1592,9 @@ Protected Attributes</h2></td></tr>
 <p>Moves the user group to another parent</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00576">576</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00607">607</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00576">eZ\Publish\Core\REST\Server\Controller\User\moveUserGroup()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00607">eZ\Publish\Core\REST\Server\Controller\User\moveUserGroup()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;group&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -1630,9 +1679,9 @@ Protected Attributes</h2></td></tr>
 <p>Unassigns the user from a user group</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00732">732</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00778">778</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00732">eZ\Publish\Core\REST\Server\Controller\User\unassignUserFromUserGroup()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00778">eZ\Publish\Core\REST\Server\Controller\User\unassignUserFromUserGroup()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;userGroup&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -1659,7 +1708,12 @@ Protected Attributes</h2></td></tr>
 <div class="line">        {</div>
 <div class="line">            $userGroupContentInfo = $userGroup-&gt;getVersionInfo()-&gt;getContentInfo();</div>
 <div class="line">            $userGroupLocation = $this-&gt;locationService-&gt;loadLocation( $userGroupContentInfo-&gt;mainLocationId );</div>
-<div class="line">            $restUserGroups[] = <span class="keyword">new</span> Values\RestUserGroup( $userGroup, $userGroupContentInfo, $userGroupLocation );</div>
+<div class="line">            $restUserGroups[] = <span class="keyword">new</span> Values\RestUserGroup(</div>
+<div class="line">                $userGroup,</div>
+<div class="line">                $userGroupContentInfo,</div>
+<div class="line">                $userGroupLocation,</div>
+<div class="line">                $this-&gt;contentService-&gt;loadRelations( $userGroup-&gt;getVersionInfo() )</div>
+<div class="line">            );</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\UserGroupRefList(</div>
@@ -1708,9 +1762,9 @@ Protected Attributes</h2></td></tr>
 <p>Updates a user</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00316">316</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00321">321</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00316">eZ\Publish\Core\REST\Server\Controller\User\updateUser()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00321">eZ\Publish\Core\REST\Server\Controller\User\updateUser()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;user&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -1743,7 +1797,8 @@ Protected Attributes</h2></td></tr>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\RestUser(</div>
 <div class="line">            $updatedUser,</div>
 <div class="line">            $updatedContentInfo,</div>
-<div class="line">            $mainLocation</div>
+<div class="line">            $mainLocation,</div>
+<div class="line">            $this-&gt;contentService-&gt;loadRelations( $updatedUser-&gt;getVersionInfo() )</div>
 <div class="line">        );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
@@ -1786,9 +1841,9 @@ Protected Attributes</h2></td></tr>
 <p>Updates a user group</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00270">270</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
+<p>Definition at line <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00274">274</a> of file <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html">User.php</a>.</p>
 
-<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00270">eZ\Publish\Core\REST\Server\Controller\User\updateUserGroup()</a>.</p>
+<p>References <a class="el" href="Core_2REST_2Server_2Controller_2User_8php_source.html#l00274">eZ\Publish\Core\REST\Server\Controller\User\updateUserGroup()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&#39;group&#39;</span>, $this-&gt;request-&gt;path );</div>
 <div class="line"></div>
@@ -1825,7 +1880,8 @@ Protected Attributes</h2></td></tr>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\RestUserGroup(</div>
 <div class="line">            $updatedGroup,</div>
 <div class="line">            $updatedGroup-&gt;getVersionInfo()-&gt;getContentInfo(),</div>
-<div class="line">            $userGroupLocation</div>
+<div class="line">            $userGroupLocation,</div>
+<div class="line">            $this-&gt;contentService-&gt;loadRelations( $updatedGroup-&gt;getVersionInfo() )</div>
 <div class="line">        );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
@@ -1995,7 +2051,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html">REST</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server.html">Server</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller.html">Controller</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1User.html">User</a></li>
-    <li class="footer">Generated on Thu Dec 13 2012 00:03:28 for ezp-next by
+    <li class="footer">Generated on Fri Dec 14 2012 00:03:37 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -750,7 +750,6 @@ var hierarchy =
         [ "eZ\\Publish\\SPI\\Variation\\Values\\ImageVariation", "classeZ_1_1Publish_1_1SPI_1_1Variation_1_1Values_1_1ImageVariation.html", null ]
       ] ]
     ] ],
-    [ "eZ\\Publish\\Core\\Base\\ClassLoader", "classeZ_1_1Publish_1_1Core_1_1Base_1_1ClassLoader.html", null ],
     [ "eZ\\Publish\\Core\\Base\\Configuration", "classeZ_1_1Publish_1_1Core_1_1Base_1_1Configuration.html", null ],
     [ "eZ\\Publish\\Core\\Base\\Configuration\\Parser", "interfaceeZ_1_1Publish_1_1Core_1_1Base_1_1Configuration_1_1Parser.html", [
       [ "eZ\\Publish\\Core\\Base\\Configuration\\Parser\\Ini", "classeZ_1_1Publish_1_1Core_1_1Base_1_1Configuration_1_1Parser_1_1Ini.html", null ]

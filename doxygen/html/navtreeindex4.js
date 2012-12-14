@@ -1,7 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"Core_2Repository_2UserService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,17],
-"Core_2Repository_2UserService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,17],
 "Core_2Repository_2Values_2ContentType_2ContentTypeCreateStruct_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,0,1,1],
 "Core_2Repository_2Values_2ContentType_2ContentTypeCreateStruct_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,0,1,1],
 "Core_2Repository_2Values_2ContentType_2ContentTypeDraft_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,0,1,2],
@@ -249,5 +247,7 @@ var NAVTREEINDEX4 =
 "FacetBuilder_8php_source.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,0,5],
 "Facet_8php.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,1,1],
 "Facet_8php_source.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,1,1],
-"FallbackRouter_8php.html":[4,0,0,0,0,0,0,0,0,0,1,4,0]
+"FallbackRouter_8php.html":[4,0,0,0,0,0,0,0,0,0,1,4,0],
+"FallbackRouter_8php_source.html":[4,0,0,0,0,0,0,0,0,0,1,4,0],
+"FieldDefinitionCreateStruct_8php.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,1,8]
 };

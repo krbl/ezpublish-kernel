@@ -1,7 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"FallbackRouter_8php_source.html":[4,0,0,0,0,0,0,0,0,0,1,4,0],
-"FieldDefinitionCreateStruct_8php.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,1,8],
 "FieldDefinitionCreateStruct_8php_source.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,1,8],
 "FieldDefinitionCreate_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,4,0,9],
 "FieldDefinitionCreate_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,4,0,9],
@@ -249,5 +247,7 @@ var NAVTREEINDEX5 =
 "LanguageLimitation_8php_source.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,5,0,1],
 "Language_2CreateStruct_8php.html":[4,0,0,0,0,0,0,0,0,1,2,3,0,0,0],
 "Language_2CreateStruct_8php_source.html":[4,0,0,0,0,0,0,0,0,1,2,3,0,0,0],
-"LegacyAdapter_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,2]
+"LegacyAdapter_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,2],
+"LegacyAdapter_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,2],
+"LegacyAssignSectionSlot_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,1]
 };

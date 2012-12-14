@@ -1,7 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"LegacyAdapter_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,2],
-"LegacyAssignSectionSlot_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,1],
 "LegacyAssignSectionSlot_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,1],
 "LegacyCompatible_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,3],
 "LegacyCompatible_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,3],
@@ -249,5 +247,7 @@ var NAVTREEINDEX6 =
 "Output_2ValueObjectVisitor_2RestContent_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,40],
 "Output_2ValueObjectVisitor_2RestExecutedView_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,43],
 "Output_2ValueObjectVisitor_2RestExecutedView_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,43],
-"Output_2ValueObjectVisitor_2RestFieldDefinition_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,44]
+"Output_2ValueObjectVisitor_2RestFieldDefinition_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,44],
+"Output_2ValueObjectVisitor_2RestFieldDefinition_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,44],
+"Output_2ValueObjectVisitor_2RestLocation_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,45]
 };
