@@ -105,7 +105,6 @@ Writable properties must be public and must be documented inline.</p><br><div id
       <a style="font-style: italic;" href="#Content::getFields()">getFields</a>,
       <a style="font-style: italic;" href="#Content::getFieldsByLanguage()">getFieldsByLanguage</a>,
       <a style="font-style: italic;" href="#Content::getProperties()">getProperties</a>,
-      <a style="font-style: italic;" href="#Content::getRelations()">getRelations</a>,
       <a style="font-style: italic;" href="#Content::getVersionInfo()">getVersionInfo</a>,
       <a style="font-style: italic;" href="#Content::hasAttribute()">hasAttribute</a>,
       <div class="method">
@@ -173,9 +172,9 @@ after object has been created.</p></small><br><h4>Arguments</h4>
 </div>
 <div class="method">
 <a id="Content::__get()"></a><h3>__get<span class="nb-faded-text">(
-          
+          string
              
-            $propertyName,
+            $property,
           
           )
         </span>
@@ -192,9 +191,9 @@ after object has been created.</p></small><br><h4>Arguments</h4>
 <th>Default</th>
 </tr></thead>
 <tbody><tr>
-<td>$propertyName</td>
-<td style="white-space: normal;">n/a</td>
-<td></td>
+<td>$property</td>
+<td style="white-space: normal;">string</td>
+<td><p>Name of the property</p></td>
 <td></td>
 </tr></tbody>
 </table>
@@ -215,17 +214,27 @@ after object has been created.</p></small><br><h4>Arguments</h4>
 <th>Name</th>
 <th>Description</th>
 </tr></thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>throws</td>
 <td>exception on all reads to undefined properties so typos are not silently accepted.</td>
-</tr></tbody>
+</tr>
+<tr>
+<td>inherited_from</td>
+<td><a href="Publish.API.Repository.Values.ValueObject.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CValueObject::__get()"><small>\eZ\Publish\API\Repository\Values\ValueObject::__get()</small></a></td>
+</tr>
+<tr>
+<td>inherited_from</td>
+<td><a href="Publish.API.Repository.Values.Content.Content.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CContent::__get()"><small>\eZ\Publish\API\Repository\Values\Content\Content::__get()</small></a></td>
+</tr>
+</tbody>
 </table>
 </div>
 <div class="method">
 <a id="Content::__isset()"></a><h3>__isset<span class="nb-faded-text">(
-          
+          string
              
-            $propertyName,
+            $property,
           
           )
         </span>
@@ -242,9 +251,9 @@ after object has been created.</p></small><br><h4>Arguments</h4>
 <th>Default</th>
 </tr></thead>
 <tbody><tr>
-<td>$propertyName</td>
-<td style="white-space: normal;">n/a</td>
-<td></td>
+<td>$property</td>
+<td style="white-space: normal;">string</td>
+<td><p>Name of the property</p></td>
 <td></td>
 </tr></tbody>
 </table>
@@ -258,6 +267,23 @@ after object has been created.</p></small><br><h4>Arguments</h4>
 <td>boolean</td>
 <td></td>
 </tr></tbody>
+</table>
+<h4>Tags</h4>
+<table>
+<thead><tr>
+<th>Name</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>inherited_from</td>
+<td><a href="Publish.API.Repository.Values.ValueObject.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CValueObject::__isset()"><small>\eZ\Publish\API\Repository\Values\ValueObject::__isset()</small></a></td>
+</tr>
+<tr>
+<td>inherited_from</td>
+<td><a href="Publish.API.Repository.Values.Content.Content.html#%5CeZ%5CPublish%5CAPI%5CRepository%5CValues%5CContent%5CContent::__isset()"><small>\eZ\Publish\API\Repository\Values\Content\Content::__isset()</small></a></td>
+</tr>
+</tbody>
 </table>
 </div>
 <div class="method">
@@ -802,27 +828,6 @@ the value of the initial language of the version if present, otherwise null.</em
 </table>
 </div>
 <div class="method">
-<a id="Content::getRelations()"></a><h3>getRelations<span class="nb-faded-text">(
-          
-          )
-        </span>
-        :
-        <span class="nb-faded-text">\eZ\Publish\API\Repository\Values\Content\Relation[]</span>
-</h3>
-<h4>Description</h4>
-<em>Returns the outgoing relations</em><br><h4>Return value</h4>
-<table>
-<thead><tr>
-<th>Type</th>
-<th>Description</th>
-</tr></thead>
-<tbody><tr>
-<td>\eZ\Publish\API\Repository\Values\Content\Relation[]</td>
-<td>An array of {@link Relation}</td>
-</tr></tbody>
-</table>
-</div>
-<div class="method">
 <a id="Content::getVersionInfo()"></a><h3>getVersionInfo<span class="nb-faded-text">(
           
           )
@@ -917,8 +922,6 @@ the value of the initial language of the version if present, otherwise null.</em
       <a href="#Content::%24fields">$fields</a>,
       <a href="#Content::%24id">$id</a>,
       <a href="#Content::%24internalFields">$internalFields</a>,
-      <a href="#Content::%24relationListId">$relationListId</a>,
-      <a href="#Content::%24relations">$relations</a>,
       <a href="#Content::%24versionInfo">$versionInfo</a>,
       <a href="#Content::%24versionInfo">$versionInfo</a>,
       <div class="method">
@@ -984,24 +987,6 @@ the value of the initial language of the version if present, otherwise null.</em
           =
           </h3>
 <em></em><br><small></small><br><br>
-</div>
-<div class="method">
-<a id="Content::$relationListId"></a><h3>
-<span class="nb-faded-text">string 
-          protected 
-          </span>$relationListId
-          =
-          </h3>
-<em></em><br><small></small><br><br>
-</div>
-<div class="method">
-<a id="Content::$relations"></a><h3>
-<span class="nb-faded-text">\eZ\Publish\API\Repository\Values\Content\Relation[] 
-          public 
-          </span>$relations
-          =
-          </h3>
-<em>Calls getRelations()Calls getRelations()</em><br><small></small><br><br>
 </div>
 <div class="method">
 <a id="Content::$versionInfo"></a><h3>
@@ -1511,7 +1496,6 @@ creator, modifier)</small></span></li>
 <span class="folder">Core</span><ul>
 <li class="closed">
 <span class="folder">Base</span><ul>
-<li><span class="class"><a href="Publish.Core.Base.ClassLoader.html#ClassLoader">ClassLoader</a><br><small>Provides PSR-0 [Class]Loader</small></span></li>
 <li><span class="class"><a href="Publish.Core.Base.Configuration.html#Configuration">Configuration</a><br><small>Configuration instance class</small></span></li>
 <li><span class="class"><a href="Publish.Core.Base.ConfigurationManager.html#ConfigurationManager">ConfigurationManager</a><br><small>Configuration manager class</small></span></li>
 <li><span class="class"><a href="Publish.Core.Base.ServiceContainer.html#ServiceContainer">ServiceContainer</a><br><small>Service container class</small></span></li>
