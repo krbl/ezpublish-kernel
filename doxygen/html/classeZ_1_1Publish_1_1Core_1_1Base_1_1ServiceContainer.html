@@ -139,8 +139,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a32bdd3d44171055626f54e4859b10925"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a32bdd3d44171055626f54e4859b10925">lookupArguments</a> (array $arguments, $recursivly=false)</td></tr>
-<tr class="memitem:a4ba1d149317d5030d800e76fe2a38104"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4ba1d149317d5030d800e76fe2a38104">recursivlyLookupArguments</a> (array $arguments)</td></tr>
+<tr class="memitem:a4c554a0553b1b11dd39f97783b9dd057"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4c554a0553b1b11dd39f97783b9dd057">lookupArguments</a> (array $arguments, $recursively=false)</td></tr>
+<tr class="memitem:af4ec2d146bbf4e8551d3b3bab798af1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#af4ec2d146bbf4e8551d3b3bab798af1b">recursivelyLookupArguments</a> (array $arguments)</td></tr>
 <tr class="memitem:a2a04f8dc16333a2522bfa8c9420401b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a2a04f8dc16333a2522bfa8c9420401b0">getServiceArgument</a> ($argument)</td></tr>
 <tr class="memitem:a694ccf89d37628ab3d871ae7a48d5e3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a694ccf89d37628ab3d871ae7a48d5e3d">getListOfExtendedServices</a> ($parent, $function= '')</td></tr>
 </table>
@@ -246,7 +246,7 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
       </table>
 </div><div class="memdoc">
 <p>Get service by name</p>
-<p><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a32bdd3d44171055626f54e4859b10925">lookupArguments()</a> </p>
+<p><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4c554a0553b1b11dd39f97783b9dd057">lookupArguments()</a> </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">\eZ\Publish\Core\Base\Exceptions\BadConfiguration</td><td></td></tr>
@@ -264,21 +264,24 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 
 <p>Definition at line <a class="el" href="ServiceContainer_8php_source.html#l00153">153</a> of file <a class="el" href="ServiceContainer_8php_source.html">ServiceContainer.php</a>.</p>
 
-<p>References <a class="el" href="ServiceContainer_8php_source.html#l00241">eZ\Publish\Core\Base\ServiceContainer\lookupArguments()</a>, and <a class="el" href="ServiceContainer_8php_source.html#l00280">eZ\Publish\Core\Base\ServiceContainer\recursivlyLookupArguments()</a>.</p>
+<p>References <a class="el" href="ServiceContainer_8php_source.html#l00244">eZ\Publish\Core\Base\ServiceContainer\lookupArguments()</a>, and <a class="el" href="ServiceContainer_8php_source.html#l00283">eZ\Publish\Core\Base\ServiceContainer\recursivelyLookupArguments()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        $serviceKey = <span class="stringliteral">&quot;@{$serviceName}&quot;</span>;</div>
-<div class="line"></div>
-<div class="line">        <span class="comment">// Return directly if it already exists</span></div>
-<div class="line">        <span class="keywordflow">if</span> ( isset( $this-&gt;dependencies[$serviceKey] ) )</div>
+<div class="line">        <span class="comment">// If you have endless loop here; Congrats, you have recursive aliases!</span></div>
+<div class="line">        <span class="keywordflow">do</span></div>
 <div class="line">        {</div>
-<div class="line">            <span class="keywordflow">return</span> $this-&gt;dependencies[$serviceKey];</div>
-<div class="line">        }</div>
+<div class="line">            <span class="comment">// Return directly if it already exists</span></div>
+<div class="line">            <span class="keywordflow">if</span> ( isset( $this-&gt;dependencies[<span class="stringliteral">&quot;@{$serviceName}&quot;</span>] ) )</div>
+<div class="line">                <span class="keywordflow">return</span> $this-&gt;dependencies[<span class="stringliteral">&quot;@{$serviceName}&quot;</span>];</div>
 <div class="line"></div>
-<div class="line">        <span class="comment">// Validate settings</span></div>
-<div class="line">        <span class="keywordflow">if</span> ( empty( $this-&gt;settings[$serviceName] ) )</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> BadConfiguration( <span class="stringliteral">&quot;service\\[{$serviceName}]&quot;</span>, <span class="stringliteral">&quot;no settings exist for &#39;{$serviceName}&#39;&quot;</span> );</div>
+<div class="line">            <span class="comment">// Validate settings</span></div>
+<div class="line">            <span class="keywordflow">if</span> ( empty( $this-&gt;settings[$serviceName] ) )</div>
+<div class="line">                <span class="keywordflow">throw</span> <span class="keyword">new</span> BadConfiguration( <span class="stringliteral">&quot;service\\[{$serviceName}]&quot;</span>, <span class="stringliteral">&quot;no settings exist for &#39;{$serviceName}&#39;&quot;</span> );</div>
+<div class="line"></div>
+<div class="line">            $origServiceName = $serviceName;</div>
+<div class="line">            <span class="keywordflow">if</span> ( isset( $this-&gt;settings[$serviceName][<span class="stringliteral">&#39;alias&#39;</span>] ) )</div>
+<div class="line">                $serviceName = $this-&gt;settings[$serviceName][<span class="stringliteral">&#39;alias&#39;</span>];</div>
 <div class="line">        }</div>
+<div class="line">        <span class="keywordflow">while</span> ( $origServiceName !== $serviceName );</div>
 <div class="line"></div>
 <div class="line">        $settings = $this-&gt;settings[$serviceName] + array( <span class="stringliteral">&#39;shared&#39;</span> =&gt; <span class="keyword">true</span> );</div>
 <div class="line">        <span class="keywordflow">if</span> ( empty( $settings[<span class="stringliteral">&#39;class&#39;</span>] ) )</div>
@@ -293,7 +296,7 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 <div class="line">        <span class="comment">// Expand arguments with other service objects on arguments that start with @ and predefined variables that start with $</span></div>
 <div class="line">        <span class="keywordflow">if</span> ( !empty( $settings[<span class="stringliteral">&#39;arguments&#39;</span>] ) )</div>
 <div class="line">        {</div>
-<div class="line">            $arguments = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a32bdd3d44171055626f54e4859b10925">lookupArguments</a>( $settings[<span class="stringliteral">&#39;arguments&#39;</span>], <span class="keyword">true</span> );</div>
+<div class="line">            $arguments = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4c554a0553b1b11dd39f97783b9dd057">lookupArguments</a>( $settings[<span class="stringliteral">&#39;arguments&#39;</span>], <span class="keyword">true</span> );</div>
 <div class="line">        }</div>
 <div class="line">        <span class="keywordflow">else</span></div>
 <div class="line">        {</div>
@@ -323,11 +326,11 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( $settings[<span class="stringliteral">&#39;shared&#39;</span>] )</div>
-<div class="line">            $this-&gt;dependencies[$serviceKey] = $serviceObject;</div>
+<div class="line">            $this-&gt;dependencies[<span class="stringliteral">&quot;@{$serviceName}&quot;</span>] = $serviceObject;</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( !empty( $settings[<span class="stringliteral">&#39;method&#39;</span>] ) )</div>
 <div class="line">        {</div>
-<div class="line">            $list = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4ba1d149317d5030d800e76fe2a38104">recursivlyLookupArguments</a>( $settings[<span class="stringliteral">&#39;method&#39;</span>] );</div>
+<div class="line">            $list = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#af4ec2d146bbf4e8551d3b3bab798af1b">recursivelyLookupArguments</a>( $settings[<span class="stringliteral">&#39;method&#39;</span>] );</div>
 <div class="line">            <span class="keywordflow">foreach</span> ( $list as $methodName =&gt; $arguments )</div>
 <div class="line">            {</div>
 <div class="line">                <span class="keywordflow">foreach</span> ( $arguments as $argumentKey =&gt; $argumentValue )</div>
@@ -345,7 +348,7 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_aa03b96012d77b02df4efd53c0d2eb0c2_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_aa03b96012d77b02df4efd53c0d2eb0c2_cgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_aa03b96012d77b02df4efd53c0d2eb0c2_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_aa03b96012d77b02df4efd53c0d2eb0c2_cgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a32bdd3d44171055626f54e4859b10925" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\lookupArguments" alt="" coords="215,93,465,139"/><area shape="rect" id="node7" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4ba1d149317d5030d800e76fe2a38104" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\recursivly\lLookupArguments" alt="" coords="772,93,969,157"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a2a04f8dc16333a2522bfa8c9420401b0" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getService\lArgument" alt="" coords="516,24,721,88"/><area shape="rect" id="node10" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a694ccf89d37628ab3d871ae7a48d5e3d" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getListOf\lExtendedServices" alt="" coords="773,5,968,69"/></map>
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4c554a0553b1b11dd39f97783b9dd057" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\lookupArguments" alt="" coords="215,93,465,139"/><area shape="rect" id="node7" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#af4ec2d146bbf4e8551d3b3bab798af1b" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\recursively\lLookupArguments" alt="" coords="772,93,977,157"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a2a04f8dc16333a2522bfa8c9420401b0" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getService\lArgument" alt="" coords="516,24,721,88"/><area shape="rect" id="node10" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a694ccf89d37628ab3d871ae7a48d5e3d" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getListOf\lExtendedServices" alt="" coords="777,5,972,69"/></map>
 </div>
 </p>
 
@@ -391,7 +394,7 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="ServiceContainer_8php_source.html#l00381">381</a> of file <a class="el" href="ServiceContainer_8php_source.html">ServiceContainer.php</a>.</p>
+<p>Definition at line <a class="el" href="ServiceContainer_8php_source.html#l00384">384</a> of file <a class="el" href="ServiceContainer_8php_source.html">ServiceContainer.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $prefix = $parent[0];</div>
 <div class="line">        $parent = ltrim( $parent, <span class="stringliteral">&#39;@%&#39;</span> );<span class="comment">// Keep starting &#39;:&#39; on parent for easier matching bellow</span></div>
@@ -418,7 +421,7 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a694ccf89d37628ab3d871ae7a48d5e3d_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a694ccf89d37628ab3d871ae7a48d5e3d_icgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a694ccf89d37628ab3d871ae7a48d5e3d_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a694ccf89d37628ab3d871ae7a48d5e3d_icgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a2a04f8dc16333a2522bfa8c9420401b0" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getService\lArgument" alt="" coords="252,56,457,120"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a32bdd3d44171055626f54e4859b10925" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\lookupArguments" alt="" coords="756,5,1007,51"/><area shape="rect" id="node9" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4ba1d149317d5030d800e76fe2a38104" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\recursivly\lLookupArguments" alt="" coords="508,56,705,120"/><area shape="rect" id="node7" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#aa03b96012d77b02df4efd53c0d2eb0c2" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\get" alt="" coords="1056,35,1216,82"/></map>
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a2a04f8dc16333a2522bfa8c9420401b0" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getService\lArgument" alt="" coords="252,56,457,120"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4c554a0553b1b11dd39f97783b9dd057" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\lookupArguments" alt="" coords="764,5,1015,51"/><area shape="rect" id="node9" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#af4ec2d146bbf4e8551d3b3bab798af1b" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\recursively\lLookupArguments" alt="" coords="508,56,713,120"/><area shape="rect" id="node7" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#aa03b96012d77b02df4efd53c0d2eb0c2" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\get" alt="" coords="1064,35,1224,82"/></map>
 </div>
 </p>
 
@@ -473,7 +476,7 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
   </tr>
 </table>
 </div><div class="memdoc">
-<p><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a694ccf89d37628ab3d871ae7a48d5e3d">getListOfExtendedServices()</a>  <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4ba1d149317d5030d800e76fe2a38104">recursivlyLookupArguments()</a> </p>
+<p><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a694ccf89d37628ab3d871ae7a48d5e3d">getListOfExtendedServices()</a>  <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#af4ec2d146bbf4e8551d3b3bab798af1b">recursivelyLookupArguments()</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$argument</td><td></td></tr>
@@ -488,9 +491,9 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array|closure|mixed|object|null Null on non existing optional dependencies </dd></dl>
 
-<p>Definition at line <a class="el" href="ServiceContainer_8php_source.html#l00313">313</a> of file <a class="el" href="ServiceContainer_8php_source.html">ServiceContainer.php</a>.</p>
+<p>Definition at line <a class="el" href="ServiceContainer_8php_source.html#l00316">316</a> of file <a class="el" href="ServiceContainer_8php_source.html">ServiceContainer.php</a>.</p>
 
-<p>References <a class="el" href="ServiceContainer_8php_source.html#l00381">eZ\Publish\Core\Base\ServiceContainer\getListOfExtendedServices()</a>, and <a class="el" href="ServiceContainer_8php_source.html#l00280">eZ\Publish\Core\Base\ServiceContainer\recursivlyLookupArguments()</a>.</p>
+<p>References <a class="el" href="ServiceContainer_8php_source.html#l00384">eZ\Publish\Core\Base\ServiceContainer\getListOfExtendedServices()</a>, and <a class="el" href="ServiceContainer_8php_source.html#l00283">eZ\Publish\Core\Base\ServiceContainer\recursivelyLookupArguments()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $function = <span class="stringliteral">&#39;&#39;</span>;</div>
 <div class="line">        $serviceContainer = $this;</div>
@@ -501,7 +504,7 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 <div class="line">        <span class="comment">// expand extended services</span></div>
 <div class="line">        <span class="keywordflow">if</span> ( ( $argument[0] === <span class="charliteral">&#39;%&#39;</span> || $argument[0] === <span class="charliteral">&#39;@&#39;</span> ) &amp;&amp; $argument[1] === <span class="charliteral">&#39;:&#39;</span> )</div>
 <div class="line">        {</div>
-<div class="line">            <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4ba1d149317d5030d800e76fe2a38104">recursivlyLookupArguments</a>( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a694ccf89d37628ab3d871ae7a48d5e3d">getListOfExtendedServices</a>( $argument, $function ) );</div>
+<div class="line">            <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#af4ec2d146bbf4e8551d3b3bab798af1b">recursivelyLookupArguments</a>( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a694ccf89d37628ab3d871ae7a48d5e3d">getListOfExtendedServices</a>( $argument, $function ) );</div>
 <div class="line">        }</div>
 <div class="line">        <span class="comment">// lazy loaded services</span></div>
 <div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $argument[0] === <span class="charliteral">&#39;%&#39;</span> )</div>
@@ -559,7 +562,7 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a2a04f8dc16333a2522bfa8c9420401b0_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a2a04f8dc16333a2522bfa8c9420401b0_cgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a2a04f8dc16333a2522bfa8c9420401b0_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a2a04f8dc16333a2522bfa8c9420401b0_cgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a694ccf89d37628ab3d871ae7a48d5e3d" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getListOf\lExtendedServices" alt="" coords="264,5,459,69"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4ba1d149317d5030d800e76fe2a38104" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\recursivly\lLookupArguments" alt="" coords="263,93,460,157"/></map>
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a694ccf89d37628ab3d871ae7a48d5e3d" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getListOf\lExtendedServices" alt="" coords="268,5,463,69"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#af4ec2d146bbf4e8551d3b3bab798af1b" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\recursively\lLookupArguments" alt="" coords="263,93,468,157"/></map>
 </div>
 </p>
 
@@ -570,7 +573,7 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a2a04f8dc16333a2522bfa8c9420401b0_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a2a04f8dc16333a2522bfa8c9420401b0_icgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a2a04f8dc16333a2522bfa8c9420401b0_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a2a04f8dc16333a2522bfa8c9420401b0_icgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a32bdd3d44171055626f54e4859b10925" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\lookupArguments" alt="" coords="511,5,761,51"/><area shape="rect" id="node7" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4ba1d149317d5030d800e76fe2a38104" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\recursivly\lLookupArguments" alt="" coords="263,56,460,120"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#aa03b96012d77b02df4efd53c0d2eb0c2" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\get" alt="" coords="811,35,971,82"/></map>
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4c554a0553b1b11dd39f97783b9dd057" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\lookupArguments" alt="" coords="519,5,769,51"/><area shape="rect" id="node7" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#af4ec2d146bbf4e8551d3b3bab798af1b" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\recursively\lLookupArguments" alt="" coords="263,56,468,120"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#aa03b96012d77b02df4efd53c0d2eb0c2" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\get" alt="" coords="819,35,979,82"/></map>
 </div>
 </p>
 
@@ -620,7 +623,7 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a32bdd3d44171055626f54e4859b10925"></a>
+<a class="anchor" id="a4c554a0553b1b11dd39f97783b9dd057"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -637,7 +640,7 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$recursivly</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>$recursively</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -656,7 +659,7 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 <li>Does not keep keys of first level arguments</li>
 <li>Exists loop when it encounters optional non existing service dependencies</li>
 </ol>
-<p><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a2a04f8dc16333a2522bfa8c9420401b0">getServiceArgument()</a>  <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4ba1d149317d5030d800e76fe2a38104">recursivlyLookupArguments()</a> </p>
+<p><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a2a04f8dc16333a2522bfa8c9420401b0">getServiceArgument()</a>  <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#af4ec2d146bbf4e8551d3b3bab798af1b">recursivelyLookupArguments()</a> </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</td><td>If undefined variable is used. </td></tr>
@@ -666,15 +669,15 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">array</td><td class="paramname">$arguments</td><td></td></tr>
-    <tr><td class="paramtype">boolean</td><td class="paramname">$recursivly</td><td></td></tr>
+    <tr><td class="paramtype">boolean</td><td class="paramname">$recursively</td><td></td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="ServiceContainer_8php_source.html#l00241">241</a> of file <a class="el" href="ServiceContainer_8php_source.html">ServiceContainer.php</a>.</p>
+<p>Definition at line <a class="el" href="ServiceContainer_8php_source.html#l00244">244</a> of file <a class="el" href="ServiceContainer_8php_source.html">ServiceContainer.php</a>.</p>
 
-<p>References <a class="el" href="ServiceContainer_8php_source.html#l00313">eZ\Publish\Core\Base\ServiceContainer\getServiceArgument()</a>, and <a class="el" href="ServiceContainer_8php_source.html#l00280">eZ\Publish\Core\Base\ServiceContainer\recursivlyLookupArguments()</a>.</p>
+<p>References <a class="el" href="ServiceContainer_8php_source.html#l00316">eZ\Publish\Core\Base\ServiceContainer\getServiceArgument()</a>, and <a class="el" href="ServiceContainer_8php_source.html#l00283">eZ\Publish\Core\Base\ServiceContainer\recursivelyLookupArguments()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $builtArguments = array();</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $arguments as $argument )</div>
@@ -687,9 +690,9 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 <div class="line"></div>
 <div class="line">                $builtArguments[] = $serviceObject;</div>
 <div class="line">            }</div>
-<div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $recursivly &amp;&amp; is_array( $argument ) )</div>
+<div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $recursively &amp;&amp; is_array( $argument ) )</div>
 <div class="line">            {</div>
-<div class="line">                $builtArguments[] = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4ba1d149317d5030d800e76fe2a38104">recursivlyLookupArguments</a>( $argument );</div>
+<div class="line">                $builtArguments[] = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#af4ec2d146bbf4e8551d3b3bab798af1b">recursivelyLookupArguments</a>( $argument );</div>
 <div class="line">            }</div>
 <div class="line">            <span class="comment">// Scalar values</span></div>
 <div class="line">            <span class="keywordflow">else</span></div>
@@ -705,9 +708,9 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a32bdd3d44171055626f54e4859b10925_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a32bdd3d44171055626f54e4859b10925_cgraph" alt=""/></div>
-<map name="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a32bdd3d44171055626f54e4859b10925_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a32bdd3d44171055626f54e4859b10925_cgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a2a04f8dc16333a2522bfa8c9420401b0" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getService\lArgument" alt="" coords="308,59,513,123"/><area shape="rect" id="node7" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4ba1d149317d5030d800e76fe2a38104" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\recursivly\lLookupArguments" alt="" coords="564,93,761,157"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a694ccf89d37628ab3d871ae7a48d5e3d" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getListOf\lExtendedServices" alt="" coords="565,5,760,69"/></map>
+<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a4c554a0553b1b11dd39f97783b9dd057_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a4c554a0553b1b11dd39f97783b9dd057_cgraph" alt=""/></div>
+<map name="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a4c554a0553b1b11dd39f97783b9dd057_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a4c554a0553b1b11dd39f97783b9dd057_cgraph">
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a2a04f8dc16333a2522bfa8c9420401b0" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getService\lArgument" alt="" coords="308,59,513,123"/><area shape="rect" id="node7" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#af4ec2d146bbf4e8551d3b3bab798af1b" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\recursively\lLookupArguments" alt="" coords="564,93,769,157"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a694ccf89d37628ab3d871ae7a48d5e3d" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getListOf\lExtendedServices" alt="" coords="569,5,764,69"/></map>
 </div>
 </p>
 
@@ -716,15 +719,15 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a32bdd3d44171055626f54e4859b10925_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a32bdd3d44171055626f54e4859b10925_icgraph" alt=""/></div>
-<map name="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a32bdd3d44171055626f54e4859b10925_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a32bdd3d44171055626f54e4859b10925_icgraph">
+<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a4c554a0553b1b11dd39f97783b9dd057_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a4c554a0553b1b11dd39f97783b9dd057_icgraph" alt=""/></div>
+<map name="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a4c554a0553b1b11dd39f97783b9dd057_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a4c554a0553b1b11dd39f97783b9dd057_icgraph">
 <area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#aa03b96012d77b02df4efd53c0d2eb0c2" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\get" alt="" coords="307,5,467,51"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a4ba1d149317d5030d800e76fe2a38104"></a>
+<a class="anchor" id="af4ec2d146bbf4e8551d3b3bab798af1b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -732,7 +735,7 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">eZ\Publish\Core\Base\ServiceContainer::recursivlyLookupArguments </td>
+          <td class="memname">eZ\Publish\Core\Base\ServiceContainer::recursivelyLookupArguments </td>
           <td>(</td>
           <td class="paramtype">array&#160;</td>
           <td class="paramname"><em>$arguments</em></td><td>)</td>
@@ -750,7 +753,7 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 <li>Keep keys of arguments</li>
 <li>Does not exit loop on optional non existing service dependencies</li>
 </ol>
-<p><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a2a04f8dc16333a2522bfa8c9420401b0">getServiceArgument()</a>  <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4ba1d149317d5030d800e76fe2a38104">recursivlyLookupArguments()</a> </p>
+<p><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a2a04f8dc16333a2522bfa8c9420401b0">getServiceArgument()</a>  <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#af4ec2d146bbf4e8551d3b3bab798af1b">recursivelyLookupArguments()</a> </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">\eZ\Publish\API\Repository\Exceptions\InvalidArgumentException</td><td>If undefined variable is used. </td></tr>
@@ -765,9 +768,9 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="ServiceContainer_8php_source.html#l00280">280</a> of file <a class="el" href="ServiceContainer_8php_source.html">ServiceContainer.php</a>.</p>
+<p>Definition at line <a class="el" href="ServiceContainer_8php_source.html#l00283">283</a> of file <a class="el" href="ServiceContainer_8php_source.html">ServiceContainer.php</a>.</p>
 
-<p>References <a class="el" href="ServiceContainer_8php_source.html#l00313">eZ\Publish\Core\Base\ServiceContainer\getServiceArgument()</a>.</p>
+<p>References <a class="el" href="ServiceContainer_8php_source.html#l00316">eZ\Publish\Core\Base\ServiceContainer\getServiceArgument()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $builtArguments = array();</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $arguments as $key =&gt; $argument )</div>
@@ -780,7 +783,7 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 <div class="line">            }</div>
 <div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( is_array( $argument ) )</div>
 <div class="line">            {</div>
-<div class="line">                $builtArguments[$key] = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4ba1d149317d5030d800e76fe2a38104">recursivlyLookupArguments</a>( $argument );</div>
+<div class="line">                $builtArguments[$key] = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#af4ec2d146bbf4e8551d3b3bab798af1b">recursivelyLookupArguments</a>( $argument );</div>
 <div class="line">            }</div>
 <div class="line">            <span class="comment">// Scalar values</span></div>
 <div class="line">            <span class="keywordflow">else</span></div>
@@ -796,9 +799,9 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a4ba1d149317d5030d800e76fe2a38104_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a4ba1d149317d5030d800e76fe2a38104_cgraph" alt=""/></div>
-<map name="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a4ba1d149317d5030d800e76fe2a38104_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a4ba1d149317d5030d800e76fe2a38104_cgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a2a04f8dc16333a2522bfa8c9420401b0" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getService\lArgument" alt="" coords="255,5,460,69"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a694ccf89d37628ab3d871ae7a48d5e3d" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getListOf\lExtendedServices" alt="" coords="511,5,705,69"/></map>
+<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_af4ec2d146bbf4e8551d3b3bab798af1b_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_af4ec2d146bbf4e8551d3b3bab798af1b_cgraph" alt=""/></div>
+<map name="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_af4ec2d146bbf4e8551d3b3bab798af1b_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_af4ec2d146bbf4e8551d3b3bab798af1b_cgraph">
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a2a04f8dc16333a2522bfa8c9420401b0" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getService\lArgument" alt="" coords="263,5,468,69"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a694ccf89d37628ab3d871ae7a48d5e3d" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getListOf\lExtendedServices" alt="" coords="519,5,713,69"/></map>
 </div>
 </p>
 
@@ -807,9 +810,9 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-9-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a4ba1d149317d5030d800e76fe2a38104_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a4ba1d149317d5030d800e76fe2a38104_icgraph" alt=""/></div>
-<map name="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a4ba1d149317d5030d800e76fe2a38104_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_a4ba1d149317d5030d800e76fe2a38104_icgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#aa03b96012d77b02df4efd53c0d2eb0c2" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\get" alt="" coords="811,5,971,51"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a32bdd3d44171055626f54e4859b10925" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\lookupArguments" alt="" coords="511,34,761,81"/><area shape="rect" id="node8" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a2a04f8dc16333a2522bfa8c9420401b0" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getService\lArgument" alt="" coords="255,85,460,149"/></map>
+<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_af4ec2d146bbf4e8551d3b3bab798af1b_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_af4ec2d146bbf4e8551d3b3bab798af1b_icgraph" alt=""/></div>
+<map name="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_af4ec2d146bbf4e8551d3b3bab798af1b_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer_af4ec2d146bbf4e8551d3b3bab798af1b_icgraph">
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#aa03b96012d77b02df4efd53c0d2eb0c2" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\get" alt="" coords="819,5,979,51"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a4c554a0553b1b11dd39f97783b9dd057" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\lookupArguments" alt="" coords="519,34,769,81"/><area shape="rect" id="node8" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html#a2a04f8dc16333a2522bfa8c9420401b0" title="eZ\\Publish\\Core\\Base\l\\ServiceContainer\\getService\lArgument" alt="" coords="263,85,468,149"/></map>
 </div>
 </p>
 
@@ -824,7 +827,7 @@ class=eZ\Publish\Core\Persistence\InMemory\Handler
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Base.html">Base</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1ServiceContainer.html">ServiceContainer</a></li>
-    <li class="footer">Generated on Fri Dec 21 2012 00:02:41 for ezp-next by
+    <li class="footer">Generated on Mon Dec 24 2012 00:02:58 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>
