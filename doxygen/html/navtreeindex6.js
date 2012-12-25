@@ -181,6 +181,10 @@ var NAVTREEINDEX6 =
 "ObjectStateHandler_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,0,6],
 "ObjectStateIdIn_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,0,15],
 "ObjectStateIdIn_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,0,15],
+"ObjectStateLimitationType_8php.html":[4,0,0,0,0,0,0,0,0,1,1,3,4],
+"ObjectStateLimitationType_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,3,4],
+"ObjectStateLimitation_8php.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,5,0,4],
+"ObjectStateLimitation_8php_source.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,5,0,4],
 "ObjectStateUpdate_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,4,0,16],
 "ObjectStateUpdate_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,4,0,16],
 "ObjectState_2Group_8php.html":[4,0,0,0,0,0,0,0,0,1,2,3,0,2,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX6 =
 "Output_2ValueObjectVisitor_2RestContentType_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,41],
 "Output_2ValueObjectVisitor_2RestContent_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,40],
 "Output_2ValueObjectVisitor_2RestContent_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,40],
-"Output_2ValueObjectVisitor_2RestExecutedView_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,43],
-"Output_2ValueObjectVisitor_2RestExecutedView_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,43],
-"Output_2ValueObjectVisitor_2RestFieldDefinition_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,44],
-"Output_2ValueObjectVisitor_2RestFieldDefinition_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,44],
-"Output_2ValueObjectVisitor_2RestLocation_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,45]
+"Output_2ValueObjectVisitor_2RestExecutedView_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,43]
 };

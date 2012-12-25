@@ -4,6 +4,7 @@ var namespaceeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation 
     [ "LanguageLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1LanguageLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1LanguageLimitation" ],
     [ "LocationLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1LocationLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1LocationLimitation" ],
     [ "NewSectionLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1NewSectionLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1NewSectionLimitation" ],
+    [ "ObjectStateLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1ObjectStateLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1ObjectStateLimitation" ],
     [ "OwnerLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1OwnerLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1OwnerLimitation" ],
     [ "ParentContentTypeLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1ParentContentTypeLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1ParentContentTypeLimitation" ],
     [ "ParentDepthLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1ParentDepthLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1ParentDepthLimitation" ],
@@ -12,7 +13,6 @@ var namespaceeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation 
     [ "RoleLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1RoleLimitation.html", null ],
     [ "SectionLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1SectionLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1SectionLimitation" ],
     [ "SiteAccessLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1SiteAccessLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1SiteAccessLimitation" ],
-    [ "StateLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1StateLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1StateLimitation" ],
     [ "SubtreeLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1SubtreeLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1SubtreeLimitation" ],
     [ "UserGroupLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1UserGroupLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1UserGroupLimitation" ]
 ];

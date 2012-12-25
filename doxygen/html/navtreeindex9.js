@@ -1,5 +1,9 @@
 var NAVTREEINDEX9 =
 {
+"SortClauseConverter_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,5,0,6],
+"SortClauseHandler_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,5,0,7],
+"SortClauseHandler_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,5,0,7],
+"SortClauseVisitor_2Aggregate_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,4,0],
 "SortClauseVisitor_2Aggregate_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,4,0],
 "SortClauseVisitor_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,12],
 "SortClauseVisitor_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,12],
@@ -9,10 +13,6 @@ var NAVTREEINDEX9 =
 "Specifications_8php_source.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0],
 "Sqlite_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,2,1],
 "Sqlite_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,2,1],
-"StateLimitationType_8php.html":[4,0,0,0,0,0,0,0,0,1,1,3,11],
-"StateLimitationType_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,3,11],
-"StateLimitation_8php.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,5,0,12],
-"StateLimitation_8php_source.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,5,0,12],
 "StatusIn_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,0,19],
 "StatusIn_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,0,19],
 "StorageEngineFactory_8php.html":[4,0,0,0,0,0,0,0,0,0,0,0,4],

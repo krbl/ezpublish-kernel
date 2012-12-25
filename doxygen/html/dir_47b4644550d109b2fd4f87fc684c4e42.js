@@ -12,6 +12,9 @@ var dir_47b4644550d109b2fd4f87fc684c4e42 =
     [ "NewSectionLimitation.php", "NewSectionLimitation_8php.html", [
       [ "NewSectionLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1NewSectionLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1NewSectionLimitation" ]
     ] ],
+    [ "ObjectStateLimitation.php", "ObjectStateLimitation_8php.html", [
+      [ "ObjectStateLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1ObjectStateLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1ObjectStateLimitation" ]
+    ] ],
     [ "OwnerLimitation.php", "OwnerLimitation_8php.html", [
       [ "OwnerLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1OwnerLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1OwnerLimitation" ]
     ] ],
@@ -35,9 +38,6 @@ var dir_47b4644550d109b2fd4f87fc684c4e42 =
     ] ],
     [ "SiteAccessLimitation.php", "SiteAccessLimitation_8php.html", [
       [ "SiteAccessLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1SiteAccessLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1SiteAccessLimitation" ]
-    ] ],
-    [ "StateLimitation.php", "StateLimitation_8php.html", [
-      [ "StateLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1StateLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1StateLimitation" ]
     ] ],
     [ "SubtreeLimitation.php", "SubtreeLimitation_8php.html", [
       [ "SubtreeLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1SubtreeLimitation.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1SubtreeLimitation" ]

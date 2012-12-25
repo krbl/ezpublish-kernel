@@ -12,6 +12,9 @@ var dir_3f050387edfd9c349df257d24d21536b =
     [ "NewSectionLimitationType.php", "NewSectionLimitationType_8php.html", [
       [ "NewSectionLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1NewSectionLimitationType.html", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1NewSectionLimitationType" ]
     ] ],
+    [ "ObjectStateLimitationType.php", "ObjectStateLimitationType_8php.html", [
+      [ "ObjectStateLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1ObjectStateLimitationType.html", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1ObjectStateLimitationType" ]
+    ] ],
     [ "OwnerLimitationType.php", "OwnerLimitationType_8php.html", [
       [ "OwnerLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1OwnerLimitationType.html", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1OwnerLimitationType" ]
     ] ],
@@ -32,9 +35,6 @@ var dir_3f050387edfd9c349df257d24d21536b =
     ] ],
     [ "SiteAccessLimitationType.php", "SiteAccessLimitationType_8php.html", [
       [ "SiteAccessLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SiteAccessLimitationType.html", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SiteAccessLimitationType" ]
-    ] ],
-    [ "StateLimitationType.php", "StateLimitationType_8php.html", [
-      [ "StateLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1StateLimitationType.html", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1StateLimitationType" ]
     ] ],
     [ "SubtreeLimitationType.php", "SubtreeLimitationType_8php.html", [
       [ "SubtreeLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SubtreeLimitationType.html", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SubtreeLimitationType" ]

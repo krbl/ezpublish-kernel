@@ -107,8 +107,8 @@ $(document).ready(function(){initNavTree('SectionLimitationType_8php_source.html
 <a href="SectionLimitationType_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\Limitation;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html">eZ\Publish\API\Repository\Repository</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html">eZ\Publish\API\Repository\Values\ValueObject</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html">eZ\Publish\API\Repository\Values\ValueObject</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1User.html">eZ\Publish\API\Repository\Values\User\User</a> as APIUser;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Content.html">eZ\Publish\API\Repository\Values\Content\Content</a>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html">eZ\Publish\API\Repository\Values\Content\ContentInfo</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentCreateStruct.html">eZ\Publish\API\Repository\Values\Content\ContentCreateStruct</a>;</div>
@@ -121,71 +121,71 @@ $(document).ready(function(){initNavTree('SectionLimitationType_8php_source.html
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html">SectionLimitationType</a> <span class="keyword">implements</span> SPILimitationTypeInterface</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html#ac4452863710dc574912c79d0e596ce06">   40</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html#ac4452863710dc574912c79d0e596ce06">acceptValue</a>( APILimitationValue $limitationValue, <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html">Repository</a> <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a9202b363fd05640f938dcadbaaaa02ad">$repository</a> )</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">throw</span> new \eZ\Publish\API\Repository\Exceptions\NotImplementedException( __METHOD__ );</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html#a6ae037991f9ed0628b673570dc09f371">   52</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html#a6ae037991f9ed0628b673570dc09f371">buildValue</a>( array $limitationValues )</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> APISectionLimitation( array( <span class="stringliteral">&#39;limitationValues&#39;</span> =&gt; $limitationValues ) );</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Limitation_1_1Type.html#a6de588bc8ee2b8beb8b26a936c5739a5">evaluate</a>( APILimitationValue $value, <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html">Repository</a> <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a9202b363fd05640f938dcadbaaaa02ad">$repository</a>, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html">ValueObject</a> $object, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html">ValueObject</a> $target = null )</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> ( !$value instanceof APISectionLimitation )</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html#ab2619acc89f6419f4957021378b2fd4c">   39</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html#ab2619acc89f6419f4957021378b2fd4c">acceptValue</a>( APILimitationValue $limitationValue )</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">throw</span> new \eZ\Publish\API\Repository\Exceptions\NotImplementedException( __METHOD__ );</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html#a6ae037991f9ed0628b673570dc09f371">   51</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html#a6ae037991f9ed0628b673570dc09f371">buildValue</a>( array $limitationValues )</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> APISectionLimitation( array( <span class="stringliteral">&#39;limitationValues&#39;</span> =&gt; $limitationValues ) );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1Limitation_1_1Type.html#ac97f477a6bc72b83e276064ee0669854">evaluate</a>( APILimitationValue $value, APIUser $currentUser, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html">ValueObject</a> $object, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html">ValueObject</a> $target = null )</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">if</span> ( !$value instanceof APISectionLimitation )</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentException.html">InvalidArgumentException</a>( <span class="stringliteral">&#39;$value&#39;</span>, <span class="stringliteral">&#39;Must be of type: APISectionLimitation&#39;</span> );</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> ( $object instanceof Content )</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentException.html">InvalidArgumentException</a>( <span class="stringliteral">&#39;$value&#39;</span>, <span class="stringliteral">&#39;Must be of type: APISectionLimitation&#39;</span> );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            $object = $object-&gt;getVersionInfo()-&gt;getContentInfo();</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span> ( $object instanceof Content )</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            $object = $object-&gt;getVersionInfo()-&gt;getContentInfo();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $object instanceof VersionInfo )</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            $object = $object-&gt;getContentInfo();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( !$object instanceof ContentInfo &amp;&amp; !$object instanceof $object )</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="stringliteral">&#39;$object&#39;</span>,</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <span class="stringliteral">&#39;Must be of type: ContentCreateStruct, Content, VersionInfo or ContentInfo&#39;</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $object instanceof VersionInfo )</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            $object = $object-&gt;getContentInfo();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( !$object instanceof ContentInfo &amp;&amp; !$object instanceof $object )</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException(</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="stringliteral">&#39;$object&#39;</span>,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                <span class="stringliteral">&#39;Must be of type: ContentCreateStruct, Content, VersionInfo or ContentInfo&#39;</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            );</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">if</span> ( empty( $value-&gt;limitationValues ) )</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">if</span> ( empty( $value-&gt;limitationValues ) )</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> in_array( $object-&gt;sectionId, $value-&gt;limitationValues );</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html#a8384eba23ffe1a0860f326561a7b39c6">  118</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html#a8384eba23ffe1a0860f326561a7b39c6">getCriterion</a>( APILimitationValue $value, <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html">Repository</a> $repository )</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">if</span> ( empty( $value-&gt;limitationValues )  )<span class="comment">// no limitation values</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;\$value-&gt;limitationValues is empty, it should not have been stored in the first place&quot;</span> );</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">if</span> ( !isset( $value-&gt;limitationValues[1] ) )<span class="comment">// 1 limitation value: EQ operation</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> Criterion\SectionId( $value-&gt;limitationValues[0] );</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="comment">// several limitation values: IN operation</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> Criterion\SectionId( $value-&gt;limitationValues );</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html#a562e90b2d846d7fe5caa8b43e002ae71">  138</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html#a562e90b2d846d7fe5caa8b43e002ae71">valueSchema</a>( <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html">Repository</a> $repository )</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    {</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordflow">throw</span> new \eZ\Publish\API\Repository\Exceptions\NotImplementedException( __METHOD__ );</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">return</span> in_array( $object-&gt;sectionId, $value-&gt;limitationValues );</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html#ab67c81e7174ead600c3757c5e563fc17">  113</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html#ab67c81e7174ead600c3757c5e563fc17">getCriterion</a>( APILimitationValue $value, APIUser $currentUser )</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">if</span> ( empty( $value-&gt;limitationValues )  )<span class="comment">// no limitation values</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;\$value-&gt;limitationValues is empty, it should not have been stored in the first place&quot;</span> );</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">if</span> ( !isset( $value-&gt;limitationValues[1] ) )<span class="comment">// 1 limitation value: EQ operation</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> Criterion\SectionId( $value-&gt;limitationValues[0] );</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="comment">// several limitation values: IN operation</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> Criterion\SectionId( $value-&gt;limitationValues );</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html#a1a5fb574490c55a9e089b498a164f691">  131</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html#a1a5fb574490c55a9e089b498a164f691">valueSchema</a>()</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">throw</span> new \eZ\Publish\API\Repository\Exceptions\NotImplementedException( __METHOD__ );</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_3f050387edfd9c349df257d24d21536b.html">Limitation</a></li><li class="navelem"><a class="el" href="SectionLimitationType_8php.html">SectionLimitationType.php</a></li>
-    <li class="footer">Generated on Mon Dec 24 2012 00:02:53 for ezp-next by
+    <li class="footer">Generated on Tue Dec 25 2012 00:02:30 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

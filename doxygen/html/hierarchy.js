@@ -518,6 +518,7 @@ var hierarchy =
         [ "eZ\\Publish\\API\\Repository\\Values\\User\\Limitation\\LanguageLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1LanguageLimitation.html", null ],
         [ "eZ\\Publish\\API\\Repository\\Values\\User\\Limitation\\LocationLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1LocationLimitation.html", null ],
         [ "eZ\\Publish\\API\\Repository\\Values\\User\\Limitation\\NewSectionLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1NewSectionLimitation.html", null ],
+        [ "eZ\\Publish\\API\\Repository\\Values\\User\\Limitation\\ObjectStateLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1ObjectStateLimitation.html", null ],
         [ "eZ\\Publish\\API\\Repository\\Values\\User\\Limitation\\OwnerLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1OwnerLimitation.html", null ],
         [ "eZ\\Publish\\API\\Repository\\Values\\User\\Limitation\\ParentContentTypeLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1ParentContentTypeLimitation.html", null ],
         [ "eZ\\Publish\\API\\Repository\\Values\\User\\Limitation\\ParentDepthLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1ParentDepthLimitation.html", null ],
@@ -528,7 +529,6 @@ var hierarchy =
           [ "eZ\\Publish\\API\\Repository\\Values\\User\\Limitation\\SubtreeLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1SubtreeLimitation.html", null ]
         ] ],
         [ "eZ\\Publish\\API\\Repository\\Values\\User\\Limitation\\SiteAccessLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1SiteAccessLimitation.html", null ],
-        [ "eZ\\Publish\\API\\Repository\\Values\\User\\Limitation\\StateLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1StateLimitation.html", null ],
         [ "eZ\\Publish\\API\\Repository\\Values\\User\\Limitation\\UserGroupLimitation", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1UserGroupLimitation.html", null ]
       ] ],
       [ "eZ\\Publish\\API\\Repository\\Values\\User\\Policy", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Policy.html", [
@@ -1507,6 +1507,7 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\Limitation\\LanguageLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1LanguageLimitationType.html", null ],
       [ "eZ\\Publish\\Core\\Limitation\\LocationLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1LocationLimitationType.html", null ],
       [ "eZ\\Publish\\Core\\Limitation\\NewSectionLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1NewSectionLimitationType.html", null ],
+      [ "eZ\\Publish\\Core\\Limitation\\ObjectStateLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1ObjectStateLimitationType.html", null ],
       [ "eZ\\Publish\\Core\\Limitation\\OwnerLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1OwnerLimitationType.html", null ],
       [ "eZ\\Publish\\Core\\Limitation\\ParentContentTypeLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1ParentContentTypeLimitationType.html", null ],
       [ "eZ\\Publish\\Core\\Limitation\\ParentDepthLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1ParentDepthLimitationType.html", null ],
@@ -1514,7 +1515,6 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\Limitation\\ParentUserGroupLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1ParentUserGroupLimitationType.html", null ],
       [ "eZ\\Publish\\Core\\Limitation\\SectionLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SectionLimitationType.html", null ],
       [ "eZ\\Publish\\Core\\Limitation\\SiteAccessLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SiteAccessLimitationType.html", null ],
-      [ "eZ\\Publish\\Core\\Limitation\\StateLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1StateLimitationType.html", null ],
       [ "eZ\\Publish\\Core\\Limitation\\SubtreeLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SubtreeLimitationType.html", null ],
       [ "eZ\\Publish\\Core\\Limitation\\UserGroupLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1UserGroupLimitationType.html", null ]
     ] ],

@@ -87,7 +87,7 @@ var searchData=
   ['erasecredentials',['eraseCredentials',['../classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Security_1_1User.html#a2accf4b7aedff7852ab7666d1e7fb8cf',1,'eZ::Publish::Core::MVC::Symfony::Security::User']]],
   ['errormessage',['ErrorMessage',['../classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ErrorMessage.html',1,'eZ::Publish::Core::REST::Client::Input::Parser']]],
   ['errormessage_2ephp',['ErrorMessage.php',['../ErrorMessage_8php.html',1,'']]],
-  ['evaluate',['evaluate',['../classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SiteAccessLimitationType.html#a9813877821ea14c4b9718b3c722f69b7',1,'eZ\Publish\Core\Limitation\SiteAccessLimitationType\evaluate()'],['../interfaceeZ_1_1Publish_1_1SPI_1_1Limitation_1_1Type.html#a6de588bc8ee2b8beb8b26a936c5739a5',1,'eZ\Publish\SPI\Limitation\Type\evaluate()']]],
+  ['evaluate',['evaluate',['../classeZ_1_1Publish_1_1Core_1_1Limitation_1_1ParentUserGroupLimitationType.html#a7986bd2fd5b86174307dbf5d7da2995a',1,'eZ\Publish\Core\Limitation\ParentUserGroupLimitationType\evaluate()'],['../classeZ_1_1Publish_1_1Core_1_1Limitation_1_1SiteAccessLimitationType.html#a9168c7b13034cd8a9a8012dd425d831c',1,'eZ\Publish\Core\Limitation\SiteAccessLimitationType\evaluate()'],['../interfaceeZ_1_1Publish_1_1SPI_1_1Limitation_1_1Type.html#ac97f477a6bc72b83e276064ee0669854',1,'eZ\Publish\SPI\Limitation\Type\evaluate()']]],
   ['event',['Event',['../namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event.html',1,'eZ::Publish::Core::MVC::Legacy']]],
   ['event',['Event',['../classeZ_1_1Publish_1_1SPI_1_1FieldType_1_1Event.html',1,'eZ::Publish::SPI::FieldType']]],
   ['event',['Event',['../namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Event.html',1,'eZ::Publish::Core::MVC::Symfony']]],
