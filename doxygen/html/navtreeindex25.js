@@ -1,5 +1,10 @@
 var NAVTREEINDEX25 =
 {
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Gateway.html#a707a27067901a248445e5392eb911c2c":[3,0,0,1,1,5,1,0,7,4,23],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Gateway.html#a723dc277c1a00d550c985160a60879d9":[3,0,0,1,1,5,1,0,7,4,6],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Gateway.html#a851d1054e27f66f8a6f04cbea3a51806":[3,0,0,1,1,5,1,0,7,4,12],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Gateway.html#a89bad2a110e25a94b5863cab3debb60b":[3,0,0,1,1,5,1,0,7,4,9],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Gateway.html#a8bb414faed7616e191111763b1ca70e4":[3,0,0,1,1,5,1,0,7,4,5],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Gateway.html#a8daeb185164551b6e667e1a83cba9652":[3,0,0,1,1,5,1,0,7,4,15],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Gateway.html#aa346da5608c634daebc3d5e9c2e66634":[3,0,0,1,1,5,1,0,7,4,0],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Gateway.html#aa7609f19a0bcfc61847592827879f1af":[3,0,0,1,1,5,1,0,7,4,24],
@@ -244,10 +249,5 @@ var NAVTREEINDEX25 =
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlWildcard_1_1Mapper.html#a0a648f71077e82048b1c4c498fd7bb2e":[3,0,0,1,1,5,1,0,9,3,0],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlWildcard_1_1Mapper.html#a2c718db14b49de0c130a5e0a2a684b20":[3,0,0,1,1,5,1,0,9,3,1],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlWildcard_1_1Mapper.html#a69dc29955098c62d73c4eeb33f8ef332":[3,0,0,1,1,5,1,0,9,3,3],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlWildcard_1_1Mapper.html#a76e1e5e9597f731e8aa1557874b92b38":[3,0,0,1,1,5,1,0,9,3,2],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1GroupNotEmpty.html":[3,0,0,1,1,5,1,1,0],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1GroupNotEmpty.html#abff491127504fd973a6c98a50f272c57":[3,0,0,1,1,5,1,1,0,0],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1RemoveLastGroupFromType.html":[3,0,0,1,1,5,1,1,1],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1RemoveLastGroupFromType.html#ab3296a173fb550b78ec8753820f57e69":[3,0,0,1,1,5,1,1,1,0],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1StorageNotFound.html":[3,0,0,1,1,5,1,1,2]
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlWildcard_1_1Mapper.html#a76e1e5e9597f731e8aa1557874b92b38":[3,0,0,1,1,5,1,0,9,3,2]
 };

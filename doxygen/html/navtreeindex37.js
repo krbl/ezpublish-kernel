@@ -1,5 +1,10 @@
 var NAVTREEINDEX37 =
 {
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a599a3ed8c5fd0a55fa1b1b09a55d6860":[3,0,0,1,1,8,10,7],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a660a0a8e54844d5be7583b6bf1f39477":[3,0,0,1,1,8,10,35],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a6759eeda3f2726b52662cd4a3f14b3ba":[3,0,0,1,1,8,10,21],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a7794bfe78056a419c987c650919f85c0":[3,0,0,1,1,8,10,38],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a819ead6edc7ba9d780b1399ec204d672":[3,0,0,1,1,8,10,36],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a83212cbbcbf0bc8887a619e7c514c315":[3,0,0,1,1,8,10,30],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a8ed41b9de87209a061615c739e094144":[3,0,0,1,1,8,10,5],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a943199eb435b310a4c77714a04f1b070":[3,0,0,1,1,8,10,8],
@@ -244,10 +249,5 @@ var NAVTREEINDEX37 =
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService_1_1DeleteSectionSignal.html":[3,0,0,1,1,8,0,6,2],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService_1_1DeleteSectionSignal.html#a0d415538251b391ecee2f7ac322235fb":[3,0,0,1,1,8,0,6,2,0],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService_1_1UpdateSectionSignal.html":[3,0,0,1,1,8,0,6,3],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService_1_1UpdateSectionSignal.html#a380e7ca00d2dbc0d405db8155c287add":[3,0,0,1,1,8,0,6,3,0],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService_1_1DeleteTrashItemSignal.html":[3,0,0,1,1,8,0,7,0],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService_1_1DeleteTrashItemSignal.html#a4a1b95b236370a86a8dd98e04d1dd0bf":[3,0,0,1,1,8,0,7,0,0],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService_1_1EmptyTrashSignal.html":[3,0,0,1,1,8,0,7,1],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService_1_1RecoverSignal.html":[3,0,0,1,1,8,0,7,2],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService_1_1RecoverSignal.html#a944cc40ab5875d258f9b5d4e4541d61b":[3,0,0,1,1,8,0,7,2,1]
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService_1_1UpdateSectionSignal.html#a380e7ca00d2dbc0d405db8155c287add":[3,0,0,1,1,8,0,6,3,0]
 };

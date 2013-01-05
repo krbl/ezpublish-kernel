@@ -1,5 +1,10 @@
 var NAVTREEINDEX29 =
 {
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a2158a24a399372a3bb8da714792f849a":[3,0,0,1,1,7,0,17,19],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a271c95ef44ae0943d5a3b998f21a0749":[3,0,0,1,1,7,0,17,7],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a2b905741b3e772a816046d9abe36cad4":[3,0,0,1,1,7,0,17,15],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a2e13bb1c234cb3b390cc27ee78e4caf1":[3,0,0,1,1,7,0,17,11],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a3e738af67906927f9d224586dd2085e3":[3,0,0,1,1,7,0,17,24],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a4a2cf9a5950145956e6589d7c47bd603":[3,0,0,1,1,7,0,17,5],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a560a1cfae290a9880ec82109a042677b":[3,0,0,1,1,7,0,17,3],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1RoleService.html#a754927b71fa0ca6afb85426bb4bcbc3f":[3,0,0,1,1,7,0,17,23],
@@ -244,10 +249,5 @@ var NAVTREEINDEX29 =
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1User_1_1UserRoleAssignment.html#a417e76581c3a2305e6383c5e1b391670":[3,0,0,1,1,7,0,4,2,11,5],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1User_1_1UserRoleAssignment.html#a7727d055e7a207b660e4b5b92ed92d17":[3,0,0,1,1,7,0,4,2,11,4],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1User_1_1UserRoleAssignment.html#a8e4a97070a64c88607b03edbe55758a1":[3,0,0,1,1,7,0,4,2,11,0],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1User_1_1UserRoleAssignment.html#abc825de48749765ce849f85cce88d6c1":[3,0,0,1,1,7,0,4,2,11,2],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1User_1_1UserRoleAssignment.html#aee196a58f6007089168a44dda8277a4c":[3,0,0,1,1,7,0,4,2,11,1],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1InvalidArgumentException.html":[3,0,0,1,1,7,1,0,0],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1NotFoundException.html":[3,0,0,1,1,7,1,0,1],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html":[3,0,0,1,1,7,1,0,2],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1FieldTypeProcessorRegistry.html":[3,0,0,1,1,7,1,6]
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1User_1_1UserRoleAssignment.html#abc825de48749765ce849f85cce88d6c1":[3,0,0,1,1,7,0,4,2,11,2]
 };

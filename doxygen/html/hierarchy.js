@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "eZ\\Bundle\\EzPublishCoreBundle\\ApiLoader\\Exception\\InvalidStorageEngine", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1Exception_1_1InvalidStorageEngine.html", null ],
+    [ "eZ\\Bundle\\EzPublishCoreBundle\\ApiLoader\\LazyRepositoryFactory", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LazyRepositoryFactory.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\ApiLoader\\LegacyDbHandlerFactory", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyDbHandlerFactory.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\ApiLoader\\LegacyStorageEngineFactory", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\ApiLoader\\RepositoryFactory", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1RepositoryFactory.html", null ],

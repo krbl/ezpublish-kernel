@@ -1,5 +1,7 @@
 var NAVTREEINDEX8 =
 {
+"RegisterLimitationTypePass_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,2,0,6],
+"RegisterStorageEnginePass_8php.html":[4,0,0,0,0,0,0,0,0,0,0,2,0,7],
 "RegisterStorageEnginePass_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,2,0,7],
 "RelationCreate_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,4,0,19],
 "RelationCreate_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,4,0,19],
@@ -31,8 +33,8 @@ var NAVTREEINDEX8 =
 "RepositoryAwareInterface_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,5],
 "RepositoryAware_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,4],
 "RepositoryAware_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,4],
-"RepositoryFactory_8php.html":[4,0,0,0,0,0,0,0,0,0,0,0,3],
-"RepositoryFactory_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,0,3],
+"RepositoryFactory_8php.html":[4,0,0,0,0,0,0,0,0,0,0,0,4],
+"RepositoryFactory_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,0,4],
 "RequestAwarePurger_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,0,0,7],
 "RequestAwarePurger_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,0,0,7],
 "RequestEventListener_8php.html":[4,0,0,0,0,0,0,0,0,0,0,3,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX8 =
 "SiteAccess_2Matcher_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,7,1],
 "SlotFactory_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,17],
 "SlotFactory_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,17],
-"Slot_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,16],
-"Slot_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,16],
-"SortClauseConverter_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,5,0,6]
+"Slot_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,16]
 };

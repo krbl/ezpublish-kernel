@@ -1,5 +1,10 @@
 var NAVTREEINDEX20 =
 {
+"classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher_1_1Identifier_1_1Section.html#a8c95acdb96dcb650d3e83a8d40712a33":[3,0,0,1,1,4,2,9,0,0,0,1,2,0],
+"classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher_1_1Identifier_1_1Section.html#accac1c33c2d4f0a776534889cc4514af":[3,0,0,1,1,4,2,9,0,0,0,1,2,1],
+"classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher_1_1MultipleValued.html":[3,0,0,1,1,4,2,9,0,0,0,3],
+"classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher_1_1MultipleValued.html#a4012d5b5584a10732e0fc89001893815":[3,0,0,1,1,4,2,9,0,0,0,3,0],
+"classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher_1_1MultipleValued.html#a5b473d612ab8d7743e36974849be94f4":[3,0,0,1,1,4,2,9,0,0,0,3,1],
 "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher_1_1MultipleValued.html#acf88c86aacd09ca4d5b72d42e565ef9e":[3,0,0,1,1,4,2,9,0,0,0,3,2],
 "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher_1_1MultipleValued.html#afde21031839cd5903adaa4e7a071ac0b":[3,0,0,1,1,4,2,9,0,0,0,3,3],
 "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher_1_1UrlAlias.html":[3,0,0,1,1,4,2,9,0,0,0,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX20 =
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a5ba971c13c65484286d47a07ae685f89":[3,0,0,1,1,5,0,11,4],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a8f601255e6ede15b7d62deac9d0b9873":[3,0,0,1,1,5,0,11,6],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#a956d010e76d6313d210c6f5f88fc0aec":[3,0,0,1,1,5,0,11,1],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#abf78ba20bf10adbadbda7f54df1815b3":[3,0,0,1,1,5,0,11,5],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#ad1e7f8479034e592346219839819faea":[3,0,0,1,1,5,0,11,0],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html":[3,0,0,1,1,5,0,12],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a107620f4ba67fc97f517c871e954ff69":[3,0,0,1,1,5,0,12,8],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a1485e24d2418c0ddc8d33a10707853cb":[3,0,0,1,1,5,0,12,13],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a30ed5a95a3e5c448c82a60542d65a166":[3,0,0,1,1,5,0,12,4]
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#abf78ba20bf10adbadbda7f54df1815b3":[3,0,0,1,1,5,0,11,5]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX21 =
 {
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlWildcardHandler.html#ad1e7f8479034e592346219839819faea":[3,0,0,1,1,5,0,11,0],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html":[3,0,0,1,1,5,0,12],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a107620f4ba67fc97f517c871e954ff69":[3,0,0,1,1,5,0,12,8],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a1485e24d2418c0ddc8d33a10707853cb":[3,0,0,1,1,5,0,12,13],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a30ed5a95a3e5c448c82a60542d65a166":[3,0,0,1,1,5,0,12,4],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a31c6653e44526ba2342660f308b12f29":[3,0,0,1,1,5,0,12,0],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a38040a4a98cc81fb1f2d71a90a19448c":[3,0,0,1,1,5,0,12,5],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a4db38d271130593a931d399cb9184221":[3,0,0,1,1,5,0,12,21],
@@ -244,10 +249,5 @@ var NAVTREEINDEX21 =
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#ac2f9a739e7f371f8954145eeee8b200e":[3,0,0,1,1,5,1,0,11,7],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#ad0ac79c8dbab7688f0f8b9bf4b2e4637":[3,0,0,1,1,5,1,0,11,2],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#ad6f68f0847444317fee75800b14e046a":[3,0,0,1,1,5,1,0,11,13],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#aed377c3aa5a1216df874f69bcc7cbe35":[3,0,0,1,1,5,1,0,11,21],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#aef09e96aef24a443b25848dcf9e9bd2d":[3,0,0,1,1,5,1,0,11,1],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#afa9a8121c78e3a4f8478f7a06faa7393":[3,0,0,1,1,5,1,0,11,12],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#affd3964637f72e5fd47aa74605dbd9c8":[3,0,0,1,1,5,1,0,11,9],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1ExceptionConversion.html":[3,0,0,1,1,5,1,0,1,1],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1ExceptionConversion.html#a02f54ae08eb226741b0263b0ec36085e":[3,0,0,1,1,5,1,0,1,1,31]
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#aed377c3aa5a1216df874f69bcc7cbe35":[3,0,0,1,1,5,1,0,11,21]
 };

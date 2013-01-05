@@ -1,5 +1,10 @@
 var NAVTREEINDEX44 =
 {
+"namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View_1_1Provider_1_1Location.html":[3,0,0,0,0,5,0,1],
+"namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle.html":[3,0,0,0,1],
+"namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Command.html":[3,0,0,0,1,0],
+"namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller.html":[3,0,0,0,1,1],
+"namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection.html":[3,0,0,0,1,2],
 "namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Compiler.html":[3,0,0,0,1,2,0],
 "namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Configuration.html":[3,0,0,0,1,2,1],
 "namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper.html":[3,0,0,0,1,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX44 =
 "namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1LanguageService.html":[3,0,0,1,1,8,0,2],
 "namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1LocationService.html":[3,0,0,1,1,8,0,3],
 "namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ObjectStateService.html":[3,0,0,1,1,8,0,4],
-"namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService.html":[3,0,0,1,1,8,0,5],
-"namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService.html":[3,0,0,1,1,8,0,6],
-"namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService.html":[3,0,0,1,1,8,0,7],
-"namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1URLAliasService.html":[3,0,0,1,1,8,0,8],
-"namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1URLWildcardService.html":[3,0,0,1,1,8,0,9],
-"namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1UserService.html":[3,0,0,1,1,8,0,10]
+"namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService.html":[3,0,0,1,1,8,0,5]
 };

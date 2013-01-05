@@ -1,5 +1,10 @@
 var NAVTREEINDEX35 =
 {
+"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Repository.html#a509ac7c8c75a2ccf4b379a51986502c6":[3,0,0,1,1,6,10,19],
+"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Repository.html#a510b459eabb1096322b90863a97672d1":[3,0,0,1,1,6,10,1],
+"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Repository.html#a5a2293cfeb8b3ff5dffd7acfeaa8989b":[3,0,0,1,1,6,10,15],
+"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Repository.html#a5da876e6306e295c080fba21bee1d875":[3,0,0,1,1,6,10,13],
+"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Repository.html#a6030a67bdaaefcb122cc0ca10f19693a":[3,0,0,1,1,6,10,30],
 "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Repository.html#a6bb58ce24e49bde62ea418ffd2ffda4b":[3,0,0,1,1,6,10,7],
 "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Repository.html#a71ab7e716b38cc854a252307782aec87":[3,0,0,1,1,6,10,11],
 "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Repository.html#a84072b3628e814dd394a7165d31074e9":[3,0,0,1,1,6,10,17],
@@ -244,10 +249,5 @@ var NAVTREEINDEX35 =
 "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentCreateStruct.html#afde876d7ad208aea868897725ed9332d":[3,0,0,1,1,6,0,0,1,1],
 "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html":[3,0,0,1,1,6,0,0,2],
 "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#a019e287304958989786cd093aa3b75a9":[3,0,0,1,1,6,0,0,2,1],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#ac64e580e221ab7910ec1e595f956b845":[3,0,0,1,1,6,0,0,2,3],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#acbf72e5a0de6702ad64af965dda154db":[3,0,0,1,1,6,0,0,2,2],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#accab54a350372069bd262b66ddc12b99":[3,0,0,1,1,6,0,0,2,0],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentUpdateStruct.html":[3,0,0,1,1,6,0,0,3],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentUpdateStruct.html#a5dae8e475487d244de7ec1a7c8d1b02a":[3,0,0,1,1,6,0,0,3,1],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentUpdateStruct.html#ab260e10029d3c1bb041c23e30d5e2a31":[3,0,0,1,1,6,0,0,3,0]
+"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#ac64e580e221ab7910ec1e595f956b845":[3,0,0,1,1,6,0,0,2,3]
 };

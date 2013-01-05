@@ -1,5 +1,10 @@
 var NAVTREEINDEX45 =
 {
+"namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1SectionService.html":[3,0,0,1,1,8,0,6],
+"namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1TrashService.html":[3,0,0,1,1,8,0,7],
+"namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1URLAliasService.html":[3,0,0,1,1,8,0,8],
+"namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1URLWildcardService.html":[3,0,0,1,1,8,0,9],
+"namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1UserService.html":[3,0,0,1,1,8,0,10],
 "namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Slot.html":[3,0,0,1,1,8,2],
 "namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1SlotFactory.html":[3,0,0,1,1,8,3],
 "namespaceeZ_1_1Publish_1_1SPI.html":[3,0,0,1,2],

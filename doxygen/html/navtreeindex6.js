@@ -1,5 +1,7 @@
 var NAVTREEINDEX6 =
 {
+"LegacyAdapter_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,2],
+"LegacyAssignSectionSlot_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,1],
 "LegacyAssignSectionSlot_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,1],
 "LegacyCompatible_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,3],
 "LegacyCompatible_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,3],
@@ -11,8 +13,8 @@ var NAVTREEINDEX6 =
 "LegacyCopyContentSlot_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,2],
 "LegacyCreateLocationSlot_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,3],
 "LegacyCreateLocationSlot_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,3],
-"LegacyDbHandlerFactory_8php.html":[4,0,0,0,0,0,0,0,0,0,0,0,1],
-"LegacyDbHandlerFactory_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,0,1],
+"LegacyDbHandlerFactory_8php.html":[4,0,0,0,0,0,0,0,0,0,0,0,2],
+"LegacyDbHandlerFactory_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,0,2],
 "LegacyDeleteContentSlot_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,4],
 "LegacyDeleteContentSlot_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,4],
 "LegacyDeleteLocationSlot_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,5],
@@ -49,8 +51,8 @@ var NAVTREEINDEX6 =
 "LegacySetContentStateSlot_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,11],
 "LegacySetupController_8php.html":[4,0,0,0,0,0,0,0,0,0,1,1,1],
 "LegacySetupController_8php_source.html":[4,0,0,0,0,0,0,0,0,0,1,1,1],
-"LegacyStorageEngineFactory_8php.html":[4,0,0,0,0,0,0,0,0,0,0,0,2],
-"LegacyStorageEngineFactory_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,0,2],
+"LegacyStorageEngineFactory_8php.html":[4,0,0,0,0,0,0,0,0,0,0,0,3],
+"LegacyStorageEngineFactory_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,0,3],
 "LegacyStorageEnginePass_8php.html":[4,0,0,0,0,0,0,0,0,0,0,2,0,4],
 "LegacyStorageEnginePass_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,2,0,4],
 "LegacySwapLocationSlot_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,12],
@@ -247,7 +249,5 @@ var NAVTREEINDEX6 =
 "Output_2ValueObjectVisitor_2ResourceCreated_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,39],
 "Output_2ValueObjectVisitor_2RestContentType_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,41],
 "Output_2ValueObjectVisitor_2RestContentType_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,41],
-"Output_2ValueObjectVisitor_2RestContent_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,40],
-"Output_2ValueObjectVisitor_2RestContent_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,40],
-"Output_2ValueObjectVisitor_2RestExecutedView_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,43]
+"Output_2ValueObjectVisitor_2RestContent_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,40]
 };

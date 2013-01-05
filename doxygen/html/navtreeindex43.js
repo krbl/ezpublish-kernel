@@ -1,5 +1,10 @@
 var NAVTREEINDEX43 =
 {
+"interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewInterface.html#acbba388dc88a77cb686195f0f48b3ba3":[3,0,0,1,1,4,2,9,3,6],
+"interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewInterface.html#ada057b1e81a8f117bc9e44c326232ce8":[3,0,0,1,1,4,2,9,3,1],
+"interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewInterface.html#ae25a310d34265b219f5879b6474ed9fe":[3,0,0,1,1,4,2,9,3,5],
+"interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewInterface.html#ae534c7f1cabf4c4103577c3b95e8206c":[3,0,0,1,1,4,2,9,3,2],
+"interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewInterface.html#af3f8c7ba9a99fb9b9ffc318da1f873b3":[3,0,0,1,1,4,2,9,3,0],
 "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher.html":[3,0,0,1,1,4,2,9,0,0,1],
 "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher.html#a7258953c5916cca86bffd850384e7112":[3,0,0,1,1,4,2,9,0,0,1,2],
 "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher.html#a8f1410da41abe13c6432467f6b9cfef6":[3,0,0,1,1,4,2,9,0,0,1,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX43 =
 "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Routing.html":[3,0,0,0,0,4],
 "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View.html":[3,0,0,0,0,5],
 "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View_1_1Provider.html":[3,0,0,0,0,5,0],
-"namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View_1_1Provider_1_1Content.html":[3,0,0,0,0,5,0,0],
-"namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View_1_1Provider_1_1Location.html":[3,0,0,0,0,5,0,1],
-"namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle.html":[3,0,0,0,1],
-"namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Command.html":[3,0,0,0,1,0],
-"namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller.html":[3,0,0,0,1,1],
-"namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection.html":[3,0,0,0,1,2]
+"namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View_1_1Provider_1_1Content.html":[3,0,0,0,0,5,0,0]
 };

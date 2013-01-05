@@ -1,5 +1,10 @@
 var NAVTREEINDEX27 =
 {
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1FullText.html#a6cad482a033612de19b84fa01c59d06e":[3,0,0,1,1,5,2,0,0,0,8,1],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1FullText.html#a7960a4bee60ae7472711632c59ce3c1e":[3,0,0,1,1,5,2,0,0,0,8,0],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1LanguageCodeIn.html":[3,0,0,1,1,5,2,0,0,0,9],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1LanguageCodeIn.html#a78ce89bde7c10e56cb6ef0a1f5b5af26":[3,0,0,1,1,5,2,0,0,0,9,1],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1LanguageCodeIn.html#abeaade448dfe072e2535e3a91be395e8":[3,0,0,1,1,5,2,0,0,0,9,0],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1LocationIdIn.html":[3,0,0,1,1,5,2,0,0,0,10],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1LocationIdIn.html#a2625a58f9a574394ef2f46569bdf60e6":[3,0,0,1,1,5,2,0,0,0,10,0],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1LocationIdIn.html#a54a469272d3a04fac5312f068140323f":[3,0,0,1,1,5,2,0,0,0,10,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX27 =
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1FieldType.html#a7dcd04d0fb11cfd0138df0bf1b79e9d0":[3,0,0,1,1,7,0,7,9],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1FieldType.html#a8f67919b1e89b6bcf6a05fd2309a29e3":[3,0,0,1,1,7,0,7,2],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1FieldType.html#aa2b20912d28dc0dbdc0febd12864dc54":[3,0,0,1,1,7,0,7,7],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1FieldType.html#aa7d1a3bb0e10afd2e1dd12ecc7ae258c":[3,0,0,1,1,7,0,7,1],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1FieldType.html#ad86a652b8304c226b71431f7ec370591":[3,0,0,1,1,7,0,7,8],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1FieldTypeService.html":[3,0,0,1,1,7,0,8],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1FieldTypeService.html#a06009fc1ad95a8965e4e25de6c7c69c8":[3,0,0,1,1,7,0,8,4],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1FieldTypeService.html#a0f6c11c1c04ef0437fcfea020de6e14d":[3,0,0,1,1,7,0,8,0],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1FieldTypeService.html#a2f56f244f4986370e3f57cec22c8156a":[3,0,0,1,1,7,0,8,5]
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1FieldType.html#aa7d1a3bb0e10afd2e1dd12ecc7ae258c":[3,0,0,1,1,7,0,7,1]
 };

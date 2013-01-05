@@ -1,5 +1,10 @@
 var NAVTREEINDEX30 =
 {
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1User_1_1UserRoleAssignment.html#aee196a58f6007089168a44dda8277a4c":[3,0,0,1,1,7,0,4,2,11,1],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1InvalidArgumentException.html":[3,0,0,1,1,7,1,0,0],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1NotFoundException.html":[3,0,0,1,1,7,1,0,1],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html":[3,0,0,1,1,7,1,0,2],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1FieldTypeProcessorRegistry.html":[3,0,0,1,1,7,1,6],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1FieldTypeProcessorRegistry.html#a5b3b0f1e6e2c085b56c5b76ec571c86a":[3,0,0,1,1,7,1,6,0],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1FieldTypeProcessorRegistry.html#a87902289ed44537c817ad4199f402ebc":[3,0,0,1,1,7,1,6,2],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1FieldTypeProcessorRegistry.html#aa4d371f5981c21311610121b7500e49c":[3,0,0,1,1,7,1,6,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX30 =
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller.html#a204661162aaa7c7248a0e9e56bce197d":[3,0,0,1,1,7,2,10,6],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller.html#a4a524b4c23263883cfd5d55720c71cda":[3,0,0,1,1,7,2,10,0],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller.html#a9352b69b9cd9be469c31f4fc53074037":[3,0,0,1,1,7,2,10,1],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller.html#aa64e6ae8cf94075ffc7a96cef97603e8":[3,0,0,1,1,7,2,10,3],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller.html#ab98118e6f61fd1ba97cd1c20968f21cd":[3,0,0,1,1,7,2,10,5],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content.html":[3,0,0,1,1,7,2,1,0],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content.html#a04dd08e34b91085b3f1669e83d4b0f49":[3,0,0,1,1,7,2,1,0,16],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content.html#a0e86997ec6c1dd934607d69ecd44bd40":[3,0,0,1,1,7,2,1,0,2],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1Content.html#a1421789a2e2206f808b7947f88769c5e":[3,0,0,1,1,7,2,1,0,7]
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller.html#aa64e6ae8cf94075ffc7a96cef97603e8":[3,0,0,1,1,7,2,10,3]
 };

@@ -115,7 +115,6 @@ $(document).ready(function(){initNavTree('classeZ_1_1Bundle_1_1EzPublishCoreBund
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af3254a58576a7ffccc5740fcd2138b5b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1RepositoryFactory.html#af3254a58576a7ffccc5740fcd2138b5b">__construct</a> (ContainerInterface $container)</td></tr>
-<tr class="memitem:adc5c26f884e14e99f43b1fa3e3573af2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1RepositoryFactory.html#adc5c26f884e14e99f43b1fa3e3573af2">buildLazyRepository</a> ()</td></tr>
 <tr class="memitem:ad4f4f20858ccb82b2ef502fd8440dedc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1RepositoryFactory.html#ad4f4f20858ccb82b2ef502fd8440dedc">registerFieldType</a> ($fieldTypeServiceId, $fieldTypeAlias)</td></tr>
 <tr class="memitem:a8454c9b994305ca025cfc44069b2fef1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1RepositoryFactory.html#a8454c9b994305ca025cfc44069b2fef1">registerExternalStorageHandler</a> ($serviceId, $fieldTypeAlias)</td></tr>
 <tr class="memitem:a61dea2189a2729983837f53d23cceea5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1RepositoryFactory.html#a61dea2189a2729983837f53d23cceea5">registerLimitationType</a> ($limitationName, SPILimitationType $limitationType)</td></tr>
@@ -157,41 +156,6 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2>Member Function Documentation</h2>
-<a class="anchor" id="adc5c26f884e14e99f43b1fa3e3573af2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">eZ\Bundle\EzPublishCoreBundle\ApiLoader\RepositoryFactory::buildLazyRepository </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns a closure which returns ezpublish.api.repository when called.</p>
-<p>To be used when lazy loading is needed.</p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-<p>Definition at line <a class="el" href="RepositoryFactory_8php_source.html#l00088">88</a> of file <a class="el" href="RepositoryFactory_8php_source.html">RepositoryFactory.php</a>.</p>
-
-<p>References <a class="el" href="RepositoryFactory_8php_source.html#l00024">eZ\Bundle\EzPublishCoreBundle\ApiLoader\RepositoryFactory\$container</a>, and <a class="el" href="common_8php_source.html#l00065">eZ\Publish\Core\REST\$repository</a>.</p>
-<div class="fragment"><div class="line">    {</div>
-<div class="line">        <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1RepositoryFactory.html#ace4bf79c56bdd26f054fbf582f331210">$container</a> = <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1RepositoryFactory.html#ace4bf79c56bdd26f054fbf582f331210">$this-&gt;container</a>;</div>
-<div class="line">        <span class="keywordflow">return</span> <span class="keyword">function</span> () use ( <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1RepositoryFactory.html#ace4bf79c56bdd26f054fbf582f331210">$container</a> )</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keyword">static</span> <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a9202b363fd05640f938dcadbaaaa02ad">$repository</a>;</div>
-<div class="line">            <span class="keywordflow">if</span> ( !<a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a9202b363fd05640f938dcadbaaaa02ad">$repository</a> instanceof Repository )</div>
-<div class="line">            {</div>
-<div class="line">                <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a9202b363fd05640f938dcadbaaaa02ad">$repository</a> = <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1RepositoryFactory.html#ace4bf79c56bdd26f054fbf582f331210">$container</a>-&gt;get( <span class="stringliteral">&#39;ezpublish.api.repository&#39;</span> );</div>
-<div class="line">            }</div>
-<div class="line"></div>
-<div class="line">            <span class="keywordflow">return</span> <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a9202b363fd05640f938dcadbaaaa02ad">$repository</a>;</div>
-<div class="line">        };</div>
-<div class="line">    }</div>
-</div><!-- fragment -->
-</div>
-</div>
 <a class="anchor" id="a2364a598638dbd3f94aaa4098e29fea3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -231,7 +195,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>mixed </dd></dl>
 
-<p>Definition at line <a class="el" href="RepositoryFactory_8php_source.html#l00166">166</a> of file <a class="el" href="RepositoryFactory_8php_source.html">RepositoryFactory.php</a>.</p>
+<p>Definition at line <a class="el" href="RepositoryFactory_8php_source.html#l00144">144</a> of file <a class="el" href="RepositoryFactory_8php_source.html">RepositoryFactory.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $methodName = <span class="stringliteral">&#39;get&#39;</span> . $serviceName . <span class="stringliteral">&#39;Service&#39;</span>;</div>
 <div class="line">        <span class="keywordflow">if</span> ( !method_exists( <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a9202b363fd05640f938dcadbaaaa02ad">$repository</a>, $methodName ) )</div>
@@ -258,7 +222,7 @@ Protected Attributes</h2></td></tr>
 <p>Returns registered external storage handlers for field types (as closures to be lazy loaded in the public API)</p>
 <dl class="section return"><dt>Returns</dt><dd>[] </dd></dl>
 
-<p>Definition at line <a class="el" href="RepositoryFactory_8php_source.html#l00151">151</a> of file <a class="el" href="RepositoryFactory_8php_source.html">RepositoryFactory.php</a>.</p>
+<p>Definition at line <a class="el" href="RepositoryFactory_8php_source.html#l00129">129</a> of file <a class="el" href="RepositoryFactory_8php_source.html">RepositoryFactory.php</a>.</p>
 
 <p>References <a class="el" href="RepositoryFactory_8php_source.html#l00038">eZ\Bundle\EzPublishCoreBundle\ApiLoader\RepositoryFactory\$externalStorages</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -299,7 +263,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="RepositoryFactory_8php_source.html#l00126">126</a> of file <a class="el" href="RepositoryFactory_8php_source.html">RepositoryFactory.php</a>.</p>
+<p>Definition at line <a class="el" href="RepositoryFactory_8php_source.html#l00104">104</a> of file <a class="el" href="RepositoryFactory_8php_source.html">RepositoryFactory.php</a>.</p>
 
 <p>References <a class="el" href="RepositoryFactory_8php_source.html#l00024">eZ\Bundle\EzPublishCoreBundle\ApiLoader\RepositoryFactory\$container</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -344,7 +308,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="RepositoryFactory_8php_source.html#l00110">110</a> of file <a class="el" href="RepositoryFactory_8php_source.html">RepositoryFactory.php</a>.</p>
+<p>Definition at line <a class="el" href="RepositoryFactory_8php_source.html#l00088">88</a> of file <a class="el" href="RepositoryFactory_8php_source.html">RepositoryFactory.php</a>.</p>
 
 <p>References <a class="el" href="RepositoryFactory_8php_source.html#l00024">eZ\Bundle\EzPublishCoreBundle\ApiLoader\RepositoryFactory\$container</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -389,7 +353,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="RepositoryFactory_8php_source.html#l00141">141</a> of file <a class="el" href="RepositoryFactory_8php_source.html">RepositoryFactory.php</a>.</p>
+<p>Definition at line <a class="el" href="RepositoryFactory_8php_source.html#l00119">119</a> of file <a class="el" href="RepositoryFactory_8php_source.html">RepositoryFactory.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;roleLimitations[$limitationName] = $limitationType;</div>
 <div class="line">    }</div>
@@ -494,7 +458,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle.html">EzPublishCoreBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader.html">ApiLoader</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1RepositoryFactory.html">RepositoryFactory</a></li>
-    <li class="footer">Generated on Tue Dec 25 2012 00:02:35 for ezp-next by
+    <li class="footer">Generated on Sat Jan 5 2013 00:03:20 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

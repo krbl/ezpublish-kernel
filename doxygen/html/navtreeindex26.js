@@ -1,5 +1,10 @@
 var NAVTREEINDEX26 =
 {
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1GroupNotEmpty.html":[3,0,0,1,1,5,1,1,0],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1GroupNotEmpty.html#abff491127504fd973a6c98a50f272c57":[3,0,0,1,1,5,1,1,0,0],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1RemoveLastGroupFromType.html":[3,0,0,1,1,5,1,1,1],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1RemoveLastGroupFromType.html#ab3296a173fb550b78ec8753820f57e69":[3,0,0,1,1,5,1,1,1,0],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1StorageNotFound.html":[3,0,0,1,1,5,1,1,2],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1StorageNotFound.html#a9cac3b6c236f4ef72d253f991f13535b":[3,0,0,1,1,5,1,1,2,0],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1TypeGroupNotFound.html":[3,0,0,1,1,5,1,1,3],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Exception_1_1TypeGroupNotFound.html#a77643f407b4e0521f7808f3d1e3b56b4":[3,0,0,1,1,5,1,1,3,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX26 =
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1Field_1_1FieldRange.html":[3,0,0,1,1,5,2,0,0,0,1,1],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1Field_1_1FieldRange.html#a93d4618f84bc966c2371b6926153d09f":[3,0,0,1,1,5,2,0,0,0,1,1,0],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1Field_1_1FieldRange.html#ab13756138f20f84935ef185cc0c291bd":[3,0,0,1,1,5,2,0,0,0,1,1,1],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1FullText.html":[3,0,0,1,1,5,2,0,0,0,8],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1FullText.html#a6cad482a033612de19b84fa01c59d06e":[3,0,0,1,1,5,2,0,0,0,8,1],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1FullText.html#a7960a4bee60ae7472711632c59ce3c1e":[3,0,0,1,1,5,2,0,0,0,8,0],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1LanguageCodeIn.html":[3,0,0,1,1,5,2,0,0,0,9],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1LanguageCodeIn.html#a78ce89bde7c10e56cb6ef0a1f5b5af26":[3,0,0,1,1,5,2,0,0,0,9,1],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1LanguageCodeIn.html#abeaade448dfe072e2535e3a91be395e8":[3,0,0,1,1,5,2,0,0,0,9,0]
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1FullText.html":[3,0,0,1,1,5,2,0,0,0,8]
 };

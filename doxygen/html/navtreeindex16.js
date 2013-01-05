@@ -1,5 +1,10 @@
 var NAVTREEINDEX16 =
 {
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Value.html#a2e51496fb065ae9eb2f297b05c70a0c1":[3,0,0,1,1,1,10,1,1],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Value.html#aa512b8a7ef87ac427b58f5b5413760da":[3,0,0,1,1,1,10,1,2],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage.html":[3,0,0,1,1,1,11,1],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage.html#a185f959e0a73032f3b0c6f179b855ec6":[3,0,0,1,1,1,11,1,4],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage.html#a21847f76fbe4399af3ec98ac7da810ed":[3,0,0,1,1,1,11,1,0],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage.html#a35c3a9467326e7436ed2067d499aa023":[3,0,0,1,1,1,11,1,1],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage.html#a8e12f820adbced474e2b194ca154dbde":[3,0,0,1,1,1,11,1,2],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage.html#ab84e32f35c4645c88c96fceafbe0f376":[3,0,0,1,1,1,11,1,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX16 =
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Selection_1_1Type.html":[3,0,0,1,1,1,20,0],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Selection_1_1Type.html#a152f3a99e850f64fcf6afe65758768fb":[3,0,0,1,1,1,20,0,9],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Selection_1_1Type.html#a2c5193caf2c142e2706927d628bc1b08":[3,0,0,1,1,1,20,0,8],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Selection_1_1Type.html#a43f320c5f836966c00d66717c159adb9":[3,0,0,1,1,1,20,0,10],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Selection_1_1Type.html#a654e4710aba6b374fe075f7883abc89f":[3,0,0,1,1,1,20,0,2],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Selection_1_1Type.html#a6b18d9ccc589fbbd7b63ce555a0996bb":[3,0,0,1,1,1,20,0,0],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Selection_1_1Type.html#a6bf255f972a147c6c67bff36d74fa41a":[3,0,0,1,1,1,20,0,7],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Selection_1_1Type.html#a828f4880f0f6bd93909df79c58663f72":[3,0,0,1,1,1,20,0,1],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Selection_1_1Type.html#a87f703e14eaa365b98029fc738a3f0a6":[3,0,0,1,1,1,20,0,11]
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Selection_1_1Type.html#a43f320c5f836966c00d66717c159adb9":[3,0,0,1,1,1,20,0,10]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX36 =
 {
+"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#acbf72e5a0de6702ad64af965dda154db":[3,0,0,1,1,6,0,0,2,2],
+"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#accab54a350372069bd262b66ddc12b99":[3,0,0,1,1,6,0,0,2,0],
+"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentUpdateStruct.html":[3,0,0,1,1,6,0,0,3],
+"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentUpdateStruct.html#a5dae8e475487d244de7ec1a7c8d1b02a":[3,0,0,1,1,6,0,0,3,1],
+"classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentUpdateStruct.html#ab260e10029d3c1bb041c23e30d5e2a31":[3,0,0,1,1,6,0,0,3,0],
 "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Location.html":[3,0,0,1,1,6,0,0,4],
 "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Location.html#a058b1f4d65ceb3a92f95d9889e5753e8":[3,0,0,1,1,6,0,0,4,2],
 "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Location.html#a2b4caa7d804dfc326b39eece70738895":[3,0,0,1,1,6,0,0,4,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX36 =
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a455667efb599fcf5d7b3c281683a9b6d":[3,0,0,1,1,8,10,17],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a45b860d6a1a066b19f136d738829586c":[3,0,0,1,1,8,10,33],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a50fe8f22db64fa9597ff4f5ff5b9d33c":[3,0,0,1,1,8,10,10],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a57f82b041ed8dcc3a190eb160d24fe93":[3,0,0,1,1,8,10,22],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a599a3ed8c5fd0a55fa1b1b09a55d6860":[3,0,0,1,1,8,10,7],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a660a0a8e54844d5be7583b6bf1f39477":[3,0,0,1,1,8,10,35],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a6759eeda3f2726b52662cd4a3f14b3ba":[3,0,0,1,1,8,10,21],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a7794bfe78056a419c987c650919f85c0":[3,0,0,1,1,8,10,38],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a819ead6edc7ba9d780b1399ec204d672":[3,0,0,1,1,8,10,36]
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a57f82b041ed8dcc3a190eb160d24fe93":[3,0,0,1,1,8,10,22]
 };

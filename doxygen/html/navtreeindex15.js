@@ -1,5 +1,10 @@
 var NAVTREEINDEX15 =
 {
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1MimeTypeDetector_1_1FileInfoDetector.html#aca462773c9f2528f898e5f17cf7f2c82":[3,0,0,1,1,1,1,1,0,0],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1PathGenerator.html":[3,0,0,1,1,1,1,5],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1PathGenerator.html#aecbc5d88b331b1c3a654ded46fe98196":[3,0,0,1,1,1,1,5,0],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1PathGenerator_1_1LegacyPathGenerator.html":[3,0,0,1,1,1,1,2,0],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1PathGenerator_1_1LegacyPathGenerator.html#a394ade31b49446c50dd835c923b2581c":[3,0,0,1,1,1,1,2,0,0],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1PathGenerator_1_1LegacyPathGenerator.html#aabc8574a4b0feeda423db75c4654be49":[3,0,0,1,1,1,1,2,0,1],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1Type.html":[3,0,0,1,1,1,1,6],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1Type.html#a053ab9bdf2f83ab5efeedb854d830815":[3,0,0,1,1,1,1,6,14],
@@ -244,10 +249,5 @@ var NAVTREEINDEX15 =
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#ad968a7ddb06562cad975b75ff7809a11":[3,0,0,1,1,1,10,0,2],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#ae55dc38a88933cca6712c5956038ff29":[3,0,0,1,1,1,10,0,6],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Value.html":[3,0,0,1,1,1,10,1],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Value.html#a006adcb7eb72d2065e4239b07143b0cd":[3,0,0,1,1,1,10,1,0],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Value.html#a2e51496fb065ae9eb2f297b05c70a0c1":[3,0,0,1,1,1,10,1,1],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Value.html#aa512b8a7ef87ac427b58f5b5413760da":[3,0,0,1,1,1,10,1,2],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage.html":[3,0,0,1,1,1,11,1],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage.html#a185f959e0a73032f3b0c6f179b855ec6":[3,0,0,1,1,1,11,1,4],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage.html#a21847f76fbe4399af3ec98ac7da810ed":[3,0,0,1,1,1,11,1,0]
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Value.html#a006adcb7eb72d2065e4239b07143b0cd":[3,0,0,1,1,1,10,1,0]
 };

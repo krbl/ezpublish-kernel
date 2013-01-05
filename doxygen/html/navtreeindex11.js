@@ -1,5 +1,10 @@
 var NAVTREEINDEX11 =
 {
+"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1HttpCache.html#a720d49265f452dfe571cb1f1612c8063":[3,0,0,0,0,8,1],
+"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1HttpCache.html#a7a37497e62fda206ab1d0bb7284a8f84":[3,0,0,0,0,8,4],
+"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1HttpCache.html#a959b5720ecd78963e8f71175c4a8ddcb":[3,0,0,0,0,8,3],
+"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1HttpCache.html#ac1334441791f6b1b30deaa380c4e350f":[3,0,0,0,0,8,2],
+"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Routing_1_1DefaultRouter.html":[3,0,0,0,0,4,0],
 "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Routing_1_1DefaultRouter.html#a10568eb1377afe527178175b545cee63":[3,0,0,0,0,4,0,0],
 "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Routing_1_1UrlAliasRouter.html":[3,0,0,0,0,4,1],
 "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Routing_1_1UrlAliasRouter.html#a46aad2277a5e1e7e63b0777d11cf5af2":[3,0,0,0,0,4,1,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX11 =
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#a09007dabb464c6ed86824a3b3101aa83":[3,0,0,1,0,0,1,1,9,4],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#a2ed7ef681688fbd2fe23bf3c77e9d50a":[3,0,0,1,0,0,1,1,9,3],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#a34f67241a790b4e9de917e78b441ea84":[3,0,0,1,0,0,1,1,9,7],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#a56b46cd860de4a686bdaad80e7fc0d60":[3,0,0,1,0,0,1,1,9,0],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#a77903376649fb2d6c1d0d3272884bb7e":[3,0,0,1,0,0,1,1,9,2],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#a853d8785531356aec385846db8f90d51":[3,0,0,1,0,0,1,1,9,6],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#a993a8b905afa7fdaf504b5ebe1620727":[3,0,0,1,0,0,1,1,9,11],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#a9b773541b8aa4c41f5935c1fec052e21":[3,0,0,1,0,0,1,1,9,9],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#aa2a3fb469ed71dd51eb303cf72d7a578":[3,0,0,1,0,0,1,1,9,8]
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#a56b46cd860de4a686bdaad80e7fc0d60":[3,0,0,1,0,0,1,1,9,0]
 };
