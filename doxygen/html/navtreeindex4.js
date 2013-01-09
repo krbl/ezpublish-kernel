@@ -1,5 +1,9 @@
 var NAVTREEINDEX4 =
 {
+"Core_2Repository_2URLWildcardService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,16],
+"Core_2Repository_2URLWildcardService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,16],
+"Core_2Repository_2UserService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,17],
+"Core_2Repository_2UserService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,17],
 "Core_2Repository_2Values_2ContentType_2ContentTypeCreateStruct_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,0,1,1],
 "Core_2Repository_2Values_2ContentType_2ContentTypeCreateStruct_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,0,1,1],
 "Core_2Repository_2Values_2ContentType_2ContentTypeDraft_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,0,1,2],
@@ -219,8 +223,6 @@ var NAVTREEINDEX4 =
 "Exception_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,25],
 "Exceptions_2BadRequestException_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,2,1],
 "Exceptions_2BadRequestException_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,2,1],
-"EzPublishCoreBundle_2DependencyInjection_2Security_2Factory_8php.html":[4,0,0,0,0,0,0,0,0,0,0,2,2,0],
-"EzPublishCoreBundle_2DependencyInjection_2Security_2Factory_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,2,2,0],
 "EzPublishCoreBundle_8php.html":[4,0,0,0,0,0,0,0,0,0,0,7],
 "EzPublishCoreBundle_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,7],
 "EzPublishCoreExtension_8php.html":[4,0,0,0,0,0,0,0,0,0,0,2,4],
@@ -229,8 +231,6 @@ var NAVTREEINDEX4 =
 "EzPublishLegacyBundle_8php_source.html":[4,0,0,0,0,0,0,0,0,0,1,6],
 "EzPublishLegacyExtension_8php.html":[4,0,0,0,0,0,0,0,0,0,1,2,3],
 "EzPublishLegacyExtension_8php_source.html":[4,0,0,0,0,0,0,0,0,0,1,2,3],
-"EzPublishRestBundle_2ApiLoader_2Factory_8php.html":[4,0,0,0,0,0,0,0,0,0,2,0,0],
-"EzPublishRestBundle_2ApiLoader_2Factory_8php_source.html":[4,0,0,0,0,0,0,0,0,0,2,0,0],
 "EzPublishRestBundle_8php.html":[4,0,0,0,0,0,0,0,0,0,2,3],
 "EzPublishRestBundle_8php_source.html":[4,0,0,0,0,0,0,0,0,0,2,3],
 "EzPublishRestExtension_8php.html":[4,0,0,0,0,0,0,0,0,0,2,1,1],

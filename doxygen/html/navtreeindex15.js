@@ -1,5 +1,7 @@
 var NAVTREEINDEX15 =
 {
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1MimeTypeDetector_1_1FileInfoDetector.html#a4b322ad201c7e072db65f210b0c8a649":[3,0,0,1,1,1,1,1,0,2],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1MimeTypeDetector_1_1FileInfoDetector.html#a63a6065c2e413c0a06f578fe8cef322c":[3,0,0,1,1,1,1,1,0,3],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1MimeTypeDetector_1_1FileInfoDetector.html#aca462773c9f2528f898e5f17cf7f2c82":[3,0,0,1,1,1,1,1,0,0],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1PathGenerator.html":[3,0,0,1,1,1,1,5],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1PathGenerator.html#aecbc5d88b331b1c3a654ded46fe98196":[3,0,0,1,1,1,1,5,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX15 =
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#a9c1732e87bc9edafe3687642f13d0f7c":[3,0,0,1,1,1,10,0,3],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#abfaaf96da97d461c0e33429329a1faae":[3,0,0,1,1,1,10,0,11],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#ad968a7ddb06562cad975b75ff7809a11":[3,0,0,1,1,1,10,0,2],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#ae55dc38a88933cca6712c5956038ff29":[3,0,0,1,1,1,10,0,6],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Value.html":[3,0,0,1,1,1,10,1],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Value.html#a006adcb7eb72d2065e4239b07143b0cd":[3,0,0,1,1,1,10,1,0]
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#ae55dc38a88933cca6712c5956038ff29":[3,0,0,1,1,1,10,0,6]
 };

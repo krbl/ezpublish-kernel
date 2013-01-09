@@ -185,6 +185,8 @@ var NAVTREEINDEX7 =
 "Publish_2Core_2MVC_2Symfony_2View_2Provider_2Content_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,9,1,3],
 "Publish_2Core_2MVC_2Symfony_2View_2Provider_2Location_2Configured_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,9,1,1,0],
 "Publish_2Core_2MVC_2Symfony_2View_2Provider_2Location_2Configured_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,9,1,1,0],
+"Publish_2Core_2Persistence_2Factory_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,3],
+"Publish_2Core_2Persistence_2Factory_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,3],
 "Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,0,0,8],
 "Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,0,0,8],
 "Publish_2Core_2Persistence_2Legacy_2Content_2Search_2TransformationProcessor_2DefinitionBased_2Parser_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,5,1,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "Regex_2Host_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,7,0,1,0],
 "Regex_2URI_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,7,0,1,1],
 "Regex_2URI_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,7,0,1,1],
-"Regex_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,7,0,5],
-"Regex_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,7,0,5],
-"RegisterLimitationTypePass_8php.html":[4,0,0,0,0,0,0,0,0,0,0,2,0,6]
+"Regex_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,7,0,5]
 };

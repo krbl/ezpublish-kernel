@@ -1,5 +1,9 @@
 var NAVTREEINDEX2 =
 {
+"Content_2UrlWildcard_2Mapper_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,9,3],
+"Content_2UrlWildcard_2Mapper_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,9,3],
+"Controller_2Trash_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,1,7],
+"Controller_2Trash_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,1,7],
 "ConverterRegistry_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,0,2],
 "ConverterRegistry_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,0,2],
 "CopyContentSignal_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,0,0,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX2 =
 "Core_2REST_2Client_2Input_2Parser_2FieldDefinition_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,6],
 "Core_2REST_2Client_2Input_2Parser_2FieldDefinition_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,6],
 "Core_2REST_2Client_2Input_2Parser_2Limitation_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,8],
-"Core_2REST_2Client_2Input_2Parser_2Limitation_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,8],
-"Core_2REST_2Client_2Input_2Parser_2LocationList_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,10],
-"Core_2REST_2Client_2Input_2Parser_2LocationList_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,10],
-"Core_2REST_2Client_2Input_2Parser_2Location_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,9],
-"Core_2REST_2Client_2Input_2Parser_2Location_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,9]
+"Core_2REST_2Client_2Input_2Parser_2Limitation_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,8]
 };

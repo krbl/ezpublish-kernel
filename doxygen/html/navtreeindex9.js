@@ -1,5 +1,7 @@
 var NAVTREEINDEX9 =
 {
+"SlotFactory_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,17],
+"Slot_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,16],
 "Slot_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,16],
 "SortClauseConverter_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,5,0,6],
 "SortClauseConverter_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,5,0,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX9 =
 "Values_2CreatedRelation_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,13],
 "Values_2CreatedRole_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,14],
 "Values_2CreatedRole_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,14],
-"Values_2CreatedSection_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,15],
-"Values_2CreatedSection_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,15],
-"Values_2CreatedURLAlias_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,16]
+"Values_2CreatedSection_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,15]
 };

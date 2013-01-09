@@ -62,6 +62,8 @@ var NAVTREEINDEX1 =
 "Bundle_2EzPublishCoreBundle_2DependencyInjection_2Configuration_2Parser_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,2,1,4],
 "Bundle_2EzPublishCoreBundle_2DependencyInjection_2Configuration_8php.html":[4,0,0,0,0,0,0,0,0,0,0,2,3],
 "Bundle_2EzPublishCoreBundle_2DependencyInjection_2Configuration_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,2,3],
+"Bundle_2EzPublishCoreBundle_2DependencyInjection_2Security_2Factory_8php.html":[4,0,0,0,0,0,0,0,0,0,0,2,2,0],
+"Bundle_2EzPublishCoreBundle_2DependencyInjection_2Security_2Factory_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,2,2,0],
 "Bundle_2EzPublishCoreBundle_2Routing_2UrlAliasRouter_8php.html":[4,0,0,0,0,0,0,0,0,0,0,4,1],
 "Bundle_2EzPublishCoreBundle_2Routing_2UrlAliasRouter_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,4,1],
 "Bundle_2EzPublishCoreBundle_2SiteAccess_8php.html":[4,0,0,0,0,0,0,0,0,0,0,9],
@@ -76,6 +78,8 @@ var NAVTREEINDEX1 =
 "Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php_source.html":[4,0,0,0,0,0,0,0,0,0,1,3,0],
 "Bundle_2EzPublishLegacyBundle_2LegacyMapper_2SiteAccess_8php.html":[4,0,0,0,0,0,0,0,0,0,1,3,2],
 "Bundle_2EzPublishLegacyBundle_2LegacyMapper_2SiteAccess_8php_source.html":[4,0,0,0,0,0,0,0,0,0,1,3,2],
+"Bundle_2EzPublishRestBundle_2ApiLoader_2Factory_8php.html":[4,0,0,0,0,0,0,0,0,0,2,0,0],
+"Bundle_2EzPublishRestBundle_2ApiLoader_2Factory_8php_source.html":[4,0,0,0,0,0,0,0,0,0,2,0,0],
 "Bundle_2EzPublishRestBundle_2DependencyInjection_2Configuration_8php.html":[4,0,0,0,0,0,0,0,0,0,2,1,0],
 "Bundle_2EzPublishRestBundle_2DependencyInjection_2Configuration_8php_source.html":[4,0,0,0,0,0,0,0,0,0,2,1,0],
 "CLIHandler_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,3,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX1 =
 "Content_2UrlWildcard_2Gateway_2ExceptionConversion_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,9,0,0],
 "Content_2UrlWildcard_2Gateway_2ExceptionConversion_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,9,0,0],
 "Content_2UrlWildcard_2Gateway_2EzcDatabase_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,9,0,1],
-"Content_2UrlWildcard_2Gateway_2EzcDatabase_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,9,0,1],
-"Content_2UrlWildcard_2Mapper_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,9,3],
-"Content_2UrlWildcard_2Mapper_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,9,3],
-"Controller_2Trash_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,1,7],
-"Controller_2Trash_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,1,7]
+"Content_2UrlWildcard_2Gateway_2EzcDatabase_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,9,0,1]
 };

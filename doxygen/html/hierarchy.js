@@ -993,6 +993,7 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\MVC\\Legacy\\View\\Provider\\Location", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider_1_1Location.html", null ],
       [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\Location\\Configured", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Location_1_1Configured.html", null ]
     ] ],
+    [ "eZ\\Publish\\Core\\Persistence\\Factory", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Factory.html", null ],
     [ "eZ\\Publish\\Core\\Persistence\\InMemory\\Backend", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html", null ],
     [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\FieldHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldHandler.html", null ],
     [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\FieldValue\\Converter", "interfaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter.html", [

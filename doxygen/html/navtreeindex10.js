@@ -1,5 +1,7 @@
 var NAVTREEINDEX10 =
 {
+"Values_2CreatedSection_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,15],
+"Values_2CreatedURLAlias_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,16],
 "Values_2CreatedURLAlias_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,16],
 "Values_2CreatedURLWildcard_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,17],
 "Values_2CreatedURLWildcard_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,6,17],
@@ -247,7 +249,5 @@ var NAVTREEINDEX10 =
 "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1SiteAccessListener.html#adc58116a0e9b4d50a4960dc2ba9bcd2f":[3,0,0,0,0,3,3,1],
 "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EzPublishCoreBundle.html":[3,0,0,0,0,7],
 "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EzPublishCoreBundle.html#a192825ec5ad0468d5096d84b7df20893":[3,0,0,0,0,7,1],
-"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EzPublishCoreBundle.html#ab8dfb8e3ffc671406a50df9fa60bdb48":[3,0,0,0,0,7,0],
-"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1HttpCache.html":[3,0,0,0,0,8],
-"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1HttpCache.html#a061ce9debb329e4a5ca3b7e8bbfdbf6c":[3,0,0,0,0,8,0]
+"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EzPublishCoreBundle.html#ab8dfb8e3ffc671406a50df9fa60bdb48":[3,0,0,0,0,7,0]
 };

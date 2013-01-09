@@ -1,5 +1,7 @@
 var NAVTREEINDEX12 =
 {
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#a34f67241a790b4e9de917e78b441ea84":[3,0,0,1,0,0,1,1,9,7],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#a56b46cd860de4a686bdaad80e7fc0d60":[3,0,0,1,0,0,1,1,9,0],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#a77903376649fb2d6c1d0d3272884bb7e":[3,0,0,1,0,0,1,1,9,2],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#a853d8785531356aec385846db8f90d51":[3,0,0,1,0,0,1,1,9,6],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html#a993a8b905afa7fdaf504b5ebe1620727":[3,0,0,1,0,0,1,1,9,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX12 =
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#a4f61749194df6e2526acfa0047dfbd88":[3,0,0,1,0,0,1,0,0,1,2,1],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#a7ea88edfcb9d305bbf6b55e56c9c8be1":[3,0,0,1,0,0,1,0,0,1,2,2],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#a8ee0565686e08276041d63d6b60a1426":[3,0,0,1,0,0,1,0,0,1,2,4],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#ac355f4c2bfea942e8e4eac8a750fad2c":[3,0,0,1,0,0,1,0,0,1,2,5],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#ac71dcf8c325b3656bf97413f8b13d1af":[3,0,0,1,0,0,1,0,0,1,2,0],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#ad8ed02267e87c2c88485cba9a28d6aee":[3,0,0,1,0,0,1,0,0,1,2,6]
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#ac355f4c2bfea942e8e4eac8a750fad2c":[3,0,0,1,0,0,1,0,0,1,2,5]
 };

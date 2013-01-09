@@ -1,5 +1,9 @@
 var NAVTREEINDEX3 =
 {
+"Core_2REST_2Client_2Input_2Parser_2LocationList_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,10],
+"Core_2REST_2Client_2Input_2Parser_2LocationList_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,10],
+"Core_2REST_2Client_2Input_2Parser_2Location_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,9],
+"Core_2REST_2Client_2Input_2Parser_2Location_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,9],
 "Core_2REST_2Client_2Input_2Parser_2ObjectStateGroup_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,12],
 "Core_2REST_2Client_2Input_2Parser_2ObjectStateGroup_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,12],
 "Core_2REST_2Client_2Input_2Parser_2ObjectState_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,11],
@@ -245,9 +249,5 @@ var NAVTREEINDEX3 =
 "Core_2Repository_2TrashService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,14],
 "Core_2Repository_2TrashService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,14],
 "Core_2Repository_2URLAliasService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,15],
-"Core_2Repository_2URLAliasService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,15],
-"Core_2Repository_2URLWildcardService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,16],
-"Core_2Repository_2URLWildcardService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,16],
-"Core_2Repository_2UserService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,17],
-"Core_2Repository_2UserService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,17]
+"Core_2Repository_2URLAliasService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,15]
 };

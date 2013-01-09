@@ -1,5 +1,7 @@
 var NAVTREEINDEX14 =
 {
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#acfd62b7822817a5fe883f8ea8a36c68d":[3,0,0,1,0,0,1,5,1,6],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#aeae11061ecd27bdf0533e079dd8084ee":[3,0,0,1,0,0,1,5,1,1],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#aef85c08f9087095e8d9fdb42bde0764c":[3,0,0,1,0,0,1,5,1,0],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1ContentTypeLimitation.html":[3,0,0,1,0,0,1,5,0,0],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation_1_1ContentTypeLimitation.html#ada626433bceb751f18c69326870ae94e":[3,0,0,1,0,0,1,5,0,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX14 =
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#ab7b37d48cccad8d8a0781c0aa6883834":[3,0,0,1,1,1,1,0,0,0,16],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#adae83ffc751b11f2e3c960aec3de8cfb":[3,0,0,1,1,1,1,0,0,0,0],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1MimeTypeDetector_1_1FileInfoDetector.html":[3,0,0,1,1,1,1,1,0],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1MimeTypeDetector_1_1FileInfoDetector.html#a268342b9106056630d41f110d7610185":[3,0,0,1,1,1,1,1,0,1],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1MimeTypeDetector_1_1FileInfoDetector.html#a4b322ad201c7e072db65f210b0c8a649":[3,0,0,1,1,1,1,1,0,2],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1MimeTypeDetector_1_1FileInfoDetector.html#a63a6065c2e413c0a06f578fe8cef322c":[3,0,0,1,1,1,1,1,0,3]
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1MimeTypeDetector_1_1FileInfoDetector.html#a268342b9106056630d41f110d7610185":[3,0,0,1,1,1,1,1,0,1]
 };

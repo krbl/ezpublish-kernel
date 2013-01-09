@@ -1,5 +1,7 @@
 var NAVTREEINDEX8 =
 {
+"Regex_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,7,0,5],
+"RegisterLimitationTypePass_8php.html":[4,0,0,0,0,0,0,0,0,0,0,2,0,6],
 "RegisterLimitationTypePass_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,2,0,6],
 "RegisterStorageEnginePass_8php.html":[4,0,0,0,0,0,0,0,0,0,0,2,0,7],
 "RegisterStorageEnginePass_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,2,0,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX8 =
 "SiteAccessMatchListener_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,3,0],
 "SiteAccess_2Matcher_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,7,1],
 "SiteAccess_2Matcher_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,7,1],
-"SlotFactory_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,17],
-"SlotFactory_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,17],
-"Slot_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,16]
+"SlotFactory_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,17]
 };
