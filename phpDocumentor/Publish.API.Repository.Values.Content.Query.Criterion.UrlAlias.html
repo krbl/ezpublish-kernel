@@ -93,7 +93,7 @@
           string
              
             $operator,
-          int[]
+          string|string[]
              
             $value,
           
@@ -116,15 +116,16 @@
 <td>$operator</td>
 <td style="white-space: normal;">string</td>
 <td><p>Possible values:
-       - Operator::IN, requires an array of subtree id as the $value
-       - Operator::EQ, requires a single subtree id as the $value</p>
+       - Operator::IN, requires an array of url alias as the $value
+       - Operator::EQ, requires a single url alias as the $value
+       - Operator::LIKE, requires a single url alias as the $value. Wilcards allowed</p>
 </td>
 <td></td>
 </tr>
 <tr>
 <td>$value</td>
-<td style="white-space: normal;">int[]</td>
-<td><p>an array of subtree ids</p></td>
+<td style="white-space: normal;">string|string[]</td>
+<td><p>an array of url alias</p></td>
 <td></td>
 </tr>
 </tbody>
@@ -146,16 +147,10 @@
 <th>Name</th>
 <th>Description</th>
 </tr></thead>
-<tbody>
-<tr>
-<td>throws</td>
-<td>if a non numeric id is given</td>
-</tr>
-<tr>
+<tbody><tr>
 <td>throws</td>
 <td>if the value type doesn't match the operator</td>
-</tr>
-</tbody>
+</tr></tbody>
 </table>
 </div>
 <div class="method">
