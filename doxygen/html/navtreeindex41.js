@@ -1,6 +1,5 @@
 var NAVTREEINDEX41 =
 {
-"dir_a17ebe388bd6dd6b3e6e744c71042394.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,1,0],
 "dir_a18dcb5f6f23aa57607b91d835b6e2bd.html":[4,0,0,0,0,0,0,0,0,1,1,6,0,2],
 "dir_a19369e5baa7124867a58e964c44e877.html":[4,0,0,0,0,0,0,0,0,1,1,8,0],
 "dir_a1f13dc891b8f0955bfa44fbbe6a0871.html":[4,0,0,0,0,0,0,0,0,0,1,0],
@@ -116,8 +115,8 @@ var NAVTREEINDEX41 =
 "eZPublish_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,1,3,0],
 "examples.html":[5],
 "files.html":[4,0],
-"functions.html":[3,3,0],
 "functions.html":[3,3,0,0],
+"functions.html":[3,3,0],
 "functions_0x5f.html":[3,3,0,1],
 "functions_0x61.html":[3,3,0,2],
 "functions_0x62.html":[3,3,0,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX41 =
 "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html#ad6b30bdc81af9a67124f3512bf40ff20":[3,0,0,1,0,0,3,2],
 "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html#ade5a1772222d1b2ed168eac9eb196f9a":[3,0,0,1,0,0,3,11],
 "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html#ae2e40145dea05a21663770e257b687d8":[3,0,0,1,0,0,3,25],
-"interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html#aeafa829aa1b889a4221588c4774fa566":[3,0,0,1,0,0,3,14]
+"interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html#aeafa829aa1b889a4221588c4774fa566":[3,0,0,1,0,0,3,14],
+"interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html#af1cf297f637d67b3476696c462e8f80c":[3,0,0,1,0,0,3,10]
 };

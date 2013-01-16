@@ -1,6 +1,5 @@
 var NAVTREEINDEX44 =
 {
-"namespaceeZ.html":[3,0,0],
 "namespaceeZ_1_1Bundle.html":[3,0,0,0],
 "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle.html":[3,0,0,0,0],
 "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader.html":[3,0,0,0,0,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX44 =
 "namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Criterion.html":[3,0,0,1,1,7,2,4,0,0],
 "namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output.html":[3,0,0,1,1,7,2,5],
 "namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor.html":[3,0,0,1,1,7,2,5,0],
-"namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values.html":[3,0,0,1,1,7,2,6]
+"namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values.html":[3,0,0,1,1,7,2,6],
+"namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View.html":[3,0,0,1,1,7,2,7]
 };

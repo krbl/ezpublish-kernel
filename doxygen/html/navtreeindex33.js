@@ -1,6 +1,5 @@
 var NAVTREEINDEX33 =
 {
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Policy.html#a26decd0e00e2f46b0fac0c00ddb41809":[3,0,0,1,1,7,2,5,0,36,0],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1PolicyList.html":[3,0,0,1,1,7,2,5,0,37],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1PolicyList.html#a1e586325c5fa9a071fb284272fac4dbb":[3,0,0,1,1,7,2,5,0,37,0],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1RelationList.html":[3,0,0,1,1,7,2,5,0,38],
@@ -249,5 +248,6 @@ var NAVTREEINDEX33 =
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleAssignmentList.html#a719c6cf328f5dd1f0ad96c662e5bff38":[3,0,0,1,1,7,2,6,47,3],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleAssignmentList.html#af2e8fe77db5f86a8cf4c00322699bb76":[3,0,0,1,1,7,2,6,47,1],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleAssignmentList.html#afb0a100781835fc4a952911ea19578ef":[3,0,0,1,1,7,2,6,47,2],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleList.html":[3,0,0,1,1,7,2,6,48]
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleList.html":[3,0,0,1,1,7,2,6,48],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleList.html#a02a784d7e794591ff90187b831c60f29":[3,0,0,1,1,7,2,6,48,1]
 };

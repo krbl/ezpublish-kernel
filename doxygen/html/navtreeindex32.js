@@ -1,6 +1,5 @@
 var NAVTREEINDEX32 =
 {
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Criterion.html":[3,0,0,1,1,7,2,4,0,8],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Criterion.html#a1ba029d363553447cbb3ebeb09a3db1c":[3,0,0,1,1,7,2,4,0,8,0],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Criterion.html#a748748b1f91b406c42a6a79c67447326":[3,0,0,1,1,7,2,4,0,8,2],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Criterion.html#a97805a483a1fc7956a52b7633a008bfc":[3,0,0,1,1,7,2,4,0,8,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX32 =
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1ObjectStateList.html#a455a7b379bfdd76c36e09c3b2b021af8":[3,0,0,1,1,7,2,5,0,34,0],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1PermanentRedirect.html":[3,0,0,1,1,7,2,5,0,35],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1PermanentRedirect.html#aad8f5ae2d29b1c7b36edd6569e86efbd":[3,0,0,1,1,7,2,5,0,35,0],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Policy.html":[3,0,0,1,1,7,2,5,0,36]
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Policy.html":[3,0,0,1,1,7,2,5,0,36],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Policy.html#a26decd0e00e2f46b0fac0c00ddb41809":[3,0,0,1,1,7,2,5,0,36,0]
 };

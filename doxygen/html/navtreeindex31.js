@@ -1,6 +1,5 @@
 var NAVTREEINDEX31 =
 {
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator.html#a41cce4e98ad2cc7db9d3f241189d42c7":[3,0,0,1,1,7,2,9,0],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator.html#af882f4cce7bbdc48bcec7e01a7a188c4":[3,0,0,1,1,7,2,9,1],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator_1_1BasicAuth.html":[3,0,0,1,1,7,2,0,0],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator_1_1BasicAuth.html#a2cae47d080fa7da94eeafb295ffc4711":[3,0,0,1,1,7,2,0,0,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX31 =
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentTypeUpdate.html#aea6c40d760ee3191a5cf4e569dd5b01b":[3,0,0,1,1,7,2,4,0,6,1],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentTypeUpdate.html#af26e87ebd6d3f1283bd7adb8ed3b4b17":[3,0,0,1,1,7,2,4,0,6,3],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentUpdate.html":[3,0,0,1,1,7,2,4,0,7],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentUpdate.html#a8af886906280a9d89dbb2a70295b0198":[3,0,0,1,1,7,2,4,0,7,0]
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentUpdate.html#a8af886906280a9d89dbb2a70295b0198":[3,0,0,1,1,7,2,4,0,7,0],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Criterion.html":[3,0,0,1,1,7,2,4,0,8]
 };

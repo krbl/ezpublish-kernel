@@ -1,6 +1,5 @@
 var NAVTREEINDEX24 =
 {
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1LogicalNot.html#a664cf30273ce1872f6f7c660d66c422d":[3,0,0,1,1,5,1,0,5,0,0,10,1],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1LogicalNot.html#ae770c12dfad07c6dc9c8081272b9dcfe":[3,0,0,1,1,5,1,0,5,0,0,10,0],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1LogicalOr.html":[3,0,0,1,1,5,1,0,5,0,0,11],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1LogicalOr.html#a0d056228cf3680c2fca3c75a3992a7a6":[3,0,0,1,1,5,1,0,5,0,0,11,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX24 =
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1ContentUpdater_1_1Action_1_1AddField.html#aceb828c733ee00e74c9ae07e09bb1d9e":[3,0,0,1,1,5,1,0,7,0,0,0,2],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1ContentUpdater_1_1Action_1_1RemoveField.html":[3,0,0,1,1,5,1,0,7,0,0,1],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1ContentUpdater_1_1Action_1_1RemoveField.html#a47cacc6ac6bbe7fcbfa7cc3959d900ab":[3,0,0,1,1,5,1,0,7,0,0,1,0],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1ContentUpdater_1_1Action_1_1RemoveField.html#a55a8497eb707768c627d79ffc1eab163":[3,0,0,1,1,5,1,0,7,0,0,1,1]
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1ContentUpdater_1_1Action_1_1RemoveField.html#a55a8497eb707768c627d79ffc1eab163":[3,0,0,1,1,5,1,0,7,0,0,1,1],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1ContentUpdater_1_1Action_1_1RemoveField.html#a787674261536c2485eb44f6efe8696e8":[3,0,0,1,1,5,1,0,7,0,0,1,3]
 };

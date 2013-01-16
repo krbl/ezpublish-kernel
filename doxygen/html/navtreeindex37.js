@@ -1,6 +1,5 @@
 var NAVTREEINDEX37 =
 {
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ObjectStateService.html#af898be92e7b408f9f42ffed7316d445f":[3,0,0,1,1,8,9,14],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ObjectStateService.html#afc020b00adca8155062fe1e69e95d532":[3,0,0,1,1,8,9,10],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html":[3,0,0,1,1,8,10],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a00bc57e683c286466f21d6594eb15d0c":[3,0,0,1,1,8,10,15],
@@ -249,5 +248,6 @@ var NAVTREEINDEX37 =
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1RemovePolicySignal.html#acead2f7da1511feea537631aecc2dd58":[3,0,0,1,1,8,0,5,5,0],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserGroupSignal.html":[3,0,0,1,1,8,0,5,6],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserGroupSignal.html#a5157f4c905991b46c18c03fd734e24a5":[3,0,0,1,1,8,0,5,6,0],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserGroupSignal.html#a7856685ae494956ecf2a7a3af114dcd1":[3,0,0,1,1,8,0,5,6,1]
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserGroupSignal.html#a7856685ae494956ecf2a7a3af114dcd1":[3,0,0,1,1,8,0,5,6,1],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserSignal.html":[3,0,0,1,1,8,0,5,7]
 };

@@ -1,6 +1,5 @@
 var NAVTREEINDEX42 =
 {
-"interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html#af1cf297f637d67b3476696c462e8f80c":[3,0,0,1,0,0,3,10],
 "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html#af891ef06fb794d3ea1528c93d57d1ea1":[3,0,0,1,0,0,3,3],
 "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html#afc58dc889ea15b4695fa4921e7b1b464":[3,0,0,1,0,0,3,16],
 "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1FieldType.html":[3,0,0,1,0,0,4],
@@ -249,5 +248,6 @@ var NAVTREEINDEX42 =
 "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1RequestAwarePurger.html#ac3a54ef91d611193f5f7ccb2a2e87186":[3,0,0,1,1,4,2,0,0,7,0],
 "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1PurgeClientInterface.html":[3,0,0,1,1,4,2,0,2],
 "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1PurgeClientInterface.html#a19dfa0b022f80d4a81abb3b0b04e9c4b":[3,0,0,1,1,4,2,0,2,1],
-"interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1PurgeClientInterface.html#a4accbbd5731bf85b64d80937288b00d2":[3,0,0,1,1,4,2,0,2,0]
+"interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1PurgeClientInterface.html#a4accbbd5731bf85b64d80937288b00d2":[3,0,0,1,1,4,2,0,2,0],
+"interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1ConfigDumperInterface.html":[3,0,0,1,1,4,2,10]
 };
