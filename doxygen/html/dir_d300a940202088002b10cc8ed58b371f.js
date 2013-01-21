@@ -10,6 +10,9 @@ var dir_d300a940202088002b10cc8ed58b371f =
     [ "ContentTypeId.php", "API_2Repository_2Values_2Content_2Query_2Criterion_2ContentTypeId_8php.html", [
       [ "ContentTypeId", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1ContentTypeId.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1ContentTypeId" ]
     ] ],
+    [ "ContentTypeIdentifier.php", "API_2Repository_2Values_2Content_2Query_2Criterion_2ContentTypeIdentifier_8php.html", [
+      [ "ContentTypeIdentifier", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1ContentTypeIdentifier.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1ContentTypeIdentifier" ]
+    ] ],
     [ "DateMetadata.php", "API_2Repository_2Values_2Content_2Query_2Criterion_2DateMetadata_8php.html", [
       [ "DateMetadata", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1DateMetadata.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1DateMetadata" ]
     ] ],

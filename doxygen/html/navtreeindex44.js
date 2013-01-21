@@ -1,5 +1,16 @@
 var NAVTREEINDEX44 =
 {
+"interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#ad7a58eb0ee14648910a4b74cb5ad5b20":[3,0,0,1,2,3,1,0,2],
+"interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#ad8d2b20cdde161681c418503fce11b1f":[3,0,0,1,2,3,1,0,5],
+"interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#af42d08f45811646ffdef7388e2e22b41":[3,0,0,1,2,3,1,0,0],
+"interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#afa594688fb3866283cc97eab839d5544":[3,0,0,1,2,3,1,0,11],
+"interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#aff96443b755151a303313b02bd442611":[3,0,0,1,2,3,1,0,4],
+"interfaceeZ_1_1Publish_1_1SPI_1_1Variation_1_1VariationHandler.html":[3,0,0,1,2,4,1],
+"interfaceeZ_1_1Publish_1_1SPI_1_1Variation_1_1VariationHandler.html#adf39386df2a41d018d098b8747233ac8":[3,0,0,1,2,4,1,0],
+"namespaceFieldTypeProviderInterface.html":[3,0,1],
+"namespaceFieldTypeProviderInterface.html":[2,0,1],
+"namespaceeZ.html":[2,0,0],
+"namespaceeZ.html":[3,0,0],
 "namespaceeZ_1_1Bundle.html":[3,0,0,0],
 "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle.html":[3,0,0,0,0],
 "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader.html":[3,0,0,0,0,0],
@@ -238,16 +249,5 @@ var NAVTREEINDEX44 =
 "namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Xml.html":[3,0,0,1,1,7,1,2,1,1],
 "namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1UrlHandler.html":[3,0,0,1,1,7,1,3],
 "namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values.html":[3,0,0,1,1,7,1,4],
-"namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server.html":[3,0,0,1,1,7,2],
-"namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Authenticator.html":[3,0,0,1,1,7,2,0],
-"namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller.html":[3,0,0,1,1,7,2,1],
-"namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Exceptions.html":[3,0,0,1,1,7,2,2],
-"namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1FieldTypeProcessor.html":[3,0,0,1,1,7,2,3],
-"namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input.html":[3,0,0,1,1,7,2,4],
-"namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser.html":[3,0,0,1,1,7,2,4,0],
-"namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Criterion.html":[3,0,0,1,1,7,2,4,0,0],
-"namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output.html":[3,0,0,1,1,7,2,5],
-"namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor.html":[3,0,0,1,1,7,2,5,0],
-"namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values.html":[3,0,0,1,1,7,2,6],
-"namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1View.html":[3,0,0,1,1,7,2,7]
+"namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server.html":[3,0,0,1,1,7,2]
 };

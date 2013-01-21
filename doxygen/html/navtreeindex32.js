@@ -1,5 +1,16 @@
 var NAVTREEINDEX32 =
 {
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentTypeGroupInput.html#a6be054619d7120bfa8d5f8b98ecc604a":[3,0,0,1,1,7,2,4,0,5,0],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentTypeGroupInput.html#ac4fdbaaf3ee3513b1ad62fc0bcfc940d":[3,0,0,1,1,7,2,4,0,5,1],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentTypeGroupInput.html#af0ee7f18215064221130831f18ca5d59":[3,0,0,1,1,7,2,4,0,5,2],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentTypeUpdate.html":[3,0,0,1,1,7,2,4,0,6],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentTypeUpdate.html#a0595172c71b6aa56242ffa59150ddb27":[3,0,0,1,1,7,2,4,0,6,0],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentTypeUpdate.html#a26e80d7ac1785f95edccd71d44dc8f34":[3,0,0,1,1,7,2,4,0,6,2],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentTypeUpdate.html#aea6c40d760ee3191a5cf4e569dd5b01b":[3,0,0,1,1,7,2,4,0,6,1],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentTypeUpdate.html#af26e87ebd6d3f1283bd7adb8ed3b4b17":[3,0,0,1,1,7,2,4,0,6,3],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentUpdate.html":[3,0,0,1,1,7,2,4,0,7],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1ContentUpdate.html#a8af886906280a9d89dbb2a70295b0198":[3,0,0,1,1,7,2,4,0,7,0],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Criterion.html":[3,0,0,1,1,7,2,4,0,8],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Criterion.html#a1ba029d363553447cbb3ebeb09a3db1c":[3,0,0,1,1,7,2,4,0,8,0],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Criterion.html#a748748b1f91b406c42a6a79c67447326":[3,0,0,1,1,7,2,4,0,8,2],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1Criterion.html#a97805a483a1fc7956a52b7633a008bfc":[3,0,0,1,1,7,2,4,0,8,1],
@@ -238,16 +249,5 @@ var NAVTREEINDEX32 =
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1LocationList.html#ad04b6cd207609c6ef119fbb051b5a57b":[3,0,0,1,1,7,2,5,0,29,0],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1NoContent.html":[3,0,0,1,1,7,2,5,0,30],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1NoContent.html#a7bfe29ae463b5610ed90b616ed5a4a42":[3,0,0,1,1,7,2,5,0,30,0],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1NotFoundException.html":[3,0,0,1,1,7,2,5,0,31],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1NotFoundException.html#acbf58db0b5c9325d34c738fd08fceb15":[3,0,0,1,1,7,2,5,0,31,0],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1ObjectStateGroup.html":[3,0,0,1,1,7,2,5,0,32],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1ObjectStateGroup.html#a0939a13e0d5c3a1845a078a723e867b4":[3,0,0,1,1,7,2,5,0,32,0],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1ObjectStateGroupList.html":[3,0,0,1,1,7,2,5,0,33],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1ObjectStateGroupList.html#aeba1e79dd12472ca1a77add524f959f6":[3,0,0,1,1,7,2,5,0,33,0],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1ObjectStateList.html":[3,0,0,1,1,7,2,5,0,34],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1ObjectStateList.html#a455a7b379bfdd76c36e09c3b2b021af8":[3,0,0,1,1,7,2,5,0,34,0],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1PermanentRedirect.html":[3,0,0,1,1,7,2,5,0,35],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1PermanentRedirect.html#aad8f5ae2d29b1c7b36edd6569e86efbd":[3,0,0,1,1,7,2,5,0,35,0],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Policy.html":[3,0,0,1,1,7,2,5,0,36],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Policy.html#a26decd0e00e2f46b0fac0c00ddb41809":[3,0,0,1,1,7,2,5,0,36,0]
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1NotFoundException.html":[3,0,0,1,1,7,2,5,0,31]
 };

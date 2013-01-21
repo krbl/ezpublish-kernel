@@ -1,5 +1,9 @@
 var NAVTREEINDEX8 =
 {
+"Regex_2Host_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,7,0,1,0],
+"Regex_2URI_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,7,0,1,1],
+"Regex_2URI_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,7,0,1,1],
+"Regex_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,7,0,5],
 "Regex_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,7,0,5],
 "RegisterLimitationTypePass_8php.html":[4,0,0,0,0,0,0,0,0,0,0,2,0,6],
 "RegisterLimitationTypePass_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,2,0,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX8 =
 "SiteAccessLimitation_8php_source.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,5,0,12],
 "SiteAccessListener_8php.html":[4,0,0,0,0,0,0,0,0,0,0,3,3],
 "SiteAccessListener_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,3,3],
-"SiteAccessMatchListener_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,3,0],
-"SiteAccessMatchListener_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,3,0],
-"SiteAccess_2Matcher_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,7,1],
-"SiteAccess_2Matcher_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,7,1],
-"SlotFactory_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,17]
+"SiteAccessMatchListener_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,3,0]
 };

@@ -1,0 +1,6 @@
+var classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1ContentTypeIdentifier =
+[
+    [ "__construct", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1ContentTypeIdentifier.html#a08bc71ba12e4a874a564618d2323ca23", null ],
+    [ "createFromQueryBuilder", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1ContentTypeIdentifier.html#aab6522168f417a9f4a91d8055cd9fc17", null ],
+    [ "getSpecifications", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1ContentTypeIdentifier.html#a98e5cbaf3f30a9c33be27f92a2d1db7f", null ]
+];

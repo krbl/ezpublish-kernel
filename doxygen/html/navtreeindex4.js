@@ -1,5 +1,9 @@
 var NAVTREEINDEX4 =
 {
+"Core_2Repository_2TrashService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,14],
+"Core_2Repository_2TrashService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,14],
+"Core_2Repository_2URLAliasService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,15],
+"Core_2Repository_2URLAliasService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,15],
 "Core_2Repository_2URLWildcardService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,16],
 "Core_2Repository_2URLWildcardService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,16],
 "Core_2Repository_2UserService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,17],
@@ -245,9 +249,5 @@ var NAVTREEINDEX4 =
 "FacetBuilderVisitor_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,6],
 "FacetBuilder_8php.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,0,5],
 "FacetBuilder_8php_source.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,0,5],
-"Facet_8php.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,1,1],
-"Facet_8php_source.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,1,1],
-"FallbackRouter_8php.html":[4,0,0,0,0,0,0,0,0,0,1,4,0],
-"FallbackRouter_8php_source.html":[4,0,0,0,0,0,0,0,0,0,1,4,0],
-"FieldDefinitionCreateStruct_8php.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,1,8]
+"Facet_8php.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,1,1]
 };

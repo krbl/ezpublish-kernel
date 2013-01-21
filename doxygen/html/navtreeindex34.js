@@ -1,5 +1,16 @@
 var NAVTREEINDEX34 =
 {
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleAssignment.html":[3,0,0,1,1,7,2,6,46],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleAssignment.html#a1c841271f9c15e22fdebef5ebd15c043":[3,0,0,1,1,7,2,6,46,0],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleAssignment.html#a60b99ce5d43cfbef96101a25582b3ce8":[3,0,0,1,1,7,2,6,46,1],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleAssignment.html#af6e1291186108f825140a95e6b3acf7b":[3,0,0,1,1,7,2,6,46,2],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleAssignmentList.html":[3,0,0,1,1,7,2,6,47],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleAssignmentList.html#a57dfd97b88b9f565e74d13f55cd520ce":[3,0,0,1,1,7,2,6,47,0],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleAssignmentList.html#a719c6cf328f5dd1f0ad96c662e5bff38":[3,0,0,1,1,7,2,6,47,3],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleAssignmentList.html#af2e8fe77db5f86a8cf4c00322699bb76":[3,0,0,1,1,7,2,6,47,1],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleAssignmentList.html#afb0a100781835fc4a952911ea19578ef":[3,0,0,1,1,7,2,6,47,2],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleList.html":[3,0,0,1,1,7,2,6,48],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleList.html#a02a784d7e794591ff90187b831c60f29":[3,0,0,1,1,7,2,6,48,1],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleList.html#a69a33e1142d245cc223a3e2639e7ead0":[3,0,0,1,1,7,2,6,48,2],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleList.html#ae78064bdd95913bb350a6ed5d532a355":[3,0,0,1,1,7,2,6,48,0],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1SectionList.html":[3,0,0,1,1,7,2,6,49],
@@ -238,16 +249,5 @@ var NAVTREEINDEX34 =
 "classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService.html#a8aa4118e5b4eed677947f6e79d74ff4f":[3,0,0,1,1,6,9,25],
 "classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService.html#a907f8f15ebbb59da671c9042ed6c8908":[3,0,0,1,1,6,9,24],
 "classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService.html#a937117cec16aca09bc09814ee921ce42":[3,0,0,1,1,6,9,0],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService.html#a96bf64265918276a07219b6e3d7b5ba8":[3,0,0,1,1,6,9,4],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService.html#ab16561db53e2841cf45a0d41c96aeca8":[3,0,0,1,1,6,9,18],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService.html#abe564f24a95dc6ce99b4d5a0285c433d":[3,0,0,1,1,6,9,10],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService.html#ac8b6a2b380cf0cede9f22c332683294f":[3,0,0,1,1,6,9,9],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService.html#ad46e31da4701dbc0e63d6537b9eb286a":[3,0,0,1,1,6,9,20],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService.html#ad5dd6dc558d2b49cf90c9c0e7c65a277":[3,0,0,1,1,6,9,14],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService.html#adb4877d66bdcf0d536c5c5fef56e18b6":[3,0,0,1,1,6,9,8],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService.html#adcf5b9af37e576aecf02444c20806a3d":[3,0,0,1,1,6,9,3],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService.html#ae17dc6df562f4c77dd1c2ddf8a8c9ea4":[3,0,0,1,1,6,9,7],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService.html#ae8b7f0dd345c37bbddc1b20934e3f551":[3,0,0,1,1,6,9,1],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService.html#aea3225bc56b6cb26830981eaddf20bfb":[3,0,0,1,1,6,9,15],
-"classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService.html#af1ded4d99d0d2def05f770a5082babca":[3,0,0,1,1,6,9,22]
+"classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService.html#a96bf64265918276a07219b6e3d7b5ba8":[3,0,0,1,1,6,9,4]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX6 =
 {
+"Language_2CreateStruct_8php_source.html":[4,0,0,0,0,0,0,0,0,1,2,3,0,0,0],
+"LazyRepositoryFactory_8php.html":[4,0,0,0,0,0,0,0,0,0,0,0,1],
+"LazyRepositoryFactory_8php_source.html":[4,0,0,0,0,0,0,0,0,0,0,0,1],
+"LegacyAdapter_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,2],
 "LegacyAdapter_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,2],
 "LegacyAssignSectionSlot_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,1],
 "LegacyAssignSectionSlot_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX6 =
 "Output_2ValueObjectVisitor_2NoContent_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,30],
 "Output_2ValueObjectVisitor_2PermanentRedirect_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,35],
 "Output_2ValueObjectVisitor_2PermanentRedirect_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,35],
-"Output_2ValueObjectVisitor_2ResourceCreated_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,39],
-"Output_2ValueObjectVisitor_2ResourceCreated_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,39],
-"Output_2ValueObjectVisitor_2RestContentType_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,41],
-"Output_2ValueObjectVisitor_2RestContentType_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,41],
-"Output_2ValueObjectVisitor_2RestContent_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,40]
+"Output_2ValueObjectVisitor_2ResourceCreated_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,39]
 };

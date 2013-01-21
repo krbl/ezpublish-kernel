@@ -1,5 +1,13 @@
 var NAVTREEINDEX13 =
 {
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1ContentTypeFacetBuilder.html":[3,0,0,1,0,0,1,0,0,1,0],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1CriterionFacetBuilder.html":[3,0,0,1,0,0,1,0,0,1,1],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html":[3,0,0,1,0,0,1,0,0,1,2],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#a0f0601de4fe4d73569102bc146d11654":[3,0,0,1,0,0,1,0,0,1,2,3],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#a4f61749194df6e2526acfa0047dfbd88":[3,0,0,1,0,0,1,0,0,1,2,1],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#a7ea88edfcb9d305bbf6b55e56c9c8be1":[3,0,0,1,0,0,1,0,0,1,2,2],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#a8ee0565686e08276041d63d6b60a1426":[3,0,0,1,0,0,1,0,0,1,2,4],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#ac355f4c2bfea942e8e4eac8a750fad2c":[3,0,0,1,0,0,1,0,0,1,2,5],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#ac71dcf8c325b3656bf97413f8b13d1af":[3,0,0,1,0,0,1,0,0,1,2,0],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html#ad8ed02267e87c2c88485cba9a28d6aee":[3,0,0,1,0,0,1,0,0,1,2,6],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1FieldFacetBuilder.html":[3,0,0,1,0,0,1,0,0,1,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX13 =
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a0d010720d8342ae0451bee2c076834fa":[3,0,0,1,0,0,1,5,1,15],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a329ff4f8bcdc3ff35250f932c2d76921":[3,0,0,1,0,0,1,5,1,8],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a40cd6dbbbaa05879f4b1ab02a55a05a8":[3,0,0,1,0,0,1,5,1,3],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a43f3aae2b7a11449b5eb2e71c2568974":[3,0,0,1,0,0,1,5,1,9],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a4a787d90b04c09ea37a0604c734bd6f1":[3,0,0,1,0,0,1,5,1,14],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a5698ac3c54047c357475689d09b2094e":[3,0,0,1,0,0,1,5,1,10],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a6a664949f51b3f9e1bc131fe1f49bd2d":[3,0,0,1,0,0,1,5,1,2],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a6d9d17a9ac6aabc39b474d79c2e2c3ed":[3,0,0,1,0,0,1,5,1,7],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a7ba0c06fe8f539e32e3c6c0dbe4b9780":[3,0,0,1,0,0,1,5,1,4],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a9d02720e9f36597568d5fe53b5d7d5df":[3,0,0,1,0,0,1,5,1,12],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#aa6517e7169c3a22f8a6e3d4c4a03357f":[3,0,0,1,0,0,1,5,1,11],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#ac877754963c6b7db47ce7330b5fb4f91":[3,0,0,1,0,0,1,5,1,13]
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a43f3aae2b7a11449b5eb2e71c2568974":[3,0,0,1,0,0,1,5,1,9]
 };

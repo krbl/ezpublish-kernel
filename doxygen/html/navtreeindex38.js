@@ -1,5 +1,16 @@
 var NAVTREEINDEX38 =
 {
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1CreateRoleSignal.html":[3,0,0,1,1,8,0,5,3],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1CreateRoleSignal.html#a58e8b8656070e84208377e78411e6db1":[3,0,0,1,1,8,0,5,3,0],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1DeleteRoleSignal.html":[3,0,0,1,1,8,0,5,4],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1DeleteRoleSignal.html#a45fc4b0f895aa5ae09fb49b4864e3e30":[3,0,0,1,1,8,0,5,4,0],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1RemovePolicySignal.html":[3,0,0,1,1,8,0,5,5],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1RemovePolicySignal.html#a60457c8644664a5136445cc4415c1042":[3,0,0,1,1,8,0,5,5,1],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1RemovePolicySignal.html#acead2f7da1511feea537631aecc2dd58":[3,0,0,1,1,8,0,5,5,0],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserGroupSignal.html":[3,0,0,1,1,8,0,5,6],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserGroupSignal.html#a5157f4c905991b46c18c03fd734e24a5":[3,0,0,1,1,8,0,5,6,0],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserGroupSignal.html#a7856685ae494956ecf2a7a3af114dcd1":[3,0,0,1,1,8,0,5,6,1],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserSignal.html":[3,0,0,1,1,8,0,5,7],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserSignal.html#a8d2294359756c785dd4e0c64a0f66842":[3,0,0,1,1,8,0,5,7,1],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserSignal.html#aa97cc872b4ed32ba60d8549cb2403a5c":[3,0,0,1,1,8,0,5,7,0],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UpdatePolicySignal.html":[3,0,0,1,1,8,0,5,8],
@@ -238,16 +249,5 @@ var NAVTREEINDEX38 =
 "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a0f89185e350b8d09e13e0684404b5c04":[3,0,0,1,2,3,0,16,17],
 "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a11af14100ba1598aae2b48a72517c4d6":[3,0,0,1,2,3,0,16,12],
 "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a2a697ae547751666b1bebf13241d5ec5":[3,0,0,1,2,3,0,16,9],
-"classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a333622aea7930131dc2ed5d540a45580":[3,0,0,1,2,3,0,16,13],
-"classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a47c19bf0750ea0928798420a8c8adcf1":[3,0,0,1,2,3,0,16,11],
-"classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a4a24dea9c5c15abe93bbe13673fdf52e":[3,0,0,1,2,3,0,16,6],
-"classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a4e70c6270289987dc870a82ed2e3d381":[3,0,0,1,2,3,0,16,10],
-"classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a655489f81014ce05d2cdcb7328c0b7d4":[3,0,0,1,2,3,0,16,7],
-"classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a6ee4a673d438520964e7754f69a6b7bc":[3,0,0,1,2,3,0,16,1],
-"classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a7a22eaced27a47cd55f87e20e9d4aec4":[3,0,0,1,2,3,0,16,19],
-"classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a8412da687922acf3ef5c1f016c3c07ca":[3,0,0,1,2,3,0,16,0],
-"classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a8b11245c6149fd97dff26ce3faaf994f":[3,0,0,1,2,3,0,16,16],
-"classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a93c3dcbd55b78196c837b103e9926d84":[3,0,0,1,2,3,0,16,25],
-"classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a9a7724f2e5960afa80cbc25ba99aade5":[3,0,0,1,2,3,0,16,22],
-"classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a9c41b4782ea310aeacaa1781d672c1bd":[3,0,0,1,2,3,0,16,2]
+"classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a333622aea7930131dc2ed5d540a45580":[3,0,0,1,2,3,0,16,13]
 };

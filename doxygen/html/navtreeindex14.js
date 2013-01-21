@@ -1,5 +1,13 @@
 var NAVTREEINDEX14 =
 {
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a4a787d90b04c09ea37a0604c734bd6f1":[3,0,0,1,0,0,1,5,1,14],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a5698ac3c54047c357475689d09b2094e":[3,0,0,1,0,0,1,5,1,10],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a6a664949f51b3f9e1bc131fe1f49bd2d":[3,0,0,1,0,0,1,5,1,2],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a6d9d17a9ac6aabc39b474d79c2e2c3ed":[3,0,0,1,0,0,1,5,1,7],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a7ba0c06fe8f539e32e3c6c0dbe4b9780":[3,0,0,1,0,0,1,5,1,4],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a9d02720e9f36597568d5fe53b5d7d5df":[3,0,0,1,0,0,1,5,1,12],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#aa6517e7169c3a22f8a6e3d4c4a03357f":[3,0,0,1,0,0,1,5,1,11],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#ac877754963c6b7db47ce7330b5fb4f91":[3,0,0,1,0,0,1,5,1,13],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#acfd62b7822817a5fe883f8ea8a36c68d":[3,0,0,1,0,0,1,5,1,6],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#aeae11061ecd27bdf0533e079dd8084ee":[3,0,0,1,0,0,1,5,1,1],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#aef85c08f9087095e8d9fdb42bde0764c":[3,0,0,1,0,0,1,5,1,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX14 =
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#a5687513099effef8c58fa8999f4a3105":[3,0,0,1,1,1,1,0,0,0,9],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#a58d69d1e6e69322a2fbc6e915c2af259":[3,0,0,1,1,1,1,0,0,0,8],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#a6bf2c8ca65c711657ba5ec0144e3374b":[3,0,0,1,1,1,1,0,0,0,10],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#a7c79bd410211dac370cb4210b2460404":[3,0,0,1,1,1,1,0,0,0,3],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#a8d0b39d409190f9c8bb49309fcc0e9aa":[3,0,0,1,1,1,1,0,0,0,5],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#aa4453ac6c6f2a4b65e6aa0109564242e":[3,0,0,1,1,1,1,0,0,0,7],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#aaa5d0ab82e12150dd562302f6a348b97":[3,0,0,1,1,1,1,0,0,0,1],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#aad01c068c894404c1002614427d84a54":[3,0,0,1,1,1,1,0,0,0,12],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#ab7b37d48cccad8d8a0781c0aa6883834":[3,0,0,1,1,1,1,0,0,0,16],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#adae83ffc751b11f2e3c960aec3de8cfb":[3,0,0,1,1,1,1,0,0,0,0],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1MimeTypeDetector_1_1FileInfoDetector.html":[3,0,0,1,1,1,1,1,0],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1MimeTypeDetector_1_1FileInfoDetector.html#a268342b9106056630d41f110d7610185":[3,0,0,1,1,1,1,1,0,1]
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#a7c79bd410211dac370cb4210b2460404":[3,0,0,1,1,1,1,0,0,0,3]
 };

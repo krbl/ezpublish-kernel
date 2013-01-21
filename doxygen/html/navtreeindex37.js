@@ -1,5 +1,16 @@
 var NAVTREEINDEX37 =
 {
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ObjectStateService.html#a8a26924729c6f8e1163975317f5ba848":[3,0,0,1,1,8,9,3],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ObjectStateService.html#a94c05ce169071f445ab6d70b7e498ef8":[3,0,0,1,1,8,9,17],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ObjectStateService.html#a967da2331984e69524bb4ebad103bd27":[3,0,0,1,1,8,9,18],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ObjectStateService.html#aa0caaa19fbd32f1d5b6a004fca89ace1":[3,0,0,1,1,8,9,11],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ObjectStateService.html#ab697ef7f05630f7f520ea8cbec3f07f7":[3,0,0,1,1,8,9,15],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ObjectStateService.html#ab88b160f81c4cbd81c3adbcc2b9b0797":[3,0,0,1,1,8,9,2],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ObjectStateService.html#abf3892aea7c325d4ae0c581cd04d271e":[3,0,0,1,1,8,9,16],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ObjectStateService.html#acb7ea2bf22df8be0f810d37958974df3":[3,0,0,1,1,8,9,4],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ObjectStateService.html#ae70f33bf125367a2f73f25172333dff7":[3,0,0,1,1,8,9,1],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ObjectStateService.html#aec11238aa0ea726ce6c84728f387cabc":[3,0,0,1,1,8,9,12],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ObjectStateService.html#af898be92e7b408f9f42ffed7316d445f":[3,0,0,1,1,8,9,14],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ObjectStateService.html#afc020b00adca8155062fe1e69e95d532":[3,0,0,1,1,8,9,10],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html":[3,0,0,1,1,8,10],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Repository.html#a00bc57e683c286466f21d6594eb15d0c":[3,0,0,1,1,8,10,15],
@@ -238,16 +249,5 @@ var NAVTREEINDEX37 =
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1AssignRoleToUserSignal.html":[3,0,0,1,1,8,0,5,2],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1AssignRoleToUserSignal.html#a18d228c322b72de1278245b3ff92e994":[3,0,0,1,1,8,0,5,2,1],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1AssignRoleToUserSignal.html#a6f2110bf1a0f854f30941a1004269655":[3,0,0,1,1,8,0,5,2,0],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1AssignRoleToUserSignal.html#acbe49c73f3b6d6743fa2bb2e8da0023f":[3,0,0,1,1,8,0,5,2,2],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1CreateRoleSignal.html":[3,0,0,1,1,8,0,5,3],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1CreateRoleSignal.html#a58e8b8656070e84208377e78411e6db1":[3,0,0,1,1,8,0,5,3,0],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1DeleteRoleSignal.html":[3,0,0,1,1,8,0,5,4],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1DeleteRoleSignal.html#a45fc4b0f895aa5ae09fb49b4864e3e30":[3,0,0,1,1,8,0,5,4,0],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1RemovePolicySignal.html":[3,0,0,1,1,8,0,5,5],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1RemovePolicySignal.html#a60457c8644664a5136445cc4415c1042":[3,0,0,1,1,8,0,5,5,1],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1RemovePolicySignal.html#acead2f7da1511feea537631aecc2dd58":[3,0,0,1,1,8,0,5,5,0],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserGroupSignal.html":[3,0,0,1,1,8,0,5,6],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserGroupSignal.html#a5157f4c905991b46c18c03fd734e24a5":[3,0,0,1,1,8,0,5,6,0],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserGroupSignal.html#a7856685ae494956ecf2a7a3af114dcd1":[3,0,0,1,1,8,0,5,6,1],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1UnassignRoleFromUserSignal.html":[3,0,0,1,1,8,0,5,7]
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1RoleService_1_1AssignRoleToUserSignal.html#acbe49c73f3b6d6743fa2bb2e8da0023f":[3,0,0,1,1,8,0,5,2,2]
 };

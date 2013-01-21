@@ -9,6 +9,9 @@ var dir_afee99efe57812b0d135b6d637d4660c =
     [ "ContentTypeId.php", "Core_2Persistence_2Legacy_2Content_2Search_2Gateway_2CriterionHandler_2ContentTypeId_8php.html", [
       [ "ContentTypeId", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1ContentTypeId.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1ContentTypeId" ]
     ] ],
+    [ "ContentTypeIdentifier.php", "Core_2Persistence_2Legacy_2Content_2Search_2Gateway_2CriterionHandler_2ContentTypeIdentifier_8php.html", [
+      [ "ContentTypeIdentifier", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1Criterionbe9ee1d26199b227d2ea7e3d0938e2af.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1Criterionbe9ee1d26199b227d2ea7e3d0938e2af" ]
+    ] ],
     [ "DateMetadata.php", "Core_2Persistence_2Legacy_2Content_2Search_2Gateway_2CriterionHandler_2DateMetadata_8php.html", [
       [ "DateMetadata", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1DateMetadata.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1DateMetadata" ]
     ] ],

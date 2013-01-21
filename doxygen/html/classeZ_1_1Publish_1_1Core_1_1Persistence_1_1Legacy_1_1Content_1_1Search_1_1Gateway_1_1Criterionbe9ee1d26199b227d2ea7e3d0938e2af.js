@@ -1,0 +1,5 @@
+var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1Criterionbe9ee1d26199b227d2ea7e3d0938e2af =
+[
+    [ "accept", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1Criterionbe9ee1d26199b227d2ea7e3d0938e2af.html#a55121bb417be5511fec1d2f76cf37a73", null ],
+    [ "handle", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1Criterionbe9ee1d26199b227d2ea7e3d0938e2af.html#a5e6c29f60f79a5a05c4eaed80265112b", null ]
+];

@@ -1,5 +1,13 @@
 var NAVTREEINDEX16 =
 {
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#a4875461b31646360eb2065cf97f565f5":[3,0,0,1,1,1,10,0,10],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#a55ec6303f18ca2c2ff9702719038c399":[3,0,0,1,1,1,10,0,0],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#a5dfd15edacb278d3a5b8d34c22c1997d":[3,0,0,1,1,1,10,0,1],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#a7bffd1a18e0dd8a05ee5d52388a78168":[3,0,0,1,1,1,10,0,4],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#a9c1732e87bc9edafe3687642f13d0f7c":[3,0,0,1,1,1,10,0,3],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#abfaaf96da97d461c0e33429329a1faae":[3,0,0,1,1,1,10,0,11],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#ad968a7ddb06562cad975b75ff7809a11":[3,0,0,1,1,1,10,0,2],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#ae55dc38a88933cca6712c5956038ff29":[3,0,0,1,1,1,10,0,6],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Value.html":[3,0,0,1,1,1,10,1],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Value.html#a006adcb7eb72d2065e4239b07143b0cd":[3,0,0,1,1,1,10,1,0],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Value.html#a2e51496fb065ae9eb2f297b05c70a0c1":[3,0,0,1,1,1,10,1,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX16 =
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Type.html#aaa5969089af75857341eb26c3a22bee9":[3,0,0,1,1,1,18,2,10],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Type.html#ad51cf7c3130ea4c1e1ce5285213198eb":[3,0,0,1,1,1,18,2,4],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Type.html#ada472385a109a29d57f615945f31729e":[3,0,0,1,1,1,18,2,0],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Type.html#add04e92202ecfb1974c1cd43919626df":[3,0,0,1,1,1,18,2,2],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Type.html#af2d54e11aba2aa6d1413d0c058de4699":[3,0,0,1,1,1,18,2,8],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Value.html":[3,0,0,1,1,1,18,3],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Value.html#a3d00facd05258c870e32d9d4bb3cd30e":[3,0,0,1,1,1,18,3,2],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Value.html#aadd2b4a44ad473d602f115bdc31a8ab6":[3,0,0,1,1,1,18,3,1],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Value.html#ad3a0a6f2996a8e7b0625c418b68c68e5":[3,0,0,1,1,1,18,3,0],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Selection_1_1Type.html":[3,0,0,1,1,1,20,0],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Selection_1_1Type.html#a152f3a99e850f64fcf6afe65758768fb":[3,0,0,1,1,1,20,0,9],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Selection_1_1Type.html#a2c5193caf2c142e2706927d628bc1b08":[3,0,0,1,1,1,20,0,8]
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Type.html#add04e92202ecfb1974c1cd43919626df":[3,0,0,1,1,1,18,2,2]
 };
