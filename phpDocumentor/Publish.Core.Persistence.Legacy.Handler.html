@@ -84,6 +84,7 @@
       <a style="font-style: italic;" href="#Handler::getContentMapper()">getContentMapper</a>,
       <a style="font-style: italic;" href="#Handler::getContentTypeGateway()">getContentTypeGateway</a>,
       <a style="font-style: italic;" href="#Handler::getFieldHandler()">getFieldHandler</a>,
+      <a style="font-style: italic;" href="#Handler::getFieldTypeRegistry()">getFieldTypeRegistry</a>,
       <a style="font-style: italic;" href="#Handler::getFieldValueConverterRegistry()">getFieldValueConverterRegistry</a>,
       <a style="font-style: italic;" href="#Handler::getLanguageCache()">getLanguageCache</a>,
       <a style="font-style: italic;" href="#Handler::getLanguageMaskGenerator()">getLanguageMaskGenerator</a>,
@@ -112,6 +113,9 @@
           <a href="Publish.Core.Persistence.Legacy.EzcDbHandler.html#%5CeZ%5CPublish%5CCore%5CPersistence%5CLegacy%5CEzcDbHandler">\eZ\Publish\Core\Persistence\Legacy\EzcDbHandler</a>
              
             $dbHandler,
+          <a href="Publish.Core.Persistence.FieldTypeRegistry.html#%5CeZ%5CPublish%5CCore%5CPersistence%5CFieldTypeRegistry">\eZ\Publish\Core\Persistence\FieldTypeRegistry</a>
+             
+            $fieldTypeRegistry,
           <a href="Publish.Core.Persistence.Legacy.Content.FieldValue.ConverterRegistry.html#%5CeZ%5CPublish%5CCore%5CPersistence%5CLegacy%5CContent%5CFieldValue%5CConverterRegistry">\eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry</a>
              
             $converterRegistry,
@@ -145,6 +149,12 @@
 <td>$dbHandler</td>
 <td style="white-space: normal;"><a href="Publish.Core.Persistence.Legacy.EzcDbHandler.html#%5CeZ%5CPublish%5CCore%5CPersistence%5CLegacy%5CEzcDbHandler">\eZ\Publish\Core\Persistence\Legacy\EzcDbHandler</a></td>
 <td><p>The database handler</p></td>
+<td></td>
+</tr>
+<tr>
+<td>$fieldTypeRegistry</td>
+<td style="white-space: normal;"><a href="Publish.Core.Persistence.FieldTypeRegistry.html#%5CeZ%5CPublish%5CCore%5CPersistence%5CFieldTypeRegistry">\eZ\Publish\Core\Persistence\FieldTypeRegistry</a></td>
+<td><p>Should contain field types</p></td>
 <td></td>
 </tr>
 <tr>
@@ -365,6 +375,27 @@ otherwise work will be lost.</p></small><br><h4>Return value</h4>
 </tr></thead>
 <tbody><tr>
 <td>\eZ\Publish\Core\Persistence\Legacy\Content\FieldHandler</td>
+<td></td>
+</tr></tbody>
+</table>
+</div>
+<div class="method">
+<a id="Handler::getFieldTypeRegistry()"></a><h3>getFieldTypeRegistry<span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+        <span class="nb-faded-text">\eZ\Publish\Core\Persistence\FieldTypeRegistry</span>
+</h3>
+<h4>Description</h4>
+<em>Returns the field type registry</em><br><h4>Return value</h4>
+<table>
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr>
+<td>\eZ\Publish\Core\Persistence\FieldTypeRegistry</td>
 <td></td>
 </tr></tbody>
 </table>
@@ -867,6 +898,7 @@ otherwise work will be lost.</p></small><br><h4>Return value</h4>
       <a href="#Handler::%24converterRegistry">$converterRegistry</a>,
       <a href="#Handler::%24dbHandler">$dbHandler</a>,
       <a href="#Handler::%24fieldHandler">$fieldHandler</a>,
+      <a href="#Handler::%24fieldTypeRegistry">$fieldTypeRegistry</a>,
       <a href="#Handler::%24languageCache">$languageCache</a>,
       <a href="#Handler::%24languageHandler">$languageHandler</a>,
       <a href="#Handler::%24languageMaskGenerator">$languageMaskGenerator</a>,
@@ -970,6 +1002,15 @@ otherwise work will be lost.</p></small><br><h4>Return value</h4>
           =
           </h3>
 <em>Field handler</em><br><small></small><br><br>
+</div>
+<div class="method">
+<a id="Handler::$fieldTypeRegistry"></a><h3>
+<span class="nb-faded-text">\eZ\Publish\Core\Persistence\FieldTypeRegistry 
+          protected 
+          </span>$fieldTypeRegistry
+          =
+          </h3>
+<em>FieldType registry</em><br><small></small><br><br>
 </div>
 <div class="method">
 <a id="Handler::$languageCache"></a><h3>
@@ -2297,6 +2338,8 @@ creator, modifier)</small></span></li>
 <li class="closed">
 <span class="folder">Persistence</span><ul>
 <li><span class="class"><a href="Publish.Core.Persistence.Factory.html#Factory">Factory</a><br><small>A reusable factory for all the "storage engine" handlers</small></span></li>
+<li><span class="class"><a href="Publish.Core.Persistence.FieldType.html#FieldType">FieldType</a><br><small>This class represents a FieldType available to SPI users.</small></span></li>
+<li><span class="class"><a href="Publish.Core.Persistence.FieldTypeRegistry.html#FieldTypeRegistry">FieldTypeRegistry</a><br><small>Registry for field types available to storage engines.</small></span></li>
 <li class="closed">
 <span class="folder">InMemory</span><ul>
 <li><span class="class"><a href="Publish.Core.Persistence.InMemory.Backend.html#Backend">Backend</a><br><small>The Storage Engine backend for in memory storage
@@ -3504,6 +3547,7 @@ indexable by search backends.</small></span></li>
 <li class="closed">
 <span class="folder">Persistence</span><ul>
 <li><span class="class"><a href="Publish.SPI.Persistence.Content.html#Content">Content</a><br><small>Content value object, bound to a version.</small></span></li>
+<li><span class="interface"><a href="Publish.SPI.Persistence.FieldType.html#FieldType">FieldType</a><br><small>The field type interface which field types available to storage engines have to implement.</small></span></li>
 <li><span class="interface"><a href="Publish.SPI.Persistence.Handler.html#Handler">Handler</a><br><small>The main handler for Storage Engine</small></span></li>
 <li><span class="class"><a href="Publish.SPI.Persistence.User.html#User">User</a><br><small>The base class for all value objects and structs</small></span></li>
 <li><span class="class"><a href="Publish.SPI.Persistence.ValueObject.html#ValueObject">ValueObject</a><br><small>The base class for all value objects and structs</small></span></li>

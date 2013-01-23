@@ -79,6 +79,7 @@
       <a style="font-style: italic;" href="#RepositoryFactory::buildRepository()">buildRepository</a>,
       <a style="font-style: italic;" href="#RepositoryFactory::buildService()">buildService</a>,
       <a style="font-style: italic;" href="#RepositoryFactory::getExternalStorageHandlers()">getExternalStorageHandlers</a>,
+      <a style="font-style: italic;" href="#RepositoryFactory::getFieldTypes()">getFieldTypes</a>,
       <a style="font-style: italic;" href="#RepositoryFactory::registerExternalStorageHandler()">registerExternalStorageHandler</a>,
       <a style="font-style: italic;" href="#RepositoryFactory::registerFieldType()">registerFieldType</a>,
       <a style="font-style: italic;" href="#RepositoryFactory::registerLimitationType()">registerLimitationType</a>,
@@ -242,6 +243,27 @@ directly to make sure you get an instance wrapped inside Signal / Cache / * func
 </h3>
 <h4>Description</h4>
 <em>Returns registered external storage handlers for field types (as closures to be lazy loaded in the public API)</em><br><h4>Return value</h4>
+<table>
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr>
+<td>\Closure[]</td>
+<td></td>
+</tr></tbody>
+</table>
+</div>
+<div class="method">
+<a id="RepositoryFactory::getFieldTypes()"></a><h3>getFieldTypes<span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+        <span class="nb-faded-text">\Closure[]</span>
+</h3>
+<h4>Description</h4>
+<em>Returns registered field types (as closures to be lazy loaded in the public API)</em><br><h4>Return value</h4>
 <table>
 <thead><tr>
 <th>Type</th>
@@ -1567,6 +1589,8 @@ creator, modifier)</small></span></li>
 <li class="closed">
 <span class="folder">Persistence</span><ul>
 <li><span class="class"><a href="Publish.Core.Persistence.Factory.html#Factory">Factory</a><br><small>A reusable factory for all the "storage engine" handlers</small></span></li>
+<li><span class="class"><a href="Publish.Core.Persistence.FieldType.html#FieldType">FieldType</a><br><small>This class represents a FieldType available to SPI users.</small></span></li>
+<li><span class="class"><a href="Publish.Core.Persistence.FieldTypeRegistry.html#FieldTypeRegistry">FieldTypeRegistry</a><br><small>Registry for field types available to storage engines.</small></span></li>
 <li class="closed">
 <span class="folder">InMemory</span><ul>
 <li><span class="class"><a href="Publish.Core.Persistence.InMemory.Backend.html#Backend">Backend</a><br><small>The Storage Engine backend for in memory storage
@@ -2774,6 +2798,7 @@ indexable by search backends.</small></span></li>
 <li class="closed">
 <span class="folder">Persistence</span><ul>
 <li><span class="class"><a href="Publish.SPI.Persistence.Content.html#Content">Content</a><br><small>Content value object, bound to a version.</small></span></li>
+<li><span class="interface"><a href="Publish.SPI.Persistence.FieldType.html#FieldType">FieldType</a><br><small>The field type interface which field types available to storage engines have to implement.</small></span></li>
 <li><span class="interface"><a href="Publish.SPI.Persistence.Handler.html#Handler">Handler</a><br><small>The main handler for Storage Engine</small></span></li>
 <li><span class="class"><a href="Publish.SPI.Persistence.User.html#User">User</a><br><small>The base class for all value objects and structs</small></span></li>
 <li><span class="class"><a href="Publish.SPI.Persistence.ValueObject.html#ValueObject">ValueObject</a><br><small>The base class for all value objects and structs</small></span></li>
