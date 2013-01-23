@@ -1,5 +1,12 @@
 var NAVTREEINDEX13 =
 {
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1Visibility.html#aebf0c05d7c01cf4c6b1eb6a3c7dc75dd":[3,0,0,1,0,0,1,0,0,0,25,2],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder.html":[3,0,0,1,0,0,1,0,0,5],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder.html#a0ef8e168dc59e4329d1fbb4e99291cc3":[3,0,0,1,0,0,1,0,0,5,1],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder.html#a34860aea11fecc86322925698ce0e502":[3,0,0,1,0,0,1,0,0,5,4],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder.html#ac40e0d3b3b731d286e81b928320b132a":[3,0,0,1,0,0,1,0,0,5,2],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder.html#ac56100c3b868a39ef85cd7d93b58af1a":[3,0,0,1,0,0,1,0,0,5,0],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder.html#acd964ef5fc032effa7b2c073c70cc239":[3,0,0,1,0,0,1,0,0,5,3],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1ContentTypeFacetBuilder.html":[3,0,0,1,0,0,1,0,0,1,0],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1CriterionFacetBuilder.html":[3,0,0,1,0,0,1,0,0,1,1],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder_1_1DateRangeFacetBuilder.html":[3,0,0,1,0,0,1,0,0,1,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX13 =
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Plural.html":[3,0,0,1,0,0,1,4,1],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Plural.html#a6b6664be841ed2e0d399df824e3520aa":[3,0,0,1,0,0,1,4,1,2],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Plural.html#a98f621037189b4406077d5c5338133d7":[3,0,0,1,0,0,1,4,1,3],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Plural.html#a9bb7fcd6ff084fa03cc38a0887e7c357":[3,0,0,1,0,0,1,4,1,0],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Plural.html#aaf9eb788d330d5eab2c038365ea6b5ee":[3,0,0,1,0,0,1,4,1,1],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html":[3,0,0,1,0,0,1,5,1],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a0356e4620203dbc35ba1ba8523206b11":[3,0,0,1,0,0,1,5,1,5],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a0d010720d8342ae0451bee2c076834fa":[3,0,0,1,0,0,1,5,1,15],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a329ff4f8bcdc3ff35250f932c2d76921":[3,0,0,1,0,0,1,5,1,8],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a40cd6dbbbaa05879f4b1ab02a55a05a8":[3,0,0,1,0,0,1,5,1,3],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a43f3aae2b7a11449b5eb2e71c2568974":[3,0,0,1,0,0,1,5,1,9]
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Plural.html#a9bb7fcd6ff084fa03cc38a0887e7c357":[3,0,0,1,0,0,1,4,1,0]
 };

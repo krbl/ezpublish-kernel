@@ -1,5 +1,12 @@
 var NAVTREEINDEX15 =
 {
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#a19a42f06adafb359691fc3accfcede85":[3,0,0,1,1,1,1,0,0,0,13],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#a288d4fa47797e6ab7e8e05859b486095":[3,0,0,1,1,1,1,0,0,0,11],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#a4302e4496562b86b6a11c425b3478835":[3,0,0,1,1,1,1,0,0,0,14],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#a5687513099effef8c58fa8999f4a3105":[3,0,0,1,1,1,1,0,0,0,9],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#a58d69d1e6e69322a2fbc6e915c2af259":[3,0,0,1,1,1,1,0,0,0,8],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#a6bf2c8ca65c711657ba5ec0144e3374b":[3,0,0,1,1,1,1,0,0,0,10],
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#a7c79bd410211dac370cb4210b2460404":[3,0,0,1,1,1,1,0,0,0,3],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#a8d0b39d409190f9c8bb49309fcc0e9aa":[3,0,0,1,1,1,1,0,0,0,5],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#aa4453ac6c6f2a4b65e6aa0109564242e":[3,0,0,1,1,1,1,0,0,0,7],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html#aaa5d0ab82e12150dd562302f6a348b97":[3,0,0,1,1,1,1,0,0,0,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX15 =
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Image_1_1Value.html#a46faa755f11c681389d577591c0bdde7":[3,0,0,1,1,1,9,5,5],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Image_1_1Value.html#a520ca3f506338f11ae534fa9c5d19fe7":[3,0,0,1,1,1,9,5,7],
 "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Image_1_1Value.html#a71501a197971bd8d9a9cee2721d8d090":[3,0,0,1,1,1,9,5,0],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Image_1_1Value.html#acac7cf9f7ba9e930bd0ed2e52ea34297":[3,0,0,1,1,1,9,5,2],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Image_1_1Value.html#aeae287313d7542548bcc8594e8544e97":[3,0,0,1,1,1,9,5,3],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Image_1_1Value.html#aedf2bd29c779111d046907f53850d736":[3,0,0,1,1,1,9,5,1],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html":[3,0,0,1,1,1,10,0],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#a0281148b3d17d128973d237b863912f5":[3,0,0,1,1,1,10,0,8],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#a0b72dc78547bba5f7efa744cbdadeeba":[3,0,0,1,1,1,10,0,7],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#a1cd2af53f1c919bfee686c3622da365d":[3,0,0,1,1,1,10,0,5],
-"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Integer_1_1Type.html#a355f61d0ffdda075dea50814423f1a88":[3,0,0,1,1,1,10,0,9]
+"classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Image_1_1Value.html#acac7cf9f7ba9e930bd0ed2e52ea34297":[3,0,0,1,1,1,9,5,2]
 };

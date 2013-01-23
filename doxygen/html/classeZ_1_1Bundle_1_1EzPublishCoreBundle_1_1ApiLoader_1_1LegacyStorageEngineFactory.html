@@ -125,7 +125,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="LegacyStorageEngineFactory_8php_source.html#l00017">17</a> of file <a class="el" href="LegacyStorageEngineFactory_8php_source.html">LegacyStorageEngineFactory.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacyStorageEngineFactory_8php_source.html#l00018">18</a> of file <a class="el" href="LegacyStorageEngineFactory_8php_source.html">LegacyStorageEngineFactory.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="abc4a300bfe642d9115a8278bc49c8f00"></a>
 <div class="memitem">
@@ -189,6 +189,9 @@ Protected Attributes</h2></td></tr>
 <div class="line">        $legacyEngineClass = $this-&gt;container-&gt;getParameter( <span class="stringliteral">&#39;ezpublish.api.storage_engine.legacy.class&#39;</span> );</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> $legacyEngineClass(</div>
 <div class="line">            $dbhandler,</div>
+<div class="line">            <span class="keyword">new</span> FieldTypeRegistry(</div>
+<div class="line">                $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish.api.repository.factory&#39;</span> )-&gt;getFieldTypes()</div>
+<div class="line">            ),</div>
 <div class="line">            <span class="keyword">new</span> ConverterRegistry( $this-&gt;converters ),</div>
 <div class="line">            <span class="keyword">new</span> StorageRegistry(</div>
 <div class="line">                $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish.api.repository.factory&#39;</span> )-&gt;getExternalStorageHandlers()</div>
@@ -295,7 +298,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle.html">EzPublishCoreBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader.html">ApiLoader</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html">LegacyStorageEngineFactory</a></li>
-    <li class="footer">Generated on Mon Jan 21 2013 00:02:44 for ezp-next by
+    <li class="footer">Generated on Wed Jan 23 2013 00:03:14 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

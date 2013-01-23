@@ -1,6 +1,6 @@
 var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler =
 [
-    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#a98a9505d90b76f28d9ca9e3b0b11a8fb", null ],
+    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#aad9555860f611473f64b169e056e607d", null ],
     [ "beginTransaction", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#a5ad5bc75d5ce4900cd2aa36160334eef", null ],
     [ "commit", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#a289a604e55c6bf81f7373151e0b985d8", null ],
     [ "contentHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#a4003840b3ae0cf5194a37c04a3a927b5", null ],
@@ -10,6 +10,7 @@ var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler =
     [ "getContentMapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#a3f3e189ae88a90ea2a691e3368aadc58", null ],
     [ "getContentTypeGateway", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#ade50ba4d2447da3324bcdecfc0c6013c", null ],
     [ "getFieldHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#ac71101140d2cc3e9908ea72c659f5985", null ],
+    [ "getFieldTypeRegistry", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#a3f2eab368a42cd2d08fbaf4d462bf5fa", null ],
     [ "getFieldValueConverterRegistry", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#ac14fe6805f57fbc95513dcd0f4f9a3f2", null ],
     [ "getLanguageCache", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#a7f961523e360e47edae8b8e3d3da7c29", null ],
     [ "getLanguageMaskGenerator", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#acc32db88b0c97883c439b746eb6fcc63", null ],
@@ -42,6 +43,7 @@ var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler =
     [ "$converterRegistry", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#a0ae14be74e365848d80f13f76f736bce", null ],
     [ "$dbHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#a31b9a11adfd4d75782198d7683ca01af", null ],
     [ "$fieldHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#af7bfb51a968cf33c30e16b99b98f3c6f", null ],
+    [ "$fieldTypeRegistry", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#ac8404ff9104ffa8ee38350c4336bde03", null ],
     [ "$languageCache", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#a893f4a05f3db567baeb55714e8f1f403", null ],
     [ "$languageHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#ae5e3f5ac99bc09b3b90907552590c3d0", null ],
     [ "$languageMaskGenerator", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#a147a626eaa8f5f709c9a094e8144aa62", null ],

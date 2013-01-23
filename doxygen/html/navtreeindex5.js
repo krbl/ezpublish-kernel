@@ -1,5 +1,7 @@
 var NAVTREEINDEX5 =
 {
+"FacetBuilder_8php_source.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,0,5],
+"Facet_8php.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,1,1],
 "Facet_8php_source.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,1,1],
 "FallbackRouter_8php.html":[4,0,0,0,0,0,0,0,0,0,1,4,0],
 "FallbackRouter_8php_source.html":[4,0,0,0,0,0,0,0,0,0,1,4,0],
@@ -45,6 +47,8 @@ var NAVTREEINDEX5 =
 "FieldTypeProcessorRegistry_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,1,6],
 "FieldTypeProcessor_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,1,5],
 "FieldTypeProcessor_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,1,5],
+"FieldTypeRegistry_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,5],
+"FieldTypeRegistry_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,5],
 "FieldTypeSerializer_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,1,2,2],
 "FieldTypeSerializer_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,1,2,2],
 "FieldType_2Author_2Author_8php.html":[4,0,0,0,0,0,0,0,0,1,1,1,0,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX5 =
 "LanguageCreateStruct_8php_source.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,9],
 "LanguageHandler_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,0,4],
 "LanguageHandler_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,0,4],
-"LanguageLimitationType_8php.html":[4,0,0,0,0,0,0,0,0,1,1,3,1],
-"LanguageLimitationType_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,3,1],
-"LanguageLimitation_8php.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,5,0,1],
-"LanguageLimitation_8php_source.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,5,0,1],
-"Language_2CreateStruct_8php.html":[4,0,0,0,0,0,0,0,0,1,2,3,0,0,0]
+"LanguageLimitationType_8php.html":[4,0,0,0,0,0,0,0,0,1,1,3,1]
 };

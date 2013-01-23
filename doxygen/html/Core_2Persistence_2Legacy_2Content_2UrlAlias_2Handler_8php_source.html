@@ -727,136 +727,143 @@ $(document).ready(function(){initNavTree('Core_2Persistence_2Legacy_2Content_2Ur
 <div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;            $text = $defaultValue;</div>
 <div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;        }</div>
 <div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;</div>
-<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a60f8df408ed93702d9b327c89b51add1">cleanupText</a>(</div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;            $this-&gt;transformationProcessor-&gt;transform(</div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;                $text,</div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;                $this-&gt;configuration[<span class="stringliteral">&quot;transformationGroups&quot;</span>][$transformation][<span class="stringliteral">&quot;commands&quot;</span>]</div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;            ),</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;            $this-&gt;configuration[<span class="stringliteral">&quot;transformationGroups&quot;</span>][$transformation][<span class="stringliteral">&quot;cleanupMethod&quot;</span>]</div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;        );</div>
-<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    }</div>
-<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;</div>
-<div class="line"><a name="l00904"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#ad413797c2f51efc764390a4756cc6c1a">  904</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#ad413797c2f51efc764390a4756cc6c1a">getUniqueCounterValue</a>( $text, $parentId )</div>
-<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;    {</div>
-<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        <span class="keywordflow">if</span> ( $parentId === 0 )</div>
-<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;        {</div>
-<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;            <span class="keywordflow">foreach</span> ( $this-&gt;configuration[<span class="stringliteral">&quot;reservedNames&quot;</span>] as $reservedName )</div>
-<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;            {</div>
-<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;                <span class="keywordflow">if</span> ( strcasecmp( $text, $reservedName ) === 0 )</div>
-<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;                {</div>
-<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;                    <span class="keywordflow">return</span> 2;</div>
-<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;                }</div>
-<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;            }</div>
-<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;        }</div>
-<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;</div>
-<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;    }</div>
-<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;</div>
-<div class="line"><a name="l00925"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a472178bc84e91df0b88aa3db762bd3ef">  925</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a472178bc84e91df0b88aa3db762bd3ef">getHash</a>( $text )</div>
-<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;    {</div>
-<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;        <span class="keywordflow">return</span> md5( strtolower( $text ) );</div>
-<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    }</div>
-<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;</div>
-<div class="line"><a name="l00938"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a60f8df408ed93702d9b327c89b51add1">  938</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a60f8df408ed93702d9b327c89b51add1">cleanupText</a>( $text, $method )</div>
-<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;    {</div>
-<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;        <span class="keywordflow">switch</span> ( $method )</div>
-<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;        {</div>
-<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&quot;url_cleanup&quot;</span>:</div>
-<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;                $sep = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a62a94cf85e1a0c55b498772220d66332">getWordSeparator</a>();</div>
-<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;                $sepQ = preg_quote( $sep );</div>
-<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;                $text = preg_replace(</div>
-<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;                    array(</div>
-<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;                        <span class="stringliteral">&quot;#[^a-zA-Z0-9_!.-]+#&quot;</span>,</div>
-<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;                        <span class="stringliteral">&quot;#^[.]+|[!.]+$#&quot;</span>, # Remove dots at beginning/end</div>
-<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;                        <span class="stringliteral">&quot;#\.\.+#&quot;</span>, # Remove <span class="keywordtype">double</span> dots</div>
-<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;                        <span class="stringliteral">&quot;#[{$sepQ}]+#&quot;</span>, # Turn multiple separators into one</div>
-<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;                        <span class="stringliteral">&quot;#^[{$sepQ}]+|[{$sepQ}]+$#&quot;</span> # Strip separator from beginning/end</div>
-<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;                    ),</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;        <span class="keywordflow">if</span> ( isset( $this-&gt;configuration[<span class="stringliteral">&quot;transformationGroups&quot;</span>][$transformation][<span class="stringliteral">&quot;commands&quot;</span>] )</div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;            &amp;&amp; !empty( $this-&gt;configuration[<span class="stringliteral">&quot;transformationGroups&quot;</span>][$transformation][<span class="stringliteral">&quot;commands&quot;</span>] )</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;        )</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;        {</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;            $text = $this-&gt;transformationProcessor-&gt;transform(</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;                $text,</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;                $this-&gt;configuration[<span class="stringliteral">&quot;transformationGroups&quot;</span>][$transformation][<span class="stringliteral">&quot;commands&quot;</span>]</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;            );</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;        }</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a60f8df408ed93702d9b327c89b51add1">cleanupText</a>(</div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;            $text,</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;            $this-&gt;configuration[<span class="stringliteral">&quot;transformationGroups&quot;</span>][$transformation][<span class="stringliteral">&quot;cleanupMethod&quot;</span>]</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;        );</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;    }</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;</div>
+<div class="line"><a name="l00911"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#ad413797c2f51efc764390a4756cc6c1a">  911</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#ad413797c2f51efc764390a4756cc6c1a">getUniqueCounterValue</a>( $text, $parentId )</div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;    {</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;        <span class="keywordflow">if</span> ( $parentId === 0 )</div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;        {</div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;            <span class="keywordflow">foreach</span> ( $this-&gt;configuration[<span class="stringliteral">&quot;reservedNames&quot;</span>] as $reservedName )</div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;            {</div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;                <span class="keywordflow">if</span> ( strcasecmp( $text, $reservedName ) === 0 )</div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;                {</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;                    <span class="keywordflow">return</span> 2;</div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;                }</div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;            }</div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;        }</div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;</div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;    }</div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;</div>
+<div class="line"><a name="l00932"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a472178bc84e91df0b88aa3db762bd3ef">  932</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a472178bc84e91df0b88aa3db762bd3ef">getHash</a>( $text )</div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    {</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;        <span class="keywordflow">return</span> md5( strtolower( $text ) );</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;    }</div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;</div>
+<div class="line"><a name="l00945"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a60f8df408ed93702d9b327c89b51add1">  945</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a60f8df408ed93702d9b327c89b51add1">cleanupText</a>( $text, $method )</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;    {</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;        <span class="keywordflow">switch</span> ( $method )</div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;        {</div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&quot;url_cleanup&quot;</span>:</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;                $sep = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a62a94cf85e1a0c55b498772220d66332">getWordSeparator</a>();</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;                $sepQ = preg_quote( $sep );</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;                $text = preg_replace(</div>
 <div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;                    array(</div>
-<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;                        $sep,</div>
-<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;                        $sep,</div>
-<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;                        $sep,</div>
-<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;                        $sep,</div>
-<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;                        <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;                        <span class="stringliteral">&quot;#[^a-zA-Z0-9_!.-]+#&quot;</span>,</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;                        <span class="stringliteral">&quot;#^[.]+|[!.]+$#&quot;</span>, # Remove dots at beginning/end</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;                        <span class="stringliteral">&quot;#\.\.+#&quot;</span>, # Remove <span class="keywordtype">double</span> dots</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;                        <span class="stringliteral">&quot;#[{$sepQ}]+#&quot;</span>, # Turn multiple separators into one</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;                        <span class="stringliteral">&quot;#^[{$sepQ}]+|[{$sepQ}]+$#&quot;</span> # Strip separator from beginning/end</div>
 <div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;                    ),</div>
-<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;                    $text</div>
-<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;                );</div>
-<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&quot;url_cleanup_iri&quot;</span>:</div>
-<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;                <span class="comment">// With IRI support we keep all characters except some reserved ones,</span></div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;                <span class="comment">// they are space, ampersand, semi-colon, forward slash, colon, equal sign, question mark,</span></div>
-<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;                <span class="comment">//          square brackets, parenthesis, plus.</span></div>
-<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;                <span class="comment">//</span></div>
-<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;                <span class="comment">// Note: Space is turned into a dash to make it easier for people to</span></div>
-<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;                <span class="comment">//       paste urls from the system and have the whole url recognized</span></div>
-<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;                <span class="comment">//       instead of being broken off</span></div>
-<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;                $sep = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a62a94cf85e1a0c55b498772220d66332">getWordSeparator</a>();</div>
-<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;                $sepQ = preg_quote( $sep );</div>
-<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;                $prepost = <span class="stringliteral">&quot; .&quot;</span> . $sepQ;</div>
-<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;                <span class="keywordflow">if</span> ( $sep != <span class="stringliteral">&quot;-&quot;</span> )</div>
-<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;                    $prepost .= <span class="stringliteral">&quot;-&quot;</span>;</div>
-<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;                $text = preg_replace(</div>
-<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;                    array(</div>
-<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;                        <span class="stringliteral">&quot;#[ \\\\%\#&amp;;/:=?\[\]()+]+#&quot;</span>,</div>
-<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;                        <span class="stringliteral">&quot;#^[.]+|[!.]+$#&quot;</span>, # Remove dots at beginning/end</div>
-<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;                        <span class="stringliteral">&quot;#\.\.+#&quot;</span>, # Remove <span class="keywordtype">double</span> dots</div>
-<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;                        <span class="stringliteral">&quot;#[{$sepQ}]+#&quot;</span>, # Turn multiple separators into one</div>
-<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;                        <span class="stringliteral">&quot;#^[{$prepost}]+|[{$prepost}]+$#&quot;</span></div>
-<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;                    ),</div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;                    array(</div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;                        $sep,</div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;                        $sep,</div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;                        $sep,</div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;                        $sep,</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;                        <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;                    ),</div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;                    $text</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;                );</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&quot;url_cleanup_iri&quot;</span>:</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;                <span class="comment">// With IRI support we keep all characters except some reserved ones,</span></div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;                <span class="comment">// they are space, ampersand, semi-colon, forward slash, colon, equal sign, question mark,</span></div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;                <span class="comment">//          square brackets, parenthesis, plus.</span></div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;                <span class="comment">//</span></div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;                <span class="comment">// Note: Space is turned into a dash to make it easier for people to</span></div>
+<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;                <span class="comment">//       paste urls from the system and have the whole url recognized</span></div>
+<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;                <span class="comment">//       instead of being broken off</span></div>
+<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;                $sep = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a62a94cf85e1a0c55b498772220d66332">getWordSeparator</a>();</div>
+<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;                $sepQ = preg_quote( $sep );</div>
+<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;                $prepost = <span class="stringliteral">&quot; .&quot;</span> . $sepQ;</div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;                <span class="keywordflow">if</span> ( $sep != <span class="stringliteral">&quot;-&quot;</span> )</div>
+<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;                    $prepost .= <span class="stringliteral">&quot;-&quot;</span>;</div>
+<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;                $text = preg_replace(</div>
 <div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;                    array(</div>
-<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;                        $sep,</div>
-<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;                        $sep,</div>
-<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;                        $sep,</div>
-<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;                        $sep,</div>
-<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;                        <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;                        <span class="stringliteral">&quot;#[ \\\\%\#&amp;;/:=?\[\]()+]+#&quot;</span>,</div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;                        <span class="stringliteral">&quot;#^[.]+|[!.]+$#&quot;</span>, # Remove dots at beginning/end</div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;                        <span class="stringliteral">&quot;#\.\.+#&quot;</span>, # Remove <span class="keywordtype">double</span> dots</div>
+<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;                        <span class="stringliteral">&quot;#[{$sepQ}]+#&quot;</span>, # Turn multiple separators into one</div>
+<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;                        <span class="stringliteral">&quot;#^[{$prepost}]+|[{$prepost}]+$#&quot;</span></div>
 <div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;                    ),</div>
-<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;                    $text</div>
-<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;                );</div>
-<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&quot;url_cleanup_compat&quot;</span>:</div>
-<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;                <span class="comment">// Old style of url alias with lowercase only and underscores for separators</span></div>
-<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;                $text = strtolower( $text );</div>
-<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;                $text = preg_replace(</div>
-<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;                    array(</div>
-<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;                        <span class="stringliteral">&quot;#[^a-z0-9]+#&quot;</span>,</div>
-<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;                        <span class="stringliteral">&quot;#^_+|_+$#&quot;</span></div>
-<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;                    ),</div>
-<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;                    array(</div>
-<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;                        <span class="stringliteral">&quot;_&quot;</span>,</div>
-<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;                        <span class="stringliteral">&quot;&quot;</span></div>
-<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;                    ),</div>
-<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;                    $text</div>
-<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;                );</div>
-<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;            <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;                <span class="comment">// Nothing</span></div>
-<div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;        }</div>
-<div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;</div>
-<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;        <span class="keywordflow">return</span> $text;</div>
-<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;    }</div>
-<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;</div>
-<div class="line"><a name="l01021"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a62a94cf85e1a0c55b498772220d66332"> 1021</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a62a94cf85e1a0c55b498772220d66332">getWordSeparator</a>()</div>
-<div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;    {</div>
-<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;        <span class="keywordflow">switch</span> ( $this-&gt;configuration[<span class="stringliteral">&quot;wordSeparatorName&quot;</span>] )</div>
-<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;        {</div>
-<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&quot;dash&quot;</span>:</div>
-<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;-&quot;</span>;</div>
-<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&quot;underscore&quot;</span>:</div>
-<div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;_&quot;</span>;</div>
-<div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&quot;space&quot;</span>:</div>
-<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;        }</div>
-<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;</div>
-<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;-&quot;</span>;</div>
-<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;    }</div>
-<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;}</div>
+<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;                    array(</div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;                        $sep,</div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;                        $sep,</div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;                        $sep,</div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;                        $sep,</div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;                        <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;                    ),</div>
+<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;                    $text</div>
+<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;                );</div>
+<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&quot;url_cleanup_compat&quot;</span>:</div>
+<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;                <span class="comment">// Old style of url alias with lowercase only and underscores for separators</span></div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;                $text = strtolower( $text );</div>
+<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;                $text = preg_replace(</div>
+<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;                    array(</div>
+<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;                        <span class="stringliteral">&quot;#[^a-z0-9]+#&quot;</span>,</div>
+<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;                        <span class="stringliteral">&quot;#^_+|_+$#&quot;</span></div>
+<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;                    ),</div>
+<div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;                    array(</div>
+<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;                        <span class="stringliteral">&quot;_&quot;</span>,</div>
+<div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;                        <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;                    ),</div>
+<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;                    $text</div>
+<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;                );</div>
+<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;                <span class="comment">// Nothing</span></div>
+<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;        }</div>
+<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;</div>
+<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;        <span class="keywordflow">return</span> $text;</div>
+<div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;    }</div>
+<div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;</div>
+<div class="line"><a name="l01028"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a62a94cf85e1a0c55b498772220d66332"> 1028</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a62a94cf85e1a0c55b498772220d66332">getWordSeparator</a>()</div>
+<div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;    {</div>
+<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;        <span class="keywordflow">switch</span> ( $this-&gt;configuration[<span class="stringliteral">&quot;wordSeparatorName&quot;</span>] )</div>
+<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;        {</div>
+<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&quot;dash&quot;</span>:</div>
+<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;-&quot;</span>;</div>
+<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&quot;underscore&quot;</span>:</div>
+<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;_&quot;</span>;</div>
+<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&quot;space&quot;</span>:</div>
+<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;        }</div>
+<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;</div>
+<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;-&quot;</span>;</div>
+<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;    }</div>
+<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_1015c0c9ea9f233a345f6405868e3e61.html">Persistence</a></li><li class="navelem"><a class="el" href="dir_081400ae94d8719bc7da88bb283ff436.html">Legacy</a></li><li class="navelem"><a class="el" href="dir_62b1c3a52faa834cf05ef76e2ce76582.html">Content</a></li><li class="navelem"><a class="el" href="dir_17a9c07ddfa3683b7390fac7ea99beb5.html">UrlAlias</a></li><li class="navelem"><a class="el" href="Core_2Persistence_2Legacy_2Content_2UrlAlias_2Handler_8php.html">Handler.php</a></li>
-    <li class="footer">Generated on Mon Jan 21 2013 00:02:40 for ezp-next by
+    <li class="footer">Generated on Wed Jan 23 2013 00:03:11 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

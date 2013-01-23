@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"Core_2REST_2Client_2Input_2Parser_2FieldDefinition_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,6],
+"Core_2REST_2Client_2Input_2Parser_2FieldDefinition_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,6],
 "Core_2REST_2Client_2Input_2Parser_2Limitation_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,8],
 "Core_2REST_2Client_2Input_2Parser_2Limitation_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,8],
 "Core_2REST_2Client_2Input_2Parser_2LocationList_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "Core_2Repository_2RoleService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,11],
 "Core_2Repository_2RoleService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,11],
 "Core_2Repository_2SearchService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,12],
-"Core_2Repository_2SearchService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,12],
-"Core_2Repository_2SectionService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,13],
-"Core_2Repository_2SectionService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,13]
+"Core_2Repository_2SearchService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,12]
 };
