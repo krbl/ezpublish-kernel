@@ -138,6 +138,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler')"><img src="closed.png" alt="-"/>&nbsp;Protected Member Functions inherited from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler.html">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\CriterionHandler</a></td></tr>
+<tr class="memitem:a6892564767dbf924dbc91b9470c33d0a inherit pro_methods_classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler.html#a6892564767dbf924dbc91b9470c33d0a">getUniqueTableName</a> ()</td></tr>
 <tr class="inherit_header pro_attribs_classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler')"><img src="closed.png" alt="-"/>&nbsp;Protected Attributes inherited from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler.html">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\CriterionHandler</a></td></tr>
 <tr class="memitem:a521ad0745e6dc7ecacd9ac26cd3a7f7e inherit pro_attribs_classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler.html#a521ad0745e6dc7ecacd9ac26cd3a7f7e">$comparatorMap</a></td></tr>
 <tr class="memitem:afa83c78713d9e150809eb7c7d69679c0 inherit pro_attribs_classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler.html#afa83c78713d9e150809eb7c7d69679c0">$dbHandler</a></td></tr>
@@ -247,31 +249,33 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Gateway_2CriterionHandler_2Subtree_8php_source.html#l00045">45</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Gateway_2CriterionHandler_2Subtree_8php_source.html">Subtree.php</a>.</p>
 
-<p>References <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Gateway_2CriterionHandler_2Subtree_8php_source.html#l00045">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\CriterionHandler\Subtree\handle()</a>.</p>
+<p>References <a class="el" href="CriterionHandler_8php_source.html#l00080">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\CriterionHandler\getUniqueTableName()</a>, and <a class="el" href="Core_2Persistence_2Legacy_2Content_2Search_2Gateway_2CriterionHandler_2Subtree_8php_source.html#l00045">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\CriterionHandler\Subtree\handle()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        $subSelect = $query-&gt;subSelect();</div>
+<div class="line">        $table = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler.html#a6892564767dbf924dbc91b9470c33d0a">getUniqueTableName</a>();</div>
 <div class="line"></div>
 <div class="line">        $statements = array();</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $criterion-&gt;value as $pattern )</div>
 <div class="line">        {</div>
-<div class="line">            $statements[] = $subSelect-&gt;expr-&gt;like(</div>
-<div class="line">                $this-&gt;dbHandler-&gt;quoteColumn( <span class="stringliteral">&#39;path_string&#39;</span>, <span class="stringliteral">&#39;ezcontentobject_tree&#39;</span> ),</div>
-<div class="line">                $subSelect-&gt;bindValue( $pattern . <span class="charliteral">&#39;%&#39;</span> )</div>
+<div class="line">            $statements[] = $query-&gt;expr-&gt;like(</div>
+<div class="line">                $this-&gt;dbHandler-&gt;quoteColumn( <span class="stringliteral">&#39;path_string&#39;</span>, $table ),</div>
+<div class="line">                $query-&gt;bindValue( $pattern . <span class="charliteral">&#39;%&#39;</span> )</div>
 <div class="line">            );</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        $subSelect</div>
-<div class="line">            -&gt;select(</div>
-<div class="line">                $this-&gt;dbHandler-&gt;quoteColumn( <span class="stringliteral">&#39;contentobject_id&#39;</span>, <span class="stringliteral">&#39;ezcontentobject_tree&#39;</span> )</div>
-<div class="line">            )-&gt;from(</div>
-<div class="line">                $this-&gt;dbHandler-&gt;quoteTable( <span class="stringliteral">&#39;ezcontentobject_tree&#39;</span> )</div>
-<div class="line">            )-&gt;where(</div>
-<div class="line">                $query-&gt;expr-&gt;lOr( $statements )</div>
+<div class="line">        $query</div>
+<div class="line">            -&gt;leftJoin(</div>
+<div class="line">                $query-&gt;alias(</div>
+<div class="line">                    $this-&gt;dbHandler-&gt;quoteTable( <span class="stringliteral">&#39;ezcontentobject_tree&#39;</span> ),</div>
+<div class="line">                    $this-&gt;dbHandler-&gt;quoteIdentifier( $table )</div>
+<div class="line">                ),</div>
+<div class="line">                $query-&gt;expr-&gt;eq(</div>
+<div class="line">                    $this-&gt;dbHandler-&gt;quoteColumn( <span class="stringliteral">&#39;contentobject_id&#39;</span>, $table ),</div>
+<div class="line">                    $this-&gt;dbHandler-&gt;quoteColumn( <span class="stringliteral">&#39;id&#39;</span>, <span class="stringliteral">&#39;ezcontentobject&#39;</span> )</div>
+<div class="line">                )</div>
 <div class="line">            );</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">return</span> $query-&gt;expr-&gt;in(</div>
-<div class="line">            $this-&gt;dbHandler-&gt;quoteColumn( <span class="stringliteral">&#39;id&#39;</span>, <span class="stringliteral">&#39;ezcontentobject&#39;</span> ),</div>
-<div class="line">            $subSelect</div>
+<div class="line">        <span class="keywordflow">return</span> $query-&gt;expr-&gt;lOr(</div>
+<div class="line">            $statements</div>
 <div class="line">        );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
@@ -282,7 +286,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1Subtree_ae22d5e4a40df5c564f49579432e3e07b_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1Subtree_ae22d5e4a40df5c564f49579432e3e07b_cgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1Subtree_ae22d5e4a40df5c564f49579432e3e07b_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1Subtree_ae22d5e4a40df5c564f49579432e3e07b_cgraph">
-</map>
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler.html#a6892564767dbf924dbc91b9470c33d0a" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Search\\Gateway\l\\CriterionHandler\\getUniqueTableName" alt="" coords="289,29,559,93"/></map>
 </div>
 </p>
 
@@ -308,7 +312,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search.html">Search</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway.html">Gateway</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler.html">CriterionHandler</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1CriterionHandler_1_1Subtree.html">Subtree</a></li>
-    <li class="footer">Generated on Wed Jan 23 2013 00:03:20 for ezp-next by
+    <li class="footer">Generated on Thu Jan 24 2013 00:04:09 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

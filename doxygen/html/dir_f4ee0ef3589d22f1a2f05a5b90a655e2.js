@@ -14,5 +14,8 @@ var dir_f4ee0ef3589d22f1a2f05a5b90a655e2 =
     ] ],
     [ "Mapper.php", "Content_2Type_2Mapper_8php.html", [
       [ "Mapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Mapper.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Mapper" ]
+    ] ],
+    [ "MemoryCachingHandler.php", "MemoryCachingHandler_8php.html", [
+      [ "MemoryCachingHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1MemoryCachingHandler.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1MemoryCachingHandler" ]
     ] ]
 ];

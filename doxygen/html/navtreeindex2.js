@@ -12,6 +12,8 @@ var NAVTREEINDEX2 =
 "CopyContentTypeSignal_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,0,1,2],
 "CopySubtreeSignal_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,0,3,0],
 "CopySubtreeSignal_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,0,3,0],
+"CoreExtension_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,8,0,0,1],
+"CoreExtension_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,8,0,0,1],
 "CoreVoter_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,6,1,0,0],
 "CoreVoter_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,2,6,1,0,0],
 "Core_2Base_2Exceptions_2BadStateException_8php.html":[4,0,0,0,0,0,0,0,0,1,1,0,1,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "Core_2REST_2Client_2IOService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,11],
 "Core_2REST_2Client_2IOService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,11],
 "Core_2REST_2Client_2Input_2Parser_2ContentInfo_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,1],
-"Core_2REST_2Client_2Input_2Parser_2ContentInfo_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,1],
-"Core_2REST_2Client_2Input_2Parser_2ContentType_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,4],
-"Core_2REST_2Client_2Input_2Parser_2ContentType_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,4]
+"Core_2REST_2Client_2Input_2Parser_2ContentInfo_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,1]
 };

@@ -144,7 +144,8 @@ Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a069ced3cf4f8e1df5e523b1bb9091da2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a069ced3cf4f8e1df5e523b1bb9091da2">getQueryCondition</a> (<a class="el" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion.html">Criterion</a> $criterion, ezcQuerySelect $query, $translations)</td></tr>
-<tr class="memitem:acdba4f1c62373a33098fcc96964e0459"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#acdba4f1c62373a33098fcc96964e0459">getContentIds</a> (ezcQuerySelect $query, $condition, $sort, $offset, $limit)</td></tr>
+<tr class="memitem:a3b6c42a88303bda010a21cfe096cfaad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a3b6c42a88303bda010a21cfe096cfaad">getResultCount</a> (<a class="el" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion.html">Criterion</a> $criterion, $sort, $translations)</td></tr>
+<tr class="memitem:a22228a65e2029d47eb5c02a72682be06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a22228a65e2029d47eb5c02a72682be06">getContentIds</a> (<a class="el" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion.html">Criterion</a> $criterion, $sort, $offset, $limit, $translations)</td></tr>
 <tr class="memitem:a7decbef03f3e10bb8ccd6e62b32a0437"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a7decbef03f3e10bb8ccd6e62b32a0437">loadContent</a> (array $contentIds, $translations)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
@@ -289,57 +290,17 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00112">112</a> of file <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
 
-<p>References <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00220">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\EzcDatabase\getContentIds()</a>, <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00179">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\EzcDatabase\getQueryCondition()</a>, <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00264">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\EzcDatabase\loadContent()</a>, and <a class="el" href="API_2Repository_2Values_2Content_2VersionInfo_8php_source.html#l00031">eZ\Publish\API\Repository\Values\Content\VersionInfo\STATUS_PUBLISHED</a>.</p>
+<p>References <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00222">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\EzcDatabase\getContentIds()</a>, <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00183">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\EzcDatabase\getResultCount()</a>, and <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00274">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\EzcDatabase\loadContent()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $limit = $limit !== null ? $limit : self::MAX_LIMIT;</div>
 <div class="line"></div>
-<div class="line">        <span class="comment">// Get full object count</span></div>
-<div class="line">        $query = $this-&gt;handler-&gt;createSelectQuery();</div>
-<div class="line">        $condition = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a069ced3cf4f8e1df5e523b1bb9091da2">getQueryCondition</a>( $criterion, $query, $translations );</div>
-<div class="line"></div>
-<div class="line">        $query</div>
-<div class="line">            -&gt;select( <span class="stringliteral">&#39;COUNT( * )&#39;</span> )</div>
-<div class="line">            -&gt;from( $this-&gt;handler-&gt;quoteTable( <span class="stringliteral">&#39;ezcontentobject&#39;</span> ) )</div>
-<div class="line">            -&gt;innerJoin(</div>
-<div class="line">                <span class="stringliteral">&#39;ezcontentobject_version&#39;</span>,</div>
-<div class="line">                <span class="stringliteral">&#39;ezcontentobject.id&#39;</span>,</div>
-<div class="line">                <span class="stringliteral">&#39;ezcontentobject_version.contentobject_id&#39;</span></div>
-<div class="line">            );</div>
-<div class="line"></div>
-<div class="line">        <span class="keywordflow">if</span> ( $sort !== null )</div>
-<div class="line">        {</div>
-<div class="line">            $this-&gt;sortClauseConverter-&gt;applyJoin( $query, $sort );</div>
-<div class="line">        }</div>
-<div class="line"></div>
-<div class="line">        $query-&gt;where(</div>
-<div class="line">            $query-&gt;expr-&gt;eq(</div>
-<div class="line">                <span class="stringliteral">&#39;ezcontentobject_version.status&#39;</span>,</div>
-<div class="line">                <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1VersionInfo.html#a3acf9508f6a9c233932aa24deda64b3f">VersionInfo::STATUS_PUBLISHED</a></div>
-<div class="line">            ),</div>
-<div class="line">            $condition</div>
-<div class="line">        );</div>
-<div class="line"></div>
-<div class="line">        $statement = $query-&gt;prepare();</div>
-<div class="line">        $statement-&gt;execute();</div>
-<div class="line"></div>
-<div class="line">        $count = (int)$statement-&gt;fetchColumn();</div>
-<div class="line"></div>
+<div class="line">        $count = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a3b6c42a88303bda010a21cfe096cfaad">getResultCount</a>( $criterion, $sort, $translations );</div>
 <div class="line">        <span class="keywordflow">if</span> ( $count === 0 || $limit === 0 )</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">return</span> array( <span class="stringliteral">&#39;count&#39;</span> =&gt; $count, <span class="stringliteral">&#39;rows&#39;</span> =&gt; array() );</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        <span class="comment">// Get clean query, Not sure why we cannot reuse the existing query</span></div>
-<div class="line">        <span class="comment">// and conditions.</span></div>
-<div class="line">        $query = $this-&gt;handler-&gt;createSelectQuery();</div>
-<div class="line">        $condition = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a069ced3cf4f8e1df5e523b1bb9091da2">getQueryCondition</a>( $criterion, $query, $translations );</div>
-<div class="line"></div>
-<div class="line">        $query</div>
-<div class="line">            -&gt;select( <span class="stringliteral">&#39;COUNT( * )&#39;</span> )</div>
-<div class="line">            -&gt;from( $this-&gt;handler-&gt;quoteTable( <span class="stringliteral">&#39;ezcontentobject&#39;</span> ) )</div>
-<div class="line">            -&gt;where( $condition );</div>
-<div class="line"></div>
-<div class="line">        $contentIds = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#acdba4f1c62373a33098fcc96964e0459">getContentIds</a>( $query, $condition, $sort, $offset, $limit );</div>
+<div class="line">        $contentIds = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a22228a65e2029d47eb5c02a72682be06">getContentIds</a>( $criterion, $sort, $offset, $limit, $translations );</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">return</span> array(</div>
 <div class="line">            <span class="stringliteral">&#39;count&#39;</span> =&gt; $count,</div>
@@ -354,13 +315,13 @@ Protected Attributes</h2></td></tr>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_afff29aedd1ff540e1b43fbe914eb6491_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_afff29aedd1ff540e1b43fbe914eb6491_cgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_afff29aedd1ff540e1b43fbe914eb6491_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_afff29aedd1ff540e1b43fbe914eb6491_cgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#acdba4f1c62373a33098fcc96964e0459" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Search\\Gateway\l\\EzcDatabase\\getContentIds" alt="" coords="288,29,523,93"/><area shape="rect" id="node6" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a069ced3cf4f8e1df5e523b1bb9091da2" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Search\\Gateway\l\\EzcDatabase\\getQueryCondition" alt="" coords="288,141,523,205"/><area shape="rect" id="node9" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a7decbef03f3e10bb8ccd6e62b32a0437" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Search\\Gateway\l\\EzcDatabase\\loadContent" alt="" coords="288,253,523,317"/></map>
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a22228a65e2029d47eb5c02a72682be06" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Search\\Gateway\l\\EzcDatabase\\getContentIds" alt="" coords="288,29,523,93"/><area shape="rect" id="node9" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a3b6c42a88303bda010a21cfe096cfaad" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Search\\Gateway\l\\EzcDatabase\\getResultCount" alt="" coords="288,141,523,205"/><area shape="rect" id="node13" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a7decbef03f3e10bb8ccd6e62b32a0437" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Search\\Gateway\l\\EzcDatabase\\loadContent" alt="" coords="288,253,523,317"/><area shape="rect" id="node6" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a069ced3cf4f8e1df5e523b1bb9091da2" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Search\\Gateway\l\\EzcDatabase\\getQueryCondition" alt="" coords="571,85,805,149"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="acdba4f1c62373a33098fcc96964e0459"></a>
+<a class="anchor" id="a22228a65e2029d47eb5c02a72682be06"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -370,14 +331,8 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\EzcDatabase::getContentIds </td>
           <td>(</td>
-          <td class="paramtype">ezcQuerySelect&#160;</td>
-          <td class="paramname"><em>$query</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$condition</em>, </td>
+          <td class="paramtype"><a class="el" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion.html">Criterion</a>&#160;</td>
+          <td class="paramname"><em>$criterion</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -395,7 +350,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$limit</em>&#160;</td>
+          <td class="paramname"><em>$limit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$translations</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -412,21 +373,22 @@ Protected Attributes</h2></td></tr>
 <p>Get sorted arrays of content IDs, which should be returned</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramtype"></td><td class="paramname">\ezcQuerySelect</td><td>mixed $query </td></tr>
-    <tr><td class="paramtype">string</td><td class="paramname">$condition</td><td></td></tr>
-    <tr><td class="paramtype">mixed</td><td class="paramname">$sort</td><td></td></tr>
-    <tr><td class="paramtype">int</td><td class="paramname">$offset</td><td></td></tr>
-    <tr><td class="paramtype">int</td><td class="paramname">$limit</td><td></td></tr>
+    <tr><td class="paramtype">Criterion</td><td class="paramname">$criterion</td><td></td></tr>
+    <tr><td class="paramtype">array</td><td class="paramname">$sort</td><td></td></tr>
+    <tr><td class="paramtype">mixed</td><td class="paramname">$offset</td><td></td></tr>
+    <tr><td class="paramtype">mixed</td><td class="paramname">$limit</td><td></td></tr>
+    <tr><td class="paramtype">mixed</td><td class="paramname">$translations</td><td></td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int[] </dd></dl>
 
-<p>Definition at line <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00220">220</a> of file <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
+<p>Definition at line <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00222">222</a> of file <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
 
-<p>References <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00220">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\EzcDatabase\getContentIds()</a>.</p>
+<p>References <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00222">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\EzcDatabase\getContentIds()</a>, and <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00139">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\EzcDatabase\getQueryCondition()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        $query-&gt;reset();</div>
+<div class="line">        $query = $this-&gt;handler-&gt;createSelectQuery();</div>
+<div class="line"></div>
 <div class="line">        $query-&gt;select(</div>
 <div class="line">            $this-&gt;handler-&gt;quoteColumn( <span class="stringliteral">&#39;id&#39;</span>, <span class="stringliteral">&#39;ezcontentobject&#39;</span> )</div>
 <div class="line">        );</div>
@@ -439,13 +401,20 @@ Protected Attributes</h2></td></tr>
 <div class="line">        $query-&gt;from(</div>
 <div class="line">            $this-&gt;handler-&gt;quoteTable( <span class="stringliteral">&#39;ezcontentobject&#39;</span> )</div>
 <div class="line">        );</div>
+<div class="line">        $query-&gt;innerJoin(</div>
+<div class="line">            <span class="stringliteral">&#39;ezcontentobject_version&#39;</span>,</div>
+<div class="line">            <span class="stringliteral">&#39;ezcontentobject.id&#39;</span>,</div>
+<div class="line">            <span class="stringliteral">&#39;ezcontentobject_version.contentobject_id&#39;</span></div>
+<div class="line">        );</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( $sort !== null )</div>
 <div class="line">        {</div>
 <div class="line">            $this-&gt;sortClauseConverter-&gt;applyJoin( $query, $sort );</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        $query-&gt;where( $condition );</div>
+<div class="line">        $query-&gt;where(</div>
+<div class="line">            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a069ced3cf4f8e1df5e523b1bb9091da2">getQueryCondition</a>( $criterion, $query, $translations )</div>
+<div class="line">        );</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( $sort !== null )</div>
 <div class="line">        {</div>
@@ -465,9 +434,9 @@ Protected Attributes</h2></td></tr>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_acdba4f1c62373a33098fcc96964e0459_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_acdba4f1c62373a33098fcc96964e0459_cgraph" alt=""/></div>
-<map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_acdba4f1c62373a33098fcc96964e0459_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_acdba4f1c62373a33098fcc96964e0459_cgraph">
-</map>
+<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a22228a65e2029d47eb5c02a72682be06_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a22228a65e2029d47eb5c02a72682be06_cgraph" alt=""/></div>
+<map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a22228a65e2029d47eb5c02a72682be06_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a22228a65e2029d47eb5c02a72682be06_cgraph">
+<area shape="rect" id="node4" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a069ced3cf4f8e1df5e523b1bb9091da2" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Search\\Gateway\l\\EzcDatabase\\getQueryCondition" alt="" coords="288,29,523,93"/></map>
 </div>
 </p>
 
@@ -476,8 +445,8 @@ Protected Attributes</h2></td></tr>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_acdba4f1c62373a33098fcc96964e0459_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_acdba4f1c62373a33098fcc96964e0459_icgraph" alt=""/></div>
-<map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_acdba4f1c62373a33098fcc96964e0459_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_acdba4f1c62373a33098fcc96964e0459_icgraph">
+<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a22228a65e2029d47eb5c02a72682be06_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a22228a65e2029d47eb5c02a72682be06_icgraph" alt=""/></div>
+<map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a22228a65e2029d47eb5c02a72682be06_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a22228a65e2029d47eb5c02a72682be06_icgraph">
 <area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#afff29aedd1ff540e1b43fbe914eb6491" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Search\\Gateway\l\\EzcDatabase\\find" alt="" coords="288,29,523,93"/></map>
 </div>
 </p>
@@ -532,11 +501,17 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
-<p>Definition at line <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00179">179</a> of file <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
+<p>Definition at line <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00139">139</a> of file <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
 
-<p>References <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00179">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\EzcDatabase\getQueryCondition()</a>.</p>
+<p>References <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00139">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\EzcDatabase\getQueryCondition()</a>, and <a class="el" href="API_2Repository_2Values_2Content_2VersionInfo_8php_source.html#l00031">eZ\Publish\API\Repository\Values\Content\VersionInfo\STATUS_PUBLISHED</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        $condition = $this-&gt;criteriaConverter-&gt;convertCriteria( $query, $criterion );</div>
+<div class="line">        $condition = $query-&gt;expr-&gt;lAnd(</div>
+<div class="line">            $this-&gt;criteriaConverter-&gt;convertCriteria( $query, $criterion ),</div>
+<div class="line">            $query-&gt;expr-&gt;eq(</div>
+<div class="line">                <span class="stringliteral">&#39;ezcontentobject_version.status&#39;</span>,</div>
+<div class="line">                <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1VersionInfo.html#a3acf9508f6a9c233932aa24deda64b3f">VersionInfo::STATUS_PUBLISHED</a></div>
+<div class="line">            )</div>
+<div class="line">        );</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( $translations === null )</div>
 <div class="line">        {</div>
@@ -582,6 +557,108 @@ Protected Attributes</h2></td></tr>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a069ced3cf4f8e1df5e523b1bb9091da2_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a069ced3cf4f8e1df5e523b1bb9091da2_icgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a069ced3cf4f8e1df5e523b1bb9091da2_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a069ced3cf4f8e1df5e523b1bb9091da2_icgraph">
+<area shape="rect" id="node4" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a3b6c42a88303bda010a21cfe096cfaad" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Search\\Gateway\l\\EzcDatabase\\getResultCount" alt="" coords="288,29,523,93"/><area shape="rect" id="node9" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a22228a65e2029d47eb5c02a72682be06" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Search\\Gateway\l\\EzcDatabase\\getContentIds" alt="" coords="288,141,523,205"/><area shape="rect" id="node6" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#afff29aedd1ff540e1b43fbe914eb6491" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Search\\Gateway\l\\EzcDatabase\\find" alt="" coords="571,85,805,149"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3b6c42a88303bda010a21cfe096cfaad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\EzcDatabase::getResultCount </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion.html">Criterion</a>&#160;</td>
+          <td class="paramname"><em>$criterion</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$sort</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$translations</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get result count</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">Criterion</td><td class="paramname">$criterion</td><td></td></tr>
+    <tr><td class="paramtype">array</td><td class="paramname">$sort</td><td></td></tr>
+    <tr><td class="paramtype">mixed</td><td class="paramname">$translations</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+<p>Definition at line <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00183">183</a> of file <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
+
+<p>References <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00139">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\EzcDatabase\getQueryCondition()</a>, and <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00183">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\EzcDatabase\getResultCount()</a>.</p>
+<div class="fragment"><div class="line">    {</div>
+<div class="line">        $query = $this-&gt;handler-&gt;createSelectQuery();</div>
+<div class="line"></div>
+<div class="line">        $query</div>
+<div class="line">            -&gt;select( <span class="stringliteral">&#39;COUNT( * )&#39;</span> )</div>
+<div class="line">            -&gt;from( $this-&gt;handler-&gt;quoteTable( <span class="stringliteral">&#39;ezcontentobject&#39;</span> ) )</div>
+<div class="line">            -&gt;innerJoin(</div>
+<div class="line">                <span class="stringliteral">&#39;ezcontentobject_version&#39;</span>,</div>
+<div class="line">                <span class="stringliteral">&#39;ezcontentobject.id&#39;</span>,</div>
+<div class="line">                <span class="stringliteral">&#39;ezcontentobject_version.contentobject_id&#39;</span></div>
+<div class="line">            );</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> ( $sort !== null )</div>
+<div class="line">        {</div>
+<div class="line">            $this-&gt;sortClauseConverter-&gt;applyJoin( $query, $sort );</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        $query-&gt;where(</div>
+<div class="line">            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a069ced3cf4f8e1df5e523b1bb9091da2">getQueryCondition</a>( $criterion, $query, $translations )</div>
+<div class="line">        );</div>
+<div class="line"></div>
+<div class="line">        $statement = $query-&gt;prepare();</div>
+<div class="line">        $statement-&gt;execute();</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)$statement-&gt;fetchColumn();</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a3b6c42a88303bda010a21cfe096cfaad_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a3b6c42a88303bda010a21cfe096cfaad_cgraph" alt=""/></div>
+<map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a3b6c42a88303bda010a21cfe096cfaad_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a3b6c42a88303bda010a21cfe096cfaad_cgraph">
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#a069ced3cf4f8e1df5e523b1bb9091da2" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Search\\Gateway\l\\EzcDatabase\\getQueryCondition" alt="" coords="288,29,523,93"/></map>
+</div>
+</p>
+
+<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a3b6c42a88303bda010a21cfe096cfaad_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a3b6c42a88303bda010a21cfe096cfaad_icgraph" alt=""/></div>
+<map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a3b6c42a88303bda010a21cfe096cfaad_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a3b6c42a88303bda010a21cfe096cfaad_icgraph">
 <area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#afff29aedd1ff540e1b43fbe914eb6491" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Search\\Gateway\l\\EzcDatabase\\find" alt="" coords="288,29,523,93"/></map>
 </div>
 </p>
@@ -629,9 +706,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>mixed[] </dd></dl>
 
-<p>Definition at line <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00264">264</a> of file <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
+<p>Definition at line <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00274">274</a> of file <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
 
-<p>References <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00264">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\EzcDatabase\loadContent()</a>, and <a class="el" href="API_2Repository_2Values_2Content_2VersionInfo_8php_source.html#l00031">eZ\Publish\API\Repository\Values\Content\VersionInfo\STATUS_PUBLISHED</a>.</p>
+<p>References <a class="el" href="Content_2Search_2Gateway_2EzcDatabase_8php_source.html#l00274">eZ\Publish\Core\Persistence\Legacy\Content\Search\Gateway\EzcDatabase\loadContent()</a>, and <a class="el" href="API_2Repository_2Values_2Content_2VersionInfo_8php_source.html#l00031">eZ\Publish\API\Repository\Values\Content\VersionInfo\STATUS_PUBLISHED</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $loadQuery = $this-&gt;queryBuilder-&gt;createFindQuery( $translations );</div>
 <div class="line">        $loadQuery-&gt;where(</div>
@@ -672,22 +749,22 @@ Protected Attributes</h2></td></tr>
 <div class="line">        <span class="keywordflow">return</span> $rows;</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a7decbef03f3e10bb8ccd6e62b32a0437_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a7decbef03f3e10bb8ccd6e62b32a0437_cgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a7decbef03f3e10bb8ccd6e62b32a0437_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a7decbef03f3e10bb8ccd6e62b32a0437_cgraph">
 </map>
 </div>
 </p>
 
-<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a7decbef03f3e10bb8ccd6e62b32a0437_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a7decbef03f3e10bb8ccd6e62b32a0437_icgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a7decbef03f3e10bb8ccd6e62b32a0437_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase_a7decbef03f3e10bb8ccd6e62b32a0437_icgraph">
 <area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html#afff29aedd1ff540e1b43fbe914eb6491" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Search\\Gateway\l\\EzcDatabase\\find" alt="" coords="288,29,523,93"/></map>
@@ -853,7 +930,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search.html">Search</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway.html">Gateway</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Gateway_1_1EzcDatabase.html">EzcDatabase</a></li>
-    <li class="footer">Generated on Wed Jan 23 2013 00:03:20 for ezp-next by
+    <li class="footer">Generated on Thu Jan 24 2013 00:04:09 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

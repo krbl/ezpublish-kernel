@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"Core_2Repository_2SearchService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,12],
+"Core_2Repository_2SearchService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,12],
 "Core_2Repository_2SectionService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,13],
 "Core_2Repository_2SectionService_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,6,13],
 "Core_2Repository_2TrashService_8php.html":[4,0,0,0,0,0,0,0,0,1,1,6,14],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "EzcDbHandler_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,4],
 "FacetBuilderVisitor_2Aggregate_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,1,0],
 "FacetBuilderVisitor_2Aggregate_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,1,0],
-"FacetBuilderVisitor_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,6],
-"FacetBuilderVisitor_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,6],
-"FacetBuilder_8php.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,0,5]
+"FacetBuilderVisitor_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,6]
 };

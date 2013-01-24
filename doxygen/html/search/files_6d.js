@@ -17,6 +17,7 @@ var searchData=
   ['matcher_2ephp',['Matcher.php',['../SiteAccess_2Matcher_8php.html',1,'']]],
   ['media_2ephp',['Media.php',['../Media_8php.html',1,'']]],
   ['mediastorage_2ephp',['MediaStorage.php',['../MediaStorage_8php.html',1,'']]],
+  ['memorycachinghandler_2ephp',['MemoryCachingHandler.php',['../MemoryCachingHandler_8php.html',1,'']]],
   ['message_2ephp',['Message.php',['../API_2Repository_2Values_2Translation_2Message_8php.html',1,'']]],
   ['message_2ephp',['Message.php',['../Core_2Persistence_2Solr_2Content_2Search_2Gateway_2Message_8php.html',1,'']]],
   ['message_2ephp',['Message.php',['../Core_2REST_2Common_2Message_8php.html',1,'']]],

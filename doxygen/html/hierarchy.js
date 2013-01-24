@@ -871,6 +871,7 @@ var hierarchy =
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\LegacyCompatible", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyCompatible.html", [
       [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\LegacyAdapter", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyAdapter.html", null ]
     ] ],
+    [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\LegacyHelper", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyHelper.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Twig\\Extension\\LegacyExtension", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Twig_1_1Extension_1_1LegacyExtension.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Twig\\Node\\LegacyIncludeNode", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Twig_1_1Node_1_1LegacyIncludeNode.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Twig\\TokenParser\\LegacyIncludeParser", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Twig_1_1TokenParser_1_1LegacyIncludeParser.html", null ],
@@ -972,7 +973,11 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\Matcher\\Map\\URI", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Map_1_1URI.html", null ],
       [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\Matcher\\URIElement", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1URIElement.html", null ]
     ] ],
+    [ "eZ\\Publish\\Core\\MVC\\Symfony\\Templating\\GlobalHelper", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1GlobalHelper.html", [
+      [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\GlobalHelper", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1GlobalHelper.html", null ]
+    ] ],
     [ "eZ\\Publish\\Core\\MVC\\Symfony\\Templating\\Twig\\Extension\\ContentExtension", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1ContentExtension.html", null ],
+    [ "eZ\\Publish\\Core\\MVC\\Symfony\\Templating\\Twig\\Extension\\CoreExtension", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Templating_1_1Twig_1_1Extension_1_1CoreExtension.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\ContentViewInterface", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewInterface.html", [
       [ "eZ\\Publish\\Core\\MVC\\Legacy\\View\\TwigContentViewLayoutDecorator", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html", null ],
       [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\ContentView", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentView.html", null ]
@@ -1557,7 +1562,8 @@ var hierarchy =
     ] ],
     [ "eZ\\Publish\\SPI\\Persistence\\Content\\Type\\Handler", "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type_1_1Handler.html", [
       [ "eZ\\Publish\\Core\\Persistence\\InMemory\\ContentTypeHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentTypeHandler.html", null ],
-      [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\Type\\Handler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Handler.html", null ]
+      [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\Type\\Handler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Handler.html", null ],
+      [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\Type\\MemoryCachingHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1MemoryCachingHandler.html", null ]
     ] ],
     [ "eZ\\Publish\\SPI\\Persistence\\Content\\UrlAlias\\Handler", "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1UrlAlias_1_1Handler.html", [
       [ "eZ\\Publish\\Core\\Persistence\\InMemory\\UrlAliasHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlAliasHandler.html", null ],

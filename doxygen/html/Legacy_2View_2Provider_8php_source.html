@@ -108,37 +108,41 @@ $(document).ready(function(){initNavTree('Legacy_2View_2Provider_8php_source.htm
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\MVC\Legacy\View;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html">eZ\Publish\Core\MVC\Legacy\View\TwigContentViewLayoutDecorator</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use Symfony\Component\HttpKernel\Log\LoggerInterface;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use Closure;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html">   16</a></span>&#160;<span class="keyword">abstract</span> <span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html">Provider</a></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">private</span> $legacyKernelClosure;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a00509ca183bfa8a2e45849d17a702dc2">   26</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a00509ca183bfa8a2e45849d17a702dc2">$logger</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a9130fd074376bf8c74f77588ab5bd158">   31</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a9130fd074376bf8c74f77588ab5bd158">$decorator</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#ab40c1ac744ac95774c9113d3e6ff4ebf">   33</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#ab40c1ac744ac95774c9113d3e6ff4ebf">__construct</a>( Closure $legacyKernelClosure, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html">TwigContentViewLayoutDecorator</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a9130fd074376bf8c74f77588ab5bd158">$decorator</a>, LoggerInterface <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a00509ca183bfa8a2e45849d17a702dc2">$logger</a> = null )</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        $this-&gt;legacyKernelClosure = $legacyKernelClosure;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        $this-&gt;decorator = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a9130fd074376bf8c74f77588ab5bd158">$decorator</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        $this-&gt;logger = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a00509ca183bfa8a2e45849d17a702dc2">$logger</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a4e80b8403d46b7f8088f71f85a00b850">   43</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a4e80b8403d46b7f8088f71f85a00b850">getLegacyKernel</a>()</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        $legacyKernelClosure = $this-&gt;legacyKernelClosure;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">return</span> $legacyKernelClosure();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyHelper.html">eZ\Publish\Core\MVC\Legacy\Templating\LegacyHelper</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use Symfony\Component\HttpKernel\Log\LoggerInterface;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use Closure;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html">   17</a></span>&#160;<span class="keyword">abstract</span> <span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html">Provider</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">private</span> $legacyKernelClosure;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a00509ca183bfa8a2e45849d17a702dc2">   27</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a00509ca183bfa8a2e45849d17a702dc2">$logger</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a9130fd074376bf8c74f77588ab5bd158">   32</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a9130fd074376bf8c74f77588ab5bd158">$decorator</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a10123c82331c7dbeeab8a4d6193b4033">   37</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a10123c82331c7dbeeab8a4d6193b4033">$legacyHelper</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#af2248de042362eebe552bda6f3059ab2">   39</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#af2248de042362eebe552bda6f3059ab2">__construct</a>( Closure $legacyKernelClosure, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html">TwigContentViewLayoutDecorator</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a9130fd074376bf8c74f77588ab5bd158">$decorator</a>, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyHelper.html">LegacyHelper</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a10123c82331c7dbeeab8a4d6193b4033">$legacyHelper</a>, LoggerInterface <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a00509ca183bfa8a2e45849d17a702dc2">$logger</a> = null )</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        $this-&gt;legacyKernelClosure = $legacyKernelClosure;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        $this-&gt;decorator = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a9130fd074376bf8c74f77588ab5bd158">$decorator</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        $this-&gt;legacyHelper = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a10123c82331c7dbeeab8a4d6193b4033">$legacyHelper</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        $this-&gt;logger = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a00509ca183bfa8a2e45849d17a702dc2">$logger</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a4e80b8403d46b7f8088f71f85a00b850">   50</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html#a4e80b8403d46b7f8088f71f85a00b850">getLegacyKernel</a>()</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        $legacyKernelClosure = $this-&gt;legacyKernelClosure;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> $legacyKernelClosure();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_3f2bbbda4a8cf240a23a45721a8bf194.html">MVC</a></li><li class="navelem"><a class="el" href="dir_2d8a4b44c5251d3d84910f968efb6304.html">Legacy</a></li><li class="navelem"><a class="el" href="dir_b240bb75528952a5bebf1742df4fa94e.html">View</a></li><li class="navelem"><a class="el" href="Legacy_2View_2Provider_8php.html">Provider.php</a></li>
-    <li class="footer">Generated on Wed Jan 23 2013 00:03:12 for ezp-next by
+    <li class="footer">Generated on Thu Jan 24 2013 00:04:00 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

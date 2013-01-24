@@ -129,6 +129,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5adbd3f09722197847162c3ca4a42caf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#a5adbd3f09722197847162c3ca4a42caf">aliasedColumn</a> (ezcQuerySelect $query, $columnName, $tableName=null)</td></tr>
 <tr class="memitem:ad2274b65bd470432671d8f79d9df12e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#ad2274b65bd470432671d8f79d9df12e1">quoteColumn</a> ($columnName, $tableName=null)</td></tr>
 <tr class="memitem:acf64a3c70b9472df7c2865920c2f831f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#acf64a3c70b9472df7c2865920c2f831f">quoteTable</a> ($tableName)</td></tr>
+<tr class="memitem:ad4a7671fec55d7d5998fa2d2141ab64e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#ad4a7671fec55d7d5998fa2d2141ab64e">alias</a> ($name, $alias)</td></tr>
+<tr class="memitem:a0435883f97de51c51ff16c7df78fc923"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#a0435883f97de51c51ff16c7df78fc923">quoteIdentifier</a> ($identifier)</td></tr>
 <tr class="memitem:a70ef467bc8b1090da9ff703f138c7dd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#a70ef467bc8b1090da9ff703f138c7dd4">getAutoIncrementValue</a> ($table, $column)</td></tr>
 <tr class="memitem:afb9f398770a0fb0cbbb7bc863cbe361c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#afb9f398770a0fb0cbbb7bc863cbe361c">getSequenceName</a> ($table, $column)</td></tr>
 </table><table class="memberdecls">
@@ -217,6 +219,58 @@ Protected Attributes</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a class="anchor" id="ad4a7671fec55d7d5998fa2d2141ab64e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eZ\Publish\Core\Persistence\Legacy\EzcDbHandler::alias </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$alias</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Custom alias method</p>
+<p>Ignores some properties of identifier quoting, but since we use somehow sane table and column names, ourselves, this is fine.</p>
+<p>This is an optimization and works around the ezcDB implementation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$identifier</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
+
+<p>Definition at line <a class="el" href="EzcDbHandler_8php_source.html#l00177">177</a> of file <a class="el" href="EzcDbHandler_8php_source.html">EzcDbHandler.php</a>.</p>
+<div class="fragment"><div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> $name . <span class="charliteral">&#39; &#39;</span> . $alias;</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_ad4a7671fec55d7d5998fa2d2141ab64e_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_ad4a7671fec55d7d5998fa2d2141ab64e_icgraph" alt=""/></div>
+<map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_ad4a7671fec55d7d5998fa2d2141ab64e_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_ad4a7671fec55d7d5998fa2d2141ab64e_icgraph">
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#a5adbd3f09722197847162c3ca4a42caf" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\aliasedColumn" alt="" coords="257,5,519,51"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a5adbd3f09722197847162c3ca4a42caf"></a>
 <div class="memitem">
 <div class="memproto">
@@ -259,25 +313,25 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="EzcDbHandler_8php_source.html#l00124">124</a> of file <a class="el" href="EzcDbHandler_8php_source.html">EzcDbHandler.php</a>.</p>
 
-<p>References <a class="el" href="EzcDbHandler_8php_source.html#l00143">eZ\Publish\Core\Persistence\Legacy\EzcDbHandler\quoteColumn()</a>.</p>
+<p>References <a class="el" href="EzcDbHandler_8php_source.html#l00177">eZ\Publish\Core\Persistence\Legacy\EzcDbHandler\alias()</a>, <a class="el" href="EzcDbHandler_8php_source.html#l00143">eZ\Publish\Core\Persistence\Legacy\EzcDbHandler\quoteColumn()</a>, and <a class="el" href="EzcDbHandler_8php_source.html#l00193">eZ\Publish\Core\Persistence\Legacy\EzcDbHandler\quoteIdentifier()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        <span class="keywordflow">return</span> $query-&gt;alias(</div>
+<div class="line">        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#ad4a7671fec55d7d5998fa2d2141ab64e">alias</a>(</div>
 <div class="line">            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#ad2274b65bd470432671d8f79d9df12e1">quoteColumn</a>( $columnName, $tableName ),</div>
-<div class="line">            $this-&gt;ezcDbHandler-&gt;quoteIdentifier(</div>
+<div class="line">            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#a0435883f97de51c51ff16c7df78fc923">quoteIdentifier</a>(</div>
 <div class="line">                ( $tableName ? $tableName . <span class="charliteral">&#39;_&#39;</span> : <span class="stringliteral">&#39;&#39;</span> ) .</div>
 <div class="line">                $columnName</div>
 <div class="line">            )</div>
 <div class="line">        );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_a5adbd3f09722197847162c3ca4a42caf_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_a5adbd3f09722197847162c3ca4a42caf_cgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_a5adbd3f09722197847162c3ca4a42caf_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_a5adbd3f09722197847162c3ca4a42caf_cgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#ad2274b65bd470432671d8f79d9df12e1" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\quoteColumn" alt="" coords="319,5,572,51"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#acf64a3c70b9472df7c2865920c2f831f" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\quoteTable" alt="" coords="623,5,860,51"/></map>
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#ad4a7671fec55d7d5998fa2d2141ab64e" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\alias" alt="" coords="345,5,545,51"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#ad2274b65bd470432671d8f79d9df12e1" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\quoteColumn" alt="" coords="319,74,572,121"/><area shape="rect" id="node9" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#a0435883f97de51c51ff16c7df78fc923" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\quoteIdentifier" alt="" coords="909,83,1171,130"/><area shape="rect" id="node7" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#acf64a3c70b9472df7c2865920c2f831f" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\quoteTable" alt="" coords="623,23,860,70"/></map>
 </div>
 </p>
 
@@ -358,11 +412,11 @@ Protected Attributes</h2></td></tr>
 <div class="line">        <span class="keywordflow">return</span> $dbHandler;</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_a666944cadd56c999d4e15adf04705ed2_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_a666944cadd56c999d4e15adf04705ed2_icgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_a666944cadd56c999d4e15adf04705ed2_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_a666944cadd56c999d4e15adf04705ed2_icgraph">
 <area shape="rect" id="node3" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyDbHandlerFactory.html#afc502ab7a137dcb4bae77ea95ee7af05" title="eZ\\Bundle\\EzPublishCoreBundle\l\\ApiLoader\\LegacyDbHandlerFactory\l\\buildLegacyDbHandler" alt="" coords="264,5,517,69"/></map>
@@ -407,16 +461,16 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_1_1Sqlite.html#ad5324527d7e75f728f3e84fbe3c615c9">eZ\Publish\Core\Persistence\Legacy\EzcDbHandler\Sqlite</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_1_1Pgsql.html#a925bcc5da2205e1c60a4fcac23a4b1dd">eZ\Publish\Core\Persistence\Legacy\EzcDbHandler\Pgsql</a>.</p>
 
-<p>Definition at line <a class="el" href="EzcDbHandler_8php_source.html#l00178">178</a> of file <a class="el" href="EzcDbHandler_8php_source.html">EzcDbHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="EzcDbHandler_8php_source.html#l00210">210</a> of file <a class="el" href="EzcDbHandler_8php_source.html">EzcDbHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="stringliteral">&quot;null&quot;</span>;</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_a70ef467bc8b1090da9ff703f138c7dd4_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_a70ef467bc8b1090da9ff703f138c7dd4_icgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_a70ef467bc8b1090da9ff703f138c7dd4_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_a70ef467bc8b1090da9ff703f138c7dd4_icgraph">
 <area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_1_1Sqlite.html#ad5324527d7e75f728f3e84fbe3c615c9" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\Sqlite\l\\getAutoIncrementValue" alt="" coords="373,5,579,69"/></map>
@@ -460,16 +514,16 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_1_1Sqlite.html#a5b60b505ba62b32eaabbefbf6847c73c">eZ\Publish\Core\Persistence\Legacy\EzcDbHandler\Sqlite</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_1_1Pgsql.html#a5f3e211d0b4729bfc67e4a224324c15e">eZ\Publish\Core\Persistence\Legacy\EzcDbHandler\Pgsql</a>.</p>
 
-<p>Definition at line <a class="el" href="EzcDbHandler_8php_source.html#l00191">191</a> of file <a class="el" href="EzcDbHandler_8php_source.html">EzcDbHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="EzcDbHandler_8php_source.html#l00223">223</a> of file <a class="el" href="EzcDbHandler_8php_source.html">EzcDbHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> null;</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_afb9f398770a0fb0cbbb7bc863cbe361c_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_afb9f398770a0fb0cbbb7bc863cbe361c_icgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_afb9f398770a0fb0cbbb7bc863cbe361c_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_afb9f398770a0fb0cbbb7bc863cbe361c_icgraph">
 <area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_1_1Pgsql.html#a925bcc5da2205e1c60a4fcac23a4b1dd" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\Pgsql\l\\getAutoIncrementValue" alt="" coords="348,5,551,69"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_1_1Sqlite.html#a5b60b505ba62b32eaabbefbf6847c73c" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\Sqlite\l\\getSequenceName" alt="" coords="347,93,552,157"/></map>
@@ -513,34 +567,78 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="EzcDbHandler_8php_source.html#l00143">143</a> of file <a class="el" href="EzcDbHandler_8php_source.html">EzcDbHandler.php</a>.</p>
 
-<p>References <a class="el" href="EzcDbHandler_8php_source.html#l00159">eZ\Publish\Core\Persistence\Legacy\EzcDbHandler\quoteTable()</a>.</p>
+<p>References <a class="el" href="EzcDbHandler_8php_source.html#l00193">eZ\Publish\Core\Persistence\Legacy\EzcDbHandler\quoteIdentifier()</a>, and <a class="el" href="EzcDbHandler_8php_source.html#l00159">eZ\Publish\Core\Persistence\Legacy\EzcDbHandler\quoteTable()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="comment">// @todo: For oracle we need a mapping of table and column names to</span></div>
 <div class="line">        <span class="comment">// their shortened variants here.</span></div>
 <div class="line">        <span class="keywordflow">return</span></div>
 <div class="line">            ( $tableName ? $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#acf64a3c70b9472df7c2865920c2f831f">quoteTable</a>( $tableName ) . <span class="charliteral">&#39;.&#39;</span> : <span class="stringliteral">&#39;&#39;</span> ) .</div>
-<div class="line">            $this-&gt;ezcDbHandler-&gt;quoteIdentifier( $columnName );</div>
+<div class="line">            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#a0435883f97de51c51ff16c7df78fc923">quoteIdentifier</a>( $columnName );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_ad2274b65bd470432671d8f79d9df12e1_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_ad2274b65bd470432671d8f79d9df12e1_cgraph" alt=""/></div>
-<map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_ad2274b65bd470432671d8f79d9df12e1_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_ad2274b65bd470432671d8f79d9df12e1_cgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#acf64a3c70b9472df7c2865920c2f831f" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\quoteTable" alt="" coords="311,5,548,51"/></map>
-</div>
-</p>
-
 <p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_ad2274b65bd470432671d8f79d9df12e1_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_ad2274b65bd470432671d8f79d9df12e1_cgraph" alt=""/></div>
+<map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_ad2274b65bd470432671d8f79d9df12e1_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_ad2274b65bd470432671d8f79d9df12e1_cgraph">
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#a0435883f97de51c51ff16c7df78fc923" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\quoteIdentifier" alt="" coords="597,5,859,51"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#acf64a3c70b9472df7c2865920c2f831f" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\quoteTable" alt="" coords="311,34,548,81"/></map>
+</div>
+</p>
+
+<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_ad2274b65bd470432671d8f79d9df12e1_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_ad2274b65bd470432671d8f79d9df12e1_icgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_ad2274b65bd470432671d8f79d9df12e1_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_ad2274b65bd470432671d8f79d9df12e1_icgraph">
 <area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#a5adbd3f09722197847162c3ca4a42caf" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\aliasedColumn" alt="" coords="311,5,572,51"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0435883f97de51c51ff16c7df78fc923"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eZ\Publish\Core\Persistence\Legacy\EzcDbHandler::quoteIdentifier </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$identifier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Custom quote identifier method</p>
+<p>Ignores some properties of identifier quoting, but since we use somehow sane table and column names, ourselves, this is fine.</p>
+<p>This is an optimization and works around the ezcDB implementation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$identifier</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_1_1Pgsql.html#afe72ed08e5eefb6d8d81e8ab2f21bf51">eZ\Publish\Core\Persistence\Legacy\EzcDbHandler\Pgsql</a>.</p>
+
+<p>Definition at line <a class="el" href="EzcDbHandler_8php_source.html#l00193">193</a> of file <a class="el" href="EzcDbHandler_8php_source.html">EzcDbHandler.php</a>.</p>
+<div class="fragment"><div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="charliteral">&#39;`&#39;</span> . $identifier . <span class="charliteral">&#39;`&#39;</span>;</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_a0435883f97de51c51ff16c7df78fc923_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_a0435883f97de51c51ff16c7df78fc923_icgraph" alt=""/></div>
+<map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_a0435883f97de51c51ff16c7df78fc923_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_a0435883f97de51c51ff16c7df78fc923_icgraph">
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#a5adbd3f09722197847162c3ca4a42caf" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\aliasedColumn" alt="" coords="908,5,1169,51"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#ad2274b65bd470432671d8f79d9df12e1" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\quoteColumn" alt="" coords="604,34,857,81"/><area shape="rect" id="node8" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#acf64a3c70b9472df7c2865920c2f831f" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\quoteTable" alt="" coords="316,85,553,131"/></map>
 </div>
 </p>
 
@@ -569,17 +667,30 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
 <p>Definition at line <a class="el" href="EzcDbHandler_8php_source.html#l00159">159</a> of file <a class="el" href="EzcDbHandler_8php_source.html">EzcDbHandler.php</a>.</p>
+
+<p>References <a class="el" href="EzcDbHandler_8php_source.html#l00193">eZ\Publish\Core\Persistence\Legacy\EzcDbHandler\quoteIdentifier()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="comment">// @todo: For oracle we need a mapping of table and column names to</span></div>
 <div class="line">        <span class="comment">// their shortened variants here.</span></div>
-<div class="line">        <span class="keywordflow">return</span> $this-&gt;ezcDbHandler-&gt;quoteIdentifier( $tableName );</div>
+<div class="line">        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#a0435883f97de51c51ff16c7df78fc923">quoteIdentifier</a>( $tableName );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_acf64a3c70b9472df7c2865920c2f831f_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_acf64a3c70b9472df7c2865920c2f831f_cgraph" alt=""/></div>
+<map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_acf64a3c70b9472df7c2865920c2f831f_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_acf64a3c70b9472df7c2865920c2f831f_cgraph">
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#a0435883f97de51c51ff16c7df78fc923" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\quoteIdentifier" alt="" coords="293,5,555,51"/></map>
+</div>
+</p>
+
+<p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_acf64a3c70b9472df7c2865920c2f831f_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_acf64a3c70b9472df7c2865920c2f831f_icgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_acf64a3c70b9472df7c2865920c2f831f_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler_acf64a3c70b9472df7c2865920c2f831f_icgraph">
 <area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#ad2274b65bd470432671d8f79d9df12e1" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\quoteColumn" alt="" coords="295,5,548,51"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html#a5adbd3f09722197847162c3ca4a42caf" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\EzcDbHandler\\aliasedColumn" alt="" coords="599,5,860,51"/></map>
@@ -620,7 +731,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html">EzcDbHandler</a></li>
-    <li class="footer">Generated on Wed Jan 23 2013 00:03:19 for ezp-next by
+    <li class="footer">Generated on Thu Jan 24 2013 00:04:08 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

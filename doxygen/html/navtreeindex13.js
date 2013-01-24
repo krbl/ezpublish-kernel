@@ -1,5 +1,15 @@
 var NAVTREEINDEX13 =
 {
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1UserMetadata.html#a23f1243e591112e60707d95805b16c9d":[3,0,0,1,0,0,1,0,0,0,24,2],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1UserMetadata.html#a5866d281de0582e84d05c638ceed5c5c":[3,0,0,1,0,0,1,0,0,0,24,4],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1UserMetadata.html#a820663a058c7eebb9e71ab0a1791813a":[3,0,0,1,0,0,1,0,0,0,24,1],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1UserMetadata.html#ac6186769f1deb0b789111ede3aa61bb6":[3,0,0,1,0,0,1,0,0,0,24,3],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1UserMetadata.html#ac6ae1ef0102144d223fd3044ad8b3347":[3,0,0,1,0,0,1,0,0,0,24,5],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1Visibility.html":[3,0,0,1,0,0,1,0,0,0,25],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1Visibility.html#a92d0407cbab1b0bd3122e4238fa8374e":[3,0,0,1,0,0,1,0,0,0,25,4],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1Visibility.html#addbb35225ce5c15a5fe18a005dc92ca4":[3,0,0,1,0,0,1,0,0,0,25,1],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1Visibility.html#ae49bbcdb1be250ee20ad08cd6e49d2d0":[3,0,0,1,0,0,1,0,0,0,25,0],
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1Visibility.html#aea219ac68b03bfaba3c1a394af24863d":[3,0,0,1,0,0,1,0,0,0,25,3],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion_1_1Visibility.html#aebf0c05d7c01cf4c6b1eb6a3c7dc75dd":[3,0,0,1,0,0,1,0,0,0,25,2],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder.html":[3,0,0,1,0,0,1,0,0,5],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1FacetBuilder.html#a0ef8e168dc59e4329d1fbb4e99291cc3":[3,0,0,1,0,0,1,0,0,5,1],
@@ -239,15 +249,5 @@ var NAVTREEINDEX13 =
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ObjectState_1_1ObjectStateUpdateStruct.html":[3,0,0,1,0,0,1,3,5],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ObjectState_1_1ObjectStateUpdateStruct.html#a7ca18120d047c9d7162e1cb70f8358a3":[3,0,0,1,0,0,1,3,5,1],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ObjectState_1_1ObjectStateUpdateStruct.html#a82ffa6c21047f07dea480e273df047d6":[3,0,0,1,0,0,1,3,5,0],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ObjectState_1_1ObjectStateUpdateStruct.html#a95e500efc9ebf61ee8c6a4af4f42cb18":[3,0,0,1,0,0,1,3,5,2],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ObjectState_1_1ObjectStateUpdateStruct.html#ac264dee6bbf4972b5830a3b60001f2e1":[3,0,0,1,0,0,1,3,5,3],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation.html":[3,0,0,1,0,0,1,6],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Message.html":[3,0,0,1,0,0,1,4,0],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Message.html#a027ff8edcfb82735fd9805be05b8880c":[3,0,0,1,0,0,1,4,0,0],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Message.html#a0b2b81b54a3572ebed16f0df37457d01":[3,0,0,1,0,0,1,4,0,1],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Message.html#af72325344c60f4b9a05db355d1045cdd":[3,0,0,1,0,0,1,4,0,2],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Plural.html":[3,0,0,1,0,0,1,4,1],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Plural.html#a6b6664be841ed2e0d399df824e3520aa":[3,0,0,1,0,0,1,4,1,2],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Plural.html#a98f621037189b4406077d5c5338133d7":[3,0,0,1,0,0,1,4,1,3],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Plural.html#a9bb7fcd6ff084fa03cc38a0887e7c357":[3,0,0,1,0,0,1,4,1,0]
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ObjectState_1_1ObjectStateUpdateStruct.html#a95e500efc9ebf61ee8c6a4af4f42cb18":[3,0,0,1,0,0,1,3,5,2]
 };

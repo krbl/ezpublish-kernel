@@ -17,6 +17,7 @@ var searchData=
   ['matcher',['Matcher',['../interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher.html',1,'eZ::Publish::Core::MVC::Symfony::View::ContentViewProvider::Configured']]],
   ['media',['Media',['../classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter_1_1Media.html',1,'eZ::Publish::Core::Persistence::Legacy::Content::FieldValue::Converter']]],
   ['mediastorage',['MediaStorage',['../classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Media_1_1MediaStorage.html',1,'eZ::Publish::Core::FieldType::Media']]],
+  ['memorycachinghandler',['MemoryCachingHandler',['../classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1MemoryCachingHandler.html',1,'eZ::Publish::Core::Persistence::Legacy::Content::Type']]],
   ['message',['Message',['../classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Translation_1_1Message.html',1,'eZ::Publish::API::Repository::Values::Translation']]],
   ['message',['Message',['../classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Message.html',1,'eZ::Publish::Core::Persistence::Solr::Content::Search::Gateway']]],
   ['message',['Message',['../classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html',1,'eZ::Publish::Core::REST::Common']]],
