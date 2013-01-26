@@ -14,7 +14,6 @@ var hierarchy =
     [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\LegacyStorageEnginePass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1LegacyStorageEnginePass.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\RegisterLimitationTypePass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1RegisterLimitationTypePass.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\RegisterStorageEnginePass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1RegisterStorageEnginePass.html", null ],
-    [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\TwigTweaksPass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1TwigTweaksPass.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\ViewPass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1ViewPass.html", [
       [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\ContentViewPass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1ContentViewPass.html", null ],
       [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\LocationViewPass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1LocationViewPass.html", null ]
@@ -906,9 +905,6 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\MVC\\Symfony\\Cache\\Http\\ContentPurger", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1ContentPurger.html", [
         [ "eZ\\Publish\\Core\\MVC\\Symfony\\Cache\\Http\\LocationAwareStore", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1LocationAwareStore.html", null ]
       ] ]
-    ] ],
-    [ "eZ\\Publish\\Core\\MVC\\Symfony\\Cache\\Http\\Store", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store.html", [
-      [ "eZ\\Publish\\Core\\MVC\\Symfony\\Cache\\Http\\LocationAwareStore", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1LocationAwareStore.html", null ]
     ] ],
     [ "eZ\\Publish\\Core\\MVC\\Symfony\\Cache\\PurgeClientInterface", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1PurgeClientInterface.html", [
       [ "eZ\\Publish\\Core\\MVC\\Symfony\\Cache\\Http\\LocalPurgeClient", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1LocalPurgeClient.html", null ],

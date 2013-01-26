@@ -1,11 +1,5 @@
 var NAVTREEINDEX18 =
 {
-"classeZ_1_1Publish_1_1Core_1_1IO_1_1InMemoryHandler.html#ad821596351e1c393bcd96a6f9e781c99":[3,0,0,1,1,2,2,7],
-"classeZ_1_1Publish_1_1Core_1_1IO_1_1InMemoryHandler.html#ad96510379fafa803f5394282d737110d":[3,0,0,1,1,2,2,5],
-"classeZ_1_1Publish_1_1Core_1_1IO_1_1InMemoryHandler.html#af1e621cf7ab90791fac4a60fae3e1ff9":[3,0,0,1,1,2,2,3],
-"classeZ_1_1Publish_1_1Core_1_1IO_1_1InMemoryHandler.html#af33b593e79580e1824a57628107148db":[3,0,0,1,1,2,2,1],
-"classeZ_1_1Publish_1_1Core_1_1IO_1_1LegacyHandler.html":[3,0,0,1,1,2,3],
-"classeZ_1_1Publish_1_1Core_1_1IO_1_1LegacyHandler.html#a0c5e296247b5036ea6c5217012d82d72":[3,0,0,1,1,2,3,1],
 "classeZ_1_1Publish_1_1Core_1_1IO_1_1LegacyHandler.html#a25d440bf95b57149397484cb697cf8e5":[3,0,0,1,1,2,3,0],
 "classeZ_1_1Publish_1_1Core_1_1IO_1_1LegacyHandler.html#a70f7b848b0434cd6ee56d5663adb57c6":[3,0,0,1,1,2,3,5],
 "classeZ_1_1Publish_1_1Core_1_1IO_1_1LegacyHandler.html#a90fd31871d2ca137c7e315fb48bd6f30":[3,0,0,1,1,2,3,4],
@@ -249,5 +243,11 @@ var NAVTREEINDEX18 =
 "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1PurgeClient.html#a05245e35903a44caa854259b6a61c54c":[3,0,0,1,1,4,2,0,0,5,2],
 "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1PurgeClient.html#a56fc245539cc36e563efd38c74da733a":[3,0,0,1,1,4,2,0,0,5,3],
 "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1PurgeClient.html#a647aa900ffe3b9604235f650e5a8bdbf":[3,0,0,1,1,4,2,0,0,5,4],
-"classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1PurgeClient.html#a7d8665afff2a3637f396982c04ea5f03":[3,0,0,1,1,4,2,0,0,5,0]
+"classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1PurgeClient.html#a7d8665afff2a3637f396982c04ea5f03":[3,0,0,1,1,4,2,0,0,5,0],
+"classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1PurgeClient.html#a8739d41c7c91c802d6cf2fd97b7f6f35":[3,0,0,1,1,4,2,0,0,5,6],
+"classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1PurgeClient.html#a8f95635ce174f1c21f7521ad7ebcd97e":[3,0,0,1,1,4,2,0,0,5,1],
+"classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1PurgeClient.html#ab56b1f9f7750e7dad9ce85eff4be9dd1":[3,0,0,1,1,4,2,0,0,5,5],
+"classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1PurgeClientSingleRequest.html":[3,0,0,1,1,4,2,0,0,6],
+"classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1PurgeClientSingleRequest.html#a3b32013f1330d9c690fe81f0ee569bca":[3,0,0,1,1,4,2,0,0,6,0],
+"classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1ConfiguredLocalFileService.html":[3,0,0,1,1,4,2,11]
 };

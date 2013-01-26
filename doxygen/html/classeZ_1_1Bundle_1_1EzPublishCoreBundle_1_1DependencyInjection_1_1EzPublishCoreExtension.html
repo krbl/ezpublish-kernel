@@ -214,7 +214,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="EzPublishCoreExtension_8php_source.html#l00205">205</a> of file <a class="el" href="EzPublishCoreExtension_8php_source.html">EzPublishCoreExtension.php</a>.</p>
+<p>Definition at line <a class="el" href="EzPublishCoreExtension_8php_source.html#l00092">92</a> of file <a class="el" href="EzPublishCoreExtension_8php_source.html">EzPublishCoreExtension.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Configuration( $this-&gt;configParsers );</div>
 <div class="line">    }</div>
@@ -272,7 +272,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="EzPublishCoreExtension_8php_source.html#l00051">51</a> of file <a class="el" href="EzPublishCoreExtension_8php_source.html">EzPublishCoreExtension.php</a>.</p>
 
-<p>References <a class="el" href="EzPublishCoreExtension_8php_source.html#l00205">eZ\Bundle\EzPublishCoreBundle\DependencyInjection\EzPublishCoreExtension\getConfiguration()</a>.</p>
+<p>References <a class="el" href="EzPublishCoreExtension_8php_source.html#l00092">eZ\Bundle\EzPublishCoreBundle\DependencyInjection\EzPublishCoreExtension\getConfiguration()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $loader = <span class="keyword">new</span> Loader\YamlFileLoader(</div>
 <div class="line">            $container,</div>
@@ -280,14 +280,8 @@ Public Member Functions</h2></td></tr>
 <div class="line">        );</div>
 <div class="line">        $configuration = $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1EzPublishCoreExtension.html#a223cc6e6a086ff2589559ca06e29bfea">getConfiguration</a>( $configs, $container );</div>
 <div class="line"></div>
-<div class="line">        <span class="comment">// Workaround for http://jira.ez.no/browse/EZP-20107</span></div>
-<div class="line">        $this-&gt;fixUpConfiguration( $configs );</div>
-<div class="line"></div>
 <div class="line">        <span class="comment">// Note: this is where the transformation occurs</span></div>
 <div class="line">        $config = $this-&gt;processConfiguration( $configuration, $configs );</div>
-<div class="line"></div>
-<div class="line">        <span class="comment">// Workaround for http://jira.ez.no/browse/EZP-20107</span></div>
-<div class="line">        $this-&gt;unFixUpConfiguration( $config );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Base services and services overrides</span></div>
 <div class="line">        $loader-&gt;load( <span class="stringliteral">&#39;services.yml&#39;</span> );</div>
@@ -335,7 +329,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle.html">EzPublishCoreBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection.html">DependencyInjection</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1EzPublishCoreExtension.html">EzPublishCoreExtension</a></li>
-    <li class="footer">Generated on Fri Jan 25 2013 00:03:10 for ezp-next by
+    <li class="footer">Generated on Sat Jan 26 2013 00:03:32 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

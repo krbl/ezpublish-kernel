@@ -24,9 +24,6 @@ var dir_a25b855019bf86156170d6aefeecdf5e =
     [ "RegisterStorageEnginePass.php", "RegisterStorageEnginePass_8php.html", [
       [ "RegisterStorageEnginePass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1RegisterStorageEnginePass.html", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1RegisterStorageEnginePass" ]
     ] ],
-    [ "TwigTweaksPass.php", "TwigTweaksPass_8php.html", [
-      [ "TwigTweaksPass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1TwigTweaksPass.html", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1TwigTweaksPass" ]
-    ] ],
     [ "ViewPass.php", "ViewPass_8php.html", [
       [ "ViewPass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1ViewPass.html", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1ViewPass" ]
     ] ]

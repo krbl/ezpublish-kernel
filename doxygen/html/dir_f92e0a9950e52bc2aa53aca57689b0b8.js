@@ -23,8 +23,5 @@ var dir_f92e0a9950e52bc2aa53aca57689b0b8 =
     ] ],
     [ "RequestAwarePurger.php", "RequestAwarePurger_8php.html", [
       [ "RequestAwarePurger", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1RequestAwarePurger.html", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1RequestAwarePurger" ]
-    ] ],
-    [ "Store.php", "Store_8php.html", [
-      [ "Store", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store.html", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store" ]
     ] ]
 ];

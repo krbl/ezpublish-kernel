@@ -114,58 +114,62 @@ $(document).ready(function(){initNavTree('SiteAccessMatchListener_8php_source.ht
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1SimplifiedRequest.html">eZ\Publish\Core\MVC\Symfony\Routing\SimplifiedRequest</a>;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;use Symfony\Component\EventDispatcher\EventDispatcherInterface;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;use Symfony\Component\HttpKernel\Event\GetResponseEvent;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html">SiteAccessMatchListener</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#af7312dafcdc50de53db6c3e1524594e9">   29</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#af7312dafcdc50de53db6c3e1524594e9">$siteAccessRouter</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#a9890f4fdf113d24966dcee8770cfe815">   34</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#a9890f4fdf113d24966dcee8770cfe815">$eventDispatcher</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#ad5cc1d11a1d9c9bd00088cb983c31455">   36</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#ad5cc1d11a1d9c9bd00088cb983c31455">__construct</a>( SiteAccessRouter <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#af7312dafcdc50de53db6c3e1524594e9">$siteAccessRouter</a>, EventDispatcherInterface <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#a9890f4fdf113d24966dcee8770cfe815">$eventDispatcher</a> )</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        $this-&gt;siteAccessRouter = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#af7312dafcdc50de53db6c3e1524594e9">$siteAccessRouter</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        $this-&gt;eventDispatcher = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#a9890f4fdf113d24966dcee8770cfe815">$eventDispatcher</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#a8c4c7838fd476966af405bc46f00fc4b">   45</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#a8c4c7838fd476966af405bc46f00fc4b">onKernelRequest</a>( GetResponseEvent $event )</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        $request = $event-&gt;getRequest();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span> ( !$request-&gt;attributes-&gt;has( <span class="stringliteral">&#39;siteaccess&#39;</span> ) )</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            $request-&gt;attributes-&gt;set(</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="stringliteral">&#39;siteaccess&#39;</span>,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                $this-&gt;siteAccessRouter-&gt;match(</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1SimplifiedRequest.html">SimplifiedRequest</a>(</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                        array(</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                            <span class="stringliteral">&#39;scheme&#39;</span>      =&gt; $request-&gt;getScheme(),</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                            <span class="stringliteral">&#39;host&#39;</span>        =&gt; $request-&gt;getHost(),</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                            <span class="stringliteral">&#39;port&#39;</span>        =&gt; $request-&gt;getPort(),</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                            <span class="stringliteral">&#39;pathinfo&#39;</span>    =&gt; $request-&gt;getPathInfo(),</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                            <span class="stringliteral">&#39;queryParams&#39;</span> =&gt; $request-&gt;query-&gt;all(),</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                            <span class="stringliteral">&#39;languages&#39;</span>   =&gt; $request-&gt;getLanguages(),</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                            <span class="stringliteral">&#39;headers&#39;</span>     =&gt; $request-&gt;headers-&gt;all()</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                        )</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    )</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                )</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            );</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        $siteaccess = $request-&gt;attributes-&gt;get( <span class="stringliteral">&#39;siteaccess&#39;</span> );</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span> ( $siteaccess instanceof <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess.html">SiteAccess</a> )</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            $siteAccessEvent = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Event_1_1PostSiteAccessMatchEvent.html">PostSiteAccessMatchEvent</a>( $siteaccess, $request );</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            $this-&gt;eventDispatcher-&gt;dispatch( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1MVCEvents.html#a97c51fe825c26126c054269f44964646">MVCEvents::SITEACCESS</a>, $siteAccessEvent );</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;use Symfony\Component\HttpKernel\HttpKernelInterface;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html">SiteAccessMatchListener</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#af7312dafcdc50de53db6c3e1524594e9">   30</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#af7312dafcdc50de53db6c3e1524594e9">$siteAccessRouter</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#a9890f4fdf113d24966dcee8770cfe815">   35</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#a9890f4fdf113d24966dcee8770cfe815">$eventDispatcher</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#ad5cc1d11a1d9c9bd00088cb983c31455">   37</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#ad5cc1d11a1d9c9bd00088cb983c31455">__construct</a>( SiteAccessRouter <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#af7312dafcdc50de53db6c3e1524594e9">$siteAccessRouter</a>, EventDispatcherInterface <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#a9890f4fdf113d24966dcee8770cfe815">$eventDispatcher</a> )</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        $this-&gt;siteAccessRouter = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#af7312dafcdc50de53db6c3e1524594e9">$siteAccessRouter</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        $this-&gt;eventDispatcher = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#a9890f4fdf113d24966dcee8770cfe815">$eventDispatcher</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#a8c4c7838fd476966af405bc46f00fc4b">   46</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html#a8c4c7838fd476966af405bc46f00fc4b">onKernelRequest</a>( GetResponseEvent $event )</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span> ( $event-&gt;getRequestType() !== HttpKernelInterface::MASTER_REQUEST )</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        $request = $event-&gt;getRequest();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> ( !$request-&gt;attributes-&gt;has( <span class="stringliteral">&#39;siteaccess&#39;</span> ) )</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            $request-&gt;attributes-&gt;set(</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="stringliteral">&#39;siteaccess&#39;</span>,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                $this-&gt;siteAccessRouter-&gt;match(</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1SimplifiedRequest.html">SimplifiedRequest</a>(</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                        array(</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                            <span class="stringliteral">&#39;scheme&#39;</span>      =&gt; $request-&gt;getScheme(),</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                            <span class="stringliteral">&#39;host&#39;</span>        =&gt; $request-&gt;getHost(),</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                            <span class="stringliteral">&#39;port&#39;</span>        =&gt; $request-&gt;getPort(),</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                            <span class="stringliteral">&#39;pathinfo&#39;</span>    =&gt; $request-&gt;getPathInfo(),</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                            <span class="stringliteral">&#39;queryParams&#39;</span> =&gt; $request-&gt;query-&gt;all(),</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                            <span class="stringliteral">&#39;languages&#39;</span>   =&gt; $request-&gt;getLanguages(),</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                            <span class="stringliteral">&#39;headers&#39;</span>     =&gt; $request-&gt;headers-&gt;all()</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        )</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    )</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                )</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            );</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        $siteaccess = $request-&gt;attributes-&gt;get( <span class="stringliteral">&#39;siteaccess&#39;</span> );</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">if</span> ( $siteaccess instanceof <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess.html">SiteAccess</a> )</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            $siteAccessEvent = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Event_1_1PostSiteAccessMatchEvent.html">PostSiteAccessMatchEvent</a>( $siteaccess, $request );</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            $this-&gt;eventDispatcher-&gt;dispatch( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1MVCEvents.html#a97c51fe825c26126c054269f44964646">MVCEvents::SITEACCESS</a>, $siteAccessEvent );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_3f2bbbda4a8cf240a23a45721a8bf194.html">MVC</a></li><li class="navelem"><a class="el" href="dir_2823f14ad24d7d09ba467b2c5eb8153a.html">Symfony</a></li><li class="navelem"><a class="el" href="dir_eb2c0a4da2623dd8f23080bb0d9fedff.html">EventListener</a></li><li class="navelem"><a class="el" href="SiteAccessMatchListener_8php.html">SiteAccessMatchListener.php</a></li>
-    <li class="footer">Generated on Fri Jan 25 2013 00:03:07 for ezp-next by
+    <li class="footer">Generated on Sat Jan 26 2013 00:03:29 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

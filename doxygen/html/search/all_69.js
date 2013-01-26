@@ -91,7 +91,7 @@ var searchData=
   ['invalidargumenttype_2ephp',['InvalidArgumentType.php',['../InvalidArgumentType_8php.html',1,'']]],
   ['invalidargumentvalue',['InvalidArgumentValue',['../classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentValue.html',1,'eZ::Publish::Core::Base::Exceptions']]],
   ['invalidargumentvalue_2ephp',['InvalidArgumentValue.php',['../InvalidArgumentValue_8php.html',1,'']]],
-  ['invalidate',['invalidate',['../classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1HttpCache.html#ac1334441791f6b1b30deaa380c4e350f',1,'eZ\Bundle\EzPublishCoreBundle\HttpCache\invalidate()'],['../classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1Http_1_1Store.html#af79884d22749189e5c8bf98ec5c78057',1,'eZ\Publish\Core\MVC\Symfony\Cache\Http\Store\invalidate()']]],
+  ['invalidate',['invalidate',['../classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1HttpCache.html#ac1334441791f6b1b30deaa380c4e350f',1,'eZ::Bundle::EzPublishCoreBundle::HttpCache']]],
   ['invalidsiteaccessexception',['InvalidSiteAccessException',['../classeZ_1_1Publish_1_1Core_1_1MVC_1_1Exception_1_1InvalidSiteAccessException.html',1,'eZ::Publish::Core::MVC::Exception']]],
   ['invalidsiteaccessexception_2ephp',['InvalidSiteAccessException.php',['../InvalidSiteAccessException_8php.html',1,'']]],
   ['invalidstorageengine',['InvalidStorageEngine',['../classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1Exception_1_1InvalidStorageEngine.html',1,'eZ::Bundle::EzPublishCoreBundle::ApiLoader::Exception']]],
