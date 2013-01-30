@@ -226,7 +226,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00054">54</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
 
-<p>References <a class="el" href="ConfigurationConverter_8php_source.html#l00295">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\getGroup()</a>, <a class="el" href="ConfigurationConverter_8php_source.html#l00198">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\getImageVariations()</a>, <a class="el" href="ConfigurationConverter_8php_source.html#l00165">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\getLanguages()</a>, <a class="el" href="ConfigurationConverter_8php_source.html#l00326">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\getParameter()</a>, <a class="el" href="ConfigurationConverter_8php_source.html#l00275">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\mapDatabaseType()</a>, and <a class="el" href="ConfigurationConverter_8php_source.html#l00346">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\resolveMatching()</a>.</p>
+<p>References <a class="el" href="ConfigurationConverter_8php_source.html#l00306">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\getGroup()</a>, <a class="el" href="ConfigurationConverter_8php_source.html#l00209">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\getImageVariations()</a>, <a class="el" href="ConfigurationConverter_8php_source.html#l00176">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\getLanguages()</a>, <a class="el" href="ConfigurationConverter_8php_source.html#l00337">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\getParameter()</a>, <a class="el" href="ConfigurationConverter_8php_source.html#l00286">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\mapDatabaseType()</a>, and <a class="el" href="ConfigurationConverter_8php_source.html#l00357">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\resolveMatching()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $settings = array();</div>
 <div class="line">        $settings[<span class="stringliteral">&#39;ezpublish&#39;</span>] = array();</div>
@@ -325,6 +325,17 @@ Protected Attributes</h2></td></tr>
 <div class="line">        <span class="comment">// Explicitly set Http cache purge type to &quot;local&quot;</span></div>
 <div class="line">        $settings[<span class="stringliteral">&#39;ezpublish&#39;</span>][<span class="stringliteral">&#39;http_cache&#39;</span>][<span class="stringliteral">&#39;purge_type&#39;</span>] = <span class="stringliteral">&#39;local&#39;</span>;</div>
 <div class="line"></div>
+<div class="line">        <span class="keywordflow">foreach</span> ( $siteList as $siteaccess )</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span> (</div>
+<div class="line">                $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1SetupWizard_1_1ConfigurationConverter.html#a5406e317d5154f52de1b596c00dbd5c5">getParameter</a>( <span class="stringliteral">&quot;Session&quot;</span>, <span class="stringliteral">&quot;SessionNameHandler&quot;</span>, <span class="stringliteral">&quot;site.ini&quot;</span>, $siteaccess ) === <span class="stringliteral">&quot;custom&quot;</span> &amp;&amp;</div>
+<div class="line">                $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1SetupWizard_1_1ConfigurationConverter.html#a5406e317d5154f52de1b596c00dbd5c5">getParameter</a>( <span class="stringliteral">&quot;Session&quot;</span>, <span class="stringliteral">&quot;SessionNamePerSiteAccess&quot;</span>, <span class="stringliteral">&quot;site.ini&quot;</span>, $siteaccess ) !== <span class="stringliteral">&quot;enabled&quot;</span></div>
+<div class="line">            )</div>
+<div class="line">            {</div>
+<div class="line">                $settings[<span class="stringliteral">&#39;ezpublish&#39;</span>][<span class="stringliteral">&#39;system&#39;</span>][$siteaccess][<span class="stringliteral">&#39;session_name&#39;</span>] = $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1SetupWizard_1_1ConfigurationConverter.html#a5406e317d5154f52de1b596c00dbd5c5">getParameter</a>( <span class="stringliteral">&quot;Session&quot;</span>, <span class="stringliteral">&quot;SessionNamePrefix&quot;</span>, <span class="stringliteral">&quot;site.ini&quot;</span> );</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line"></div>
 <div class="line">        <span class="keywordflow">return</span> $settings;</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
@@ -381,7 +392,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00295">295</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
+<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00306">306</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $file === null &amp;&amp; $siteaccess === null )</div>
 <div class="line">        {</div>
@@ -454,9 +465,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00198">198</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
+<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00209">209</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
 
-<p>References <a class="el" href="ConfigurationConverter_8php_source.html#l00226">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\getImageVariationsForSiteaccess()</a>.</p>
+<p>References <a class="el" href="ConfigurationConverter_8php_source.html#l00237">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\getImageVariationsForSiteaccess()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $result = array();</div>
 <div class="line">        $allSame = <span class="keyword">true</span>;</div>
@@ -531,9 +542,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00226">226</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
+<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00237">237</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
 
-<p>References <a class="el" href="ConfigurationConverter_8php_source.html#l00295">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\getGroup()</a>.</p>
+<p>References <a class="el" href="ConfigurationConverter_8php_source.html#l00306">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\getGroup()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $variations = array();</div>
 <div class="line">        $imageAliasesList = $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1SetupWizard_1_1ConfigurationConverter.html#a7f19184e1f6c034bb5c534eb91a3b9ba">getGroup</a>( <span class="stringliteral">&#39;AliasSettings&#39;</span>, <span class="stringliteral">&#39;image.ini&#39;</span>, $siteaccess );</div>
@@ -647,9 +658,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00165">165</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
+<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00176">176</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
 
-<p>References <a class="el" href="ConfigurationConverter_8php_source.html#l00326">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\getParameter()</a>.</p>
+<p>References <a class="el" href="ConfigurationConverter_8php_source.html#l00337">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\getParameter()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $result = array();</div>
 <div class="line">        $allSame = <span class="keyword">true</span>;</div>
@@ -743,7 +754,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00326">326</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
+<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00337">337</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $file === null &amp;&amp; $siteaccess === null )</div>
 <div class="line">        {</div>
@@ -798,7 +809,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00275">275</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
+<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00286">286</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $map = array(</div>
 <div class="line">            <span class="stringliteral">&#39;ezpostgresql&#39;</span> =&gt; <span class="stringliteral">&#39;pgsql&#39;</span>,</div>
@@ -857,11 +868,11 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array|bool </dd></dl>
 
-<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00406">406</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
+<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00417">417</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
 
-<p>References <a class="el" href="ConfigurationConverter_8php_source.html#l00441">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\resolveMapMatch()</a>, and <a class="el" href="ConfigurationConverter_8php_source.html#l00430">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\resolveTextMatch()</a>.</p>
+<p>References <a class="el" href="ConfigurationConverter_8php_source.html#l00452">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\resolveMapMatch()</a>, and <a class="el" href="ConfigurationConverter_8php_source.html#l00441">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\resolveTextMatch()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        <span class="keywordflow">switch</span>( $siteaccessSettings[<span class="stringliteral">&#39;HostMatchType&#39;</span>] )</div>
+<div class="line">        <span class="keywordflow">switch</span> ( $siteaccessSettings[<span class="stringliteral">&#39;HostMatchType&#39;</span>] )</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">case</span> <span class="stringliteral">&#39;disabled&#39;</span>:</div>
 <div class="line">                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -929,7 +940,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00441">441</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
+<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00452">452</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $map = array();</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $mapArray as $mapItem )</div>
@@ -975,16 +986,16 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00346">346</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
+<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00357">357</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
 
-<p>References <a class="el" href="ConfigurationConverter_8php_source.html#l00295">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\getGroup()</a>, and <a class="el" href="ConfigurationConverter_8php_source.html#l00406">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\resolveHostMatching()</a>.</p>
+<p>References <a class="el" href="ConfigurationConverter_8php_source.html#l00306">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\getGroup()</a>, and <a class="el" href="ConfigurationConverter_8php_source.html#l00417">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\resolveHostMatching()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $siteaccessSettings = $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1SetupWizard_1_1ConfigurationConverter.html#a7f19184e1f6c034bb5c534eb91a3b9ba">getGroup</a>( <span class="stringliteral">&#39;SiteAccessSettings&#39;</span> );</div>
 <div class="line"></div>
 <div class="line">        $matching = array(); $match = <span class="keyword">false</span>;</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( explode( <span class="charliteral">&#39;;&#39;</span>, $siteaccessSettings[<span class="stringliteral">&#39;MatchOrder&#39;</span>] ) as $matchMethod )</div>
 <div class="line">        {</div>
-<div class="line">            <span class="keywordflow">switch</span>( $matchMethod )</div>
+<div class="line">            <span class="keywordflow">switch</span> ( $matchMethod )</div>
 <div class="line">            {</div>
 <div class="line">                <span class="keywordflow">case</span> <span class="stringliteral">&#39;uri&#39;</span>:</div>
 <div class="line">                    $match = $this-&gt;resolveURIMatching( $siteaccessSettings );</div>
@@ -1070,7 +1081,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00430">430</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
+<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00441">441</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $settings = array();</div>
 <div class="line">        <span class="keywordflow">if</span> ( isset( $siteaccessSettings[$prefixKey] ) )</div>
@@ -1116,11 +1127,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00377">377</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
+<p>Definition at line <a class="el" href="ConfigurationConverter_8php_source.html#l00388">388</a> of file <a class="el" href="ConfigurationConverter_8php_source.html">ConfigurationConverter.php</a>.</p>
 
-<p>References <a class="el" href="ConfigurationConverter_8php_source.html#l00441">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\resolveMapMatch()</a>, and <a class="el" href="ConfigurationConverter_8php_source.html#l00430">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\resolveTextMatch()</a>.</p>
+<p>References <a class="el" href="ConfigurationConverter_8php_source.html#l00452">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\resolveMapMatch()</a>, and <a class="el" href="ConfigurationConverter_8php_source.html#l00441">eZ\Bundle\EzPublishLegacyBundle\SetupWizard\ConfigurationConverter\resolveTextMatch()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        <span class="keywordflow">switch</span>( $siteaccessSettings[<span class="stringliteral">&#39;URIMatchType&#39;</span>] )</div>
+<div class="line">        <span class="keywordflow">switch</span> ( $siteaccessSettings[<span class="stringliteral">&#39;URIMatchType&#39;</span>] )</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">case</span> <span class="stringliteral">&#39;disabled&#39;</span>:</div>
 <div class="line">                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -1228,7 +1239,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle.html">EzPublishLegacyBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1SetupWizard.html">SetupWizard</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1SetupWizard_1_1ConfigurationConverter.html">ConfigurationConverter</a></li>
-    <li class="footer">Generated on Mon Jan 28 2013 00:03:02 for ezp-next by
+    <li class="footer">Generated on Wed Jan 30 2013 00:03:02 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>
