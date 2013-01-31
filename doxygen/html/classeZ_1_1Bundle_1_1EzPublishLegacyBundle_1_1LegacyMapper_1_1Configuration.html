@@ -132,7 +132,7 @@ $(document).ready(function(){initNavTree('classeZ_1_1Bundle_1_1EzPublishLegacyBu
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0d49d2ac752f8410653f658a5c3f7224"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Configuration.html#a0d49d2ac752f8410653f658a5c3f7224">__construct</a> (<a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1ConfigResolverInterface.html">ConfigResolverInterface</a> $configResolver, <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1GatewayCachePurger.html">GatewayCachePurger</a> $gatewayCachePurger, array $options=array())</td></tr>
+<tr class="memitem:a4ca3cf7976b3a905ddc6d447d8ad8fc6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Configuration.html#a4ca3cf7976b3a905ddc6d447d8ad8fc6">__construct</a> (<a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1ConfigResolverInterface.html">ConfigResolverInterface</a> $configResolver, <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Cache_1_1GatewayCachePurger.html">GatewayCachePurger</a> $gatewayCachePurger, ContainerInterface $container, array $options=array())</td></tr>
 <tr class="memitem:a32630ae29f7019e868668b6af303e59c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Configuration.html#a32630ae29f7019e868668b6af303e59c">onBuildKernel</a> (<a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelEvent.html">PreBuildKernelEvent</a> $event)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
@@ -142,9 +142,9 @@ Static Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Maps configuration parameters to the legacy parameters </p>
 
-<p>Definition at line <a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php_source.html#l00023">23</a> of file <a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php_source.html">Configuration.php</a>.</p>
+<p>Definition at line <a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php_source.html#l00024">24</a> of file <a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php_source.html">Configuration.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a0d49d2ac752f8410653f658a5c3f7224"></a>
+<a class="anchor" id="a4ca3cf7976b3a905ddc6d447d8ad8fc6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -163,6 +163,12 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">ContainerInterface&#160;</td>
+          <td class="paramname"><em>$container</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">array&#160;</td>
           <td class="paramname"><em>$options</em> = <code>array()</code>&#160;</td>
         </tr>
@@ -174,10 +180,11 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php_source.html#l00040">40</a> of file <a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php_source.html">Configuration.php</a>.</p>
+<p>Definition at line <a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php_source.html#l00046">46</a> of file <a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php_source.html">Configuration.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;configResolver = $configResolver;</div>
 <div class="line">        $this-&gt;gatewayCachePurger = $gatewayCachePurger;</div>
+<div class="line">        $this-&gt;container = $container;</div>
 <div class="line">        $this-&gt;options = $options;</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
@@ -205,7 +212,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php_source.html#l00047">47</a> of file <a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php_source.html">Configuration.php</a>.</p>
+<p>Definition at line <a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php_source.html#l00054">54</a> of file <a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php_source.html">Configuration.php</a>.</p>
 
 <p>References <a class="el" href="LegacyEvents_8php_source.html#l00034">eZ\Publish\Core\MVC\Legacy\LegacyEvents\PRE_BUILD_LEGACY_KERNEL</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -238,7 +245,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Cache computed settings somehow </dd></dl>
 
-<p>Definition at line <a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php_source.html#l00061">61</a> of file <a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php_source.html">Configuration.php</a>.</p>
+<p>Definition at line <a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php_source.html#l00068">68</a> of file <a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php_source.html">Configuration.php</a>.</p>
 
 <p>References <a class="el" href="PreBuildKernelEvent_8php_source.html#l00038">eZ\Publish\Core\MVC\Legacy\Event\PreBuildKernelEvent\getParameters()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -272,6 +279,16 @@ Static Public Member Functions</h2></td></tr>
 <div class="line">            $settings + (array)$event-&gt;getParameters()-&gt;get( <span class="stringliteral">&quot;injected-settings&quot;</span> )</div>
 <div class="line">        );</div>
 <div class="line"></div>
+<div class="line">        <span class="comment">// Inject csrf protection settings to make sure legacy &amp; symfony stack work together</span></div>
+<div class="line">        <span class="keywordflow">if</span> (</div>
+<div class="line">            $this-&gt;container-&gt;hasParameter( <span class="stringliteral">&#39;form.type_extension.csrf.enabled&#39;</span> ) &amp;&amp;</div>
+<div class="line">            $this-&gt;container-&gt;getParameter( <span class="stringliteral">&#39;form.type_extension.csrf.enabled&#39;</span> )</div>
+<div class="line">        )</div>
+<div class="line">        {</div>
+<div class="line">            ezxFormToken::setSecret( $this-&gt;container-&gt;getParameter( <span class="stringliteral">&#39;kernel.secret&#39;</span> ) );</div>
+<div class="line">            ezxFormToken::setFormField( $this-&gt;container-&gt;getParameter( <span class="stringliteral">&#39;form.type_extension.csrf.field_name&#39;</span> ) );</div>
+<div class="line">        }</div>
+<div class="line"></div>
 <div class="line">        <span class="comment">// Register content/cache event listener</span></div>
 <div class="line">        ezpEvent::getInstance()-&gt;attach( <span class="stringliteral">&#39;content/cache&#39;</span>, array( $this-&gt;gatewayCachePurger, <span class="stringliteral">&#39;purge&#39;</span> ) );</div>
 <div class="line">        ezpEvent::getInstance()-&gt;attach( <span class="stringliteral">&#39;content/cache/all&#39;</span>, array( $this-&gt;gatewayCachePurger, <span class="stringliteral">&#39;purgeAll&#39;</span> ) );</div>
@@ -299,7 +316,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle.html">EzPublishLegacyBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper.html">LegacyMapper</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Configuration.html">Configuration</a></li>
-    <li class="footer">Generated on Wed Jan 30 2013 00:03:02 for ezp-next by
+    <li class="footer">Generated on Thu Jan 31 2013 00:03:01 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>
