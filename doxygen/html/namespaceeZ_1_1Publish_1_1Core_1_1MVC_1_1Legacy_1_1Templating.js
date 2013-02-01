@@ -5,5 +5,7 @@ var namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating =
     [ "GlobalHelper", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1GlobalHelper.html", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1GlobalHelper" ],
     [ "LegacyAdapter", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyAdapter.html", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyAdapter" ],
     [ "LegacyCompatible", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyCompatible.html", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyCompatible" ],
+    [ "LegacyEngine", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyEngine.html", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyEngine" ],
+    [ "LegacyFormulaLoader", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyFormulaLoader.html", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyFormulaLoader" ],
     [ "LegacyHelper", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyHelper.html", null ]
 ];

@@ -1,5 +1,15 @@
 var NAVTREEINDEX11 =
 {
+"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Security_1_1HttpBasicFactory.html":[3,0,0,0,0,2,2,1],
+"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Security_1_1HttpBasicFactory.html#a33fcaf6de9c3faf0dac9ef234089bede":[3,0,0,0,0,2,2,1,1],
+"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Security_1_1HttpBasicFactory.html#a80149d1928243cda49276b6c3ea3bf90":[3,0,0,0,0,2,2,1,0],
+"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Security_1_1HttpBasicFactory.html#a83112b879175a8d9da8dcb003b8f529d":[3,0,0,0,0,2,2,1,2],
+"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1RequestEventListener.html":[3,0,0,0,0,3,0],
+"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1RequestEventListener.html#a068cc516bd813380b7cfd733b4169e45":[3,0,0,0,0,3,0,1],
+"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1RequestEventListener.html#a3ec9b0c4ad7855d6480cc497a48b1077":[3,0,0,0,0,3,0,0],
+"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1RequestEventListener.html#a4ef7489ae39d77ed4b7a217a4e5efef1":[3,0,0,0,0,3,0,2],
+"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1RequestEventListener.html#adcf2fd2e377c638a10d050eee0ba2509":[3,0,0,0,0,3,0,4],
+"classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1RequestEventListener.html#affac4ec1c439a78c632a8be44819819f":[3,0,0,0,0,3,0,3],
 "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1SessionInitByPostListener.html":[3,0,0,0,0,3,1],
 "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1SessionInitByPostListener.html#a14fc64cbefa51b123476e9979a4b62d5":[3,0,0,0,0,3,1,1],
 "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1SessionInitByPostListener.html#a280fe400f58e809b903eeb207fb80064":[3,0,0,0,0,3,1,2],
@@ -56,6 +66,8 @@ var NAVTREEINDEX11 =
 "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html#a9b5ed716a7445445c5f432e6c784cb4e":[3,0,0,0,1,1,2,2],
 "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Compiler_1_1LegacyPass.html":[3,0,0,0,1,2,0,0],
 "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Compiler_1_1LegacyPass.html#a6e17f006475978475ba3066d94b37152":[3,0,0,0,1,2,0,0,0],
+"classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Compiler_1_1TwigPass.html":[3,0,0,0,1,2,0,1],
+"classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Compiler_1_1TwigPass.html#a00bb92cc68e41ce177ecbd9d701bd527":[3,0,0,0,1,2,0,1,0],
 "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Configuration.html":[3,0,0,0,1,2,2],
 "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Configuration.html#afe7ea833fdc1169768007bdffedd327f":[3,0,0,0,1,2,2,0],
 "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Configuration_1_1LegacyConfigResolver.html":[3,0,0,0,1,2,1,0],
@@ -237,17 +249,5 @@ var NAVTREEINDEX11 =
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a2594895470a74dd3f1cced2862125bec":[3,0,0,1,0,0,1,1,7,0],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a71b157d419665dc1f967cb442ec48f8e":[3,0,0,1,0,0,1,1,7,9],
 "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a79fcb1e2e7cecba0a971b9cab81c64c5":[3,0,0,1,0,0,1,1,7,10],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a96c10b7e222b5a797e056b616a01677b":[3,0,0,1,0,0,1,1,7,12],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#aafca5898f6e51706f78735aaeaf7e453":[3,0,0,1,0,0,1,1,7,6],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#ab5a9284a40fc311436266f6f14fd8f0d":[3,0,0,1,0,0,1,1,7,15],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#ac7ebe38bfa84477e72e6add25e2acedb":[3,0,0,1,0,0,1,1,7,7],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#acab51752372094fa9610d2e21d4f450a":[3,0,0,1,0,0,1,1,7,11],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#ad352a0e1d1ec66c587c95e5f2ebb302e":[3,0,0,1,0,0,1,1,7,13],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#ad65d79ed8c99dead4dc5b11bb05a0580":[3,0,0,1,0,0,1,1,7,1],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#ae6da5b1db4adb57952a4b592f66db12e":[3,0,0,1,0,0,1,1,7,3],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#af6b53098a4bbe96adc33edc4e3a4a346":[3,0,0,1,0,0,1,1,7,2],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#afb9b88eccfaf44783600c3be79a4ffcd":[3,0,0,1,0,0,1,1,7,4],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#afd0ddb6a873bc86e76f7eca7cba0464a":[3,0,0,1,0,0,1,1,7,5],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionCreateStruct.html":[3,0,0,1,0,0,1,1,8],
-"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionCreateStruct.html#a065fd504bcf98c9b6ddc88541dacb328":[3,0,0,1,0,0,1,1,8,2]
+"classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html#a96c10b7e222b5a797e056b616a01677b":[3,0,0,1,0,0,1,1,7,12]
 };

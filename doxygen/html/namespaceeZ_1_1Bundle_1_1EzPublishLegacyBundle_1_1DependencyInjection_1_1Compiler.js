@@ -1,4 +1,5 @@
 var namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Compiler =
 [
-    [ "LegacyPass", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Compiler_1_1LegacyPass.html", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Compiler_1_1LegacyPass" ]
+    [ "LegacyPass", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Compiler_1_1LegacyPass.html", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Compiler_1_1LegacyPass" ],
+    [ "TwigPass", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Compiler_1_1TwigPass.html", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Compiler_1_1TwigPass" ]
 ];

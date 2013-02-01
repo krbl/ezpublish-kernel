@@ -1,5 +1,7 @@
 var NAVTREEINDEX5 =
 {
+"FacetBuilderVisitor_2Aggregate_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,1,0],
+"FacetBuilderVisitor_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,6],
 "FacetBuilderVisitor_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,6],
 "FacetBuilder_8php.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,0,5],
 "FacetBuilder_8php_source.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,0,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX5 =
 "Keyword_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,0,0,0,10],
 "LanguageCodeIn_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,0,9],
 "LanguageCodeIn_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,0,9],
-"LanguageCreateStruct_8php.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,9],
-"LanguageCreateStruct_8php_source.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,9],
-"LanguageHandler_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,0,4]
+"LanguageCreateStruct_8php.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,9]
 };

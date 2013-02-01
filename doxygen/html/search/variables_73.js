@@ -37,5 +37,6 @@ var searchData=
   ['status_5frejected',['STATUS_REJECTED',['../classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html#a6146fa5770eac7fdc1e54450b9453812',1,'eZ::Publish::SPI::Persistence::Content::VersionInfo']]],
   ['status_5frepeat',['STATUS_REPEAT',['../classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html#a5a031e9e7be31414cde5ae134a5514e7',1,'eZ::Publish::SPI::Persistence::Content::VersionInfo']]],
   ['string_5flength_5fvalidator_5fidentifier',['STRING_LENGTH_VALIDATOR_IDENTIFIER',['../classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter_1_1TextLine.html#a9f8f40f43601ccd1de6588bbaffa3921',1,'eZ::Publish::Core::Persistence::Legacy::Content::FieldValue::Converter::TextLine']]],
-  ['subtree',['SUBTREE',['../classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a4a787d90b04c09ea37a0604c734bd6f1',1,'eZ::Publish::API::Repository::Values::User::Limitation']]]
+  ['subtree',['SUBTREE',['../classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1Limitation.html#a4a787d90b04c09ea37a0604c734bd6f1',1,'eZ::Publish::API::Repository::Values::User::Limitation']]],
+  ['supported_5fsuffix',['SUPPORTED_SUFFIX',['../classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyEngine.html#ac608a152e8a5b2801f97f9c40ce455f7',1,'eZ::Publish::Core::MVC::Legacy::Templating::LegacyEngine']]]
 ];

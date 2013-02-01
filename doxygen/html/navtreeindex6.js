@@ -1,5 +1,7 @@
 var NAVTREEINDEX6 =
 {
+"LanguageCreateStruct_8php_source.html":[4,0,0,0,0,0,0,0,0,1,0,0,1,0,9],
+"LanguageHandler_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,0,4],
 "LanguageHandler_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,0,4],
 "LanguageLimitationType_8php.html":[4,0,0,0,0,0,0,0,0,1,1,3,1],
 "LanguageLimitationType_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,3,1],
@@ -31,14 +33,18 @@ var NAVTREEINDEX6 =
 "LegacyDeleteLocationSlot_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,5],
 "LegacyDeleteVersionSlot_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,6],
 "LegacyDeleteVersionSlot_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,6],
+"LegacyEngine_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,5],
+"LegacyEngine_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,5],
 "LegacyEvents_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,8],
 "LegacyEvents_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,8],
 "LegacyExtension_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,1,0,0],
 "LegacyExtension_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,1,0,0],
+"LegacyFormulaLoader_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,6],
+"LegacyFormulaLoader_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,6],
 "LegacyHandler_8php.html":[4,0,0,0,0,0,0,0,0,1,1,2,3],
 "LegacyHandler_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,2,3],
-"LegacyHelper_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,5],
-"LegacyHelper_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,5],
+"LegacyHelper_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,7],
+"LegacyHelper_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,7],
 "LegacyHideLocationSlot_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,7],
 "LegacyHideLocationSlot_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,2,7],
 "LegacyIncludeNode_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,1,1,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX6 =
 "Output_2ValueObjectVisitor_2CreatedPolicy_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,16],
 "Output_2ValueObjectVisitor_2CreatedRelation_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,17],
 "Output_2ValueObjectVisitor_2CreatedRelation_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,17],
-"Output_2ValueObjectVisitor_2CreatedRole_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,18],
-"Output_2ValueObjectVisitor_2CreatedRole_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,18],
-"Output_2ValueObjectVisitor_2CreatedSection_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,19],
-"Output_2ValueObjectVisitor_2CreatedSection_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,19],
-"Output_2ValueObjectVisitor_2CreatedURLAlias_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,20],
-"Output_2ValueObjectVisitor_2CreatedURLAlias_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,20],
-"Output_2ValueObjectVisitor_2CreatedURLWildcard_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,21]
+"Output_2ValueObjectVisitor_2CreatedRole_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,2,5,0,18]
 };

@@ -11,6 +11,12 @@ var dir_74f363ad7bfdfab614216fcd3464a6bd =
     [ "LegacyCompatible.php", "LegacyCompatible_8php.html", [
       [ "LegacyCompatible", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyCompatible.html", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyCompatible" ]
     ] ],
+    [ "LegacyEngine.php", "LegacyEngine_8php.html", [
+      [ "LegacyEngine", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyEngine.html", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyEngine" ]
+    ] ],
+    [ "LegacyFormulaLoader.php", "LegacyFormulaLoader_8php.html", [
+      [ "LegacyFormulaLoader", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyFormulaLoader.html", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyFormulaLoader" ]
+    ] ],
     [ "LegacyHelper.php", "LegacyHelper_8php.html", [
       [ "LegacyHelper", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyHelper.html", null ]
     ] ]

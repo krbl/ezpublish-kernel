@@ -46,6 +46,7 @@ var hierarchy =
     [ "eZ\\Bundle\\EzPublishLegacyBundle\\Controller\\LegacyKernelController", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html", null ],
     [ "eZ\\Bundle\\EzPublishLegacyBundle\\Controller\\LegacySetupController", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacySetupController.html", null ],
     [ "eZ\\Bundle\\EzPublishLegacyBundle\\DependencyInjection\\Compiler\\LegacyPass", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Compiler_1_1LegacyPass.html", null ],
+    [ "eZ\\Bundle\\EzPublishLegacyBundle\\DependencyInjection\\Compiler\\TwigPass", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Compiler_1_1TwigPass.html", null ],
     [ "eZ\\Bundle\\EzPublishLegacyBundle\\DependencyInjection\\Configuration", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Configuration.html", null ],
     [ "eZ\\Bundle\\EzPublishLegacyBundle\\DependencyInjection\\EzPublishLegacyExtension", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1EzPublishLegacyExtension.html", null ],
     [ "eZ\\Bundle\\EzPublishLegacyBundle\\EzPublishLegacyBundle", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1EzPublishLegacyBundle.html", null ],
@@ -870,9 +871,13 @@ var hierarchy =
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\LegacyCompatible", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyCompatible.html", [
       [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\LegacyAdapter", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyAdapter.html", null ]
     ] ],
+    [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\LegacyEngine", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyEngine.html", null ],
+    [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\LegacyFormulaLoader", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyFormulaLoader.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\LegacyHelper", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyHelper.html", null ],
+    [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Twig\\Environment", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Twig_1_1Environment.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Twig\\Extension\\LegacyExtension", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Twig_1_1Extension_1_1LegacyExtension.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Twig\\Node\\LegacyIncludeNode", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Twig_1_1Node_1_1LegacyIncludeNode.html", null ],
+    [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Twig\\Template", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Twig_1_1Template.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Twig\\TokenParser\\LegacyIncludeParser", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Twig_1_1TokenParser_1_1LegacyIncludeParser.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\View\\Provider", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html", [
       [ "eZ\\Publish\\Core\\MVC\\Legacy\\View\\Provider\\Content", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider_1_1Content.html", null ],

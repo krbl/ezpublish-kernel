@@ -214,6 +214,8 @@ var NAVTREEINDEX4 =
 "EmptyTrashSignal_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,0,7,1],
 "EnableLanguageSignal_8php.html":[4,0,0,0,0,0,0,0,0,1,1,8,0,2,3],
 "EnableLanguageSignal_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,8,0,2,3],
+"Environment_8php.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,1,3],
+"Environment_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,4,1,5,1,3],
 "ErrorMessage_8php.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,5],
 "ErrorMessage_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,7,0,2,0,5],
 "EventListener_8php.html":[4,0,0,0,0,0,0,0,0,1,2,0,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "EzXml_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,1,26,1,0],
 "EzcDbHandler_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,4],
 "EzcDbHandler_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,1,4],
-"FacetBuilderVisitor_2Aggregate_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,1,0],
-"FacetBuilderVisitor_2Aggregate_8php_source.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,1,0],
-"FacetBuilderVisitor_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,6]
+"FacetBuilderVisitor_2Aggregate_8php.html":[4,0,0,0,0,0,0,0,0,1,1,5,2,0,0,1,0]
 };
