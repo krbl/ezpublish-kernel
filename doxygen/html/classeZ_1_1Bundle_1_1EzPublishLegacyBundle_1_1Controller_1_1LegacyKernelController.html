@@ -175,80 +175,20 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Base fallback action. Will be basically used for every </p>
+<p>Base fallback action. Will be basically used for every legacy module.</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="LegacyKernelController_8php_source.html#l00066">66</a> of file <a class="el" href="LegacyKernelController_8php_source.html">LegacyKernelController.php</a>.</p>
-
-<p>References <a class="el" href="LegacyKernelController_8php_source.html#l00054">eZ\Bundle\EzPublishLegacyBundle\Controller\LegacyKernelController\render()</a>.</p>
+<p>Definition at line <a class="el" href="LegacyKernelController_8php_source.html#l00067">67</a> of file <a class="el" href="LegacyKernelController_8php_source.html">LegacyKernelController.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        <span class="keywordflow">try</span></div>
-<div class="line">        {</div>
-<div class="line">            $result = $this-&gt;kernel-&gt;run();</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keywordflow">catch</span> ( ezpModuleNotFound $e )</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1503d06992c3ae0105ac07e1fc5d7112">render</a>(</div>
-<div class="line">                <span class="stringliteral">&quot;EzPublishLegacyBundle:errors:module_not_found.html.twig&quot;</span>,</div>
-<div class="line">                array( <span class="stringliteral">&quot;moduleName&quot;</span> =&gt; $e-&gt;moduleName )</div>
-<div class="line">            )-&gt;setStatusCode( 404 );</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keywordflow">catch</span> ( ezpModuleViewNotFound $e )</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1503d06992c3ae0105ac07e1fc5d7112">render</a>(</div>
-<div class="line">                <span class="stringliteral">&quot;EzPublishLegacyBundle:errors:module_view_not_found.html.twig&quot;</span>,</div>
-<div class="line">                array( <span class="stringliteral">&quot;moduleName&quot;</span> =&gt; $e-&gt;moduleName, <span class="stringliteral">&quot;viewName&quot;</span> =&gt; $e-&gt;viewName )</div>
-<div class="line">            )-&gt;setStatusCode( 404 );</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keywordflow">catch</span> ( ezpModuleDisabled $e )</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1503d06992c3ae0105ac07e1fc5d7112">render</a>(</div>
-<div class="line">                <span class="stringliteral">&quot;EzPublishLegacyBundle:errors:module_disabled.html.twig&quot;</span>,</div>
-<div class="line">                array( <span class="stringliteral">&quot;moduleName&quot;</span> =&gt; $e-&gt;moduleName )</div>
-<div class="line">            )-&gt;setStatusCode( 404 );</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keywordflow">catch</span> ( ezpModuleViewDisabled $e )</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1503d06992c3ae0105ac07e1fc5d7112">render</a>(</div>
-<div class="line">                <span class="stringliteral">&quot;EzPublishLegacyBundle:errors:module_view_disabled.html.twig&quot;</span>,</div>
-<div class="line">                array( <span class="stringliteral">&quot;moduleName&quot;</span> =&gt; $e-&gt;moduleName, <span class="stringliteral">&quot;viewName&quot;</span> =&gt; $e-&gt;viewName )</div>
-<div class="line">            )-&gt;setStatusCode( 404 );</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keywordflow">catch</span> ( ezpAccessDenied $e )</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1503d06992c3ae0105ac07e1fc5d7112">render</a>(</div>
-<div class="line">                <span class="stringliteral">&quot;EzPublishLegacyBundle:errors:access_denied.html.twig&quot;</span></div>
-<div class="line">            )-&gt;setStatusCode( 403 );</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keywordflow">catch</span> ( ezpContentNotFoundException $e )</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1503d06992c3ae0105ac07e1fc5d7112">render</a>(</div>
-<div class="line">                <span class="stringliteral">&quot;EzPublishLegacyBundle:errors:content_not_found.html.twig&quot;</span></div>
-<div class="line">            )-&gt;setStatusCode( 404 );</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keywordflow">catch</span> ( ezpLanguageNotFound $e )</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1503d06992c3ae0105ac07e1fc5d7112">render</a>(</div>
-<div class="line">                <span class="stringliteral">&quot;EzPublishLegacyBundle:errors:language_not_found.html.twig&quot;</span></div>
-<div class="line">            )-&gt;setStatusCode( 500 );</div>
-<div class="line">        }</div>
+<div class="line">        $this-&gt;kernel-&gt;setUseExceptions( <span class="keyword">false</span> );</div>
+<div class="line">        $result = $this-&gt;kernel-&gt;run();</div>
+<div class="line">        $this-&gt;kernel-&gt;setUseExceptions( <span class="keyword">true</span> );</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Response(</div>
 <div class="line">            $result-&gt;getContent()</div>
 <div class="line">        );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a5a58a48c0c7c55ddc7da210f4f8918a5_cgraph.png" border="0" usemap="#classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a5a58a48c0c7c55ddc7da210f4f8918a5_cgraph" alt=""/></div>
-<map name="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a5a58a48c0c7c55ddc7da210f4f8918a5_cgraph" id="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a5a58a48c0c7c55ddc7da210f4f8918a5_cgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1503d06992c3ae0105ac07e1fc5d7112" title="eZ\\Bundle\\EzPublishLegacy\lBundle\\Controller\\LegacyKernel\lController\\render" alt="" coords="276,5,495,69"/></map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a1503d06992c3ae0105ac07e1fc5d7112"></a>
@@ -291,17 +231,6 @@ Public Member Functions</h2></td></tr>
 <div class="line">        <span class="keywordflow">return</span> $response;</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a1503d06992c3ae0105ac07e1fc5d7112_icgraph.png" border="0" usemap="#classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a1503d06992c3ae0105ac07e1fc5d7112_icgraph" alt=""/></div>
-<map name="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a1503d06992c3ae0105ac07e1fc5d7112_icgraph" id="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a1503d06992c3ae0105ac07e1fc5d7112_icgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a5a58a48c0c7c55ddc7da210f4f8918a5" title="eZ\\Bundle\\EzPublishLegacy\lBundle\\Controller\\LegacyKernel\lController\\indexAction" alt="" coords="276,5,495,69"/></map>
-</div>
-</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -313,7 +242,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle.html">EzPublishLegacyBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller.html">Controller</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html">LegacyKernelController</a></li>
-    <li class="footer">Generated on Fri Feb 1 2013 00:03:09 for ezp-next by
+    <li class="footer">Generated on Sat Feb 2 2013 00:04:32 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

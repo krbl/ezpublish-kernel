@@ -153,86 +153,99 @@ $(document).ready(function(){initNavTree('Bundle_2EzPublishLegacyBundle_2LegacyM
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="stringliteral">&quot;password&quot;</span> =&gt; <span class="stringliteral">&quot;Password&quot;</span>,</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <span class="stringliteral">&quot;database_name&quot;</span> =&gt; <span class="stringliteral">&quot;Database&quot;</span>,</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="stringliteral">&quot;type&quot;</span> =&gt; <span class="stringliteral">&quot;DatabaseImplementation&quot;</span>,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            ) as $key =&gt; $iniKey</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        )</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">if</span> ( isset( $databaseSettings[$key] ) )</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                $settings[<span class="stringliteral">&quot;site.ini/DatabaseSettings/$iniKey&quot;</span>] = $databaseSettings[$key];</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">// Image settings</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        $settings += $this-&gt;getImageSettings();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">// File settings</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        $settings += array(</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="stringliteral">&#39;site.ini/FileSettings/VarDir&#39;</span>      =&gt; $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;var_dir&#39;</span> ),</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="stringliteral">&#39;site.ini/FileSettings/StorageDir&#39;</span>  =&gt; $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;storage_dir&#39;</span> )</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        );</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        $event-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelEvent.html#a4d33897eb2331576d3be1214050639fa">getParameters</a>()-&gt;set(</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="stringliteral">&quot;injected-settings&quot;</span>,</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            $settings + (array)$event-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelEvent.html#a4d33897eb2331576d3be1214050639fa">getParameters</a>()-&gt;get( <span class="stringliteral">&quot;injected-settings&quot;</span> )</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="stringliteral">&quot;socket&quot;</span> =&gt; <span class="stringliteral">&quot;Socket&quot;</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            ) as $key =&gt; $iniKey</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        )</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">if</span> ( isset( $databaseSettings[$key] ) )</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                $settings[<span class="stringliteral">&quot;site.ini/DatabaseSettings/$iniKey&quot;</span>] = $databaseSettings[$key];</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="comment">// Some settings need specific values when not present.</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">switch</span> ( $key )</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;socket&quot;</span>:</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                        $settings[<span class="stringliteral">&quot;site.ini/DatabaseSettings/$iniKey&quot;</span>] = <span class="stringliteral">&quot;disabled&quot;</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="comment">// Inject csrf protection settings to make sure legacy &amp; symfony stack work together</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span> (</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            $this-&gt;container-&gt;hasParameter( <span class="stringliteral">&#39;form.type_extension.csrf.enabled&#39;</span> ) &amp;&amp;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            $this-&gt;container-&gt;getParameter( <span class="stringliteral">&#39;form.type_extension.csrf.enabled&#39;</span> )</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        )</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            ezxFormToken::setSecret( $this-&gt;container-&gt;getParameter( <span class="stringliteral">&#39;kernel.secret&#39;</span> ) );</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            ezxFormToken::setFormField( $this-&gt;container-&gt;getParameter( <span class="stringliteral">&#39;form.type_extension.csrf.field_name&#39;</span> ) );</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="comment">// Register content/cache event listener</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        ezpEvent::getInstance()-&gt;attach( <span class="stringliteral">&#39;content/cache&#39;</span>, array( $this-&gt;gatewayCachePurger, <span class="stringliteral">&#39;purge&#39;</span> ) );</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        ezpEvent::getInstance()-&gt;attach( <span class="stringliteral">&#39;content/cache/all&#39;</span>, array( $this-&gt;gatewayCachePurger, <span class="stringliteral">&#39;purgeAll&#39;</span> ) );</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">private</span> <span class="keyword">function</span> getImageSettings()</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        $imageSettings = array(</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="comment">// Basic settings</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="stringliteral">&#39;image.ini/FileSettings/TemporaryDir&#39;</span>       =&gt; $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;image.temporary_dir&#39;</span> ),</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="stringliteral">&#39;image.ini/FileSettings/PublishedImages&#39;</span>    =&gt; $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;image.published_images_dir&#39;</span> ),</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="stringliteral">&#39;image.ini/FileSettings/VersionedImages&#39;</span>    =&gt; $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;image.versioned_images_dir&#39;</span> ),</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="stringliteral">&#39;image.ini/AliasSettings/AliasList&#39;</span>         =&gt; array(),</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="comment">// ImageMagick configuration</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="stringliteral">&#39;image.ini/ImageMagick/IsEnabled&#39;</span>           =&gt; $this-&gt;options[<span class="stringliteral">&#39;imagemagick_enabled&#39;</span>] ? <span class="stringliteral">&#39;true&#39;</span> : <span class="stringliteral">&#39;false&#39;</span>,</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="stringliteral">&#39;image.ini/ImageMagick/ExecutablePath&#39;</span>      =&gt; $this-&gt;options[<span class="stringliteral">&#39;imagemagick_executable_path&#39;</span>],</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="stringliteral">&#39;image.ini/ImageMagick/Executable&#39;</span>          =&gt; $this-&gt;options[<span class="stringliteral">&#39;imagemagick_executable&#39;</span>],</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="stringliteral">&#39;image.ini/ImageMagick/PreParameters&#39;</span>       =&gt; $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;imagemagick.pre_parameters&#39;</span> ),</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="stringliteral">&#39;image.ini/ImageMagick/PostParameters&#39;</span>      =&gt; $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;imagemagick.post_parameters&#39;</span> ),</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="stringliteral">&#39;image.ini/ImageMagick/Filters&#39;</span>             =&gt; array()</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        );</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="comment">// Aliases configuration</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">foreach</span> ( $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;image_variations&#39;</span> ) as $aliasName =&gt; $aliasSettings )</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        {</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            $imageSettings[<span class="stringliteral">&#39;image.ini/AliasSettings/AliasList&#39;</span>][] = $aliasName;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordflow">if</span> ( isset( $aliasSettings[<span class="stringliteral">&#39;reference&#39;</span>] ) )</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                $imageSettings[<span class="stringliteral">&quot;image.ini/$aliasName/Reference&quot;</span>] = $aliasSettings[<span class="stringliteral">&#39;reference&#39;</span>];</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">foreach</span> ( $aliasSettings[<span class="stringliteral">&#39;filters&#39;</span>] as $filter )</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                $imageSettings[<span class="stringliteral">&quot;image.ini/$aliasName/Filters&quot;</span>][] = $filter[<span class="stringliteral">&#39;name&#39;</span>] . <span class="charliteral">&#39;=&#39;</span> . implode( <span class="charliteral">&#39;;&#39;</span>, $filter[<span class="stringliteral">&#39;params&#39;</span>] );</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            }</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="comment">// Image settings</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        $settings += $this-&gt;getImageSettings();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="comment">// File settings</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        $settings += array(</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="stringliteral">&#39;site.ini/FileSettings/VarDir&#39;</span>      =&gt; $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;var_dir&#39;</span> ),</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="stringliteral">&#39;site.ini/FileSettings/StorageDir&#39;</span>  =&gt; $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;storage_dir&#39;</span> )</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        );</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        $event-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelEvent.html#a4d33897eb2331576d3be1214050639fa">getParameters</a>()-&gt;set(</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="stringliteral">&quot;injected-settings&quot;</span>,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            $settings + (array)$event-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelEvent.html#a4d33897eb2331576d3be1214050639fa">getParameters</a>()-&gt;get( <span class="stringliteral">&quot;injected-settings&quot;</span> )</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        );</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="comment">// Inject csrf protection settings to make sure legacy &amp; symfony stack work together</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">if</span> (</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            $this-&gt;container-&gt;hasParameter( <span class="stringliteral">&#39;form.type_extension.csrf.enabled&#39;</span> ) &amp;&amp;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            $this-&gt;container-&gt;getParameter( <span class="stringliteral">&#39;form.type_extension.csrf.enabled&#39;</span> )</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        )</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            ezxFormToken::setSecret( $this-&gt;container-&gt;getParameter( <span class="stringliteral">&#39;kernel.secret&#39;</span> ) );</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            ezxFormToken::setFormField( $this-&gt;container-&gt;getParameter( <span class="stringliteral">&#39;form.type_extension.csrf.field_name&#39;</span> ) );</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="comment">// Register content/cache event listener</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        ezpEvent::getInstance()-&gt;attach( <span class="stringliteral">&#39;content/cache&#39;</span>, array( $this-&gt;gatewayCachePurger, <span class="stringliteral">&#39;purge&#39;</span> ) );</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        ezpEvent::getInstance()-&gt;attach( <span class="stringliteral">&#39;content/cache/all&#39;</span>, array( $this-&gt;gatewayCachePurger, <span class="stringliteral">&#39;purgeAll&#39;</span> ) );</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">private</span> <span class="keyword">function</span> getImageSettings()</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        $imageSettings = array(</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="comment">// Basic settings</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="stringliteral">&#39;image.ini/FileSettings/TemporaryDir&#39;</span>       =&gt; $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;image.temporary_dir&#39;</span> ),</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="stringliteral">&#39;image.ini/FileSettings/PublishedImages&#39;</span>    =&gt; $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;image.published_images_dir&#39;</span> ),</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="stringliteral">&#39;image.ini/FileSettings/VersionedImages&#39;</span>    =&gt; $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;image.versioned_images_dir&#39;</span> ),</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="stringliteral">&#39;image.ini/AliasSettings/AliasList&#39;</span>         =&gt; array(),</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="comment">// ImageMagick configuration</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="stringliteral">&#39;image.ini/ImageMagick/IsEnabled&#39;</span>           =&gt; $this-&gt;options[<span class="stringliteral">&#39;imagemagick_enabled&#39;</span>] ? <span class="stringliteral">&#39;true&#39;</span> : <span class="stringliteral">&#39;false&#39;</span>,</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="stringliteral">&#39;image.ini/ImageMagick/ExecutablePath&#39;</span>      =&gt; $this-&gt;options[<span class="stringliteral">&#39;imagemagick_executable_path&#39;</span>],</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="stringliteral">&#39;image.ini/ImageMagick/Executable&#39;</span>          =&gt; $this-&gt;options[<span class="stringliteral">&#39;imagemagick_executable&#39;</span>],</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="stringliteral">&#39;image.ini/ImageMagick/PreParameters&#39;</span>       =&gt; $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;imagemagick.pre_parameters&#39;</span> ),</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="stringliteral">&#39;image.ini/ImageMagick/PostParameters&#39;</span>      =&gt; $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;imagemagick.post_parameters&#39;</span> ),</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="stringliteral">&#39;image.ini/ImageMagick/Filters&#39;</span>             =&gt; array()</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        );</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">foreach</span> ( $this-&gt;options[<span class="stringliteral">&#39;imagemagick_filters&#39;</span>] as $filterName =&gt; $filter )</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        {</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            $imageSettings[<span class="stringliteral">&#39;image.ini/ImageMagick/Filters&#39;</span>][] = <span class="stringliteral">&quot;$filterName=&quot;</span> . strtr( $filter, array( <span class="charliteral">&#39;{&#39;</span> =&gt; <span class="charliteral">&#39;%&#39;</span>, <span class="charliteral">&#39;}&#39;</span> =&gt; <span class="stringliteral">&#39;&#39;</span> ) );</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        }</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">return</span> $imageSettings;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="comment">// Aliases configuration</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">foreach</span> ( $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;image_variations&#39;</span> ) as $aliasName =&gt; $aliasSettings )</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            $imageSettings[<span class="stringliteral">&#39;image.ini/AliasSettings/AliasList&#39;</span>][] = $aliasName;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">if</span> ( isset( $aliasSettings[<span class="stringliteral">&#39;reference&#39;</span>] ) )</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                $imageSettings[<span class="stringliteral">&quot;image.ini/$aliasName/Reference&quot;</span>] = $aliasSettings[<span class="stringliteral">&#39;reference&#39;</span>];</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keywordflow">foreach</span> ( $aliasSettings[<span class="stringliteral">&#39;filters&#39;</span>] as $filter )</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                $imageSettings[<span class="stringliteral">&quot;image.ini/$aliasName/Filters&quot;</span>][] = $filter[<span class="stringliteral">&#39;name&#39;</span>] . <span class="charliteral">&#39;=&#39;</span> . implode( <span class="charliteral">&#39;;&#39;</span>, $filter[<span class="stringliteral">&#39;params&#39;</span>] );</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">foreach</span> ( $this-&gt;options[<span class="stringliteral">&#39;imagemagick_filters&#39;</span>] as $filterName =&gt; $filter )</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            $imageSettings[<span class="stringliteral">&#39;image.ini/ImageMagick/Filters&#39;</span>][] = <span class="stringliteral">&quot;$filterName=&quot;</span> . strtr( $filter, array( <span class="charliteral">&#39;{&#39;</span> =&gt; <span class="charliteral">&#39;%&#39;</span>, <span class="charliteral">&#39;}&#39;</span> =&gt; <span class="stringliteral">&#39;&#39;</span> ) );</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">return</span> $imageSettings;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_7d1318b3b939336ca41ef9847f488a7b.html">Bundle</a></li><li class="navelem"><a class="el" href="dir_718d53db4ed4f1a0c6ead7c49da4650d.html">EzPublishLegacyBundle</a></li><li class="navelem"><a class="el" href="dir_ba0653e5e0251332449ac7f7204a446a.html">LegacyMapper</a></li><li class="navelem"><a class="el" href="Bundle_2EzPublishLegacyBundle_2LegacyMapper_2Configuration_8php.html">Configuration.php</a></li>
-    <li class="footer">Generated on Fri Feb 1 2013 00:03:03 for ezp-next by
+    <li class="footer">Generated on Sat Feb 2 2013 00:04:26 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

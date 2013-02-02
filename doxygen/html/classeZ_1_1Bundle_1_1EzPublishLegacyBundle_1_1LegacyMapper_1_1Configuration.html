@@ -259,11 +259,24 @@ Static Public Member Functions</h2></td></tr>
 <div class="line">                <span class="stringliteral">&quot;password&quot;</span> =&gt; <span class="stringliteral">&quot;Password&quot;</span>,</div>
 <div class="line">                <span class="stringliteral">&quot;database_name&quot;</span> =&gt; <span class="stringliteral">&quot;Database&quot;</span>,</div>
 <div class="line">                <span class="stringliteral">&quot;type&quot;</span> =&gt; <span class="stringliteral">&quot;DatabaseImplementation&quot;</span>,</div>
+<div class="line">                <span class="stringliteral">&quot;socket&quot;</span> =&gt; <span class="stringliteral">&quot;Socket&quot;</span></div>
 <div class="line">            ) as $key =&gt; $iniKey</div>
 <div class="line">        )</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">if</span> ( isset( $databaseSettings[$key] ) )</div>
+<div class="line">            {</div>
 <div class="line">                $settings[<span class="stringliteral">&quot;site.ini/DatabaseSettings/$iniKey&quot;</span>] = $databaseSettings[$key];</div>
+<div class="line">            }</div>
+<div class="line">            <span class="comment">// Some settings need specific values when not present.</span></div>
+<div class="line">            <span class="keywordflow">else</span></div>
+<div class="line">            {</div>
+<div class="line">                <span class="keywordflow">switch</span> ( $key )</div>
+<div class="line">                {</div>
+<div class="line">                    <span class="keywordflow">case</span> <span class="stringliteral">&quot;socket&quot;</span>:</div>
+<div class="line">                        $settings[<span class="stringliteral">&quot;site.ini/DatabaseSettings/$iniKey&quot;</span>] = <span class="stringliteral">&quot;disabled&quot;</span>;</div>
+<div class="line">                        <span class="keywordflow">break</span>;</div>
+<div class="line">                }</div>
+<div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Image settings</span></div>
@@ -316,7 +329,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle.html">EzPublishLegacyBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper.html">LegacyMapper</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Configuration.html">Configuration</a></li>
-    <li class="footer">Generated on Fri Feb 1 2013 00:03:09 for ezp-next by
+    <li class="footer">Generated on Sat Feb 2 2013 00:04:32 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>
