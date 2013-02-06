@@ -103,8 +103,6 @@ var NAVTREEINDEX44 =
 "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#aff96443b755151a303313b02bd442611":[3,0,0,1,2,3,1,0,4],
 "interfaceeZ_1_1Publish_1_1SPI_1_1Variation_1_1VariationHandler.html":[3,0,0,1,2,4,1],
 "interfaceeZ_1_1Publish_1_1SPI_1_1Variation_1_1VariationHandler.html#adf39386df2a41d018d098b8747233ac8":[3,0,0,1,2,4,1,0],
-"namespaceFieldTypeProviderInterface.html":[2,0,1],
-"namespaceFieldTypeProviderInterface.html":[3,0,1],
 "namespaceeZ.html":[3,0,0],
 "namespaceeZ.html":[2,0,0],
 "namespaceeZ_1_1Bundle.html":[3,0,0,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX44 =
 "namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1File.html":[3,0,0,1,1,4,2,4],
 "namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing.html":[3,0,0,1,1,4,2,5],
 "namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1Generator.html":[3,0,0,1,1,4,2,5,0],
-"namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Security.html":[3,0,0,1,1,4,2,6]
+"namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Security.html":[3,0,0,1,1,4,2,6],
+"namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Security_1_1Authentication.html":[3,0,0,1,1,4,2,6,0],
+"namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Security_1_1Authorization.html":[3,0,0,1,1,4,2,6,1]
 };

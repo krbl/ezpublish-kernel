@@ -105,87 +105,87 @@ $(document).ready(function(){initNavTree('Core_2Repository_2Values_2ContentType_
 </div><!--header-->
 <div class="contents">
 <a href="Core_2Repository_2Values_2ContentType_2FieldType_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\Repository\Values\ContentType;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1FieldType.html">eZ\Publish\API\Repository\FieldType</a> as FieldTypeInterface;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldType.html">eZ\Publish\SPI\FieldType\FieldType</a> as SPIFieldTypeInterface;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html">FieldType</a> <span class="keyword">implements</span> FieldTypeInterface</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a13d5f5d86dae9b2bb9f267fcebba52e4">   29</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a13d5f5d86dae9b2bb9f267fcebba52e4">$internalFieldType</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#ac5cbf5d84a650ef99649a48729262a37">   34</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#ac5cbf5d84a650ef99649a48729262a37">__construct</a>( SPIFieldTypeInterface $fieldType )</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        $this-&gt;internalFieldType = $fieldType;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a247f8d2ac278baab0ca3426e1b7c17e9">   44</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a247f8d2ac278baab0ca3426e1b7c17e9">getFieldTypeIdentifier</a>()</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;getFieldTypeIdentifier();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#af98b7637a28c4e984c0e51ec3359f7ab">   49</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#af98b7637a28c4e984c0e51ec3359f7ab">getName</a>( $value )</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;getName( $value );</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a64979f8da8f4be88fd7b3aa7d5e20e00">   73</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a64979f8da8f4be88fd7b3aa7d5e20e00">getSettingsSchema</a>()</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;getSettingsSchema();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a27c20ba4800915b72f5b1f9e3232a231">  117</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a27c20ba4800915b72f5b1f9e3232a231">getValidatorConfigurationSchema</a>()</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;getValidatorConfigurationSchema();</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a631ce0da4d357512d8418909234e220f">  127</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a631ce0da4d357512d8418909234e220f">isSearchable</a>()</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;isSearchable();</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#aad197c23148f2ba44a0209ff9fcd83e3">  138</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#aad197c23148f2ba44a0209ff9fcd83e3">getEmptyValue</a>()</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    {</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;getEmptyValue();</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a898c1df588c3b91eae7405dfc3abebfb">  150</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a898c1df588c3b91eae7405dfc3abebfb">fromHash</a>( $hash )</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;fromHash( $hash );</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#aac04baf4177227397e262da4f7bb992b">  162</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#aac04baf4177227397e262da4f7bb992b">toHash</a>( $value )</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    {</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;toHash( $value );</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a9e2d4386519b2f546808286d5828978c">  174</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a9e2d4386519b2f546808286d5828978c">fieldSettingsToHash</a>( $fieldSettings )</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    {</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;fieldSettingsToHash( $fieldSettings );</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    }</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00188"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#adb1126e30413b0c377154e0cd8d66bfd">  188</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#adb1126e30413b0c377154e0cd8d66bfd">fieldSettingsFromHash</a>( $fieldSettingsHash )</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;fieldSettingsFromHash( $fieldSettingsHash );</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00200"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#af1cc08f5aa2b60460e054776f4955c90">  200</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#af1cc08f5aa2b60460e054776f4955c90">validatorConfigurationToHash</a>( $validatorConfiguration )</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    {</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;validatorConfigurationToHash( $validatorConfiguration );</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00213"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a98ed08f1e9f3f906032ea3656d4d87b8">  213</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a98ed08f1e9f3f906032ea3656d4d87b8">validatorConfigurationFromHash</a>( $validatorConfigurationHash )</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    {</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;validatorConfigurationFromHash( $validatorConfigurationHash );</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\Repository\Values\ContentType;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1FieldType.html">eZ\Publish\API\Repository\FieldType</a> as FieldTypeInterface;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldType.html">eZ\Publish\SPI\FieldType\FieldType</a> as SPIFieldTypeInterface;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html">FieldType</a> <span class="keyword">implements</span> FieldTypeInterface</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a13d5f5d86dae9b2bb9f267fcebba52e4">   28</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a13d5f5d86dae9b2bb9f267fcebba52e4">$internalFieldType</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#ac5cbf5d84a650ef99649a48729262a37">   33</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#ac5cbf5d84a650ef99649a48729262a37">__construct</a>( SPIFieldTypeInterface $fieldType )</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        $this-&gt;internalFieldType = $fieldType;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a247f8d2ac278baab0ca3426e1b7c17e9">   43</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a247f8d2ac278baab0ca3426e1b7c17e9">getFieldTypeIdentifier</a>()</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;getFieldTypeIdentifier();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#af98b7637a28c4e984c0e51ec3359f7ab">   48</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#af98b7637a28c4e984c0e51ec3359f7ab">getName</a>( $value )</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;getName( $value );</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a64979f8da8f4be88fd7b3aa7d5e20e00">   72</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a64979f8da8f4be88fd7b3aa7d5e20e00">getSettingsSchema</a>()</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;getSettingsSchema();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a27c20ba4800915b72f5b1f9e3232a231">  116</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a27c20ba4800915b72f5b1f9e3232a231">getValidatorConfigurationSchema</a>()</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;getValidatorConfigurationSchema();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a631ce0da4d357512d8418909234e220f">  126</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a631ce0da4d357512d8418909234e220f">isSearchable</a>()</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;isSearchable();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#aad197c23148f2ba44a0209ff9fcd83e3">  137</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#aad197c23148f2ba44a0209ff9fcd83e3">getEmptyValue</a>()</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;getEmptyValue();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a898c1df588c3b91eae7405dfc3abebfb">  149</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a898c1df588c3b91eae7405dfc3abebfb">fromHash</a>( $hash )</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;fromHash( $hash );</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#aac04baf4177227397e262da4f7bb992b">  161</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#aac04baf4177227397e262da4f7bb992b">toHash</a>( $value )</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;toHash( $value );</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a9e2d4386519b2f546808286d5828978c">  173</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a9e2d4386519b2f546808286d5828978c">fieldSettingsToHash</a>( $fieldSettings )</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;fieldSettingsToHash( $fieldSettings );</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#adb1126e30413b0c377154e0cd8d66bfd">  187</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#adb1126e30413b0c377154e0cd8d66bfd">fieldSettingsFromHash</a>( $fieldSettingsHash )</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;fieldSettingsFromHash( $fieldSettingsHash );</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#af1cc08f5aa2b60460e054776f4955c90">  199</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#af1cc08f5aa2b60460e054776f4955c90">validatorConfigurationToHash</a>( $validatorConfiguration )</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;validatorConfigurationToHash( $validatorConfiguration );</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a98ed08f1e9f3f906032ea3656d4d87b8">  212</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1FieldType.html#a98ed08f1e9f3f906032ea3656d4d87b8">validatorConfigurationFromHash</a>( $validatorConfigurationHash )</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordflow">return</span> $this-&gt;internalFieldType-&gt;validatorConfigurationFromHash( $validatorConfigurationHash );</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_57883f88f9071375c384973424cd03e2.html">Repository</a></li><li class="navelem"><a class="el" href="dir_06558907482d6d8886605d94ebed2074.html">Values</a></li><li class="navelem"><a class="el" href="dir_bb24af47f62ce42f6753b0452e58cfae.html">ContentType</a></li><li class="navelem"><a class="el" href="Core_2Repository_2Values_2ContentType_2FieldType_8php.html">FieldType.php</a></li>
-    <li class="footer">Generated on Tue Feb 5 2013 00:03:22 for ezp-next by
+    <li class="footer">Generated on Wed Feb 6 2013 00:02:56 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

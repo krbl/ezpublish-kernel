@@ -198,7 +198,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Magic get function handling read to non public properties</p>
-<p>Returns value for all readonly (protected) properties. </p>
+<p>Returns value for all readonly (protected) properties.</p>
+<p>This method is for internal use  private</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">\eZ\Publish\API\Repository\Exceptions\PropertyNotFoundException</td><td>exception on all reads to undefined properties so typos are not silently accepted.</td></tr>
@@ -215,7 +216,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html#a3241fb709715e8527dcf93c893bd6789">eZ\Publish\Core\Repository\Values\Content\Content</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentTypeDraft.html#afc0cde62adde6a143fa7bcea8c9d6ee5">eZ\Publish\Core\REST\Client\Values\ContentType\ContentTypeDraft</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1User_1_1User.html#a1c7696fa3223e903bd99e45e9719b797">eZ\Publish\Core\Repository\Values\User\User</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1User_1_1UserGroup.html#ae01204feb3f7146bfd282ed68070bc89">eZ\Publish\Core\Repository\Values\User\UserGroup</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1Content_1_1VersionInfo.html#ac12df881cde1ab1202b56a500d094bca">eZ\Publish\Core\REST\Client\Values\Content\VersionInfo</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1User_1_1User.html#a52b378cce3599847799ffeb310d287bf">eZ\Publish\Core\REST\Client\Values\User\User</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1User_1_1UserGroup.html#ac9662ab1c1ad1f8e720550ba65279c31">eZ\Publish\Core\REST\Client\Values\User\UserGroup</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Location.html#a9ece3628e68bcadd454cf2cc0fcf1008">eZ\Publish\Core\Repository\Values\Content\Location</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1Content_1_1ContentInfo.html#af495a8bb274272d951177b879d65b8d0">eZ\Publish\Core\REST\Client\Values\Content\ContentInfo</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#accab54a350372069bd262b66ddc12b99">eZ\Publish\Core\Repository\Values\Content\ContentInfo</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1TrashItem.html#a55ae5c998b19886bede205d6bffbe12c">eZ\Publish\Core\Repository\Values\Content\TrashItem</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeDraft.html#a8f5688494dfbbe6480ab98362146ad74">eZ\Publish\Core\Repository\Values\ContentType\ContentTypeDraft</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1Content_1_1TrashItem.html#ae2d18453dd54c0c2df215e164f890db0">eZ\Publish\Core\REST\Client\Values\Content\TrashItem</a>.</p>
 
-<p>Definition at line <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00097">97</a> of file <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html">ValueObject.php</a>.</p>
+<p>Definition at line <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00104">104</a> of file <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html">ValueObject.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( property_exists( $this, $property ) )</div>
 <div class="line">        {</div>
@@ -252,6 +253,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Magic isset function handling isset() to non public properties</p>
 <p>Returns true for all (public/)protected/private properties.</p>
+<p>This method is for internal use  private</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">string</td><td class="paramname">$property</td><td>Name of the property</td></tr>
@@ -262,7 +264,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Content.html#adfc3e81df45efc66fb8c2c20fc483bcd">eZ\Publish\Core\Repository\Values\Content\Content</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1User_1_1User.html#ad09b0fefa72ac1269513096b581b4508">eZ\Publish\Core\Repository\Values\User\User</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentTypeDraft.html#affabca84c6ace88ab98dfe5221dc9484">eZ\Publish\Core\REST\Client\Values\ContentType\ContentTypeDraft</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1User_1_1UserGroup.html#a55bdc472451142e2475d16ec721442a9">eZ\Publish\Core\Repository\Values\User\UserGroup</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1Content_1_1VersionInfo.html#aaebcdcb80fea4f5d21081c955054a3a7">eZ\Publish\Core\REST\Client\Values\Content\VersionInfo</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1Location.html#a9f1bc25c1ff56e6e8967c986c809971b">eZ\Publish\Core\Repository\Values\Content\Location</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1TrashItem.html#a78462ce65b8e79ef295e71338ccff9ca">eZ\Publish\Core\Repository\Values\Content\TrashItem</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#a019e287304958989786cd093aa3b75a9">eZ\Publish\Core\Repository\Values\Content\ContentInfo</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeDraft.html#ad2bc432e4be877e86b53bfbfe124562b">eZ\Publish\Core\Repository\Values\ContentType\ContentTypeDraft</a>.</p>
 
-<p>Definition at line <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00115">115</a> of file <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html">ValueObject.php</a>.</p>
+<p>Definition at line <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00125">125</a> of file <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html">ValueObject.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> property_exists( $this, $property );</div>
 <div class="line">    }</div>
@@ -304,6 +306,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Magic set function handling writes to non public properties</p>
+<p>This method is for internal use  private</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">\eZ\Publish\API\Repository\Exceptions\PropertyNotFoundException</td><td>When property does not exist </td></tr>
@@ -322,7 +325,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentTypeDraft.html#a7495ffeb68136ebf7a89c369c950301b">eZ\Publish\Core\REST\Client\Values\ContentType\ContentTypeDraft</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeDraft.html#ab03c2fff0a654d696ad2edb17bbcab68">eZ\Publish\Core\Repository\Values\ContentType\ContentTypeDraft</a>.</p>
 
-<p>Definition at line <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00078">78</a> of file <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html">ValueObject.php</a>.</p>
+<p>Definition at line <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00081">81</a> of file <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html">ValueObject.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( property_exists( $this, $property ) )</div>
 <div class="line">        {</div>
@@ -368,6 +371,7 @@ Protected Member Functions</h2></td></tr>
 <p>Returns a new instance of this class with the data specified by $array.</p>
 <p>$array contains all the data members of this class in the form: array('member_name'=&gt;value).</p>
 <p>__set_state makes this class exportable with var_export. var_export() generates code, that calls this method when it is parsed with PHP.</p>
+<p>This method is for internal use  private</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mixed[]</td><td>$array</td></tr>
@@ -376,7 +380,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html">ValueObject</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00150">150</a> of file <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html">ValueObject.php</a>.</p>
+<p>Definition at line <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00166">166</a> of file <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html">ValueObject.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> <span class="keyword">static</span>( $array );</div>
 <div class="line">    }</div>
@@ -397,6 +401,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Magic unset function handling unset() to non public properties</p>
+<p>This method is for internal use  private</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">\eZ\Publish\API\Repository\Exceptions\PropertyNotFoundException</td><td>exception on all writes to undefined properties so typos are not silently accepted and </td></tr>
@@ -413,9 +418,9 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
 
-<p>Definition at line <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00131">131</a> of file <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html">ValueObject.php</a>.</p>
+<p>Definition at line <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00144">144</a> of file <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html">ValueObject.php</a>.</p>
 
-<p>References <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00078">eZ\Publish\API\Repository\Values\ValueObject\__set()</a>.</p>
+<p>References <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00081">eZ\Publish\API\Repository\Values\ValueObject\__set()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html#a9f8fa9c97dea809f77dd04bdf51ab9a2">__set</a>( $property, null );</div>
 <div class="line">    }</div>
@@ -455,7 +460,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Internal function for Legacy template engine compatibility to get property value</p>
-<p>private </p>
+<p>This method is for internal use  private</p>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>Since 5.0, available purely for legacy eZTemplate compatibility  <a class="el" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html#ab5a290532fcc88e87ce63ffc18603cd7">__get()</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -465,9 +470,9 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>mixed </dd></dl>
 
-<p>Definition at line <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00166">166</a> of file <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html">ValueObject.php</a>.</p>
+<p>Definition at line <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00184">184</a> of file <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html">ValueObject.php</a>.</p>
 
-<p>References <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00097">eZ\Publish\API\Repository\Values\ValueObject\__get()</a>.</p>
+<p>References <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00104">eZ\Publish\API\Repository\Values\ValueObject\__get()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html#ab5a290532fcc88e87ce63ffc18603cd7">__get</a>( $property );</div>
 <div class="line">    }</div>
@@ -506,11 +511,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Internal function for Legacy template engine compatibility to get properties</p>
-<p>private </p>
+<p>This method is for internal use  private</p>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Since 5.0, available purely for legacy eZTemplate compatibility  <a class="el" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html#a02bf5e121b741b1d10a971025db3c43f">__isset()</a></dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00180">180</a> of file <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html">ValueObject.php</a>.</p>
+<p>Definition at line <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00200">200</a> of file <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html">ValueObject.php</a>.</p>
 
 <p>References <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00056">eZ\Publish\API\Repository\Values\ValueObject\getProperties()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -567,7 +572,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00056">56</a> of file <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html">ValueObject.php</a>.</p>
 
-<p>References <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00115">eZ\Publish\API\Repository\Values\ValueObject\__isset()</a>.</p>
+<p>References <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00125">eZ\Publish\API\Repository\Values\ValueObject\__isset()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $properties = $dynamicProperties;</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( get_object_vars( $this ) as $property =&gt; $propertyValue )</div>
@@ -624,7 +629,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Internal function for Legacy template engine compatibility to check existence of property</p>
-<p>private </p>
+<p>This method is for internal use  private</p>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>Since 5.0, available purely for legacy eZTemplate compatibility  <a class="el" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html#a02bf5e121b741b1d10a971025db3c43f">__isset()</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -634,9 +639,9 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
 
-<p>Definition at line <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00196">196</a> of file <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html">ValueObject.php</a>.</p>
+<p>Definition at line <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00218">218</a> of file <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html">ValueObject.php</a>.</p>
 
-<p>References <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00115">eZ\Publish\API\Repository\Values\ValueObject\__isset()</a>.</p>
+<p>References <a class="el" href="API_2Repository_2Values_2ValueObject_8php_source.html#l00125">eZ\Publish\API\Repository\Values\ValueObject\__isset()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html#a02bf5e121b741b1d10a971025db3c43f">__isset</a>( $property );</div>
 <div class="line">    }</div>
@@ -663,7 +668,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1API.html">API</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1API_1_1Repository.html">Repository</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1API_1_1Repository_1_1Values.html">Values</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html">ValueObject</a></li>
-    <li class="footer">Generated on Tue Feb 5 2013 00:03:28 for ezp-next by
+    <li class="footer">Generated on Wed Feb 6 2013 00:03:02 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

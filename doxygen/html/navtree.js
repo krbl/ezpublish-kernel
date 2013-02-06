@@ -74,7 +74,7 @@ var NAVTREEINDEX =
 "functions_func_0x64.html",
 "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1TrashService.html#aa22cddadea8df62c78a33d19f8e9f3c3",
 "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1ObjectState_1_1Handler.html#a0f8f9d2ebb46a648423e772a2f01858c",
-"namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Security_1_1Authentication.html"
+"namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Security_1_1Authorization_1_1Voter.html"
 ];
 
 var navTreeSubIndices = new Array();
