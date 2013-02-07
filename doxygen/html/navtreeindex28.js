@@ -1,11 +1,12 @@
 var NAVTREEINDEX28 =
 {
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#a725df1941bdb26c70152271a631aa52f":[3,0,0,1,1,5,2,0,0,11,0],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#a7b413574675598fb90ac5a6f1986c025":[3,0,0,1,1,5,2,0,0,11,1],
-"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#a84f949e82c62f0b0740907b43b5d4fa2":[3,0,0,1,1,5,2,0,0,11,10],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#a84f949e82c62f0b0740907b43b5d4fa2":[3,0,0,1,1,5,2,0,0,11,11],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#a8ff1d0a5bf1b19839b807c96ae2730bb":[3,0,0,1,1,5,2,0,0,11,7],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#aac43ce69e6f463ab690462bc7145c2f3":[3,0,0,1,1,5,2,0,0,11,5],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#aae66e78992e2a0f46d3285c2c1a7298c":[3,0,0,1,1,5,2,0,0,11,0],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#ababf52617d4e4ab20652320eb99fc852":[3,0,0,1,1,5,2,0,0,11,8],
+"classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#abdea0682ef24f36684c63c7909b157dc":[3,0,0,1,1,5,2,0,0,11,10],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#acc6f0eeb0234471928252e7ad74a3aef":[3,0,0,1,1,5,2,0,0,11,4],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#aced1b3bf32a01bc779726b888481856a":[3,0,0,1,1,5,2,0,0,11,3],
 "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#afe11b34b41ea1e30a8f9ed3bcd258397":[3,0,0,1,1,5,2,0,0,11,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX28 =
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IntegrationTestRepository.html#a2a9996668777ca0fed7d80be1476e82d":[3,0,0,1,1,7,0,10,0],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IntegrationTestRepository.html#aaca2bbb4d9a2cf1e9e726181776e63d8":[3,0,0,1,1,7,0,10,2],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IntegrationTestRepository.html#ad20610c868223f52c61bc5831f3a066b":[3,0,0,1,1,7,0,10,1],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1LanguageService.html":[3,0,0,1,1,7,0,12],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1LanguageService.html#a0b7b948ed4f345776fc697e2cd198237":[3,0,0,1,1,7,0,12,4]
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1LanguageService.html":[3,0,0,1,1,7,0,12]
 };

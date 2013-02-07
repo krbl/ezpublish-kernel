@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1TrashService.html#a5e759cc0047aac4ed74e1646a21ccfbb":[3,0,0,1,0,0,17,0],
 "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1TrashService.html#aa22cddadea8df62c78a33d19f8e9f3c3":[3,0,0,1,0,0,17,5],
 "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1TrashService.html#ae659be2ddb50df6b7db8b0fba582994a":[3,0,0,1,0,0,17,3],
 "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1TrashService.html#ae713d18476674aa542e6f7c2016223de":[3,0,0,1,0,0,17,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html#a8037cb888c9081daf3fb01f59703d7d6":[3,0,0,1,2,3,0,1,0,0,2],
 "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html#acfc53676f201c2b0a7a97eda2c532e25":[3,0,0,1,2,3,0,1,0,0,3],
 "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1ObjectState_1_1Handler.html":[3,0,0,1,2,3,0,2,1],
-"interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1ObjectState_1_1Handler.html#a045b360c7b9d26e4b023ffaf6291e314":[3,0,0,1,2,3,0,2,1,5],
-"interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1ObjectState_1_1Handler.html#a0f0a528628237a86516a317cf4a06c6d":[3,0,0,1,2,3,0,2,1,3]
+"interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1ObjectState_1_1Handler.html#a045b360c7b9d26e4b023ffaf6291e314":[3,0,0,1,2,3,0,2,1,5]
 };

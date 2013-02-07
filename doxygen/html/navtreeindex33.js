@@ -1,5 +1,6 @@
 var NAVTREEINDEX33 =
 {
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1UserGroupCreate.html":[3,0,0,1,1,7,2,4,0,26],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1UserGroupCreate.html#a0cf56263c9b06bbe7d3eaf6b23706ea8":[3,0,0,1,1,7,2,4,0,26,1],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1UserGroupCreate.html#a15804790451a189bd4af1f34a8c66a90":[3,0,0,1,1,7,2,4,0,26,2],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1UserGroupCreate.html#a44df08596c33386ef34ff8da1f92aa9b":[3,0,0,1,1,7,2,4,0,26,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX33 =
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1FieldDefinitionList.html#ae157fd2ec1f35a4af1f88e0e7dbd5ece":[3,0,0,1,1,7,2,6,21,0],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1FieldDefinitionList.html#aea2d762b1a6250c976cfe4722349f9c3":[3,0,0,1,1,7,2,6,21,1],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1LocationList.html":[3,0,0,1,1,7,2,6,22],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1LocationList.html#a440434377093ca3b63c81c27c9bb0a1d":[3,0,0,1,1,7,2,6,22,0],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1LocationList.html#a7e325d86ae043ce8374b7afee2784cc1":[3,0,0,1,1,7,2,6,22,1]
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1LocationList.html#a440434377093ca3b63c81c27c9bb0a1d":[3,0,0,1,1,7,2,6,22,0]
 };
