@@ -15,7 +15,6 @@ var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1User_1_1Handler =
     [ "loadRoleAssignmentsByRoleId", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1User_1_1Handler.html#a7805960609d724898913d0b29d6e709d", null ],
     [ "loadRoleByIdentifier", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1User_1_1Handler.html#a065ed8d3bfa49ecde4cf9ae3c654950d", null ],
     [ "loadRoles", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1User_1_1Handler.html#a6ce5d02f8777c394b68d0f693658bbd4", null ],
-    [ "loadRolesByGroupId", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1User_1_1Handler.html#af77f120ec7eb139e3b49050f0d6a3bc9", null ],
     [ "removePolicy", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1User_1_1Handler.html#a21defdee6493c8c626f6f9da00f749ff", null ],
     [ "unAssignRole", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1User_1_1Handler.html#aa952f0d9ce5c2247517b678423a3b556", null ],
     [ "update", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1User_1_1Handler.html#aebe2a831b5b05911e0cdcc192c4557aa", null ],

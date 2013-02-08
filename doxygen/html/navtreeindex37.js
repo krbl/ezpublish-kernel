@@ -1,7 +1,5 @@
 var NAVTREEINDEX37 =
 {
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentService.html#a9d1c095cad7831e957e0bc36fd7e2c49":[3,0,0,1,1,8,4,29],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentService.html#a9f144129b2192f6cf82bf2da79b1bf36":[3,0,0,1,1,8,4,1],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentService.html#aa166bcd6f59a8cd02e321252a0fadd9c":[3,0,0,1,1,8,4,5],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentService.html#aa6cc3b9da63124cf7b750375d751e9a5":[3,0,0,1,1,8,4,12],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1ContentService.html#aacf7ce3d2b3b91dff027fd110284503b":[3,0,0,1,1,8,4,25],
@@ -249,5 +247,7 @@ var NAVTREEINDEX37 =
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1AddFieldDefinitionSignal.html":[3,0,0,1,1,8,0,1,0],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1AddFieldDefinitionSignal.html#af16978201fb81ace899b7cc471c42f00":[3,0,0,1,1,8,0,1,0,0],
 "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1AssignContentTypeGroupSignal.html":[3,0,0,1,1,8,0,1,1],
-"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1AssignContentTypeGroupSignal.html#a1b94e9674002bb756249891ad87ab5b8":[3,0,0,1,1,8,0,1,1,1]
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1AssignContentTypeGroupSignal.html#a1b94e9674002bb756249891ad87ab5b8":[3,0,0,1,1,8,0,1,1,1],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1AssignContentTypeGroupSignal.html#afe9a7ac482c8561690b63d4391ba25d0":[3,0,0,1,1,8,0,1,1,0],
+"classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentTypeService_1_1CopyContentTypeSignal.html":[3,0,0,1,1,8,0,1,2]
 };

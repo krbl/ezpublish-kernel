@@ -1,7 +1,5 @@
 var NAVTREEINDEX30 =
 {
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1Content_1_1Content.html#a0bf3c76a99c818dddd99d624fa4dd67b":[3,0,0,1,1,7,0,4,0,0,0],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1Content_1_1Content.html#a4d5ecf89a7d67bb5ed38bf5ecd12b926":[3,0,0,1,1,7,0,4,0,0,6],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1Content_1_1Content.html#a61257c5538188492181a32f7d5bd43a6":[3,0,0,1,1,7,0,4,0,0,2],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1Content_1_1Content.html#a70c2b430b36434e3f9030a7b8fd93e26":[3,0,0,1,1,7,0,4,0,0,7],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1Content_1_1Content.html#a7a57a826c9411493a78e1824fba81e21":[3,0,0,1,1,7,0,4,0,0,5],
@@ -249,5 +247,7 @@ var NAVTREEINDEX30 =
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#a9b8d9fb76555fca412af98b33d725269":[3,0,0,1,1,7,1,2,1,2,13],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#ab047bfc3be657035ee93bb933daecdab":[3,0,0,1,1,7,1,2,1,2,19],
 "classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#abc42844e3a8e5703873d57db4d2d1ea6":[3,0,0,1,1,7,1,2,1,2,4],
-"classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#ac3b46a72aa61e122b73cd005a4d8f56d":[3,0,0,1,1,7,1,2,1,2,6]
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#ac3b46a72aa61e122b73cd005a4d8f56d":[3,0,0,1,1,7,1,2,1,2,6],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json.html#ae54068fc6e6e9e05d136b53a0933e385":[3,0,0,1,1,7,1,2,1,2,2],
+"classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Json_1_1ArrayObject.html":[3,0,0,1,1,7,1,2,1,0,0]
 };

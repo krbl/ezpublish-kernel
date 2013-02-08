@@ -131,7 +131,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a182975c2172016cebeffbdc0c5ebda91"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#a182975c2172016cebeffbdc0c5ebda91">loadRole</a> ($roleId)</td></tr>
 <tr class="memitem:a779dcd83639fa78b4a8beb782291852d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#a779dcd83639fa78b4a8beb782291852d">loadRoleByIdentifier</a> ($identifier)</td></tr>
 <tr class="memitem:ab8b3bc4a612271393e08e3fffe4b1d7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#ab8b3bc4a612271393e08e3fffe4b1d7e">loadRoles</a> ()</td></tr>
-<tr class="memitem:a8ad2f9f0d02fd23f2d7dca6ecf847659"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#a8ad2f9f0d02fd23f2d7dca6ecf847659">loadRolesByGroupId</a> ($groupId)</td></tr>
 <tr class="memitem:afa594688fb3866283cc97eab839d5544"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#afa594688fb3866283cc97eab839d5544">loadRoleAssignmentsByRoleId</a> ($roleId)</td></tr>
 <tr class="memitem:aac0cd600ccb9c94fdbbe8a3729c4a9bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#aac0cd600ccb9c94fdbbe8a3729c4a9bc">loadRoleAssignmentsByGroupId</a> ($groupId, $inherit=false)</td></tr>
 <tr class="memitem:ad1e1c423b8cd597d2f7c482ecf1d995d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#ad1e1c423b8cd597d2f7c482ecf1d995d">updateRole</a> (<a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1RoleUpdateStruct.html">RoleUpdateStruct</a> $role)</td></tr>
@@ -585,32 +584,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8ad2f9f0d02fd23f2d7dca6ecf847659"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">eZ\Publish\SPI\Persistence\User\Handler::loadRolesByGroupId </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$groupId</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Loads roles assigned to a user/group (not including inherited roles)</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramtype">mixed</td><td class="paramname">$groupId</td><td>In legacy storage engine this is the content object id a role is assigned to. By the nature of legacy storage engine, it is therefor possible to use $userId as well here. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>[] </dd></dl>
-
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a782d5a7e0ee54d1415999702c0625587">eZ\Publish\Core\Persistence\InMemory\UserHandler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1User_1_1Handler.html#af77f120ec7eb139e3b49050f0d6a3bc9">eZ\Publish\Core\Persistence\Legacy\User\Handler</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a662d88b010c9415a74c0de9621876894"></a>
 <div class="memitem">
 <div class="memproto">
@@ -776,7 +749,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1SPI.html">SPI</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1SPI_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User.html">User</a></li><li class="navelem"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html">Handler</a></li>
-    <li class="footer">Generated on Thu Feb 7 2013 00:05:38 for ezp-next by
+    <li class="footer">Generated on Fri Feb 8 2013 00:03:36 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

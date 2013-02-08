@@ -125,28 +125,22 @@ $(document).ready(function(){initNavTree('ModifiedIn_8php_source.html','');});
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1DateMetadata_1_1ModifiedIn.html#ac9977315331d9b9555f1c496e525f229">   46</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor.html#a3d8d7b9ef4614dd71373a23e54373b68">visit</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query_1_1Criterion.html">Criterion</a> $criterion, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor.html">CriterionVisitor</a> $subVisitor = null )</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> <span class="charliteral">&#39;(&#39;</span> .</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            implode(</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="stringliteral">&#39; OR &#39;</span>,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                array_map(</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    <span class="keyword">function</span>( $value )</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        <span class="keywordflow">return</span> <span class="stringliteral">&#39;modified_dt:&quot;&#39;</span> . $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1DateMetadata.html#a842f9b27df9e2a9e9d12c279888df254">getSolrTime</a>( $value ) . <span class="charliteral">&#39;&quot;&#39;</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    },</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    $criterion-&gt;value</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                )</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            ) .</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="charliteral">&#39;)&#39;</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        $values = array();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">foreach</span> ( $criterion-&gt;value as $value )</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            $values[] = <span class="stringliteral">&#39;modified_dt:&quot;&#39;</span> . $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor_1_1DateMetadata.html#a842f9b27df9e2a9e9d12c279888df254">getSolrTime</a>( $value ) . <span class="charliteral">&#39;&quot;&#39;</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> <span class="charliteral">&#39;(&#39;</span> . implode( <span class="stringliteral">&#39; OR &#39;</span>, $values ) . <span class="charliteral">&#39;)&#39;</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_1015c0c9ea9f233a345f6405868e3e61.html">Persistence</a></li><li class="navelem"><a class="el" href="dir_08071baff1965dd81b5def28dd93d80c.html">Solr</a></li><li class="navelem"><a class="el" href="dir_39317d1e7abb4d4758dcddd33af19761.html">Content</a></li><li class="navelem"><a class="el" href="dir_d696bf22b7388f839bd1e5a87909c059.html">Search</a></li><li class="navelem"><a class="el" href="dir_4d17634bb5dc322481533067b0740133.html">CriterionVisitor</a></li><li class="navelem"><a class="el" href="dir_4ceeabb191f070963a1dcbe53dd9d253.html">DateMetadata</a></li><li class="navelem"><a class="el" href="ModifiedIn_8php.html">ModifiedIn.php</a></li>
-    <li class="footer">Generated on Thu Feb 7 2013 00:05:19 for ezp-next by
+    <li class="footer">Generated on Fri Feb 8 2013 00:03:22 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

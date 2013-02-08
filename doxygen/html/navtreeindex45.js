@@ -1,8 +1,5 @@
 var NAVTREEINDEX45 =
 {
-"namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Security_1_1Authorization.html":[3,0,0,1,1,4,2,6,1],
-"namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Security_1_1Authorization_1_1Voter.html":[3,0,0,1,1,4,2,6,1,0],
-"namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Security_1_1User.html":[3,0,0,1,1,4,2,6,2],
 "namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess.html":[3,0,0,1,1,4,2,7],
 "namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher.html":[3,0,0,1,1,4,2,7,0],
 "namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Map.html":[3,0,0,1,1,4,2,7,0,0],
