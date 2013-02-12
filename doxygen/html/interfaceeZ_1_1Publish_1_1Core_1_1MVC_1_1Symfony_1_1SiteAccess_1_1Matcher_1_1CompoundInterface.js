@@ -1,0 +1,4 @@
+var interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1CompoundInterface =
+[
+    [ "setMatcherBuilder", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1CompoundInterface.html#a32b8bf3b38974a0313f681f9ca16196f", null ]
+];

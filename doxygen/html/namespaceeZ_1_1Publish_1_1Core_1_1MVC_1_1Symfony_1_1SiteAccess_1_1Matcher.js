@@ -1,7 +1,10 @@
 var namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher =
 [
+    [ "Compound", "namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Compound.html", "namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Compound" ],
     [ "Map", "namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Map.html", "namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Map" ],
     [ "Regex", "namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Regex.html", "namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Regex" ],
+    [ "Compound", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Compound.html", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Compound" ],
+    [ "CompoundInterface", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1CompoundInterface.html", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1CompoundInterface" ],
     [ "HostElement", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1HostElement.html", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1HostElement" ],
     [ "HostText", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1HostText.html", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1HostText" ],
     [ "Map", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Map.html", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Map" ],

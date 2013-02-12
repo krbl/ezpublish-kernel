@@ -22,8 +22,11 @@ var hierarchy =
     [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser", "interfaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser.html", [
       [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\AbstractParser", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1AbstractParser.html", [
         [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\Common", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1Common.html", null ],
-        [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\FieldTemplates", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1FieldTemplates.html", null ],
         [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\Image", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1Image.html", null ],
+        [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\Templates", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1Templates.html", [
+          [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\FieldDefinitionSettingsTemplates", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1FieldDefinitionSettingsTemplates.html", null ],
+          [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\FieldTemplates", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1FieldTemplates.html", null ]
+        ] ],
         [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\View", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1View.html", [
           [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\ContentView", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1ContentView.html", null ],
           [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\LocationView", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1LocationView.html", null ]
@@ -948,6 +951,13 @@ var hierarchy =
       [ "eZ\\Bundle\\EzPublishCoreBundle\\SiteAccess", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1SiteAccess.html", null ]
     ] ],
     [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\Matcher", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher.html", [
+      [ "eZ\\Bundle\\EzPublishCoreBundle\\SiteAccess\\Matcher", "interfaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1SiteAccess_1_1Matcher.html", null ],
+      [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\Matcher\\CompoundInterface", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1CompoundInterface.html", [
+        [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\Matcher\\Compound", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Compound.html", [
+          [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\Matcher\\Compound\\LogicalAnd", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Compound_1_1LogicalAnd.html", null ],
+          [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\Matcher\\Compound\\LogicalOr", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Compound_1_1LogicalOr.html", null ]
+        ] ]
+      ] ],
       [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\Matcher\\HostElement", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1HostElement.html", null ],
       [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\Matcher\\HostText", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1HostText.html", null ],
       [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\Matcher\\Map", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Map.html", [
@@ -969,8 +979,14 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\Matcher\\URIElement", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1URIElement.html", null ],
       [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\Matcher\\URIText", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1URIText.html", null ]
     ] ],
+    [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\MatcherBuilderInterface", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1MatcherBuilderInterface.html", [
+      [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\MatcherBuilder", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1MatcherBuilder.html", [
+        [ "eZ\\Bundle\\EzPublishCoreBundle\\SiteAccess\\MatcherBuilder", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1SiteAccess_1_1MatcherBuilder.html", null ]
+      ] ]
+    ] ],
     [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\Router", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Router.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\URILexer", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1URILexer.html", [
+      [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\Matcher\\Compound", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Compound.html", null ],
       [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\Matcher\\Map\\URI", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1Map_1_1URI.html", null ],
       [ "eZ\\Publish\\Core\\MVC\\Symfony\\SiteAccess\\Matcher\\URIElement", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1SiteAccess_1_1Matcher_1_1URIElement.html", null ]
     ] ],

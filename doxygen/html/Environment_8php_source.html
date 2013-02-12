@@ -125,10 +125,10 @@ $(document).ready(function(){initNavTree('Environment_8php_source.html','');});
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Twig_1_1Environment.html#a4b5a28c3f923bf020807ccf88f6fa91b">   35</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Twig_1_1Environment.html#a4b5a28c3f923bf020807ccf88f6fa91b">loadTemplate</a>( $name, $index = null )</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">// If legacy engine supports given template, delegate it.</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">if</span> ( isset( $this-&gt;legacyTemplatesCache[$name] ) )</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">if</span> ( is_string( $name ) &amp;&amp; isset( $this-&gt;legacyTemplatesCache[$name] ) )</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">return</span> $this-&gt;legacyTemplatesCache[$name];</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;legacyEngine-&gt;supports( $name ) )</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">if</span> ( is_string( $name ) &amp;&amp; $this-&gt;legacyEngine-&gt;supports( $name ) )</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            $this-&gt;legacyTemplatesCache[$name] = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Twig_1_1Template.html">Template</a>( $name, $this, $this-&gt;legacyEngine );</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">return</span> $this-&gt;legacyTemplatesCache[$name];</div>
@@ -143,7 +143,7 @@ $(document).ready(function(){initNavTree('Environment_8php_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_3f2bbbda4a8cf240a23a45721a8bf194.html">MVC</a></li><li class="navelem"><a class="el" href="dir_2d8a4b44c5251d3d84910f968efb6304.html">Legacy</a></li><li class="navelem"><a class="el" href="dir_74f363ad7bfdfab614216fcd3464a6bd.html">Templating</a></li><li class="navelem"><a class="el" href="dir_b615905f78216a2da1deec515f4b8979.html">Twig</a></li><li class="navelem"><a class="el" href="Environment_8php.html">Environment.php</a></li>
-    <li class="footer">Generated on Fri Feb 8 2013 00:03:21 for ezp-next by
+    <li class="footer">Generated on Tue Feb 12 2013 00:02:50 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

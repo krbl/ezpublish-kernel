@@ -5,6 +5,7 @@ var namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle =
     [ "DependencyInjection", "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection.html", "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection" ],
     [ "EventListener", "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener.html", "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener" ],
     [ "Routing", "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Routing.html", "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Routing" ],
+    [ "SiteAccess", "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1SiteAccess.html", "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1SiteAccess" ],
     [ "View", "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View.html", "namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View" ],
     [ "Controller", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Controller.html", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Controller" ],
     [ "EzPublishCoreBundle", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EzPublishCoreBundle.html", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EzPublishCoreBundle" ],

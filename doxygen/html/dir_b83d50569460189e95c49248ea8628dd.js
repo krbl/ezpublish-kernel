@@ -5,6 +5,7 @@ var dir_b83d50569460189e95c49248ea8628dd =
     [ "DependencyInjection", "dir_fec31bad8dd5df739ea27f3ecc6a504d.html", "dir_fec31bad8dd5df739ea27f3ecc6a504d" ],
     [ "EventListener", "dir_9f23c0ea2355a1fbf69f0bac20907df2.html", "dir_9f23c0ea2355a1fbf69f0bac20907df2" ],
     [ "Routing", "dir_5bb5f3f3eb4a224a8c29f38e5d510320.html", "dir_5bb5f3f3eb4a224a8c29f38e5d510320" ],
+    [ "SiteAccess", "dir_3b582b6ec86bbdf6f8350d7454112037.html", "dir_3b582b6ec86bbdf6f8350d7454112037" ],
     [ "View", "dir_5e13046b95e6d168dfe08e6211e5d61d.html", "dir_5e13046b95e6d168dfe08e6211e5d61d" ],
     [ "Controller.php", "Bundle_2EzPublishCoreBundle_2Controller_8php.html", [
       [ "Controller", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Controller.html", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Controller" ]

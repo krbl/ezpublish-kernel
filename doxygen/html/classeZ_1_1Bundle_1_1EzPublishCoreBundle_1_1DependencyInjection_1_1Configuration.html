@@ -200,7 +200,7 @@ Public Member Functions</h2></td></tr>
 <div class="line">                        -&gt;end()</div>
 <div class="line">                        -&gt;scalarNode( <span class="stringliteral">&#39;default_siteaccess&#39;</span> )-&gt;isRequired()-&gt;info( <span class="stringliteral">&#39;Name of the default siteaccess&#39;</span> )-&gt;end()</div>
 <div class="line">                        -&gt;arrayNode( <span class="stringliteral">&#39;match&#39;</span> )</div>
-<div class="line">                            -&gt;info( <span class="stringliteral">&#39;Siteaccess match configuration. First key is the matcher class, value is passed to the matcher&#39;</span> )</div>
+<div class="line">                            -&gt;info( <span class="stringliteral">&#39;Siteaccess match configuration. First key is the matcher class, value is passed to the matcher. Key can be a service identifier (prepended by &quot;@&quot;), or a FQ class name (prepended by &quot;\\&quot;)&#39;</span> )</div>
 <div class="line">                            -&gt;example(</div>
 <div class="line">                                array(</div>
 <div class="line">                                    <span class="stringliteral">&#39;Map\\URI&#39;</span> =&gt; array(</div>
@@ -211,6 +211,12 @@ Public Member Functions</h2></td></tr>
 <div class="line">                                    <span class="stringliteral">&#39;Map\\Host&#39;</span> =&gt; array(</div>
 <div class="line">                                        <span class="stringliteral">&#39;ezpublish.dev&#39;</span> =&gt; <span class="stringliteral">&#39;ezdemo_site&#39;</span>,</div>
 <div class="line">                                        <span class="stringliteral">&#39;admin.ezpublish.dev&#39;</span> =&gt; <span class="stringliteral">&#39;ezdemo_site_admin&#39;</span></div>
+<div class="line">                                    ),</div>
+<div class="line">                                    <span class="stringliteral">&#39;\\My\\Custom\\Matcher&#39;</span> =&gt; array(</div>
+<div class="line">                                        <span class="stringliteral">&#39;some&#39;</span>  =&gt; <span class="stringliteral">&#39;configuration&#39;</span></div>
+<div class="line">                                    ),</div>
+<div class="line">                                    <span class="stringliteral">&#39;@my.custom.matcher&#39;</span> =&gt; array(</div>
+<div class="line">                                        <span class="stringliteral">&#39;some&#39;</span> =&gt; <span class="stringliteral">&#39;other_configuration&#39;</span></div>
 <div class="line">                                    )</div>
 <div class="line">                                )</div>
 <div class="line">                            )</div>
@@ -309,7 +315,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle.html">EzPublishCoreBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection.html">DependencyInjection</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration.html">Configuration</a></li>
-    <li class="footer">Generated on Fri Feb 8 2013 00:03:24 for ezp-next by
+    <li class="footer">Generated on Tue Feb 12 2013 00:02:53 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>
