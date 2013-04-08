@@ -206,7 +206,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool true if the template exists, false otherwise </dd></dl>
 
-<p>Definition at line <a class="el" href="LegacyEngine_8php_source.html#l00099">99</a> of file <a class="el" href="LegacyEngine_8php_source.html">LegacyEngine.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacyEngine_8php_source.html#l00115">115</a> of file <a class="el" href="LegacyEngine_8php_source.html">LegacyEngine.php</a>.</p>
 
 <p>References <a class="el" href="LegacyEngine_8php_source.html#l00044">eZ\Publish\Core\MVC\Legacy\Templating\LegacyEngine\getLegacyKernel()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -322,7 +322,23 @@ Protected Member Functions</h2></td></tr>
 <div class="line">                $tpl = eZTemplate::factory();</div>
 <div class="line">                <span class="keywordflow">foreach</span> ( $parameters as $varName =&gt; $param )</div>
 <div class="line">                {</div>
-<div class="line">                    <span class="keywordflow">if</span> ( !is_object( $param ) || $param instanceof LegacyCompatible )</div>
+<div class="line">                    <span class="comment">// If $param is an array, we recursively convert all objects contained in it (if any).</span></div>
+<div class="line">                    <span class="comment">// Scalar parameters are passed as is</span></div>
+<div class="line">                    <span class="keywordflow">if</span> ( is_array( $param ) )</div>
+<div class="line">                    {</div>
+<div class="line">                        array_walk_recursive(</div>
+<div class="line">                            $param,</div>
+<div class="line">                            <span class="keyword">function</span> ( &amp;$element ) use ( $objectConverter )</div>
+<div class="line">                            {</div>
+<div class="line">                                <span class="keywordflow">if</span> ( is_object( $element ) &amp;&amp; !( $element instanceof LegacyCompatible ) )</div>
+<div class="line">                                {</div>
+<div class="line">                                    $element = $objectConverter-&gt;convert( $element );</div>
+<div class="line">                                }</div>
+<div class="line">                            }</div>
+<div class="line">                        );</div>
+<div class="line">                        $tpl-&gt;setVariable( $varName, $param );</div>
+<div class="line">                    }</div>
+<div class="line">                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( !is_object( $param ) || $param instanceof LegacyCompatible )</div>
 <div class="line">                    {</div>
 <div class="line">                        $tpl-&gt;setVariable( $varName, $param );</div>
 <div class="line">                    }</div>
@@ -378,7 +394,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool true if this class supports the given template, false otherwise </dd></dl>
 
-<p>Definition at line <a class="el" href="LegacyEngine_8php_source.html#l00116">116</a> of file <a class="el" href="LegacyEngine_8php_source.html">LegacyEngine.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacyEngine_8php_source.html#l00132">132</a> of file <a class="el" href="LegacyEngine_8php_source.html">LegacyEngine.php</a>.</p>
 
 <p>References <a class="el" href="LegacyEngine_8php_source.html#l00020">eZ\Publish\Core\MVC\Legacy\Templating\LegacyEngine\SUPPORTED_SUFFIX</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -424,7 +440,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC.html">MVC</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating.html">Templating</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyEngine.html">LegacyEngine</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:56 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:54 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -4,6 +4,7 @@ var classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Type =
     [ "getEmptyValue", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Type.html#a8ff28ddddc7474992b183fabce28752a", null ],
     [ "getFieldTypeIdentifier", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Type.html#add04e92202ecfb1974c1cd43919626df", null ],
     [ "getName", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Type.html#a768923f52d5b63e26dd4b936e6d0a958", null ],
+    [ "getRelations", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Type.html#a7f45aef4c4fdeff05b22519521ccbb38", null ],
     [ "getSortInfo", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Type.html#ad51cf7c3130ea4c1e1ce5285213198eb", null ],
     [ "internalAcceptValue", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Type.html#a0045ca10ce1e87c6ab874755b734978e", null ],
     [ "isSearchable", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1Type.html#a84fe310d9c966d6df6f4cecf6cb36ad9", null ],

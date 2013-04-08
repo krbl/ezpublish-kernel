@@ -5,7 +5,6 @@ var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_
     [ "deleteField", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1EzcDatabase.html#a375560e5d0ebf22910c8250a9f1266f6", null ],
     [ "deleteFields", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1EzcDatabase.html#aea1363a2921b47ca6d25dc2feecb807c", null ],
     [ "deleteNames", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1EzcDatabase.html#a5dfc5d2924ef26d4143e978fb2cce6f9", null ],
-    [ "deleteRelation", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1EzcDatabase.html#afad86cb122163ad9e17683e6f98f1a3d", null ],
     [ "deleteRelations", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1EzcDatabase.html#a39b04dbfd5ce73e130e40817eca80838", null ],
     [ "deleteVersions", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1EzcDatabase.html#a941866ee409dd4ec775f54aa5e055d63", null ],
     [ "generateLanguageMask", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1EzcDatabase.html#a8a8e067af16766776b3e8efa8412515c", null ],

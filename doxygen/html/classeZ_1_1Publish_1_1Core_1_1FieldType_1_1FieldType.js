@@ -4,6 +4,7 @@ var classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType =
     [ "fieldSettingsFromHash", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html#ad8c5ecf2d0fb4f3db7372cb99c0c53d5", null ],
     [ "fieldSettingsToHash", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html#a061a7fce9b91257a2e3c008922b793e0", null ],
     [ "fromPersistenceValue", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html#a30654645354c43f6565e15334a24f25c", null ],
+    [ "getRelations", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html#aed50439bb1116653952b8b58af4f3f19", null ],
     [ "getSettingsSchema", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html#acb9fea6e683eaa87523981c9bb9a9284", null ],
     [ "getSortInfo", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html#a0b0c11864ef812a2dcd80d42c10a34c2", null ],
     [ "getValidatorConfigurationSchema", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html#a245a1c2d25d620b1fbb2d28d4edbba81", null ],

@@ -117,162 +117,190 @@ $(document).ready(function(){initNavTree('Native_8php_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1SortClauseVisitor.html">eZ\Publish\Core\Persistence\Solr\Content\Search\SortClauseVisitor</a>;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor.html">eZ\Publish\Core\Persistence\Solr\Content\Search\FacetBuilderVisitor</a>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper.html">eZ\Publish\Core\Persistence\Solr\Content\Search\FieldValueMapper</a>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html">Native</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway.html">Gateway</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a5c205cc169e6ecaa0801fb417aac52c4">   34</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a5c205cc169e6ecaa0801fb417aac52c4">$client</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a7b84c9b6c663cde83a49e7299f4b7958">   41</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a7b84c9b6c663cde83a49e7299f4b7958">$criterionVisitor</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a4e8d6435ce8850da075066bd2c452b8e">   48</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a4e8d6435ce8850da075066bd2c452b8e">$sortClauseVisitor</a>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#ad24dfd3f4a72d9d563b0220ed19b46e7">   55</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#ad24dfd3f4a72d9d563b0220ed19b46e7">$facetBuilderVisitor</a>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#ad23aecf0cdea6b99bc0a5373f6f8fe04">   62</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#ad23aecf0cdea6b99bc0a5373f6f8fe04">$fieldValueMapper</a>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a15ae7935b5c685dcbfee5d12fd44fd41">   69</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a15ae7935b5c685dcbfee5d12fd44fd41">$contentHandler</a>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#aace5fc52187e09f4151504d109546fb4">   76</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#aace5fc52187e09f4151504d109546fb4">$nameGenerator</a>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a8198694c623ddbc91368bc32a8b21223">   90</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a8198694c623ddbc91368bc32a8b21223">__construct</a>( <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1HttpClient.html">HttpClient</a> $client, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor.html">CriterionVisitor</a> $criterionVisitor, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1SortClauseVisitor.html">SortClauseVisitor</a> $sortClauseVisitor, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor.html">FacetBuilderVisitor</a> $facetBuilderVisitor, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper.html">FieldValueMapper</a> $fieldValueMapper, ContentHandler $contentHandler, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldNameGenerator.html">FieldNameGenerator</a> $nameGenerator )</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        $this-&gt;client              = $client;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        $this-&gt;criterionVisitor    = $criterionVisitor;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        $this-&gt;sortClauseVisitor   = $sortClauseVisitor;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        $this-&gt;facetBuilderVisitor = $facetBuilderVisitor;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        $this-&gt;fieldValueMapper    = $fieldValueMapper;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        $this-&gt;contentHandler      = $contentHandler;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        $this-&gt;nameGenerator       = $nameGenerator;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a9a6a183a01242fcad540850f96c0bb13">  112</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway.html#a7416acb1b0d309c9baa9b8ab7aba63c8">findContent</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query.html">Query</a> $query, array $fieldFilters = array() )</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="comment">// @todo: Extract method</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="stringliteral">&#39;GET&#39;</span>,</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="stringliteral">&#39;/solr/select?&#39;</span> .</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            http_build_query(</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                array(</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    <span class="charliteral">&#39;q&#39;</span>    =&gt; $this-&gt;criterionVisitor-&gt;visit( $query-&gt;criterion ),</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    <span class="stringliteral">&#39;sort&#39;</span> =&gt; implode(</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                        <span class="stringliteral">&#39;, &#39;</span>,</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                        array_map(</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                            array( $this-&gt;sortClauseVisitor, <span class="stringliteral">&#39;visit&#39;</span> ),</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                            $query-&gt;sortClauses</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                        )</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                    ),</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                    <span class="stringliteral">&#39;fl&#39;</span>   =&gt; <span class="stringliteral">&#39;*,score&#39;</span>,</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                    <span class="stringliteral">&#39;wt&#39;</span>   =&gt; <span class="stringliteral">&#39;json&#39;</span>,</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                )</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            ) .</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            ( count( $query-&gt;facetBuilders ) ? <span class="stringliteral">&#39;&amp;facet=true&amp;facet.sort=count&amp;&#39;</span> : <span class="stringliteral">&#39;&#39;</span> ) .</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            implode(</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="charliteral">&#39;&amp;&#39;</span>,</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                array_map(</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                    array( $this-&gt;facetBuilderVisitor, <span class="stringliteral">&#39;visit&#39;</span> ),</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                    $query-&gt;facetBuilders</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                )</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            )</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        );</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="comment">// @todo: Error handling?</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        $data = json_decode( $response-&gt;body );</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="comment">// @todo: Extract method</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        $result = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Search_1_1SearchResult.html">SearchResult</a>(</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            array(</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                <span class="stringliteral">&#39;time&#39;</span>       =&gt; $data-&gt;responseHeader-&gt;QTime / 1000,</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                <span class="stringliteral">&#39;maxScore&#39;</span>   =&gt; $data-&gt;response-&gt;maxScore,</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                <span class="stringliteral">&#39;totalCount&#39;</span> =&gt; $data-&gt;response-&gt;numFound,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;use RuntimeException;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html">Native</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway.html">Gateway</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a5c205cc169e6ecaa0801fb417aac52c4">   35</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a5c205cc169e6ecaa0801fb417aac52c4">$client</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a7b84c9b6c663cde83a49e7299f4b7958">   42</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a7b84c9b6c663cde83a49e7299f4b7958">$criterionVisitor</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a4e8d6435ce8850da075066bd2c452b8e">   49</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a4e8d6435ce8850da075066bd2c452b8e">$sortClauseVisitor</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#ad24dfd3f4a72d9d563b0220ed19b46e7">   56</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#ad24dfd3f4a72d9d563b0220ed19b46e7">$facetBuilderVisitor</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#ad23aecf0cdea6b99bc0a5373f6f8fe04">   63</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#ad23aecf0cdea6b99bc0a5373f6f8fe04">$fieldValueMapper</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a15ae7935b5c685dcbfee5d12fd44fd41">   70</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a15ae7935b5c685dcbfee5d12fd44fd41">$contentHandler</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#aace5fc52187e09f4151504d109546fb4">   77</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#aace5fc52187e09f4151504d109546fb4">$nameGenerator</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a8198694c623ddbc91368bc32a8b21223">   91</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a8198694c623ddbc91368bc32a8b21223">__construct</a>( <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1HttpClient.html">HttpClient</a> $client, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1CriterionVisitor.html">CriterionVisitor</a> $criterionVisitor, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1SortClauseVisitor.html">SortClauseVisitor</a> $sortClauseVisitor, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FacetBuilderVisitor.html">FacetBuilderVisitor</a> $facetBuilderVisitor, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper.html">FieldValueMapper</a> $fieldValueMapper, ContentHandler $contentHandler, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldNameGenerator.html">FieldNameGenerator</a> $nameGenerator )</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        $this-&gt;client              = $client;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        $this-&gt;criterionVisitor    = $criterionVisitor;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        $this-&gt;sortClauseVisitor   = $sortClauseVisitor;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        $this-&gt;facetBuilderVisitor = $facetBuilderVisitor;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        $this-&gt;fieldValueMapper    = $fieldValueMapper;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        $this-&gt;contentHandler      = $contentHandler;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        $this-&gt;nameGenerator       = $nameGenerator;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a9a6a183a01242fcad540850f96c0bb13">  113</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway.html#a7416acb1b0d309c9baa9b8ab7aba63c8">findContent</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Query.html">Query</a> $query, array $fieldFilters = array() )</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        $parameters = array(</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="stringliteral">&quot;q&quot;</span> =&gt; $this-&gt;criterionVisitor-&gt;visit( $query-&gt;criterion ),</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="stringliteral">&quot;sort&quot;</span> =&gt; implode(</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <span class="stringliteral">&quot;, &quot;</span>,</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                array_map(</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    array( $this-&gt;sortClauseVisitor, <span class="stringliteral">&quot;visit&quot;</span> ),</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    $query-&gt;sortClauses</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                )</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            ),</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="stringliteral">&quot;fl&quot;</span> =&gt; <span class="stringliteral">&quot;*,score&quot;</span>,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="stringliteral">&quot;wt&quot;</span> =&gt; <span class="stringliteral">&quot;json&quot;</span>,</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        );</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">if</span> ( $query-&gt;offset !== null )</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            $parameters[<span class="stringliteral">&quot;start&quot;</span>] = $query-&gt;offset;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">if</span> ( $query-&gt;limit !== null )</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            $parameters[<span class="stringliteral">&quot;rows&quot;</span>] = $query-&gt;limit;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="comment">// @todo: Extract method</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="stringliteral">&#39;GET&#39;</span>,</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="stringliteral">&#39;/solr/select?&#39;</span> .</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            http_build_query( $parameters ) .</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            ( count( $query-&gt;facetBuilders ) ? <span class="stringliteral">&#39;&amp;facet=true&amp;facet.sort=count&amp;&#39;</span> : <span class="stringliteral">&#39;&#39;</span> ) .</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            implode(</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                <span class="charliteral">&#39;&amp;&#39;</span>,</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                array_map(</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                    array( $this-&gt;facetBuilderVisitor, <span class="stringliteral">&#39;visit&#39;</span> ),</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                    $query-&gt;facetBuilders</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                )</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            )</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        );</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">foreach</span> ( $data-&gt;response-&gt;docs as $doc )</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        {</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            $searchHit = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Search_1_1SearchHit.html">SearchHit</a>(</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                array(</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                    <span class="stringliteral">&#39;score&#39;</span>       =&gt; $doc-&gt;score,</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                    <span class="stringliteral">&#39;valueObject&#39;</span> =&gt; $this-&gt;contentHandler-&gt;load( $doc-&gt;id, $doc-&gt;version_id )</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                )</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            );</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            $result-&gt;searchHits[] = $searchHit;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="comment">// @todo: Error handling?</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        $data = json_decode( $response-&gt;body );</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="comment">// @todo: Extract method</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        $result = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Search_1_1SearchResult.html">SearchResult</a>(</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            array(</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                <span class="stringliteral">&#39;time&#39;</span>       =&gt; $data-&gt;responseHeader-&gt;QTime / 1000,</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <span class="stringliteral">&#39;maxScore&#39;</span>   =&gt; $data-&gt;response-&gt;maxScore,</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                <span class="stringliteral">&#39;totalCount&#39;</span> =&gt; $data-&gt;response-&gt;numFound,</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            )</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        );</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">if</span> ( isset( $data-&gt;facet_counts ) )</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">foreach</span> ( $data-&gt;response-&gt;docs as $doc )</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        {</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">foreach</span> ( $data-&gt;facet_counts-&gt;facet_fields as $field =&gt; $facet )</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            {</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                $result-&gt;facets[] = $this-&gt;facetBuilderVisitor-&gt;map( $field, $facet );</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            }</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">return</span> $result;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            $searchHit = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1Search_1_1SearchHit.html">SearchHit</a>(</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                array(</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                    <span class="stringliteral">&#39;score&#39;</span>       =&gt; $doc-&gt;score,</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                    <span class="stringliteral">&#39;valueObject&#39;</span> =&gt; $this-&gt;contentHandler-&gt;load( $doc-&gt;id, $doc-&gt;version_id )</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                )</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            );</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            $result-&gt;searchHits[] = $searchHit;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        }</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#affb113c6bddd9c135c200e20edd09947">  182</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway.html#a91d7b7afafad5fe9c018190f3c75589f">indexContent</a>( array $document )</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    {</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        $update   = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a0a3e205774c769e4c9b2f9f9b1d30d7c">createUpdate</a>( $document );</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        $result   = $this-&gt;client-&gt;request(</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="stringliteral">&#39;POST&#39;</span>,</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="stringliteral">&#39;/solr/update?commit=true&amp;wt=json&#39;</span>,</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Message.html">Message</a>(</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                array(</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                    <span class="stringliteral">&#39;Content-Type: text/xml&#39;</span>,</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                ),</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                $update</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            )</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        );</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="comment">// @todo: Add error handling</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00204"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a4b0421b10ec77ae0211b604ee79b919c">  204</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway.html#a706e83b73ad0f0183d7d0a3c2e49a4bf">purgeIndex</a>()</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        $this-&gt;client-&gt;request(</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="stringliteral">&#39;POST&#39;</span>,</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="stringliteral">&#39;/solr/update?commit=true&amp;wt=json&#39;</span>,</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Message.html">Message</a>(</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                array(</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                    <span class="stringliteral">&#39;Content-Type: text/xml&#39;</span>,</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                ),</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                <span class="stringliteral">&#39;&lt;delete&gt;&lt;query&gt;*:*&lt;/query&gt;&lt;/delete&gt;&#39;</span></div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            )</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        );</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
-<div class="line"><a name="l00225"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a0a3e205774c769e4c9b2f9f9b1d30d7c">  225</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a0a3e205774c769e4c9b2f9f9b1d30d7c">createUpdate</a>( array $document )</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        $xml = new \XmlWriter();</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        $xml-&gt;openMemory();</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        $xml-&gt;startElement( <span class="stringliteral">&#39;add&#39;</span> );</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        $xml-&gt;startElement( <span class="stringliteral">&#39;doc&#39;</span> );</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">foreach</span> ( $document as $field )</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <span class="keywordflow">foreach</span> ( (array)$this-&gt;fieldValueMapper-&gt;map( $field ) as $value )</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            {</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                $xml-&gt;startElement( <span class="stringliteral">&#39;field&#39;</span> );</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                $xml-&gt;writeAttribute(</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                    <span class="stringliteral">&#39;name&#39;</span>,</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                    $this-&gt;nameGenerator-&gt;getTypedName( $field-&gt;name, $field-&gt;type )</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                );</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                $xml-&gt;text( $value );</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                $xml-&gt;endElement();</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            }</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        }</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        $xml-&gt;endElement();</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        $xml-&gt;endElement();</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">return</span> $xml-&gt;outputMemory( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    }</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">if</span> ( isset( $data-&gt;facet_counts ) )</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">foreach</span> ( $data-&gt;facet_counts-&gt;facet_fields as $field =&gt; $facet )</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                $result-&gt;facets[] = $this-&gt;facetBuilderVisitor-&gt;map( $field, $facet );</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">return</span> $result;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#affb113c6bddd9c135c200e20edd09947">  193</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway.html#a91d7b7afafad5fe9c018190f3c75589f">indexContent</a>( array $document )</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        $update   = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a0a3e205774c769e4c9b2f9f9b1d30d7c">createUpdate</a>( $document );</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        $result   = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="stringliteral">&#39;POST&#39;</span>,</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="stringliteral">&#39;/solr/update?commit=true&amp;wt=json&#39;</span>,</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                array(</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    <span class="stringliteral">&#39;Content-Type: text/xml&#39;</span>,</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                ),</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                $update</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            )</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        );</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">if</span> ( $result-&gt;headers[<span class="stringliteral">&quot;status&quot;</span>] !== 200 )</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException( <span class="stringliteral">&quot;Wrong HTTP status received from Solr: &quot;</span> . $result-&gt;headers[<span class="stringliteral">&quot;status&quot;</span>] );</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a6ece36d517da838bb4ac1df7f989a29e">  221</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway.html#a1e3e3feb6b57edbb51cc37b6adb8f623">deleteContent</a>( $contentId, $versionId = null )</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="stringliteral">&#39;POST&#39;</span>,</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="stringliteral">&#39;/solr/update?commit=true&amp;wt=json&#39;</span>,</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                array(</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                    <span class="stringliteral">&#39;Content-Type: text/xml&#39;</span>,</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                ),</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                <span class="stringliteral">&quot;&lt;delete&gt;&lt;query&gt;id:&quot;</span> . (<span class="keywordtype">int</span>)$contentId . ( $versionId !== null ? <span class="stringliteral">&quot; AND version_id:&quot;</span> . (<span class="keywordtype">int</span>)$versionId : <span class="stringliteral">&quot;&quot;</span> ) . <span class="stringliteral">&quot;&lt;/query&gt;&lt;/delete&gt;&quot;</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            )</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        );</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a4b0421b10ec77ae0211b604ee79b919c">  240</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway.html#a706e83b73ad0f0183d7d0a3c2e49a4bf">purgeIndex</a>()</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="stringliteral">&#39;POST&#39;</span>,</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            <span class="stringliteral">&#39;/solr/update?commit=true&amp;wt=json&#39;</span>,</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                array(</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                    <span class="stringliteral">&#39;Content-Type: text/xml&#39;</span>,</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                ),</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                <span class="stringliteral">&#39;&lt;delete&gt;&lt;query&gt;*:*&lt;/query&gt;&lt;/delete&gt;&#39;</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            )</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        );</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    }</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a0a3e205774c769e4c9b2f9f9b1d30d7c">  261</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a0a3e205774c769e4c9b2f9f9b1d30d7c">createUpdate</a>( array $document )</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        $xml = new \XmlWriter();</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        $xml-&gt;openMemory();</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        $xml-&gt;startElement( <span class="stringliteral">&#39;add&#39;</span> );</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        $xml-&gt;startElement( <span class="stringliteral">&#39;doc&#39;</span> );</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordflow">foreach</span> ( $document as $field )</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        {</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            <span class="keywordflow">foreach</span> ( (array)$this-&gt;fieldValueMapper-&gt;map( $field ) as $value )</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                $xml-&gt;startElement( <span class="stringliteral">&#39;field&#39;</span> );</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                $xml-&gt;writeAttribute(</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                    <span class="stringliteral">&#39;name&#39;</span>,</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                    $this-&gt;nameGenerator-&gt;getTypedName( $field-&gt;name, $field-&gt;type )</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                );</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                $xml-&gt;text( $value );</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                $xml-&gt;endElement();</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        $xml-&gt;endElement();</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        $xml-&gt;endElement();</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">return</span> $xml-&gt;outputMemory( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_1015c0c9ea9f233a345f6405868e3e61.html">Persistence</a></li><li class="navelem"><a class="el" href="dir_08071baff1965dd81b5def28dd93d80c.html">Solr</a></li><li class="navelem"><a class="el" href="dir_39317d1e7abb4d4758dcddd33af19761.html">Content</a></li><li class="navelem"><a class="el" href="dir_d696bf22b7388f839bd1e5a87909c059.html">Search</a></li><li class="navelem"><a class="el" href="dir_a905d85dee4bd1c6a9534af6e730302b.html">Gateway</a></li><li class="navelem"><a class="el" href="Native_8php.html">Native.php</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:51 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:49 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

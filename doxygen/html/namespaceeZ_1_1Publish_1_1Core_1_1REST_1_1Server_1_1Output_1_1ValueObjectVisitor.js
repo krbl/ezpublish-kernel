@@ -2,6 +2,7 @@ var namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVis
 [
     [ "BadRequestException", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1BadRequestException.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1BadRequestException" ],
     [ "BadStateException", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1BadStateException.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1BadStateException" ],
+    [ "Conflict", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Conflict.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Conflict" ],
     [ "ContentList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1ContentList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1ContentList" ],
     [ "ContentObjectStates", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1ContentObjectStates.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1ContentObjectStates" ],
     [ "ContentTypeGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1ContentTypeGroup.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1ContentTypeGroup" ],
@@ -59,6 +60,7 @@ var namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVis
     [ "Root", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Root.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Root" ],
     [ "Section", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Section.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Section" ],
     [ "SectionList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1SectionList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1SectionList" ],
+    [ "SeeOther", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1SeeOther.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1SeeOther" ],
     [ "TemporaryRedirect", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1TemporaryRedirect.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1TemporaryRedirect" ],
     [ "Trash", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Trash.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Trash" ],
     [ "UnauthorizedException", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1UnauthorizedException.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1UnauthorizedException" ],
@@ -71,6 +73,7 @@ var namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVis
     [ "UserGroupRefList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1UserGroupRefList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1UserGroupRefList" ],
     [ "UserList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1UserList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1UserList" ],
     [ "UserRefList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1UserRefList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1UserRefList" ],
+    [ "UserSession", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1UserSession.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1UserSession" ],
     [ "Version", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Version.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Version" ],
     [ "VersionInfo", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1VersionInfo.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1VersionInfo" ],
     [ "VersionList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1VersionList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1VersionList" ]

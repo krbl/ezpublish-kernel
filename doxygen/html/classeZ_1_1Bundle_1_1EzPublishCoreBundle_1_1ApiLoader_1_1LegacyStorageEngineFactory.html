@@ -116,12 +116,14 @@ $(document).ready(function(){initNavTree('classeZ_1_1Bundle_1_1EzPublishCoreBund
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abc4a300bfe642d9115a8278bc49c8f00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#abc4a300bfe642d9115a8278bc49c8f00">__construct</a> (ContainerInterface $container)</td></tr>
 <tr class="memitem:a5e9bc9541dca360c155b3f24a1ddd322"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a5e9bc9541dca360c155b3f24a1ddd322">registerFieldTypeConverter</a> ($typeIdentifier, $className)</td></tr>
+<tr class="memitem:a07eeab2b5287c2301107563bbca0b7fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a07eeab2b5287c2301107563bbca0b7fa">registerFieldType</a> ($fieldTypeServiceId, $fieldTypeAlias)</td></tr>
 <tr class="memitem:a8337cab16ff4511548229b0f0d4b706a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a8337cab16ff4511548229b0f0d4b706a">buildLegacyEngine</a> (<a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html">EzcDbHandler</a> $dbhandler, $deferTypeUpdate)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aa3b58a8ba9fa0e659f6842880ce7c986"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#aa3b58a8ba9fa0e659f6842880ce7c986">$container</a></td></tr>
 <tr class="memitem:a84028b18279992035df6873a00bbbb17"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a84028b18279992035df6873a00bbbb17">$converters</a> = array()</td></tr>
+<tr class="memitem:a821b0e461a66349d0e0d27124f3e73df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a821b0e461a66349d0e0d27124f3e73df">$fieldTypes</a> = array()</td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
@@ -141,7 +143,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LegacyStorageEngineFactory_8php_source.html#l00032">32</a> of file <a class="el" href="LegacyStorageEngineFactory_8php_source.html">LegacyStorageEngineFactory.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacyStorageEngineFactory_8php_source.html#l00034">34</a> of file <a class="el" href="LegacyStorageEngineFactory_8php_source.html">LegacyStorageEngineFactory.php</a>.</p>
 
 <p>References <a class="el" href="LegacyStorageEngineFactory_8php_source.html#l00023">eZ\Bundle\EzPublishCoreBundle\ApiLoader\LegacyStorageEngineFactory\$container</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -184,7 +186,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="LegacyStorageEngineFactory_8php_source.html#l00057">57</a> of file <a class="el" href="LegacyStorageEngineFactory_8php_source.html">LegacyStorageEngineFactory.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacyStorageEngineFactory_8php_source.html#l00075">75</a> of file <a class="el" href="LegacyStorageEngineFactory_8php_source.html">LegacyStorageEngineFactory.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $legacyEngineClass = $this-&gt;container-&gt;getParameter( <span class="stringliteral">&#39;ezpublish.api.storage_engine.legacy.class&#39;</span> );</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> $legacyEngineClass(</div>
@@ -199,8 +201,54 @@ Protected Attributes</h2></td></tr>
 <div class="line">            $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish.api.storage_engine.legacy.transformation_processor&#39;</span> ),</div>
 <div class="line">            array(</div>
 <div class="line">                <span class="stringliteral">&#39;defer_type_update&#39;</span> =&gt; (<span class="keywordtype">bool</span>)$deferTypeUpdate,</div>
+<div class="line">                <span class="stringliteral">&#39;field_type&#39;</span> =&gt; $this-&gt;fieldTypes,</div>
 <div class="line">            )</div>
 <div class="line">        );</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a07eeab2b5287c2301107563bbca0b7fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eZ\Bundle\EzPublishCoreBundle\ApiLoader\LegacyStorageEngineFactory::registerFieldType </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$fieldTypeServiceId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$fieldTypeAlias</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Registers an <a class="el" href="namespaceeZ.html">eZ</a> <a class="el" href="namespaceeZ_1_1Publish.html">Publish</a> field type. Field types are being registered as a closure so that they will be lazy loaded.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$fieldTypeServiceId</td><td>The field type service Id </td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$fieldTypeAlias</td><td>The field type alias (e.g. "ezstring") </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="LegacyStorageEngineFactory_8php_source.html#l00058">58</a> of file <a class="el" href="LegacyStorageEngineFactory_8php_source.html">LegacyStorageEngineFactory.php</a>.</p>
+
+<p>References <a class="el" href="LegacyStorageEngineFactory_8php_source.html#l00023">eZ\Bundle\EzPublishCoreBundle\ApiLoader\LegacyStorageEngineFactory\$container</a>.</p>
+<div class="fragment"><div class="line">    {</div>
+<div class="line">        <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#aa3b58a8ba9fa0e659f6842880ce7c986">$container</a> = <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#aa3b58a8ba9fa0e659f6842880ce7c986">$this-&gt;container</a>;</div>
+<div class="line">        $this-&gt;fieldTypes[$fieldTypeAlias] = <span class="keyword">function</span>() use ( <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#aa3b58a8ba9fa0e659f6842880ce7c986">$container</a>, $fieldTypeServiceId )</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#aa3b58a8ba9fa0e659f6842880ce7c986">$container</a>-&gt;get( $fieldTypeServiceId );</div>
+<div class="line">        };</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 </div>
@@ -237,7 +285,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="LegacyStorageEngineFactory_8php_source.html#l00044">44</a> of file <a class="el" href="LegacyStorageEngineFactory_8php_source.html">LegacyStorageEngineFactory.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacyStorageEngineFactory_8php_source.html#l00046">46</a> of file <a class="el" href="LegacyStorageEngineFactory_8php_source.html">LegacyStorageEngineFactory.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;converters[$typeIdentifier] = $className;</div>
 <div class="line">    }</div>
@@ -289,6 +337,28 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a821b0e461a66349d0e0d27124f3e73df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eZ\Bundle\EzPublishCoreBundle\ApiLoader\LegacyStorageEngineFactory::$fieldTypes = array()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="LegacyStorageEngineFactory_8php_source.html#l00032">32</a> of file <a class="el" href="LegacyStorageEngineFactory_8php_source.html">LegacyStorageEngineFactory.php</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/var/lib/jenkins/jobs/PAPI-doxygen-master/workspace/eZ/Bundle/EzPublishCoreBundle/ApiLoader/<a class="el" href="LegacyStorageEngineFactory_8php_source.html">LegacyStorageEngineFactory.php</a></li>
 </ul>
@@ -298,7 +368,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle.html">EzPublishCoreBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader.html">ApiLoader</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html">LegacyStorageEngineFactory</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:53 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:51 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

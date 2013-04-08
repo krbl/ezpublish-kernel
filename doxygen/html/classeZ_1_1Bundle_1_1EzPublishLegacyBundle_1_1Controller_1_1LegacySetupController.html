@@ -115,7 +115,7 @@ $(document).ready(function(){initNavTree('classeZ_1_1Bundle_1_1EzPublishLegacyBu
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3df2c55f6144d3cb1f0ce281cf8331b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacySetupController.html#a3df2c55f6144d3cb1f0ce281cf8331b3">__construct</a> (\Closure $kernelClosure, <a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Configuration_1_1LegacyConfigResolver.html">LegacyConfigResolver</a> $legacyConfigResolver)</td></tr>
+<tr class="memitem:a512ccfaa7b4395b203b3e28f1c115a6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacySetupController.html#a512ccfaa7b4395b203b3e28f1c115a6e">__construct</a> (\Closure $kernelClosure, <a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Configuration_1_1LegacyConfigResolver.html">LegacyConfigResolver</a> $legacyConfigResolver, <a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Cache_1_1PersistenceCachePurger.html">PersistenceCachePurger</a> $persistenceCachePurger)</td></tr>
 <tr class="memitem:afc31201f79294d0ace0dedace3b1e78d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacySetupController.html#afc31201f79294d0ace0dedace3b1e78d">setContainer</a> (Container $container)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-methods"></a>
@@ -128,9 +128,9 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="LegacySetupController_8php_source.html#l00018">18</a> of file <a class="el" href="LegacySetupController_8php_source.html">LegacySetupController.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacySetupController_8php_source.html#l00019">19</a> of file <a class="el" href="LegacySetupController_8php_source.html">LegacySetupController.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a3df2c55f6144d3cb1f0ce281cf8331b3"></a>
+<a class="anchor" id="a512ccfaa7b4395b203b3e28f1c115a6e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -144,7 +144,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1DependencyInjection_1_1Configuration_1_1LegacyConfigResolver.html">LegacyConfigResolver</a>&#160;</td>
-          <td class="paramname"><em>$legacyConfigResolver</em>&#160;</td>
+          <td class="paramname"><em>$legacyConfigResolver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Cache_1_1PersistenceCachePurger.html">PersistenceCachePurger</a>&#160;</td>
+          <td class="paramname"><em>$persistenceCachePurger</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -158,14 +164,16 @@ Protected Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramtype">\Closure</td><td class="paramname">$kernelClosure</td><td></td></tr>
     <tr><td class="paramtype">\eZ\Bundle\EzPublishLegacyBundle\DependencyInjection\Configuration\LegacyConfigResolver</td><td class="paramname">$legacyConfigResolver</td><td></td></tr>
+    <tr><td class="paramtype">\eZ\Bundle\EzPublishLegacyBundle\Cache\PersistenceCachePurger</td><td class="paramname">$persistenceCachePurger</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="LegacySetupController_8php_source.html#l00046">46</a> of file <a class="el" href="LegacySetupController_8php_source.html">LegacySetupController.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacySetupController_8php_source.html#l00053">53</a> of file <a class="el" href="LegacySetupController_8php_source.html">LegacySetupController.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;legacyKernelClosure = $kernelClosure;</div>
 <div class="line">        $this-&gt;legacyConfigResolver = $legacyConfigResolver;</div>
+<div class="line">        $this-&gt;persistenceCachePurger = $persistenceCachePurger;</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 </div>
@@ -193,7 +201,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="LegacySetupController_8php_source.html#l00060">60</a> of file <a class="el" href="LegacySetupController_8php_source.html">LegacySetupController.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacySetupController_8php_source.html#l00068">68</a> of file <a class="el" href="LegacySetupController_8php_source.html">LegacySetupController.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $legacyKernelClosure = $this-&gt;legacyKernelClosure;</div>
 <div class="line">        <span class="keywordflow">return</span> $legacyKernelClosure();</div>
@@ -215,9 +223,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LegacySetupController_8php_source.html#l00052">52</a> of file <a class="el" href="LegacySetupController_8php_source.html">LegacySetupController.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacySetupController_8php_source.html#l00060">60</a> of file <a class="el" href="LegacySetupController_8php_source.html">LegacySetupController.php</a>.</p>
 
-<p>References <a class="el" href="LegacySetupController_8php_source.html#l00037">eZ\Bundle\EzPublishLegacyBundle\Controller\LegacySetupController\$container</a>.</p>
+<p>References <a class="el" href="LegacySetupController_8php_source.html#l00043">eZ\Bundle\EzPublishLegacyBundle\Controller\LegacySetupController\$container</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;container = <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacySetupController.html#a006d8989b2bdfcbb9d6250871c5042c4">$container</a>;</div>
 <div class="line">    }</div>
@@ -243,7 +251,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LegacySetupController_8php_source.html#l00037">37</a> of file <a class="el" href="LegacySetupController_8php_source.html">LegacySetupController.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacySetupController_8php_source.html#l00043">43</a> of file <a class="el" href="LegacySetupController_8php_source.html">LegacySetupController.php</a>.</p>
 
 </div>
 </div>
@@ -256,7 +264,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle.html">EzPublishLegacyBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller.html">Controller</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacySetupController.html">LegacySetupController</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:53 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:51 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

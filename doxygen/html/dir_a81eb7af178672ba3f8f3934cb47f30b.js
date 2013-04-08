@@ -6,9 +6,6 @@ var dir_a81eb7af178672ba3f8f3934cb47f30b =
     [ "ContentCreateStruct.php", "Core_2Repository_2Values_2Content_2ContentCreateStruct_8php.html", [
       [ "ContentCreateStruct", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentCreateStruct.html", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentCreateStruct" ]
     ] ],
-    [ "ContentInfo.php", "Core_2Repository_2Values_2Content_2ContentInfo_8php.html", [
-      [ "ContentInfo", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentInfo" ]
-    ] ],
     [ "ContentUpdateStruct.php", "Core_2Repository_2Values_2Content_2ContentUpdateStruct_8php.html", [
       [ "ContentUpdateStruct", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentUpdateStruct.html", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentUpdateStruct" ]
     ] ],

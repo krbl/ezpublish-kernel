@@ -137,6 +137,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a75cfd32c6e5b861041d292a8369ae487"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a75cfd32c6e5b861041d292a8369ae487">load</a> ($locationId)</td></tr>
 <tr class="memitem:aec0bfd41310c853a4fc1fc92d762b8e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#aec0bfd41310c853a4fc1fc92d762b8e0">loadByRemoteId</a> ($remoteId)</td></tr>
 <tr class="memitem:aace0ff5a879c41c887c1d6777ea4da44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#aace0ff5a879c41c887c1d6777ea4da44">loadLocationsByContent</a> ($contentId, $rootLocationId=null)</td></tr>
+<tr class="memitem:a4ed48586b8bb0e2d1c540e355255542b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a4ed48586b8bb0e2d1c540e355255542b">copySubtree</a> ($sourceId, $destinationParentId)</td></tr>
 <tr class="memitem:a8c824ec1147922eaf3e1431590efb064"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a8c824ec1147922eaf3e1431590efb064">move</a> ($sourceId, $destinationParentId)</td></tr>
 <tr class="memitem:ab10a49a8343f3c729e27b4baecf35faf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#ab10a49a8343f3c729e27b4baecf35faf">markSubtreeModified</a> ($locationId, $timestamp=null)</td></tr>
 <tr class="memitem:a1a47a460b6073238195349d26d852a21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a1a47a460b6073238195349d26d852a21">hide</a> ($id)</td></tr>
@@ -147,8 +148,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9b00a02eef63a7fa0482f790a621d31d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a9b00a02eef63a7fa0482f790a621d31d">removeSubtree</a> ($locationId)</td></tr>
 <tr class="memitem:a531b1f773a4e1f443e6ae81974a9804b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a531b1f773a4e1f443e6ae81974a9804b">setSectionForSubtree</a> ($locationId, $sectionId)</td></tr>
 <tr class="memitem:a29dc9190750bc0d0089a7ee4a25d3296"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a29dc9190750bc0d0089a7ee4a25d3296">changeMainLocation</a> ($contentId, $locationId)</td></tr>
-<tr class="inherit_header pub_methods_interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler')"><img src="closed.png" alt="-"/>&nbsp;Public Member Functions inherited from <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler.html">eZ\Publish\SPI\Persistence\Content\Location\Handler</a></td></tr>
-<tr class="memitem:a0de06f32eafad71a3961e250f733b1fb inherit pub_methods_interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler.html#a0de06f32eafad71a3961e250f733b1fb">copySubtree</a> ($sourceId, $destinationParentId)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -301,7 +300,175 @@ Protected Attributes</h2></td></tr>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a29dc9190750bc0d0089a7ee4a25d3296_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a29dc9190750bc0d0089a7ee4a25d3296_icgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a29dc9190750bc0d0089a7ee4a25d3296_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a29dc9190750bc0d0089a7ee4a25d3296_icgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a9b00a02eef63a7fa0482f790a621d31d" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\removeSubtree" alt="" coords="265,5,465,69"/></map>
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a4ed48586b8bb0e2d1c540e355255542b" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\copySubtree" alt="" coords="265,5,465,69"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a9b00a02eef63a7fa0482f790a621d31d" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\removeSubtree" alt="" coords="265,93,465,157"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4ed48586b8bb0e2d1c540e355255542b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eZ\Publish\Core\Persistence\Legacy\Content\Location\Handler::copySubtree </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$sourceId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$destinationParentId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Copy location object identified by $sourceId, into destination identified by $destinationParentId.</p>
+<p>Performs a deep copy of the location identified by $sourceId and all of its child locations, copying the most recent published content object for each location to a new content object without any additional version information. Relations are not copied. URLs are not touched at all.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000070">Todo:</a></b></dt><dd>update subtree modification time, optionally retain dates and set creator</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">mixed</td><td class="paramname">$sourceId</td><td></td></tr>
+    <tr><td class="paramtype">mixed</td><td class="paramname">$destinationParentId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location.html">Location</a> the newly created <a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location.html">Location</a>. </dd></dl>
+
+<p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler.html#a0de06f32eafad71a3961e250f733b1fb">eZ\Publish\SPI\Persistence\Content\Location\Handler</a>.</p>
+
+<p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2Location_2Handler_8php_source.html#l00149">149</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2Location_2Handler_8php_source.html">Handler.php</a>.</p>
+
+<p>References <a class="el" href="SPI_2Persistence_2Content_2Location_8php_source.html#l00083">eZ\Publish\SPI\Persistence\Content\Location\$contentId</a>, <a class="el" href="SPI_2Persistence_2Content_2Location_8php_source.html#l00106">eZ\Publish\SPI\Persistence\Content\Location\$pathString</a>, <a class="el" href="Core_2Persistence_2Legacy_2Content_2Location_2Handler_8php_source.html#l00463">eZ\Publish\Core\Persistence\Legacy\Content\Location\Handler\changeMainLocation()</a>, <a class="el" href="Core_2Persistence_2Legacy_2Content_2Location_2Handler_8php_source.html#l00374">eZ\Publish\Core\Persistence\Legacy\Content\Location\Handler\create()</a>, and <a class="el" href="Core_2Persistence_2Legacy_2Content_2Location_2Handler_8php_source.html#l00446">eZ\Publish\Core\Persistence\Legacy\Content\Location\Handler\setSectionForSubtree()</a>.</p>
+<div class="fragment"><div class="line">    {</div>
+<div class="line">        $children = $this-&gt;locationGateway-&gt;getSubtreeContent( $sourceId );</div>
+<div class="line">        $destinationParentData = $this-&gt;locationGateway-&gt;getBasicNodeData( $destinationParentId );</div>
+<div class="line">        $contentMap = array();</div>
+<div class="line">        $locationMap = array(</div>
+<div class="line">            $children[0][<span class="stringliteral">&quot;parent_node_id&quot;</span>] =&gt; array(</div>
+<div class="line">                <span class="stringliteral">&quot;id&quot;</span> =&gt; $destinationParentId,</div>
+<div class="line">                <span class="stringliteral">&quot;hidden&quot;</span> =&gt; (<span class="keywordtype">boolean</span>)$destinationParentData[<span class="stringliteral">&quot;is_hidden&quot;</span>],</div>
+<div class="line">                <span class="stringliteral">&quot;invisible&quot;</span> =&gt; (<span class="keywordtype">boolean</span>)$destinationParentData[<span class="stringliteral">&quot;is_invisible&quot;</span>],</div>
+<div class="line">                <span class="stringliteral">&quot;path_identification_string&quot;</span> =&gt; $destinationParentData[<span class="stringliteral">&quot;path_identification_string&quot;</span>]</div>
+<div class="line">            )</div>
+<div class="line">        );</div>
+<div class="line"></div>
+<div class="line">        $locations = array();</div>
+<div class="line">        <span class="keywordflow">foreach</span> ( $children as $child )</div>
+<div class="line">        {</div>
+<div class="line">            $locations[$child[<span class="stringliteral">&quot;contentobject_id&quot;</span>]][$child[<span class="stringliteral">&quot;node_id&quot;</span>]] = <span class="keyword">true</span>;</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        $time = time();</div>
+<div class="line">        $mainLocations = array();</div>
+<div class="line">        $mainLocationsUpdate = array();</div>
+<div class="line">        <span class="keywordflow">foreach</span> ( $children as $index =&gt; $child )</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">// Copy content</span></div>
+<div class="line">            <span class="keywordflow">if</span> ( !isset( $contentMap[$child[<span class="stringliteral">&quot;contentobject_id&quot;</span>]] ) )</div>
+<div class="line">            {</div>
+<div class="line">                $content = $this-&gt;contentHandler-&gt;copy(</div>
+<div class="line">                    $child[<span class="stringliteral">&quot;contentobject_id&quot;</span>],</div>
+<div class="line">                    $child[<span class="stringliteral">&quot;contentobject_version&quot;</span>]</div>
+<div class="line">                );</div>
+<div class="line"></div>
+<div class="line">                $content = $this-&gt;contentHandler-&gt;publish(</div>
+<div class="line">                    $content-&gt;versionInfo-&gt;contentInfo-&gt;id,</div>
+<div class="line">                    $content-&gt;versionInfo-&gt;contentInfo-&gt;currentVersionNo,</div>
+<div class="line">                    <span class="keyword">new</span> MetadataUpdateStruct(</div>
+<div class="line">                        array(</div>
+<div class="line">                            <span class="stringliteral">&quot;publicationDate&quot;</span> =&gt; $time,</div>
+<div class="line">                            <span class="stringliteral">&quot;modificationDate&quot;</span> =&gt; $time</div>
+<div class="line">                        )</div>
+<div class="line">                    )</div>
+<div class="line">                );</div>
+<div class="line"></div>
+<div class="line">                $contentMap[$child[<span class="stringliteral">&quot;contentobject_id&quot;</span>]] = $content-&gt;versionInfo-&gt;contentInfo-&gt;id;</div>
+<div class="line">            }</div>
+<div class="line"></div>
+<div class="line">            $createStruct = $this-&gt;locationMapper-&gt;getLocationCreateStruct( $child );</div>
+<div class="line">            $createStruct-&gt;contentId = $contentMap[$child[<span class="stringliteral">&quot;contentobject_id&quot;</span>]];</div>
+<div class="line">            $parentData = $locationMap[$child[<span class="stringliteral">&quot;parent_node_id&quot;</span>]];</div>
+<div class="line">            $createStruct-&gt;parentId = $parentData[<span class="stringliteral">&quot;id&quot;</span>];</div>
+<div class="line">            $createStruct-&gt;invisible = $createStruct-&gt;hidden || $parentData[<span class="stringliteral">&quot;hidden&quot;</span>] || $parentData[<span class="stringliteral">&quot;invisible&quot;</span>];</div>
+<div class="line">            <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#acacc542395398917e79c55b5a41228b3">$pathString</a> = explode( <span class="stringliteral">&quot;/&quot;</span>, $child[<span class="stringliteral">&quot;path_identification_string&quot;</span>] );</div>
+<div class="line">            <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#acacc542395398917e79c55b5a41228b3">$pathString</a> = end( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#acacc542395398917e79c55b5a41228b3">$pathString</a> );</div>
+<div class="line">            $createStruct-&gt;pathIdentificationString = strlen( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#acacc542395398917e79c55b5a41228b3">$pathString</a> ) &gt; 0</div>
+<div class="line">                ? $parentData[<span class="stringliteral">&quot;path_identification_string&quot;</span>] . <span class="stringliteral">&quot;/&quot;</span> . <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#acacc542395398917e79c55b5a41228b3">$pathString</a></div>
+<div class="line">                : null;</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// Use content main location if already set, otherwise create location as main</span></div>
+<div class="line">            <span class="keywordflow">if</span> ( isset( $mainLocations[$child[<span class="stringliteral">&quot;contentobject_id&quot;</span>]] ) )</div>
+<div class="line">            {</div>
+<div class="line">                $createStruct-&gt;mainLocationId = $locationMap[$mainLocations[$child[<span class="stringliteral">&quot;contentobject_id&quot;</span>]]][<span class="stringliteral">&quot;id&quot;</span>];</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">else</span></div>
+<div class="line">            {</div>
+<div class="line">                $createStruct-&gt;mainLocationId = <span class="keyword">true</span>;</div>
+<div class="line">                $mainLocations[$child[<span class="stringliteral">&quot;contentobject_id&quot;</span>]] = $child[<span class="stringliteral">&quot;node_id&quot;</span>];</div>
+<div class="line"></div>
+<div class="line">                <span class="comment">// If needed mark for update</span></div>
+<div class="line">                <span class="keywordflow">if</span> (</div>
+<div class="line">                    isset( $locations[$child[<span class="stringliteral">&quot;contentobject_id&quot;</span>]][$child[<span class="stringliteral">&quot;main_node_id&quot;</span>]] ) &amp;&amp;</div>
+<div class="line">                    count( $locations[$child[<span class="stringliteral">&quot;contentobject_id&quot;</span>]] ) &gt; 1 &amp;&amp;</div>
+<div class="line">                    $child[<span class="stringliteral">&quot;node_id&quot;</span>] !== $child[<span class="stringliteral">&quot;main_node_id&quot;</span>]</div>
+<div class="line">                )</div>
+<div class="line">                {</div>
+<div class="line">                    $mainLocationsUpdate[$child[<span class="stringliteral">&quot;contentobject_id&quot;</span>]] = $child[<span class="stringliteral">&quot;main_node_id&quot;</span>];</div>
+<div class="line">                }</div>
+<div class="line">            }</div>
+<div class="line"></div>
+<div class="line">            $newLocation = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a4399efcc6dca6b0ba088dcab8efcbfc5">create</a>( $createStruct );</div>
+<div class="line"></div>
+<div class="line">            $locationMap[$child[<span class="stringliteral">&quot;node_id&quot;</span>]] = array(</div>
+<div class="line">                <span class="stringliteral">&quot;id&quot;</span> =&gt; $newLocation-&gt;id,</div>
+<div class="line">                <span class="stringliteral">&quot;hidden&quot;</span> =&gt; $newLocation-&gt;hidden,</div>
+<div class="line">                <span class="stringliteral">&quot;invisible&quot;</span> =&gt; $newLocation-&gt;invisible,</div>
+<div class="line">                <span class="stringliteral">&quot;path_identification_string&quot;</span> =&gt; $newLocation-&gt;pathIdentificationString</div>
+<div class="line">            );</div>
+<div class="line">            <span class="keywordflow">if</span> ( $index === 0 )</div>
+<div class="line">            {</div>
+<div class="line">                $copiedSubtreeRootLocation = $newLocation;</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// Update main locations</span></div>
+<div class="line">        <span class="keywordflow">foreach</span> ( $mainLocationsUpdate as <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a8412da687922acf3ef5c1f016c3c07ca">$contentId</a> =&gt; $mainLocationId )</div>
+<div class="line">        {</div>
+<div class="line">            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a29dc9190750bc0d0089a7ee4a25d3296">changeMainLocation</a>(</div>
+<div class="line">                $contentMap[<a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a8412da687922acf3ef5c1f016c3c07ca">$contentId</a>],</div>
+<div class="line">                $locationMap[$mainLocationId][<span class="stringliteral">&quot;id&quot;</span>]</div>
+<div class="line">            );</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// If subtree root is main location for its content, update subtree section to the one of the</span></div>
+<div class="line">        <span class="comment">// parent location content</span></div>
+<div class="line">        $subtreeRootContentInfo = $this-&gt;contentHandler-&gt;loadContentInfo( $copiedSubtreeRootLocation-&gt;contentId );</div>
+<div class="line">        <span class="keywordflow">if</span> ( $subtreeRootContentInfo-&gt;mainLocationId === $copiedSubtreeRootLocation-&gt;id )</div>
+<div class="line">        {</div>
+<div class="line">            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a531b1f773a4e1f443e6ae81974a9804b">setSectionForSubtree</a>(</div>
+<div class="line">                $copiedSubtreeRootLocation-&gt;id,</div>
+<div class="line">                $this-&gt;contentHandler-&gt;loadContentInfo( $this-&gt;load( $destinationParentId )-&gt;contentId )-&gt;sectionId</div>
+<div class="line">            );</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">return</span> $copiedSubtreeRootLocation;</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a4ed48586b8bb0e2d1c540e355255542b_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a4ed48586b8bb0e2d1c540e355255542b_cgraph" alt=""/></div>
+<map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a4ed48586b8bb0e2d1c540e355255542b_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a4ed48586b8bb0e2d1c540e355255542b_cgraph">
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a29dc9190750bc0d0089a7ee4a25d3296" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\changeMainLocation" alt="" coords="256,24,467,88"/><area shape="rect" id="node7" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a531b1f773a4e1f443e6ae81974a9804b" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\setSectionForSubtree" alt="" coords="515,93,733,157"/><area shape="rect" id="node9" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a4399efcc6dca6b0ba088dcab8efcbfc5" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\create" alt="" coords="261,163,461,227"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a75cfd32c6e5b861041d292a8369ae487" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\load" alt="" coords="524,5,724,69"/></map>
 </div>
 </p>
 
@@ -344,6 +511,17 @@ Protected Attributes</h2></td></tr>
 <div class="line">        <span class="keywordflow">return</span> $locationStruct;</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
+<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a4399efcc6dca6b0ba088dcab8efcbfc5_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a4399efcc6dca6b0ba088dcab8efcbfc5_icgraph" alt=""/></div>
+<map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a4399efcc6dca6b0ba088dcab8efcbfc5_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a4399efcc6dca6b0ba088dcab8efcbfc5_icgraph">
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a4ed48586b8bb0e2d1c540e355255542b" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\copySubtree" alt="" coords="257,5,457,69"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a98c039f593d34d77750cf35f70d1903c"></a>
@@ -449,14 +627,14 @@ Protected Attributes</h2></td></tr>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;locationMapper-&gt;createLocationFromRow( $data );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a75cfd32c6e5b861041d292a8369ae487_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a75cfd32c6e5b861041d292a8369ae487_icgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a75cfd32c6e5b861041d292a8369ae487_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a75cfd32c6e5b861041d292a8369ae487_icgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a29dc9190750bc0d0089a7ee4a25d3296" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\changeMainLocation" alt="" coords="256,5,467,69"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a9b00a02eef63a7fa0482f790a621d31d" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\removeSubtree" alt="" coords="516,5,716,69"/></map>
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a29dc9190750bc0d0089a7ee4a25d3296" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\changeMainLocation" alt="" coords="256,49,467,113"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a4ed48586b8bb0e2d1c540e355255542b" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\copySubtree" alt="" coords="516,5,716,69"/><area shape="rect" id="node7" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a9b00a02eef63a7fa0482f790a621d31d" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\removeSubtree" alt="" coords="516,93,716,157"/></map>
 </div>
 </p>
 
@@ -677,11 +855,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2Persistence_2Legacy_2Content_2Location_2Handler_8php_source.html#l00400">400</a> of file <a class="el" href="Core_2Persistence_2Legacy_2Content_2Location_2Handler_8php_source.html">Handler.php</a>.</p>
 
-<p>References <a class="el" href="SPI_2Persistence_2Content_2Location_8php_source.html#l00083">eZ\Publish\SPI\Persistence\Content\Location\$contentId</a>, <a class="el" href="SPI_2Persistence_2Content_2Location_8php_source.html#l00116">eZ\Publish\SPI\Persistence\Content\Location\$mainLocationId</a>, and <a class="el" href="Core_2Persistence_2Legacy_2Content_2Location_2Handler_8php_source.html#l00463">eZ\Publish\Core\Persistence\Legacy\Content\Location\Handler\changeMainLocation()</a>.</p>
+<p>References <a class="el" href="SPI_2Persistence_2Content_2Location_8php_source.html#l00083">eZ\Publish\SPI\Persistence\Content\Location\$contentId</a>, and <a class="el" href="Core_2Persistence_2Legacy_2Content_2Location_2Handler_8php_source.html#l00463">eZ\Publish\Core\Persistence\Legacy\Content\Location\Handler\changeMainLocation()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $locationRow = $this-&gt;locationGateway-&gt;getBasicNodeData( $locationId );</div>
 <div class="line">        <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a8412da687922acf3ef5c1f016c3c07ca">$contentId</a> = $locationRow[<span class="stringliteral">&quot;contentobject_id&quot;</span>];</div>
-<div class="line">        <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#aad18b7f15fb03a74084ebd9dba6062da">$mainLocationId</a> = $locationRow[<span class="stringliteral">&quot;main_node_id&quot;</span>];</div>
+<div class="line">        $mainLocationId = $locationRow[<span class="stringliteral">&quot;main_node_id&quot;</span>];</div>
 <div class="line"></div>
 <div class="line">        $subLocations = $this-&gt;locationGateway-&gt;getChildren( $locationId );</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $subLocations as $subLocation )</div>
@@ -689,7 +867,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a9b00a02eef63a7fa0482f790a621d31d">removeSubtree</a>( $subLocation[<span class="stringliteral">&quot;node_id&quot;</span>] );</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">if</span> ( $locationId == <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#aad18b7f15fb03a74084ebd9dba6062da">$mainLocationId</a> )</div>
+<div class="line">        <span class="keywordflow">if</span> ( $locationId == $mainLocationId )</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">if</span> ( 1 == $this-&gt;locationGateway-&gt;countLocationsByContentId( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a8412da687922acf3ef5c1f016c3c07ca">$contentId</a> ) )</div>
 <div class="line">            {</div>
@@ -715,11 +893,11 @@ Protected Attributes</h2></td></tr>
 <div class="line">        $this-&gt;locationGateway-&gt;deleteNodeAssignment( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location.html#a8412da687922acf3ef5c1f016c3c07ca">$contentId</a> );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a9b00a02eef63a7fa0482f790a621d31d_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a9b00a02eef63a7fa0482f790a621d31d_cgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a9b00a02eef63a7fa0482f790a621d31d_cgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a9b00a02eef63a7fa0482f790a621d31d_cgraph">
 <area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a29dc9190750bc0d0089a7ee4a25d3296" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\changeMainLocation" alt="" coords="256,49,467,113"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a75cfd32c6e5b861041d292a8369ae487" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\load" alt="" coords="524,5,724,69"/><area shape="rect" id="node7" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a531b1f773a4e1f443e6ae81974a9804b" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\setSectionForSubtree" alt="" coords="515,93,733,157"/></map>
@@ -770,14 +948,14 @@ Protected Attributes</h2></td></tr>
 <div class="line">        $this-&gt;locationGateway-&gt;setSectionForSubtree( $nodeData[<span class="stringliteral">&#39;path_string&#39;</span>], $sectionId );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a531b1f773a4e1f443e6ae81974a9804b_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a531b1f773a4e1f443e6ae81974a9804b_icgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a531b1f773a4e1f443e6ae81974a9804b_icgraph" id="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler_a531b1f773a4e1f443e6ae81974a9804b_icgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a29dc9190750bc0d0089a7ee4a25d3296" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\changeMainLocation" alt="" coords="272,5,483,69"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a9b00a02eef63a7fa0482f790a621d31d" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\removeSubtree" alt="" coords="532,5,732,69"/></map>
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a4ed48586b8bb0e2d1c540e355255542b" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\copySubtree" alt="" coords="532,5,732,69"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a29dc9190750bc0d0089a7ee4a25d3296" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\changeMainLocation" alt="" coords="272,75,483,139"/><area shape="rect" id="node8" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a9b00a02eef63a7fa0482f790a621d31d" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Location\l\\Handler\\removeSubtree" alt="" coords="532,93,732,157"/></map>
 </div>
 </p>
 
@@ -1000,7 +1178,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location.html">Location</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html">Handler</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:59 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:56 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

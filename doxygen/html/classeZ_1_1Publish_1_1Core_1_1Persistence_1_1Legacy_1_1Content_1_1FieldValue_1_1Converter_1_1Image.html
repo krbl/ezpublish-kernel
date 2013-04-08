@@ -409,7 +409,7 @@ Protected Member Functions</h2></td></tr>
 <div class="line">        <span class="comment">// &lt;/ezimage&gt;</span></div>
 <div class="line">$xml = &lt;&lt;&lt;EOT</div>
 <div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;utf-8&quot;</span>?&gt;</div>
-<div class="line">&lt;ezimage serial_number=<span class="stringliteral">&quot;1&quot;</span> is_valid=<span class="stringliteral">&quot;1&quot;</span> filename=<span class="stringliteral">&quot;%s&quot;</span></div>
+<div class="line">&lt;ezimage serial_number=<span class="stringliteral">&quot;1&quot;</span> is_valid=<span class="stringliteral">&quot;%s&quot;</span> filename=<span class="stringliteral">&quot;%s&quot;</span></div>
 <div class="line">    suffix=<span class="stringliteral">&quot;%s&quot;</span> basename=<span class="stringliteral">&quot;%s&quot;</span> dirpath=<span class="stringliteral">&quot;%s&quot;</span> url=<span class="stringliteral">&quot;%s&quot;</span></div>
 <div class="line">    original_filename=<span class="stringliteral">&quot;%s&quot;</span> mime_type=<span class="stringliteral">&quot;%s&quot;</span> width=<span class="stringliteral">&quot;%s&quot;</span></div>
 <div class="line">    height=<span class="stringliteral">&quot;%s&quot;</span> alternative_text=<span class="stringliteral">&quot;%s&quot;</span> alias_key=<span class="stringliteral">&quot;%s&quot;</span> timestamp=<span class="stringliteral">&quot;%s&quot;</span>&gt;</div>
@@ -421,6 +421,7 @@ Protected Member Functions</h2></td></tr>
 <div class="line">        <span class="keywordflow">return</span> sprintf(</div>
 <div class="line">            $xml,</div>
 <div class="line">            <span class="comment">// &lt;ezimage&gt;</span></div>
+<div class="line">            ( $pathInfo[<span class="stringliteral">&#39;basename&#39;</span>] !== <span class="stringliteral">&#39;&#39;</span> ? <span class="charliteral">&#39;1&#39;</span> : <span class="stringliteral">&#39;&#39;</span> ), <span class="comment">// is_valid=&quot;%s&quot;</span></div>
 <div class="line">            htmlspecialchars( $pathInfo[<span class="stringliteral">&#39;basename&#39;</span>] ), <span class="comment">// filename=&quot;%s&quot;</span></div>
 <div class="line">            htmlspecialchars( $pathInfo[<span class="stringliteral">&#39;extension&#39;</span>] ), <span class="comment">// suffix=&quot;%s&quot;</span></div>
 <div class="line">            htmlspecialchars( $pathInfo[<span class="stringliteral">&#39;filename&#39;</span>] ), <span class="comment">// basename=&quot;%s&quot;</span></div>
@@ -486,7 +487,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter.html#ad266ad07454eb8043b80d08520ae273a">eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter</a>.</p>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html#l00262">262</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html">Image.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html#l00263">263</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html">Image.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="comment">// @todo: Correct?</span></div>
 <div class="line">        <span class="keywordflow">return</span> <span class="stringliteral">&#39;sort_key_string&#39;</span>;</div>
@@ -525,9 +526,9 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html#l00182">182</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html">Image.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html#l00183">183</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html">Image.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html#l00182">eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\Image\parseLegacyXml()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html#l00183">eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\Image\parseLegacyXml()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $extractedData = array();</div>
 <div class="line"></div>
@@ -622,7 +623,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter.html#aa5dafdf20e5ec322c1283520d8166b1b">eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter</a>.</p>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html#l00238">238</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html">Image.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html#l00239">239</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html">Image.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $fieldDef-&gt;fieldTypeConstraints = <span class="keyword">new</span> FieldTypeConstraints(</div>
 <div class="line">            array(</div>
@@ -673,9 +674,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter.html#a1a2324572721ebce33e24e778444a213">eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter</a>.</p>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html#l00163">163</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html">Image.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html#l00164">164</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html">Image.php</a>.</p>
 
-<p>References <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html#l00182">eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\Image\parseLegacyXml()</a>.</p>
+<p>References <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html#l00183">eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\Image\parseLegacyXml()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( empty( $value-&gt;dataText ) )</div>
 <div class="line">        {</div>
@@ -732,7 +733,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter.html#af08ae9a2b6b80b1cc1527675287625cd">eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter</a>.</p>
 
-<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html#l00225">225</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html">Image.php</a>.</p>
+<p>Definition at line <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html#l00226">226</a> of file <a class="el" href="Publish_2Core_2Persistence_2Legacy_2Content_2FieldValue_2Converter_2Image_8php_source.html">Image.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $storageDef-&gt;dataInt1 = ( isset( $fieldDef-&gt;fieldTypeConstraints-&gt;validators[<span class="stringliteral">&#39;FileSizeValidator&#39;</span>][<span class="stringliteral">&#39;maxFileSize&#39;</span>] )</div>
 <div class="line">            ? round( $fieldDef-&gt;fieldTypeConstraints-&gt;validators[<span class="stringliteral">&#39;FileSizeValidator&#39;</span>][<span class="stringliteral">&#39;maxFileSize&#39;</span>] / 1024 / 1024 )</div>
@@ -821,7 +822,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue.html">FieldValue</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter.html">Converter</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter_1_1Image.html">Image</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:57 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:56 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

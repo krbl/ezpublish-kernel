@@ -134,14 +134,14 @@ $(document).ready(function(){initNavTree('Core_2REST_2Client_2Input_2Parser_2Con
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        $fieldDefinitionListReference = $this-&gt;parserTools-&gt;parseObjectElement( $data[<span class="stringliteral">&#39;FieldDefinitions&#39;</span>], $parsingDispatcher );</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html">Values\ContentType\ContentType</a>(</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        $contentType = <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html">Values\ContentType\ContentType</a>(</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            $this-&gt;contentTypeService,</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            array(</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="stringliteral">&#39;id&#39;</span>   =&gt; $data[<span class="stringliteral">&#39;_href&#39;</span>],</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="stringliteral">&#39;status&#39;</span> =&gt; $this-&gt;parserTools-&gt;parseStatus( $data[<span class="stringliteral">&#39;status&#39;</span>] ),</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="stringliteral">&#39;identifier&#39;</span> =&gt; $data[<span class="stringliteral">&#39;identifier&#39;</span>],</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="stringliteral">&#39;names&#39;</span> =&gt; $this-&gt;parserTools-&gt;parseTranslatableList( $data[<span class="stringliteral">&#39;names&#39;</span>] ),</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="stringliteral">&#39;descriptions&#39;</span> =&gt; $this-&gt;parserTools-&gt;parseTranslatableList( $data[<span class="stringliteral">&#39;descriptions&#39;</span>] ),</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="stringliteral">&#39;names&#39;</span> =&gt; isset( $data[<span class="stringliteral">&#39;names&#39;</span>] ) ? $this-&gt;parserTools-&gt;parseTranslatableList( $data[<span class="stringliteral">&#39;names&#39;</span>] ) : null,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="stringliteral">&#39;descriptions&#39;</span> =&gt; isset( $data[<span class="stringliteral">&#39;descriptions&#39;</span>] ) ? $this-&gt;parserTools-&gt;parseTranslatableList( $data[<span class="stringliteral">&#39;descriptions&#39;</span>] ) : null,</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="stringliteral">&#39;creationDate&#39;</span> =&gt; new \DateTime( $data[<span class="stringliteral">&#39;creationDate&#39;</span>] ),</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="stringliteral">&#39;modificationDate&#39;</span> =&gt; new \DateTime( $data[<span class="stringliteral">&#39;modificationDate&#39;</span>] ),</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <span class="stringliteral">&#39;creatorId&#39;</span> =&gt; <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html#aad62c495f1b0eb099eda31c13498df1c">$creatorId</a>,</div>
@@ -158,15 +158,22 @@ $(document).ready(function(){initNavTree('Core_2REST_2Client_2Input_2Parser_2Con
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="stringliteral">&#39;fieldDefinitionListReference&#39;</span> =&gt; $fieldDefinitionListReference,</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            )</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        );</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">if</span> ( $contentType-&gt;status === Values\<a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">ContentType</a>\<a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html#a03156296503603fe4fbd76b46cf85c23">ContentType::STATUS_DRAFT</a> )</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentTypeDraft.html">Values\ContentType\ContentTypeDraft</a>( $contentType );</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> $contentType;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_797398f06ec5dac6abf0352e0ae63d7a.html">REST</a></li><li class="navelem"><a class="el" href="dir_9cef613736a01ac9013b9c2ddd9ab4f7.html">Client</a></li><li class="navelem"><a class="el" href="dir_e36339d95d2ff7f21427a7890d078906.html">Input</a></li><li class="navelem"><a class="el" href="dir_12b7f39c33f5bcb14f1c67034594d6de.html">Parser</a></li><li class="navelem"><a class="el" href="Core_2REST_2Client_2Input_2Parser_2ContentType_8php.html">ContentType.php</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:49 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:47 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

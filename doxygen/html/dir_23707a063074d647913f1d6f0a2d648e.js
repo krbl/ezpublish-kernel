@@ -12,6 +12,9 @@ var dir_23707a063074d647913f1d6f0a2d648e =
     [ "IntegerMapper.php", "IntegerMapper_8php.html", [
       [ "IntegerMapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper_1_1IntegerMapper.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper_1_1IntegerMapper" ]
     ] ],
+    [ "MultipleIdentifierMapper.php", "MultipleIdentifierMapper_8php.html", [
+      [ "MultipleIdentifierMapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper_1_1MultipleIdentifierMapper.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper_1_1MultipleIdentifierMapper" ]
+    ] ],
     [ "PriceMapper.php", "PriceMapper_8php.html", [
       [ "PriceMapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper_1_1PriceMapper.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper_1_1PriceMapper" ]
     ] ],

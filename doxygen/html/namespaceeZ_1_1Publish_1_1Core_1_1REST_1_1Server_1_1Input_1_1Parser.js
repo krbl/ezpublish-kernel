@@ -23,6 +23,7 @@ var namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser =
     [ "RoleAssignInput", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1RoleAssignInput.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1RoleAssignInput" ],
     [ "RoleInput", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1RoleInput.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1RoleInput" ],
     [ "SectionInput", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1SectionInput.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1SectionInput" ],
+    [ "SessionInput", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1SessionInput.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1SessionInput" ],
     [ "URLAliasCreate", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1URLAliasCreate.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1URLAliasCreate" ],
     [ "URLWildcardCreate", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1URLWildcardCreate.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1URLWildcardCreate" ],
     [ "UserCreate", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1UserCreate.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1UserCreate" ],

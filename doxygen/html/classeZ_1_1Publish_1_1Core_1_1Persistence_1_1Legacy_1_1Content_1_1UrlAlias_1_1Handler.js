@@ -1,8 +1,6 @@
 var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler =
 [
-    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#ae2601c0185dc41d764543a4367309e33", null ],
-    [ "cleanupText", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a60f8df408ed93702d9b327c89b51add1", null ],
-    [ "convertToAlias", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#af78fc8bbd37992033eba793f258ec413", null ],
+    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a947017af4f605bd05c2de83857423c16", null ],
     [ "copySubtree", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#abf49e4072cda5c804ca34b184b1b7fea", null ],
     [ "createCustomUrlAlias", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#ae90e2d47266956c68f517a6a330062f1", null ],
     [ "createGlobalUrlAlias", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#adbefa76b5433dcb7d3f8a5660284be15", null ],
@@ -10,8 +8,6 @@ var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1
     [ "getCopiedLocationsMap", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#ad3304eeff4919518d097b4e8994def9d", null ],
     [ "getHash", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a472178bc84e91df0b88aa3db762bd3ef", null ],
     [ "getRealAliasId", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a5c5aabe75296574d6776574f8dc78537", null ],
-    [ "getUniqueCounterValue", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#ad413797c2f51efc764390a4756cc6c1a", null ],
-    [ "getWordSeparator", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a62a94cf85e1a0c55b498772220d66332", null ],
     [ "insertNopEntry", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a6bb52b99287dec393dd2a955eb3dbd65", null ],
     [ "listGlobalURLAliases", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#ac91f2e04ae0d6156b4000b17a743030d", null ],
     [ "listURLAliasesForLocation", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a31fbb30e022a7ddaea951f6f2d9db72a", null ],
@@ -22,10 +18,9 @@ var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1
     [ "lookup", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#ab77cd4c24b569f9e8c32a902919f9ee4", null ],
     [ "removeSubtree", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a78895cddeabb2d1eefaa4da712efe5b7", null ],
     [ "removeURLAliases", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#adb007922cf1cb28d74d470f503b27c77", null ],
-    [ "$configuration", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a3eb7f6edfc73aabb2a3e88b3d6db267c", null ],
     [ "$gateway", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#ad855c37a1b339a91136dc02381ff55bc", null ],
     [ "$languageHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#ab43bfbb5aba3c7ba532289b8451dedee", null ],
     [ "$locationGateway", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#a2f74cb8a2104524aba5a64d693358a72", null ],
     [ "$mapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#ab01df89ec5bda2779392f68373a019ed", null ],
-    [ "$transformationProcessor", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#aaa6ef6afad7e6916fadbff3cd206da6d", null ]
+    [ "$slugConverter", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html#abbdd4658aef8f2b47e4ab84d2a14eab9", null ]
 ];

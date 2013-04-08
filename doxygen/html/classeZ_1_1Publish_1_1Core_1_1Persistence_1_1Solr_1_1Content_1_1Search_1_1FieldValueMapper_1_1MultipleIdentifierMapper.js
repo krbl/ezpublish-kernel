@@ -1,0 +1,5 @@
+var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper_1_1MultipleIdentifierMapper =
+[
+    [ "canMap", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper_1_1MultipleIdentifierMapper.html#aa79f72f617aa278f2b94252c1023e5d0", null ],
+    [ "map", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper_1_1MultipleIdentifierMapper.html#ac3ae520aec2d9a3e76e96dafef217580", null ]
+];

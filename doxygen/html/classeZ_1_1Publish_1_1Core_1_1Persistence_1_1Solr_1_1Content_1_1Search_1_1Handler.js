@@ -1,6 +1,7 @@
 var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler =
 [
     [ "__construct", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#aae66e78992e2a0f46d3285c2c1a7298c", null ],
+    [ "deleteContent", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#ae0d66f170bb2141612bbcd45ff12a096", null ],
     [ "findContent", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#a7b413574675598fb90ac5a6f1986c025", null ],
     [ "findSingle", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#a217a59da6f923bd5f6ff5521d73603e2", null ],
     [ "indexContent", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html#aced1b3bf32a01bc779726b888481856a", null ],

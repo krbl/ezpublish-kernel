@@ -113,33 +113,39 @@ $(document).ready(function(){initNavTree('RegisterStorageEnginePass_8php_source.
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1RegisterStorageEnginePass.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1RegisterStorageEnginePass.html">RegisterStorageEnginePass</a> <span class="keyword">implements</span> CompilerPassInterface</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1RegisterStorageEnginePass.html#ac0e49f2fb34b152f895d3e039efb2852">   24</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1RegisterStorageEnginePass.html#ac0e49f2fb34b152f895d3e039efb2852">process</a>( ContainerBuilder $container )</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">if</span> ( !$container-&gt;hasDefinition( <span class="stringliteral">&#39;ezpublish.api.storage_engine.factory&#39;</span> ) )</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        $storageEngineFactoryDef = $container-&gt;getDefinition( <span class="stringliteral">&#39;ezpublish.api.storage_engine.factory&#39;</span> );</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">foreach</span> ( $container-&gt;findTaggedServiceIds( <span class="stringliteral">&#39;ezpublish.storageEngine&#39;</span> ) as $id =&gt; $attributes )</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            $storageEngineFactoryDef-&gt;addMethodCall(</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="stringliteral">&#39;registerStorageEngine&#39;</span>,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                array(</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    $id,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    <span class="comment">// @todo: Maybe there should be some validation here. What if no alias is provided ?</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    $attributes[0][<span class="stringliteral">&#39;alias&#39;</span>]</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                )</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            );</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1RegisterStorageEnginePass.html#ac0e49f2fb34b152f895d3e039efb2852">   31</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1RegisterStorageEnginePass.html#ac0e49f2fb34b152f895d3e039efb2852">process</a>( ContainerBuilder $container )</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span> ( !$container-&gt;hasDefinition( <span class="stringliteral">&#39;ezpublish.api.storage_engine.factory&#39;</span> ) )</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        $default = $container-&gt;getParameter( <span class="stringliteral">&#39;ezpublish.api.storage_engine.default&#39;</span> );</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        $storageEngineFactoryDef = $container-&gt;getDefinition( <span class="stringliteral">&#39;ezpublish.api.storage_engine.factory&#39;</span> );</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">foreach</span> ( $container-&gt;findTaggedServiceIds( <span class="stringliteral">&#39;ezpublish.storageEngine&#39;</span> ) as $id =&gt; $attributes )</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="comment">// Set the default id on parameter ezpublish.spi.persistence.default_id for lazy factory</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">if</span> ( $attributes[0][<span class="stringliteral">&#39;alias&#39;</span>] === $default )</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                $container-&gt;setParameter( <span class="stringliteral">&#39;ezpublish.spi.persistence.default_id&#39;</span>, $id );</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="comment">// Register the storage engine on the main storage engine factory</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            $storageEngineFactoryDef-&gt;addMethodCall(</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="stringliteral">&#39;registerStorageEngine&#39;</span>,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                array(</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    $id,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    <span class="comment">// @todo: Maybe there should be some validation here. What if no alias is provided ?</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    $attributes[0][<span class="stringliteral">&#39;alias&#39;</span>]</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                )</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_7d1318b3b939336ca41ef9847f488a7b.html">Bundle</a></li><li class="navelem"><a class="el" href="dir_b83d50569460189e95c49248ea8628dd.html">EzPublishCoreBundle</a></li><li class="navelem"><a class="el" href="dir_fec31bad8dd5df739ea27f3ecc6a504d.html">DependencyInjection</a></li><li class="navelem"><a class="el" href="dir_a25b855019bf86156170d6aefeecdf5e.html">Compiler</a></li><li class="navelem"><a class="el" href="RegisterStorageEnginePass_8php.html">RegisterStorageEnginePass.php</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:47 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:45 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

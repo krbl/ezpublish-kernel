@@ -6,10 +6,10 @@ var dir_f42b4db2e5e2c8df9ac48145b39fad2a =
     [ "BinaryFileCreateStruct.php", "SPI_2IO_2BinaryFileCreateStruct_8php.html", [
       [ "BinaryFileCreateStruct", "classeZ_1_1Publish_1_1SPI_1_1IO_1_1BinaryFileCreateStruct.html", "classeZ_1_1Publish_1_1SPI_1_1IO_1_1BinaryFileCreateStruct" ]
     ] ],
-    [ "BinaryFileUpdateStruct.php", "BinaryFileUpdateStruct_8php.html", [
+    [ "BinaryFileUpdateStruct.php", "SPI_2IO_2BinaryFileUpdateStruct_8php.html", [
       [ "BinaryFileUpdateStruct", "classeZ_1_1Publish_1_1SPI_1_1IO_1_1BinaryFileUpdateStruct.html", "classeZ_1_1Publish_1_1SPI_1_1IO_1_1BinaryFileUpdateStruct" ]
     ] ],
-    [ "Handler.php", "SPI_2IO_2Handler_8php.html", [
-      [ "Handler", "interfaceeZ_1_1Publish_1_1SPI_1_1IO_1_1Handler.html", "interfaceeZ_1_1Publish_1_1SPI_1_1IO_1_1Handler" ]
+    [ "MimeTypeDetector.php", "MimeTypeDetector_8php.html", [
+      [ "MimeTypeDetector", "interfaceeZ_1_1Publish_1_1SPI_1_1IO_1_1MimeTypeDetector.html", "interfaceeZ_1_1Publish_1_1SPI_1_1IO_1_1MimeTypeDetector" ]
     ] ]
 ];

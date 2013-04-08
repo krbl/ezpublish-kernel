@@ -1,7 +1,7 @@
 var dir_19570892ab4420f265fea7bfcf40f2b5 =
 [
     [ "Handler", "dir_3e784245548d5743f1800af89396efe6.html", "dir_3e784245548d5743f1800af89396efe6" ],
-    [ "Dispatcher.php", "Dispatcher_8php.html", [
+    [ "Dispatcher.php", "REST_2Common_2Input_2Dispatcher_8php.html", [
       [ "Dispatcher", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher" ]
     ] ],
     [ "FieldTypeParser.php", "FieldTypeParser_8php.html", [

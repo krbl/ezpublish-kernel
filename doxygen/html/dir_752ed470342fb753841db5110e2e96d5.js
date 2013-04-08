@@ -9,6 +9,9 @@ var dir_752ed470342fb753841db5110e2e96d5 =
     [ "InvalidArgumentException.php", "Core_2REST_2Client_2Exceptions_2InvalidArgumentException_8php.html", [
       [ "InvalidArgumentException", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Exceptions_1_1InvalidArgumentException.html", null ]
     ] ],
+    [ "InvalidArgumentValue.php", "REST_2Client_2Exceptions_2InvalidArgumentValue_8php.html", [
+      [ "InvalidArgumentValue", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Exceptions_1_1InvalidArgumentValue.html", null ]
+    ] ],
     [ "MethodNotAllowedException.php", "MethodNotAllowedException_8php.html", [
       [ "MethodNotAllowedException", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Exceptions_1_1MethodNotAllowedException.html", null ]
     ] ],

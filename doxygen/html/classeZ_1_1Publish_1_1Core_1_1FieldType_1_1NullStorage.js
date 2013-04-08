@@ -1,5 +1,6 @@
 var classeZ_1_1Publish_1_1Core_1_1FieldType_1_1NullStorage =
 [
+    [ "copyLegacyField", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1NullStorage.html#aff981aefa6cd5c8c7233ac002880ed95", null ],
     [ "deleteFieldData", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1NullStorage.html#a69c40887b1b10cd2451b1e477376f9cf", null ],
     [ "getFieldData", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1NullStorage.html#a992dcd6aa69f2797fdf9fe8af98ee8a8", null ],
     [ "getIndexData", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1NullStorage.html#a2d2137a68de98518a4c13a858692e59c", null ],

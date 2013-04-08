@@ -107,17 +107,51 @@ $(document).ready(function(){initNavTree('Item_8php_source.html','');});
 <a href="Item_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\FieldType\Page\Parts;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html">Item</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Base.html">Base</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html">eZ\Publish\API\Repository\Values\ValueObject</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html">Item</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html">ValueObject</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#ac53f1e31356aaafa1594fadf650f11b8">   31</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#ac53f1e31356aaafa1594fadf650f11b8">$contentId</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#a8fab36f5f390d5f04c5ad7e281a49657">   36</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#a8fab36f5f390d5f04c5ad7e281a49657">$locationId</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#a49dc7a2a603f0bc35cb2d31e279392eb">   41</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#a49dc7a2a603f0bc35cb2d31e279392eb">$priority</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#a4288c8878ba9b3bd0fb5f6d78cb6bc1b">   46</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#a4288c8878ba9b3bd0fb5f6d78cb6bc1b">$publicationDate</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#a59198a6c9664f582d80b59c4afe0dbf8">   51</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#a59198a6c9664f582d80b59c4afe0dbf8">$visibilityDate</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#aa0fc6def5094242bd6f2f5b81b8f7ae2">   56</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#aa0fc6def5094242bd6f2f5b81b8f7ae2">$hiddenDate</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#a169ab8bf3f5008bd4f3b62e527aa8ca4">   61</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#a169ab8bf3f5008bd4f3b62e527aa8ca4">$rotationUntilDate</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#ab0e04a7add138d7b765abe621bdf4082">   66</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#ab0e04a7add138d7b765abe621bdf4082">$movedTo</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#a31c2c9d0371c6bcd0d8d73092adf0b28">   73</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#a31c2c9d0371c6bcd0d8d73092adf0b28">$action</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#ac2ce7642e982d3027dc82f18cb638a9d">   78</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#ac2ce7642e982d3027dc82f18cb638a9d">$blockId</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#acdeb29ec11080faecd6630faa045ed10">   85</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#acdeb29ec11080faecd6630faa045ed10">$attributes</a> = array();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#a4e40628656ee42e4b4c647e7cf741058">   92</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html#a4e40628656ee42e4b4c647e7cf741058">getState</a>()</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        $hash = array();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">foreach</span> ( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html#a355abeb66b2625ba8341bac3f9349136">getProperties</a>() as $property )</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            $hash[$property] = $this-&gt;$property;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> $hash;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_429826c28e0afa35fa370fabe902bc82.html">FieldType</a></li><li class="navelem"><a class="el" href="dir_8761198b1dd2fec83baa0944ce28623f.html">Page</a></li><li class="navelem"><a class="el" href="dir_d7dc6903aa24702ad0fc4d9fd9696f42.html">Parts</a></li><li class="navelem"><a class="el" href="Item_8php.html">Item.php</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:50 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:48 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -3,6 +3,18 @@ var dir_2025ddda51170bf7ff1561267b93c033 =
     [ "ContentObjectStates.php", "Client_2Output_2ValueObjectVisitor_2ContentObjectStates_8php.html", [
       [ "ContentObjectStates", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1ContentObjectStates.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1ContentObjectStates" ]
     ] ],
+    [ "ContentTypeCreateStruct.php", "Core_2REST_2Client_2Output_2ValueObjectVisitor_2ContentTypeCreateStruct_8php.html", [
+      [ "ContentTypeCreateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1ContentTypeCreateStruct.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1ContentTypeCreateStruct" ]
+    ] ],
+    [ "ContentTypeGroupCreateStruct.php", "Core_2REST_2Client_2Output_2ValueObjectVisitor_2ContentTypeGroupCreateStruct_8php.html", [
+      [ "ContentTypeGroupCreateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1ContentTypeGroupCreateStruct.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1ContentTypeGroupCreateStruct" ]
+    ] ],
+    [ "ContentTypeGroupUpdateStruct.php", "Core_2REST_2Client_2Output_2ValueObjectVisitor_2ContentTypeGroupUpdateStruct_8php.html", [
+      [ "ContentTypeGroupUpdateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1ContentTypeGroupUpdateStruct.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1ContentTypeGroupUpdateStruct" ]
+    ] ],
+    [ "FieldDefinitionCreateStruct.php", "Core_2REST_2Client_2Output_2ValueObjectVisitor_2FieldDefinitionCreateStruct_8php.html", [
+      [ "FieldDefinitionCreateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1FieldDefinitionCreateStruct.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1FieldDefinitionCreateStruct" ]
+    ] ],
     [ "Limitation.php", "Core_2REST_2Client_2Output_2ValueObjectVisitor_2Limitation_8php.html", [
       [ "Limitation", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1Limitation.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1Limitation" ]
     ] ],

@@ -27,7 +27,7 @@ var dir_138e96d53e89b5fc9d3554ae17e9b808 =
     [ "InvalidArgumentType.php", "InvalidArgumentType_8php.html", [
       [ "InvalidArgumentType", "classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType.html", "classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentType" ]
     ] ],
-    [ "InvalidArgumentValue.php", "InvalidArgumentValue_8php.html", [
+    [ "InvalidArgumentValue.php", "Base_2Exceptions_2InvalidArgumentValue_8php.html", [
       [ "InvalidArgumentValue", "classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentValue.html", "classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentValue" ]
     ] ],
     [ "MissingClass.php", "MissingClass_8php.html", [

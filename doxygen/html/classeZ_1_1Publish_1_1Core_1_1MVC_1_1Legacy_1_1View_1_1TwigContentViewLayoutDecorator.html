@@ -132,7 +132,7 @@ $(document).ready(function(){initNavTree('classeZ_1_1Publish_1_1Core_1_1MVC_1_1L
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aee248d4ba60d2f2d139b1e2fbdc84d13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html#aee248d4ba60d2f2d139b1e2fbdc84d13">__construct</a> (Twig_Environment $twig, array $options)</td></tr>
+<tr class="memitem:a0ab1a7ef0b456b67903e734038660457"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html#a0ab1a7ef0b456b67903e734038660457">__construct</a> (Twig_Environment $twig, array $options, <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1ConfigResolverInterface.html">ConfigResolverInterface</a> $resolver)</td></tr>
 <tr class="memitem:a2802afefbe743d06363b999b90b55948"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html#a2802afefbe743d06363b999b90b55948">setContentView</a> (<a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentView.html">ContentView</a> $contentView)</td></tr>
 <tr class="memitem:a93d1ff3af8cab1115ade89c104549d88"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html#a93d1ff3af8cab1115ade89c104549d88">setTemplateIdentifier</a> ($templateIdentifier)</td></tr>
 <tr class="memitem:a616514bcc4cb61f492063af0819fa16e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html#a616514bcc4cb61f492063af0819fa16e">getTemplateIdentifier</a> ()</td></tr>
@@ -150,9 +150,9 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00017">17</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
+<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00018">18</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aee248d4ba60d2f2d139b1e2fbdc84d13"></a>
+<a class="anchor" id="a0ab1a7ef0b456b67903e734038660457"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -166,7 +166,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">array&#160;</td>
-          <td class="paramname"><em>$options</em>&#160;</td>
+          <td class="paramname"><em>$options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1ConfigResolverInterface.html">ConfigResolverInterface</a>&#160;</td>
+          <td class="paramname"><em>$resolver</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -176,14 +182,28 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00031">31</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
+<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00032">32</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
 
-<p>References <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00027">eZ\Publish\Core\MVC\Legacy\View\TwigContentViewLayoutDecorator\$twig</a>.</p>
+<p>References <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00028">eZ\Publish\Core\MVC\Legacy\View\TwigContentViewLayoutDecorator\$twig</a>, and <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1ConfigResolverInterface.html#ac66b88a1837f9a46ec5472a6ca066acf">eZ\Publish\Core\MVC\ConfigResolverInterface\getParameter()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;twig = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html#a699a99c1cc61e1d4d5adfe64b2e469d0">$twig</a>;</div>
-<div class="line">        $this-&gt;options = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html#abf7479be8a38bfe0666fd23b0452ef52">$options</a> + array( <span class="stringliteral">&#39;contentBlockName&#39;</span> =&gt; <span class="stringliteral">&#39;content&#39;</span> );</div>
+<div class="line">        $this-&gt;options = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html#abf7479be8a38bfe0666fd23b0452ef52">$options</a> + array(</div>
+<div class="line">            <span class="stringliteral">&#39;contentBlockName&#39;</span> =&gt; <span class="stringliteral">&#39;content&#39;</span>,</div>
+<div class="line">            <span class="stringliteral">&#39;layout&#39;</span> =&gt; $resolver-&gt;getParameter( <span class="stringliteral">&#39;view_default_layout&#39;</span>, <span class="stringliteral">&#39;ezpublish_legacy&#39;</span> )</div>
+<div class="line">        );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
+<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator_a0ab1a7ef0b456b67903e734038660457_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator_a0ab1a7ef0b456b67903e734038660457_cgraph" alt=""/></div>
+<map name="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator_a0ab1a7ef0b456b67903e734038660457_cgraph" id="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator_a0ab1a7ef0b456b67903e734038660457_cgraph">
+<area shape="rect" id="node3" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1ConfigResolverInterface.html#ac66b88a1837f9a46ec5472a6ca066acf" title="eZ\\Publish\\Core\\MVC\l\\ConfigResolverInterface\l\\getParameter" alt="" coords="268,5,441,69"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <h2>Member Function Documentation</h2>
@@ -210,7 +230,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewInterface.html#af3f8c7ba9a99fb9b9ffc318da1f873b3">eZ\Publish\Core\MVC\Symfony\View\ContentViewInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00118">118</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
+<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00122">122</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;contentView-&gt;addParameters( $parameters );</div>
 <div class="line">    }</div>
@@ -247,7 +267,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewInterface.html#ada057b1e81a8f117bc9e44c326232ce8">eZ\Publish\Core\MVC\Symfony\View\ContentViewInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00155">155</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
+<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00159">159</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;contentView-&gt;getParameter( $parameterName );</div>
 <div class="line">    }</div>
@@ -271,7 +291,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewInterface.html#ae534c7f1cabf4c4103577c3b95e8206c">eZ\Publish\Core\MVC\Symfony\View\ContentViewInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00128">128</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
+<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00132">132</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;contentView-&gt;getParameters();</div>
 <div class="line">    }</div>
@@ -301,9 +321,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewInterface.html#a99047ec98b71fafd997b9693f81619d0">eZ\Publish\Core\MVC\Symfony\View\ContentViewInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00072">72</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
+<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00076">76</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
 
-<p>References <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00022">eZ\Publish\Core\MVC\Legacy\View\TwigContentViewLayoutDecorator\$contentView</a>, <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00029">eZ\Publish\Core\MVC\Legacy\View\TwigContentViewLayoutDecorator\$options</a>, and <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00027">eZ\Publish\Core\MVC\Legacy\View\TwigContentViewLayoutDecorator\$twig</a>.</p>
+<p>References <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00023">eZ\Publish\Core\MVC\Legacy\View\TwigContentViewLayoutDecorator\$contentView</a>, <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00030">eZ\Publish\Core\MVC\Legacy\View\TwigContentViewLayoutDecorator\$options</a>, and <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00028">eZ\Publish\Core\MVC\Legacy\View\TwigContentViewLayoutDecorator\$twig</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html#abf7479be8a38bfe0666fd23b0452ef52">$options</a> = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html#abf7479be8a38bfe0666fd23b0452ef52">$this-&gt;options</a>;</div>
 <div class="line">        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html#af2e0d1152e3ebcbd8478fd554b19be2e">$contentView</a> = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html#af2e0d1152e3ebcbd8478fd554b19be2e">$this-&gt;contentView</a>;</div>
@@ -359,7 +379,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewInterface.html#a81af0145654a148f514b2477efa533b8">eZ\Publish\Core\MVC\Symfony\View\ContentViewInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00140">140</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
+<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00144">144</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;contentView-&gt;hasParameter( $parameterName );</div>
 <div class="line">    }</div>
@@ -387,9 +407,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00042">42</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
+<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00046">46</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
 
-<p>References <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00022">eZ\Publish\Core\MVC\Legacy\View\TwigContentViewLayoutDecorator\$contentView</a>.</p>
+<p>References <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00023">eZ\Publish\Core\MVC\Legacy\View\TwigContentViewLayoutDecorator\$contentView</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;contentView = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html#af2e0d1152e3ebcbd8478fd554b19be2e">$contentView</a>;</div>
 <div class="line">    }</div>
@@ -419,7 +439,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewInterface.html#ae25a310d34265b219f5879b6474ed9fe">eZ\Publish\Core\MVC\Symfony\View\ContentViewInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00108">108</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
+<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00112">112</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;contentView-&gt;setParameters( $parameters );</div>
 <div class="line">    }</div>
@@ -456,7 +476,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewInterface.html#acbba388dc88a77cb686195f0f48b3ba3">eZ\Publish\Core\MVC\Symfony\View\ContentViewInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00057">57</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
+<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00061">61</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !$templateIdentifier instanceof \Closure )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentType( <span class="stringliteral">&#39;templateIdentifier&#39;</span>, <span class="stringliteral">&#39;\\Closure&#39;</span>, $templateIdentifier );</div>
@@ -485,7 +505,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00022">22</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
+<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00023">23</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
 
 </div>
 </div>
@@ -507,7 +527,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00029">29</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
+<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00030">30</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
 
 </div>
 </div>
@@ -529,7 +549,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00027">27</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
+<p>Definition at line <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html#l00028">28</a> of file <a class="el" href="TwigContentViewLayoutDecorator_8php_source.html">TwigContentViewLayoutDecorator.php</a>.</p>
 
 </div>
 </div>
@@ -542,7 +562,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC.html">MVC</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View.html">View</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html">TwigContentViewLayoutDecorator</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:56 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:54 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

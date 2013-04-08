@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('interfaceeZ_1_1Publish_1_1SPI_1_1Persi
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Handler__inherit__graph.png" border="0" usemap="#eZ_0CPublish_0CSPI_0CPersistence_0CContent_0CHandler_inherit__map" alt="Inheritance graph"/></div>
 <map name="eZ_0CPublish_0CSPI_0CPersistence_0CContent_0CHandler_inherit__map" id="eZ_0CPublish_0CSPI_0CPersistence_0CContent_0CHandler_inherit__map">
-<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html" title="eZ\\Publish\\Core\\Persistence\l\\InMemory\\ContentHandler" alt="" coords="247,5,447,51"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Handler" alt="" coords="247,74,447,121"/></map>
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html" title="eZ\\Publish\\Core\\Persistence\l\\Cache\\ContentHandler" alt="" coords="247,5,447,51"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html" title="eZ\\Publish\\Core\\Persistence\l\\InMemory\\ContentHandler" alt="" coords="247,74,447,121"/><area shape="rect" id="node7" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html" title="eZ\\Publish\\Core\\Persistence\l\\Legacy\\Content\\Handler" alt="" coords="247,143,447,190"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
@@ -136,7 +136,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a33c7567fb26670027facda6d847b765c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Handler.html#a33c7567fb26670027facda6d847b765c">listVersions</a> ($contentId)</td></tr>
 <tr class="memitem:aa83a1669cf9b47dc606abbde74fb42f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Handler.html#aa83a1669cf9b47dc606abbde74fb42f7">copy</a> ($contentId, $versionNo=null)</td></tr>
 <tr class="memitem:a130ce1aeaf7815605af2b399c9fbd267"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Handler.html#a130ce1aeaf7815605af2b399c9fbd267">addRelation</a> (RelationCreateStruct $createStruct)</td></tr>
-<tr class="memitem:a71426fbe69f3b76b0313df8396e2ed7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Handler.html#a71426fbe69f3b76b0313df8396e2ed7f">removeRelation</a> ($relationId)</td></tr>
+<tr class="memitem:a602b3aaf1d2d50d10004aa2a5b242c23"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Handler.html#a602b3aaf1d2d50d10004aa2a5b242c23">removeRelation</a> ($relationId, $type)</td></tr>
 <tr class="memitem:addb3289abd01e5f20daed511b5fe78e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Handler.html#addb3289abd01e5f20daed511b5fe78e3">loadRelations</a> ($sourceContentId, $sourceContentVersionNo=null, $type=null)</td></tr>
 <tr class="memitem:aebb67e62aa61c07060d027cfd15f21ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Handler.html#aebb67e62aa61c07060d027cfd15f21ec">loadReverseRelations</a> ($destinationContentId, $type=null)</td></tr>
 <tr class="memitem:a54cc737dc56a4411b3f6f9d7a12abcc8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Handler.html#a54cc737dc56a4411b3f6f9d7a12abcc8">publish</a> ($contentId, $versionNo, <a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1MetadataUpdateStruct.html">MetadataUpdateStruct</a> $metaDataUpdateStruct)</td></tr>
@@ -161,7 +161,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Creates a relation between $sourceContentId in $sourceContentVersionNo and $destinationContentId with a specific $type.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000150">Todo:</a></b></dt><dd>Should the existence verifications happen here or is this supposed to be handled at a higher level?</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000155">Todo:</a></b></dt><dd>Should the existence verifications happen here or is this supposed to be handled at a higher level?</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">\eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct</td><td class="paramname">$createStruct</td><td></td></tr>
@@ -170,7 +170,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#aeb205158209c9b79e18acd9cd30b4696">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a3502ceb2351ee7cd218e2b511c928eea">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>.</p>
+<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#aeb205158209c9b79e18acd9cd30b4696">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a3502ceb2351ee7cd218e2b511c928eea">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html#a38097498a07dccc0852d16356ec163d5">eZ\Publish\Core\Persistence\Cache\ContentHandler</a>.</p>
 
 </div>
 </div>
@@ -214,7 +214,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#ae3d326f42ea1ce12c9146ee89d481c7a">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a34b7a8ca7d4a89ee3097afc98eab2d92">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>.</p>
+<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#ae3d326f42ea1ce12c9146ee89d481c7a">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a34b7a8ca7d4a89ee3097afc98eab2d92">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html#aff12ed336aacabe6398431d3a99f831f">eZ\Publish\Core\Persistence\Cache\ContentHandler</a>.</p>
 
 </div>
 </div>
@@ -242,7 +242,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">Content</a> value object </dd></dl>
 
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a5ad6f859a5586fdfe4b316ef23967f4c">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>.</p>
+<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a5ad6f859a5586fdfe4b316ef23967f4c">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html#ab98b300c77fa6d751b3c9d1c93a4c022">eZ\Publish\Core\Persistence\Cache\ContentHandler</a>.</p>
 
 </div>
 </div>
@@ -287,7 +287,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a0b76f540b3929eeb72d43a3eddd6e909">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>.</p>
+<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a0b76f540b3929eeb72d43a3eddd6e909">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html#ad0bbf7881ab494aff12da6f8ce8caf4f">eZ\Publish\Core\Persistence\Cache\ContentHandler</a>.</p>
 
 </div>
 </div>
@@ -314,7 +314,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
 
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a626254b92a3219e003fa0ea0d78d16a6">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a20f5e33489fd01eecb4529291b83b86e">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>.</p>
+<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a626254b92a3219e003fa0ea0d78d16a6">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a20f5e33489fd01eecb4529291b83b86e">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html#ae77dcc0cfcd03223825a6193cf854741">eZ\Publish\Core\Persistence\Cache\ContentHandler</a>.</p>
 
 </div>
 </div>
@@ -352,7 +352,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
 
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a86aca040ce24a1a950afb8ab296daaec">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a95594ba926df4c111f3c737afc539fb2">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>.</p>
+<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a86aca040ce24a1a950afb8ab296daaec">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a95594ba926df4c111f3c737afc539fb2">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html#a75b0efdab0404c0e053781741e25693d">eZ\Publish\Core\Persistence\Cache\ContentHandler</a>.</p>
 
 </div>
 </div>
@@ -378,7 +378,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>[] </dd></dl>
 
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#ae5cff9b8b9c22176d3e67ca50009ee1d">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#ac352e01dcec43c8b4e41a867676f4578">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>.</p>
+<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#ae5cff9b8b9c22176d3e67ca50009ee1d">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#ac352e01dcec43c8b4e41a867676f4578">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html#acaff30899251cb04fc8509f7606cee72">eZ\Publish\Core\Persistence\Cache\ContentHandler</a>.</p>
 
 </div>
 </div>
@@ -424,7 +424,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">Content</a> value object </dd></dl>
 
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a3018a3cde4a2b62da12b34655cc54930">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#abe59291d328278535f3857343bcfb087">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>.</p>
+<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a3018a3cde4a2b62da12b34655cc54930">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#abe59291d328278535f3857343bcfb087">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html#ae5dda2a1f104eb9de1ad97b33a2815ad">eZ\Publish\Core\Persistence\Cache\ContentHandler</a>.</p>
 
 </div>
 </div>
@@ -450,7 +450,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a88cf59562c11f97f1079d19375d8b66c">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#ad8433ff4d1ae78aab8f20a7467113853">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>.</p>
+<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a88cf59562c11f97f1079d19375d8b66c">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#ad8433ff4d1ae78aab8f20a7467113853">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html#a6c44b42703622108909c60624b9941a0">eZ\Publish\Core\Persistence\Cache\ContentHandler</a>.</p>
 
 </div>
 </div>
@@ -476,7 +476,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>[] </dd></dl>
 
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a3556454196170f5f807e678f41213823">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a638e5ec806eb0f385e277d91f52e95a5">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>.</p>
+<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a3556454196170f5f807e678f41213823">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a638e5ec806eb0f385e277d91f52e95a5">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html#ab2b4143e926a7d0b462562e8761d9afc">eZ\Publish\Core\Persistence\Cache\ContentHandler</a>.</p>
 
 </div>
 </div>
@@ -521,7 +521,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section see"><dt>See Also</dt><dd>::COMMON, ::EMBED, ::LINK, ::FIELD} </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>[] </dd></dl>
 
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a1c631ac6d650eb6ea79506e4f62d5583">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a43fb7f13a3d9fda3c201a931feca289a">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>.</p>
+<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a1c631ac6d650eb6ea79506e4f62d5583">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a43fb7f13a3d9fda3c201a931feca289a">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html#a620030dc6abedaa742929af59604e608">eZ\Publish\Core\Persistence\Cache\ContentHandler</a>.</p>
 
 </div>
 </div>
@@ -560,7 +560,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section see"><dt>See Also</dt><dd>::COMMON, ::EMBED, ::LINK, ::FIELD} </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>[] </dd></dl>
 
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#aa3f1329abefec2963f6ca77dec2c5b3f">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a3527ab26f64cfce5b0ba375b53e414b3">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>.</p>
+<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#aa3f1329abefec2963f6ca77dec2c5b3f">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a3527ab26f64cfce5b0ba375b53e414b3">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html#ae39ae7e75096e49fd39da85494647c06">eZ\Publish\Core\Persistence\Cache\ContentHandler</a>.</p>
 
 </div>
 </div>
@@ -603,7 +603,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#ad80260e3f862e2a14ea4b1960d95f1d8">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a8b1e14b5d5790da39a9459d469b21f7a">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>.</p>
+<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#ad80260e3f862e2a14ea4b1960d95f1d8">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a8b1e14b5d5790da39a9459d469b21f7a">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html#abd28c2ae9aaaf28962a0463291646933">eZ\Publish\Core\Persistence\Cache\ContentHandler</a>.</p>
 
 </div>
 </div>
@@ -647,11 +647,11 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The published <a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">Content</a> </dd></dl>
 
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a887a451bab4006eeb56253e6842ea0b4">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a5a64b461be223ee4592bb0cf2d8ad182">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>.</p>
+<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a887a451bab4006eeb56253e6842ea0b4">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html#a9b2dfa17fa4f5d317796a76779effa82">eZ\Publish\Core\Persistence\Cache\ContentHandler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a5a64b461be223ee4592bb0cf2d8ad182">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a71426fbe69f3b76b0313df8396e2ed7f"></a>
+<a class="anchor" id="a602b3aaf1d2d50d10004aa2a5b242c23"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -659,21 +659,34 @@ Public Member Functions</h2></td></tr>
           <td class="memname">eZ\Publish\SPI\Persistence\Content\Handler::removeRelation </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$relationId</em></td><td>)</td>
+          <td class="paramname"><em>$relationId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Removes a relation by relation Id.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000151">Todo:</a></b></dt><dd>Should the existence verifications happen here or is this supposed to be handled at a higher level?</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000156">Todo:</a></b></dt><dd>Should the existence verifications happen here or is this supposed to be handled at a higher level?</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">mixed</td><td class="paramname">$relationId</td><td></td></tr>
+    <tr><td class="paramtype">int</td><td class="paramname">$type</td><td>{</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See Also</dt><dd>::COMMON, ::EMBED, ::LINK, ::FIELD}</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a9f50a7ec7e07c3ed058f71a880be4ef5">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a5ebe5dda7d4e85f6206e7c77a7dd0ed0">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>.</p>
+<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a47779a87c5b12dd2a3aa396159437b03">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#ab6608fe0e495f19475ad2957ce59b530">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html#a57dc9bd44d0768b228e2d8b3b59e2a2f">eZ\Publish\Core\Persistence\Cache\ContentHandler</a>.</p>
 
 </div>
 </div>
@@ -718,7 +731,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
 
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a5e04432f77d3edd1dad37f13cc2b4a11">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a22a1c703136403b08e1d6fe547a13b6b">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>.</p>
+<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a5e04432f77d3edd1dad37f13cc2b4a11">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a22a1c703136403b08e1d6fe547a13b6b">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html#a8d13af02d949191be3bd23559614862d">eZ\Publish\Core\Persistence\Cache\ContentHandler</a>.</p>
 
 </div>
 </div>
@@ -797,7 +810,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a434a151c1c46e05143745205a720be94">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#affb46e947c68af4c5a8a58d5ea8b28ee">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>.</p>
+<p>Implemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html#a434a151c1c46e05143745205a720be94">eZ\Publish\Core\Persistence\InMemory\ContentHandler</a>, <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#affb46e947c68af4c5a8a58d5ea8b28ee">eZ\Publish\Core\Persistence\Legacy\Content\Handler</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html#a338536c5af33e06536a14c757af62c01">eZ\Publish\Core\Persistence\Cache\ContentHandler</a>.</p>
 
 </div>
 </div>
@@ -810,7 +823,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1SPI.html">SPI</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1SPI_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Handler.html">Handler</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:03:10 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:51:03 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

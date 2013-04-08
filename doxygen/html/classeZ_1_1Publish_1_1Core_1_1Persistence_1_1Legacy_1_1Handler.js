@@ -18,6 +18,7 @@ var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler =
     [ "getLocationMapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#ab8e4fcd8023fb1f35adf674138395fe2", null ],
     [ "getObjectStateGateway", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#afe6e793d39abe2060709ac2b73ef47b5", null ],
     [ "getObjectStateMapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#a295612389320bc76a9b25064abe04dbf", null ],
+    [ "getSlugConverter", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#a7adee932d04a0a9d2660543ec85a5869", null ],
     [ "getStorageHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#aef74f80ea312a9fd4e717b83e492fee9", null ],
     [ "getStorageRegistry", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#aab74ac02c58d9540bafdda4624a8e4ec", null ],
     [ "getTypeUpdateHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html#a1c4a3dbd2dc40902356f96c8ddaf1952", null ],

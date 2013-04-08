@@ -15,6 +15,18 @@ var dir_12b7f39c33f5bcb14f1c67034594d6de =
     [ "ContentType.php", "Core_2REST_2Client_2Input_2Parser_2ContentType_8php.html", [
       [ "ContentType", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentType.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentType" ]
     ] ],
+    [ "ContentTypeGroup.php", "Core_2REST_2Client_2Input_2Parser_2ContentTypeGroup_8php.html", [
+      [ "ContentTypeGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentTypeGroup.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentTypeGroup" ]
+    ] ],
+    [ "ContentTypeGroupList.php", "Client_2Input_2Parser_2ContentTypeGroupList_8php.html", [
+      [ "ContentTypeGroupList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentTypeGroupList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentTypeGroupList" ]
+    ] ],
+    [ "ContentTypeGroupRefList.php", "Client_2Input_2Parser_2ContentTypeGroupRefList_8php.html", [
+      [ "ContentTypeGroupRefList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentTypeGroupRefList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentTypeGroupRefList" ]
+    ] ],
+    [ "ContentTypeList.php", "Client_2Input_2Parser_2ContentTypeList_8php.html", [
+      [ "ContentTypeList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentTypeList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentTypeList" ]
+    ] ],
     [ "ErrorMessage.php", "ErrorMessage_8php.html", [
       [ "ErrorMessage", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ErrorMessage.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ErrorMessage" ]
     ] ],

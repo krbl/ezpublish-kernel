@@ -1,7 +1,7 @@
 var classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo =
 [
-    [ "getContentType", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#aa834a8638bceb3839a77a5e4fa7f96db", null ],
     [ "$alwaysAvailable", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#accbdcf0a837f285ad894e34dab1af4bb", null ],
+    [ "$contentTypeId", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#a5e81db23a075d638a3f2fa3e857198e6", null ],
     [ "$currentVersionNo", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#a19a0cb1693582bb309505a8d5e634f7e", null ],
     [ "$id", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#a9979c7f9147fa502a0c5cdb42f3190f5", null ],
     [ "$mainLanguageCode", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#ab6cc635157e585bd0c102ccd91896f8e", null ],

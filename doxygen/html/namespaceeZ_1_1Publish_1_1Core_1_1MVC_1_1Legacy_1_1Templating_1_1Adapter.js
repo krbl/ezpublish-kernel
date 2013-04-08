@@ -1,0 +1,7 @@
+var namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Adapter =
+[
+    [ "BlockAdapter", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Adapter_1_1BlockAdapter.html", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Adapter_1_1BlockAdapter" ],
+    [ "DefinitionBasedAdapter", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Adapter_1_1DefinitionBasedAdapter.html", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Adapter_1_1DefinitionBasedAdapter" ],
+    [ "ValueObjectAdapter", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Adapter_1_1ValueObjectAdapter.html", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Adapter_1_1ValueObjectAdapter" ],
+    [ "ZoneAdapter", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Adapter_1_1ZoneAdapter.html", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Adapter_1_1ZoneAdapter" ]
+];

@@ -67,6 +67,9 @@ var dir_9ae7671213fd0a64daa9e97972534324 =
     [ "SectionInput.php", "SectionInput_8php.html", [
       [ "SectionInput", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1SectionInput.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1SectionInput" ]
     ] ],
+    [ "SessionInput.php", "Input_2Parser_2SessionInput_8php.html", [
+      [ "SessionInput", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1SessionInput.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1SessionInput" ]
+    ] ],
     [ "URLAliasCreate.php", "URLAliasCreate_8php.html", [
       [ "URLAliasCreate", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1URLAliasCreate.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1URLAliasCreate" ]
     ] ],

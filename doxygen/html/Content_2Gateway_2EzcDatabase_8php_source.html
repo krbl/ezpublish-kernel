@@ -1245,27 +1245,80 @@ $(document).ready(function(){initNavTree('Content_2Gateway_2EzcDatabase_8php_sou
 <div class="line"><a name="l01473"></a><span class="lineno"> 1473</span>&#160;        );</div>
 <div class="line"><a name="l01474"></a><span class="lineno"> 1474</span>&#160;    }</div>
 <div class="line"><a name="l01475"></a><span class="lineno"> 1475</span>&#160;</div>
-<div class="line"><a name="l01483"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1EzcDatabase.html#afad86cb122163ad9e17683e6f98f1a3d"> 1483</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#a41eb26e039cd5158257eddeb5411a294">deleteRelation</a>( $relationId )</div>
-<div class="line"><a name="l01484"></a><span class="lineno"> 1484</span>&#160;    {</div>
-<div class="line"><a name="l01485"></a><span class="lineno"> 1485</span>&#160;        $q = $this-&gt;dbHandler-&gt;createDeleteQuery();</div>
-<div class="line"><a name="l01486"></a><span class="lineno"> 1486</span>&#160;        $q-&gt;deleteFrom( <span class="stringliteral">&#39;ezcontentobject_link&#39;</span> )</div>
-<div class="line"><a name="l01487"></a><span class="lineno"> 1487</span>&#160;        -&gt;where(</div>
-<div class="line"><a name="l01488"></a><span class="lineno"> 1488</span>&#160;            $q-&gt;expr-&gt;eq(</div>
-<div class="line"><a name="l01489"></a><span class="lineno"> 1489</span>&#160;                $this-&gt;dbHandler-&gt;quoteColumn( <span class="stringliteral">&#39;id&#39;</span> ),</div>
-<div class="line"><a name="l01490"></a><span class="lineno"> 1490</span>&#160;                $q-&gt;bindValue( $relationId, null, \PDO::PARAM_INT )</div>
-<div class="line"><a name="l01491"></a><span class="lineno"> 1491</span>&#160;            )</div>
-<div class="line"><a name="l01492"></a><span class="lineno"> 1492</span>&#160;        );</div>
-<div class="line"><a name="l01493"></a><span class="lineno"> 1493</span>&#160;</div>
-<div class="line"><a name="l01494"></a><span class="lineno"> 1494</span>&#160;        $q-&gt;prepare()-&gt;execute();</div>
-<div class="line"><a name="l01495"></a><span class="lineno"> 1495</span>&#160;    }</div>
-<div class="line"><a name="l01496"></a><span class="lineno"> 1496</span>&#160;}</div>
+<div class="line"><a name="l01487"></a><span class="lineno"> 1487</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#af0575ea4f8519e1b0b05279538479784">deleteRelation</a>( $relationId, $type )</div>
+<div class="line"><a name="l01488"></a><span class="lineno"> 1488</span>&#160;    {</div>
+<div class="line"><a name="l01489"></a><span class="lineno"> 1489</span>&#160;        <span class="comment">// Legacy Storage stores COMMON, LINK and EMBED types using bitmask, therefore first load</span></div>
+<div class="line"><a name="l01490"></a><span class="lineno"> 1490</span>&#160;        <span class="comment">// existing relation type by given $relationId for comparison</span></div>
+<div class="line"><a name="l01492"></a><span class="lineno"> 1492</span>&#160;<span class="comment"></span>        $query = $this-&gt;dbHandler-&gt;createSelectQuery();</div>
+<div class="line"><a name="l01493"></a><span class="lineno"> 1493</span>&#160;        $query-&gt;select(</div>
+<div class="line"><a name="l01494"></a><span class="lineno"> 1494</span>&#160;            $this-&gt;dbHandler-&gt;quoteColumn( <span class="stringliteral">&quot;relation_type&quot;</span> )</div>
+<div class="line"><a name="l01495"></a><span class="lineno"> 1495</span>&#160;        )-&gt;from(</div>
+<div class="line"><a name="l01496"></a><span class="lineno"> 1496</span>&#160;            $this-&gt;dbHandler-&gt;quoteTable( <span class="stringliteral">&quot;ezcontentobject_link&quot;</span> )</div>
+<div class="line"><a name="l01497"></a><span class="lineno"> 1497</span>&#160;        )-&gt;where(</div>
+<div class="line"><a name="l01498"></a><span class="lineno"> 1498</span>&#160;            $query-&gt;expr-&gt;eq(</div>
+<div class="line"><a name="l01499"></a><span class="lineno"> 1499</span>&#160;                $this-&gt;dbHandler-&gt;quoteColumn( <span class="stringliteral">&quot;id&quot;</span> ),</div>
+<div class="line"><a name="l01500"></a><span class="lineno"> 1500</span>&#160;                $query-&gt;bindValue( $relationId, null, \PDO::PARAM_INT )</div>
+<div class="line"><a name="l01501"></a><span class="lineno"> 1501</span>&#160;            )</div>
+<div class="line"><a name="l01502"></a><span class="lineno"> 1502</span>&#160;        );</div>
+<div class="line"><a name="l01503"></a><span class="lineno"> 1503</span>&#160;</div>
+<div class="line"><a name="l01504"></a><span class="lineno"> 1504</span>&#160;        $statement = $query-&gt;prepare();</div>
+<div class="line"><a name="l01505"></a><span class="lineno"> 1505</span>&#160;        $statement-&gt;execute();</div>
+<div class="line"><a name="l01506"></a><span class="lineno"> 1506</span>&#160;        $loadedRelationType = $statement-&gt;fetchColumn();</div>
+<div class="line"><a name="l01507"></a><span class="lineno"> 1507</span>&#160;</div>
+<div class="line"><a name="l01508"></a><span class="lineno"> 1508</span>&#160;        <span class="keywordflow">if</span> ( !$loadedRelationType )</div>
+<div class="line"><a name="l01509"></a><span class="lineno"> 1509</span>&#160;        {</div>
+<div class="line"><a name="l01510"></a><span class="lineno"> 1510</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l01511"></a><span class="lineno"> 1511</span>&#160;        }</div>
+<div class="line"><a name="l01512"></a><span class="lineno"> 1512</span>&#160;</div>
+<div class="line"><a name="l01513"></a><span class="lineno"> 1513</span>&#160;        <span class="comment">// If relation type matches then delete</span></div>
+<div class="line"><a name="l01514"></a><span class="lineno"> 1514</span>&#160;        <span class="keywordflow">if</span> ( $loadedRelationType == $type )</div>
+<div class="line"><a name="l01515"></a><span class="lineno"> 1515</span>&#160;        {</div>
+<div class="line"><a name="l01517"></a><span class="lineno"> 1517</span>&#160;            $query = $this-&gt;dbHandler-&gt;createDeleteQuery();</div>
+<div class="line"><a name="l01518"></a><span class="lineno"> 1518</span>&#160;            $query-&gt;deleteFrom(</div>
+<div class="line"><a name="l01519"></a><span class="lineno"> 1519</span>&#160;                <span class="stringliteral">&quot;ezcontentobject_link&quot;</span></div>
+<div class="line"><a name="l01520"></a><span class="lineno"> 1520</span>&#160;            )-&gt;where(</div>
+<div class="line"><a name="l01521"></a><span class="lineno"> 1521</span>&#160;                $query-&gt;expr-&gt;eq(</div>
+<div class="line"><a name="l01522"></a><span class="lineno"> 1522</span>&#160;                    $this-&gt;dbHandler-&gt;quoteColumn( <span class="stringliteral">&quot;id&quot;</span> ),</div>
+<div class="line"><a name="l01523"></a><span class="lineno"> 1523</span>&#160;                    $query-&gt;bindValue( $relationId, null, \PDO::PARAM_INT )</div>
+<div class="line"><a name="l01524"></a><span class="lineno"> 1524</span>&#160;                )</div>
+<div class="line"><a name="l01525"></a><span class="lineno"> 1525</span>&#160;            );</div>
+<div class="line"><a name="l01526"></a><span class="lineno"> 1526</span>&#160;</div>
+<div class="line"><a name="l01527"></a><span class="lineno"> 1527</span>&#160;            $query-&gt;prepare()-&gt;execute();</div>
+<div class="line"><a name="l01528"></a><span class="lineno"> 1528</span>&#160;        }</div>
+<div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160;        <span class="comment">// If relation type is composite update bitmask</span></div>
+<div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( $loadedRelationType &amp; $type )</div>
+<div class="line"><a name="l01531"></a><span class="lineno"> 1531</span>&#160;        {</div>
+<div class="line"><a name="l01533"></a><span class="lineno"> 1533</span>&#160;            $query = $this-&gt;dbHandler-&gt;createUpdateQuery();</div>
+<div class="line"><a name="l01534"></a><span class="lineno"> 1534</span>&#160;            $query-&gt;update(</div>
+<div class="line"><a name="l01535"></a><span class="lineno"> 1535</span>&#160;                $this-&gt;dbHandler-&gt;quoteTable( <span class="stringliteral">&quot;ezcontentobject_link&quot;</span> )</div>
+<div class="line"><a name="l01536"></a><span class="lineno"> 1536</span>&#160;            )-&gt;<span class="keyword">set</span>(</div>
+<div class="line"><a name="l01537"></a><span class="lineno"> 1537</span>&#160;                $this-&gt;dbHandler-&gt;quoteColumn( <span class="stringliteral">&quot;relation_type&quot;</span> ),</div>
+<div class="line"><a name="l01538"></a><span class="lineno"> 1538</span>&#160;                $query-&gt;expr-&gt;bitAnd(</div>
+<div class="line"><a name="l01539"></a><span class="lineno"> 1539</span>&#160;                    $this-&gt;dbHandler-&gt;quoteColumn( <span class="stringliteral">&quot;relation_type&quot;</span> ),</div>
+<div class="line"><a name="l01540"></a><span class="lineno"> 1540</span>&#160;                    $query-&gt;bindValue( ~$type, null, \PDO::PARAM_INT )</div>
+<div class="line"><a name="l01541"></a><span class="lineno"> 1541</span>&#160;                )</div>
+<div class="line"><a name="l01542"></a><span class="lineno"> 1542</span>&#160;            )-&gt;where(</div>
+<div class="line"><a name="l01543"></a><span class="lineno"> 1543</span>&#160;                $query-&gt;expr-&gt;eq(</div>
+<div class="line"><a name="l01544"></a><span class="lineno"> 1544</span>&#160;                    $this-&gt;dbHandler-&gt;quoteColumn( <span class="stringliteral">&quot;id&quot;</span> ),</div>
+<div class="line"><a name="l01545"></a><span class="lineno"> 1545</span>&#160;                    $query-&gt;bindValue( $relationId, null, \PDO::PARAM_INT )</div>
+<div class="line"><a name="l01546"></a><span class="lineno"> 1546</span>&#160;                )</div>
+<div class="line"><a name="l01547"></a><span class="lineno"> 1547</span>&#160;            );</div>
+<div class="line"><a name="l01548"></a><span class="lineno"> 1548</span>&#160;</div>
+<div class="line"><a name="l01549"></a><span class="lineno"> 1549</span>&#160;            $query-&gt;prepare()-&gt;execute();</div>
+<div class="line"><a name="l01550"></a><span class="lineno"> 1550</span>&#160;        }</div>
+<div class="line"><a name="l01551"></a><span class="lineno"> 1551</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01552"></a><span class="lineno"> 1552</span>&#160;        {</div>
+<div class="line"><a name="l01553"></a><span class="lineno"> 1553</span>&#160;            <span class="comment">// No match, do nothing</span></div>
+<div class="line"><a name="l01554"></a><span class="lineno"> 1554</span>&#160;        }</div>
+<div class="line"><a name="l01555"></a><span class="lineno"> 1555</span>&#160;    }</div>
+<div class="line"><a name="l01556"></a><span class="lineno"> 1556</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_1015c0c9ea9f233a345f6405868e3e61.html">Persistence</a></li><li class="navelem"><a class="el" href="dir_081400ae94d8719bc7da88bb283ff436.html">Legacy</a></li><li class="navelem"><a class="el" href="dir_62b1c3a52faa834cf05ef76e2ce76582.html">Content</a></li><li class="navelem"><a class="el" href="dir_56c07c38091368d05c00e5120b62e484.html">Gateway</a></li><li class="navelem"><a class="el" href="Content_2Gateway_2EzcDatabase_8php.html">EzcDatabase.php</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:50 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:49 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

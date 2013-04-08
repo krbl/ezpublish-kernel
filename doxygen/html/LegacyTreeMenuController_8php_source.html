@@ -109,49 +109,47 @@ $(document).ready(function(){initNavTree('LegacyTreeMenuController_8php_source.h
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Controller_1_1Controller.html">eZ\Publish\Core\MVC\Symfony\Controller\Controller</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use eZ\Publish\Core\MVC\Legacy\Kernel\Loader;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use ezpKernelTreeMenu;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use Symfony\Component\HttpFoundation\Response;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use Symfony\Component\OptionsResolver\OptionsResolver;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html">LegacyTreeMenuController</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Controller_1_1Controller.html">Controller</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html#a9b5ed716a7445445c5f432e6c784cb4e">   23</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html#a9b5ed716a7445445c5f432e6c784cb4e">$treeMenuKernel</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html#a7d7c28c4ce058fc78f53111093e27cde">   25</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html#a7d7c28c4ce058fc78f53111093e27cde">__construct</a>( \Closure $treeMenuKernelHandler, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1Loader.html">Loader</a> $legacyKernelFactory, array $options = array() )</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        $kernelClosure = $legacyKernelFactory-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1Loader.html#a121df61fde3ab11cdf45ee8499eb2f52">buildLegacyKernel</a>( $treeMenuKernelHandler );</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        $this-&gt;treeMenuKernel = $kernelClosure();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html#a972407fb4814eb18529d79eb4c936130">   42</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html#a972407fb4814eb18529d79eb4c936130">viewMenu</a>( $nodeId, $modified, $expiry, $perm )</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        $response = <span class="keyword">new</span> Response();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Controller_1_1Controller.html#aeb7dff1fbbdc472f833756c2d2a20ca5">getParameter</a>( <span class="stringliteral">&#39;treemenu.http_cache&#39;</span> ) )</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            $request = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Controller_1_1Controller.html#a8ec5ed17326e5d9ece30a31a5220977b">getRequest</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            $response-&gt;setMaxAge( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Controller_1_1Controller.html#aeb7dff1fbbdc472f833756c2d2a20ca5">getParameter</a>( <span class="stringliteral">&#39;treemenu.ttl_cache&#39;</span> ) );</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="comment">// Aggressive cache : Always return a 304 response if &quot;If-Modified-Since&quot; request header is present.</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">if</span> ( $request-&gt;headers-&gt;has( <span class="stringliteral">&#39;If-Modified-Since&#39;</span> ) )</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                $response-&gt;setNotModified();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordflow">return</span> $response;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        $result = $this-&gt;treeMenuKernel-&gt;run();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">if</span> ( $result-&gt;hasAttribute( <span class="stringliteral">&#39;lastModified&#39;</span> ) )</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            $response-&gt;setLastModified( $result-&gt;getAttribute( <span class="stringliteral">&#39;lastModified&#39;</span> ) );</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        $response-&gt;setContent( $result-&gt;getContent() );</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">return</span> $response;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use Symfony\Component\HttpFoundation\Response;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html">LegacyTreeMenuController</a> <span class="keyword">extends</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Controller_1_1Controller.html">Controller</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html#a9b5ed716a7445445c5f432e6c784cb4e">   21</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html#a9b5ed716a7445445c5f432e6c784cb4e">$treeMenuKernel</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html#a7d7c28c4ce058fc78f53111093e27cde">   23</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html#a7d7c28c4ce058fc78f53111093e27cde">__construct</a>( \Closure $treeMenuKernelHandler, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1Loader.html">Loader</a> $legacyKernelFactory, array $options = array() )</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        $kernelClosure = $legacyKernelFactory-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1Loader.html#a121df61fde3ab11cdf45ee8499eb2f52">buildLegacyKernel</a>( $treeMenuKernelHandler );</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        $this-&gt;treeMenuKernel = $kernelClosure();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html#a972407fb4814eb18529d79eb4c936130">   40</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html#a972407fb4814eb18529d79eb4c936130">viewMenu</a>( $nodeId, $modified, $expiry, $perm )</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        $response = <span class="keyword">new</span> Response();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Controller_1_1Controller.html#aeb7dff1fbbdc472f833756c2d2a20ca5">getParameter</a>( <span class="stringliteral">&#39;treemenu.http_cache&#39;</span> ) )</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            $request = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Controller_1_1Controller.html#a8ec5ed17326e5d9ece30a31a5220977b">getRequest</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            $response-&gt;setMaxAge( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Controller_1_1Controller.html#aeb7dff1fbbdc472f833756c2d2a20ca5">getParameter</a>( <span class="stringliteral">&#39;treemenu.ttl_cache&#39;</span> ) );</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="comment">// Aggressive cache : Always return a 304 response if &quot;If-Modified-Since&quot; request header is present.</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span> ( $request-&gt;headers-&gt;has( <span class="stringliteral">&#39;If-Modified-Since&#39;</span> ) )</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                $response-&gt;setNotModified();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keywordflow">return</span> $response;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        $result = $this-&gt;treeMenuKernel-&gt;run();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span> ( $result-&gt;hasAttribute( <span class="stringliteral">&#39;lastModified&#39;</span> ) )</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            $response-&gt;setLastModified( $result-&gt;getAttribute( <span class="stringliteral">&#39;lastModified&#39;</span> ) );</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        $response-&gt;setContent( $result-&gt;getContent() );</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> $response;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_7d1318b3b939336ca41ef9847f488a7b.html">Bundle</a></li><li class="navelem"><a class="el" href="dir_718d53db4ed4f1a0c6ead7c49da4650d.html">EzPublishLegacyBundle</a></li><li class="navelem"><a class="el" href="dir_7c97f0acda9a733016206f70ff069db4.html">Controller</a></li><li class="navelem"><a class="el" href="LegacyTreeMenuController_8php.html">LegacyTreeMenuController.php</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:47 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:46 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

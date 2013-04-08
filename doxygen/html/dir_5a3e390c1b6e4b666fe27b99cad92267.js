@@ -8,7 +8,7 @@ var dir_5a3e390c1b6e4b666fe27b99cad92267 =
       [ "FieldType", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1FieldType.html", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1FieldType" ]
     ] ],
     [ "Handler.php", "SPI_2Persistence_2Content_2Search_2Handler_8php.html", [
-      [ "Handler", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1Handler.html", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1Handler" ]
+      [ "Handler", "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1Handler.html", "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1Handler" ]
     ] ],
     [ "Result.php", "Result_8php.html", [
       [ "Result", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1Result.html", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1Result" ]

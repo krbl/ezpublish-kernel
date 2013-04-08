@@ -138,7 +138,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a86394162fd8c9255d23ff559a48ff5f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway_1_1ExceptionConversion.html#a86394162fd8c9255d23ff559a48ff5f8">loadLocationDataByContent</a> ($contentId, $rootLocationId=null)</td></tr>
 <tr class="memitem:add699be29a67a18eb4839fe3cb7e180a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway_1_1ExceptionConversion.html#add699be29a67a18eb4839fe3cb7e180a">getSubtreeContent</a> ($sourceId)</td></tr>
 <tr class="memitem:a7fa988ee1fbba81273932cf2245f645a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway_1_1ExceptionConversion.html#a7fa988ee1fbba81273932cf2245f645a">getChildren</a> ($locationId)</td></tr>
-<tr class="memitem:a1c11f060140e00dd1c54c93ddca96ed9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway_1_1ExceptionConversion.html#a1c11f060140e00dd1c54c93ddca96ed9">moveSubtreeNodes</a> ($fromPathString, $toPathString)</td></tr>
+<tr class="memitem:a57da304f9ab901aa870e6f7d8c007ab7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway_1_1ExceptionConversion.html#a57da304f9ab901aa870e6f7d8c007ab7">moveSubtreeNodes</a> (array $fromPathString, array $toPathString)</td></tr>
 <tr class="memitem:a72906f6ae762d6c2582264f72f4fae1a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway_1_1ExceptionConversion.html#a72906f6ae762d6c2582264f72f4fae1a">updateSubtreeModificationTime</a> ($pathString, $timestamp=null)</td></tr>
 <tr class="memitem:aa807a2fc3a2930c3b47c350f5dbad170"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway_1_1ExceptionConversion.html#aa807a2fc3a2930c3b47c350f5dbad170">updateNodeAssignment</a> ($contentObjectId, $oldParent, $newParent, $opcode)</td></tr>
 <tr class="memitem:a11842a484ae40970f2313ec67bf4bfb0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway_1_1ExceptionConversion.html#a11842a484ae40970f2313ec67bf4bfb0">createLocationsFromNodeAssignments</a> ($contentId, $versionNo)</td></tr>
@@ -604,7 +604,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns an array with basic node data</p>
 <p>We might want to cache this, since this method is used by about every method in the location handler.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000059">Todo:</a></b></dt><dd>optimize </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000061">Todo:</a></b></dt><dd>optimize </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">mixed</td><td class="paramname">$nodeId</td><td></td></tr>
@@ -647,7 +647,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns an array with basic node data for the node with $remoteId</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000060">Todo:</a></b></dt><dd>optimize </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000062">Todo:</a></b></dt><dd>optimize </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">mixed</td><td class="paramname">$remoteId</td><td></td></tr>
@@ -1018,20 +1018,20 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a1c11f060140e00dd1c54c93ddca96ed9"></a>
+<a class="anchor" id="a57da304f9ab901aa870e6f7d8c007ab7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway\ExceptionConversion::moveSubtreeNodes </td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
+          <td class="paramtype">array&#160;</td>
           <td class="paramname"><em>$fromPathString</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">&#160;</td>
+          <td class="paramtype">array&#160;</td>
           <td class="paramname"><em>$toPathString</em>&#160;</td>
         </tr>
         <tr>
@@ -1043,17 +1043,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <p>Update path strings to move nodes in the ezcontentobject_tree table</p>
 <p>This query can likely be optimized to use some more advanced string operations, which then depend on the respective database.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000061">Todo:</a></b></dt><dd>optimize </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000063">Todo:</a></b></dt><dd>optimize </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramtype">string</td><td class="paramname">$fromPathString</td><td></td></tr>
-    <tr><td class="paramtype">string</td><td class="paramname">$toPathString</td><td></td></tr>
+    <tr><td class="paramtype">array</td><td class="paramname">$fromPathString</td><td></td></tr>
+    <tr><td class="paramtype">array</td><td class="paramname">$toPathString</td><td></td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway.html#a2db35ad833e723f55e7c4e8c8af4dc20">eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway</a>.</p>
+<p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway.html#a79441f7e6ac66ef0d25e8244c2bd7c90">eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway</a>.</p>
 
 <p>Definition at line <a class="el" href="Content_2Location_2Gateway_2ExceptionConversion_8php_source.html#l00172">172</a> of file <a class="el" href="Content_2Location_2Gateway_2ExceptionConversion_8php_source.html">ExceptionConversion.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -1729,7 +1729,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location.html">Location</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway.html">Gateway</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway_1_1ExceptionConversion.html">ExceptionConversion</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:59 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:56 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

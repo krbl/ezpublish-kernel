@@ -7,7 +7,6 @@ var namespaceeZ_1_1Publish_1_1API_1_1Repository =
     [ "FieldType", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1FieldType.html", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1FieldType" ],
     [ "FieldTypeService", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1FieldTypeService.html", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1FieldTypeService" ],
     [ "FieldTypeTools", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1FieldTypeTools.html", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1FieldTypeTools" ],
-    [ "IOService", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService" ],
     [ "LanguageService", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LanguageService.html", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LanguageService" ],
     [ "LocationService", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LocationService.html", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LocationService" ],
     [ "ObjectStateService", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ObjectStateService.html", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ObjectStateService" ],

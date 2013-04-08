@@ -7,5 +7,6 @@ var classeZ_1_1Publish_1_1Core_1_1Repository_1_1SearchService =
     [ "suggest", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1SearchService.html#a5b34989ed9bee6f169950fc456ce6832", null ],
     [ "$repository", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1SearchService.html#a5be3e93c902123ae7034384751cc6141", null ],
     [ "$searchHandler", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1SearchService.html#a69130ab2757a77e381615908281d2035", null ],
-    [ "$settings", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1SearchService.html#a369304ec41d51d5a801e64f29481b801", null ]
+    [ "$settings", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1SearchService.html#a369304ec41d51d5a801e64f29481b801", null ],
+    [ "MAX_LIMIT", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1SearchService.html#a4f6e2327620f2730959f00831cb11ff7", null ]
 ];

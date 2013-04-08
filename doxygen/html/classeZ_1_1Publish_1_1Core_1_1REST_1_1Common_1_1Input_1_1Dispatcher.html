@@ -126,7 +126,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input.html">Input</a> dispatcher </p>
 
-<p>Definition at line <a class="el" href="Dispatcher_8php_source.html#l00018">18</a> of file <a class="el" href="Dispatcher_8php_source.html">Dispatcher.php</a>.</p>
+<p>Definition at line <a class="el" href="REST_2Common_2Input_2Dispatcher_8php_source.html#l00018">18</a> of file <a class="el" href="REST_2Common_2Input_2Dispatcher_8php_source.html">Dispatcher.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad493acb7da8fe2b49652795b4eef4a93"></a>
 <div class="memitem">
@@ -160,9 +160,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Dispatcher_8php_source.html#l00047">47</a> of file <a class="el" href="Dispatcher_8php_source.html">Dispatcher.php</a>.</p>
+<p>Definition at line <a class="el" href="REST_2Common_2Input_2Dispatcher_8php_source.html#l00047">47</a> of file <a class="el" href="REST_2Common_2Input_2Dispatcher_8php_source.html">Dispatcher.php</a>.</p>
 
-<p>References <a class="el" href="Dispatcher_8php_source.html#l00034">eZ\Publish\Core\REST\Common\Input\Dispatcher\$handlers</a>, <a class="el" href="Dispatcher_8php_source.html#l00039">eZ\Publish\Core\REST\Common\Input\Dispatcher\$parsingDispatcher</a>, and <a class="el" href="Dispatcher_8php_source.html#l00062">eZ\Publish\Core\REST\Common\Input\Dispatcher\addHandler()</a>.</p>
+<p>References <a class="el" href="REST_2Common_2Input_2Dispatcher_8php_source.html#l00034">eZ\Publish\Core\REST\Common\Input\Dispatcher\$handlers</a>, <a class="el" href="REST_2Common_2Input_2Dispatcher_8php_source.html#l00039">eZ\Publish\Core\REST\Common\Input\Dispatcher\$parsingDispatcher</a>, and <a class="el" href="REST_2Common_2Input_2Dispatcher_8php_source.html#l00062">eZ\Publish\Core\REST\Common\Input\Dispatcher\addHandler()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;parsingDispatcher = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#abbdca63534027e3ccc779791a034bbe1">$parsingDispatcher</a>;</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html#a9521902dad069fb9ac487775ad94c6d5">$handlers</a> as $type =&gt; $handler )</div>
@@ -217,7 +217,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Dispatcher_8php_source.html#l00062">62</a> of file <a class="el" href="Dispatcher_8php_source.html">Dispatcher.php</a>.</p>
+<p>Definition at line <a class="el" href="REST_2Common_2Input_2Dispatcher_8php_source.html#l00062">62</a> of file <a class="el" href="REST_2Common_2Input_2Dispatcher_8php_source.html">Dispatcher.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;handlers[$type] = $handler;</div>
 <div class="line">    }</div>
@@ -257,17 +257,20 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>mixed </dd></dl>
 
-<p>Definition at line <a class="el" href="Dispatcher_8php_source.html#l00074">74</a> of file <a class="el" href="Dispatcher_8php_source.html">Dispatcher.php</a>.</p>
+<p>Definition at line <a class="el" href="REST_2Common_2Input_2Dispatcher_8php_source.html#l00074">74</a> of file <a class="el" href="REST_2Common_2Input_2Dispatcher_8php_source.html">Dispatcher.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !isset( $message-&gt;headers[<span class="stringliteral">&#39;Content-Type&#39;</span>] ) )</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exceptions\Parser( <span class="stringliteral">&#39;Missing Content-Type header in message.&#39;</span> );</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        $contentTypeParts = explode( <span class="charliteral">&#39;+&#39;</span>, $message-&gt;headers[<span class="stringliteral">&#39;Content-Type&#39;</span>] );</div>
+<div class="line">        $mediaTypeParts = explode( <span class="charliteral">&#39;;&#39;</span>, $message-&gt;headers[<span class="stringliteral">&#39;Content-Type&#39;</span>] );</div>
+<div class="line">        $contentTypeParts = explode( <span class="charliteral">&#39;+&#39;</span>, $mediaTypeParts[0] );</div>
 <div class="line">        <span class="keywordflow">if</span> ( count( $contentTypeParts ) !== 2 )</div>
 <div class="line">        {</div>
-<div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> Exceptions\Parser( <span class="stringliteral">&quot;No format specification in content type. Missing &#39;+(json|xml|…)&#39; in &#39;{$message-&gt;headers[&#39;Content-Type&#39;]}&#39;.&quot;</span> );</div>
+<div class="line">            <span class="comment">// TODO expose default format</span></div>
+<div class="line">            $contentTypeParts[1] = <span class="stringliteral">&quot;xml&quot;</span>;</div>
+<div class="line">            <span class="comment">//throw new Exceptions\Parser( &quot;No format specification in content type. Missing &#39;+(json|xml|…)&#39; in &#39;{$message-&gt;headers[&#39;Content-Type&#39;]}&#39;.&quot; );</span></div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        $media  = $contentTypeParts[0];</div>
@@ -316,7 +319,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Dispatcher_8php_source.html#l00034">34</a> of file <a class="el" href="Dispatcher_8php_source.html">Dispatcher.php</a>.</p>
+<p>Definition at line <a class="el" href="REST_2Common_2Input_2Dispatcher_8php_source.html#l00034">34</a> of file <a class="el" href="REST_2Common_2Input_2Dispatcher_8php_source.html">Dispatcher.php</a>.</p>
 
 </div>
 </div>
@@ -338,12 +341,12 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Dispatcher_8php_source.html#l00039">39</a> of file <a class="el" href="Dispatcher_8php_source.html">Dispatcher.php</a>.</p>
+<p>Definition at line <a class="el" href="REST_2Common_2Input_2Dispatcher_8php_source.html#l00039">39</a> of file <a class="el" href="REST_2Common_2Input_2Dispatcher_8php_source.html">Dispatcher.php</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/var/lib/jenkins/jobs/PAPI-doxygen-master/workspace/eZ/Publish/Core/REST/Common/Input/<a class="el" href="Dispatcher_8php_source.html">Dispatcher.php</a></li>
+<li>/var/lib/jenkins/jobs/PAPI-doxygen-master/workspace/eZ/Publish/Core/REST/Common/Input/<a class="el" href="REST_2Common_2Input_2Dispatcher_8php_source.html">Dispatcher.php</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -351,7 +354,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html">REST</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Common.html">Common</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input.html">Input</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html">Dispatcher</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:03:05 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:51:00 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

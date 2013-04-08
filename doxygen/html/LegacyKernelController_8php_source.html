@@ -109,49 +109,59 @@ $(document).ready(function(){initNavTree('LegacyKernelController_8php_source.htm
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use Symfony\Component\HttpFoundation\Response;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use Symfony\Component\Templating\EngineInterface;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use ezpModuleNotFound;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use ezpModuleViewNotFound;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use ezpModuleDisabled;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;use ezpModuleViewDisabled;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;use ezpAccessDenied;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;use ezpContentNotFoundException;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;use ezpLanguageNotFound;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html">LegacyKernelController</a></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">private</span> $kernel;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a3c8e2d3a13aca035c2e93b7692ba2ab7">   40</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a3c8e2d3a13aca035c2e93b7692ba2ab7">__construct</a>( \Closure $kernelClosure, EngineInterface $templateEngine )</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        $this-&gt;kernel = $kernelClosure();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        $this-&gt;templateEngine = $templateEngine;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1503d06992c3ae0105ac07e1fc5d7112">   54</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1503d06992c3ae0105ac07e1fc5d7112">render</a>( $view, array $parameters = array() )</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        $response = <span class="keyword">new</span> Response();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        $response-&gt;setContent( $this-&gt;templateEngine-&gt;render( $view, $parameters ) );</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> $response;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a5a58a48c0c7c55ddc7da210f4f8918a5">   67</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a5a58a48c0c7c55ddc7da210f4f8918a5">indexAction</a>()</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        $this-&gt;kernel-&gt;setUseExceptions( <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        $result = $this-&gt;kernel-&gt;run();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        $this-&gt;kernel-&gt;setUseExceptions( <span class="keyword">true</span> );</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> Response(</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            $result-&gt;getContent()</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        );</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1ConfigResolverInterface.html">eZ\Publish\Core\MVC\ConfigResolverInterface</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html">LegacyKernelController</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">private</span> $kernel;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">private</span> $legacyLayout;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1b3c004f8ac09ac163dd335b47408642">   45</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1b3c004f8ac09ac163dd335b47408642">__construct</a>( \Closure $kernelClosure, EngineInterface $templateEngine, <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1ConfigResolverInterface.html">ConfigResolverInterface</a> $configResolver )</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        $this-&gt;kernel = $kernelClosure();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        $this-&gt;templateEngine = $templateEngine;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        $this-&gt;legacyLayout = $configResolver-&gt;<a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1ConfigResolverInterface.html#ac66b88a1837f9a46ec5472a6ca066acf">getParameter</a>( <span class="stringliteral">&#39;module_default_layout&#39;</span>, <span class="stringliteral">&#39;ezpublish_legacy&#39;</span> );</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        $this-&gt;configResolver = $configResolver;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1503d06992c3ae0105ac07e1fc5d7112">   61</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1503d06992c3ae0105ac07e1fc5d7112">render</a>( $view, array $parameters = array() )</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        $response = <span class="keyword">new</span> Response();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        $response-&gt;setContent( $this-&gt;templateEngine-&gt;render( $view, $parameters ) );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> $response;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a5a58a48c0c7c55ddc7da210f4f8918a5">   74</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a5a58a48c0c7c55ddc7da210f4f8918a5">indexAction</a>()</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        $legacyMode = $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;legacy_mode&#39;</span> );</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        $this-&gt;kernel-&gt;setUseExceptions( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        $result = $this-&gt;kernel-&gt;run();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        $this-&gt;kernel-&gt;setUseExceptions( <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        $moduleResult = $result-&gt;getAttribute( <span class="stringliteral">&#39;module_result&#39;</span> );</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">if</span> ( isset( $this-&gt;legacyLayout ) &amp;&amp; !$legacyMode )</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1503d06992c3ae0105ac07e1fc5d7112">render</a>(</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                $this-&gt;legacyLayout,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                array( <span class="stringliteral">&#39;module_result&#39;</span> =&gt; $moduleResult )</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            );</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> Response(</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            $result-&gt;getContent()</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        );</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_7d1318b3b939336ca41ef9847f488a7b.html">Bundle</a></li><li class="navelem"><a class="el" href="dir_718d53db4ed4f1a0c6ead7c49da4650d.html">EzPublishLegacyBundle</a></li><li class="navelem"><a class="el" href="dir_7c97f0acda9a733016206f70ff069db4.html">Controller</a></li><li class="navelem"><a class="el" href="LegacyKernelController_8php.html">LegacyKernelController.php</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:47 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:46 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

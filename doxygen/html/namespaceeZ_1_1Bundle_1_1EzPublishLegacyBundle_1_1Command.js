@@ -1,5 +1,6 @@
 var namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Command =
 [
     [ "LegacyConfigurationCommand", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Command_1_1LegacyConfigurationCommand.html", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Command_1_1LegacyConfigurationCommand" ],
+    [ "LegacyEmbedScriptCommand", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Command_1_1LegacyEmbedScriptCommand.html", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Command_1_1LegacyEmbedScriptCommand" ],
     [ "LegacyWrapperInstallCommand", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Command_1_1LegacyWrapperInstallCommand.html", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Command_1_1LegacyWrapperInstallCommand" ]
 ];

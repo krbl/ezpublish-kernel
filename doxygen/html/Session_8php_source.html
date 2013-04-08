@@ -108,7 +108,7 @@ $(document).ready(function(){initNavTree('Session_8php_source.html','');});
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Bundle\EzPublishLegacyBundle\LegacyMapper;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1LegacyEvents.html">eZ\Publish\Core\MVC\Legacy\LegacyEvents</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelWebHandlerEvent.html">eZ\Publish\Core\MVC\Legacy\Event\PreBuildKernelWebHandlerEvent</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelEvent.html">eZ\Publish\Core\MVC\Legacy\Event\PreBuildKernelEvent</a>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use Symfony\Component\EventDispatcher\EventSubscriberInterface;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use Symfony\Component\DependencyInjection\ContainerInterface;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
@@ -124,11 +124,11 @@ $(document).ready(function(){initNavTree('Session_8php_source.html','');});
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session.html#ab169039678de181b2fcdf846790adcba">   32</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session.html#ab169039678de181b2fcdf846790adcba">getSubscribedEvents</a>()</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> array(</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1LegacyEvents.html#a02e40ca8d4fd4501939a12d17cffc38b">LegacyEvents::PRE_BUILD_LEGACY_KERNEL_WEB</a> =&gt; array( <span class="stringliteral">&#39;onBuildKernelWebHandler&#39;</span>, 128 )</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1LegacyEvents.html#afd9bf3ff305a60b36a598d2c45ee8314">LegacyEvents::PRE_BUILD_LEGACY_KERNEL</a> =&gt; array( <span class="stringliteral">&#39;onBuildKernelHandler&#39;</span>, 128 )</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        );</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session.html#aff470b47765cb97297f10010a5d95b1c">   45</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session.html#aff470b47765cb97297f10010a5d95b1c">onBuildKernelWebHandler</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelWebHandlerEvent.html">PreBuildKernelWebHandlerEvent</a> $event )</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session.html#a8ad0dc6a6acb35beb8a93e788ecaa905">   45</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session.html#a8ad0dc6a6acb35beb8a93e788ecaa905">onBuildKernelHandler</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelEvent.html">PreBuildKernelEvent</a> $event )</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        $sessionInfos = array(</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="stringliteral">&#39;configured&#39;</span> =&gt; <span class="keyword">false</span>,</div>
@@ -148,11 +148,11 @@ $(document).ready(function(){initNavTree('Session_8php_source.html','');});
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            $sessionInfos[<span class="stringliteral">&#39;namespace&#39;</span>] = $this-&gt;container-&gt;getParameter(</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="stringliteral">&#39;ezpublish.session.attribute_bag.storage_key&#39;</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            );</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            $sessionInfos[<span class="stringliteral">&#39;has_previous&#39;</span>] = $event-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelWebHandlerEvent.html#a797096070c035beecf4a5e4a7dbfe704">getRequest</a>()-&gt;hasPreviousSession();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            $sessionInfos[<span class="stringliteral">&#39;has_previous&#39;</span>] = $this-&gt;container-&gt;isScopeActive( <span class="stringliteral">&#39;request&#39;</span> ) ? $this-&gt;container-&gt;get( <span class="stringliteral">&#39;request&#39;</span> )-&gt;hasPreviousSession() : <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            $sessionInfos[<span class="stringliteral">&#39;storage&#39;</span>] = $this-&gt;container-&gt;get( <span class="stringliteral">&#39;session.storage&#39;</span> );</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        $event-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelWebHandlerEvent.html#a2fbd61f6f9aa5420ef233b261525cab4">getParameters</a>()-&gt;set( <span class="stringliteral">&#39;session&#39;</span>, $sessionInfos );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        $event-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelEvent.html#a4d33897eb2331576d3be1214050639fa">getParameters</a>()-&gt;set( <span class="stringliteral">&#39;session&#39;</span>, $sessionInfos );</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
@@ -161,7 +161,7 @@ $(document).ready(function(){initNavTree('Session_8php_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_7d1318b3b939336ca41ef9847f488a7b.html">Bundle</a></li><li class="navelem"><a class="el" href="dir_718d53db4ed4f1a0c6ead7c49da4650d.html">EzPublishLegacyBundle</a></li><li class="navelem"><a class="el" href="dir_ba0653e5e0251332449ac7f7204a446a.html">LegacyMapper</a></li><li class="navelem"><a class="el" href="Session_8php.html">Session.php</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:47 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:46 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

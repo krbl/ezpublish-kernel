@@ -154,7 +154,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="EzPublishCoreExtension_8php_source.html#l00031">31</a> of file <a class="el" href="EzPublishCoreExtension_8php_source.html">EzPublishCoreExtension.php</a>.</p>
+<p>Definition at line <a class="el" href="EzPublishCoreExtension_8php_source.html#l00025">25</a> of file <a class="el" href="EzPublishCoreExtension_8php_source.html">EzPublishCoreExtension.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;configParsers = $configParsers;</div>
 <div class="line">    }</div>
@@ -175,7 +175,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="EzPublishCoreExtension_8php_source.html#l00036">36</a> of file <a class="el" href="EzPublishCoreExtension_8php_source.html">EzPublishCoreExtension.php</a>.</p>
+<p>Definition at line <a class="el" href="EzPublishCoreExtension_8php_source.html#l00030">30</a> of file <a class="el" href="EzPublishCoreExtension_8php_source.html">EzPublishCoreExtension.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="stringliteral">&#39;ezpublish&#39;</span>;</div>
 <div class="line">    }</div>
@@ -214,7 +214,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="EzPublishCoreExtension_8php_source.html#l00092">92</a> of file <a class="el" href="EzPublishCoreExtension_8php_source.html">EzPublishCoreExtension.php</a>.</p>
+<p>Definition at line <a class="el" href="EzPublishCoreExtension_8php_source.html#l00088">88</a> of file <a class="el" href="EzPublishCoreExtension_8php_source.html">EzPublishCoreExtension.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Configuration( $this-&gt;configParsers );</div>
 <div class="line">    }</div>
@@ -270,9 +270,9 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="EzPublishCoreExtension_8php_source.html#l00051">51</a> of file <a class="el" href="EzPublishCoreExtension_8php_source.html">EzPublishCoreExtension.php</a>.</p>
+<p>Definition at line <a class="el" href="EzPublishCoreExtension_8php_source.html#l00045">45</a> of file <a class="el" href="EzPublishCoreExtension_8php_source.html">EzPublishCoreExtension.php</a>.</p>
 
-<p>References <a class="el" href="EzPublishCoreExtension_8php_source.html#l00092">eZ\Bundle\EzPublishCoreBundle\DependencyInjection\EzPublishCoreExtension\getConfiguration()</a>.</p>
+<p>References <a class="el" href="EzPublishCoreExtension_8php_source.html#l00088">eZ\Bundle\EzPublishCoreBundle\DependencyInjection\EzPublishCoreExtension\getConfiguration()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $loader = <span class="keyword">new</span> Loader\YamlFileLoader(</div>
 <div class="line">            $container,</div>
@@ -291,6 +291,7 @@ Public Member Functions</h2></td></tr>
 <div class="line">        $loader-&gt;load( <span class="stringliteral">&#39;default_settings.yml&#39;</span> );</div>
 <div class="line">        $this-&gt;registerSiteAccessConfiguration( $config, $container );</div>
 <div class="line">        $this-&gt;registerImageMagickConfiguration( $config, $container );</div>
+<div class="line">        $this-&gt;registerPageConfiguration( $config, $container );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Routing</span></div>
 <div class="line">        $this-&gt;handleRouting( $container, $loader );</div>
@@ -299,6 +300,7 @@ Public Member Functions</h2></td></tr>
 <div class="line">        $this-&gt;handleTemplating( $container, $loader );</div>
 <div class="line">        $this-&gt;handleSessionLoading( $container, $loader );</div>
 <div class="line">        $this-&gt;handleCache( $config, $container, $loader );</div>
+<div class="line">        $this-&gt;handleLocale( $config, $container, $loader );</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// Map settings</span></div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $this-&gt;configParsers as $configParser )</div>
@@ -329,7 +331,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle.html">EzPublishCoreBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection.html">DependencyInjection</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1EzPublishCoreExtension.html">EzPublishCoreExtension</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:53 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:51 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('Examples_2translation_5x_8php-example.
 <p>updates the destination version given in $translationInfo with the provided translated fields in $translationValues</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</td><td>if the user is not allowed to update this version </td></tr>
+    <tr><td class="paramname">\eZ\Publish\API\Repository\Exceptions\UnauthorizedException</td><td>if the current-user is not allowed to update this version </td></tr>
     <tr><td class="paramname">\eZ\Publish\API\Repository\Exceptions\BadStateException</td><td>if the given destination version is not a draft </td></tr>
     <tr><td class="paramname">\eZ\Publish\API\Repository\Exceptions\ContentValidationException</td><td>if a required field is set to an empty value </td></tr>
     <tr><td class="paramname">\eZ\Publish\API\Repository\Exceptions\ContentFieldValidationException</td><td>if a field in the $translationValues is not valid</td></tr>
@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('Examples_2translation_5x_8php-example.
   <table class="params">
     <tr><td class="paramtype">\eZ\Publish\API\Repository\Values\Content\TranslationInfo</td><td class="paramname">$translationInfo</td><td></td></tr>
     <tr><td class="paramtype">\eZ\Publish\API\Repository\Values\Content\TranslationValues</td><td class="paramname">$translationValues</td><td></td></tr>
-    <tr><td class="paramtype">\eZ\Publish\API\Repository\Values\User\User</td><td class="paramname">$user</td><td>If set, this user is taken as modifier of the version</td></tr>
+    <tr><td class="paramtype">\eZ\Publish\API\Repository\Values\User\User</td><td class="paramname">$modifier</td><td>Taken as modifier of the version, otherwise current-user is used</td></tr>
   </table>
   </dd>
 </dl>
@@ -125,7 +125,7 @@ $(document).ready(function(){initNavTree('Examples_2translation_5x_8php-example.
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:47 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:45 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

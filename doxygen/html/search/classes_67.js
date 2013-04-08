@@ -15,7 +15,7 @@ var searchData=
   ['gateway',['Gateway',['../classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Gateway.html',1,'eZ::Publish::Core::Persistence::Legacy::Content::Type']]],
   ['gateway',['Gateway',['../classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Gateway.html',1,'eZ::Publish::Core::Persistence::Legacy::Content::UrlAlias']]],
   ['gateway',['Gateway',['../classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Image_1_1ImageStorage_1_1Gateway.html',1,'eZ::Publish::Core::FieldType::Image::ImageStorage']]],
-  ['gateway',['Gateway',['../classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway.html',1,'eZ::Publish::Core::FieldType::Relation::RelationStorage']]],
+  ['gateway',['Gateway',['../classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1PageStorage_1_1Gateway.html',1,'eZ::Publish::Core::FieldType::Page::PageStorage']]],
   ['gateway',['Gateway',['../classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1User_1_1Gateway.html',1,'eZ::Publish::Core::Persistence::Legacy::User']]],
   ['gateway',['Gateway',['../classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html',1,'eZ::Publish::Core::Persistence::Legacy::Content']]],
   ['gateway',['Gateway',['../classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1User_1_1Role_1_1Gateway.html',1,'eZ::Publish::Core::Persistence::Legacy::User::Role']]],

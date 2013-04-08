@@ -5,6 +5,7 @@ var classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter =
     [ "getContext", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#afd45f06c7d5c3af8497eff4a058cbda4", null ],
     [ "getRepository", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a9849123b9676f7c62eefd4534614d74d", null ],
     [ "getRouteCollection", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a246cd5bd7787d7674e3097e10bfd9481", null ],
+    [ "getRouteDebugMessage", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#ac0fe1098df5425177963b0d4aa80df07", null ],
     [ "match", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a5a19d01efe49c78dc688364e658c209a", null ],
     [ "matchRequest", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a49352e580fd38c48321d2ed20f37df15", null ],
     [ "setContext", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1UrlAliasRouter.html#a15f4d03bad38a5f85b16db4fa885a5d9", null ],

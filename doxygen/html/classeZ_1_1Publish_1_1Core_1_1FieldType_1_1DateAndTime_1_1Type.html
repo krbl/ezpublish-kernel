@@ -154,6 +154,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3061e2ef3ca52780250d8f6901c8e3fe inherit pub_methods_classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html#a3061e2ef3ca52780250d8f6901c8e3fe">acceptValue</a> ($inputValue)</td></tr>
 <tr class="memitem:a72f48c751f5a9266fd68515a4071d3f8 inherit pub_methods_classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html#a72f48c751f5a9266fd68515a4071d3f8">validatorConfigurationToHash</a> ($validatorConfiguration)</td></tr>
 <tr class="memitem:a4cb757d8794cd2eacdc4bd6ba731d6f2 inherit pub_methods_classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html#a4cb757d8794cd2eacdc4bd6ba731d6f2">validatorConfigurationFromHash</a> ($validatorConfigurationHash)</td></tr>
+<tr class="memitem:aed50439bb1116653952b8b58af4f3f19 inherit pub_methods_classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html#aed50439bb1116653952b8b58af4f3f19">getRelations</a> ($fieldValue)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -274,7 +275,7 @@ Protected Attributes</h2></td></tr>
 <p>Converts an $hash to the <a class="el" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html">Value</a> defined by the field type</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramtype">int</td><td class="paramname">$hash</td><td>Number of seconds since Unix Epoch</td></tr>
+    <tr><td class="paramtype">mixed</td><td class="paramname">$hash</td><td><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1Null.html">Null</a> or associative array containing timestamp and optionally date in RFC850 format.</td></tr>
   </table>
   </dd>
 </dl>
@@ -284,7 +285,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2FieldType_2DateAndTime_2Type_8php_source.html#l00152">152</a> of file <a class="el" href="Core_2FieldType_2DateAndTime_2Type_8php_source.html">Type.php</a>.</p>
 
-<p>References <a class="el" href="FieldType_2DateAndTime_2Value_8php_source.html#l00057">eZ\Publish\Core\FieldType\DateAndTime\Value\fromString()</a>, and <a class="el" href="FieldType_2DateAndTime_2Value_8php_source.html#l00076">eZ\Publish\Core\FieldType\DateAndTime\Value\fromTimestamp()</a>.</p>
+<p>References <a class="el" href="FieldType_2DateAndTime_2Value_8php_source.html#l00054">eZ\Publish\Core\FieldType\DateAndTime\Value\fromString()</a>, and <a class="el" href="FieldType_2DateAndTime_2Value_8php_source.html#l00073">eZ\Publish\Core\FieldType\DateAndTime\Value\fromTimestamp()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $hash === null )</div>
 <div class="line">        {</div>
@@ -475,7 +476,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2FieldType_2DateAndTime_2Type_8php_source.html#l00094">94</a> of file <a class="el" href="Core_2FieldType_2DateAndTime_2Type_8php_source.html">Type.php</a>.</p>
 
-<p>References <a class="el" href="FieldType_2DateAndTime_2Value_8php_source.html#l00057">eZ\Publish\Core\FieldType\DateAndTime\Value\fromString()</a>, and <a class="el" href="FieldType_2DateAndTime_2Value_8php_source.html#l00076">eZ\Publish\Core\FieldType\DateAndTime\Value\fromTimestamp()</a>.</p>
+<p>References <a class="el" href="FieldType_2DateAndTime_2Value_8php_source.html#l00054">eZ\Publish\Core\FieldType\DateAndTime\Value\fromString()</a>, and <a class="el" href="FieldType_2DateAndTime_2Value_8php_source.html#l00073">eZ\Publish\Core\FieldType\DateAndTime\Value\fromTimestamp()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( is_string( $inputValue ) )</div>
 <div class="line">        {</div>
@@ -573,7 +574,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Core_2FieldType_2DateAndTime_2Type_8php_source.html#l00174">174</a> of file <a class="el" href="Core_2FieldType_2DateAndTime_2Type_8php_source.html">Type.php</a>.</p>
 
-<p>References <a class="el" href="Core_2FieldType_2FieldType_8php_source.html#l00251">eZ\Publish\Core\FieldType\FieldType\isEmptyValue()</a>.</p>
+<p>References <a class="el" href="Core_2FieldType_2FieldType_8php_source.html#l00252">eZ\Publish\Core\FieldType\FieldType\isEmptyValue()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldType.html#a6205d987981a9595cc3d1322aa6ddd96">isEmptyValue</a>( $value ) )</div>
 <div class="line">        {</div>
@@ -808,7 +809,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1FieldType.html">FieldType</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime.html">DateAndTime</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Type.html">Type</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:55 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:53 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

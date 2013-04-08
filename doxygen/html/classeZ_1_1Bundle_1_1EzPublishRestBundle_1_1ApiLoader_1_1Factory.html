@@ -182,7 +182,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Bundle_2EzPublishRestBundle_2ApiLoader_2Factory_8php_source.html#l00163">163</a> of file <a class="el" href="Bundle_2EzPublishRestBundle_2ApiLoader_2Factory_8php_source.html">Factory.php</a>.</p>
+<p>Definition at line <a class="el" href="Bundle_2EzPublishRestBundle_2ApiLoader_2Factory_8php_source.html#l00164">164</a> of file <a class="el" href="Bundle_2EzPublishRestBundle_2ApiLoader_2Factory_8php_source.html">Factory.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Common\FieldTypeProcessorRegistry(</div>
 <div class="line">            array(</div>
@@ -237,7 +237,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Bundle_2EzPublishRestBundle_2ApiLoader_2Factory_8php_source.html#l00186">186</a> of file <a class="el" href="Bundle_2EzPublishRestBundle_2ApiLoader_2Factory_8php_source.html">Factory.php</a>.</p>
+<p>Definition at line <a class="el" href="Bundle_2EzPublishRestBundle_2ApiLoader_2Factory_8php_source.html#l00187">187</a> of file <a class="el" href="Bundle_2EzPublishRestBundle_2ApiLoader_2Factory_8php_source.html">Factory.php</a>.</p>
 
 <p>References <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html#a2c9a1aad491424eb0884148b3200ad8c">eZ\Publish\API\Repository\Repository\getContentService()</a>, and <a class="el" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html#a7485278fd0032e01b3ed0ce90e17d75b">eZ\Publish\API\Repository\Repository\getLocationService()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -297,6 +297,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">            <span class="stringliteral">&#39;\\eZ\\Publish\\Core\\REST\\Server\\Values\\UserRefList&#39;</span>                 =&gt; <span class="keyword">new</span> Output\ValueObjectVisitor\UserRefList( <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a31844ca6673e433d6df961caecb22b12">$urlHandler</a> ),</div>
 <div class="line">            <span class="stringliteral">&#39;\\eZ\\Publish\\Core\\REST\\Server\\Values\\CreatedUser&#39;</span>                 =&gt; <span class="keyword">new</span> Output\ValueObjectVisitor\CreatedUser( <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a31844ca6673e433d6df961caecb22b12">$urlHandler</a> ),</div>
 <div class="line">            <span class="stringliteral">&#39;\\eZ\\Publish\\Core\\REST\\Server\\Values\\RestUser&#39;</span>                    =&gt; <span class="keyword">new</span> Output\ValueObjectVisitor\RestUser( <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a31844ca6673e433d6df961caecb22b12">$urlHandler</a> ),</div>
+<div class="line">            <span class="stringliteral">&#39;\\eZ\\Publish\\Core\\REST\\Server\\Values\\UserSession&#39;</span>                 =&gt; <span class="keyword">new</span> Output\ValueObjectVisitor\UserSession( <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a31844ca6673e433d6df961caecb22b12">$urlHandler</a> ),</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">// ContentType</span></div>
 <div class="line"></div>
@@ -371,6 +372,8 @@ Protected Attributes</h2></td></tr>
 <div class="line">            <span class="stringliteral">&#39;\\eZ\\Publish\\Core\\REST\\Server\\Values\\ResourceCreated&#39;</span>             =&gt; <span class="keyword">new</span> Output\ValueObjectVisitor\ResourceCreated( <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a31844ca6673e433d6df961caecb22b12">$urlHandler</a> ),</div>
 <div class="line">            <span class="stringliteral">&#39;\\eZ\\Publish\\Core\\REST\\Server\\Values\\NoContent&#39;</span>                   =&gt; <span class="keyword">new</span> Output\ValueObjectVisitor\NoContent( <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a31844ca6673e433d6df961caecb22b12">$urlHandler</a> ),</div>
 <div class="line">            <span class="stringliteral">&#39;\\eZ\\Publish\\Core\\REST\\Common\\Values\\Root&#39;</span>                        =&gt; <span class="keyword">new</span> Output\ValueObjectVisitor\Root( <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a31844ca6673e433d6df961caecb22b12">$urlHandler</a> ),</div>
+<div class="line">            <span class="stringliteral">&#39;\\eZ\\Publish\\Core\\REST\\Server\\Values\\SeeOther&#39;</span>                    =&gt; <span class="keyword">new</span> Output\ValueObjectVisitor\SeeOther( <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a31844ca6673e433d6df961caecb22b12">$urlHandler</a> ),</div>
+<div class="line">            <span class="stringliteral">&#39;\\eZ\\Publish\\Core\\REST\\Server\\Values\\Conflict&#39;</span>                    =&gt; <span class="keyword">new</span> Output\ValueObjectVisitor\Conflict( <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a31844ca6673e433d6df961caecb22b12">$urlHandler</a>, <span class="keyword">true</span> ),</div>
 <div class="line">        );</div>
 <div class="line"></div>
 <div class="line">        $jsonVisitor = <span class="keyword">new</span> Common\Output\Visitor(</div>
@@ -468,7 +471,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishRestBundle.html">EzPublishRestBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishRestBundle_1_1ApiLoader.html">ApiLoader</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1ApiLoader_1_1Factory.html">Factory</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:53 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:52 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

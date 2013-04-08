@@ -2,6 +2,7 @@ var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1
 [
     [ "__construct", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a00fe34f6168507d2f007ac4f2c035f3b", null ],
     [ "changeMainLocation", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a29dc9190750bc0d0089a7ee4a25d3296", null ],
+    [ "copySubtree", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a4ed48586b8bb0e2d1c540e355255542b", null ],
     [ "create", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a4399efcc6dca6b0ba088dcab8efcbfc5", null ],
     [ "getParentPathString", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a98c039f593d34d77750cf35f70d1903c", null ],
     [ "hide", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html#a1a47a460b6073238195349d26d852a21", null ],

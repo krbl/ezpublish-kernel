@@ -8,6 +8,7 @@ var interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldType =
     [ "getEmptyValue", "interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldType.html#a73bdc8a621bb96dc18f66e0531b61f86", null ],
     [ "getFieldTypeIdentifier", "interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldType.html#a4986e866c19b5a3c1e5ab4347e067a9a", null ],
     [ "getName", "interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldType.html#a72e0c787d423166cfc2f0e9d69ce694e", null ],
+    [ "getRelations", "interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldType.html#a944898c9f4658cdf524459ce074b118d", null ],
     [ "getSettingsSchema", "interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldType.html#a9d0050850474e28fdaccbdeb8453d772", null ],
     [ "getValidatorConfigurationSchema", "interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldType.html#a81a486e759b777200a5e03b7aa6d3183", null ],
     [ "isEmptyValue", "interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldType.html#a9b96ae5b404377b2c122bfc20046bd87", null ],

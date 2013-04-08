@@ -1,5 +1,6 @@
 var namespaceeZ_1_1Publish_1_1SPI_1_1FieldType =
 [
+    [ "BinaryBase", "namespaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1BinaryBase.html", "namespaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1BinaryBase" ],
     [ "Events", "namespaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1Events.html", "namespaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1Events" ],
     [ "Event", "classeZ_1_1Publish_1_1SPI_1_1FieldType_1_1Event.html", "classeZ_1_1Publish_1_1SPI_1_1FieldType_1_1Event" ],
     [ "EventListener", "interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1EventListener.html", "interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1EventListener" ],

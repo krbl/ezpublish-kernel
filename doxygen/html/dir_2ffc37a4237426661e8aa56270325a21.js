@@ -18,6 +18,9 @@ var dir_2ffc37a4237426661e8aa56270325a21 =
     [ "IntegerField.php", "IntegerField_8php.html", [
       [ "IntegerField", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1FieldType_1_1IntegerField.html", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1FieldType_1_1IntegerField" ]
     ] ],
+    [ "MultipleIdentifierField.php", "MultipleIdentifierField_8php.html", [
+      [ "MultipleIdentifierField", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1FieldType_1_1MultipleIdentifierField.html", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1FieldType_1_1MultipleIdentifierField" ]
+    ] ],
     [ "PriceField.php", "PriceField_8php.html", [
       [ "PriceField", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1FieldType_1_1PriceField.html", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1FieldType_1_1PriceField" ]
     ] ],

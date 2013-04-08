@@ -383,7 +383,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespaceeZ.html">eZ</a> </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000053">Todo:</a></b></dt><dd>Handle field types actions </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000054">Todo:</a></b></dt><dd>Handle field types actions </dd></dl>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html#a55824e6920b819964cd6994801f7978a">eZ\Publish\SPI\Persistence\Content\Location\Trash\Handler</a>.</p>
 
@@ -435,7 +435,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespaceeZ.html">eZ</a> </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000052">Todo:</a></b></dt><dd>Handle field types actions </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000053">Todo:</a></b></dt><dd>Handle field types actions </dd></dl>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Trash_1_1Handler.html#a3bbdc62b999f1339d571f43319e137dc">eZ\Publish\SPI\Persistence\Content\Location\Trash\Handler</a>.</p>
 
@@ -472,9 +472,9 @@ Protected Attributes</h2></td></tr>
 <div class="line">                }</div>
 <div class="line">                $this-&gt;backend-&gt;delete( <span class="stringliteral">&#39;Content\\Location&#39;</span>, $location-&gt;id );</div>
 <div class="line">                $remainingLocations = $this-&gt;backend-&gt;find( <span class="stringliteral">&#39;Content\\Location&#39;</span>, array( <span class="stringliteral">&#39;contentId&#39;</span> =&gt; $location-&gt;contentId ) );</div>
-<div class="line">                $this-&gt;backend-&gt;updateByMatch(</div>
-<div class="line">                    <span class="stringliteral">&#39;Content\\Location&#39;</span>,</div>
-<div class="line">                    array( <span class="stringliteral">&#39;contentId&#39;</span> =&gt; $location-&gt;contentId ),</div>
+<div class="line">                $this-&gt;backend-&gt;update(</div>
+<div class="line">                    <span class="stringliteral">&#39;Content\\ContentInfo&#39;</span>,</div>
+<div class="line">                    $location-&gt;contentId,</div>
 <div class="line">                    array( <span class="stringliteral">&#39;mainLocationId&#39;</span> =&gt; $remainingLocations[0]-&gt;<span class="keywordtype">id</span> )</div>
 <div class="line">                );</div>
 <div class="line">            }</div>
@@ -550,7 +550,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory.html">InMemory</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1TrashHandler.html">TrashHandler</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:57 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:55 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

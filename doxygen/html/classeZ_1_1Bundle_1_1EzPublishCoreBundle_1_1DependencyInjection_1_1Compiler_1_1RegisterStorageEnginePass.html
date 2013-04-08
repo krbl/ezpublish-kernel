@@ -151,6 +151,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Performs compiler passes for persistence factories</p>
+<p>Does:</p>
+<ul>
+<li>Registers all storage engines to ezpublish.api.storage_engine.factory</li>
+<li>Sets the default storage engine id to ezpublish.spi.persistence.default_id% as used by ezpublish.spi.persistence.lazy_factory</li>
+</ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">\Symfony\Component\DependencyInjection\ContainerBuilder</td><td class="paramname">$container</td><td></td></tr>
@@ -158,15 +164,21 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="RegisterStorageEnginePass_8php_source.html#l00024">24</a> of file <a class="el" href="RegisterStorageEnginePass_8php_source.html">RegisterStorageEnginePass.php</a>.</p>
+<p>Definition at line <a class="el" href="RegisterStorageEnginePass_8php_source.html#l00031">31</a> of file <a class="el" href="RegisterStorageEnginePass_8php_source.html">RegisterStorageEnginePass.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !$container-&gt;hasDefinition( <span class="stringliteral">&#39;ezpublish.api.storage_engine.factory&#39;</span> ) )</div>
 <div class="line">            <span class="keywordflow">return</span>;</div>
 <div class="line"></div>
+<div class="line">        $default = $container-&gt;getParameter( <span class="stringliteral">&#39;ezpublish.api.storage_engine.default&#39;</span> );</div>
 <div class="line">        $storageEngineFactoryDef = $container-&gt;getDefinition( <span class="stringliteral">&#39;ezpublish.api.storage_engine.factory&#39;</span> );</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $container-&gt;findTaggedServiceIds( <span class="stringliteral">&#39;ezpublish.storageEngine&#39;</span> ) as $id =&gt; $attributes )</div>
 <div class="line">        {</div>
+<div class="line">            <span class="comment">// Set the default id on parameter ezpublish.spi.persistence.default_id for lazy factory</span></div>
+<div class="line">            <span class="keywordflow">if</span> ( $attributes[0][<span class="stringliteral">&#39;alias&#39;</span>] === $default )</div>
+<div class="line">                $container-&gt;setParameter( <span class="stringliteral">&#39;ezpublish.spi.persistence.default_id&#39;</span>, $id );</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// Register the storage engine on the main storage engine factory</span></div>
 <div class="line">            $storageEngineFactoryDef-&gt;addMethodCall(</div>
 <div class="line">                <span class="stringliteral">&#39;registerStorageEngine&#39;</span>,</div>
 <div class="line">                array(</div>
@@ -189,7 +201,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle.html">EzPublishCoreBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection.html">DependencyInjection</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler.html">Compiler</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1RegisterStorageEnginePass.html">RegisterStorageEnginePass</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:53 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:51 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -1,5 +1,6 @@
 var dir_30f4041ce6df9ece93642e95c8a33cca =
 [
+    [ "BinaryBase", "dir_b5eed11ef77e6a230d18275022ebcc00.html", "dir_b5eed11ef77e6a230d18275022ebcc00" ],
     [ "Events", "dir_f496c357310a760e539ccd7cb6ffe237.html", "dir_f496c357310a760e539ccd7cb6ffe237" ],
     [ "Event.php", "Event_8php.html", [
       [ "Event", "classeZ_1_1Publish_1_1SPI_1_1FieldType_1_1Event.html", "classeZ_1_1Publish_1_1SPI_1_1FieldType_1_1Event" ]

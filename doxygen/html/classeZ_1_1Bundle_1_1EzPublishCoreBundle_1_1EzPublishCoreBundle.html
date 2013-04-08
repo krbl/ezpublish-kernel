@@ -136,7 +136,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="EzPublishCoreBundle_8php_source.html#l00027">27</a> of file <a class="el" href="EzPublishCoreBundle_8php_source.html">EzPublishCoreBundle.php</a>.</p>
+<p>Definition at line <a class="el" href="EzPublishCoreBundle_8php_source.html#l00029">29</a> of file <a class="el" href="EzPublishCoreBundle_8php_source.html">EzPublishCoreBundle.php</a>.</p>
 </div><h2>Member Function Documentation</h2>
 <a class="anchor" id="ab8dfb8e3ffc671406a50df9fa60bdb48"></a>
 <div class="memitem">
@@ -152,7 +152,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="EzPublishCoreBundle_8php_source.html#l00029">29</a> of file <a class="el" href="EzPublishCoreBundle_8php_source.html">EzPublishCoreBundle.php</a>.</p>
+<p>Definition at line <a class="el" href="EzPublishCoreBundle_8php_source.html#l00031">31</a> of file <a class="el" href="EzPublishCoreBundle_8php_source.html">EzPublishCoreBundle.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EzPublishCoreBundle.html#ab8dfb8e3ffc671406a50df9fa60bdb48">parent::build</a>( $container );</div>
 <div class="line">        $container-&gt;addCompilerPass( <span class="keyword">new</span> ChainRoutingPass );</div>
@@ -161,8 +161,10 @@ Public Member Functions</h2></td></tr>
 <div class="line">        $container-&gt;addCompilerPass( <span class="keyword">new</span> RegisterLimitationTypePass );</div>
 <div class="line">        $container-&gt;addCompilerPass( <span class="keyword">new</span> RegisterStorageEnginePass );</div>
 <div class="line">        $container-&gt;addCompilerPass( <span class="keyword">new</span> LegacyStorageEnginePass );</div>
+<div class="line">        $container-&gt;addCompilerPass( <span class="keyword">new</span> LocalePass );</div>
 <div class="line">        $container-&gt;addCompilerPass( <span class="keyword">new</span> ContentViewPass );</div>
 <div class="line">        $container-&gt;addCompilerPass( <span class="keyword">new</span> LocationViewPass );</div>
+<div class="line">        $container-&gt;addCompilerPass( <span class="keyword">new</span> BlockViewPass );</div>
 <div class="line"></div>
 <div class="line">        $securityExtension = $container-&gt;getExtension( <span class="stringliteral">&#39;security&#39;</span> );</div>
 <div class="line">        $securityExtension-&gt;addSecurityListenerFactory( <span class="keyword">new</span> EzPublishSecurityFactory );</div>
@@ -184,7 +186,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="EzPublishCoreBundle_8php_source.html#l00046">46</a> of file <a class="el" href="EzPublishCoreBundle_8php_source.html">EzPublishCoreBundle.php</a>.</p>
+<p>Definition at line <a class="el" href="EzPublishCoreBundle_8php_source.html#l00050">50</a> of file <a class="el" href="EzPublishCoreBundle_8php_source.html">EzPublishCoreBundle.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !isset( $this-&gt;extension ) )</div>
 <div class="line">        {</div>
@@ -192,11 +194,13 @@ Public Member Functions</h2></td></tr>
 <div class="line">                array(</div>
 <div class="line">                    <span class="keyword">new</span> ConfigParser\LocationView,</div>
 <div class="line">                    <span class="keyword">new</span> ConfigParser\ContentView,</div>
+<div class="line">                    <span class="keyword">new</span> ConfigParser\BlockView,</div>
 <div class="line">                    <span class="keyword">new</span> ConfigParser\Common,</div>
 <div class="line">                    <span class="keyword">new</span> ConfigParser\Content,</div>
 <div class="line">                    <span class="keyword">new</span> ConfigParser\FieldTemplates,</div>
 <div class="line">                    <span class="keyword">new</span> ConfigParser\FieldDefinitionSettingsTemplates,</div>
 <div class="line">                    <span class="keyword">new</span> ConfigParser\Image,</div>
+<div class="line">                    <span class="keyword">new</span> ConfigParser\Page</div>
 <div class="line">                )</div>
 <div class="line">            );</div>
 <div class="line">        }</div>
@@ -215,7 +219,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle.html">EzPublishCoreBundle</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EzPublishCoreBundle.html">EzPublishCoreBundle</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:53 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:51 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -144,169 +144,171 @@ $(document).ready(function(){initNavTree('ParserTools_8php_source.html','');});
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        $listItems = array();</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">foreach</span> ( $listElement[<span class="stringliteral">&#39;value&#39;</span>] as $valueRow )</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            $listItems[$valueRow[<span class="stringliteral">&#39;_languageCode&#39;</span>]] = $valueRow[<span class="stringliteral">&#39;#text&#39;</span>];</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">return</span> $listItems;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#a03bf8d6f9fd6a6059c5e9f082862d2fd">   87</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#a03bf8d6f9fd6a6059c5e9f082862d2fd">parseBooleanValue</a>( $stringValue )</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">switch</span> ( strtolower( $stringValue ) )</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;true&#39;</span>:</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;false&#39;</span>:</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException( <span class="stringliteral">&quot;Unknown boolean value &#39;{$stringValue}&#39;.&quot;</span> );</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#ae9f7b6d0bfff877245f9a752360567fd">  107</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#ae9f7b6d0bfff877245f9a752360567fd">parseStatus</a>( $contentTypeStatus )</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">switch</span> ( strtoupper( $contentTypeStatus ) )</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;DEFINED&#39;</span>:</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                <span class="keywordflow">return</span> Values\ContentType\ContentType::STATUS_DEFINED;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;DRAFT&#39;</span>:</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keywordflow">return</span> Values\ContentType\ContentType::STATUS_DRAFT;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;MODIFIED&#39;</span>:</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="keywordflow">return</span> Values\ContentType\ContentType::STATUS_MODIFIED;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;Unknown ContentType status &#39;{$contentTypeStatus}.&#39;&quot;</span> );</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#ae55ab8bd2b5f8346028ab4ab31c914ee">  129</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#ae55ab8bd2b5f8346028ab4ab31c914ee">parseDefaultSortField</a>( $defaultSortFieldString )</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    {</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">switch</span> ( $defaultSortFieldString )</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        {</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;PATH&#39;</span>:</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_PATH;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;PUBLISHED&#39;</span>:</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_PUBLISHED;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;MODIFIED&#39;</span>:</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_MODIFIED;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;SECTION&#39;</span>:</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_SECTION;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;DEPTH&#39;</span>:</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_DEPTH;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;CLASS_IDENTIFIER&#39;</span>:</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_CLASS_IDENTIFIER;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;CLASS_NAME&#39;</span>:</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_CLASS_NAME;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;PRIORITY&#39;</span>:</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_PRIORITY;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;NAME&#39;</span>:</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_NAME;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;MODIFIED_SUBNODE&#39;</span>:</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_MODIFIED_SUBNODE;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;NODE_ID&#39;</span>:</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_NODE_ID;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;CONTENTOBJECT_ID&#39;</span>:</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_CONTENTOBJECT_ID;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        }</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;Unknown default sort field: &#39;{$defaultSortFieldString}&#39;.&quot;</span> );</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#a1e5e1722ec694c4d59231693b0edaf5b">  169</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#a1e5e1722ec694c4d59231693b0edaf5b">parseDefaultSortOrder</a>( $defaultSortOrderString )</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    {</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">switch</span> ( strtoupper( $defaultSortOrderString ) )</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        {</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;ASC&#39;</span>:</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_ORDER_ASC;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;DESC&#39;</span>:</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_ORDER_DESC;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        }</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;Unknown default sort order: &#39;{$defaultSortOrderString}&#39;.&quot;</span> );</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
-<div class="line"><a name="l00189"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#aa0887a44643951080861bbbe0e2d29bc">  189</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#aa0887a44643951080861bbbe0e2d29bc">parseLimitation</a>( array $limitation )</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    {</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">if</span> ( !array_key_exists( <span class="stringliteral">&#39;_identifier&#39;</span>, $limitation ) )</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        {</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html">Exceptions\Parser</a>( <span class="stringliteral">&quot;Missing &#39;_identifier&#39; attribute for Limitation.&quot;</span> );</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        $limitationObject = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#ae613f0b3533414ec634a0185fc0c79e2">getLimitationByIdentifier</a>( $limitation[<span class="stringliteral">&#39;_identifier&#39;</span>] );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            $listItems[$valueRow[<span class="stringliteral">&#39;_languageCode&#39;</span>]] = isset( $valueRow[<span class="stringliteral">&#39;#text&#39;</span>] ) ?</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                $valueRow[<span class="stringliteral">&#39;#text&#39;</span>] :</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="stringliteral">&#39;&#39;</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> $listItems;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#a03bf8d6f9fd6a6059c5e9f082862d2fd">   89</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#a03bf8d6f9fd6a6059c5e9f082862d2fd">parseBooleanValue</a>( $stringValue )</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">switch</span> ( strtolower( $stringValue ) )</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;true&#39;</span>:</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;false&#39;</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException( <span class="stringliteral">&quot;Unknown boolean value &#39;{$stringValue}&#39;.&quot;</span> );</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#ae9f7b6d0bfff877245f9a752360567fd">  109</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#ae9f7b6d0bfff877245f9a752360567fd">parseStatus</a>( $contentTypeStatus )</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">switch</span> ( strtoupper( $contentTypeStatus ) )</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;DEFINED&#39;</span>:</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keywordflow">return</span> Values\ContentType\ContentType::STATUS_DEFINED;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;DRAFT&#39;</span>:</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="keywordflow">return</span> Values\ContentType\ContentType::STATUS_DRAFT;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;MODIFIED&#39;</span>:</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <span class="keywordflow">return</span> Values\ContentType\ContentType::STATUS_MODIFIED;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;Unknown ContentType status &#39;{$contentTypeStatus}.&#39;&quot;</span> );</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#ae55ab8bd2b5f8346028ab4ab31c914ee">  131</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#ae55ab8bd2b5f8346028ab4ab31c914ee">parseDefaultSortField</a>( $defaultSortFieldString )</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">switch</span> ( $defaultSortFieldString )</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;PATH&#39;</span>:</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_PATH;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;PUBLISHED&#39;</span>:</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_PUBLISHED;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;MODIFIED&#39;</span>:</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_MODIFIED;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;SECTION&#39;</span>:</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_SECTION;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;DEPTH&#39;</span>:</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_DEPTH;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;CLASS_IDENTIFIER&#39;</span>:</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_CLASS_IDENTIFIER;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;CLASS_NAME&#39;</span>:</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_CLASS_NAME;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;PRIORITY&#39;</span>:</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_PRIORITY;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;NAME&#39;</span>:</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_NAME;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;MODIFIED_SUBNODE&#39;</span>:</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_MODIFIED_SUBNODE;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;NODE_ID&#39;</span>:</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_NODE_ID;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;CONTENTOBJECT_ID&#39;</span>:</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_FIELD_CONTENTOBJECT_ID;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;Unknown default sort field: &#39;{$defaultSortFieldString}&#39;.&quot;</span> );</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#a1e5e1722ec694c4d59231693b0edaf5b">  171</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#a1e5e1722ec694c4d59231693b0edaf5b">parseDefaultSortOrder</a>( $defaultSortOrderString )</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">switch</span> ( strtoupper( $defaultSortOrderString ) )</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;ASC&#39;</span>:</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_ORDER_ASC;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&#39;DESC&#39;</span>:</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                <span class="keywordflow">return</span> Values\Content\Location::SORT_ORDER_DESC;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;Unknown default sort order: &#39;{$defaultSortOrderString}&#39;.&quot;</span> );</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#aa0887a44643951080861bbbe0e2d29bc">  191</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#aa0887a44643951080861bbbe0e2d29bc">parseLimitation</a>( array $limitation )</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">if</span> ( !array_key_exists( <span class="stringliteral">&#39;_identifier&#39;</span>, $limitation ) )</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html">Exceptions\Parser</a>( <span class="stringliteral">&quot;Missing &#39;_identifier&#39; attribute for Limitation.&quot;</span> );</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        }</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">if</span> ( !isset( $limitation[<span class="stringliteral">&#39;values&#39;</span>][<span class="stringliteral">&#39;ref&#39;</span>] ) || !is_array( $limitation[<span class="stringliteral">&#39;values&#39;</span>][<span class="stringliteral">&#39;ref&#39;</span>] ) )</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html">Exceptions\Parser</a>( <span class="stringliteral">&quot;Invalid format for limitation values in Limitation.&quot;</span> );</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        }</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        $limitationValues = array();</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">foreach</span> ( $limitation[<span class="stringliteral">&#39;values&#39;</span>][<span class="stringliteral">&#39;ref&#39;</span>] as $limitationValue )</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="keywordflow">if</span> ( !array_key_exists( <span class="stringliteral">&#39;_href&#39;</span>, $limitationValue ) )</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            {</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html">Exceptions\Parser</a>( <span class="stringliteral">&quot;Invalid format for limitation values in Limitation.&quot;</span> );</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            }</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            $limitationValues[] = $limitationValue[<span class="stringliteral">&#39;_href&#39;</span>];</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        }</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        $limitationObject-&gt;limitationValues = $limitationValues;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">return</span> $limitationObject;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
-<div class="line"><a name="l00229"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#ae613f0b3533414ec634a0185fc0c79e2">  229</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#ae613f0b3533414ec634a0185fc0c79e2">getLimitationByIdentifier</a>( $identifier )</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    {</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">switch</span> ( $identifier )</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        {</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::CONTENTTYPE:</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\ContentTypeLimitation();</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::LANGUAGE:</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\LanguageLimitation();</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::LOCATION:</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\LocationLimitation();</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::OWNER:</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\OwnerLimitation();</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::PARENTOWNER:</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\ParentOwnerLimitation();</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::PARENTCONTENTTYPE:</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\ParentContentTypeLimitation();</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::PARENTDEPTH:</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\ParentDepthLimitation();</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::SECTION:</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\SectionLimitation();</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::SITEACCESS:</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\SiteaccessLimitation();</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::STATE:</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\ObjectStateLimitation();</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::SUBTREE:</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\SubtreeLimitation();</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::USERGROUP:</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\UserGroupLimitation();</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::PARENTUSERGROUP:</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\ParentUserGroupLimitation();</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                <span class="keywordflow">throw</span> new \eZ\Publish\Core\Base\Exceptions\NotFoundException( <span class="stringliteral">&#39;Limitation&#39;</span>, $identifier );</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        }</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;}</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        $limitationObject = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#ae613f0b3533414ec634a0185fc0c79e2">getLimitationByIdentifier</a>( $limitation[<span class="stringliteral">&#39;_identifier&#39;</span>] );</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">if</span> ( !isset( $limitation[<span class="stringliteral">&#39;values&#39;</span>][<span class="stringliteral">&#39;ref&#39;</span>] ) || !is_array( $limitation[<span class="stringliteral">&#39;values&#39;</span>][<span class="stringliteral">&#39;ref&#39;</span>] ) )</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html">Exceptions\Parser</a>( <span class="stringliteral">&quot;Invalid format for limitation values in Limitation.&quot;</span> );</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        $limitationValues = array();</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">foreach</span> ( $limitation[<span class="stringliteral">&#39;values&#39;</span>][<span class="stringliteral">&#39;ref&#39;</span>] as $limitationValue )</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordflow">if</span> ( !array_key_exists( <span class="stringliteral">&#39;_href&#39;</span>, $limitationValue ) )</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html">Exceptions\Parser</a>( <span class="stringliteral">&quot;Invalid format for limitation values in Limitation.&quot;</span> );</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            $limitationValues[] = $limitationValue[<span class="stringliteral">&#39;_href&#39;</span>];</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        $limitationObject-&gt;limitationValues = $limitationValues;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">return</span> $limitationObject;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#ae613f0b3533414ec634a0185fc0c79e2">  231</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1ParserTools.html#ae613f0b3533414ec634a0185fc0c79e2">getLimitationByIdentifier</a>( $identifier )</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">switch</span> ( $identifier )</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::CONTENTTYPE:</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\ContentTypeLimitation();</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::LANGUAGE:</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\LanguageLimitation();</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::LOCATION:</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\LocationLimitation();</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::OWNER:</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\OwnerLimitation();</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::PARENTOWNER:</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\ParentOwnerLimitation();</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::PARENTCONTENTTYPE:</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\ParentContentTypeLimitation();</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::PARENTDEPTH:</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\ParentDepthLimitation();</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::SECTION:</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\SectionLimitation();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::SITEACCESS:</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\SiteaccessLimitation();</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::STATE:</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\ObjectStateLimitation();</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::SUBTREE:</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\SubtreeLimitation();</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::USERGROUP:</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\UserGroupLimitation();</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            <span class="keywordflow">case</span> Values\User\Limitation::PARENTUSERGROUP:</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                <span class="keywordflow">return</span> new \eZ\Publish\API\Repository\Values\User\Limitation\ParentUserGroupLimitation();</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                <span class="keywordflow">throw</span> new \eZ\Publish\Core\Base\Exceptions\NotFoundException( <span class="stringliteral">&#39;Limitation&#39;</span>, $identifier );</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_797398f06ec5dac6abf0352e0ae63d7a.html">REST</a></li><li class="navelem"><a class="el" href="dir_931ff6f23981df7536a5243dea720179.html">Common</a></li><li class="navelem"><a class="el" href="dir_19570892ab4420f265fea7bfcf40f2b5.html">Input</a></li><li class="navelem"><a class="el" href="ParserTools_8php.html">ParserTools.php</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:51 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:50 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

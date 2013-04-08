@@ -151,7 +151,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a629eb8408810d8a75720b1dfae10a2fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#a629eb8408810d8a75720b1dfae10a2fe">loadLatestPublishedData</a> ($contentId)</td></tr>
 <tr class="memitem:aed377c3aa5a1216df874f69bcc7cbe35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#aed377c3aa5a1216df874f69bcc7cbe35">loadRelations</a> ($contentId, $contentVersionNo=null, $relationType=null)</td></tr>
 <tr class="memitem:a4a8ff2a431d9b62b17587d8d0f865790"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#a4a8ff2a431d9b62b17587d8d0f865790">loadReverseRelations</a> ($contentId, $relationType=null)</td></tr>
-<tr class="memitem:a41eb26e039cd5158257eddeb5411a294"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#a41eb26e039cd5158257eddeb5411a294">deleteRelation</a> ($relationId)</td></tr>
+<tr class="memitem:af0575ea4f8519e1b0b05279538479784"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#af0575ea4f8519e1b0b05279538479784">deleteRelation</a> ($relationId, $type)</td></tr>
 <tr class="memitem:a746611ae96bedf2f20f5be830bd70d5d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#a746611ae96bedf2f20f5be830bd70d5d">insertRelation</a> (RelationCreateStruct $createStruct)</td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -328,7 +328,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a41eb26e039cd5158257eddeb5411a294"></a>
+<a class="anchor" id="af0575ea4f8519e1b0b05279538479784"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -339,8 +339,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">eZ\Publish\Core\Persistence\Legacy\Content\Gateway::deleteRelation </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$relationId</em></td><td>)</td>
+          <td class="paramname"><em>$relationId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -349,16 +359,18 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Deletes the relation with the given $relationId</p>
+<p>Deletes the relation with the given $relationId.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">int</td><td class="paramname">$relationId</td><td></td></tr>
+    <tr><td class="paramtype">int</td><td class="paramname">$type</td><td>{</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See Also</dt><dd>::COMMON, ::EMBED, ::LINK, ::FIELD}</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1EzcDatabase.html#afad86cb122163ad9e17683e6f98f1a3d">eZ\Publish\Core\Persistence\Legacy\Content\Gateway\EzcDatabase</a>, and <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1ExceptionConversion.html#af8182f798040b925b5235d4a206b10fd">eZ\Publish\Core\Persistence\Legacy\Content\Gateway\ExceptionConversion</a>.</p>
+<p>Reimplemented in <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1ExceptionConversion.html#a8e85321987993c1b0d0ddb6f196312e1">eZ\Publish\Core\Persistence\Legacy\Content\Gateway\ExceptionConversion</a>.</p>
 
 </div>
 </div>
@@ -1551,7 +1563,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html">Gateway</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:57 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:56 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

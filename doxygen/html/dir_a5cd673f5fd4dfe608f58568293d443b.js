@@ -1,6 +1,9 @@
 var dir_a5cd673f5fd4dfe608f58568293d443b =
 [
     [ "Exception", "dir_917b0bc61002897d81fea7c3d34d7542.html", "dir_917b0bc61002897d81fea7c3d34d7542" ],
+    [ "IOFactory.php", "IOFactory_8php.html", [
+      [ "IOFactory", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1IOFactory.html", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1IOFactory" ]
+    ] ],
     [ "LazyRepositoryFactory.php", "LazyRepositoryFactory_8php.html", [
       [ "LazyRepositoryFactory", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LazyRepositoryFactory.html", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LazyRepositoryFactory" ]
     ] ],

@@ -113,16 +113,16 @@ $(document).ready(function(){initNavTree('classeZ_1_1Bundle_1_1EzPublishLegacyBu
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3c8e2d3a13aca035c2e93b7692ba2ab7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a3c8e2d3a13aca035c2e93b7692ba2ab7">__construct</a> (\Closure $kernelClosure, EngineInterface $templateEngine)</td></tr>
+<tr class="memitem:a1b3c004f8ac09ac163dd335b47408642"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1b3c004f8ac09ac163dd335b47408642">__construct</a> (\Closure $kernelClosure, EngineInterface $templateEngine, <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1ConfigResolverInterface.html">ConfigResolverInterface</a> $configResolver)</td></tr>
 <tr class="memitem:a1503d06992c3ae0105ac07e1fc5d7112"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1503d06992c3ae0105ac07e1fc5d7112">render</a> ($view, array $parameters=array())</td></tr>
 <tr class="memitem:a5a58a48c0c7c55ddc7da210f4f8918a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a5a58a48c0c7c55ddc7da210f4f8918a5">indexAction</a> ()</td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller.html">Controller</a> embedding legacy kernel. </p>
 
-<p>Definition at line <a class="el" href="LegacyKernelController_8php_source.html#l00025">25</a> of file <a class="el" href="LegacyKernelController_8php_source.html">LegacyKernelController.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacyKernelController_8php_source.html#l00019">19</a> of file <a class="el" href="LegacyKernelController_8php_source.html">LegacyKernelController.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a3c8e2d3a13aca035c2e93b7692ba2ab7"></a>
+<a class="anchor" id="a1b3c004f8ac09ac163dd335b47408642"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -136,7 +136,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">EngineInterface&#160;</td>
-          <td class="paramname"><em>$templateEngine</em>&#160;</td>
+          <td class="paramname"><em>$templateEngine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1ConfigResolverInterface.html">ConfigResolverInterface</a>&#160;</td>
+          <td class="paramname"><em>$configResolver</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -150,16 +156,33 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramtype">\Closure</td><td class="paramname">$kernelClosure</td><td></td></tr>
     <tr><td class="paramtype">\Symfony\Component\Templating\EngineInterface</td><td class="paramname">$templateEngine</td><td></td></tr>
+    <tr><td class="paramtype">\eZ\Publish\Core\MVC\ConfigResolverInterface</td><td class="paramname">$configResolver</td><td></td></tr>
+    <tr><td class="paramtype">mixed</td><td class="paramname">$legacyLayout</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="LegacyKernelController_8php_source.html#l00040">40</a> of file <a class="el" href="LegacyKernelController_8php_source.html">LegacyKernelController.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacyKernelController_8php_source.html#l00045">45</a> of file <a class="el" href="LegacyKernelController_8php_source.html">LegacyKernelController.php</a>.</p>
+
+<p>References <a class="el" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1ConfigResolverInterface.html#ac66b88a1837f9a46ec5472a6ca066acf">eZ\Publish\Core\MVC\ConfigResolverInterface\getParameter()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;kernel = $kernelClosure();</div>
 <div class="line">        $this-&gt;templateEngine = $templateEngine;</div>
+<div class="line">        $this-&gt;legacyLayout = $configResolver-&gt;getParameter( <span class="stringliteral">&#39;module_default_layout&#39;</span>, <span class="stringliteral">&#39;ezpublish_legacy&#39;</span> );</div>
+<div class="line">        $this-&gt;configResolver = $configResolver;</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
+<p><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a1b3c004f8ac09ac163dd335b47408642_cgraph.png" border="0" usemap="#classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a1b3c004f8ac09ac163dd335b47408642_cgraph" alt=""/></div>
+<map name="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a1b3c004f8ac09ac163dd335b47408642_cgraph" id="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a1b3c004f8ac09ac163dd335b47408642_cgraph">
+<area shape="rect" id="node3" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1ConfigResolverInterface.html#ac66b88a1837f9a46ec5472a6ca066acf" title="eZ\\Publish\\Core\\MVC\l\\ConfigResolverInterface\l\\getParameter" alt="" coords="276,5,449,69"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <h2>Member Function Documentation</h2>
@@ -178,17 +201,42 @@ Public Member Functions</h2></td></tr>
 <p>Base fallback action. Will be basically used for every legacy module.</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="LegacyKernelController_8php_source.html#l00067">67</a> of file <a class="el" href="LegacyKernelController_8php_source.html">LegacyKernelController.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacyKernelController_8php_source.html#l00074">74</a> of file <a class="el" href="LegacyKernelController_8php_source.html">LegacyKernelController.php</a>.</p>
+
+<p>References <a class="el" href="LegacyKernelController_8php_source.html#l00061">eZ\Bundle\EzPublishLegacyBundle\Controller\LegacyKernelController\render()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
+<div class="line">        $legacyMode = $this-&gt;configResolver-&gt;getParameter( <span class="stringliteral">&#39;legacy_mode&#39;</span> );</div>
+<div class="line"></div>
 <div class="line">        $this-&gt;kernel-&gt;setUseExceptions( <span class="keyword">false</span> );</div>
 <div class="line">        $result = $this-&gt;kernel-&gt;run();</div>
 <div class="line">        $this-&gt;kernel-&gt;setUseExceptions( <span class="keyword">true</span> );</div>
+<div class="line"></div>
+<div class="line">        $moduleResult = $result-&gt;getAttribute( <span class="stringliteral">&#39;module_result&#39;</span> );</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> ( isset( $this-&gt;legacyLayout ) &amp;&amp; !$legacyMode )</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1503d06992c3ae0105ac07e1fc5d7112">render</a>(</div>
+<div class="line">                $this-&gt;legacyLayout,</div>
+<div class="line">                array( <span class="stringliteral">&#39;module_result&#39;</span> =&gt; $moduleResult )</div>
+<div class="line">            );</div>
+<div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Response(</div>
 <div class="line">            $result-&gt;getContent()</div>
 <div class="line">        );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
+<p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a5a58a48c0c7c55ddc7da210f4f8918a5_cgraph.png" border="0" usemap="#classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a5a58a48c0c7c55ddc7da210f4f8918a5_cgraph" alt=""/></div>
+<map name="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a5a58a48c0c7c55ddc7da210f4f8918a5_cgraph" id="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a5a58a48c0c7c55ddc7da210f4f8918a5_cgraph">
+<area shape="rect" id="node3" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a1503d06992c3ae0105ac07e1fc5d7112" title="eZ\\Bundle\\EzPublishLegacy\lBundle\\Controller\\LegacyKernel\lController\\render" alt="" coords="276,5,495,69"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a1503d06992c3ae0105ac07e1fc5d7112"></a>
@@ -224,13 +272,24 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Response A Response instance </dd></dl>
 
-<p>Definition at line <a class="el" href="LegacyKernelController_8php_source.html#l00054">54</a> of file <a class="el" href="LegacyKernelController_8php_source.html">LegacyKernelController.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacyKernelController_8php_source.html#l00061">61</a> of file <a class="el" href="LegacyKernelController_8php_source.html">LegacyKernelController.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $response = <span class="keyword">new</span> Response();</div>
 <div class="line">        $response-&gt;setContent( $this-&gt;templateEngine-&gt;render( $view, $parameters ) );</div>
 <div class="line">        <span class="keywordflow">return</span> $response;</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
+<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a1503d06992c3ae0105ac07e1fc5d7112_icgraph.png" border="0" usemap="#classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a1503d06992c3ae0105ac07e1fc5d7112_icgraph" alt=""/></div>
+<map name="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a1503d06992c3ae0105ac07e1fc5d7112_icgraph" id="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController_a1503d06992c3ae0105ac07e1fc5d7112_icgraph">
+<area shape="rect" id="node3" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html#a5a58a48c0c7c55ddc7da210f4f8918a5" title="eZ\\Bundle\\EzPublishLegacy\lBundle\\Controller\\LegacyKernel\lController\\indexAction" alt="" coords="276,5,495,69"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -242,7 +301,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle.html">EzPublishLegacyBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller.html">Controller</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html">LegacyKernelController</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:53 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:51 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

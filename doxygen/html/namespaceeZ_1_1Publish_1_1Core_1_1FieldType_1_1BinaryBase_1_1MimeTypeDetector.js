@@ -1,4 +1,0 @@
-var namespaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1MimeTypeDetector =
-[
-    [ "FileInfoDetector", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1MimeTypeDetector_1_1FileInfoDetector.html", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1MimeTypeDetector_1_1FileInfoDetector" ]
-];

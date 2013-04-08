@@ -105,40 +105,84 @@ $(document).ready(function(){initNavTree('Publish_2Core_2MVC_2Symfony_2View_2Pro
 </div><!--header-->
 <div class="contents">
 <a href="Publish_2Core_2MVC_2Symfony_2View_2Provider_2Configured_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider.html">   10</a></span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\MVC\Symfony\View\Provider;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>eZ\Publish\Core\MVC\Symfony\View\Provider;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html">eZ\Publish\API\Repository\Repository</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html">   14</a></span>&#160;<span class="keyword">abstract</span> <span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html">Configured</a></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#a89521b35effded46ec35796ab9290532">   19</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#a89521b35effded46ec35796ab9290532">$repository</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#a4170853c770844185e5db51c0c0be220">   24</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#a4170853c770844185e5db51c0c0be220">$matchConfig</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#ab381dd9f86e02aac93ea83334d581f9d">   29</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#ab381dd9f86e02aac93ea83334d581f9d">$matchers</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#acedc7392f35e2427ab0a2a46bb22b0f0">   35</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#acedc7392f35e2427ab0a2a46bb22b0f0">__construct</a>( <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html">Repository</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#a89521b35effded46ec35796ab9290532">$repository</a>, array <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#a4170853c770844185e5db51c0c0be220">$matchConfig</a> )</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        $this-&gt;repository = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#a89521b35effded46ec35796ab9290532">$repository</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        $this-&gt;matchConfig = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#a4170853c770844185e5db51c0c0be220">$matchConfig</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        $this-&gt;matchers = array();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ViewProviderMatcher.html">eZ\Publish\Core\MVC\Symfony\View\ViewProviderMatcher</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html">eZ\Publish\API\Repository\Values\ValueObject</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentView.html">eZ\Publish\Core\MVC\Symfony\View\ContentView</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1RepositoryAwareInterface.html">eZ\Publish\Core\MVC\RepositoryAwareInterface</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;use InvalidArgumentException;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html">   25</a></span>&#160;<span class="keyword">abstract</span> <span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html">Configured</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#a89521b35effded46ec35796ab9290532">   30</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#a89521b35effded46ec35796ab9290532">$repository</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#a4170853c770844185e5db51c0c0be220">   35</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#a4170853c770844185e5db51c0c0be220">$matchConfig</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#ab381dd9f86e02aac93ea83334d581f9d">   40</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#ab381dd9f86e02aac93ea83334d581f9d">$matchers</a>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#ae95affbfe7dd67e3f6336a9c2320082b">   49</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#ae95affbfe7dd67e3f6336a9c2320082b">getMatcher</a>( $matcherIdentifier )</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">if</span> ( $matcherIdentifier[0] !== <span class="charliteral">&#39;\\&#39;</span> )</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            $matcherIdentifier = <span class="stringliteral">&quot;eZ\\Publish\\Core\\MVC\\Symfony\\View\\ContentViewProvider\\Configured\\Matcher\\$matcherIdentifier&quot;</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> $matcherIdentifier();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#acedc7392f35e2427ab0a2a46bb22b0f0">   46</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#acedc7392f35e2427ab0a2a46bb22b0f0">__construct</a>( <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html">Repository</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#a89521b35effded46ec35796ab9290532">$repository</a>, array <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#a4170853c770844185e5db51c0c0be220">$matchConfig</a> )</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        $this-&gt;repository = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#a89521b35effded46ec35796ab9290532">$repository</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        $this-&gt;matchConfig = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#a4170853c770844185e5db51c0c0be220">$matchConfig</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        $this-&gt;matchers = array();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#ae95affbfe7dd67e3f6336a9c2320082b">   64</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#ae95affbfe7dd67e3f6336a9c2320082b">getMatcher</a>( $matcherIdentifier )</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// Caching the matcher instance in memory</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> ( isset( $this-&gt;matchers[$matcherIdentifier] ) )</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">return</span> $this-&gt;matchers[$matcherIdentifier];</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">// Not a FQ class name, so take the relative namespace, if defined in descendant.</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">if</span> ( $matcherIdentifier[0] !== <span class="charliteral">&#39;\\&#39;</span> &amp;&amp; defined( <span class="stringliteral">&#39;static::MATCHER_RELATIVE_NAMESPACE&#39;</span> ) )</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            $matcherIdentifier = static::MATCHER_RELATIVE_NAMESPACE . <span class="stringliteral">&quot;\\$matcherIdentifier&quot;</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">if</span> ( !class_exists( $matcherIdentifier ) )</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException( <span class="stringliteral">&quot;Invalid matcher class &#39;$matcherIdentifier&#39;&quot;</span> );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        $this-&gt;matchers[$matcherIdentifier] = <span class="keyword">new</span> $matcherIdentifier();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;matchers[$matcherIdentifier] instanceof <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1RepositoryAwareInterface.html">RepositoryAwareInterface</a> )</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            $this-&gt;matchers[$matcherIdentifier]-&gt;setRepository( $this-&gt;repository );</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> $this-&gt;matchers[$matcherIdentifier];</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> doMatch( array <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#a4170853c770844185e5db51c0c0be220">$matchConfig</a>, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ValueObject.html">ValueObject</a> $valueObject )</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">foreach</span> ( $matchConfig as $configHash )</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            $hasMatched = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">foreach</span> ( $configHash[<span class="stringliteral">&#39;match&#39;</span>] as $matcherIdentifier =&gt; $value )</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                $matcher = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html#ae95affbfe7dd67e3f6336a9c2320082b">getMatcher</a>( $matcherIdentifier );</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                $matcher-&gt;setMatchingConfig( $value );</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">if</span> ( !$this-&gt;match( $matcher, $valueObject ) )</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    $hasMatched = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">if</span> ( $hasMatched )</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentView.html">ContentView</a>( $configHash[<span class="stringliteral">&#39;template&#39;</span>] );</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_3f2bbbda4a8cf240a23a45721a8bf194.html">MVC</a></li><li class="navelem"><a class="el" href="dir_2823f14ad24d7d09ba467b2c5eb8153a.html">Symfony</a></li><li class="navelem"><a class="el" href="dir_b728b0f64cb99c52f73702f6a6bc11e3.html">View</a></li><li class="navelem"><a class="el" href="dir_1b5d5fdabb5be2a5b2e9b6f81edc60e9.html">Provider</a></li><li class="navelem"><a class="el" href="Publish_2Core_2MVC_2Symfony_2View_2Provider_2Configured_8php.html">Configured.php</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:47 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:46 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

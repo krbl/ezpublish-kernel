@@ -1,20 +1,24 @@
 var hierarchy =
 [
     [ "eZ\\Bundle\\EzPublishCoreBundle\\ApiLoader\\Exception\\InvalidStorageEngine", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1Exception_1_1InvalidStorageEngine.html", null ],
+    [ "eZ\\Bundle\\EzPublishCoreBundle\\ApiLoader\\IOFactory", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1IOFactory.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\ApiLoader\\LazyRepositoryFactory", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LazyRepositoryFactory.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\ApiLoader\\LegacyDbHandlerFactory", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyDbHandlerFactory.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\ApiLoader\\LegacyStorageEngineFactory", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\ApiLoader\\RepositoryFactory", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1RepositoryFactory.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\ApiLoader\\StorageEngineFactory", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1StorageEngineFactory.html", null ],
+    [ "eZ\\Bundle\\EzPublishCoreBundle\\Collector\\SPIPersistenceDataCollector", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Collector_1_1SPIPersistenceDataCollector.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\Console\\Application", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Console_1_1Application.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\Controller", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Controller.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\AddFieldTypePass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1AddFieldTypePass.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\ChainConfigResolverPass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1ChainConfigResolverPass.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\ChainRoutingPass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1ChainRoutingPass.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\LegacyStorageEnginePass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1LegacyStorageEnginePass.html", null ],
+    [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\LocalePass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1LocalePass.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\RegisterLimitationTypePass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1RegisterLimitationTypePass.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\RegisterStorageEnginePass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1RegisterStorageEnginePass.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\ViewPass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1ViewPass.html", [
+      [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\BlockViewPass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1BlockViewPass.html", null ],
       [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\ContentViewPass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1ContentViewPass.html", null ],
       [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Compiler\\LocationViewPass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1LocationViewPass.html", null ]
     ] ],
@@ -23,11 +27,13 @@ var hierarchy =
       [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\AbstractParser", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1AbstractParser.html", [
         [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\Common", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1Common.html", null ],
         [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\Image", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1Image.html", null ],
+        [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\Page", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1Page.html", null ],
         [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\Templates", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1Templates.html", [
           [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\FieldDefinitionSettingsTemplates", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1FieldDefinitionSettingsTemplates.html", null ],
           [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\FieldTemplates", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1FieldTemplates.html", null ]
         ] ],
         [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\View", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1View.html", [
+          [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\BlockView", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1BlockView.html", null ],
           [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\ContentView", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1ContentView.html", null ],
           [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Parser\\LocationView", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1Parser_1_1LocationView.html", null ]
         ] ]
@@ -37,6 +43,7 @@ var hierarchy =
     [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\EzPublishCoreExtension", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1EzPublishCoreExtension.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Security\\Factory", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Security_1_1Factory.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Security\\HttpBasicFactory", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Security_1_1HttpBasicFactory.html", null ],
+    [ "eZ\\Bundle\\EzPublishCoreBundle\\EventListener\\LocaleListener", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1LocaleListener.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\EventListener\\RequestEventListener", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1RequestEventListener.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\EventListener\\SessionInitByPostListener", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1SessionInitByPostListener.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\EventListener\\SessionSetDynamicNameListener", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1SessionSetDynamicNameListener.html", null ],
@@ -44,7 +51,9 @@ var hierarchy =
     [ "eZ\\Bundle\\EzPublishCoreBundle\\EzPublishCoreBundle", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EzPublishCoreBundle.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\HttpCache", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1HttpCache.html", null ],
     [ "eZ\\Bundle\\EzPublishCoreBundle\\Routing\\DefaultRouter", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Routing_1_1DefaultRouter.html", null ],
+    [ "eZ\\Bundle\\EzPublishLegacyBundle\\Cache\\PersistenceCachePurger", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Cache_1_1PersistenceCachePurger.html", null ],
     [ "eZ\\Bundle\\EzPublishLegacyBundle\\Command\\LegacyConfigurationCommand", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Command_1_1LegacyConfigurationCommand.html", null ],
+    [ "eZ\\Bundle\\EzPublishLegacyBundle\\Command\\LegacyEmbedScriptCommand", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Command_1_1LegacyEmbedScriptCommand.html", null ],
     [ "eZ\\Bundle\\EzPublishLegacyBundle\\Command\\LegacyWrapperInstallCommand", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Command_1_1LegacyWrapperInstallCommand.html", null ],
     [ "eZ\\Bundle\\EzPublishLegacyBundle\\Controller\\LegacyKernelController", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyKernelController.html", null ],
     [ "eZ\\Bundle\\EzPublishLegacyBundle\\Controller\\LegacySetupController", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacySetupController.html", null ],
@@ -102,14 +111,21 @@ var hierarchy =
           [ "eZ\\Publish\\Core\\Base\\Exceptions\\InvalidArgumentValue", "classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1InvalidArgumentValue.html", null ],
           [ "eZ\\Publish\\Core\\FieldType\\Country\\Exception\\InvalidValue", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Country_1_1Exception_1_1InvalidValue.html", null ]
         ] ],
-        [ "eZ\\Publish\\Core\\REST\\Client\\Exceptions\\InvalidArgumentException", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Exceptions_1_1InvalidArgumentException.html", null ],
+        [ "eZ\\Publish\\Core\\REST\\Client\\Exceptions\\InvalidArgumentException", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Exceptions_1_1InvalidArgumentException.html", [
+          [ "eZ\\Publish\\Core\\REST\\Client\\Exceptions\\InvalidArgumentValue", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Exceptions_1_1InvalidArgumentValue.html", null ]
+        ] ],
         [ "eZ\\Publish\\Core\\REST\\Common\\Exceptions\\InvalidArgumentException", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1InvalidArgumentException.html", [
+          [ "eZ\\Publish\\Core\\REST\\Common\\Exceptions\\ForbiddenException", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1ForbiddenException.html", null ],
           [ "eZ\\Publish\\Core\\REST\\Common\\Exceptions\\Parser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1Parser.html", [
             [ "eZ\\Publish\\Core\\REST\\Client\\Input\\Parser\\Content", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1Content.html", null ],
             [ "eZ\\Publish\\Core\\REST\\Client\\Input\\Parser\\ContentInfo", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentInfo.html", null ],
             [ "eZ\\Publish\\Core\\REST\\Client\\Input\\Parser\\ContentList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentList.html", null ],
             [ "eZ\\Publish\\Core\\REST\\Client\\Input\\Parser\\ContentObjectStates", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentObjectStates.html", null ],
             [ "eZ\\Publish\\Core\\REST\\Client\\Input\\Parser\\ContentType", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentType.html", null ],
+            [ "eZ\\Publish\\Core\\REST\\Client\\Input\\Parser\\ContentTypeGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentTypeGroup.html", null ],
+            [ "eZ\\Publish\\Core\\REST\\Client\\Input\\Parser\\ContentTypeGroupList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentTypeGroupList.html", null ],
+            [ "eZ\\Publish\\Core\\REST\\Client\\Input\\Parser\\ContentTypeGroupRefList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentTypeGroupRefList.html", null ],
+            [ "eZ\\Publish\\Core\\REST\\Client\\Input\\Parser\\ContentTypeList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentTypeList.html", null ],
             [ "eZ\\Publish\\Core\\REST\\Client\\Input\\Parser\\ErrorMessage", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ErrorMessage.html", null ],
             [ "eZ\\Publish\\Core\\REST\\Client\\Input\\Parser\\FieldDefinition", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinition.html", null ],
             [ "eZ\\Publish\\Core\\REST\\Client\\Input\\Parser\\FieldDefinitionList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1FieldDefinitionList.html", null ],
@@ -182,6 +198,7 @@ var hierarchy =
               [ "eZ\\Publish\\Core\\REST\\Server\\Input\\Parser\\RoleAssignInput", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1RoleAssignInput.html", null ],
               [ "eZ\\Publish\\Core\\REST\\Server\\Input\\Parser\\RoleInput", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1RoleInput.html", null ],
               [ "eZ\\Publish\\Core\\REST\\Server\\Input\\Parser\\SectionInput", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1SectionInput.html", null ],
+              [ "eZ\\Publish\\Core\\REST\\Server\\Input\\Parser\\SessionInput", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1SessionInput.html", null ],
               [ "eZ\\Publish\\Core\\REST\\Server\\Input\\Parser\\URLAliasCreate", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1URLAliasCreate.html", null ],
               [ "eZ\\Publish\\Core\\REST\\Server\\Input\\Parser\\URLWildcardCreate", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1URLWildcardCreate.html", null ],
               [ "eZ\\Publish\\Core\\REST\\Server\\Input\\Parser\\UserCreate", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Input_1_1Parser_1_1UserCreate.html", null ],
@@ -221,6 +238,7 @@ var hierarchy =
         ] ],
         [ "eZ\\Publish\\Core\\FieldType\\Checkbox\\Type", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Checkbox_1_1Type.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\Country\\Type", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Country_1_1Type.html", null ],
+        [ "eZ\\Publish\\Core\\FieldType\\Date\\Type", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Date_1_1Type.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\DateAndTime\\Type", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Type.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\EmailAddress\\Type", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1EmailAddress_1_1Type.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\Float\\Type", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Float_1_1Type.html", null ],
@@ -236,6 +254,7 @@ var hierarchy =
         [ "eZ\\Publish\\Core\\FieldType\\Selection\\Type", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Selection_1_1Type.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\TextBlock\\Type", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1TextBlock_1_1Type.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\TextLine\\Type", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1TextLine_1_1Type.html", null ],
+        [ "eZ\\Publish\\Core\\FieldType\\Time\\Type", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Time_1_1Type.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\Url\\Type", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1Type.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\User\\Type", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1User_1_1Type.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\XmlText\\Type", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1Type.html", null ]
@@ -251,10 +270,6 @@ var hierarchy =
     ] ],
     [ "eZ\\Publish\\API\\Repository\\FieldTypeTools", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1FieldTypeTools.html", [
       [ "eZ\\Publish\\Core\\Repository\\FieldTypeTools", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1FieldTypeTools.html", null ]
-    ] ],
-    [ "eZ\\Publish\\API\\Repository\\IOService", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html", [
-      [ "eZ\\Publish\\Core\\Repository\\IOService", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1IOService.html", null ],
-      [ "eZ\\Publish\\Core\\REST\\Client\\IOService", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html", null ]
     ] ],
     [ "eZ\\Publish\\API\\Repository\\LanguageService", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LanguageService.html", [
       [ "eZ\\Publish\\Core\\Repository\\LanguageService", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1LanguageService.html", null ],
@@ -411,7 +426,6 @@ var hierarchy =
         [ "eZ\\Publish\\Core\\REST\\Client\\Values\\Content\\ContentCreateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1Content_1_1ContentCreateStruct.html", null ]
       ] ],
       [ "eZ\\Publish\\API\\Repository\\Values\\Content\\ContentInfo", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html", [
-        [ "eZ\\Publish\\Core\\Repository\\Values\\Content\\ContentInfo", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html", null ],
         [ "eZ\\Publish\\Core\\REST\\Client\\Values\\Content\\ContentInfo", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1Content_1_1ContentInfo.html", null ]
       ] ],
       [ "eZ\\Publish\\API\\Repository\\Values\\Content\\ContentMetadataUpdateStruct", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentMetadataUpdateStruct.html", [
@@ -504,8 +518,6 @@ var hierarchy =
       ] ],
       [ "eZ\\Publish\\API\\Repository\\Values\\ContentType\\FieldDefinitionCreateStruct", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionCreateStruct.html", null ],
       [ "eZ\\Publish\\API\\Repository\\Values\\ContentType\\FieldDefinitionUpdateStruct", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html", null ],
-      [ "eZ\\Publish\\API\\Repository\\Values\\IO\\BinaryFile", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1IO_1_1BinaryFile.html", null ],
-      [ "eZ\\Publish\\API\\Repository\\Values\\IO\\BinaryFileCreateStruct", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1IO_1_1BinaryFileCreateStruct.html", null ],
       [ "eZ\\Publish\\API\\Repository\\Values\\ObjectState\\ObjectState", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ObjectState_1_1ObjectState.html", [
         [ "eZ\\Publish\\Core\\Repository\\Values\\ObjectState\\ObjectState", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Values_1_1ObjectState_1_1ObjectState.html", null ]
       ] ],
@@ -571,12 +583,19 @@ var hierarchy =
       [ "eZ\\Publish\\API\\Repository\\Values\\User\\RoleUpdateStruct", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1RoleUpdateStruct.html", null ],
       [ "eZ\\Publish\\API\\Repository\\Values\\User\\UserGroupUpdateStruct", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1UserGroupUpdateStruct.html", null ],
       [ "eZ\\Publish\\API\\Repository\\Values\\User\\UserUpdateStruct", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1UserUpdateStruct.html", null ],
+      [ "eZ\\Publish\\Core\\FieldType\\Page\\Parts\\Base", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Base.html", [
+        [ "eZ\\Publish\\Core\\FieldType\\Page\\Parts\\Block", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Block.html", null ],
+        [ "eZ\\Publish\\Core\\FieldType\\Page\\Parts\\Page", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Page.html", null ],
+        [ "eZ\\Publish\\Core\\FieldType\\Page\\Parts\\Zone", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Zone.html", null ]
+      ] ],
+      [ "eZ\\Publish\\Core\\FieldType\\Page\\Parts\\Item", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html", null ],
       [ "eZ\\Publish\\Core\\FieldType\\Value", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Value.html", [
         [ "eZ\\Publish\\Core\\FieldType\\Author\\Value", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1Value.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\BinaryBase\\Value", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1Value.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\BinaryFile\\Value", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryFile_1_1Value.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\Checkbox\\Value", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Checkbox_1_1Value.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\Country\\Value", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Country_1_1Value.html", null ],
+        [ "eZ\\Publish\\Core\\FieldType\\Date\\Value", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Date_1_1Value.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\DateAndTime\\Value", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1DateAndTime_1_1Value.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\EmailAddress\\Value", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1EmailAddress_1_1Value.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\Float\\Value", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Float_1_1Value.html", null ],
@@ -594,10 +613,15 @@ var hierarchy =
         [ "eZ\\Publish\\Core\\FieldType\\TextLine\\Value", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1TextLine_1_1Value.html", [
           [ "eZ\\Publish\\Core\\FieldType\\TextBlock\\Value", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1TextBlock_1_1Value.html", null ]
         ] ],
+        [ "eZ\\Publish\\Core\\FieldType\\Time\\Value", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Time_1_1Value.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\Url\\Value", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1Value.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\User\\Value", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1User_1_1Value.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\XmlText\\Value", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1Value.html", null ]
       ] ],
+      [ "eZ\\Publish\\Core\\IO\\Values\\BinaryFile", "classeZ_1_1Publish_1_1Core_1_1IO_1_1Values_1_1BinaryFile.html", [
+        [ "eZ\\Publish\\Core\\IO\\Values\\BinaryFileUpdateStruct", "classeZ_1_1Publish_1_1Core_1_1IO_1_1Values_1_1BinaryFileUpdateStruct.html", null ]
+      ] ],
+      [ "eZ\\Publish\\Core\\IO\\Values\\BinaryFileCreateStruct", "classeZ_1_1Publish_1_1Core_1_1IO_1_1Values_1_1BinaryFileCreateStruct.html", null ],
       [ "eZ\\Publish\\Core\\MVC\\Symfony\\Routing\\SimplifiedRequest", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1SimplifiedRequest.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Client\\Values\\RestContentInfo", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1RestContentInfo.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\CreatedContent", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1CreatedContent.html", null ],
@@ -617,6 +641,7 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\CreatedUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1CreatedUserGroup.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\CreatedVersion", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1CreatedVersion.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\RestExecutedView", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RestExecutedView.html", null ],
+      [ "eZ\\Publish\\Core\\REST\\Server\\Values\\SessionInput", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1SessionInput.html", null ],
       [ "eZ\\Publish\\Core\\SignalSlot\\Signal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal.html", [
         [ "eZ\\Publish\\Core\\SignalSlot\\Signal\\ContentService\\AddRelationSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentService_1_1AddRelationSignal.html", null ],
         [ "eZ\\Publish\\Core\\SignalSlot\\Signal\\ContentService\\AddTranslationInfoSignal", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Signal_1_1ContentService_1_1AddTranslationInfoSignal.html", null ],
@@ -730,6 +755,7 @@ var hierarchy =
           [ "eZ\\Publish\\SPI\\Persistence\\Content\\Search\\FieldType\\FloatField", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1FieldType_1_1FloatField.html", null ],
           [ "eZ\\Publish\\SPI\\Persistence\\Content\\Search\\FieldType\\IdentifierField", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1FieldType_1_1IdentifierField.html", null ],
           [ "eZ\\Publish\\SPI\\Persistence\\Content\\Search\\FieldType\\IntegerField", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1FieldType_1_1IntegerField.html", null ],
+          [ "eZ\\Publish\\SPI\\Persistence\\Content\\Search\\FieldType\\MultipleIdentifierField", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1FieldType_1_1MultipleIdentifierField.html", null ],
           [ "eZ\\Publish\\SPI\\Persistence\\Content\\Search\\FieldType\\PriceField", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1FieldType_1_1PriceField.html", null ],
           [ "eZ\\Publish\\SPI\\Persistence\\Content\\Search\\FieldType\\StringField", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1FieldType_1_1StringField.html", null ],
           [ "eZ\\Publish\\SPI\\Persistence\\Content\\Search\\FieldType\\TextField", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1FieldType_1_1TextField.html", null ]
@@ -769,30 +795,16 @@ var hierarchy =
     ] ],
     [ "eZ\\Publish\\Core\\Base\\Exceptions\\MissingClass", "classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1MissingClass.html", null ],
     [ "eZ\\Publish\\Core\\FieldType\\Author\\AuthorCollection", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Author_1_1AuthorCollection.html", null ],
-    [ "eZ\\Publish\\Core\\FieldType\\BinaryBase\\MimeTypeDetector", "interfaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1MimeTypeDetector.html", [
-      [ "eZ\\Publish\\Core\\FieldType\\BinaryBase\\MimeTypeDetector\\FileInfoDetector", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1MimeTypeDetector_1_1FileInfoDetector.html", null ]
-    ] ],
-    [ "eZ\\Publish\\Core\\FieldType\\BinaryBase\\PathGenerator", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1PathGenerator.html", [
-      [ "eZ\\Publish\\Core\\FieldType\\BinaryBase\\PathGenerator\\LegacyPathGenerator", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1PathGenerator_1_1LegacyPathGenerator.html", null ]
-    ] ],
     [ "eZ\\Publish\\Core\\FieldType\\FieldSettings", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FieldSettings.html", null ],
-    [ "eZ\\Publish\\Core\\FieldType\\FileService", "interfaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService.html", [
-      [ "eZ\\Publish\\Core\\FieldType\\FileService\\LocalFileService", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1FileService_1_1LocalFileService.html", [
-        [ "eZ\\Publish\\Core\\MVC\\Symfony\\ConfiguredLocalFileService", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1ConfiguredLocalFileService.html", null ],
-        [ "eZ\\Publish\\Core\\MVC\\Symfony\\File\\ConfiguredLocalImageService", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1File_1_1ConfiguredLocalImageService.html", null ]
-      ] ]
-    ] ],
     [ "eZ\\Publish\\Core\\FieldType\\Handler", "interfaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1Handler.html", null ],
     [ "eZ\\Publish\\Core\\FieldType\\Image\\PathGenerator", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Image_1_1PathGenerator.html", [
       [ "eZ\\Publish\\Core\\FieldType\\Image\\PathGenerator\\LegacyPathGenerator", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Image_1_1PathGenerator_1_1LegacyPathGenerator.html", null ]
     ] ],
-    [ "eZ\\Publish\\Core\\FieldType\\Page\\Parts\\Base", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Base.html", [
-      [ "eZ\\Publish\\Core\\FieldType\\Page\\Parts\\Block", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Block.html", null ],
-      [ "eZ\\Publish\\Core\\FieldType\\Page\\Parts\\Item", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Item.html", null ],
-      [ "eZ\\Publish\\Core\\FieldType\\Page\\Parts\\Page", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Page.html", null ],
-      [ "eZ\\Publish\\Core\\FieldType\\Page\\Parts\\Zone", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Zone.html", null ]
+    [ "eZ\\Publish\\Core\\FieldType\\Page\\PageService", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1PageService.html", [
+      [ "eZ\\Bundle\\EzPublishCoreBundle\\FieldType\\Page\\PageService", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1FieldType_1_1Page_1_1PageService.html", [
+        [ "eZ\\Bundle\\EzPublishLegacyBundle\\FieldType\\Page\\PageService", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1FieldType_1_1Page_1_1PageService.html", null ]
+      ] ]
     ] ],
-    [ "eZ\\Publish\\Core\\FieldType\\Page\\Service", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Service.html", null ],
     [ "eZ\\Publish\\Core\\FieldType\\StorageGateway", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1StorageGateway.html", [
       [ "eZ\\Publish\\Core\\FieldType\\BinaryBase\\BinaryBaseStorage\\Gateway", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway.html", [
         [ "eZ\\Publish\\Core\\FieldType\\BinaryBase\\BinaryBaseStorage\\Gateway\\LegacyStorage", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1BinaryBaseStorage_1_1Gateway_1_1LegacyStorage.html", [
@@ -809,10 +821,8 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\FieldType\\MapLocation\\MapLocationStorage\\Gateway", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1MapLocation_1_1MapLocationStorage_1_1Gateway.html", [
         [ "eZ\\Publish\\Core\\FieldType\\MapLocation\\MapLocationStorage\\Gateway\\LegacyStorage", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1MapLocation_1_1MapLocationStorage_1_1Gateway_1_1LegacyStorage.html", null ]
       ] ],
-      [ "eZ\\Publish\\Core\\FieldType\\Relation\\RelationStorage\\Gateway", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway.html", [
-        [ "eZ\\Publish\\Core\\FieldType\\Relation\\RelationStorage\\Gateway\\LegacyStorage", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage_1_1Gateway_1_1LegacyStorage.html", [
-          [ "eZ\\Publish\\Core\\FieldType\\RelationList\\RelationListStorage\\Gateway\\LegacyStorage", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1RelationList_1_1RelationListStorage_1_1Gateway_1_1LegacyStorage.html", null ]
-        ] ]
+      [ "eZ\\Publish\\Core\\FieldType\\Page\\PageStorage\\Gateway", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1PageStorage_1_1Gateway.html", [
+        [ "eZ\\Publish\\Core\\FieldType\\Page\\PageStorage\\Gateway\\LegacyStorage", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1PageStorage_1_1Gateway_1_1LegacyStorage.html", null ]
       ] ],
       [ "eZ\\Publish\\Core\\FieldType\\Url\\UrlStorage\\Gateway", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage_1_1Gateway.html", [
         [ "eZ\\Publish\\Core\\FieldType\\Url\\UrlStorage\\Gateway\\LegacyStorage", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage_1_1Gateway_1_1LegacyStorage.html", null ]
@@ -833,15 +843,25 @@ var hierarchy =
     ] ],
     [ "eZ\\Publish\\Core\\FieldType\\XmlText\\Converter", "interfaceeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1Converter.html", [
       [ "eZ\\Publish\\Core\\FieldType\\XmlText\\Converter\\EmbedToHtml5", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1Converter_1_1EmbedToHtml5.html", null ],
+      [ "eZ\\Publish\\Core\\FieldType\\XmlText\\Converter\\EzLinkToHtml5", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1Converter_1_1EzLinkToHtml5.html", null ],
       [ "eZ\\Publish\\Core\\FieldType\\XmlText\\Converter\\Html5", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1Converter_1_1Html5.html", null ]
     ] ],
     [ "eZ\\Publish\\Core\\FieldType\\XmlText\\Input", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1Input.html", [
       [ "eZ\\Publish\\Core\\FieldType\\XmlText\\Input\\EzXml", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1Input_1_1EzXml.html", null ]
     ] ],
-    [ "eZ\\Publish\\Core\\IO\\LegacyHandler\\FileResourceProvider", "interfaceeZ_1_1Publish_1_1Core_1_1IO_1_1LegacyHandler_1_1FileResourceProvider.html", [
-      [ "eZ\\Publish\\Core\\IO\\LegacyHandler\\FileResourceProvider\\eZFSFileHandler", "classeZ_1_1Publish_1_1Core_1_1IO_1_1LegacyHandler_1_1FileResourceProvider_1_1eZFSFileHandler.html", [
-        [ "eZ\\Publish\\Core\\IO\\LegacyHandler\\FileResourceProvider\\eZFS2FileHandler", "classeZ_1_1Publish_1_1Core_1_1IO_1_1LegacyHandler_1_1FileResourceProvider_1_1eZFS2FileHandler.html", null ]
-      ] ]
+    [ "eZ\\Publish\\Core\\IO\\Handler", "interfaceeZ_1_1Publish_1_1Core_1_1IO_1_1Handler.html", [
+      [ "eZ\\Publish\\Core\\IO\\Handler\\Dispatcher", "classeZ_1_1Publish_1_1Core_1_1IO_1_1Handler_1_1Dispatcher.html", null ],
+      [ "eZ\\Publish\\Core\\IO\\Handler\\Filesystem", "classeZ_1_1Publish_1_1Core_1_1IO_1_1Handler_1_1Filesystem.html", null ],
+      [ "eZ\\Publish\\Core\\IO\\Handler\\InMemory", "classeZ_1_1Publish_1_1Core_1_1IO_1_1Handler_1_1InMemory.html", null ],
+      [ "eZ\\Publish\\Core\\IO\\Handler\\Legacy", "classeZ_1_1Publish_1_1Core_1_1IO_1_1Handler_1_1Legacy.html", null ]
+    ] ],
+    [ "eZ\\Publish\\Core\\IO\\Handler\\Legacy\\FileResourceProvider", "interfaceeZ_1_1Publish_1_1Core_1_1IO_1_1Handler_1_1Legacy_1_1FileResourceProvider.html", [
+      [ "eZ\\Publish\\Core\\IO\\Handler\\Legacy\\FileResourceProvider\\eZDFSFileHandler", "classeZ_1_1Publish_1_1Core_1_1IO_1_1Handler_1_1Legacy_1_1FileResourceProvider_1_1eZDFSFileHandler.html", null ],
+      [ "eZ\\Publish\\Core\\IO\\Handler\\Legacy\\FileResourceProvider\\eZFSFileHandler", "classeZ_1_1Publish_1_1Core_1_1IO_1_1Handler_1_1Legacy_1_1FileResourceProvider_1_1eZFSFileHandler.html", null ]
+    ] ],
+    [ "eZ\\Publish\\Core\\IO\\IOService", "classeZ_1_1Publish_1_1Core_1_1IO_1_1IOService.html", null ],
+    [ "eZ\\Publish\\Core\\IO\\MetadataHandler", "interfaceeZ_1_1Publish_1_1Core_1_1IO_1_1MetadataHandler.html", [
+      [ "eZ\\Publish\\Core\\IO\\MetadataHandler\\ImageSize", "classeZ_1_1Publish_1_1Core_1_1IO_1_1MetadataHandler_1_1ImageSize.html", null ]
     ] ],
     [ "eZ\\Publish\\Core\\MVC\\ConfigResolverInterface", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1ConfigResolverInterface.html", [
       [ "eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\ChainConfigResolver", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration_1_1ChainConfigResolver.html", null ],
@@ -858,10 +878,10 @@ var hierarchy =
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\Kernel\\Loader", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1Loader.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\LegacyEvents", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1LegacyEvents.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\LegacyKernelAware", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1LegacyKernelAware.html", [
-      [ "eZ\\Publish\\Core\\IO\\LegacyHandler\\FileResourceProvider\\BaseHandler", "classeZ_1_1Publish_1_1Core_1_1IO_1_1LegacyHandler_1_1FileResourceProvider_1_1BaseHandler.html", [
-        [ "eZ\\Publish\\Core\\IO\\LegacyHandler\\FileResourceProvider\\eZFSFileHandler", "classeZ_1_1Publish_1_1Core_1_1IO_1_1LegacyHandler_1_1FileResourceProvider_1_1eZFSFileHandler.html", null ]
-      ] ],
-      [ "eZ\\Publish\\Core\\Repository\\IOService", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1IOService.html", null ]
+      [ "eZ\\Publish\\Core\\IO\\Handler\\Legacy\\FileResourceProvider\\BaseHandler", "classeZ_1_1Publish_1_1Core_1_1IO_1_1Handler_1_1Legacy_1_1FileResourceProvider_1_1BaseHandler.html", [
+        [ "eZ\\Publish\\Core\\IO\\Handler\\Legacy\\FileResourceProvider\\eZDFSFileHandler", "classeZ_1_1Publish_1_1Core_1_1IO_1_1Handler_1_1Legacy_1_1FileResourceProvider_1_1eZDFSFileHandler.html", null ],
+        [ "eZ\\Publish\\Core\\IO\\Handler\\Legacy\\FileResourceProvider\\eZFSFileHandler", "classeZ_1_1Publish_1_1Core_1_1IO_1_1Handler_1_1Legacy_1_1FileResourceProvider_1_1eZFSFileHandler.html", null ]
+      ] ]
     ] ],
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\Security\\Firewall\\LegacyListener", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Security_1_1Firewall_1_1LegacyListener.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Converter\\ObjectConverter", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Converter_1_1ObjectConverter.html", [
@@ -869,9 +889,16 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Converter\\MultipleObjectConverter", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Converter_1_1MultipleObjectConverter.html", [
         [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Converter\\ApiContentConverter", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Converter_1_1ApiContentConverter.html", null ],
         [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Converter\\DelegatingConverter", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Converter_1_1DelegatingConverter.html", null ]
-      ] ]
+      ] ],
+      [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Converter\\PagePartsConverter", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Converter_1_1PagePartsConverter.html", null ]
     ] ],
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\LegacyCompatible", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyCompatible.html", [
+      [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Adapter\\ValueObjectAdapter", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Adapter_1_1ValueObjectAdapter.html", [
+        [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Adapter\\DefinitionBasedAdapter", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Adapter_1_1DefinitionBasedAdapter.html", [
+          [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Adapter\\BlockAdapter", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Adapter_1_1BlockAdapter.html", null ],
+          [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Adapter\\ZoneAdapter", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Adapter_1_1ZoneAdapter.html", null ]
+        ] ]
+      ] ],
       [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\LegacyAdapter", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyAdapter.html", null ]
     ] ],
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\LegacyEngine", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1LegacyEngine.html", null ],
@@ -883,11 +910,19 @@ var hierarchy =
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Twig\\Template", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Twig_1_1Template.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\Templating\\Twig\\TokenParser\\LegacyIncludeParser", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Templating_1_1Twig_1_1TokenParser_1_1LegacyIncludeParser.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Legacy\\View\\Provider", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider.html", [
+      [ "eZ\\Publish\\Core\\MVC\\Legacy\\View\\Provider\\Block", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider_1_1Block.html", null ],
       [ "eZ\\Publish\\Core\\MVC\\Legacy\\View\\Provider\\Content", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider_1_1Content.html", null ],
       [ "eZ\\Publish\\Core\\MVC\\Legacy\\View\\Provider\\Location", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider_1_1Location.html", null ]
     ] ],
     [ "eZ\\Publish\\Core\\MVC\\RepositoryAwareInterface", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1RepositoryAwareInterface.html", [
+      [ "eZ\\Bundle\\EzPublishCoreBundle\\FieldType\\Page\\PageService", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1FieldType_1_1Page_1_1PageService.html", null ],
       [ "eZ\\Publish\\Core\\MVC\\RepositoryAware", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1RepositoryAware.html", [
+        [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\BlockViewProvider\\Configured\\Matcher\\MultipleValued", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1BlockViewProvider_1_1Configured_1_1Matcher_1_1MultipleValued.html", [
+          [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\BlockViewProvider\\Configured\\Matcher\\Id\\Block", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1BlockViewProvider_1_1Configured_1_1Matcher_1_1Id_1_1Block.html", null ],
+          [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\BlockViewProvider\\Configured\\Matcher\\Id\\Zone", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1BlockViewProvider_1_1Configured_1_1Matcher_1_1Id_1_1Zone.html", null ],
+          [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\BlockViewProvider\\Configured\\Matcher\\Type", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1BlockViewProvider_1_1Configured_1_1Matcher_1_1Type.html", null ],
+          [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\BlockViewProvider\\Configured\\Matcher\\View", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1BlockViewProvider_1_1Configured_1_1Matcher_1_1View.html", null ]
+        ] ],
         [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\ContentViewProvider\\Configured\\Matcher\\MultipleValued", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher_1_1MultipleValued.html", [
           [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\ContentViewProvider\\Configured\\Matcher\\Depth", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher_1_1Depth.html", null ],
           [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\ContentViewProvider\\Configured\\Matcher\\Id\\Content", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher_1_1Id_1_1Content.html", null ],
@@ -923,14 +958,27 @@ var hierarchy =
     [ "eZ\\Publish\\Core\\MVC\\Symfony\\ConfigDumperInterface", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1ConfigDumperInterface.html", [
       [ "eZ\\Bundle\\EzPublishLegacyBundle\\SetupWizard\\ConfigurationDumper", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1SetupWizard_1_1ConfigurationDumper.html", null ]
     ] ],
+    [ "eZ\\Publish\\Core\\MVC\\Symfony\\ConfiguredFileService", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1ConfiguredFileService.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Symfony\\Controller\\Controller", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Controller_1_1Controller.html", [
       [ "eZ\\Bundle\\EzPublishLegacyBundle\\Controller\\LegacyTreeMenuController", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Controller_1_1LegacyTreeMenuController.html", null ],
-      [ "eZ\\Publish\\Core\\MVC\\Symfony\\Controller\\Content\\ViewController", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Controller_1_1Content_1_1ViewController.html", null ]
+      [ "eZ\\Publish\\Core\\MVC\\Symfony\\Controller\\Content\\ViewController", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Controller_1_1Content_1_1ViewController.html", null ],
+      [ "eZ\\Publish\\Core\\MVC\\Symfony\\Controller\\PageController", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Controller_1_1PageController.html", null ]
     ] ],
     [ "eZ\\Publish\\Core\\MVC\\Symfony\\Event\\APIContentExceptionEvent", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Event_1_1APIContentExceptionEvent.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Symfony\\Event\\PostSiteAccessMatchEvent", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Event_1_1PostSiteAccessMatchEvent.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Symfony\\Event\\PreContentViewEvent", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Event_1_1PreContentViewEvent.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Symfony\\EventListener\\SiteAccessMatchListener", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1EventListener_1_1SiteAccessMatchListener.html", null ],
+    [ "eZ\\Publish\\Core\\MVC\\Symfony\\FieldType\\Page\\PageServiceFactory", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1FieldType_1_1Page_1_1PageServiceFactory.html", null ],
+    [ "eZ\\Publish\\Core\\MVC\\Symfony\\FieldType\\View\\ParameterProviderInterface", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1FieldType_1_1View_1_1ParameterProviderInterface.html", [
+      [ "eZ\\Publish\\Core\\MVC\\Symfony\\FieldType\\Page\\ParameterProvider", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1FieldType_1_1Page_1_1ParameterProvider.html", null ]
+    ] ],
+    [ "eZ\\Publish\\Core\\MVC\\Symfony\\FieldType\\View\\ParameterProviderRegistryInterface", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1FieldType_1_1View_1_1ParameterProviderRegistryInterface.html", [
+      [ "eZ\\Publish\\Core\\MVC\\Symfony\\FieldType\\View\\ParameterProviderRegistry", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1FieldType_1_1View_1_1ParameterProviderRegistry.html", null ]
+    ] ],
+    [ "eZ\\Publish\\Core\\MVC\\Symfony\\File\\ConfiguredLocalImageService", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1File_1_1ConfiguredLocalImageService.html", null ],
+    [ "eZ\\Publish\\Core\\MVC\\Symfony\\Locale\\LocaleConverterInterface", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Locale_1_1LocaleConverterInterface.html", [
+      [ "eZ\\Publish\\Core\\MVC\\Symfony\\Locale\\LocaleConverter", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Locale_1_1LocaleConverter.html", null ]
+    ] ],
     [ "eZ\\Publish\\Core\\MVC\\Symfony\\MVCEvents", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1MVCEvents.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Symfony\\Routing\\Generator", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1Routing_1_1Generator.html", [
       [ "eZ\\Bundle\\EzPublishLegacyBundle\\Routing\\UrlGenerator", "classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1Routing_1_1UrlGenerator.html", null ],
@@ -999,25 +1047,53 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\MVC\\Legacy\\View\\TwigContentViewLayoutDecorator", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1TwigContentViewLayoutDecorator.html", null ],
       [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\ContentView", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentView.html", null ]
     ] ],
-    [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\ContentViewProvider\\Configured\\Matcher", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher.html", [
-      [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\ContentViewProvider\\Configured\\Matcher\\MultipleValued", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher_1_1MultipleValued.html", null ]
-    ] ],
-    [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Manager", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Manager.html", null ],
     [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\Configured", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Configured.html", [
-      [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\Content\\Configured", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Content_1_1Configured.html", null ],
-      [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\Location\\Configured", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Location_1_1Configured.html", [
-        [ "eZ\\Bundle\\EzPublishCoreBundle\\View\\Provider\\Content\\Configured", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View_1_1Provider_1_1Content_1_1Configured.html", null ],
-        [ "eZ\\Bundle\\EzPublishCoreBundle\\View\\Provider\\Location\\Configured", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View_1_1Provider_1_1Location_1_1Configured.html", null ]
+      [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\ContentBasedConfigured", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1ContentBasedConfigured.html", [
+        [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\Block\\Configured", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Block_1_1Configured.html", null ],
+        [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\Content\\Configured", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Content_1_1Configured.html", null ],
+        [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\Location\\Configured", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Location_1_1Configured.html", [
+          [ "eZ\\Bundle\\EzPublishCoreBundle\\View\\Provider\\Block\\Configured", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View_1_1Provider_1_1Block_1_1Configured.html", null ],
+          [ "eZ\\Bundle\\EzPublishCoreBundle\\View\\Provider\\Content\\Configured", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View_1_1Provider_1_1Content_1_1Configured.html", null ],
+          [ "eZ\\Bundle\\EzPublishCoreBundle\\View\\Provider\\Location\\Configured", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1View_1_1Provider_1_1Location_1_1Configured.html", null ]
+        ] ]
       ] ]
     ] ],
-    [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\Content", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Content.html", [
-      [ "eZ\\Publish\\Core\\MVC\\Legacy\\View\\Provider\\Content", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider_1_1Content.html", null ],
-      [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\Content\\Configured", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Content_1_1Configured.html", null ]
+    [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\ViewProviderInterface", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1ViewProviderInterface.html", [
+      [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\Block", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Block.html", [
+        [ "eZ\\Publish\\Core\\MVC\\Legacy\\View\\Provider\\Block", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider_1_1Block.html", null ],
+        [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\Block\\Configured", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Block_1_1Configured.html", null ]
+      ] ],
+      [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\Content", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Content.html", [
+        [ "eZ\\Publish\\Core\\MVC\\Legacy\\View\\Provider\\Content", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider_1_1Content.html", null ],
+        [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\Content\\Configured", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Content_1_1Configured.html", null ]
+      ] ],
+      [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\Location", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Location.html", [
+        [ "eZ\\Publish\\Core\\MVC\\Legacy\\View\\Provider\\Location", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider_1_1Location.html", null ],
+        [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\Location\\Configured", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Location_1_1Configured.html", null ]
+      ] ]
     ] ],
-    [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\Location", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Location.html", [
-      [ "eZ\\Publish\\Core\\MVC\\Legacy\\View\\Provider\\Location", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1View_1_1Provider_1_1Location.html", null ],
-      [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Provider\\Location\\Configured", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Provider_1_1Location_1_1Configured.html", null ]
+    [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\ViewManagerInterface", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ViewManagerInterface.html", [
+      [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\Manager", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1Manager.html", null ]
     ] ],
+    [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\ViewProviderMatcher", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ViewProviderMatcher.html", [
+      [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\BlockViewProvider\\Configured\\Matcher", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1BlockViewProvider_1_1Configured_1_1Matcher.html", [
+        [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\BlockViewProvider\\Configured\\Matcher\\MultipleValued", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1BlockViewProvider_1_1Configured_1_1Matcher_1_1MultipleValued.html", null ]
+      ] ],
+      [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\ContentViewProvider\\Configured\\Matcher", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher.html", [
+        [ "eZ\\Publish\\Core\\MVC\\Symfony\\View\\ContentViewProvider\\Configured\\Matcher\\MultipleValued", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher_1_1MultipleValued.html", null ]
+      ] ]
+    ] ],
+    [ "eZ\\Publish\\Core\\Persistence\\Cache\\AbstractHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1AbstractHandler.html", [
+      [ "eZ\\Publish\\Core\\Persistence\\Cache\\ContentHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html", null ],
+      [ "eZ\\Publish\\Core\\Persistence\\Cache\\ContentLanguageHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentLanguageHandler.html", null ],
+      [ "eZ\\Publish\\Core\\Persistence\\Cache\\ContentTypeHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentTypeHandler.html", null ],
+      [ "eZ\\Publish\\Core\\Persistence\\Cache\\LocationHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1LocationHandler.html", null ],
+      [ "eZ\\Publish\\Core\\Persistence\\Cache\\SearchHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1SearchHandler.html", null ],
+      [ "eZ\\Publish\\Core\\Persistence\\Cache\\SectionHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1SectionHandler.html", null ],
+      [ "eZ\\Publish\\Core\\Persistence\\Cache\\UrlAliasHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1UrlAliasHandler.html", null ],
+      [ "eZ\\Publish\\Core\\Persistence\\Cache\\UserHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1UserHandler.html", null ]
+    ] ],
+    [ "eZ\\Publish\\Core\\Persistence\\Cache\\PersistenceLogger", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1PersistenceLogger.html", null ],
     [ "eZ\\Publish\\Core\\Persistence\\Factory", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Factory.html", null ],
     [ "eZ\\Publish\\Core\\Persistence\\FieldTypeRegistry", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1FieldTypeRegistry.html", null ],
     [ "eZ\\Publish\\Core\\Persistence\\InMemory\\Backend", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Backend.html", null ],
@@ -1029,6 +1105,7 @@ var hierarchy =
       ] ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\FieldValue\\Converter\\Checkbox", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter_1_1Checkbox.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\FieldValue\\Converter\\Country", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter_1_1Country.html", null ],
+      [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\FieldValue\\Converter\\Date", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter_1_1Date.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\FieldValue\\Converter\\DateAndTime", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter_1_1DateAndTime.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\FieldValue\\Converter\\EmailAddress", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter_1_1EmailAddress.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\FieldValue\\Converter\\Float", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter_1_1Float.html", null ],
@@ -1044,6 +1121,7 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\FieldValue\\Converter\\Selection", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter_1_1Selection.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\FieldValue\\Converter\\TextBlock", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter_1_1TextBlock.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\FieldValue\\Converter\\TextLine", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter_1_1TextLine.html", null ],
+      [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\FieldValue\\Converter\\Time", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter_1_1Time.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\FieldValue\\Converter\\Url", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter_1_1Url.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\FieldValue\\Converter\\XmlText", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1Converter_1_1XmlText.html", null ]
     ] ],
@@ -1142,6 +1220,7 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\UrlAlias\\Gateway\\EzcDatabase", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Gateway_1_1EzcDatabase.html", null ]
     ] ],
     [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\UrlAlias\\Mapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Mapper.html", null ],
+    [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\UrlAlias\\SlugConverter", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1SlugConverter.html", null ],
     [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\UrlWildcard\\Gateway", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlWildcard_1_1Gateway.html", [
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\UrlWildcard\\Gateway\\ExceptionConversion", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlWildcard_1_1Gateway_1_1ExceptionConversion.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\UrlWildcard\\Gateway\\EzcDatabase", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlWildcard_1_1Gateway_1_1EzcDatabase.html", null ]
@@ -1201,7 +1280,9 @@ var hierarchy =
     [ "eZ\\Publish\\Core\\Persistence\\Solr\\Content\\Search\\FieldValueMapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper.html", [
       [ "eZ\\Publish\\Core\\Persistence\\Solr\\Content\\Search\\FieldValueMapper\\Aggregate", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper_1_1Aggregate.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Solr\\Content\\Search\\FieldValueMapper\\DateMapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper_1_1DateMapper.html", null ],
-      [ "eZ\\Publish\\Core\\Persistence\\Solr\\Content\\Search\\FieldValueMapper\\IdentifierMapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper_1_1IdentifierMapper.html", null ],
+      [ "eZ\\Publish\\Core\\Persistence\\Solr\\Content\\Search\\FieldValueMapper\\IdentifierMapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper_1_1IdentifierMapper.html", [
+        [ "eZ\\Publish\\Core\\Persistence\\Solr\\Content\\Search\\FieldValueMapper\\MultipleIdentifierMapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper_1_1MultipleIdentifierMapper.html", null ]
+      ] ],
       [ "eZ\\Publish\\Core\\Persistence\\Solr\\Content\\Search\\FieldValueMapper\\IntegerMapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper_1_1IntegerMapper.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Solr\\Content\\Search\\FieldValueMapper\\PriceMapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper_1_1PriceMapper.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Solr\\Content\\Search\\FieldValueMapper\\StringMapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1FieldValueMapper_1_1StringMapper.html", null ]
@@ -1218,9 +1299,11 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\Persistence\\Solr\\Content\\Search\\SortClauseVisitor\\Aggregate", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1SortClauseVisitor_1_1Aggregate.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Solr\\Content\\Search\\SortClauseVisitor\\ContentId", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1SortClauseVisitor_1_1ContentId.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Solr\\Content\\Search\\SortClauseVisitor\\LocationDepth", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1SortClauseVisitor_1_1LocationDepth.html", null ],
-      [ "eZ\\Publish\\Core\\Persistence\\Solr\\Content\\Search\\SortClauseVisitor\\LocationPathString", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1SortClauseVisitor_1_1LocationPathString.html", null ]
+      [ "eZ\\Publish\\Core\\Persistence\\Solr\\Content\\Search\\SortClauseVisitor\\LocationPathString", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1SortClauseVisitor_1_1LocationPathString.html", null ],
+      [ "eZ\\Publish\\Core\\Persistence\\Solr\\Content\\Search\\SortClauseVisitor\\LocationPriority", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1SortClauseVisitor_1_1LocationPriority.html", null ]
     ] ],
     [ "eZ\\Publish\\Core\\Repository\\NameSchemaService", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1NameSchemaService.html", null ],
+    [ "eZ\\Publish\\Core\\Repository\\RelationProcessor", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1RelationProcessor.html", null ],
     [ "eZ\\Publish\\Core\\REST\\Client\\Exceptions\\MethodNotAllowedException", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Exceptions_1_1MethodNotAllowedException.html", null ],
     [ "eZ\\Publish\\Core\\REST\\Client\\HttpClient", "interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient.html", [
       [ "eZ\\Publish\\Core\\REST\\Client\\HttpClient\\Authentication\\BasicAuth", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient_1_1Authentication_1_1BasicAuth.html", null ],
@@ -1244,6 +1327,7 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\REST\\Client\\URLAliasService", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1URLAliasService.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Client\\UserService", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1UserService.html", null ]
     ] ],
+    [ "eZ\\Publish\\Core\\REST\\Client\\Values\\ContentTypeGroupRefList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentTypeGroupRefList.html", null ],
     [ "eZ\\Publish\\Core\\REST\\Client\\Values\\FieldDefinitionList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1FieldDefinitionList.html", null ],
     [ "eZ\\Publish\\Core\\REST\\Client\\Values\\User\\RoleAssignment", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1User_1_1RoleAssignment.html", null ],
     [ "eZ\\Publish\\Core\\REST\\Common\\FieldTypeProcessor", "interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1FieldTypeProcessor.html", [
@@ -1277,6 +1361,10 @@ var hierarchy =
     [ "eZ\\Publish\\Core\\REST\\Common\\Output\\Generator\\Xml\\FieldTypeHashGenerator", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Generator_1_1Xml_1_1FieldTypeHashGenerator.html", null ],
     [ "eZ\\Publish\\Core\\REST\\Common\\Output\\ValueObjectVisitor", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1ValueObjectVisitor.html", [
       [ "eZ\\Publish\\Core\\REST\\Client\\Output\\ValueObjectVisitor\\ContentObjectStates", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1ContentObjectStates.html", null ],
+      [ "eZ\\Publish\\Core\\REST\\Client\\Output\\ValueObjectVisitor\\ContentTypeCreateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1ContentTypeCreateStruct.html", null ],
+      [ "eZ\\Publish\\Core\\REST\\Client\\Output\\ValueObjectVisitor\\ContentTypeGroupCreateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1ContentTypeGroupCreateStruct.html", null ],
+      [ "eZ\\Publish\\Core\\REST\\Client\\Output\\ValueObjectVisitor\\ContentTypeGroupUpdateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1ContentTypeGroupUpdateStruct.html", null ],
+      [ "eZ\\Publish\\Core\\REST\\Client\\Output\\ValueObjectVisitor\\FieldDefinitionCreateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1FieldDefinitionCreateStruct.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Client\\Output\\ValueObjectVisitor\\Limitation", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1Limitation.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Client\\Output\\ValueObjectVisitor\\LocationCreateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1LocationCreateStruct.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Client\\Output\\ValueObjectVisitor\\LocationUpdateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1LocationUpdateStruct.html", null ],
@@ -1292,6 +1380,7 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\REST\\Client\\Output\\ValueObjectVisitor\\SectionCreateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1SectionCreateStruct.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Client\\Output\\ValueObjectVisitor\\SectionIncludingContentMetadataUpdateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1SectionIncludingContentMetadataUpdateStruct.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Client\\Output\\ValueObjectVisitor\\SectionUpdateStruct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Output_1_1ValueObjectVisitor_1_1SectionUpdateStruct.html", null ],
+      [ "eZ\\Publish\\Core\\REST\\Server\\Output\\ValueObjectVisitor\\Conflict", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Conflict.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Output\\ValueObjectVisitor\\ContentList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1ContentList.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Output\\ValueObjectVisitor\\ContentObjectStates", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1ContentObjectStates.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Output\\ValueObjectVisitor\\ContentTypeGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1ContentTypeGroup.html", [
@@ -1364,6 +1453,7 @@ var hierarchy =
         [ "eZ\\Publish\\Core\\REST\\Server\\Output\\ValueObjectVisitor\\CreatedSection", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1CreatedSection.html", null ]
       ] ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Output\\ValueObjectVisitor\\SectionList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1SectionList.html", null ],
+      [ "eZ\\Publish\\Core\\REST\\Server\\Output\\ValueObjectVisitor\\SeeOther", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1SeeOther.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Output\\ValueObjectVisitor\\TemporaryRedirect", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1TemporaryRedirect.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Output\\ValueObjectVisitor\\Trash", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Trash.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Output\\ValueObjectVisitor\\URLAlias", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1URLAlias.html", [
@@ -1379,6 +1469,7 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\REST\\Server\\Output\\ValueObjectVisitor\\UserGroupRefList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1UserGroupRefList.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Output\\ValueObjectVisitor\\UserList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1UserList.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Output\\ValueObjectVisitor\\UserRefList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1UserRefList.html", null ],
+      [ "eZ\\Publish\\Core\\REST\\Server\\Output\\ValueObjectVisitor\\UserSession", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1UserSession.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Output\\ValueObjectVisitor\\Version", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1Version.html", [
         [ "eZ\\Publish\\Core\\REST\\Server\\Output\\ValueObjectVisitor\\CreatedVersion", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Output_1_1ValueObjectVisitor_1_1CreatedVersion.html", null ]
       ] ],
@@ -1397,6 +1488,7 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\REST\\Common\\Values\\ContentObjectStates", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1ContentObjectStates.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Common\\Values\\RestObjectState", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1RestObjectState.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Common\\Values\\Root", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Values_1_1Root.html", null ],
+      [ "eZ\\Publish\\Core\\REST\\Server\\Values\\Conflict", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1Conflict.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\ContentList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentList.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\ContentTypeGroupList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentTypeGroupList.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\ContentTypeGroupRefList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentTypeGroupRefList.html", null ],
@@ -1430,6 +1522,7 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\RoleAssignmentList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleAssignmentList.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\RoleList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleList.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\SectionList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1SectionList.html", null ],
+      [ "eZ\\Publish\\Core\\REST\\Server\\Values\\SeeOther", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1SeeOther.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\TemporaryRedirect", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1TemporaryRedirect.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\Trash", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1Trash.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\URLAliasList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1URLAliasList.html", null ],
@@ -1439,6 +1532,7 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\UserGroupRefList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1UserGroupRefList.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\UserList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1UserList.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\UserRefList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1UserRefList.html", null ],
+      [ "eZ\\Publish\\Core\\REST\\Server\\Values\\UserSession", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1UserSession.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\Version", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1Version.html", null ],
       [ "eZ\\Publish\\Core\\REST\\Server\\Values\\VersionList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1VersionList.html", null ]
     ] ],
@@ -1493,6 +1587,9 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\SignalSlot\\SlotFactory\\GeneralSlotFactory", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1SlotFactory_1_1GeneralSlotFactory.html", null ],
       [ "eZ\\Publish\\Core\\SignalSlot\\SlotFactory\\NullSlotFactory", "classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1SlotFactory_1_1NullSlotFactory.html", null ]
     ] ],
+    [ "eZ\\Publish\\SPI\\FieldType\\BinaryBase\\PathGenerator", "classeZ_1_1Publish_1_1SPI_1_1FieldType_1_1BinaryBase_1_1PathGenerator.html", [
+      [ "eZ\\Publish\\Core\\FieldType\\BinaryBase\\PathGenerator\\LegacyPathGenerator", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1BinaryBase_1_1PathGenerator_1_1LegacyPathGenerator.html", null ]
+    ] ],
     [ "eZ\\Publish\\SPI\\FieldType\\Event", "classeZ_1_1Publish_1_1SPI_1_1FieldType_1_1Event.html", [
       [ "eZ\\Publish\\SPI\\FieldType\\Events\\PostCreateEvent", "classeZ_1_1Publish_1_1SPI_1_1FieldType_1_1Events_1_1PostCreateEvent.html", null ],
       [ "eZ\\Publish\\SPI\\FieldType\\Events\\PostPublishEvent", "classeZ_1_1Publish_1_1SPI_1_1FieldType_1_1Events_1_1PostPublishEvent.html", null ],
@@ -1509,7 +1606,6 @@ var hierarchy =
         [ "eZ\\Publish\\Core\\FieldType\\Image\\ImageStorage", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Image_1_1ImageStorage.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\Keyword\\KeywordStorage", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Keyword_1_1KeywordStorage.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\MapLocation\\MapLocationStorage", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1MapLocation_1_1MapLocationStorage.html", null ],
-        [ "eZ\\Publish\\Core\\FieldType\\Relation\\RelationStorage", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Relation_1_1RelationStorage.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\Url\\UrlStorage", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Url_1_1UrlStorage.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\User\\UserStorage", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1User_1_1UserStorage.html", null ],
         [ "eZ\\Publish\\Core\\FieldType\\XmlText\\XmlTextStorage", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage.html", null ]
@@ -1526,10 +1622,8 @@ var hierarchy =
       [ "eZ\\Publish\\SPI\\IO\\BinaryFileCreateStruct", "classeZ_1_1Publish_1_1SPI_1_1IO_1_1BinaryFileCreateStruct.html", null ],
       [ "eZ\\Publish\\SPI\\IO\\BinaryFileUpdateStruct", "classeZ_1_1Publish_1_1SPI_1_1IO_1_1BinaryFileUpdateStruct.html", null ]
     ] ],
-    [ "eZ\\Publish\\SPI\\IO\\Handler", "interfaceeZ_1_1Publish_1_1SPI_1_1IO_1_1Handler.html", [
-      [ "eZ\\Publish\\Core\\IO\\DispatcherHandler", "classeZ_1_1Publish_1_1Core_1_1IO_1_1DispatcherHandler.html", null ],
-      [ "eZ\\Publish\\Core\\IO\\InMemoryHandler", "classeZ_1_1Publish_1_1Core_1_1IO_1_1InMemoryHandler.html", null ],
-      [ "eZ\\Publish\\Core\\IO\\LegacyHandler", "classeZ_1_1Publish_1_1Core_1_1IO_1_1LegacyHandler.html", null ]
+    [ "eZ\\Publish\\SPI\\IO\\MimeTypeDetector", "interfaceeZ_1_1Publish_1_1SPI_1_1IO_1_1MimeTypeDetector.html", [
+      [ "eZ\\Publish\\Core\\IO\\MimeTypeDetector\\FileInfo", "classeZ_1_1Publish_1_1Core_1_1IO_1_1MimeTypeDetector_1_1FileInfo.html", null ]
     ] ],
     [ "eZ\\Publish\\SPI\\Limitation\\Type", "interfaceeZ_1_1Publish_1_1SPI_1_1Limitation_1_1Type.html", [
       [ "eZ\\Publish\\Core\\Limitation\\ContentTypeLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1ContentTypeLimitationType.html", null ],
@@ -1548,15 +1642,18 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\Limitation\\UserGroupLimitationType", "classeZ_1_1Publish_1_1Core_1_1Limitation_1_1UserGroupLimitationType.html", null ]
     ] ],
     [ "eZ\\Publish\\SPI\\Persistence\\Content\\Handler", "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Handler.html", [
+      [ "eZ\\Publish\\Core\\Persistence\\Cache\\ContentHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\InMemory\\ContentHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\Handler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html", null ]
     ] ],
     [ "eZ\\Publish\\SPI\\Persistence\\Content\\Language\\Handler", "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Language_1_1Handler.html", [
+      [ "eZ\\Publish\\Core\\Persistence\\Cache\\ContentLanguageHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentLanguageHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\InMemory\\LanguageHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LanguageHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\Language\\CachingHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language_1_1CachingHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\Language\\Handler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Language_1_1Handler.html", null ]
     ] ],
     [ "eZ\\Publish\\SPI\\Persistence\\Content\\Location\\Handler", "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler.html", [
+      [ "eZ\\Publish\\Core\\Persistence\\Cache\\LocationHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1LocationHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\InMemory\\LocationHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LocationHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\Location\\Handler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Handler.html", null ]
     ] ],
@@ -1568,21 +1665,25 @@ var hierarchy =
       [ "eZ\\Publish\\Core\\Persistence\\InMemory\\ObjectStateHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ObjectStateHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\ObjectState\\Handler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1ObjectState_1_1Handler.html", null ]
     ] ],
-    [ "eZ\\Publish\\SPI\\Persistence\\Content\\Search\\Handler", "classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1Handler.html", [
+    [ "eZ\\Publish\\SPI\\Persistence\\Content\\Search\\Handler", "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Search_1_1Handler.html", [
+      [ "eZ\\Publish\\Core\\Persistence\\Cache\\SearchHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1SearchHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\InMemory\\SearchHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1SearchHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\Search\\Handler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Search_1_1Handler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Solr\\Content\\Search\\Handler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Handler.html", null ]
     ] ],
     [ "eZ\\Publish\\SPI\\Persistence\\Content\\Section\\Handler", "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Section_1_1Handler.html", [
+      [ "eZ\\Publish\\Core\\Persistence\\Cache\\SectionHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1SectionHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\InMemory\\SectionHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1SectionHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\Section\\Handler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Section_1_1Handler.html", null ]
     ] ],
     [ "eZ\\Publish\\SPI\\Persistence\\Content\\Type\\Handler", "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type_1_1Handler.html", [
+      [ "eZ\\Publish\\Core\\Persistence\\Cache\\ContentTypeHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1ContentTypeHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\InMemory\\ContentTypeHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1ContentTypeHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\Type\\Handler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1Handler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\Type\\MemoryCachingHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Type_1_1MemoryCachingHandler.html", null ]
     ] ],
     [ "eZ\\Publish\\SPI\\Persistence\\Content\\UrlAlias\\Handler", "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1UrlAlias_1_1Handler.html", [
+      [ "eZ\\Publish\\Core\\Persistence\\Cache\\UrlAliasHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1UrlAliasHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\InMemory\\UrlAliasHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UrlAliasHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\UrlAlias\\Handler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Handler.html", null ]
     ] ],
@@ -1592,10 +1693,12 @@ var hierarchy =
     ] ],
     [ "eZ\\Publish\\SPI\\Persistence\\FieldType", "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1FieldType.html", null ],
     [ "eZ\\Publish\\SPI\\Persistence\\Handler", "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Handler.html", [
+      [ "eZ\\Publish\\Core\\Persistence\\Cache\\Handler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1Handler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\InMemory\\Handler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Handler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\Handler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Handler.html", null ]
     ] ],
     [ "eZ\\Publish\\SPI\\Persistence\\User\\Handler", "interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html", [
+      [ "eZ\\Publish\\Core\\Persistence\\Cache\\UserHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Cache_1_1UserHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\InMemory\\UserHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html", null ],
       [ "eZ\\Publish\\Core\\Persistence\\Legacy\\User\\Handler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1User_1_1Handler.html", null ]
     ] ],

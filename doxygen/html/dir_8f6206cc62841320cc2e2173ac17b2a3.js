@@ -12,10 +12,10 @@ var dir_8f6206cc62841320cc2e2173ac17b2a3 =
     [ "ContentTypeGroup.php", "API_2Repository_2Values_2ContentType_2ContentTypeGroup_8php.html", [
       [ "ContentTypeGroup", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroup.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroup" ]
     ] ],
-    [ "ContentTypeGroupCreateStruct.php", "ContentTypeGroupCreateStruct_8php.html", [
+    [ "ContentTypeGroupCreateStruct.php", "API_2Repository_2Values_2ContentType_2ContentTypeGroupCreateStruct_8php.html", [
       [ "ContentTypeGroupCreateStruct", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroupCreateStruct.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroupCreateStruct" ]
     ] ],
-    [ "ContentTypeGroupUpdateStruct.php", "ContentTypeGroupUpdateStruct_8php.html", [
+    [ "ContentTypeGroupUpdateStruct.php", "API_2Repository_2Values_2ContentType_2ContentTypeGroupUpdateStruct_8php.html", [
       [ "ContentTypeGroupUpdateStruct", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroupUpdateStruct.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroupUpdateStruct" ]
     ] ],
     [ "ContentTypeUpdateStruct.php", "ContentTypeUpdateStruct_8php.html", [
@@ -24,7 +24,7 @@ var dir_8f6206cc62841320cc2e2173ac17b2a3 =
     [ "FieldDefinition.php", "API_2Repository_2Values_2ContentType_2FieldDefinition_8php.html", [
       [ "FieldDefinition", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition" ]
     ] ],
-    [ "FieldDefinitionCreateStruct.php", "FieldDefinitionCreateStruct_8php.html", [
+    [ "FieldDefinitionCreateStruct.php", "API_2Repository_2Values_2ContentType_2FieldDefinitionCreateStruct_8php.html", [
       [ "FieldDefinitionCreateStruct", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionCreateStruct.html", "classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionCreateStruct" ]
     ] ],
     [ "FieldDefinitionUpdateStruct.php", "FieldDefinitionUpdateStruct_8php.html", [

@@ -1,6 +1,6 @@
 var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler =
 [
-    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a8b81be205468dd50ab7db84ceb1460e4", null ],
+    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a02cc9fe30996101cb5779339363bbe6c", null ],
     [ "addRelation", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a3502ceb2351ee7cd218e2b511c928eea", null ],
     [ "copy", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#ae3d326f42ea1ce12c9146ee89d481c7a", null ],
     [ "create", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a5ad6f859a5586fdfe4b316ef23967f4c", null ],
@@ -17,13 +17,16 @@ var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler =
     [ "loadVersionInfo", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a8b1e14b5d5790da39a9459d469b21f7a", null ],
     [ "publish", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a5a64b461be223ee4592bb0cf2d8ad182", null ],
     [ "removeRawContent", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#ae714609555baf7d29cb0b8e5e7f3b80e", null ],
-    [ "removeRelation", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a5ebe5dda7d4e85f6206e7c77a7dd0ed0", null ],
+    [ "removeRelation", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#ab6608fe0e495f19475ad2957ce59b530", null ],
     [ "setStatus", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a22a1c703136403b08e1d6fe547a13b6b", null ],
     [ "updateContent", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a20faf26da14a5018c5448ef470d6446b", null ],
     [ "updateMetadata", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#affb46e947c68af4c5a8a58d5ea8b28ee", null ],
+    [ "updatePathIdentificationString", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a782440fdd06764934e81fbb88b4fc2c3", null ],
     [ "$contentGateway", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#aa5935c88015f035c6146ade3e02858fc", null ],
     [ "$fieldHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a9ede72882c3f781bfd1e5af68fa51ecf", null ],
     [ "$locationGateway", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a381f8be113e7d21c02df4956dbe1c22b", null ],
     [ "$locationHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a476878a5e841de3c7add53bb99481726", null ],
-    [ "$mapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a089bc5389dd840181088e80baff1b67e", null ]
+    [ "$mapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#a089bc5389dd840181088e80baff1b67e", null ],
+    [ "$slugConverter", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#ad1c7c8ff7c26bab4f345e32632a1d6c8", null ],
+    [ "$urlAliasGateway", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Handler.html#ab95912a5d158b3c0cfd5a1b3c24a48a0", null ]
 ];

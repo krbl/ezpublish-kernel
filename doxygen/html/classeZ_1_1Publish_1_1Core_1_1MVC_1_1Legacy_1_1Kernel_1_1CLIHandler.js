@@ -6,7 +6,10 @@ var classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler =
     [ "reInitialize", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#a6ecb3c0a18f5c58f77252e837ca6cfce", null ],
     [ "run", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#a6c499d58a99bb9d6599c5328f2f9418f", null ],
     [ "runCallback", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#a2279b10902b7cb7e7a85c5d1e4d1bcf4", null ],
+    [ "setEmbeddedScriptPath", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#abc411bde2f8f4f3777344b9989e414ec", null ],
     [ "setUseExceptions", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#a0cc34329642aba94eb0e10034a44be2a", null ],
     [ "$container", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#a2d843b30de3a6fe6bfe55df96f7065c3", null ],
-    [ "$script", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#a46824cb9ac81a9f17f6d1ce126b68b1f", null ]
+    [ "$embeddedScriptPath", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#ac3c383a946c8baca37fea44816327480", null ],
+    [ "$script", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#a46824cb9ac81a9f17f6d1ce126b68b1f", null ],
+    [ "$sessionSettings", "classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#a4f072324ba80ae291cdedf5168def6f2", null ]
 ];

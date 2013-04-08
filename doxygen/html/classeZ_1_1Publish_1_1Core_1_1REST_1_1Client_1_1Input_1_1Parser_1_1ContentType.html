@@ -219,27 +219,27 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000111">Todo:</a></b></dt><dd><p class="startdd">Error handling </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000113">Todo:</a></b></dt><dd><p class="startdd">Error handling </p>
 <p class="enddd">What about missing properties? Set them here, using the service to load? Or better set them in the service, since loading is really unsuitable here? </p>
 </dd></dl>
 
 <p>Definition at line <a class="el" href="Core_2REST_2Client_2Input_2Parser_2ContentType_8php_source.html#l00057">57</a> of file <a class="el" href="Core_2REST_2Client_2Input_2Parser_2ContentType_8php_source.html">ContentType.php</a>.</p>
 
-<p>References <a class="el" href="API_2Repository_2Values_2ContentType_2ContentType_8php_source.html#l00134">eZ\Publish\API\Repository\Values\ContentType\ContentType\$creatorId</a>, <a class="el" href="API_2Repository_2Values_2ContentType_2ContentType_8php_source.html#l00142">eZ\Publish\API\Repository\Values\ContentType\ContentType\$modifierId</a>, and <a class="el" href="Core_2REST_2Client_2Input_2Parser_2ContentType_8php_source.html#l00057">eZ\Publish\Core\REST\Client\Input\Parser\ContentType\parse()</a>.</p>
+<p>References <a class="el" href="API_2Repository_2Values_2ContentType_2ContentType_8php_source.html#l00134">eZ\Publish\API\Repository\Values\ContentType\ContentType\$creatorId</a>, <a class="el" href="API_2Repository_2Values_2ContentType_2ContentType_8php_source.html#l00142">eZ\Publish\API\Repository\Values\ContentType\ContentType\$modifierId</a>, <a class="el" href="Core_2REST_2Client_2Input_2Parser_2ContentType_8php_source.html#l00057">eZ\Publish\Core\REST\Client\Input\Parser\ContentType\parse()</a>, and <a class="el" href="API_2Repository_2Values_2ContentType_2ContentType_8php_source.html#l00045">eZ\Publish\API\Repository\Values\ContentType\ContentType\STATUS_DRAFT</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html#aad62c495f1b0eb099eda31c13498df1c">$creatorId</a> = $this-&gt;parserTools-&gt;parseObjectElement( $data[<span class="stringliteral">&#39;Creator&#39;</span>], $parsingDispatcher );</div>
 <div class="line">        <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html#a1aab67d66c1835e8c0074c74ec18a3a1">$modifierId</a> = $this-&gt;parserTools-&gt;parseObjectElement( $data[<span class="stringliteral">&#39;Modifier&#39;</span>], $parsingDispatcher );</div>
 <div class="line"></div>
 <div class="line">        $fieldDefinitionListReference = $this-&gt;parserTools-&gt;parseObjectElement( $data[<span class="stringliteral">&#39;FieldDefinitions&#39;</span>], $parsingDispatcher );</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Values\ContentType\ContentType(</div>
+<div class="line">        $contentType = <span class="keyword">new</span> Values\ContentType\ContentType(</div>
 <div class="line">            $this-&gt;contentTypeService,</div>
 <div class="line">            array(</div>
 <div class="line">                <span class="stringliteral">&#39;id&#39;</span>   =&gt; $data[<span class="stringliteral">&#39;_href&#39;</span>],</div>
 <div class="line">                <span class="stringliteral">&#39;status&#39;</span> =&gt; $this-&gt;parserTools-&gt;parseStatus( $data[<span class="stringliteral">&#39;status&#39;</span>] ),</div>
 <div class="line">                <span class="stringliteral">&#39;identifier&#39;</span> =&gt; $data[<span class="stringliteral">&#39;identifier&#39;</span>],</div>
-<div class="line">                <span class="stringliteral">&#39;names&#39;</span> =&gt; $this-&gt;parserTools-&gt;parseTranslatableList( $data[<span class="stringliteral">&#39;names&#39;</span>] ),</div>
-<div class="line">                <span class="stringliteral">&#39;descriptions&#39;</span> =&gt; $this-&gt;parserTools-&gt;parseTranslatableList( $data[<span class="stringliteral">&#39;descriptions&#39;</span>] ),</div>
+<div class="line">                <span class="stringliteral">&#39;names&#39;</span> =&gt; isset( $data[<span class="stringliteral">&#39;names&#39;</span>] ) ? $this-&gt;parserTools-&gt;parseTranslatableList( $data[<span class="stringliteral">&#39;names&#39;</span>] ) : null,</div>
+<div class="line">                <span class="stringliteral">&#39;descriptions&#39;</span> =&gt; isset( $data[<span class="stringliteral">&#39;descriptions&#39;</span>] ) ? $this-&gt;parserTools-&gt;parseTranslatableList( $data[<span class="stringliteral">&#39;descriptions&#39;</span>] ) : null,</div>
 <div class="line">                <span class="stringliteral">&#39;creationDate&#39;</span> =&gt; new \DateTime( $data[<span class="stringliteral">&#39;creationDate&#39;</span>] ),</div>
 <div class="line">                <span class="stringliteral">&#39;modificationDate&#39;</span> =&gt; new \DateTime( $data[<span class="stringliteral">&#39;modificationDate&#39;</span>] ),</div>
 <div class="line">                <span class="stringliteral">&#39;creatorId&#39;</span> =&gt; <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html#aad62c495f1b0eb099eda31c13498df1c">$creatorId</a>,</div>
@@ -256,6 +256,13 @@ Protected Attributes</h2></td></tr>
 <div class="line">                <span class="stringliteral">&#39;fieldDefinitionListReference&#39;</span> =&gt; $fieldDefinitionListReference,</div>
 <div class="line">            )</div>
 <div class="line">        );</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> ( $contentType-&gt;status === Values\ContentType\<a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html#a03156296503603fe4fbd76b46cf85c23">ContentType::STATUS_DRAFT</a> )</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="keyword">new</span> Values\ContentType\ContentTypeDraft( $contentType );</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">return</span> $contentType;</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 <p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -336,7 +343,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html">REST</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client.html">Client</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input.html">Input</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser.html">Parser</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentType.html">ContentType</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:03:02 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:51:00 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

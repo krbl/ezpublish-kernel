@@ -226,59 +226,63 @@ $(document).ready(function(){initNavTree('XmlText_2XmlTextStorage_2Gateway_2Lega
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keyword">private</span> <span class="keyword">function</span> getLinksId( array $linksUrls )</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    {</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        $q = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a51f49e309bcba2b8c84bfc4057b52409">getConnection</a>()-&gt;createSelectQuery();</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        $q</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            -&gt;select( <span class="stringliteral">&quot;id&quot;</span>, <span class="stringliteral">&quot;url&quot;</span> )</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            -&gt;from( UrlStorage::URL_TABLE )</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            -&gt;where( $q-&gt;expr-&gt;in( <span class="stringliteral">&#39;url&#39;</span>, $linksUrls ) );</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        $statement = $q-&gt;prepare();</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        $statement-&gt;execute();</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        $linkIds = array();</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">foreach</span> ( $statement-&gt;fetchAll( \PDO::FETCH_ASSOC ) as $row )</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            $linkIds[$row[<span class="stringliteral">&#39;url&#39;</span>]] = $row[<span class="stringliteral">&#39;id&#39;</span>];</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        }</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">return</span> $linkIds;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keyword">private</span> <span class="keyword">function</span> insertLink( $url )</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    {</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        $time = time();</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a> = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a51f49e309bcba2b8c84bfc4057b52409">getConnection</a>();</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        $q = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a>-&gt;createInsertQuery();</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        $q-&gt;insertInto(</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a>-&gt;quoteTable( UrlStorage::URL_TABLE )</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;created&quot;</span> ),</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            $q-&gt;bindValue( $time, null, \PDO::PARAM_INT )</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;modified&quot;</span> ),</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            $q-&gt;bindValue( $time, null, \PDO::PARAM_INT )</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;original_url_md5&quot;</span> ),</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            $q-&gt;bindValue( md5( $url ) )</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;url&quot;</span> ),</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            $q-&gt;bindValue( $url )</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        );</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        $q-&gt;prepare()-&gt;execute();</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a>-&gt;lastInsertId(</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a>-&gt;getSequenceName( self::URL_TABLE, <span class="stringliteral">&quot;id&quot;</span> )</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        );</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    }</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        $linkIds = array();</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">if</span> ( !empty( $linksUrls ) )</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            $q = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a51f49e309bcba2b8c84bfc4057b52409">getConnection</a>()-&gt;createSelectQuery();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            $q</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                -&gt;select( <span class="stringliteral">&quot;id&quot;</span>, <span class="stringliteral">&quot;url&quot;</span> )</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                -&gt;from( UrlStorage::URL_TABLE )</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                -&gt;where( $q-&gt;expr-&gt;in( <span class="stringliteral">&#39;url&#39;</span>, $linksUrls ) );</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            $statement = $q-&gt;prepare();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            $statement-&gt;execute();</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keywordflow">foreach</span> ( $statement-&gt;fetchAll( \PDO::FETCH_ASSOC ) as $row )</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                $linkIds[$row[<span class="stringliteral">&#39;url&#39;</span>]] = $row[<span class="stringliteral">&#39;id&#39;</span>];</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">return</span> $linkIds;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keyword">private</span> <span class="keyword">function</span> insertLink( $url )</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        $time = time();</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a> = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a51f49e309bcba2b8c84bfc4057b52409">getConnection</a>();</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        $q = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a>-&gt;createInsertQuery();</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        $q-&gt;insertInto(</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a>-&gt;quoteTable( UrlStorage::URL_TABLE )</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;created&quot;</span> ),</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            $q-&gt;bindValue( $time, null, \PDO::PARAM_INT )</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;modified&quot;</span> ),</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            $q-&gt;bindValue( $time, null, \PDO::PARAM_INT )</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;original_url_md5&quot;</span> ),</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            $q-&gt;bindValue( md5( $url ) )</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        )-&gt;<span class="keyword">set</span>(</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a>-&gt;quoteColumn( <span class="stringliteral">&quot;url&quot;</span> ),</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            $q-&gt;bindValue( $url )</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        );</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        $q-&gt;prepare()-&gt;execute();</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a>-&gt;lastInsertId(</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1FieldType_1_1XmlText_1_1XmlTextStorage_1_1Gateway_1_1LegacyStorage.html#a13cf731893dbcf56ff8e090abb3f0bef">$dbHandler</a>-&gt;getSequenceName( self::URL_TABLE, <span class="stringliteral">&quot;id&quot;</span> )</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        );</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_429826c28e0afa35fa370fabe902bc82.html">FieldType</a></li><li class="navelem"><a class="el" href="dir_6c354acfef7de2c09b1063091e45f0f2.html">XmlText</a></li><li class="navelem"><a class="el" href="dir_82c0c7dd0ff320dc094927d30f9ce4ed.html">XmlTextStorage</a></li><li class="navelem"><a class="el" href="dir_34ff165319d905576e33ebf97b58d361.html">Gateway</a></li><li class="navelem"><a class="el" href="XmlText_2XmlTextStorage_2Gateway_2LegacyStorage_8php.html">LegacyStorage.php</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:49 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:48 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

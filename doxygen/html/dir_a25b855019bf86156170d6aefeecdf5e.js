@@ -3,6 +3,9 @@ var dir_a25b855019bf86156170d6aefeecdf5e =
     [ "AddFieldTypePass.php", "AddFieldTypePass_8php.html", [
       [ "AddFieldTypePass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1AddFieldTypePass.html", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1AddFieldTypePass" ]
     ] ],
+    [ "BlockViewPass.php", "BlockViewPass_8php.html", [
+      [ "BlockViewPass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1BlockViewPass.html", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1BlockViewPass" ]
+    ] ],
     [ "ChainConfigResolverPass.php", "ChainConfigResolverPass_8php.html", [
       [ "ChainConfigResolverPass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1ChainConfigResolverPass.html", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1ChainConfigResolverPass" ]
     ] ],
@@ -14,6 +17,9 @@ var dir_a25b855019bf86156170d6aefeecdf5e =
     ] ],
     [ "LegacyStorageEnginePass.php", "LegacyStorageEnginePass_8php.html", [
       [ "LegacyStorageEnginePass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1LegacyStorageEnginePass.html", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1LegacyStorageEnginePass" ]
+    ] ],
+    [ "LocalePass.php", "LocalePass_8php.html", [
+      [ "LocalePass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1LocalePass.html", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1LocalePass" ]
     ] ],
     [ "LocationViewPass.php", "LocationViewPass_8php.html", [
       [ "LocationViewPass", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1LocationViewPass.html", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1LocationViewPass" ]

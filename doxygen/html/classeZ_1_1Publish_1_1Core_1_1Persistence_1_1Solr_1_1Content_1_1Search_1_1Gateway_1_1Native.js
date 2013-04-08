@@ -2,6 +2,7 @@ var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Ga
 [
     [ "__construct", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a8198694c623ddbc91368bc32a8b21223", null ],
     [ "createUpdate", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a0a3e205774c769e4c9b2f9f9b1d30d7c", null ],
+    [ "deleteContent", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a6ece36d517da838bb4ac1df7f989a29e", null ],
     [ "findContent", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a9a6a183a01242fcad540850f96c0bb13", null ],
     [ "indexContent", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#affb113c6bddd9c135c200e20edd09947", null ],
     [ "purgeIndex", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1Gateway_1_1Native.html#a4b0421b10ec77ae0211b604ee79b919c", null ],

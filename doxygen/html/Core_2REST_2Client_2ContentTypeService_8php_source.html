@@ -115,224 +115,559 @@ $(document).ready(function(){initNavTree('Core_2REST_2Client_2ContentTypeService
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeDraft.html">eZ\Publish\API\Repository\Values\ContentType\ContentTypeDraft</a>;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1User.html">eZ\Publish\API\Repository\Values\User\User</a>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeUpdateStruct.html">eZ\Publish\API\Repository\Values\ContentType\ContentTypeUpdateStruct</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeCreateStruct.html">eZ\Publish\API\Repository\Values\ContentType\ContentTypeCreateStruct</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroup.html">eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroupUpdateStruct.html">eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupUpdateStruct</a>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroupCreateStruct.html">eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupCreateStruct</a>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1UrlHandler.html">eZ\Publish\Core\REST\Common\UrlHandler</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html">eZ\Publish\Core\REST\Common\Input\Dispatcher</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Visitor.html">eZ\Publish\Core\REST\Common\Output\Visitor</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">eZ\Publish\Core\REST\Common\Message</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;use eZ\Publish\Core\REST\Client\Values;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html">ContentTypeService</a> <span class="keyword">implements</span> APIContentTypeService, <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Sessionable.html">Sessionable</a></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">private</span> $contentService;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">private</span> $client;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">private</span> $inputDispatcher;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">private</span> $outputVisitor;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">private</span> $urlHandler;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#aa35737cf5b30551452f08db1aaf8b673">   69</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#aa35737cf5b30551452f08db1aaf8b673">__construct</a>( <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient.html">HttpClient</a> $client, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html">Dispatcher</a> $inputDispatcher, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Visitor.html">Visitor</a> $outputVisitor, <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1UrlHandler.html">UrlHandler</a> $urlHandler )</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        $this-&gt;client          = $client;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        $this-&gt;inputDispatcher = $inputDispatcher;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        $this-&gt;outputVisitor   = $outputVisitor;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        $this-&gt;urlHandler      = $urlHandler;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a8ba363108794f79a6c2be661f2ec54a0">   88</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a8ba363108794f79a6c2be661f2ec54a0">setSession</a>( $id )</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;outputVisitor instanceof <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Sessionable.html">Sessionable</a> )</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            $this-&gt;outputVisitor-&gt;setSession( $id );</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a7cd0253f1bd19bd0e868f8497f6a0c49">  106</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a7cd0253f1bd19bd0e868f8497f6a0c49">createContentTypeGroup</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroupCreateStruct.html">ContentTypeGroupCreateStruct</a>  $contentTypeGroupCreateStruct )</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ac7d9bb68ab674b650d8363de82bab2ab">  120</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ac7d9bb68ab674b650d8363de82bab2ab">loadContentTypeGroup</a>( $contentTypeGroupId )</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#afd95eb9c65d89320d69412226d5f57c4">  134</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#afd95eb9c65d89320d69412226d5f57c4">loadContentTypeGroupByIdentifier</a>( $contentTypeGroupIdentifier )</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    {</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a7b6783555098b1bf3bc890279dab7079">  144</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a7b6783555098b1bf3bc890279dab7079">loadContentTypeGroups</a>()</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a81a8f01c19e66c5cf3292355b199eb9b">  158</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a81a8f01c19e66c5cf3292355b199eb9b">updateContentTypeGroup</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroup.html">ContentTypeGroup</a> $contentTypeGroup, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroupUpdateStruct.html">ContentTypeGroupUpdateStruct</a> $contentTypeGroupUpdateStruct )</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a049216aac9701b7a544566c3f21ffb8b">  173</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a049216aac9701b7a544566c3f21ffb8b">deleteContentTypeGroup</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroup.html">ContentTypeGroup</a> $contentTypeGroup )</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    {</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00191"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a8373f698c0432639ee6b90ef32bf5330">  191</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a8373f698c0432639ee6b90ef32bf5330">createContentType</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeCreateStruct.html">ContentTypeCreateStruct</a> $contentTypeCreateStruct, array $contentTypeGroups )</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    {</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a52d4c1d16cd99f06543de0639c048e46">  205</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a52d4c1d16cd99f06543de0639c048e46">loadContentTypeDraft</a>( $contentTypeId )</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    }</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a2416ffa8ad44df538921850dffa84e0a">  221</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a2416ffa8ad44df538921850dffa84e0a">updateContentTypeDraft</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeDraft.html">ContentTypeDraft</a> $contentTypeDraft, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeUpdateStruct.html">ContentTypeUpdateStruct</a> $contentTypeUpdateStruct )</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    {</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    }</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#af6cf9ec4613dd1acda34d5ecaabab11d">  237</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#af6cf9ec4613dd1acda34d5ecaabab11d">addFieldDefinition</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeDraft.html">ContentTypeDraft</a> $contentTypeDraft, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionCreateStruct.html">FieldDefinitionCreateStruct</a> $fieldDefinitionCreateStruct )</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    {</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00251"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a3ab84ffc798459f39291873635a26e92">  251</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a3ab84ffc798459f39291873635a26e92">removeFieldDefinition</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeDraft.html">ContentTypeDraft</a> $contentTypeDraft, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html">FieldDefinition</a> $fieldDefinition )</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    {</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
-<div class="line"><a name="l00267"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a897a75ab458ac6680a2256c2d9ecfb68">  267</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a897a75ab458ac6680a2256c2d9ecfb68">updateFieldDefinition</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeDraft.html">ContentTypeDraft</a> $contentTypeDraft, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html">FieldDefinition</a> $fieldDefinition, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html">FieldDefinitionUpdateStruct</a> $fieldDefinitionUpdateStruct )</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    {</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    }</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
-<div class="line"><a name="l00282"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#aeb0bddd9040b88b2324f096f8a5392c5">  282</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#aeb0bddd9040b88b2324f096f8a5392c5">publishContentTypeDraft</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeDraft.html">ContentTypeDraft</a> $contentTypeDraft )</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    {</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    }</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
-<div class="line"><a name="l00296"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a2895fdf49779b2f58d5d28824aaaa926">  296</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a2895fdf49779b2f58d5d28824aaaa926">loadContentType</a>( $contentTypeId )</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            <span class="stringliteral">&#39;GET&#39;</span>,</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            $contentTypeId,</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;ContentType&#39;</span> ) )</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            )</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        );</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keywordflow">return</span> $this-&gt;inputDispatcher-&gt;parse( $response );</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeCreateStruct.html">eZ\Publish\API\Repository\Values\ContentType\ContentTypeCreateStruct</a> as APIContentTypeCreateStruct;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentTypeCreateStruct.html">eZ\Publish\Core\REST\Client\Values\ContentType\ContentTypeCreateStruct</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html">eZ\Publish\Core\REST\Client\Values\ContentType\ContentType</a> as RestContentType;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroup.html">eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroup</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroupUpdateStruct.html">eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupUpdateStruct</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroupCreateStruct.html">eZ\Publish\API\Repository\Values\ContentType\ContentTypeGroupCreateStruct</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1NotFoundException.html">eZ\Publish\Core\REST\Common\Exceptions\NotFoundException</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;use <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1UrlHandler.html">eZ\Publish\Core\REST\Common\UrlHandler</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html">eZ\Publish\Core\REST\Common\Input\Dispatcher</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Visitor.html">eZ\Publish\Core\REST\Common\Output\Visitor</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">eZ\Publish\Core\REST\Common\Message</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;use eZ\Publish\Core\REST\Client\Values;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Exceptions_1_1InvalidArgumentValue.html">eZ\Publish\Core\REST\Client\Exceptions\InvalidArgumentValue</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1InvalidArgumentException.html">eZ\Publish\Core\REST\Common\Exceptions\InvalidArgumentException</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1ForbiddenException.html">eZ\Publish\Core\REST\Common\Exceptions\ForbiddenException</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Exceptions_1_1BadStateException.html">eZ\Publish\Core\REST\Client\Exceptions\BadStateException</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html">   44</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html">ContentTypeService</a> <span class="keyword">implements</span> APIContentTypeService, <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Sessionable.html">Sessionable</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">private</span> $client;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">private</span> $inputDispatcher;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">private</span> $outputVisitor;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">private</span> $urlHandler;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#aa35737cf5b30551452f08db1aaf8b673">   72</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#aa35737cf5b30551452f08db1aaf8b673">__construct</a>( <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1HttpClient.html">HttpClient</a> $client, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Input_1_1Dispatcher.html">Dispatcher</a> $inputDispatcher, <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Output_1_1Visitor.html">Visitor</a> $outputVisitor, <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1UrlHandler.html">UrlHandler</a> $urlHandler )</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        $this-&gt;client          = $client;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        $this-&gt;inputDispatcher = $inputDispatcher;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        $this-&gt;outputVisitor   = $outputVisitor;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        $this-&gt;urlHandler      = $urlHandler;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a8ba363108794f79a6c2be661f2ec54a0">   91</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a8ba363108794f79a6c2be661f2ec54a0">setSession</a>( $id )</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;outputVisitor instanceof <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Sessionable.html">Sessionable</a> )</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            $this-&gt;outputVisitor-&gt;setSession( $id );</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a7cd0253f1bd19bd0e868f8497f6a0c49">  109</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a7cd0253f1bd19bd0e868f8497f6a0c49">createContentTypeGroup</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroupCreateStruct.html">ContentTypeGroupCreateStruct</a> $contentTypeGroupCreateStruct )</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        $inputMessage = $this-&gt;outputVisitor-&gt;visit( $contentTypeGroupCreateStruct );</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        $inputMessage-&gt;headers[<span class="stringliteral">&#39;Accept&#39;</span>] = $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;ContentTypeGroup&#39;</span> );</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        $result = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="stringliteral">&#39;POST&#39;</span>,</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            $this-&gt;urlHandler-&gt;generate( <span class="stringliteral">&#39;typegroups&#39;</span> ),</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            $inputMessage</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        );</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">return</span> $this-&gt;inputDispatcher-&gt;parse( $result );</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1ForbiddenException.html">ForbiddenException</a> $e )</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1InvalidArgumentException.html">InvalidArgumentException</a>( $e-&gt;getMessage(), $e-&gt;getCode() );</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ac7d9bb68ab674b650d8363de82bab2ab">  139</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ac7d9bb68ab674b650d8363de82bab2ab">loadContentTypeGroup</a>( $contentTypeGroupId )</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="stringliteral">&#39;GET&#39;</span>,</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            $contentTypeGroupId,</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;Section&#39;</span> ) )</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            )</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        );</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">return</span> $this-&gt;inputDispatcher-&gt;parse( $response );</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#afd95eb9c65d89320d69412226d5f57c4">  160</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#afd95eb9c65d89320d69412226d5f57c4">loadContentTypeGroupByIdentifier</a>( $contentTypeGroupIdentifier )</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="stringliteral">&#39;GET&#39;</span>,</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            $this-&gt;urlHandler-&gt;generate( <span class="stringliteral">&#39;typegroupByIdentifier&#39;</span>, array( <span class="stringliteral">&quot;typegroup&quot;</span> =&gt; $contentTypeGroupIdentifier ) ),</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;ContentTypeGroupList&#39;</span> ) )</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            )</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        );</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">if</span> ( $response-&gt;statusCode == 307 )</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                <span class="stringliteral">&#39;GET&#39;</span>,</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                $response-&gt;headers[<span class="stringliteral">&#39;Location&#39;</span>],</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                    array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;ContentTypeGroup&#39;</span> ) )</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                )</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            );</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">return</span> $this-&gt;inputDispatcher-&gt;parse( $response );</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a7b6783555098b1bf3bc890279dab7079">  189</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a7b6783555098b1bf3bc890279dab7079">loadContentTypeGroups</a>()</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="stringliteral">&#39;GET&#39;</span>,</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            $this-&gt;urlHandler-&gt;generate( <span class="stringliteral">&#39;typegroups&#39;</span> ),</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;ContentTypeGroupList&#39;</span> ) )</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            )</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        );</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">return</span> $this-&gt;inputDispatcher-&gt;parse( $response );</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a81a8f01c19e66c5cf3292355b199eb9b">  210</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a81a8f01c19e66c5cf3292355b199eb9b">updateContentTypeGroup</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroup.html">ContentTypeGroup</a> $contentTypeGroup, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroupUpdateStruct.html">ContentTypeGroupUpdateStruct</a> $contentTypeGroupUpdateStruct )</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        $inputMessage = $this-&gt;outputVisitor-&gt;visit( $contentTypeGroupUpdateStruct );</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        $inputMessage-&gt;headers[<span class="stringliteral">&#39;Accept&#39;</span>] = $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;ContentTypeGroup&#39;</span> );</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        $inputMessage-&gt;headers[<span class="stringliteral">&#39;X-HTTP-Method-Override&#39;</span>] = <span class="stringliteral">&#39;PATCH&#39;</span>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="comment">// Should originally be PATCH, but PHP&#39;s shiny new internal web server</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="comment">// dies with it.</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        $result = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="stringliteral">&#39;POST&#39;</span>,</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            $contentTypeGroup-&gt;id,</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            $inputMessage</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        );</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            <span class="keywordflow">return</span> $this-&gt;inputDispatcher-&gt;parse( $result );</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1ForbiddenException.html">ForbiddenException</a> $e )</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1InvalidArgumentException.html">InvalidArgumentException</a>( $e-&gt;getMessage(), $e-&gt;getCode() );</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a049216aac9701b7a544566c3f21ffb8b">  244</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a049216aac9701b7a544566c3f21ffb8b">deleteContentTypeGroup</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroup.html">ContentTypeGroup</a> $contentTypeGroup )</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="stringliteral">&#39;DELETE&#39;</span>,</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            $contentTypeGroup-&gt;id,</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                <span class="comment">// @todo: What media-type should we set here? Actually, it should be</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                <span class="comment">// all expected exceptions + none? Or is &quot;Section&quot; correct,</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                <span class="comment">// since this is what is to be expected by the resource</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                <span class="comment">// identified by the URL?</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;ContentTypeGroup&#39;</span> ) )</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            )</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        );</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordflow">if</span> ( !empty( $response-&gt;body ) )</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                <span class="keywordflow">return</span> $this-&gt;inputDispatcher-&gt;parse( $response );</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            }</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1ForbiddenException.html">ForbiddenException</a> $e )</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            {</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1InvalidArgumentException.html">InvalidArgumentException</a>( $e-&gt;getMessage(), $e-&gt;getCode() );</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        }</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    }</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html#af891ef06fb794d3ea1528c93d57d1ea1">createContentType</a>( APIContentTypeCreateStruct $contentTypeCreateStruct, array $contentTypeGroups )</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        $inputMessage = $this-&gt;outputVisitor-&gt;visit( $contentTypeCreateStruct );</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        $inputMessage-&gt;headers[<span class="stringliteral">&#39;Accept&#39;</span>] = $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;ContentType&#39;</span> );</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordflow">if</span> ( empty( $contentTypeGroups ) )</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1InvalidArgumentException.html">InvalidArgumentException</a>(</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                <span class="stringliteral">&quot;Argument &#39;\$contentTypeGroups&#39; is invalid: Argument must contain at least one ContentTypeGroup&quot;</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            );</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        }</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        $firstGroup = array_pop( $contentTypeGroups );</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="stringliteral">&#39;POST&#39;</span>,</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            $this-&gt;urlHandler-&gt;generate(</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                <span class="stringliteral">&quot;grouptypes&quot;</span>,</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&quot;typegroup&quot;</span>, $firstGroup-&gt;id )</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            ),</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            $inputMessage</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        );</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
-<div class="line"><a name="l00320"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a698ce1020307d0ec7f3c6b9a6427a6a1">  320</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a698ce1020307d0ec7f3c6b9a6427a6a1">loadFieldDefinition</a>( $fieldDefinitionId )</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    {</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <span class="stringliteral">&#39;GET&#39;</span>,</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            $fieldDefinitionId,</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;FieldDefinition&#39;</span> ) )</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            )</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        );</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="keywordflow">return</span> $this-&gt;inputDispatcher-&gt;parse( $response );</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    }</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div>
-<div class="line"><a name="l00342"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#afa7620a7f26cdc0d73241fdca4e3f733">  342</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#afa7620a7f26cdc0d73241fdca4e3f733">loadFieldDefinitionList</a>( $fieldDefinitionListReference )</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    {</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            <span class="stringliteral">&#39;GET&#39;</span>,</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            $fieldDefinitionListReference,</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;FieldDefinitionList&#39;</span> ) )</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            )</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        );</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="keywordflow">return</span> $this-&gt;inputDispatcher-&gt;parse( $response );</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    }</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
-<div class="line"><a name="l00363"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ab53b9b766657b49a35d8e2309a90fe3e">  363</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ab53b9b766657b49a35d8e2309a90fe3e">loadContentTypeByIdentifier</a>( $identifier )</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    {</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    }</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
-<div class="line"><a name="l00377"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#adc6b681999b51b1490a61cd4dce237e9">  377</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#adc6b681999b51b1490a61cd4dce237e9">loadContentTypeByRemoteId</a>( $remoteId )</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    {</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    }</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
-<div class="line"><a name="l00389"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ac09a6732f7aa3078a0e1d25d8f12dbcc">  389</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ac09a6732f7aa3078a0e1d25d8f12dbcc">loadContentTypes</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroup.html">ContentTypeGroup</a> $contentTypeGroup )</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    {</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    }</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;</div>
-<div class="line"><a name="l00407"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ac6ffd46b0ce68ac6c9c84677344eff23">  407</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ac6ffd46b0ce68ac6c9c84677344eff23">createContentTypeDraft</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">ContentType</a> $contentType )</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    {</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    }</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
-<div class="line"><a name="l00422"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a045fe64e43ebc8c87d065fcccefc0a26">  422</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a045fe64e43ebc8c87d065fcccefc0a26">deleteContentType</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">ContentType</a> $contentType )</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    {</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    }</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;</div>
-<div class="line"><a name="l00440"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a3f136f91121116eea1067ab6ff6c3383">  440</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a3f136f91121116eea1067ab6ff6c3383">copyContentType</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">ContentType</a> $contentType, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1User.html">User</a> $user = null )</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    {</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    }</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;</div>
-<div class="line"><a name="l00454"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a3acb6260a9f1830e5ef9c1bac4bf5798">  454</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a3acb6260a9f1830e5ef9c1bac4bf5798">assignContentTypeGroup</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">ContentType</a> $contentType, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroup.html">ContentTypeGroup</a> $contentTypeGroup )</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    {</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    }</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;</div>
-<div class="line"><a name="l00469"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#af977f0b87cc2fd509be6860bf9f2dc7f">  469</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#af977f0b87cc2fd509be6860bf9f2dc7f">unassignContentTypeGroup</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">ContentType</a> $contentType, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroup.html">ContentTypeGroup</a> $contentTypeGroup )</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    {</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    }</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;</div>
-<div class="line"><a name="l00481"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a64b0fd7014f85313d9dea9cebc2c93e3">  481</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a64b0fd7014f85313d9dea9cebc2c93e3">newContentTypeGroupCreateStruct</a>( $identifier )</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    {</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;    }</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;</div>
-<div class="line"><a name="l00493"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a437f60952626578545fca2aadb12b60a">  493</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a437f60952626578545fca2aadb12b60a">newContentTypeCreateStruct</a>( $identifier )</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    {</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    }</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;</div>
-<div class="line"><a name="l00503"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a4369ed6f28030a305977da5a3c3f80c3">  503</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a4369ed6f28030a305977da5a3c3f80c3">newContentTypeUpdateStruct</a>()</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    {</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    }</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;</div>
-<div class="line"><a name="l00513"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a537a1dd61db49a965f126cd13d5fffe6">  513</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a537a1dd61db49a965f126cd13d5fffe6">newContentTypeGroupUpdateStruct</a>()</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    {</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            $contentType = $this-&gt;inputDispatcher-&gt;parse( $response );</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordflow">catch</span> ( ForbiddenException $e )</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentException( $e-&gt;getMessage(), $e-&gt;getCode() );</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordflow">foreach</span> ( $contentTypeGroups as $contentTypeGroup )</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        {</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a3acb6260a9f1830e5ef9c1bac4bf5798">assignContentTypeGroup</a>( $contentType, $contentTypeGroup );</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        }</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keywordflow">return</span> $this-&gt;completeContentType( $contentType );</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> completeContentType( ContentType $contentType )</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    {</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="comment">// TODO: currently no way to fetch groups of a type draft</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="keywordflow">if</span> ( $contentType instanceof ContentTypeDraft )</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        {</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            <span class="keywordflow">return</span> $contentType;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            <span class="stringliteral">&quot;GET&quot;</span>,</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            $this-&gt;urlHandler-&gt;generate(</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                <span class="stringliteral">&quot;groupsOfType&quot;</span>,</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&quot;type&quot;</span>, $contentType-&gt;id )</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            ),</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            <span class="keyword">new</span> Message(</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;ContentTypeGroupRefList&#39;</span> ) )</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            )</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        );</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        $referenceList = $this-&gt;inputDispatcher-&gt;parse( $response );</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> RestContentType(</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            $this,</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            array(</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                <span class="stringliteral">&quot;id&quot;</span> =&gt; $contentType-&gt;id,</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                <span class="stringliteral">&quot;remoteId&quot;</span> =&gt; $contentType-&gt;remoteId,</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                <span class="stringliteral">&quot;identifier&quot;</span> =&gt; $contentType-&gt;identifier,</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                <span class="stringliteral">&quot;creatorId&quot;</span> =&gt; $contentType-&gt;creatorId,</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                <span class="stringliteral">&quot;modifierId&quot;</span> =&gt; $contentType-&gt;modifierId,</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                <span class="stringliteral">&quot;creationDate&quot;</span> =&gt; $contentType-&gt;creationDate,</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                <span class="stringliteral">&quot;modificationDate&quot;</span> =&gt; $contentType-&gt;modificationDate,</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                <span class="stringliteral">&quot;defaultSortField&quot;</span> =&gt; $contentType-&gt;defaultSortField,</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                <span class="stringliteral">&quot;defaultSortOrder&quot;</span> =&gt; $contentType-&gt;defaultSortOrder,</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                <span class="stringliteral">&quot;defaultAlwaysAvailable&quot;</span> =&gt; $contentType-&gt;defaultAlwaysAvailable,</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                <span class="stringliteral">&quot;names&quot;</span> =&gt; $contentType-&gt;names,</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                <span class="stringliteral">&quot;descriptions&quot;</span> =&gt; $contentType-&gt;descriptions,</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                <span class="stringliteral">&quot;isContainer&quot;</span> =&gt; $contentType-&gt;isContainer,</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                <span class="stringliteral">&quot;mainLanguageCode&quot;</span> =&gt; $contentType-&gt;mainLanguageCode,</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                <span class="stringliteral">&quot;nameSchema&quot;</span> =&gt; $contentType-&gt;nameSchema,</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                <span class="stringliteral">&quot;urlAliasSchema&quot;</span> =&gt; $contentType-&gt;urlAliasSchema,</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                <span class="stringliteral">&quot;status&quot;</span> =&gt; $contentType-&gt;status,</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                <span class="stringliteral">&quot;fieldDefinitionListReference&quot;</span> =&gt; $contentType-&gt;fieldDefinitionListReference,</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                <span class="stringliteral">&quot;contentTypeGroupListReference&quot;</span> =&gt; $referenceList-&gt;listReference,</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                <span class="comment">// dynamic</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                <span class="comment">//&quot;fieldDefinitions&quot; =&gt; $contentType-&gt;fieldDefinitions,</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                <span class="comment">//&quot;contentTypeGroups&quot; =&gt; $contentType-&gt;contentTypeGroups,</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            )</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        );</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    }</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;</div>
+<div class="line"><a name="l00394"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#aa0b20bfb7d0e0ec0f38e04d815cbd179">  394</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#aa0b20bfb7d0e0ec0f38e04d815cbd179">isErrorResponse</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a> $response )</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    {</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        <span class="keywordflow">return</span> (</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            strpos( $response-&gt;headers[<span class="stringliteral">&#39;Content-Type&#39;</span>], <span class="stringliteral">&#39;application/vnd.ez.api.ErrorMessage&#39;</span> ) === 0</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        );</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    }</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
+<div class="line"><a name="l00410"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a52d4c1d16cd99f06543de0639c048e46">  410</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a52d4c1d16cd99f06543de0639c048e46">loadContentTypeDraft</a>( $contentTypeId )</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    {</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            <span class="stringliteral">&#39;GET&#39;</span>,</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            $contentTypeId,</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;ContentType&#39;</span> ) )</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            )</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        );</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <span class="keywordflow">return</span> $this-&gt;inputDispatcher-&gt;parse( $response );</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    }</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;</div>
+<div class="line"><a name="l00433"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a2416ffa8ad44df538921850dffa84e0a">  433</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a2416ffa8ad44df538921850dffa84e0a">updateContentTypeDraft</a>( ContentTypeDraft $contentTypeDraft, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeUpdateStruct.html">ContentTypeUpdateStruct</a> $contentTypeUpdateStruct )</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    {</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    }</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;</div>
+<div class="line"><a name="l00449"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#af6cf9ec4613dd1acda34d5ecaabab11d">  449</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#af6cf9ec4613dd1acda34d5ecaabab11d">addFieldDefinition</a>( ContentTypeDraft $contentTypeDraft, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionCreateStruct.html">FieldDefinitionCreateStruct</a> $fieldDefinitionCreateStruct )</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    {</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    }</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;</div>
+<div class="line"><a name="l00463"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a3ab84ffc798459f39291873635a26e92">  463</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a3ab84ffc798459f39291873635a26e92">removeFieldDefinition</a>( ContentTypeDraft $contentTypeDraft, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html">FieldDefinition</a> $fieldDefinition )</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    {</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    }</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;</div>
+<div class="line"><a name="l00479"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a897a75ab458ac6680a2256c2d9ecfb68">  479</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a897a75ab458ac6680a2256c2d9ecfb68">updateFieldDefinition</a>( ContentTypeDraft $contentTypeDraft, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinition.html">FieldDefinition</a> $fieldDefinition, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html">FieldDefinitionUpdateStruct</a> $fieldDefinitionUpdateStruct )</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    {</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    }</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;</div>
+<div class="line"><a name="l00494"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#aeb0bddd9040b88b2324f096f8a5392c5">  494</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#aeb0bddd9040b88b2324f096f8a5392c5">publishContentTypeDraft</a>( ContentTypeDraft $contentTypeDraft )</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    {</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    }</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;</div>
+<div class="line"><a name="l00508"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a2895fdf49779b2f58d5d28824aaaa926">  508</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a2895fdf49779b2f58d5d28824aaaa926">loadContentType</a>( $contentTypeId )</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    {</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;            <span class="stringliteral">&#39;GET&#39;</span>,</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;            $contentTypeId,</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;ContentType&#39;</span> ) )</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;            )</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        );</div>
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;</div>
-<div class="line"><a name="l00526"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a981440eb9a281c1b7479e621bbb177b5">  526</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a981440eb9a281c1b7479e621bbb177b5">newFieldDefinitionCreateStruct</a>( $identifier, $fieldTypeIdentifier )</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    {</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    }</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;</div>
-<div class="line"><a name="l00536"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ad826cb2b6f7f074a079cd613186f64bf">  536</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ad826cb2b6f7f074a079cd613186f64bf">newFieldDefinitionUpdateStruct</a>()</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    {</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        <span class="keywordflow">throw</span> new \Exception( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    }</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;}</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        <span class="keywordflow">return</span> $this-&gt;completeContentType( $this-&gt;inputDispatcher-&gt;parse( $response ) );</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    }</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;</div>
+<div class="line"><a name="l00533"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a698ce1020307d0ec7f3c6b9a6427a6a1">  533</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a698ce1020307d0ec7f3c6b9a6427a6a1">loadFieldDefinition</a>( $fieldDefinitionId )</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    {</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;            <span class="stringliteral">&#39;GET&#39;</span>,</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;            $fieldDefinitionId,</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;FieldDefinition&#39;</span> ) )</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;            )</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;        );</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;        <span class="keywordflow">return</span> $this-&gt;inputDispatcher-&gt;parse( $response );</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    }</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;</div>
+<div class="line"><a name="l00555"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#afa7620a7f26cdc0d73241fdca4e3f733">  555</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#afa7620a7f26cdc0d73241fdca4e3f733">loadFieldDefinitionList</a>( $fieldDefinitionListReference )</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    {</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;            <span class="stringliteral">&#39;GET&#39;</span>,</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;            $fieldDefinitionListReference,</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;FieldDefinitionList&#39;</span> ) )</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;            )</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;        );</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;        <span class="keywordflow">return</span> $this-&gt;inputDispatcher-&gt;parse( $response );</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    }</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;</div>
+<div class="line"><a name="l00577"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a78dafe0a28d81d7f34cba83d1bec6c6a">  577</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a78dafe0a28d81d7f34cba83d1bec6c6a">loadContentTypeGroupList</a>( $contentTypeGroupListReference )</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    {</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;            <span class="stringliteral">&#39;GET&#39;</span>,</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;            $contentTypeGroupListReference,</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;ContentTypeGroupRefList&#39;</span> ) )</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;            )</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;        );</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;        <span class="keywordflow">return</span> $this-&gt;inputDispatcher-&gt;parse( $response );</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    }</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;</div>
+<div class="line"><a name="l00598"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ab53b9b766657b49a35d8e2309a90fe3e">  598</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ab53b9b766657b49a35d8e2309a90fe3e">loadContentTypeByIdentifier</a>( $identifier )</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;    {</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;            <span class="stringliteral">&#39;GET&#39;</span>,</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;            $this-&gt;urlHandler-&gt;generate( <span class="stringliteral">&quot;typeByIdentifier&quot;</span>, array( <span class="stringliteral">&quot;type&quot;</span> =&gt; $identifier ) ),</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;ContentTypeList&#39;</span> ) )</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;            )</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;        );</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        $contentTypes = $this-&gt;inputDispatcher-&gt;parse( $response );</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;        <span class="keywordflow">return</span> $this-&gt;completeContentType( reset( $contentTypes ) );</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;    }</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;</div>
+<div class="line"><a name="l00620"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#adc6b681999b51b1490a61cd4dce237e9">  620</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#adc6b681999b51b1490a61cd4dce237e9">loadContentTypeByRemoteId</a>( $remoteId )</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;    {</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;            <span class="stringliteral">&#39;GET&#39;</span>,</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;            $this-&gt;urlHandler-&gt;generate( <span class="stringliteral">&quot;typeByRemoteId&quot;</span>, array( <span class="stringliteral">&quot;type&quot;</span> =&gt; $remoteId ) ),</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;ContentTypeList&#39;</span> ) )</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;            )</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;        );</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;        $contentTypes = $this-&gt;inputDispatcher-&gt;parse( $response );</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;        <span class="keywordflow">return</span> reset( $contentTypes );</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    }</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;</div>
+<div class="line"><a name="l00640"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ac09a6732f7aa3078a0e1d25d8f12dbcc">  640</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ac09a6732f7aa3078a0e1d25d8f12dbcc">loadContentTypes</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroup.html">ContentTypeGroup</a> $contentTypeGroup )</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;    {</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;            <span class="stringliteral">&#39;GET&#39;</span>,</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;            $this-&gt;urlHandler-&gt;generate(</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;                <span class="stringliteral">&quot;grouptypes&quot;</span>,</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;                $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&quot;typegroup&quot;</span>, $contentTypeGroup-&gt;id )</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;            ),</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;ContentTypeList&#39;</span> ) )</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;            )</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;        );</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;        $completedContentTypes = array();</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;        $contentTypes = $this-&gt;inputDispatcher-&gt;parse( $response );</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;        <span class="keywordflow">foreach</span> ( $contentTypes as $contentType )</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;        {</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;            $completedContentTypes[] = $this-&gt;completeContentType( $contentType );</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;        }</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;        <span class="keywordflow">return</span> $completedContentTypes;</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    }</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;</div>
+<div class="line"><a name="l00674"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ac6ffd46b0ce68ac6c9c84677344eff23">  674</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ac6ffd46b0ce68ac6c9c84677344eff23">createContentTypeDraft</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">ContentType</a> $contentType )</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    {</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;    }</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;</div>
+<div class="line"><a name="l00689"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a045fe64e43ebc8c87d065fcccefc0a26">  689</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a045fe64e43ebc8c87d065fcccefc0a26">deleteContentType</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">ContentType</a> $contentType )</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    {</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;    }</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;</div>
+<div class="line"><a name="l00707"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a3f136f91121116eea1067ab6ff6c3383">  707</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a3f136f91121116eea1067ab6ff6c3383">copyContentType</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">ContentType</a> $contentType, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1User_1_1User.html">User</a> $user = null )</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;    {</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;        <span class="keywordflow">throw</span> new \RuntimeException( <span class="stringliteral">&quot;@todo: Implement.&quot;</span> );</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    }</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;</div>
+<div class="line"><a name="l00721"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a3acb6260a9f1830e5ef9c1bac4bf5798">  721</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a3acb6260a9f1830e5ef9c1bac4bf5798">assignContentTypeGroup</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">ContentType</a> $contentType, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroup.html">ContentTypeGroup</a> $contentTypeGroup )</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    {</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        <span class="keywordflow">if</span> ( $contentType instanceof ContentTypeDraft )</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;        {</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;            $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&quot;typeDraft&quot;</span>, $contentType-&gt;id );</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        }</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        {</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;            $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&quot;type&quot;</span>, $contentType-&gt;id );</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;        }</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;        $urlValues[<span class="stringliteral">&quot;group&quot;</span>] = $contentTypeGroup-&gt;id;</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;            <span class="stringliteral">&#39;POST&#39;</span>,</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;            $this-&gt;urlHandler-&gt;generate( <span class="stringliteral">&#39;typeGroupAssign&#39;</span>, $urlValues ),</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;ContentTypeGroupRefList&#39;</span> ) )</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;            )</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        );</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#aa0b20bfb7d0e0ec0f38e04d815cbd179">isErrorResponse</a>( $response ) )</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;        {</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;            <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;            {</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;                $this-&gt;inputDispatcher-&gt;parse( $response );</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;            }</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;            <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1ForbiddenException.html">ForbiddenException</a> $e )</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;            {</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1InvalidArgumentException.html">InvalidArgumentException</a>( $e-&gt;getMessage(), $e-&gt;getCode() );</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;            }</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;        }</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    }</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;</div>
+<div class="line"><a name="l00764"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#af977f0b87cc2fd509be6860bf9f2dc7f">  764</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#af977f0b87cc2fd509be6860bf9f2dc7f">unassignContentTypeGroup</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentType.html">ContentType</a> $contentType, <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroup.html">ContentTypeGroup</a> $contentTypeGroup )</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;    {</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;        <span class="keywordflow">if</span> ( $contentType instanceof ContentTypeDraft )</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;        {</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;            $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&quot;typeDraft&quot;</span>, $contentType-&gt;id );</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;        }</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;        {</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;            $urlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&quot;type&quot;</span>, $contentType-&gt;id );</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;        }</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;        $groupUrlValues = $this-&gt;urlHandler-&gt;parse( <span class="stringliteral">&quot;typegroup&quot;</span>, $contentTypeGroup-&gt;id );</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;        $urlValues[<span class="stringliteral">&quot;group&quot;</span>] = $groupUrlValues[<span class="stringliteral">&quot;typegroup&quot;</span>];</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;        $response = $this-&gt;client-&gt;request(</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;            <span class="stringliteral">&#39;DELETE&#39;</span>,</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;            $this-&gt;urlHandler-&gt;generate( <span class="stringliteral">&#39;groupOfType&#39;</span>, $urlValues ),</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Message.html">Message</a>(</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;                array( <span class="stringliteral">&#39;Accept&#39;</span> =&gt; $this-&gt;outputVisitor-&gt;getMediaType( <span class="stringliteral">&#39;ContentTypeGroupRefList&#39;</span> ) )</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;            )</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;        );</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;        <span class="keywordflow">if</span> ( $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#aa0b20bfb7d0e0ec0f38e04d815cbd179">isErrorResponse</a>( $response ) )</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;        {</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;            <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;            {</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;                $this-&gt;inputDispatcher-&gt;parse( $response );</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;            }</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;            <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1ForbiddenException.html">ForbiddenException</a> $e )</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;            {</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1InvalidArgumentException.html">InvalidArgumentException</a>( $e-&gt;getMessage(), $e-&gt;getCode() );</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;            }</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;            <span class="keywordflow">catch</span> ( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Common_1_1Exceptions_1_1NotFoundException.html">NotFoundException</a> $e )</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;            {</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Exceptions_1_1BadStateException.html">BadStateException</a>( $e-&gt;getMessage(), $e-&gt;getCode() );</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;            }</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;        }</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;    }</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;</div>
+<div class="line"><a name="l00809"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a64b0fd7014f85313d9dea9cebc2c93e3">  809</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a64b0fd7014f85313d9dea9cebc2c93e3">newContentTypeGroupCreateStruct</a>( $identifier )</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;    {</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;        <span class="keywordflow">if</span> ( !is_string( $identifier ) )</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;        {</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Exceptions_1_1InvalidArgumentValue.html">InvalidArgumentValue</a>( <span class="stringliteral">&#39;$identifier&#39;</span>, $identifier );</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;        }</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroupCreateStruct.html">ContentTypeGroupCreateStruct</a>(</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;            array(</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;                <span class="stringliteral">&quot;identifier&quot;</span> =&gt; $identifier</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;            )</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;        );</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;    }</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;</div>
+<div class="line"><a name="l00830"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a437f60952626578545fca2aadb12b60a">  830</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a437f60952626578545fca2aadb12b60a">newContentTypeCreateStruct</a>( $identifier )</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;    {</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;        <span class="keywordflow">if</span> ( !is_string( $identifier ) )</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;        {</div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Exceptions_1_1InvalidArgumentValue.html">InvalidArgumentValue</a>( <span class="stringliteral">&#39;$identifier&#39;</span>, $identifier );</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;        }</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentTypeCreateStruct.html">ContentTypeCreateStruct</a>(</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;            array(</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;                <span class="stringliteral">&quot;identifier&quot;</span> =&gt; $identifier</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;            )</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;        );</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;    }</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;</div>
+<div class="line"><a name="l00849"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a4369ed6f28030a305977da5a3c3f80c3">  849</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a4369ed6f28030a305977da5a3c3f80c3">newContentTypeUpdateStruct</a>()</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;    {</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeUpdateStruct.html">ContentTypeUpdateStruct</a>;</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;    }</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;</div>
+<div class="line"><a name="l00859"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a537a1dd61db49a965f126cd13d5fffe6">  859</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a537a1dd61db49a965f126cd13d5fffe6">newContentTypeGroupUpdateStruct</a>()</div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;    {</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1ContentTypeGroupUpdateStruct.html">ContentTypeGroupUpdateStruct</a>;</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;    }</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;</div>
+<div class="line"><a name="l00872"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a981440eb9a281c1b7479e621bbb177b5">  872</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#a981440eb9a281c1b7479e621bbb177b5">newFieldDefinitionCreateStruct</a>( $identifier, $fieldTypeIdentifier )</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;    {</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;        <span class="keywordflow">if</span> ( !is_string( $identifier ) )</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;        {</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Exceptions_1_1InvalidArgumentValue.html">InvalidArgumentValue</a>( <span class="stringliteral">&#39;$identifier&#39;</span>, $identifier );</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;        }</div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;        <span class="keywordflow">if</span> ( !is_string( $fieldTypeIdentifier ) )</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;        {</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Exceptions_1_1InvalidArgumentValue.html">InvalidArgumentValue</a>( <span class="stringliteral">&#39;$fieldTypeIdentifier&#39;</span>, $fieldTypeIdentifier );</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;        }</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionCreateStruct.html">FieldDefinitionCreateStruct</a>(</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;            array(</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;                <span class="stringliteral">&quot;identifier&quot;</span> =&gt; $identifier,</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;                <span class="stringliteral">&quot;fieldTypeIdentifier&quot;</span> =&gt; $fieldTypeIdentifier</div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;            )</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;        );</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;    }</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;</div>
+<div class="line"><a name="l00897"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ad826cb2b6f7f074a079cd613186f64bf">  897</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html#ad826cb2b6f7f074a079cd613186f64bf">newFieldDefinitionUpdateStruct</a>()</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;    {</div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1ContentType_1_1FieldDefinitionUpdateStruct.html">FieldDefinitionUpdateStruct</a>;</div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;    }</div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_797398f06ec5dac6abf0352e0ae63d7a.html">REST</a></li><li class="navelem"><a class="el" href="dir_9cef613736a01ac9013b9c2ddd9ab4f7.html">Client</a></li><li class="navelem"><a class="el" href="Core_2REST_2Client_2ContentTypeService_8php.html">ContentTypeService.php</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:48 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:46 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

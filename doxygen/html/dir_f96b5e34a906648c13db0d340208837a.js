@@ -1,6 +1,5 @@
 var dir_f96b5e34a906648c13db0d340208837a =
 [
-    [ "RelationListStorage", "dir_72df88d6feae8254c2587ab73dab9fdb.html", "dir_72df88d6feae8254c2587ab73dab9fdb" ],
     [ "Type.php", "Core_2FieldType_2RelationList_2Type_8php.html", [
       [ "Type", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1RelationList_1_1Type.html", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1RelationList_1_1Type" ]
     ] ],

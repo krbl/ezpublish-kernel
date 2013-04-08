@@ -16,7 +16,7 @@ var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1
     [ "listTrashed", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway.html#ab9a6907ea56dabb4f5ab0712580c6b33", null ],
     [ "loadLocationDataByContent", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway.html#aea0c0022a2468cb9ab9ffaaf94f17a13", null ],
     [ "loadTrashByLocation", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway.html#a18a7849cf426eee5565f02ea48797962", null ],
-    [ "moveSubtreeNodes", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway.html#a2db35ad833e723f55e7c4e8c8af4dc20", null ],
+    [ "moveSubtreeNodes", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway.html#a79441f7e6ac66ef0d25e8244c2bd7c90", null ],
     [ "removeElementFromTrash", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway.html#ac317d9895dc2e3eec0a44bdf9ec62c4e", null ],
     [ "removeLocation", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway.html#a5067f735eb503f242caa1bd3626a160d", null ],
     [ "setSectionForSubtree", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Location_1_1Gateway.html#a9af41e8726ad036eb361a5386732ef25", null ],

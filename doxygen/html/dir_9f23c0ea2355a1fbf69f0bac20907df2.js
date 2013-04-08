@@ -1,5 +1,8 @@
 var dir_9f23c0ea2355a1fbf69f0bac20907df2 =
 [
+    [ "LocaleListener.php", "LocaleListener_8php.html", [
+      [ "LocaleListener", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1LocaleListener.html", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1LocaleListener" ]
+    ] ],
     [ "RequestEventListener.php", "RequestEventListener_8php.html", [
       [ "RequestEventListener", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1RequestEventListener.html", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1EventListener_1_1RequestEventListener" ]
     ] ],

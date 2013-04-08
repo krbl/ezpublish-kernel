@@ -175,7 +175,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Bundle_2EzPublishCoreBundle_2DependencyInjection_2Configuration_8php_source.html#l00046">46</a> of file <a class="el" href="Bundle_2EzPublishCoreBundle_2DependencyInjection_2Configuration_8php_source.html">Configuration.php</a>.</p>
+<p>Definition at line <a class="el" href="Bundle_2EzPublishCoreBundle_2DependencyInjection_2Configuration_8php_source.html#l00047">47</a> of file <a class="el" href="Bundle_2EzPublishCoreBundle_2DependencyInjection_2Configuration_8php_source.html">Configuration.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $rootNode</div>
 <div class="line">            -&gt;children()</div>
@@ -240,12 +240,18 @@ Public Member Functions</h2></td></tr>
 <div class="line">                                        }</div>
 <div class="line">                                    )</div>
 <div class="line">                                -&gt;end()</div>
-<div class="line">                                -&gt;useAttributeAsKey( <span class="stringliteral">&#39;key&#39;</span> )</div>
 <div class="line">                                -&gt;normalizeKeys( <span class="keyword">false</span> )</div>
 <div class="line">                                -&gt;prototype( <span class="stringliteral">&#39;variable&#39;</span> )-&gt;end()</div>
 <div class="line">                            -&gt;end()</div>
 <div class="line">                        -&gt;end()</div>
 <div class="line">                    -&gt;end()</div>
+<div class="line">                -&gt;end()</div>
+<div class="line">                -&gt;arrayNode( <span class="stringliteral">&#39;locale_conversion&#39;</span> )</div>
+<div class="line">                    -&gt;info( <span class="stringliteral">&#39;Locale conversion map between eZ Publish format (i.e. fre-FR) to POSIX (i.e. fr_FR). The key is the eZ Publish locale. Check locale.yml in EzPublishCoreBundle to see natively supported locales.&#39;</span> )</div>
+<div class="line">                    -&gt;example( array( <span class="stringliteral">&#39;fre-FR&#39;</span> =&gt; <span class="stringliteral">&#39;fr_FR&#39;</span> ) )</div>
+<div class="line">                    -&gt;useAttributeAsKey( <span class="stringliteral">&#39;key&#39;</span> )</div>
+<div class="line">                    -&gt;normalizeKeys( <span class="keyword">false</span> )</div>
+<div class="line">                    -&gt;prototype( <span class="stringliteral">&#39;scalar&#39;</span> )-&gt;end()</div>
 <div class="line">                -&gt;end()</div>
 <div class="line">            -&gt;end();</div>
 <div class="line">    }</div>
@@ -280,7 +286,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Bundle_2EzPublishCoreBundle_2DependencyInjection_2Configuration_8php_source.html#l00033">33</a> of file <a class="el" href="Bundle_2EzPublishCoreBundle_2DependencyInjection_2Configuration_8php_source.html">Configuration.php</a>.</p>
 
-<p>References <a class="el" href="Bundle_2EzPublishCoreBundle_2DependencyInjection_2Configuration_8php_source.html#l00046">eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\addSiteaccessSection()</a>.</p>
+<p>References <a class="el" href="Bundle_2EzPublishCoreBundle_2DependencyInjection_2Configuration_8php_source.html#l00047">eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Configuration\addSiteaccessSection()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $treeBuilder = <span class="keyword">new</span> TreeBuilder();</div>
 <div class="line">        $rootNode = $treeBuilder-&gt;root( <span class="stringliteral">&#39;ezpublish&#39;</span> );</div>
@@ -289,6 +295,7 @@ Public Member Functions</h2></td></tr>
 <div class="line">        $this-&gt;addImageMagickSection( $rootNode );</div>
 <div class="line">        $this-&gt;addHttpCacheSection( $rootNode );</div>
 <div class="line">        $this-&gt;addSystemSection( $rootNode );</div>
+<div class="line">        $this-&gt;addPageSection( $rootNode );</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">return</span> $treeBuilder;</div>
 <div class="line">    }</div>
@@ -315,7 +322,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle.html">EzPublishCoreBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection.html">DependencyInjection</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Configuration.html">Configuration</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:53 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:51 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

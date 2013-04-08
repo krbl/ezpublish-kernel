@@ -143,7 +143,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A legacy slot handling AssignSectionSignal. </p>
 
-<p>Definition at line <a class="el" href="LegacyAssignSectionSlot_8php_source.html#l00018">18</a> of file <a class="el" href="LegacyAssignSectionSlot_8php_source.html">LegacyAssignSectionSlot.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacyAssignSectionSlot_8php_source.html#l00020">20</a> of file <a class="el" href="LegacyAssignSectionSlot_8php_source.html">LegacyAssignSectionSlot.php</a>.</p>
 </div><h2>Member Function Documentation</h2>
 <a class="anchor" id="a7ca2686c2e241d414be87bbba77d1869"></a>
 <div class="memitem">
@@ -169,7 +169,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Slot.html#ab853b0bbb8b6046851d0640f75f5ca0b">eZ\Publish\Core\SignalSlot\Slot</a>.</p>
 
-<p>Definition at line <a class="el" href="LegacyAssignSectionSlot_8php_source.html#l00027">27</a> of file <a class="el" href="LegacyAssignSectionSlot_8php_source.html">LegacyAssignSectionSlot.php</a>.</p>
+<p>Definition at line <a class="el" href="LegacyAssignSectionSlot_8php_source.html#l00029">29</a> of file <a class="el" href="LegacyAssignSectionSlot_8php_source.html">LegacyAssignSectionSlot.php</a>.</p>
 
 <p>References <a class="el" href="AbstractLegacySlot_8php_source.html#l00042">eZ\Publish\Core\SignalSlot\Slot\AbstractLegacySlot\getLegacyKernel()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
@@ -178,10 +178,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"></div>
 <div class="line">        $kernel = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Slot_1_1AbstractLegacySlot.html#acef99c2c27ccbf1f5bde7b3dd735d45c">getLegacyKernel</a>();</div>
 <div class="line">        $kernel-&gt;runCallback(</div>
-<div class="line">            <span class="keyword">function</span>() use( $signal )</div>
+<div class="line">            <span class="keyword">function</span> () use ( $signal )</div>
 <div class="line">            {</div>
-<div class="line">                \eZContentCacheManager::clearContentCacheIfNeeded( $signal-&gt;contentId );</div>
-<div class="line">                \eZSearch::updateObjectsSection( array( $signal-&gt;contentId ), $signal-&gt;sectionId );</div>
+<div class="line">                eZContentCacheManager::clearContentCacheIfNeeded( $signal-&gt;contentId );</div>
+<div class="line">                eZSearch::updateObjectsSection( array( $signal-&gt;contentId ), $signal-&gt;sectionId );</div>
 <div class="line">            },</div>
 <div class="line">            false</div>
 <div class="line">        );</div>
@@ -209,7 +209,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot.html">SignalSlot</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Slot.html">Slot</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Slot_1_1LegacyAssignSectionSlot.html">LegacyAssignSectionSlot</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:03:10 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:51:02 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -161,12 +161,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aae0cfffddeb63d32e5006a9f29b590c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1EzcDatabase.html#aae0cfffddeb63d32e5006a9f29b590c3">loadRelations</a> ($contentId, $contentVersionNo=null, $relationType=null)</td></tr>
 <tr class="memitem:a451a6e9a238b9a7771b0260798f6c339"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1EzcDatabase.html#a451a6e9a238b9a7771b0260798f6c339">loadReverseRelations</a> ($toContentId, $relationType=null)</td></tr>
 <tr class="memitem:a6923e41f9147c4b349eaa66e3ca7f9d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1EzcDatabase.html#a6923e41f9147c4b349eaa66e3ca7f9d4">insertRelation</a> (RelationCreateStruct $createStruct)</td></tr>
-<tr class="memitem:afad86cb122163ad9e17683e6f98f1a3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1EzcDatabase.html#afad86cb122163ad9e17683e6f98f1a3d">deleteRelation</a> ($relationId)</td></tr>
 <tr class="inherit_header pub_methods_classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway')"><img src="closed.png" alt="-"/>&nbsp;Public Member Functions inherited from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html">eZ\Publish\Core\Persistence\Legacy\Content\Gateway</a></td></tr>
 <tr class="memitem:a974bdbf90eecbbb32dbc97034c3d181f inherit pub_methods_classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#a974bdbf90eecbbb32dbc97034c3d181f">insertVersion</a> (<a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, array $fields)</td></tr>
 <tr class="memitem:a52d481717c7201444a621986236efa24 inherit pub_methods_classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#a52d481717c7201444a621986236efa24">updateVersion</a> ($contentId, $versionNo, <a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Type_1_1UpdateStruct.html">UpdateStruct</a> $struct)</td></tr>
 <tr class="memitem:a0601245c39fc301a07fb7225c58fdb15 inherit pub_methods_classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#a0601245c39fc301a07fb7225c58fdb15">updateAlwaysAvailableFlag</a> ($contentId, $newAlwaysAvailable)</td></tr>
 <tr class="memitem:a35738029d39c670553b869bf0e8653f6 inherit pub_methods_classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#a35738029d39c670553b869bf0e8653f6">loadContentInfo</a> ($contentId)</td></tr>
+<tr class="memitem:af0575ea4f8519e1b0b05279538479784 inherit pub_methods_classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#af0575ea4f8519e1b0b05279538479784">deleteRelation</a> ($relationId, $type)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -459,46 +459,6 @@ Protected Attributes</h2></td></tr>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        $query-&gt;prepare()-&gt;execute();</div>
-<div class="line">    }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a class="anchor" id="afad86cb122163ad9e17683e6f98f1a3d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">eZ\Publish\Core\Persistence\Legacy\Content\Gateway\EzcDatabase::deleteRelation </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$relationId</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Deletes the relation with the given $relationId</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramtype">int</td><td class="paramname">$relationId</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-<p>Reimplemented from <a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html#a41eb26e039cd5158257eddeb5411a294">eZ\Publish\Core\Persistence\Legacy\Content\Gateway</a>.</p>
-
-<p>Definition at line <a class="el" href="Content_2Gateway_2EzcDatabase_8php_source.html#l01483">1483</a> of file <a class="el" href="Content_2Gateway_2EzcDatabase_8php_source.html">EzcDatabase.php</a>.</p>
-<div class="fragment"><div class="line">    {</div>
-<div class="line">        $q = $this-&gt;dbHandler-&gt;createDeleteQuery();</div>
-<div class="line">        $q-&gt;deleteFrom( <span class="stringliteral">&#39;ezcontentobject_link&#39;</span> )</div>
-<div class="line">        -&gt;where(</div>
-<div class="line">            $q-&gt;expr-&gt;eq(</div>
-<div class="line">                $this-&gt;dbHandler-&gt;quoteColumn( <span class="stringliteral">&#39;id&#39;</span> ),</div>
-<div class="line">                $q-&gt;bindValue( $relationId, null, \PDO::PARAM_INT )</div>
-<div class="line">            )</div>
-<div class="line">        );</div>
-<div class="line"></div>
-<div class="line">        $q-&gt;prepare()-&gt;execute();</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 </div>
@@ -2597,7 +2557,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway.html">Gateway</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1Gateway_1_1EzcDatabase.html">EzcDatabase</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:58 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:56 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

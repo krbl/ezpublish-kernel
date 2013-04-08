@@ -177,7 +177,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespaceeZ.html">eZ</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00022">22</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00022">22</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a540af61d010ee92863d4e65f1a59efe7"></a>
 <div class="memitem">
@@ -211,9 +211,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00044">44</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00044">44</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 
-<p>References <a class="el" href="LocationHandler_8php_source.html#l00036">eZ\Publish\Core\Persistence\InMemory\LocationHandler\$backend</a>, and <a class="el" href="LocationHandler_8php_source.html#l00031">eZ\Publish\Core\Persistence\InMemory\LocationHandler\$handler</a>.</p>
+<p>References <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00036">eZ\Publish\Core\Persistence\InMemory\LocationHandler\$backend</a>, and <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00031">eZ\Publish\Core\Persistence\InMemory\LocationHandler\$handler</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;handler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LocationHandler.html#a6051e330c3102878eb4398fd797a44cb">$handler</a>;</div>
 <div class="line">        $this-&gt;backend = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LocationHandler.html#a4d3aa798983e89a12c50e5b55d09b7b1">$backend</a>;</div>
@@ -257,19 +257,23 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler.html#a051b56b409466dc6f14d7ce5d826a95a">eZ\Publish\SPI\Persistence\Content\Location\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00591">591</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00596">596</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 
-<p>References <a class="el" href="LocationHandler_8php_source.html#l00460">eZ\Publish\Core\Persistence\InMemory\LocationHandler\setSectionForSubtree()</a>.</p>
+<p>References <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00467">eZ\Publish\Core\Persistence\InMemory\LocationHandler\setSectionForSubtree()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        $this-&gt;backend-&gt;updateByMatch(</div>
-<div class="line">            <span class="stringliteral">&quot;Content\\Location&quot;</span>,</div>
-<div class="line">            array( <span class="stringliteral">&quot;contentId&quot;</span> =&gt; $contentId ),</div>
-<div class="line">            array( <span class="stringliteral">&quot;mainLocationId&quot;</span> =&gt; $locationId )</div>
+<div class="line">        $location = $this-&gt;backend-&gt;load( <span class="stringliteral">&quot;Content\\Location&quot;</span>, $locationId );</div>
+<div class="line"></div>
+<div class="line">        $this-&gt;backend-&gt;update(</div>
+<div class="line">            <span class="stringliteral">&#39;Content\\ContentInfo&#39;</span>,</div>
+<div class="line">            $contentId,</div>
+<div class="line">            array(</div>
+<div class="line">                <span class="stringliteral">&#39;mainLocationId&#39;</span> =&gt; $locationId</div>
+<div class="line">            )</div>
 <div class="line">        );</div>
 <div class="line"></div>
 <div class="line">        $parentLocation = $this-&gt;backend-&gt;load(</div>
 <div class="line">            <span class="stringliteral">&quot;Content\\Location&quot;</span>,</div>
-<div class="line">            $this-&gt;backend-&gt;load( <span class="stringliteral">&quot;Content\\Location&quot;</span>, $locationId )-&gt;parentId</div>
+<div class="line">            $location-&gt;parentId</div>
 <div class="line">        );</div>
 <div class="line">        $parentContent = $this-&gt;backend-&gt;load(</div>
 <div class="line">            <span class="stringliteral">&quot;Content\\ContentInfo&quot;</span>,</div>
@@ -330,9 +334,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler.html#a0de06f32eafad71a3961e250f733b1fb">eZ\Publish\SPI\Persistence\Content\Location\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00139">139</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00139">139</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 
-<p>References <a class="el" href="LocationHandler_8php_source.html#l00591">eZ\Publish\Core\Persistence\InMemory\LocationHandler\changeMainLocation()</a>, <a class="el" href="LocationHandler_8php_source.html#l00403">eZ\Publish\Core\Persistence\InMemory\LocationHandler\create()</a>, <a class="el" href="LocationHandler_8php_source.html#l00115">eZ\Publish\Core\Persistence\InMemory\LocationHandler\getSubtreeLocations()</a>, <a class="el" href="LocationHandler_8php_source.html#l00053">eZ\Publish\Core\Persistence\InMemory\LocationHandler\load()</a>, and <a class="el" href="LocationHandler_8php_source.html#l00460">eZ\Publish\Core\Persistence\InMemory\LocationHandler\setSectionForSubtree()</a>.</p>
+<p>References <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00596">eZ\Publish\Core\Persistence\InMemory\LocationHandler\changeMainLocation()</a>, <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00404">eZ\Publish\Core\Persistence\InMemory\LocationHandler\create()</a>, <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00115">eZ\Publish\Core\Persistence\InMemory\LocationHandler\getSubtreeLocations()</a>, <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00053">eZ\Publish\Core\Persistence\InMemory\LocationHandler\load()</a>, and <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00467">eZ\Publish\Core\Persistence\InMemory\LocationHandler\setSectionForSubtree()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $sourceLocation = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LocationHandler.html#a5b3b087da0c87d8c79c484c409dd4a52">load</a>( $sourceId );</div>
 <div class="line">        $children = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LocationHandler.html#a64c7bc3ce26f88355dc7f7d884a9af43">getSubtreeLocations</a>( $sourceLocation );</div>
@@ -407,12 +411,12 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">                <span class="comment">// If needed mark for later update</span></div>
 <div class="line">                <span class="keywordflow">if</span> (</div>
-<div class="line">                    in_array( $child-&gt;mainLocationId, $locations[$child-&gt;contentId] ) &amp;&amp;</div>
+<div class="line">                    in_array( $originalContentInfo-&gt;mainLocationId, $locations[$child-&gt;contentId] ) &amp;&amp;</div>
 <div class="line">                    count( $locations[$child-&gt;contentId] ) &gt; 1 &amp;&amp;</div>
-<div class="line">                    $child-&gt;id !== $child-&gt;mainLocationId</div>
+<div class="line">                    $child-&gt;id !== $originalContentInfo-&gt;mainLocationId</div>
 <div class="line">                )</div>
 <div class="line">                {</div>
-<div class="line">                    $mainLocationsUpdate[$child-&gt;contentId] = $child-&gt;mainLocationId;</div>
+<div class="line">                    $mainLocationsUpdate[$child-&gt;contentId] = $originalContentInfo-&gt;mainLocationId;</div>
 <div class="line">                }</div>
 <div class="line">            }</div>
 <div class="line"></div>
@@ -437,7 +441,8 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        <span class="comment">// If subtree root is main location for its content, update subtree section to the one of the</span></div>
 <div class="line">        <span class="comment">// parent location content</span></div>
-<div class="line">        <span class="keywordflow">if</span> ( $copiedSubtreeRootLocation-&gt;mainLocationId === $copiedSubtreeRootLocation-&gt;id )</div>
+<div class="line">        $subtreeRootContentInfo = $this-&gt;handler-&gt;contentHandler()-&gt;loadContentInfo( $copiedSubtreeRootLocation-&gt;contentId );</div>
+<div class="line">        <span class="keywordflow">if</span> ( $subtreeRootContentInfo-&gt;mainLocationId === $copiedSubtreeRootLocation-&gt;id )</div>
 <div class="line">        {</div>
 <div class="line">            $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LocationHandler.html#ac74e990f650649bcbd494e427e78f7ce">setSectionForSubtree</a>(</div>
 <div class="line">                $copiedSubtreeRootLocation-&gt;id,</div>
@@ -476,9 +481,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespaceeZ.html">eZ</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00403">403</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00404">404</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 
-<p>References <a class="el" href="LocationHandler_8php_source.html#l00053">eZ\Publish\Core\Persistence\InMemory\LocationHandler\load()</a>.</p>
+<p>References <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00053">eZ\Publish\Core\Persistence\InMemory\LocationHandler\load()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $parentId = $locationStruct-&gt;parentId;</div>
 <div class="line">        $parent = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LocationHandler.html#a5b3b087da0c87d8c79c484c409dd4a52">load</a>( $parentId );</div>
@@ -505,7 +510,13 @@ Protected Attributes</h2></td></tr>
 <div class="line">            $vo-&gt;id,</div>
 <div class="line">            array(</div>
 <div class="line">                <span class="stringliteral">&#39;pathString&#39;</span> =&gt; $pathString,</div>
-<div class="line">                <span class="stringliteral">&#39;pathIdentificationString&#39;</span> =&gt; $this-&gt;getPathIdentificationString( $vo ),</div>
+<div class="line">                <span class="stringliteral">&#39;pathIdentificationString&#39;</span> =&gt; $this-&gt;getPathIdentificationString( $vo )</div>
+<div class="line">            )</div>
+<div class="line">        );</div>
+<div class="line">        $this-&gt;backend-&gt;update(</div>
+<div class="line">            <span class="stringliteral">&#39;Content\\ContentInfo&#39;</span>,</div>
+<div class="line">            $vo-&gt;contentId,</div>
+<div class="line">            array(</div>
 <div class="line">                <span class="stringliteral">&#39;mainLocationId&#39;</span> =&gt; isset( $mainLocationId ) ? $mainLocationId : $vo-&gt;id</div>
 <div class="line">            )</div>
 <div class="line">        );</div>
@@ -579,7 +590,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespaceeZ.html">eZ</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00492">492</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00495">495</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
@@ -610,7 +621,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespaceeZ.html">eZ</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00499">499</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00502">502</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
@@ -637,9 +648,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00532">532</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00535">535</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 
-<p>References <a class="el" href="LocationHandler_8php_source.html#l00053">eZ\Publish\Core\Persistence\InMemory\LocationHandler\load()</a>.</p>
+<p>References <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00053">eZ\Publish\Core\Persistence\InMemory\LocationHandler\load()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $location = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LocationHandler.html#a5b3b087da0c87d8c79c484c409dd4a52">load</a>( $locationId );</div>
 <div class="line">        $this-&gt;backend-&gt;delete( <span class="stringliteral">&#39;Content\\Location&#39;</span>, $locationId );</div>
@@ -659,10 +670,12 @@ Protected Attributes</h2></td></tr>
 <div class="line">        }</div>
 <div class="line">        <span class="keywordflow">else</span></div>
 <div class="line">        {</div>
-<div class="line">            $this-&gt;backend-&gt;updateByMatch(</div>
-<div class="line">                <span class="stringliteral">&#39;Content\\Location&#39;</span>,</div>
-<div class="line">                array( <span class="stringliteral">&#39;contentId&#39;</span> =&gt; $location-&gt;contentId ),</div>
-<div class="line">                array( <span class="stringliteral">&#39;mainLocationId&#39;</span> =&gt; $remainingLocations[0]-&gt;<span class="keywordtype">id</span> )</div>
+<div class="line">            $this-&gt;backend-&gt;update(</div>
+<div class="line">                <span class="stringliteral">&#39;Content\\ContentInfo&#39;</span>,</div>
+<div class="line">                $location-&gt;contentId,</div>
+<div class="line">                array(</div>
+<div class="line">                    <span class="stringliteral">&#39;mainLocationId&#39;</span> =&gt; $remainingLocations[0]-&gt;<span class="keywordtype">id</span></div>
+<div class="line">                )</div>
 <div class="line">            );</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
@@ -705,7 +718,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespaceeZ.html">eZ</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00520">520</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00523">523</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
@@ -752,7 +765,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00115">115</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00115">115</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( empty( $locations ) ) $locations[] = $location;</div>
 <div class="line"></div>
@@ -803,7 +816,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler.html#a82eb00b2a66e5562c8299cebc342e19d">eZ\Publish\SPI\Persistence\Content\Location\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00305">305</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00306">306</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;backend-&gt;update( <span class="stringliteral">&#39;Content\\Location&#39;</span>, $id, array( <span class="stringliteral">&#39;hidden&#39;</span> =&gt; <span class="keyword">true</span>, <span class="stringliteral">&#39;invisible&#39;</span> =&gt; <span class="keyword">true</span> ) );</div>
 <div class="line"></div>
@@ -842,7 +855,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespaceeZ.html">eZ</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00506">506</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00509">509</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
@@ -865,7 +878,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler.html#a35d5a627ee4fc67dcc8c73687bb95a6e">eZ\Publish\SPI\Persistence\Content\Location\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00053">53</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00053">53</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;backend-&gt;load( <span class="stringliteral">&#39;Content\\Location&#39;</span>, $locationId );</div>
 <div class="line">    }</div>
@@ -897,7 +910,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns locations given a parent $locationId.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000049">Todo:</a></b></dt><dd>Requires approbation </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000050">Todo:</a></b></dt><dd>Requires approbation </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">mixed</td><td class="paramname">$locationId</td><td></td></tr>
@@ -906,9 +919,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>[] </dd></dl>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00568">568</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00573">573</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 
-<p>References <a class="el" href="LocationHandler_8php_source.html#l00053">eZ\Publish\Core\Persistence\InMemory\LocationHandler\load()</a>.</p>
+<p>References <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00053">eZ\Publish\Core\Persistence\InMemory\LocationHandler\load()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $result = $this-&gt;backend-&gt;find( <span class="stringliteral">&quot;Content\\Location&quot;</span>, array( <span class="stringliteral">&quot;parentId&quot;</span> =&gt; $locationId ) );</div>
 <div class="line"></div>
@@ -966,7 +979,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler.html#a934de2ec3598f9aec39e27324b958784">eZ\Publish\SPI\Persistence\Content\Location\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00092">92</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00092">92</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $locations = $this-&gt;backend-&gt;find(</div>
 <div class="line">            <span class="stringliteral">&#39;Content\\Location&#39;</span>,</div>
@@ -1014,12 +1027,12 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000048">Todo:</a></b></dt><dd>Add support for $rootLocationId when not child of node 1</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000049">Todo:</a></b></dt><dd>Add support for $rootLocationId when not child of node 1</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>[] </dd></dl>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler.html#a5b64362074e88613f638d355e366936c">eZ\Publish\SPI\Persistence\Content\Location\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00069">69</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00069">69</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $rootLocationId )</div>
 <div class="line">            <span class="keywordflow">return</span> $this-&gt;backend-&gt;find(</div>
@@ -1062,7 +1075,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler.html#a13f35602c1b419ca03f97fbff7d41b6a">eZ\Publish\SPI\Persistence\Content\Location\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00298">298</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00299">299</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
@@ -1095,9 +1108,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler.html#aa11f220b6312badd374ec9a5d38ba2d4">eZ\Publish\SPI\Persistence\Content\Location\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00258">258</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00259">259</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 
-<p>References <a class="el" href="LocationHandler_8php_source.html#l00053">eZ\Publish\Core\Persistence\InMemory\LocationHandler\load()</a>.</p>
+<p>References <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00053">eZ\Publish\Core\Persistence\InMemory\LocationHandler\load()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $vo = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LocationHandler.html#a5b3b087da0c87d8c79c484c409dd4a52">load</a>( $sourceId );</div>
 <div class="line">        $newParentVO = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LocationHandler.html#a5b3b087da0c87d8c79c484c409dd4a52">load</a>( $destinationParentId );</div>
@@ -1164,9 +1177,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler.html#a2e5c680c69b5b61653beaf627b38a944">eZ\Publish\SPI\Persistence\Content\Location\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00440">440</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00447">447</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 
-<p>References <a class="el" href="LocationHandler_8php_source.html#l00053">eZ\Publish\Core\Persistence\InMemory\LocationHandler\load()</a>.</p>
+<p>References <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00053">eZ\Publish\Core\Persistence\InMemory\LocationHandler\load()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $location = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LocationHandler.html#a5b3b087da0c87d8c79c484c409dd4a52">load</a>( $locationId );</div>
 <div class="line"></div>
@@ -1221,7 +1234,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespaceeZ.html">eZ</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00513">513</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00516">516</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
@@ -1254,25 +1267,21 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler.html#af4a8c8f53b08300ce4eadc8c4330e60b">eZ\Publish\SPI\Persistence\Content\Location\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00460">460</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00467">467</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 
-<p>References <a class="el" href="LocationHandler_8php_source.html#l00053">eZ\Publish\Core\Persistence\InMemory\LocationHandler\load()</a>.</p>
+<p>References <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00053">eZ\Publish\Core\Persistence\InMemory\LocationHandler\load()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $location = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LocationHandler.html#a5b3b087da0c87d8c79c484c409dd4a52">load</a>( $locationId );</div>
-<div class="line">        $aContentIds = array( $location-&gt;contentId );</div>
+<div class="line">        $aContentIds = array( $location-&gt;contentId =&gt; <span class="keyword">true</span> );</div>
 <div class="line">        $children = $this-&gt;backend-&gt;find( <span class="stringliteral">&#39;Content\\Location&#39;</span>, array( <span class="stringliteral">&#39;pathString&#39;</span> =&gt; <span class="stringliteral">&quot;$location-&gt;pathString%&quot;</span> ) );</div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $children as $child )</div>
 <div class="line">        {</div>
-<div class="line">            <span class="comment">// Only get main locations</span></div>
-<div class="line">            <span class="keywordflow">if</span> ( $child-&gt;mainLocationId == $child-&gt;id )</div>
-<div class="line">            {</div>
-<div class="line">                $aContentIds[] = $child-&gt;contentId;</div>
-<div class="line">            }</div>
+<div class="line">            $aContentIds[$child-&gt;contentId] = <span class="keyword">true</span>;</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        $this-&gt;backend-&gt;updateByMatch(</div>
 <div class="line">            <span class="stringliteral">&#39;Content\\ContentInfo&#39;</span>,</div>
-<div class="line">            array( <span class="stringliteral">&#39;id&#39;</span> =&gt; $aContentIds ),</div>
+<div class="line">            array( <span class="stringliteral">&#39;id&#39;</span> =&gt; array_keys( $aContentIds ) ),</div>
 <div class="line">            array( <span class="stringliteral">&#39;sectionId&#39;</span> =&gt; $sectionId ),</div>
 <div class="line">            <span class="keyword">true</span></div>
 <div class="line">        );</div>
@@ -1339,7 +1348,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespaceeZ.html">eZ</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00485">485</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00488">488</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
@@ -1372,7 +1381,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler.html#a7f489b2d4481c2306abc4a73018d9058">eZ\Publish\SPI\Persistence\Content\Location\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00364">364</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00365">365</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $location1 = $this-&gt;backend-&gt;load( <span class="stringliteral">&#39;Content\\Location&#39;</span>, $locationId1 );</div>
 <div class="line">        $content1 = $this-&gt;backend-&gt;load( <span class="stringliteral">&#39;Content&#39;</span>, $location1-&gt;contentId );</div>
@@ -1415,7 +1424,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler.html#adef66054a88466933630d8111b89e6dd">eZ\Publish\SPI\Persistence\Content\Location\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00320">320</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00321">321</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;backend-&gt;update( <span class="stringliteral">&#39;Content\\Location&#39;</span>, $id, array( <span class="stringliteral">&#39;hidden&#39;</span> =&gt; <span class="keyword">false</span>, <span class="stringliteral">&#39;invisible&#39;</span> =&gt; <span class="keyword">false</span> ) );</div>
 <div class="line"></div>
@@ -1485,7 +1494,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Location_1_1Handler.html#a6e0a909670dae1e28434a4a14fe6a57e">eZ\Publish\SPI\Persistence\Content\Location\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00391">391</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00392">392</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;backend-&gt;update(</div>
 <div class="line">            <span class="stringliteral">&#39;Content\\Location&#39;</span>,</div>
@@ -1515,7 +1524,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00036">36</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00036">36</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 
 </div>
 </div>
@@ -1537,7 +1546,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00031">31</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00031">31</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 
 </div>
 </div>
@@ -1551,7 +1560,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00024">24</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00024">24</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 
 </div>
 </div>
@@ -1565,12 +1574,12 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LocationHandler_8php_source.html#l00026">26</a> of file <a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2LocationHandler_8php_source.html#l00026">26</a> of file <a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/var/lib/jenkins/jobs/PAPI-doxygen-master/workspace/eZ/Publish/Core/Persistence/InMemory/<a class="el" href="LocationHandler_8php_source.html">LocationHandler.php</a></li>
+<li>/var/lib/jenkins/jobs/PAPI-doxygen-master/workspace/eZ/Publish/Core/Persistence/InMemory/<a class="el" href="InMemory_2LocationHandler_8php_source.html">LocationHandler.php</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -1578,7 +1587,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory.html">InMemory</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1LocationHandler.html">LocationHandler</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:57 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:55 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

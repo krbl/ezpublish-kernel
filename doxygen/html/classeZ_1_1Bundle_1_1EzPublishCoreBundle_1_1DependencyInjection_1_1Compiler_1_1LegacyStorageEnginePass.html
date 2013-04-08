@@ -165,6 +165,23 @@ Public Member Functions</h2></td></tr>
 <div class="line"></div>
 <div class="line">        $legacyStorageEngineDef = $container-&gt;getDefinition( <span class="stringliteral">&#39;ezpublish.api.storage_engine.legacy.factory&#39;</span> );</div>
 <div class="line"></div>
+<div class="line">        <span class="comment">// Field types.</span></div>
+<div class="line">        <span class="comment">// Alias attribute is the field type string.</span></div>
+<div class="line">        <span class="keywordflow">foreach</span> ( $container-&gt;findTaggedServiceIds( <span class="stringliteral">&#39;ezpublish.fieldType&#39;</span> ) as $id =&gt; $attributes )</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span> ( !isset( $attributes[0][<span class="stringliteral">&#39;alias&#39;</span>] ) )</div>
+<div class="line">                <span class="keywordflow">throw</span> <span class="keyword">new</span> \LogicException( <span class="stringliteral">&#39;ezpublish.fieldType service tag needs an &quot;alias&quot; attribute to identify the field type. None given.&#39;</span> );</div>
+<div class="line"></div>
+<div class="line">            $legacyStorageEngineDef-&gt;addMethodCall(</div>
+<div class="line">                <span class="stringliteral">&#39;registerFieldType&#39;</span>,</div>
+<div class="line">                array(</div>
+<div class="line">                    <span class="comment">// Only pass the service Id since field types will be lazy loaded via the service container</span></div>
+<div class="line">                    $id,</div>
+<div class="line">                    $attributes[0][<span class="stringliteral">&#39;alias&#39;</span>]</div>
+<div class="line">                )</div>
+<div class="line">            );</div>
+<div class="line">        }</div>
+<div class="line"></div>
 <div class="line">        <span class="keywordflow">foreach</span> ( $container-&gt;findTaggedServiceIds( <span class="stringliteral">&#39;ezpublish.storageEngine.legacy.converter&#39;</span> ) as $id =&gt; $attributes )</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">if</span> ( isset( $attributes[0][<span class="stringliteral">&#39;lazy&#39;</span>] ) &amp;&amp; $attributes[0][<span class="stringliteral">&#39;lazy&#39;</span>] === true )</div>
@@ -205,7 +222,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle.html">EzPublishCoreBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection.html">DependencyInjection</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler.html">Compiler</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1DependencyInjection_1_1Compiler_1_1LegacyStorageEnginePass.html">LegacyStorageEnginePass</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:53 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:51 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

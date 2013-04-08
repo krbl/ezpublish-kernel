@@ -23,7 +23,7 @@ var dir_9cef613736a01ac9013b9c2ddd9ab4f7 =
     [ "IntegrationTestRepository.php", "IntegrationTestRepository_8php.html", [
       [ "IntegrationTestRepository", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IntegrationTestRepository.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IntegrationTestRepository" ]
     ] ],
-    [ "IOService.php", "Core_2REST_2Client_2IOService_8php.html", [
+    [ "IOService.php", "REST_2Client_2IOService_8php.html", [
       [ "IOService", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1IOService" ]
     ] ],
     [ "LanguageService.php", "Core_2REST_2Client_2LanguageService_8php.html", [

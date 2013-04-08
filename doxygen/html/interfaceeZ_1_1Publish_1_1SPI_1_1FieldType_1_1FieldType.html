@@ -132,6 +132,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac7b7abc011037f3fb39cb7a3a762c33a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldType.html#ac7b7abc011037f3fb39cb7a3a762c33a">validatorConfigurationFromHash</a> ($validatorConfigurationHash)</td></tr>
 <tr class="memitem:aa0d040669f58a2d3987c873c19ef182f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldType.html#aa0d040669f58a2d3987c873c19ef182f">toPersistenceValue</a> ($value)</td></tr>
 <tr class="memitem:a38dac30f848ad252e12bfd8a3b51c376"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldType.html#a38dac30f848ad252e12bfd8a3b51c376">fromPersistenceValue</a> (<a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1FieldValue.html">FieldValue</a> $fieldValue)</td></tr>
+<tr class="memitem:a944898c9f4658cdf524459ce074b118d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldType.html#a944898c9f4658cdf524459ce074b118d">getRelations</a> ($fieldValue)</td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>The field type interface which all field types have to implement.</p>
@@ -333,6 +334,32 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a944898c9f4658cdf524459ce074b118d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eZ\Publish\SPI\FieldType\FieldType::getRelations </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$fieldValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns relation data extracted from value.</p>
+<p>Not intended for ::COMMON type relations, there is an <a class="el" href="namespaceeZ_1_1Publish_1_1API.html">API</a> for handling those.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">mixed</td><td class="paramname">$fieldValue</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>array Hash with relation type as key and array of destination content ids as value.</dd></dl>
+<p>Example: <code> array( ::LINK =&gt; array( "contentIds" =&gt; array( 12, 13, 14 ), "locationIds" =&gt; array( 24 ) ), ::EMBED =&gt; array( "contentIds" =&gt; array( 12 ), "locationIds" =&gt; array( 24, 45 ) ), ::ATTRIBUTE =&gt; array( 12 ) ) </code> </p>
 
 </div>
 </div>
@@ -622,7 +649,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1SPI.html">SPI</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1SPI_1_1FieldType.html">FieldType</a></li><li class="navelem"><a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1FieldType_1_1FieldType.html">FieldType</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:03:10 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:51:03 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

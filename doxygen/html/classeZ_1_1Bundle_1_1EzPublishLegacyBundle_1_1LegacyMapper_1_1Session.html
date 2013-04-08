@@ -133,7 +133,7 @@ $(document).ready(function(){initNavTree('classeZ_1_1Bundle_1_1EzPublishLegacyBu
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7c5adffee3c2353293361ebb50f8857c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session.html#a7c5adffee3c2353293361ebb50f8857c">__construct</a> (ContainerInterface $container)</td></tr>
-<tr class="memitem:aff470b47765cb97297f10010a5d95b1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session.html#aff470b47765cb97297f10010a5d95b1c">onBuildKernelWebHandler</a> (<a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelWebHandlerEvent.html">PreBuildKernelWebHandlerEvent</a> $event)</td></tr>
+<tr class="memitem:a8ad0dc6a6acb35beb8a93e788ecaa905"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session.html#a8ad0dc6a6acb35beb8a93e788ecaa905">onBuildKernelHandler</a> (<a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelEvent.html">PreBuildKernelEvent</a> $event)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -189,23 +189,23 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Session_8php_source.html#l00032">32</a> of file <a class="el" href="Session_8php_source.html">Session.php</a>.</p>
 
-<p>References <a class="el" href="LegacyEvents_8php_source.html#l00025">eZ\Publish\Core\MVC\Legacy\LegacyEvents\PRE_BUILD_LEGACY_KERNEL_WEB</a>.</p>
+<p>References <a class="el" href="LegacyEvents_8php_source.html#l00034">eZ\Publish\Core\MVC\Legacy\LegacyEvents\PRE_BUILD_LEGACY_KERNEL</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> array(</div>
-<div class="line">            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1LegacyEvents.html#a02e40ca8d4fd4501939a12d17cffc38b">LegacyEvents::PRE_BUILD_LEGACY_KERNEL_WEB</a> =&gt; array( <span class="stringliteral">&#39;onBuildKernelWebHandler&#39;</span>, 128 )</div>
+<div class="line">            <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1LegacyEvents.html#afd9bf3ff305a60b36a598d2c45ee8314">LegacyEvents::PRE_BUILD_LEGACY_KERNEL</a> =&gt; array( <span class="stringliteral">&#39;onBuildKernelHandler&#39;</span>, 128 )</div>
 <div class="line">        );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="aff470b47765cb97297f10010a5d95b1c"></a>
+<a class="anchor" id="a8ad0dc6a6acb35beb8a93e788ecaa905"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">eZ\Bundle\EzPublishLegacyBundle\LegacyMapper\Session::onBuildKernelWebHandler </td>
+          <td class="memname">eZ\Bundle\EzPublishLegacyBundle\LegacyMapper\Session::onBuildKernelHandler </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelWebHandlerEvent.html">PreBuildKernelWebHandlerEvent</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelEvent.html">PreBuildKernelEvent</a>&#160;</td>
           <td class="paramname"><em>$event</em></td><td>)</td>
           <td></td>
         </tr>
@@ -214,14 +214,14 @@ Static Public Member Functions</h2></td></tr>
 <p>Adds the session settings to the parameters that will be injected into the legacy kernel</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramtype">\eZ\Publish\Core\MVC\Legacy\Event\PreBuildKernelWebHandlerEvent</td><td class="paramname">$event</td><td></td></tr>
+    <tr><td class="paramtype">\eZ\Publish\Core\MVC\Legacy\Event\PreBuildKernelEvent</td><td class="paramname">$event</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
 <p>Definition at line <a class="el" href="Session_8php_source.html#l00045">45</a> of file <a class="el" href="Session_8php_source.html">Session.php</a>.</p>
 
-<p>References <a class="el" href="PreBuildKernelWebHandlerEvent_8php_source.html#l00051">eZ\Publish\Core\MVC\Legacy\Event\PreBuildKernelWebHandlerEvent\getParameters()</a>, and <a class="el" href="PreBuildKernelWebHandlerEvent_8php_source.html#l00043">eZ\Publish\Core\MVC\Legacy\Event\PreBuildKernelWebHandlerEvent\getRequest()</a>.</p>
+<p>References <a class="el" href="PreBuildKernelEvent_8php_source.html#l00038">eZ\Publish\Core\MVC\Legacy\Event\PreBuildKernelEvent\getParameters()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $sessionInfos = array(</div>
 <div class="line">            <span class="stringliteral">&#39;configured&#39;</span> =&gt; <span class="keyword">false</span>,</div>
@@ -241,7 +241,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="line">            $sessionInfos[<span class="stringliteral">&#39;namespace&#39;</span>] = $this-&gt;container-&gt;getParameter(</div>
 <div class="line">                <span class="stringliteral">&#39;ezpublish.session.attribute_bag.storage_key&#39;</span></div>
 <div class="line">            );</div>
-<div class="line">            $sessionInfos[<span class="stringliteral">&#39;has_previous&#39;</span>] = $event-&gt;getRequest()-&gt;hasPreviousSession();</div>
+<div class="line">            $sessionInfos[<span class="stringliteral">&#39;has_previous&#39;</span>] = $this-&gt;container-&gt;isScopeActive( <span class="stringliteral">&#39;request&#39;</span> ) ? $this-&gt;container-&gt;get( <span class="stringliteral">&#39;request&#39;</span> )-&gt;hasPreviousSession() : <span class="keyword">false</span>;</div>
 <div class="line">            $sessionInfos[<span class="stringliteral">&#39;storage&#39;</span>] = $this-&gt;container-&gt;get( <span class="stringliteral">&#39;session.storage&#39;</span> );</div>
 <div class="line">        }</div>
 <div class="line"></div>
@@ -253,9 +253,9 @@ Static Public Member Functions</h2></td></tr>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session_aff470b47765cb97297f10010a5d95b1c_cgraph.png" border="0" usemap="#classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session_aff470b47765cb97297f10010a5d95b1c_cgraph" alt=""/></div>
-<map name="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session_aff470b47765cb97297f10010a5d95b1c_cgraph" id="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session_aff470b47765cb97297f10010a5d95b1c_cgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelWebHandlerEvent.html#a2fbd61f6f9aa5420ef233b261525cab4" title="eZ\\Publish\\Core\\MVC\l\\Legacy\\Event\\PreBuildKernel\lWebHandlerEvent\\getParameters" alt="" coords="273,5,505,69"/><area shape="rect" id="node5" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelWebHandlerEvent.html#a797096070c035beecf4a5e4a7dbfe704" title="eZ\\Publish\\Core\\MVC\l\\Legacy\\Event\\PreBuildKernel\lWebHandlerEvent\\getRequest" alt="" coords="284,93,495,157"/></map>
+<div class="center"><img src="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session_a8ad0dc6a6acb35beb8a93e788ecaa905_cgraph.png" border="0" usemap="#classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session_a8ad0dc6a6acb35beb8a93e788ecaa905_cgraph" alt=""/></div>
+<map name="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session_a8ad0dc6a6acb35beb8a93e788ecaa905_cgraph" id="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session_a8ad0dc6a6acb35beb8a93e788ecaa905_cgraph">
+<area shape="rect" id="node3" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Event_1_1PreBuildKernelEvent.html#a4d33897eb2331576d3be1214050639fa" title="eZ\\Publish\\Core\\MVC\l\\Legacy\\Event\\PreBuildKernel\lEvent\\getParameters" alt="" coords="273,5,479,69"/></map>
 </div>
 </p>
 
@@ -270,7 +270,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle.html">EzPublishLegacyBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper.html">LegacyMapper</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishLegacyBundle_1_1LegacyMapper_1_1Session.html">Session</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:53 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:51 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

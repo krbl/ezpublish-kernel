@@ -1,11 +1,12 @@
 var searchData=
 [
+  ['date_2ephp',['Date.php',['../Date_8php.html',1,'']]],
   ['dateandtime_2ephp',['DateAndTime.php',['../DateAndTime_8php.html',1,'']]],
   ['datefield_2ephp',['DateField.php',['../DateField_8php.html',1,'']]],
   ['datemapper_2ephp',['DateMapper.php',['../DateMapper_8php.html',1,'']]],
+  ['datemetadata_2ephp',['DateMetadata.php',['../API_2Repository_2Values_2Content_2Query_2Criterion_2DateMetadata_8php.html',1,'']]],
   ['datemetadata_2ephp',['DateMetadata.php',['../Core_2Persistence_2Solr_2Content_2Search_2CriterionVisitor_2DateMetadata_8php.html',1,'']]],
   ['datemetadata_2ephp',['DateMetadata.php',['../Core_2REST_2Server_2Input_2Parser_2Criterion_2DateMetadata_8php.html',1,'']]],
-  ['datemetadata_2ephp',['DateMetadata.php',['../API_2Repository_2Values_2Content_2Query_2Criterion_2DateMetadata_8php.html',1,'']]],
   ['datemetadata_2ephp',['DateMetadata.php',['../Core_2Persistence_2Legacy_2Content_2Search_2Gateway_2CriterionHandler_2DateMetadata_8php.html',1,'']]],
   ['datemodified_2ephp',['DateModified.php',['../Core_2Persistence_2Legacy_2Content_2Search_2Gateway_2SortClauseHandler_2DateModified_8php.html',1,'']]],
   ['datemodified_2ephp',['DateModified.php',['../API_2Repository_2Values_2Content_2Query_2SortClause_2DateModified_8php.html',1,'']]],
@@ -17,6 +18,7 @@ var searchData=
   ['defaultsignaldispatcher_2ephp',['DefaultSignalDispatcher.php',['../DefaultSignalDispatcher_8php.html',1,'']]],
   ['deferredlegacy_2ephp',['DeferredLegacy.php',['../DeferredLegacy_8php.html',1,'']]],
   ['definitionbased_2ephp',['DefinitionBased.php',['../DefinitionBased_8php.html',1,'']]],
+  ['definitionbasedadapter_2ephp',['DefinitionBasedAdapter.php',['../DefinitionBasedAdapter_8php.html',1,'']]],
   ['delegatingconverter_2ephp',['DelegatingConverter.php',['../DelegatingConverter_8php.html',1,'']]],
   ['deletecontentsignal_2ephp',['DeleteContentSignal.php',['../DeleteContentSignal_8php.html',1,'']]],
   ['deletecontenttypegroupsignal_2ephp',['DeleteContentTypeGroupSignal.php',['../DeleteContentTypeGroupSignal_8php.html',1,'']]],
@@ -34,6 +36,6 @@ var searchData=
   ['deleteversionsignal_2ephp',['DeleteVersionSignal.php',['../DeleteVersionSignal_8php.html',1,'']]],
   ['depth_2ephp',['Depth.php',['../Depth_8php.html',1,'']]],
   ['disablelanguagesignal_2ephp',['DisableLanguageSignal.php',['../DisableLanguageSignal_8php.html',1,'']]],
-  ['dispatcher_2ephp',['Dispatcher.php',['../Dispatcher_8php.html',1,'']]],
-  ['dispatcherhandler_2ephp',['DispatcherHandler.php',['../DispatcherHandler_8php.html',1,'']]]
+  ['dispatcher_2ephp',['Dispatcher.php',['../REST_2Common_2Input_2Dispatcher_8php.html',1,'']]],
+  ['dispatcher_2ephp',['Dispatcher.php',['../IO_2Handler_2Dispatcher_8php.html',1,'']]]
 ];

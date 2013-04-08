@@ -119,42 +119,54 @@ $(document).ready(function(){initNavTree('LegacyStorageEngineFactory_8php_source
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a84028b18279992035df6873a00bbbb17">   30</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a84028b18279992035df6873a00bbbb17">$converters</a> = array();</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#abc4a300bfe642d9115a8278bc49c8f00">   32</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#abc4a300bfe642d9115a8278bc49c8f00">__construct</a>( ContainerInterface <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#aa3b58a8ba9fa0e659f6842880ce7c986">$container</a> )</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        $this-&gt;container = <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#aa3b58a8ba9fa0e659f6842880ce7c986">$container</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a5e9bc9541dca360c155b3f24a1ddd322">   44</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a5e9bc9541dca360c155b3f24a1ddd322">registerFieldTypeConverter</a>( $typeIdentifier, $className )</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        $this-&gt;converters[$typeIdentifier] = $className;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a8337cab16ff4511548229b0f0d4b706a">   57</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a8337cab16ff4511548229b0f0d4b706a">buildLegacyEngine</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html">EzcDbHandler</a> $dbhandler, $deferTypeUpdate )</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        $legacyEngineClass = $this-&gt;container-&gt;getParameter( <span class="stringliteral">&#39;ezpublish.api.storage_engine.legacy.class&#39;</span> );</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> $legacyEngineClass(</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            $dbhandler,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1FieldTypeRegistry.html">FieldTypeRegistry</a>(</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish.api.repository.factory&#39;</span> )-&gt;getFieldTypes()</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            ),</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1ConverterRegistry.html">ConverterRegistry</a>( $this-&gt;converters ),</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html">StorageRegistry</a>(</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish.api.repository.factory&#39;</span> )-&gt;getExternalStorageHandlers()</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            ),</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish.api.storage_engine.legacy.transformation_processor&#39;</span> ),</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            array(</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="stringliteral">&#39;defer_type_update&#39;</span> =&gt; (<span class="keywordtype">bool</span>)$deferTypeUpdate,</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            )</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        );</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a821b0e461a66349d0e0d27124f3e73df">   32</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a821b0e461a66349d0e0d27124f3e73df">$fieldTypes</a> = array();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#abc4a300bfe642d9115a8278bc49c8f00">   34</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#abc4a300bfe642d9115a8278bc49c8f00">__construct</a>( ContainerInterface <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#aa3b58a8ba9fa0e659f6842880ce7c986">$container</a> )</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        $this-&gt;container = <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#aa3b58a8ba9fa0e659f6842880ce7c986">$container</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a5e9bc9541dca360c155b3f24a1ddd322">   46</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a5e9bc9541dca360c155b3f24a1ddd322">registerFieldTypeConverter</a>( $typeIdentifier, $className )</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        $this-&gt;converters[$typeIdentifier] = $className;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a07eeab2b5287c2301107563bbca0b7fa">   58</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a07eeab2b5287c2301107563bbca0b7fa">registerFieldType</a>( $fieldTypeServiceId, $fieldTypeAlias )</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#aa3b58a8ba9fa0e659f6842880ce7c986">$container</a> = <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#aa3b58a8ba9fa0e659f6842880ce7c986">$this-&gt;container</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        $this-&gt;fieldTypes[$fieldTypeAlias] = <span class="keyword">function</span>() use ( <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#aa3b58a8ba9fa0e659f6842880ce7c986">$container</a>, $fieldTypeServiceId )</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#aa3b58a8ba9fa0e659f6842880ce7c986">$container</a>-&gt;get( $fieldTypeServiceId );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        };</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a8337cab16ff4511548229b0f0d4b706a">   75</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1ApiLoader_1_1LegacyStorageEngineFactory.html#a8337cab16ff4511548229b0f0d4b706a">buildLegacyEngine</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1EzcDbHandler.html">EzcDbHandler</a> $dbhandler, $deferTypeUpdate )</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        $legacyEngineClass = $this-&gt;container-&gt;getParameter( <span class="stringliteral">&#39;ezpublish.api.storage_engine.legacy.class&#39;</span> );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> $legacyEngineClass(</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            $dbhandler,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1FieldTypeRegistry.html">FieldTypeRegistry</a>(</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish.api.repository.factory&#39;</span> )-&gt;getFieldTypes()</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            ),</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1FieldValue_1_1ConverterRegistry.html">ConverterRegistry</a>( $this-&gt;converters ),</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html">StorageRegistry</a>(</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish.api.repository.factory&#39;</span> )-&gt;getExternalStorageHandlers()</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            ),</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish.api.storage_engine.legacy.transformation_processor&#39;</span> ),</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            array(</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="stringliteral">&#39;defer_type_update&#39;</span> =&gt; (<span class="keywordtype">bool</span>)$deferTypeUpdate,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                <span class="stringliteral">&#39;field_type&#39;</span> =&gt; $this-&gt;fieldTypes,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            )</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_7d1318b3b939336ca41ef9847f488a7b.html">Bundle</a></li><li class="navelem"><a class="el" href="dir_b83d50569460189e95c49248ea8628dd.html">EzPublishCoreBundle</a></li><li class="navelem"><a class="el" href="dir_a5cd673f5fd4dfe608f58568293d443b.html">ApiLoader</a></li><li class="navelem"><a class="el" href="LegacyStorageEngineFactory_8php.html">LegacyStorageEngineFactory.php</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:47 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:45 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

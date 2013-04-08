@@ -2,7 +2,7 @@ var interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService =
 [
     [ "addFieldDefinition", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html#ab493b0fb21cc628a18a2e06466a73ae5", null ],
     [ "assignContentTypeGroup", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html#ac49ba16e8dbd9479cf2760417e3f32ef", null ],
-    [ "copyContentType", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html#ad6b30bdc81af9a67124f3512bf40ff20", null ],
+    [ "copyContentType", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html#a73c5977e002a1088258a1e42e8e53eaa", null ],
     [ "createContentType", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html#af891ef06fb794d3ea1528c93d57d1ea1", null ],
     [ "createContentTypeDraft", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html#ab68823ce6944508c1b2f607a0e90f41e", null ],
     [ "createContentTypeGroup", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentTypeService.html#ab012d8fa67d4a71cd3a6b976e00e8188", null ],

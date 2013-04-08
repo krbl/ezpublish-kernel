@@ -17,9 +17,6 @@ var dir_c3d975b962427663f0d6fbcf96ae3183 =
     [ "FieldTypeTools.php", "API_2Repository_2FieldTypeTools_8php.html", [
       [ "FieldTypeTools", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1FieldTypeTools.html", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1FieldTypeTools" ]
     ] ],
-    [ "IOService.php", "API_2Repository_2IOService_8php.html", [
-      [ "IOService", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService.html", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1IOService" ]
-    ] ],
     [ "LanguageService.php", "API_2Repository_2LanguageService_8php.html", [
       [ "LanguageService", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LanguageService.html", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1LanguageService" ]
     ] ],

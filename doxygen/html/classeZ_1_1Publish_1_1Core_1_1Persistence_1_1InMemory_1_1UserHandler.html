@@ -166,7 +166,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Storage Engine handler for user module </p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00026">26</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00026">26</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a31c6653e44526ba2342660f308b12f29"></a>
 <div class="memitem">
@@ -200,9 +200,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00044">44</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00044">44</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 
-<p>References <a class="el" href="UserHandler_8php_source.html#l00036">eZ\Publish\Core\Persistence\InMemory\UserHandler\$backend</a>, and <a class="el" href="UserHandler_8php_source.html#l00031">eZ\Publish\Core\Persistence\InMemory\UserHandler\$handler</a>.</p>
+<p>References <a class="el" href="InMemory_2UserHandler_8php_source.html#l00036">eZ\Publish\Core\Persistence\InMemory\UserHandler\$backend</a>, and <a class="el" href="InMemory_2UserHandler_8php_source.html#l00031">eZ\Publish\Core\Persistence\InMemory\UserHandler\$handler</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;handler = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a84350812b0196acef3625e0fac93ae14">$handler</a>;</div>
 <div class="line">        $this-&gt;backend = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html#a9cb8ded07d3b75e6899d938767a22920">$backend</a>;</div>
@@ -243,7 +243,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000055">Todo:</a></b></dt><dd>Throw on invalid Role Id? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000056">Todo:</a></b></dt><dd>Throw on invalid Role Id? </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">\eZ\Publish\Core\Base\Exceptions\InvalidArgumentValue</td><td>If $policy-&gt;limitation is empty (null, empty string/array..) </td></tr>
@@ -253,7 +253,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#af42d08f45811646ffdef7388e2e22b41">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00421">421</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00408">408</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( empty( $policy-&gt;limitations ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&#39;-&gt;limitations&#39;</span>, $policy-&gt;limitations, get_class( $policy ) );</div>
@@ -325,7 +325,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#a8b466b0d4c84686941dee9b793fc7b0c">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00602">602</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00589">589</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $content = $this-&gt;backend-&gt;load( <span class="stringliteral">&#39;Content\\ContentInfo&#39;</span>, $contentId );</div>
 <div class="line">        <span class="keywordflow">if</span> ( !$content )</div>
@@ -346,7 +346,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">                $this-&gt;backend-&gt;create(</div>
 <div class="line">                    <span class="stringliteral">&#39;User\\RoleAssignment&#39;</span>,</div>
 <div class="line">                    array(</div>
-<div class="line">                        <span class="stringliteral">&#39;_roleId&#39;</span> =&gt; $roleId,</div>
+<div class="line">                        <span class="stringliteral">&#39;roleId&#39;</span> =&gt; $roleId,</div>
 <div class="line">                        <span class="stringliteral">&#39;contentId&#39;</span> =&gt; $contentId,</div>
 <div class="line">                        <span class="stringliteral">&#39;limitationIdentifier&#39;</span> =&gt; $limitIdentifier,</div>
 <div class="line">                        <span class="stringliteral">&#39;values&#39;</span> =&gt; $limitValues</div>
@@ -359,7 +359,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">            $this-&gt;backend-&gt;create(</div>
 <div class="line">                <span class="stringliteral">&#39;User\\RoleAssignment&#39;</span>,</div>
 <div class="line">                array(</div>
-<div class="line">                    <span class="stringliteral">&#39;_roleId&#39;</span> =&gt; $roleId,</div>
+<div class="line">                    <span class="stringliteral">&#39;roleId&#39;</span> =&gt; $roleId,</div>
 <div class="line">                    <span class="stringliteral">&#39;contentId&#39;</span> =&gt; $contentId,</div>
 <div class="line">                    <span class="stringliteral">&#39;limitationIdentifier&#39;</span> =&gt; null,</div>
 <div class="line">                    <span class="stringliteral">&#39;values&#39;</span> =&gt; null</div>
@@ -404,7 +404,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#ad7a58eb0ee14648910a4b74cb5ad5b20">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00062">62</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00062">62</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $userArr = (array)$user;</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;backend-&gt;create( <span class="stringliteral">&#39;User&#39;</span>, $userArr, <span class="keyword">false</span> );</div>
@@ -436,9 +436,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#ace194012d80c9cf3bd1b0de530883694">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00148">148</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00148">148</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 
-<p>References <a class="el" href="UserHandler_8php_source.html#l00421">eZ\Publish\Core\Persistence\InMemory\UserHandler\addPolicy()</a>.</p>
+<p>References <a class="el" href="InMemory_2UserHandler_8php_source.html#l00408">eZ\Publish\Core\Persistence\InMemory\UserHandler\addPolicy()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !$role-&gt;identifier )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&#39;$role-&gt;identifier&#39;</span>, $role-&gt;identifier );</div>
@@ -486,11 +486,11 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000054">Todo:</a></b></dt><dd>Throw on missing user? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000055">Todo:</a></b></dt><dd>Throw on missing user? </dd></dl>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#aff96443b755151a303313b02bd442611">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00135">135</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00135">135</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;backend-&gt;delete( <span class="stringliteral">&#39;User&#39;</span>, $userId );</div>
 <div class="line">        $this-&gt;backend-&gt;deleteByMatch( <span class="stringliteral">&#39;User\\RoleAssignment&#39;</span>, array( <span class="stringliteral">&#39;contentId&#39;</span> =&gt; $userId ) );</div>
@@ -521,11 +521,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#ad8d2b20cdde161681c418503fce11b1f">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00404">404</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00391">391</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;backend-&gt;delete( <span class="stringliteral">&#39;User\\Role&#39;</span>, $roleId );</div>
 <div class="line">        $this-&gt;backend-&gt;deleteByMatch( <span class="stringliteral">&#39;User\\Policy&#39;</span>, array( <span class="stringliteral">&#39;roleId&#39;</span> =&gt; $roleId ) );</div>
-<div class="line">        $this-&gt;backend-&gt;deleteByMatch( <span class="stringliteral">&#39;User\\RoleAssignment&#39;</span>, array( <span class="stringliteral">&#39;_roleId&#39;</span> =&gt; $roleId ) );</div>
+<div class="line">        $this-&gt;backend-&gt;deleteByMatch( <span class="stringliteral">&#39;User\\RoleAssignment&#39;</span>, array( <span class="stringliteral">&#39;roleId&#39;</span> =&gt; $roleId ) );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 </div>
@@ -583,7 +583,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00549">549</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00536">536</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $content-&gt;versionInfo-&gt;contentInfo-&gt;contentTypeId != $typeId )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> NotFound( <span class="stringliteral">&quot;Content with TypeId:$typeId&quot;</span>, $content-&gt;versionInfo-&gt;contentInfo-&gt;id );</div>
@@ -648,7 +648,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#a25e46f0a389a0263886c90333b7c4247">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00075">75</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00075">75</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;backend-&gt;load( <span class="stringliteral">&#39;User&#39;</span>, $userId );</div>
 <div class="line">    }</div>
@@ -696,7 +696,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#a15752e5d705f579a5359b5cc46b352c1">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00090">90</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00090">90</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $users = $this-&gt;backend-&gt;find( <span class="stringliteral">&#39;User&#39;</span>, array( <span class="stringliteral">&#39;login&#39;</span> =&gt; $login ) );</div>
 <div class="line">        <span class="keywordflow">if</span> ( !$alsoMatchEmail )</div>
@@ -756,9 +756,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#aa7d4f0e955f11b6e3c179085f30f663c">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00472">472</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00459">459</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 
-<p>References <a class="el" href="UserHandler_8php_source.html#l00549">eZ\Publish\Core\Persistence\InMemory\UserHandler\getPermissionsForObject()</a>.</p>
+<p>References <a class="el" href="InMemory_2UserHandler_8php_source.html#l00536">eZ\Publish\Core\Persistence\InMemory\UserHandler\getPermissionsForObject()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $list = $this-&gt;backend-&gt;find(</div>
 <div class="line">            <span class="stringliteral">&#39;Content&#39;</span>,</div>
@@ -869,7 +869,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#a182975c2172016cebeffbdc0c5ebda91">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00172">172</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00172">172</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $list = $this-&gt;backend-&gt;find(</div>
 <div class="line">            <span class="stringliteral">&#39;User\\Role&#39;</span>,</div>
@@ -931,7 +931,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#aac0cd600ccb9c94fdbbe8a3729c4a9bc">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00264">264</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00264">264</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $inherit === <span class="keyword">false</span> )</div>
 <div class="line">            <span class="keywordflow">return</span> $this-&gt;getRoleAssignmentForContent( array( $groupId ) );</div>
@@ -1007,7 +1007,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#afa594688fb3866283cc97eab839d5544">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00245">245</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00245">245</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">throw</span> new \eZ\Publish\API\Repository\Exceptions\NotImplementedException( __METHOD__ );</div>
 <div class="line">    }</div>
@@ -1044,7 +1044,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#a779dcd83639fa78b4a8beb782291852d">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00199">199</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00199">199</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $list = $this-&gt;backend-&gt;find(</div>
 <div class="line">            <span class="stringliteral">&#39;User\\Role&#39;</span>,</div>
@@ -1081,7 +1081,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#ab8b3bc4a612271393e08e3fffe4b1d7e">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00222">222</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00222">222</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;backend-&gt;find(</div>
 <div class="line">            <span class="stringliteral">&#39;User\\Role&#39;</span>,</div>
@@ -1128,12 +1128,12 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000056">Todo:</a></b></dt><dd>Throw exception on missing role / policy?</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000057">Todo:</a></b></dt><dd>Throw exception on missing role / policy?</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#a662d88b010c9415a74c0de9621876894">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00458">458</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00445">445</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;backend-&gt;deleteByMatch( <span class="stringliteral">&#39;User\\Policy&#39;</span>, array( <span class="stringliteral">&#39;id&#39;</span> =&gt; $policyId, <span class="stringliteral">&#39;roleId&#39;</span> =&gt; $roleId ) );</div>
 <div class="line">    }</div>
@@ -1182,7 +1182,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#aab3eaf902ed92faeb2482ab6b62cac1b">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00658">658</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00645">645</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $content = $this-&gt;backend-&gt;load( <span class="stringliteral">&#39;Content\\ContentInfo&#39;</span>, $contentId );</div>
 <div class="line">        <span class="keywordflow">if</span> ( !$content )</div>
@@ -1198,13 +1198,13 @@ Protected Attributes</h2></td></tr>
 <div class="line"></div>
 <div class="line">        $roleAssignments = $this-&gt;backend-&gt;find(</div>
 <div class="line">            <span class="stringliteral">&#39;User\\RoleAssignment&#39;</span>,</div>
-<div class="line">            array( <span class="stringliteral">&#39;_roleId&#39;</span> =&gt; $roleId, <span class="stringliteral">&#39;contentId&#39;</span> =&gt; $contentId )</div>
+<div class="line">            array( <span class="stringliteral">&#39;roleId&#39;</span> =&gt; $roleId, <span class="stringliteral">&#39;contentId&#39;</span> =&gt; $contentId )</div>
 <div class="line">        );</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> ( empty( $roleAssignments ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&#39;$roleId&#39;</span>, $roleId );</div>
 <div class="line"></div>
-<div class="line">        $this-&gt;backend-&gt;deleteByMatch( <span class="stringliteral">&#39;User\\RoleAssignment&#39;</span>, array( <span class="stringliteral">&#39;_roleId&#39;</span> =&gt; $roleId, <span class="stringliteral">&#39;contentId&#39;</span> =&gt; $contentId ) );</div>
+<div class="line">        $this-&gt;backend-&gt;deleteByMatch( <span class="stringliteral">&#39;User\\RoleAssignment&#39;</span>, array( <span class="stringliteral">&#39;roleId&#39;</span> =&gt; $roleId, <span class="stringliteral">&#39;contentId&#39;</span> =&gt; $contentId ) );</div>
 <div class="line"></div>
 <div class="line">        $role-&gt;groupIds = array_values( array_diff( $role-&gt;groupIds, array( $contentId ) ) );</div>
 <div class="line">        $this-&gt;backend-&gt;update( <span class="stringliteral">&#39;User\\Role&#39;</span>, $roleId, (array)$role );</div>
@@ -1235,7 +1235,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#a5ac7113eb7679a0dcda4a1f895cff454">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00122">122</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00122">122</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $userArr = (array)$user;</div>
 <div class="line">        $this-&gt;backend-&gt;update( <span class="stringliteral">&#39;User&#39;</span>, $userArr[<span class="stringliteral">&#39;id&#39;</span>], $userArr );</div>
@@ -1273,7 +1273,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#a154ef21aa4d40b48fd6e7d1e8e317d56">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00439">439</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00426">426</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( empty( $policy-&gt;limitations ) )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&#39;-&gt;limitations&#39;</span>, $policy-&gt;limitations, get_class( $policy ) );</div>
@@ -1307,7 +1307,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfaceeZ_1_1Publish_1_1SPI_1_1Persistence_1_1User_1_1Handler.html#ad1e1c423b8cd597d2f7c482ecf1d995d">eZ\Publish\SPI\Persistence\User\Handler</a>.</p>
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00387">387</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00374">374</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( !$role-&gt;id )</div>
 <div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidArgumentValue( <span class="stringliteral">&#39;$role-&gt;id&#39;</span>, $role-&gt;id );</div>
@@ -1340,7 +1340,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00036">36</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00036">36</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 
 </div>
 </div>
@@ -1362,12 +1362,12 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="UserHandler_8php_source.html#l00031">31</a> of file <a class="el" href="UserHandler_8php_source.html">UserHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="InMemory_2UserHandler_8php_source.html#l00031">31</a> of file <a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/var/lib/jenkins/jobs/PAPI-doxygen-master/workspace/eZ/Publish/Core/Persistence/InMemory/<a class="el" href="UserHandler_8php_source.html">UserHandler.php</a></li>
+<li>/var/lib/jenkins/jobs/PAPI-doxygen-master/workspace/eZ/Publish/Core/Persistence/InMemory/<a class="el" href="InMemory_2UserHandler_8php_source.html">UserHandler.php</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -1375,7 +1375,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory.html">InMemory</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1UserHandler.html">UserHandler</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:57 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:56 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

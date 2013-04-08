@@ -116,100 +116,117 @@ $(document).ready(function(){initNavTree('RestListener_8php_source.html','');});
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;use Symfony\Component\DependencyInjection\ContainerInterface;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;use Symfony\Component\HttpFoundation\Response;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;use Symfony\Component\HttpFoundation\Request;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Request.html">eZ\Publish\Core\REST\Server\Request</a> as RESTRequest;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;use Symfony\Component\Form\Extension\Csrf\CsrfProvider\CsrfProviderInterface;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1UnauthorizedException.html">eZ\Publish\Core\Base\Exceptions\UnauthorizedException</a>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html">RestListener</a> <span class="keyword">implements</span> EventSubscriberInterface</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">private</span> $container;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">private</span> $request;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a1c6ad38ef71953be0cf61bb02396531c">   45</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a1c6ad38ef71953be0cf61bb02396531c">__construct</a>( ContainerInterface $container, RESTRequest $request )</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        $this-&gt;container = $container;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        $this-&gt;request = $request;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a1b26491d3a1937dbe5421a3a74e8b8e3">   54</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a1b26491d3a1937dbe5421a3a74e8b8e3">getSubscribedEvents</a>()</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> array(</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            KernelEvents::VIEW =&gt; <span class="stringliteral">&#39;onKernelResultView&#39;</span>,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            KernelEvents::EXCEPTION =&gt; <span class="stringliteral">&#39;onKernelExceptionView&#39;</span>,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="comment">// @todo delete completely when this auth. method has been totally removed</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="comment">// KernelEvents::REQUEST =&gt; &#39;onKernelRequest&#39;</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        );</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#acfe23a2ce83e39f17483046f697c67d7">   70</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#acfe23a2ce83e39f17483046f697c67d7">onKernelResultView</a>( GetResponseForControllerResultEvent $event )</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span> ( $event-&gt;getRequestType() !== HttpKernelInterface::MASTER_REQUEST )</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#aac6e8a59f5a6dd769a044263a5ec7332">isRestRequest</a>( $event-&gt;getRequest() ) )</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        $result = $event-&gt;getControllerResult();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        $event-&gt;setResponse( $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a71335f1b791c9b25fd3898ce22229c6b">visitResult</a>( $result ) );</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        $event-&gt;stopPropagation();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a4367313495975c18c874ed582c39bdd6">   91</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a4367313495975c18c874ed582c39bdd6">onKernelExceptionView</a>( GetResponseForExceptionEvent $event )</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">if</span> ( $event-&gt;getRequestType() !== HttpKernelInterface::MASTER_REQUEST )</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#aac6e8a59f5a6dd769a044263a5ec7332">isRestRequest</a>( $event-&gt;getRequest() ) )</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        $result = $event-&gt;getException();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        $event-&gt;setResponse( $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a71335f1b791c9b25fd3898ce22229c6b">visitResult</a>( $result ) );</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        $event-&gt;stopPropagation();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> onKernelRequest( GetResponseEvent $event )</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">if</span> ( $event-&gt;getRequestType() !== HttpKernelInterface::MASTER_REQUEST )</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#aac6e8a59f5a6dd769a044263a5ec7332">isRestRequest</a>( $event-&gt;getRequest() ) )</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        $request = $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish_rest.request&#39;</span> );</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">if</span> ( !isset( $request-&gt;testUser ) )</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;use <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Request.html">eZ\Publish\Core\REST\Server\Request</a> as RESTRequest;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html">RestListener</a> <span class="keyword">implements</span> EventSubscriberInterface</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#aab51b4acb72609f6f16fdc135088d2b2">   36</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#aab51b4acb72609f6f16fdc135088d2b2">CSRF_TOKEN_HEADER</a> = <span class="stringliteral">&quot;X-CSRF-Token&quot;</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">private</span> $container;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">private</span> $request;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">private</span> $csrfProvider;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a3914edb82f2924df2faa2c475180f9e6">   58</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a3914edb82f2924df2faa2c475180f9e6">__construct</a>( ContainerInterface $container, RESTRequest $request, CsrfProviderInterface $csrfProvider = null )</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        $this-&gt;container = $container;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        $this-&gt;request = $request;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        $this-&gt;csrfProvider = $csrfProvider;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a1b26491d3a1937dbe5421a3a74e8b8e3">   68</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a1b26491d3a1937dbe5421a3a74e8b8e3">getSubscribedEvents</a>()</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> array(</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            KernelEvents::VIEW =&gt; <span class="stringliteral">&#39;onKernelResultView&#39;</span>,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            KernelEvents::EXCEPTION =&gt; <span class="stringliteral">&#39;onKernelExceptionView&#39;</span>,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            KernelEvents::REQUEST =&gt; <span class="stringliteral">&#39;onKernelRequest&#39;</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#acfe23a2ce83e39f17483046f697c67d7">   83</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#acfe23a2ce83e39f17483046f697c67d7">onKernelResultView</a>( GetResponseForControllerResultEvent $event )</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">if</span> ( $event-&gt;getRequestType() !== HttpKernelInterface::MASTER_REQUEST )</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#aac6e8a59f5a6dd769a044263a5ec7332">isRestRequest</a>( $event-&gt;getRequest() ) )</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        $result = $event-&gt;getControllerResult();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        $event-&gt;setResponse( $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a71335f1b791c9b25fd3898ce22229c6b">visitResult</a>( $result ) );</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        $event-&gt;stopPropagation();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a4367313495975c18c874ed582c39bdd6">  104</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a4367313495975c18c874ed582c39bdd6">onKernelExceptionView</a>( GetResponseForExceptionEvent $event )</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">if</span> ( $event-&gt;getRequestType() !== HttpKernelInterface::MASTER_REQUEST )</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#aac6e8a59f5a6dd769a044263a5ec7332">isRestRequest</a>( $event-&gt;getRequest() ) )</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        $result = $event-&gt;getException();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        $event-&gt;setResponse( $this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a71335f1b791c9b25fd3898ce22229c6b">visitResult</a>( $result ) );</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        $event-&gt;stopPropagation();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a9202b363fd05640f938dcadbaaaa02ad">$repository</a> = $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish.api.repository&#39;</span> );</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a9202b363fd05640f938dcadbaaaa02ad">$repository</a>-&gt;setCurrentUser(</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <a class="code" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html#a9202b363fd05640f938dcadbaaaa02ad">$repository</a>-&gt;getUserService()-&gt;loadUser( $request-&gt;testUser )</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        );</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#aac6e8a59f5a6dd769a044263a5ec7332">  131</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#aac6e8a59f5a6dd769a044263a5ec7332">isRestRequest</a>( Request $request )</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    {</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">return</span> ( strpos( $request-&gt;getPathInfo(), <span class="stringliteral">&#39;/api/ezp/v2/&#39;</span> ) === 0 );</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a580c7cb152c3c4421f64d81b1fe7e28c">  125</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a580c7cb152c3c4421f64d81b1fe7e28c">onKernelRequest</a>( GetResponseEvent $event )</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;container-&gt;getParameter( <span class="stringliteral">&#39;form.type_extension.csrf.enabled&#39;</span> ) )</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">if</span> ( $event-&gt;getRequestType() !== HttpKernelInterface::MASTER_REQUEST )</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">if</span> ( !$this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#aac6e8a59f5a6dd769a044263a5ec7332">isRestRequest</a>( $event-&gt;getRequest() ) )</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00141"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a71335f1b791c9b25fd3898ce22229c6b">  141</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a71335f1b791c9b25fd3898ce22229c6b">visitResult</a>( $result )</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    {</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="comment">// visit response</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        $viewDispatcher = $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish_rest.response_visitor_dispatcher&#39;</span> );</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        $message = $viewDispatcher-&gt;dispatch( $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish_rest.request&#39;</span> ), $result );</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="comment">// @todo It would be even better if visitors would return a Symfony message directly</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> Response( $message-&gt;body, $message-&gt;statusCode, $message-&gt;headers );</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">if</span> ( in_array( $event-&gt;getRequest()-&gt;getMethod(), array( <span class="stringliteral">&#39;GET&#39;</span>, <span class="stringliteral">&#39;HEAD&#39;</span> ) ) )</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="comment">// TODO: add CSRF token to protect against force-login attacks</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordflow">if</span> ( $event-&gt;getRequest()-&gt;get( <span class="stringliteral">&quot;_route&quot;</span> ) == <span class="stringliteral">&quot;ezpublish_rest_createSession&quot;</span> )</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">if</span> (</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            !$event-&gt;getRequest()-&gt;headers-&gt;has( self::CSRF_TOKEN_HEADER )</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            || !$this-&gt;csrfProvider-&gt;isCsrfTokenValid( <span class="stringliteral">&#39;rest&#39;</span>, $event-&gt;getRequest()-&gt;headers-&gt;get( self::CSRF_TOKEN_HEADER ) )</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        )</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1Base_1_1Exceptions_1_1UnauthorizedException.html">UnauthorizedException</a>(</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                <span class="stringliteral">&quot;Missing or invalid CSRF token&quot;</span>,</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                $event-&gt;getRequest()-&gt;getMethod() . <span class="stringliteral">&quot; &quot;</span> . $event-&gt;getRequest()-&gt;getPathInfo()</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            );</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#aac6e8a59f5a6dd769a044263a5ec7332">  160</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#aac6e8a59f5a6dd769a044263a5ec7332">isRestRequest</a>( Request $request )</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">return</span> ( strpos( $request-&gt;getPathInfo(), <span class="stringliteral">&#39;/api/ezp/v2/&#39;</span> ) === 0 );</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a71335f1b791c9b25fd3898ce22229c6b">  170</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a71335f1b791c9b25fd3898ce22229c6b">visitResult</a>( $result )</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="comment">// visit response</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        $viewDispatcher = $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish_rest.response_visitor_dispatcher&#39;</span> );</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        $message = $viewDispatcher-&gt;dispatch( $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish_rest.request&#39;</span> ), $result );</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="comment">// @todo It would be even better if visitors would return a Symfony message directly</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> Response( $message-&gt;body, $message-&gt;statusCode, $message-&gt;headers );</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_7d1318b3b939336ca41ef9847f488a7b.html">Bundle</a></li><li class="navelem"><a class="el" href="dir_43b596e91a0656bbd01eced1d8c291f6.html">EzPublishRestBundle</a></li><li class="navelem"><a class="el" href="dir_70d13911f0142eaa8c39c9c3da4c9109.html">EventListener</a></li><li class="navelem"><a class="el" href="RestListener_8php.html">RestListener.php</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:47 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:46 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

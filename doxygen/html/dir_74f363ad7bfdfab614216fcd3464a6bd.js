@@ -1,5 +1,6 @@
 var dir_74f363ad7bfdfab614216fcd3464a6bd =
 [
+    [ "Adapter", "dir_e49a58010a597c016f5c5e58cb6861f5.html", "dir_e49a58010a597c016f5c5e58cb6861f5" ],
     [ "Converter", "dir_89f97e66735966ab152ce18ae193f2d8.html", "dir_89f97e66735966ab152ce18ae193f2d8" ],
     [ "Twig", "dir_b615905f78216a2da1deec515f4b8979.html", "dir_b615905f78216a2da1deec515f4b8979" ],
     [ "GlobalHelper.php", "Legacy_2Templating_2GlobalHelper_8php.html", [

@@ -1,6 +1,6 @@
 var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Handler =
 [
-    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Handler.html#a84d66e256d6cd65e6d29f81ec6399bbd", null ],
+    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Handler.html#a84c811952b49d27be172fc78b45906c0", null ],
     [ "beginTransaction", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Handler.html#a03263a4299ab9c65eff829baefbbce10", null ],
     [ "commit", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Handler.html#a7bddccc025b6f603678805d793b23f22", null ],
     [ "contentHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Handler.html#a00fdd3223afc6d718932e13fbff4380d", null ],
@@ -17,5 +17,6 @@ var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Handler =
     [ "urlWildcardHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Handler.html#a8a1931e706f7079b002cbc0d401959e2", null ],
     [ "userHandler", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Handler.html#a12e9d29c4b841c05b26927ee820559ba", null ],
     [ "$backend", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Handler.html#ac868c227f828fcb7be24a0d371395f89", null ],
+    [ "$fieldTypeRegistry", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Handler.html#af86ce879dcbc4573fb02c823abf75fe2", null ],
     [ "$serviceHandlers", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1InMemory_1_1Handler.html#a7ffd235c628f7a3f2ad5633f8e9e9c74", null ]
 ];

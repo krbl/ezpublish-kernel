@@ -178,9 +178,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"></div>
 <div class="line">        $kernel = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Slot_1_1AbstractLegacySlot.html#acef99c2c27ccbf1f5bde7b3dd735d45c">getLegacyKernel</a>();</div>
 <div class="line">        $kernel-&gt;runCallback(</div>
-<div class="line">            <span class="keyword">function</span>() use( $signal )</div>
+<div class="line">            <span class="keyword">function</span> () use ( $signal )</div>
 <div class="line">            {</div>
-<div class="line">                \eZContentCacheManager::clearContentCacheIfNeeded( $signal-&gt;contentId );</div>
+<div class="line">                \eZContentCacheManager::clearContentCacheIfNeeded( $signal-&gt;contentId, <span class="keyword">true</span>, array( $signal-&gt;locationId ) );</div>
 <div class="line">                \eZSearch::removeNodes( array( $signal-&gt;locationId ) );</div>
 <div class="line">            },</div>
 <div class="line">            false</div>
@@ -209,7 +209,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot.html">SignalSlot</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Slot.html">Slot</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1SignalSlot_1_1Slot_1_1LegacyDeleteLocationSlot.html">LegacyDeleteLocationSlot</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:03:10 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:51:02 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

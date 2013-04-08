@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('classeZ_1_1Bundle_1_1EzPublishRestBund
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -133,13 +134,18 @@ $(document).ready(function(){initNavTree('classeZ_1_1Bundle_1_1EzPublishRestBund
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1c6ad38ef71953be0cf61bb02396531c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a1c6ad38ef71953be0cf61bb02396531c">__construct</a> (ContainerInterface $container, RESTRequest $request)</td></tr>
+<tr class="memitem:a3914edb82f2924df2faa2c475180f9e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a3914edb82f2924df2faa2c475180f9e6">__construct</a> (ContainerInterface $container, RESTRequest $request, CsrfProviderInterface $csrfProvider=null)</td></tr>
 <tr class="memitem:acfe23a2ce83e39f17483046f697c67d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#acfe23a2ce83e39f17483046f697c67d7">onKernelResultView</a> (GetResponseForControllerResultEvent $event)</td></tr>
 <tr class="memitem:a4367313495975c18c874ed582c39bdd6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a4367313495975c18c874ed582c39bdd6">onKernelExceptionView</a> (GetResponseForExceptionEvent $event)</td></tr>
+<tr class="memitem:a580c7cb152c3c4421f64d81b1fe7e28c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a580c7cb152c3c4421f64d81b1fe7e28c">onKernelRequest</a> (GetResponseEvent $event)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a1b26491d3a1937dbe5421a3a74e8b8e3"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a1b26491d3a1937dbe5421a3a74e8b8e3">getSubscribedEvents</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aab51b4acb72609f6f16fdc135088d2b2"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#aab51b4acb72609f6f16fdc135088d2b2">CSRF_TOKEN_HEADER</a> = &quot;X-CSRF-Token&quot;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -150,9 +156,9 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><p>This class listens, as a service, for the kernel.view event, triggered when a controller method didn't return a Response object.</p>
 <p>It converts the RestValue / Value Object to a Response using Visitors </p>
 
-<p>Definition at line <a class="el" href="RestListener_8php_source.html#l00029">29</a> of file <a class="el" href="RestListener_8php_source.html">RestListener.php</a>.</p>
+<p>Definition at line <a class="el" href="RestListener_8php_source.html#l00031">31</a> of file <a class="el" href="RestListener_8php_source.html">RestListener.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a1c6ad38ef71953be0cf61bb02396531c"></a>
+<a class="anchor" id="a3914edb82f2924df2faa2c475180f9e6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -166,7 +172,13 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">RESTRequest&#160;</td>
-          <td class="paramname"><em>$request</em>&#160;</td>
+          <td class="paramname"><em>$request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CsrfProviderInterface&#160;</td>
+          <td class="paramname"><em>$csrfProvider</em> = <code>null</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -179,14 +191,16 @@ Protected Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramtype">\Symfony\Component\DependencyInjection\ContainerInterface</td><td class="paramname">$container</td><td></td></tr>
     <tr><td class="paramtype">\eZ\Publish\Core\REST\Server\Request</td><td class="paramname">$request</td><td></td></tr>
+    <tr><td class="paramtype">\Symfony\Component\Form\Extension\Csrf\CsrfProvider\CsrfProviderInterface</td><td class="paramname">$csrfProvider</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="RestListener_8php_source.html#l00045">45</a> of file <a class="el" href="RestListener_8php_source.html">RestListener.php</a>.</p>
+<p>Definition at line <a class="el" href="RestListener_8php_source.html#l00058">58</a> of file <a class="el" href="RestListener_8php_source.html">RestListener.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;container = $container;</div>
 <div class="line">        $this-&gt;request = $request;</div>
+<div class="line">        $this-&gt;csrfProvider = $csrfProvider;</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 </div>
@@ -214,13 +228,12 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
-<p>Definition at line <a class="el" href="RestListener_8php_source.html#l00054">54</a> of file <a class="el" href="RestListener_8php_source.html">RestListener.php</a>.</p>
+<p>Definition at line <a class="el" href="RestListener_8php_source.html#l00068">68</a> of file <a class="el" href="RestListener_8php_source.html">RestListener.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> array(</div>
 <div class="line">            KernelEvents::VIEW =&gt; <span class="stringliteral">&#39;onKernelResultView&#39;</span>,</div>
 <div class="line">            KernelEvents::EXCEPTION =&gt; <span class="stringliteral">&#39;onKernelExceptionView&#39;</span>,</div>
-<div class="line">            <span class="comment">// @todo delete completely when this auth. method has been totally removed</span></div>
-<div class="line">            <span class="comment">// KernelEvents::REQUEST =&gt; &#39;onKernelRequest&#39;</span></div>
+<div class="line">            KernelEvents::REQUEST =&gt; <span class="stringliteral">&#39;onKernelRequest&#39;</span></div>
 <div class="line">        );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
@@ -255,7 +268,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
 
-<p>Definition at line <a class="el" href="RestListener_8php_source.html#l00131">131</a> of file <a class="el" href="RestListener_8php_source.html">RestListener.php</a>.</p>
+<p>Definition at line <a class="el" href="RestListener_8php_source.html#l00160">160</a> of file <a class="el" href="RestListener_8php_source.html">RestListener.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> ( strpos( $request-&gt;getPathInfo(), <span class="stringliteral">&#39;/api/ezp/v2/&#39;</span> ) === 0 );</div>
 <div class="line">    }</div>
@@ -267,7 +280,7 @@ Protected Member Functions</h2></td></tr>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_aac6e8a59f5a6dd769a044263a5ec7332_icgraph.png" border="0" usemap="#classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_aac6e8a59f5a6dd769a044263a5ec7332_icgraph" alt=""/></div>
 <map name="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_aac6e8a59f5a6dd769a044263a5ec7332_icgraph" id="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_aac6e8a59f5a6dd769a044263a5ec7332_icgraph">
-<area shape="rect" id="node3" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#acfe23a2ce83e39f17483046f697c67d7" title="eZ\\Bundle\\EzPublishRestBundle\l\\EventListener\\RestListener\l\\onKernelResultView" alt="" coords="279,5,500,69"/><area shape="rect" id="node5" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a4367313495975c18c874ed582c39bdd6" title="eZ\\Bundle\\EzPublishRestBundle\l\\EventListener\\RestListener\l\\onKernelExceptionView" alt="" coords="279,93,500,157"/></map>
+<area shape="rect" id="node3" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#acfe23a2ce83e39f17483046f697c67d7" title="eZ\\Bundle\\EzPublishRestBundle\l\\EventListener\\RestListener\l\\onKernelResultView" alt="" coords="279,5,500,69"/><area shape="rect" id="node5" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a4367313495975c18c874ed582c39bdd6" title="eZ\\Bundle\\EzPublishRestBundle\l\\EventListener\\RestListener\l\\onKernelExceptionView" alt="" coords="279,93,500,157"/><area shape="rect" id="node7" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a580c7cb152c3c4421f64d81b1fe7e28c" title="eZ\\Bundle\\EzPublishRestBundle\l\\EventListener\\RestListener\l\\onKernelRequest" alt="" coords="279,181,500,245"/></map>
 </div>
 </p>
 
@@ -300,9 +313,9 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Definition at line <a class="el" href="RestListener_8php_source.html#l00091">91</a> of file <a class="el" href="RestListener_8php_source.html">RestListener.php</a>.</p>
+<p>Definition at line <a class="el" href="RestListener_8php_source.html#l00104">104</a> of file <a class="el" href="RestListener_8php_source.html">RestListener.php</a>.</p>
 
-<p>References <a class="el" href="RestListener_8php_source.html#l00131">eZ\Bundle\EzPublishRestBundle\EventListener\RestListener\isRestRequest()</a>, and <a class="el" href="RestListener_8php_source.html#l00141">eZ\Bundle\EzPublishRestBundle\EventListener\RestListener\visitResult()</a>.</p>
+<p>References <a class="el" href="RestListener_8php_source.html#l00160">eZ\Bundle\EzPublishRestBundle\EventListener\RestListener\isRestRequest()</a>, and <a class="el" href="RestListener_8php_source.html#l00170">eZ\Bundle\EzPublishRestBundle\EventListener\RestListener\visitResult()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $event-&gt;getRequestType() !== HttpKernelInterface::MASTER_REQUEST )</div>
 <div class="line">            <span class="keywordflow">return</span>;</div>
@@ -324,6 +337,78 @@ Protected Member Functions</h2></td></tr>
 <div class="center"><img src="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_a4367313495975c18c874ed582c39bdd6_cgraph.png" border="0" usemap="#classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_a4367313495975c18c874ed582c39bdd6_cgraph" alt=""/></div>
 <map name="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_a4367313495975c18c874ed582c39bdd6_cgraph" id="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_a4367313495975c18c874ed582c39bdd6_cgraph">
 <area shape="rect" id="node3" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#aac6e8a59f5a6dd769a044263a5ec7332" title="eZ\\Bundle\\EzPublishRestBundle\l\\EventListener\\RestListener\l\\isRestRequest" alt="" coords="279,5,500,69"/><area shape="rect" id="node5" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a71335f1b791c9b25fd3898ce22229c6b" title="eZ\\Bundle\\EzPublishRestBundle\l\\EventListener\\RestListener\l\\visitResult" alt="" coords="279,93,500,157"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a580c7cb152c3c4421f64d81b1fe7e28c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eZ\Bundle\EzPublishRestBundle\EventListener\RestListener::onKernelRequest </td>
+          <td>(</td>
+          <td class="paramtype">GetResponseEvent&#160;</td>
+          <td class="paramname"><em>$event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This method validates CSRF token if CSRF protection is enabled.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">\Symfony\Component\HttpKernel\Event\GetResponseEvent</td><td class="paramname">$event</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">\eZ\Publish\Core\Base\Exceptions\UnauthorizedException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="RestListener_8php_source.html#l00125">125</a> of file <a class="el" href="RestListener_8php_source.html">RestListener.php</a>.</p>
+
+<p>References <a class="el" href="RestListener_8php_source.html#l00160">eZ\Bundle\EzPublishRestBundle\EventListener\RestListener\isRestRequest()</a>.</p>
+<div class="fragment"><div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> ( !$this-&gt;container-&gt;getParameter( <span class="stringliteral">&#39;form.type_extension.csrf.enabled&#39;</span> ) )</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> ( $event-&gt;getRequestType() !== HttpKernelInterface::MASTER_REQUEST )</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> ( !$this-&gt;<a class="code" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#aac6e8a59f5a6dd769a044263a5ec7332">isRestRequest</a>( $event-&gt;getRequest() ) )</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> ( in_array( $event-&gt;getRequest()-&gt;getMethod(), array( <span class="stringliteral">&#39;GET&#39;</span>, <span class="stringliteral">&#39;HEAD&#39;</span> ) ) )</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// TODO: add CSRF token to protect against force-login attacks</span></div>
+<div class="line">        <span class="keywordflow">if</span> ( $event-&gt;getRequest()-&gt;get( <span class="stringliteral">&quot;_route&quot;</span> ) == <span class="stringliteral">&quot;ezpublish_rest_createSession&quot;</span> )</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> (</div>
+<div class="line">            !$event-&gt;getRequest()-&gt;headers-&gt;has( self::CSRF_TOKEN_HEADER )</div>
+<div class="line">            || !$this-&gt;csrfProvider-&gt;isCsrfTokenValid( <span class="stringliteral">&#39;rest&#39;</span>, $event-&gt;getRequest()-&gt;headers-&gt;get( self::CSRF_TOKEN_HEADER ) )</div>
+<div class="line">        )</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> UnauthorizedException(</div>
+<div class="line">                <span class="stringliteral">&quot;Missing or invalid CSRF token&quot;</span>,</div>
+<div class="line">                $event-&gt;getRequest()-&gt;getMethod() . <span class="stringliteral">&quot; &quot;</span> . $event-&gt;getRequest()-&gt;getPathInfo()</div>
+<div class="line">            );</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_a580c7cb152c3c4421f64d81b1fe7e28c_cgraph.png" border="0" usemap="#classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_a580c7cb152c3c4421f64d81b1fe7e28c_cgraph" alt=""/></div>
+<map name="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_a580c7cb152c3c4421f64d81b1fe7e28c_cgraph" id="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_a580c7cb152c3c4421f64d81b1fe7e28c_cgraph">
+<area shape="rect" id="node3" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#aac6e8a59f5a6dd769a044263a5ec7332" title="eZ\\Bundle\\EzPublishRestBundle\l\\EventListener\\RestListener\l\\isRestRequest" alt="" coords="279,5,500,69"/></map>
 </div>
 </p>
 
@@ -355,9 +440,9 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="RestListener_8php_source.html#l00070">70</a> of file <a class="el" href="RestListener_8php_source.html">RestListener.php</a>.</p>
+<p>Definition at line <a class="el" href="RestListener_8php_source.html#l00083">83</a> of file <a class="el" href="RestListener_8php_source.html">RestListener.php</a>.</p>
 
-<p>References <a class="el" href="RestListener_8php_source.html#l00131">eZ\Bundle\EzPublishRestBundle\EventListener\RestListener\isRestRequest()</a>, and <a class="el" href="RestListener_8php_source.html#l00141">eZ\Bundle\EzPublishRestBundle\EventListener\RestListener\visitResult()</a>.</p>
+<p>References <a class="el" href="RestListener_8php_source.html#l00160">eZ\Bundle\EzPublishRestBundle\EventListener\RestListener\isRestRequest()</a>, and <a class="el" href="RestListener_8php_source.html#l00170">eZ\Bundle\EzPublishRestBundle\EventListener\RestListener\visitResult()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> ( $event-&gt;getRequestType() !== HttpKernelInterface::MASTER_REQUEST )</div>
 <div class="line">            <span class="keywordflow">return</span>;</div>
@@ -371,11 +456,11 @@ Protected Member Functions</h2></td></tr>
 <div class="line">        $event-&gt;stopPropagation();</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_acfe23a2ce83e39f17483046f697c67d7_cgraph.png" border="0" usemap="#classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_acfe23a2ce83e39f17483046f697c67d7_cgraph" alt=""/></div>
 <map name="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_acfe23a2ce83e39f17483046f697c67d7_cgraph" id="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_acfe23a2ce83e39f17483046f697c67d7_cgraph">
 <area shape="rect" id="node3" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#aac6e8a59f5a6dd769a044263a5ec7332" title="eZ\\Bundle\\EzPublishRestBundle\l\\EventListener\\RestListener\l\\isRestRequest" alt="" coords="279,5,500,69"/><area shape="rect" id="node5" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a71335f1b791c9b25fd3898ce22229c6b" title="eZ\\Bundle\\EzPublishRestBundle\l\\EventListener\\RestListener\l\\visitResult" alt="" coords="279,93,500,157"/></map>
@@ -413,7 +498,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="RestListener_8php_source.html#l00141">141</a> of file <a class="el" href="RestListener_8php_source.html">RestListener.php</a>.</p>
+<p>Definition at line <a class="el" href="RestListener_8php_source.html#l00170">170</a> of file <a class="el" href="RestListener_8php_source.html">RestListener.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="comment">// visit response</span></div>
 <div class="line">        $viewDispatcher = $this-&gt;container-&gt;get( <span class="stringliteral">&#39;ezpublish_rest.response_visitor_dispatcher&#39;</span> );</div>
@@ -423,16 +508,32 @@ Protected Member Functions</h2></td></tr>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> Response( $message-&gt;body, $message-&gt;statusCode, $message-&gt;headers );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_a71335f1b791c9b25fd3898ce22229c6b_icgraph.png" border="0" usemap="#classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_a71335f1b791c9b25fd3898ce22229c6b_icgraph" alt=""/></div>
 <map name="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_a71335f1b791c9b25fd3898ce22229c6b_icgraph" id="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener_a71335f1b791c9b25fd3898ce22229c6b_icgraph">
 <area shape="rect" id="node3" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#acfe23a2ce83e39f17483046f697c67d7" title="eZ\\Bundle\\EzPublishRestBundle\l\\EventListener\\RestListener\l\\onKernelResultView" alt="" coords="279,5,500,69"/><area shape="rect" id="node5" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html#a4367313495975c18c874ed582c39bdd6" title="eZ\\Bundle\\EzPublishRestBundle\l\\EventListener\\RestListener\l\\onKernelExceptionView" alt="" coords="279,93,500,157"/></map>
 </div>
 </p>
+
+</div>
+</div>
+<h2>Member Data Documentation</h2>
+<a class="anchor" id="aab51b4acb72609f6f16fdc135088d2b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const eZ\Bundle\EzPublishRestBundle\EventListener\RestListener::CSRF_TOKEN_HEADER = &quot;X-CSRF-Token&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Name of the HTTP header containing CSRF token. </p>
+
+<p>Definition at line <a class="el" href="RestListener_8php_source.html#l00036">36</a> of file <a class="el" href="RestListener_8php_source.html">RestListener.php</a>.</p>
 
 </div>
 </div>
@@ -445,7 +546,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle.html">Bundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishRestBundle.html">EzPublishRestBundle</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener.html">EventListener</a></li><li class="navelem"><a class="el" href="classeZ_1_1Bundle_1_1EzPublishRestBundle_1_1EventListener_1_1RestListener.html">RestListener</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:53 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:52 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

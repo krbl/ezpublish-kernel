@@ -9,7 +9,7 @@ var searchData=
   ['gateway_2ephp',['Gateway.php',['../Persistence_2Legacy_2Content_2Gateway_8php.html',1,'']]],
   ['gateway_2ephp',['Gateway.php',['../Persistence_2Legacy_2User_2Gateway_8php.html',1,'']]],
   ['gateway_2ephp',['Gateway.php',['../Persistence_2Legacy_2User_2Role_2Gateway_8php.html',1,'']]],
-  ['gateway_2ephp',['Gateway.php',['../FieldType_2Relation_2RelationStorage_2Gateway_8php.html',1,'']]],
+  ['gateway_2ephp',['Gateway.php',['../FieldType_2Page_2PageStorage_2Gateway_8php.html',1,'']]],
   ['gateway_2ephp',['Gateway.php',['../Persistence_2Legacy_2Content_2Language_2Gateway_8php.html',1,'']]],
   ['gateway_2ephp',['Gateway.php',['../Persistence_2Solr_2Content_2Search_2Gateway_8php.html',1,'']]],
   ['gateway_2ephp',['Gateway.php',['../Persistence_2Legacy_2Content_2Location_2Gateway_8php.html',1,'']]],

@@ -1,18 +1,21 @@
 var dir_794bb8c3b1f6d3485af019908e623ced =
 [
+    [ "Conflict.php", "Values_2Conflict_8php.html", [
+      [ "Conflict", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1Conflict.html", null ]
+    ] ],
     [ "ContentList.php", "Server_2Values_2ContentList_8php.html", [
       [ "ContentList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentList" ]
     ] ],
-    [ "ContentTypeGroupList.php", "Values_2ContentTypeGroupList_8php.html", [
+    [ "ContentTypeGroupList.php", "Server_2Values_2ContentTypeGroupList_8php.html", [
       [ "ContentTypeGroupList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentTypeGroupList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentTypeGroupList" ]
     ] ],
-    [ "ContentTypeGroupRefList.php", "Values_2ContentTypeGroupRefList_8php.html", [
+    [ "ContentTypeGroupRefList.php", "Server_2Values_2ContentTypeGroupRefList_8php.html", [
       [ "ContentTypeGroupRefList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentTypeGroupRefList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentTypeGroupRefList" ]
     ] ],
     [ "ContentTypeInfoList.php", "Values_2ContentTypeInfoList_8php.html", [
       [ "ContentTypeInfoList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentTypeInfoList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentTypeInfoList" ]
     ] ],
-    [ "ContentTypeList.php", "Values_2ContentTypeList_8php.html", [
+    [ "ContentTypeList.php", "Server_2Values_2ContentTypeList_8php.html", [
       [ "ContentTypeList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentTypeList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentTypeList" ]
     ] ],
     [ "CreatedContent.php", "Values_2CreatedContent_8php.html", [
@@ -150,6 +153,12 @@ var dir_794bb8c3b1f6d3485af019908e623ced =
     [ "SectionList.php", "Server_2Values_2SectionList_8php.html", [
       [ "SectionList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1SectionList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1SectionList" ]
     ] ],
+    [ "SeeOther.php", "Values_2SeeOther_8php.html", [
+      [ "SeeOther", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1SeeOther.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1SeeOther" ]
+    ] ],
+    [ "SessionInput.php", "Values_2SessionInput_8php.html", [
+      [ "SessionInput", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1SessionInput.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1SessionInput" ]
+    ] ],
     [ "TemporaryRedirect.php", "Values_2TemporaryRedirect_8php.html", [
       [ "TemporaryRedirect", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1TemporaryRedirect.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1TemporaryRedirect" ]
     ] ],
@@ -176,6 +185,9 @@ var dir_794bb8c3b1f6d3485af019908e623ced =
     ] ],
     [ "UserRefList.php", "Values_2UserRefList_8php.html", [
       [ "UserRefList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1UserRefList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1UserRefList" ]
+    ] ],
+    [ "UserSession.php", "Values_2UserSession_8php.html", [
+      [ "UserSession", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1UserSession.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1UserSession" ]
     ] ],
     [ "Version.php", "Values_2Version_8php.html", [
       [ "Version", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1Version.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1Version" ]

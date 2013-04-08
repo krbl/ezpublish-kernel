@@ -9,5 +9,8 @@ var dir_17a9c07ddfa3683b7390fac7ea99beb5 =
     ] ],
     [ "Mapper.php", "Content_2UrlAlias_2Mapper_8php.html", [
       [ "Mapper", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Mapper.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1Mapper" ]
+    ] ],
+    [ "SlugConverter.php", "SlugConverter_8php.html", [
+      [ "SlugConverter", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1SlugConverter.html", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1UrlAlias_1_1SlugConverter" ]
     ] ]
 ];

@@ -120,22 +120,27 @@ $(document).ready(function(){initNavTree('Core_2MVC_2Symfony_2View_2ContentViewP
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher_1_1Id_1_1ContentTypeGroup.html#ae5b7a9ff1f7c851a1a6833fb5d17e5d8">   37</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1View_1_1ContentViewProvider_1_1Configured_1_1Matcher.html#ad18720d26a08ac166db20722479b6d2f">matchContentInfo</a>( <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html">ContentInfo</a> $contentInfo )</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">foreach</span> ( $contentInfo-&gt;<a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#aa834a8638bceb3839a77a5e4fa7f96db">getContentType</a>()-&gt;getContentTypeGroups() as $group )</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">if</span> ( isset( $this-&gt;values[$group-&gt;id] ) )</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        $contentTypeGroups = $this-&gt;repository</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            -&gt;getContentTypeService()</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            -&gt;loadContentType( $contentInfo-&gt;contentTypeId )</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            -&gt;getContentTypeGroups();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">foreach</span> ( $contentTypeGroups as $group )</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">if</span> ( isset( $this-&gt;values[$group-&gt;id] ) )</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_3f2bbbda4a8cf240a23a45721a8bf194.html">MVC</a></li><li class="navelem"><a class="el" href="dir_2823f14ad24d7d09ba467b2c5eb8153a.html">Symfony</a></li><li class="navelem"><a class="el" href="dir_b728b0f64cb99c52f73702f6a6bc11e3.html">View</a></li><li class="navelem"><a class="el" href="dir_0867622ae50de3946694bf0620ad9918.html">ContentViewProvider</a></li><li class="navelem"><a class="el" href="dir_cdd13fbd6e9e2969ecaeb2a3b8ae7bce.html">Configured</a></li><li class="navelem"><a class="el" href="dir_b4f5240926cc4cea6967f12d558b8faa.html">Matcher</a></li><li class="navelem"><a class="el" href="dir_b140f40efa268f5fa1d6c7d69696d38a.html">Id</a></li><li class="navelem"><a class="el" href="Core_2MVC_2Symfony_2View_2ContentViewProvider_2Configured_2Matcher_2Id_2ContentTypeGroup_8php.html">ContentTypeGroup.php</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:49 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:47 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

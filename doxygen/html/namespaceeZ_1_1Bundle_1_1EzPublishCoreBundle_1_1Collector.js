@@ -1,0 +1,4 @@
+var namespaceeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Collector =
+[
+    [ "SPIPersistenceDataCollector", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Collector_1_1SPIPersistenceDataCollector.html", "classeZ_1_1Bundle_1_1EzPublishCoreBundle_1_1Collector_1_1SPIPersistenceDataCollector" ]
+];

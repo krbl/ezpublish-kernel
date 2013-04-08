@@ -116,6 +116,7 @@ $(document).ready(function(){initNavTree('classeZ_1_1Publish_1_1Core_1_1Persiste
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abdc9a1ef7e35fc71873162f02f298e2a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageHandler.html#abdc9a1ef7e35fc71873162f02f298e2a">__construct</a> (<a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageRegistry.html">StorageRegistry</a> $storageRegistry, array $context)</td></tr>
 <tr class="memitem:a1184fe2c58ac44ae8c5db939684e255d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageHandler.html#a1184fe2c58ac44ae8c5db939684e255d">storeFieldData</a> (<a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, <a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field)</td></tr>
+<tr class="memitem:a71974013f52a6d895c9c86db2960a560"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageHandler.html#a71974013f52a6d895c9c86db2960a560">copyFieldData</a> (<a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, <a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field, <a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $originalField)</td></tr>
 <tr class="memitem:a74662dbcb435cd81b9c59939135ddf97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageHandler.html#a74662dbcb435cd81b9c59939135ddf97">getFieldData</a> (<a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, <a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a> $field)</td></tr>
 <tr class="memitem:aac494b02a04c7ce7951c7485e179c1f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageHandler.html#aac494b02a04c7ce7951c7485e179c1f9">deleteFieldData</a> ($fieldType, <a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a> $versionInfo, array $ids)</td></tr>
 </table><table class="memberdecls">
@@ -172,6 +173,57 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2>Member Function Documentation</h2>
+<a class="anchor" id="a71974013f52a6d895c9c86db2960a560"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler::copyFieldData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1VersionInfo.html">VersionInfo</a>&#160;</td>
+          <td class="paramname"><em>$versionInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a>&#160;</td>
+          <td class="paramname"><em>$field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content_1_1Field.html">Field</a>&#160;</td>
+          <td class="paramname"><em>$originalField</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">\eZ\Publish\SPI\Persistence\Content\VersionInfo</td><td class="paramname">$versionInfo</td><td></td></tr>
+    <tr><td class="paramtype">\eZ\Publish\SPI\Persistence\Content\Field</td><td class="paramname">$field</td><td></td></tr>
+    <tr><td class="paramtype">\eZ\Publish\SPI\Persistence\Content\Field</td><td class="paramname">$originalField</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+<p>Definition at line <a class="el" href="StorageHandler_8php_source.html#l00072">72</a> of file <a class="el" href="StorageHandler_8php_source.html">StorageHandler.php</a>.</p>
+<div class="fragment"><div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> $this-&gt;storageRegistry-&gt;getStorage( $field-&gt;type )-&gt;copyLegacyField(</div>
+<div class="line">            <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html#a84b1b1ffdd9ab42ec9750189944f5638">$versionInfo</a>,</div>
+<div class="line">            $field,</div>
+<div class="line">            $originalField,</div>
+<div class="line">            $this-&gt;context</div>
+<div class="line">        );</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a class="anchor" id="aac494b02a04c7ce7951c7485e179c1f9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -212,7 +264,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Definition at line <a class="el" href="StorageHandler_8php_source.html#l00085">85</a> of file <a class="el" href="StorageHandler_8php_source.html">StorageHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="StorageHandler_8php_source.html#l00108">108</a> of file <a class="el" href="StorageHandler_8php_source.html">StorageHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;storageRegistry-&gt;getStorage( $fieldType )</div>
 <div class="line">            -&gt;deleteFieldData( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html#a84b1b1ffdd9ab42ec9750189944f5638">$versionInfo</a>, $ids, $this-&gt;context );</div>
@@ -253,7 +305,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Definition at line <a class="el" href="StorageHandler_8php_source.html#l00067">67</a> of file <a class="el" href="StorageHandler_8php_source.html">StorageHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="StorageHandler_8php_source.html#l00090">90</a> of file <a class="el" href="StorageHandler_8php_source.html">StorageHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $storage = $this-&gt;storageRegistry-&gt;getStorage( $field-&gt;type );</div>
 <div class="line">        <span class="keywordflow">if</span> ( $storage-&gt;hasFieldData() )</div>
@@ -299,7 +351,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="StorageHandler_8php_source.html#l00054">54</a> of file <a class="el" href="StorageHandler_8php_source.html">StorageHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        <span class="keywordflow">return</span> $this-&gt;storageRegistry-&gt;getStorage( $field-&gt;type )-&gt;storeFieldData( <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html#a84b1b1ffdd9ab42ec9750189944f5638">$versionInfo</a>, $field, $this-&gt;context );</div>
+<div class="line">        <span class="keywordflow">return</span> $this-&gt;storageRegistry-&gt;getStorage( $field-&gt;type )-&gt;storeFieldData(</div>
+<div class="line">            <a class="code" href="classeZ_1_1Publish_1_1SPI_1_1Persistence_1_1Content.html#a84b1b1ffdd9ab42ec9750189944f5638">$versionInfo</a>,</div>
+<div class="line">            $field,</div>
+<div class="line">            $this-&gt;context</div>
+<div class="line">        );</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 </div>
@@ -358,7 +414,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence.html">Persistence</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content.html">Content</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Legacy_1_1Content_1_1StorageHandler.html">StorageHandler</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:57 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:56 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -4,7 +4,7 @@ var interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService =
     [ "addTranslationInfo", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#a369f1d1b7482f30d40e9f416bd91faf2", null ],
     [ "copyContent", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#a721a1a93686fd6f5eb16b51bb7293bc3", null ],
     [ "createContent", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#ab375019e40856e9cbc9bf9b4e66eb152", null ],
-    [ "createContentDraft", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#adba23db408a6ede947f57e2c73687abd", null ],
+    [ "createContentDraft", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#a9c12bcfaf57d2404aaeea3b642d73f0d", null ],
     [ "deleteContent", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#a0b59841d3e0231264b9fc7e727391956", null ],
     [ "deleteRelation", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#aea31ecfe91afa76ed2630200c9df92ff", null ],
     [ "deleteVersion", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#a9bea68b47d3890f87edb27adeffb9939", null ],
@@ -27,7 +27,7 @@ var interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService =
     [ "newTranslationInfo", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#abc6bb85fd2356e42d21436b4ecb9ac2b", null ],
     [ "newTranslationValues", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#a7193fa324b4c7375a36cdd5addac5a44", null ],
     [ "publishVersion", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#a69f47ebd69e20bb07e29b21ba51b6a0e", null ],
-    [ "translateVersion", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#a7eadba6e449cb073a6d35e4edfa3201a", null ],
+    [ "translateVersion", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#ac2b62fb810c15556dab1ddd5110bc6fd", null ],
     [ "updateContent", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#a5c4a6e58f1869dd9ee0f75989adc168a", null ],
     [ "updateContentMetadata", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1ContentService.html#a59a1f6a2305deb082d1b9b60d400c267", null ]
 ];

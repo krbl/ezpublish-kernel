@@ -13,9 +13,6 @@ var dir_57883f88f9071375c384973424cd03e2 =
     [ "FieldTypeTools.php", "Core_2Repository_2FieldTypeTools_8php.html", [
       [ "FieldTypeTools", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1FieldTypeTools.html", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1FieldTypeTools" ]
     ] ],
-    [ "IOService.php", "Core_2Repository_2IOService_8php.html", [
-      [ "IOService", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1IOService.html", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1IOService" ]
-    ] ],
     [ "LanguageService.php", "Core_2Repository_2LanguageService_8php.html", [
       [ "LanguageService", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1LanguageService.html", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1LanguageService" ]
     ] ],
@@ -27,6 +24,9 @@ var dir_57883f88f9071375c384973424cd03e2 =
     ] ],
     [ "ObjectStateService.php", "Core_2Repository_2ObjectStateService_8php.html", [
       [ "ObjectStateService", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService.html", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1ObjectStateService" ]
+    ] ],
+    [ "RelationProcessor.php", "RelationProcessor_8php.html", [
+      [ "RelationProcessor", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1RelationProcessor.html", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1RelationProcessor" ]
     ] ],
     [ "Repository.php", "Core_2Repository_2Repository_8php.html", [
       [ "Repository", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Repository.html", "classeZ_1_1Publish_1_1Core_1_1Repository_1_1Repository" ]

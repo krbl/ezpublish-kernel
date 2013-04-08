@@ -8,7 +8,6 @@ var interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository =
     [ "getContentTypeService", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html#acb00a20a06e10293380efaa62dbbf014", null ],
     [ "getCurrentUser", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html#afe8e293fd986deb8b6d89704dd4d918b", null ],
     [ "getFieldTypeService", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html#aefb60c2ae2c95e9ebf468b9e29e8b54f", null ],
-    [ "getIOService", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html#add377eae6012f0e2f4a66d7e91982095", null ],
     [ "getLocationService", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html#a7485278fd0032e01b3ed0ce90e17d75b", null ],
     [ "getObjectStateService", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html#a326c6f66b0244da69ddde2b46cf4bf62", null ],
     [ "getRoleService", "interfaceeZ_1_1Publish_1_1API_1_1Repository_1_1Repository.html#a3ebdf46253c82b052bbaaa9d2d93f837", null ],

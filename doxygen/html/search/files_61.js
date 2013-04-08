@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['abstracthandler_2ephp',['AbstractHandler.php',['../AbstractHandler_8php.html',1,'']]],
   ['abstractlegacyslot_2ephp',['AbstractLegacySlot.php',['../AbstractLegacySlot_8php.html',1,'']]],
   ['abstractparser_2ephp',['AbstractParser.php',['../AbstractParser_8php.html',1,'']]],
   ['acceptheadervisitordispatcher_2ephp',['AcceptHeaderVisitorDispatcher.php',['../AcceptHeaderVisitorDispatcher_8php.html',1,'']]],
@@ -10,10 +11,10 @@ var searchData=
   ['addpolicysignal_2ephp',['AddPolicySignal.php',['../AddPolicySignal_8php.html',1,'']]],
   ['addrelationsignal_2ephp',['AddRelationSignal.php',['../AddRelationSignal_8php.html',1,'']]],
   ['addtranslationinfosignal_2ephp',['AddTranslationInfoSignal.php',['../AddTranslationInfoSignal_8php.html',1,'']]],
+  ['aggregate_2ephp',['Aggregate.php',['../CriterionVisitor_2Aggregate_8php.html',1,'']]],
+  ['aggregate_2ephp',['Aggregate.php',['../FacetBuilderVisitor_2Aggregate_8php.html',1,'']]],
   ['aggregate_2ephp',['Aggregate.php',['../FieldValueMapper_2Aggregate_8php.html',1,'']]],
   ['aggregate_2ephp',['Aggregate.php',['../SortClauseVisitor_2Aggregate_8php.html',1,'']]],
-  ['aggregate_2ephp',['Aggregate.php',['../FacetBuilderVisitor_2Aggregate_8php.html',1,'']]],
-  ['aggregate_2ephp',['Aggregate.php',['../CriterionVisitor_2Aggregate_8php.html',1,'']]],
   ['aliasgenerator_2ephp',['AliasGenerator.php',['../AliasGenerator_8php.html',1,'']]],
   ['apicontentconverter_2ephp',['ApiContentConverter.php',['../ApiContentConverter_8php.html',1,'']]],
   ['apicontentexceptionevent_2ephp',['APIContentExceptionEvent.php',['../APIContentExceptionEvent_8php.html',1,'']]],
@@ -30,7 +31,7 @@ var searchData=
   ['authenticatingdispatcher_2ephp',['AuthenticatingDispatcher.php',['../AuthenticatingDispatcher_8php.html',1,'']]],
   ['authenticationfailedexception_2ephp',['AuthenticationFailedException.php',['../AuthenticationFailedException_8php.html',1,'']]],
   ['authenticator_2ephp',['Authenticator.php',['../Authenticator_8php.html',1,'']]],
-  ['author_2ephp',['Author.php',['../Persistence_2Legacy_2Content_2FieldValue_2Converter_2Author_8php.html',1,'']]],
   ['author_2ephp',['Author.php',['../FieldType_2Author_2Author_8php.html',1,'']]],
+  ['author_2ephp',['Author.php',['../Persistence_2Legacy_2Content_2FieldValue_2Converter_2Author_8php.html',1,'']]],
   ['authorcollection_2ephp',['AuthorCollection.php',['../AuthorCollection_8php.html',1,'']]]
 ];

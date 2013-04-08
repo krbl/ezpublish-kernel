@@ -219,15 +219,15 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000108">Todo:</a></b></dt><dd><p class="startdd">Error handling </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000110">Todo:</a></b></dt><dd><p class="startdd">Error handling </p>
 <p class="enddd">What about missing properties? Set them here, using the service to load? Or better set them in the service, since loading is really unsuitable here? </p>
 </dd></dl>
 
 <p>Definition at line <a class="el" href="Core_2REST_2Client_2Input_2Parser_2ContentInfo_8php_source.html#l00057">57</a> of file <a class="el" href="Core_2REST_2Client_2Input_2Parser_2ContentInfo_8php_source.html">ContentInfo.php</a>.</p>
 
-<p>References <a class="el" href="API_2Repository_2Values_2Content_2ContentInfo_8php_source.html#l00123">eZ\Publish\API\Repository\Values\Content\ContentInfo\$mainLocationId</a>, <a class="el" href="API_2Repository_2Values_2Content_2ContentInfo_8php_source.html#l00081">eZ\Publish\API\Repository\Values\Content\ContentInfo\$ownerId</a>, <a class="el" href="API_2Repository_2Values_2Content_2ContentInfo_8php_source.html#l00095">eZ\Publish\API\Repository\Values\Content\ContentInfo\$publishedDate</a>, <a class="el" href="API_2Repository_2Values_2Content_2ContentInfo_8php_source.html#l00059">eZ\Publish\API\Repository\Values\Content\ContentInfo\$sectionId</a>, and <a class="el" href="Core_2REST_2Client_2Input_2Parser_2ContentInfo_8php_source.html#l00057">eZ\Publish\Core\REST\Client\Input\Parser\ContentInfo\parse()</a>.</p>
+<p>References <a class="el" href="API_2Repository_2Values_2Content_2ContentInfo_8php_source.html#l00044">eZ\Publish\API\Repository\Values\Content\ContentInfo\$contentTypeId</a>, <a class="el" href="API_2Repository_2Values_2Content_2ContentInfo_8php_source.html#l00120">eZ\Publish\API\Repository\Values\Content\ContentInfo\$mainLocationId</a>, <a class="el" href="API_2Repository_2Values_2Content_2ContentInfo_8php_source.html#l00078">eZ\Publish\API\Repository\Values\Content\ContentInfo\$ownerId</a>, <a class="el" href="API_2Repository_2Values_2Content_2ContentInfo_8php_source.html#l00092">eZ\Publish\API\Repository\Values\Content\ContentInfo\$publishedDate</a>, <a class="el" href="API_2Repository_2Values_2Content_2ContentInfo_8php_source.html#l00056">eZ\Publish\API\Repository\Values\Content\ContentInfo\$sectionId</a>, and <a class="el" href="Core_2REST_2Client_2Input_2Parser_2ContentInfo_8php_source.html#l00057">eZ\Publish\Core\REST\Client\Input\Parser\ContentInfo\parse()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        $contentTypeId = $this-&gt;parserTools-&gt;parseObjectElement( $data[<span class="stringliteral">&#39;ContentType&#39;</span>], $parsingDispatcher );</div>
+<div class="line">        <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#a5e81db23a075d638a3f2fa3e857198e6">$contentTypeId</a> = $this-&gt;parserTools-&gt;parseObjectElement( $data[<span class="stringliteral">&#39;ContentType&#39;</span>], $parsingDispatcher );</div>
 <div class="line">        <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#a337450ab9b1fa34cfd0cac4f1e033783">$ownerId</a> = $this-&gt;parserTools-&gt;parseObjectElement( $data[<span class="stringliteral">&#39;Owner&#39;</span>], $parsingDispatcher );</div>
 <div class="line">        <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#a9921761c20c4ad5c549c7ae77892d513">$mainLocationId</a> = $this-&gt;parserTools-&gt;parseObjectElement( $data[<span class="stringliteral">&#39;MainLocation&#39;</span>], $parsingDispatcher );</div>
 <div class="line">        <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#aa6742b331853b708df27a0c281f9dc6b">$sectionId</a> = $this-&gt;parserTools-&gt;parseObjectElement( $data[<span class="stringliteral">&#39;Section&#39;</span>], $parsingDispatcher );</div>
@@ -245,7 +245,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">            array(</div>
 <div class="line">                <span class="stringliteral">&#39;id&#39;</span>   =&gt; $data[<span class="stringliteral">&#39;_href&#39;</span>],</div>
 <div class="line">                <span class="stringliteral">&#39;name&#39;</span> =&gt; $data[<span class="stringliteral">&#39;Name&#39;</span>],</div>
-<div class="line">                <span class="stringliteral">&#39;contentTypeId&#39;</span> =&gt; $contentTypeId,</div>
+<div class="line">                <span class="stringliteral">&#39;contentTypeId&#39;</span> =&gt; <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#a5e81db23a075d638a3f2fa3e857198e6">$contentTypeId</a>,</div>
 <div class="line">                <span class="stringliteral">&#39;ownerId&#39;</span> =&gt; <a class="code" href="classeZ_1_1Publish_1_1API_1_1Repository_1_1Values_1_1Content_1_1ContentInfo.html#a337450ab9b1fa34cfd0cac4f1e033783">$ownerId</a>,</div>
 <div class="line">                <span class="stringliteral">&#39;modificationDate&#39;</span> =&gt; <span class="keyword">new</span> \DateTime( $data[<span class="stringliteral">&#39;lastModificationDate&#39;</span>] ),</div>
 <div class="line"></div>
@@ -345,7 +345,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST.html">REST</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client.html">Client</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input.html">Input</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser.html">Parser</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Input_1_1Parser_1_1ContentInfo.html">ContentInfo</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:03:02 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:51:00 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

@@ -139,15 +139,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6ecb3c0a18f5c58f77252e837ca6cfce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#a6ecb3c0a18f5c58f77252e837ca6cfce">reInitialize</a> ()</td></tr>
 <tr class="memitem:ad86676dcbd4128de5c50d4fe13d6962e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#ad86676dcbd4128de5c50d4fe13d6962e">hasServiceContainer</a> ()</td></tr>
 <tr class="memitem:a0f15631a34ee3a33604eb6474c0611b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#a0f15631a34ee3a33604eb6474c0611b0">getServiceContainer</a> ()</td></tr>
+<tr class="memitem:abc411bde2f8f4f3777344b9989e414ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#abc411bde2f8f4f3777344b9989e414ec">setEmbeddedScriptPath</a> ($scriptPath)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a46824cb9ac81a9f17f6d1ce126b68b1f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#a46824cb9ac81a9f17f6d1ce126b68b1f">$script</a></td></tr>
 <tr class="memitem:a2d843b30de3a6fe6bfe55df96f7065c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#a2d843b30de3a6fe6bfe55df96f7065c3">$container</a></td></tr>
+<tr class="memitem:a4f072324ba80ae291cdedf5168def6f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#a4f072324ba80ae291cdedf5168def6f2">$sessionSettings</a></td></tr>
+<tr class="memitem:ac3c383a946c8baca37fea44816327480"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#ac3c383a946c8baca37fea44816327480">$embeddedScriptPath</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00019">19</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00021">21</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a1781934a3e8983f746ed0c6b420e3374"></a>
 <div class="memitem">
@@ -179,18 +182,22 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Constructor</p>
+<p>Additional valid settings for $settings :</p>
+<ul>
+<li>injected-settings : INI settings override</li>
+</ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramtype">array</td><td class="paramname">$settings</td><td>Settings to pass to  constructor. </td></tr>
+    <tr><td class="paramtype">array</td><td class="paramname">$settings</td><td>Settings to pass to eZScript constructor. </td></tr>
     <tr><td class="paramtype">\eZ\Publish\Core\MVC\Symfony\SiteAccess</td><td class="paramname">$siteAccess</td><td></td></tr>
     <tr><td class="paramtype">\Symfony\Component\DependencyInjection\ContainerInterface</td><td class="paramname">$container</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00038">38</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00053">53</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
 
-<p>References <a class="el" href="CLIHandler_8php_source.html#l00029">eZ\Publish\Core\MVC\Legacy\Kernel\CLIHandler\$container</a>.</p>
+<p>References <a class="el" href="CLIHandler_8php_source.html#l00031">eZ\Publish\Core\MVC\Legacy\Kernel\CLIHandler\$container</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;container = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html#a2d843b30de3a6fe6bfe55df96f7065c3">$container</a>;</div>
 <div class="line">        <span class="keywordflow">if</span> ( isset( $settings[<span class="stringliteral">&#39;injected-settings&#39;</span>] ) )</div>
@@ -204,14 +211,18 @@ Protected Attributes</h2></td></tr>
 <div class="line">            <span class="comment">// those settings override anything else in local .ini files and</span></div>
 <div class="line">            <span class="comment">// their overrides</span></div>
 <div class="line">            eZINI::injectSettings( $injectedSettings );</div>
+<div class="line">            unset( $settings[<span class="stringliteral">&#39;injected-settings&#39;</span>] );</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> ( isset( $settings[<span class="stringliteral">&#39;session&#39;</span>] ) )</div>
+<div class="line">        {</div>
+<div class="line">            $this-&gt;sessionSettings = $settings[<span class="stringliteral">&#39;session&#39;</span>];</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        $this-&gt;script = eZScript::instance( $settings );</div>
 <div class="line">        $this-&gt;script-&gt;startup();</div>
 <div class="line">        <span class="keywordflow">if</span> ( isset( $siteAccess ) )</div>
 <div class="line">            $this-&gt;script-&gt;setUseSiteAccess( $siteAccess-&gt;name );</div>
-<div class="line"></div>
-<div class="line">        $this-&gt;script-&gt;initialize();</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 </div>
@@ -232,9 +243,9 @@ Protected Attributes</h2></td></tr>
 <p>Returns the <a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony.html">Symfony</a> Dependency Injection container if it has been injected, otherwise returns null.</p>
 <dl class="section return"><dt>Returns</dt><dd>|null </dd></dl>
 
-<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00130">130</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00176">176</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
 
-<p>References <a class="el" href="CLIHandler_8php_source.html#l00130">eZ\Publish\Core\MVC\Legacy\Kernel\CLIHandler\getServiceContainer()</a>.</p>
+<p>References <a class="el" href="CLIHandler_8php_source.html#l00176">eZ\Publish\Core\MVC\Legacy\Kernel\CLIHandler\getServiceContainer()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> $this-&gt;container;</div>
 <div class="line">    }</div>
@@ -278,9 +289,9 @@ Protected Attributes</h2></td></tr>
 <p>Checks whether the kernel handler has the <a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony.html">Symfony</a> Dependency Injection container or not.</p>
 <dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
 
-<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00119">119</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00165">165</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
 
-<p>References <a class="el" href="CLIHandler_8php_source.html#l00119">eZ\Publish\Core\MVC\Legacy\Kernel\CLIHandler\hasServiceContainer()</a>.</p>
+<p>References <a class="el" href="CLIHandler_8php_source.html#l00165">eZ\Publish\Core\MVC\Legacy\Kernel\CLIHandler\hasServiceContainer()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> isset( $this-&gt;container );</div>
 <div class="line">    }</div>
@@ -324,9 +335,9 @@ Protected Attributes</h2></td></tr>
 <p>Reinitializes the kernel environment.</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00108">108</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00154">154</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
 
-<p>References <a class="el" href="CLIHandler_8php_source.html#l00108">eZ\Publish\Core\MVC\Legacy\Kernel\CLIHandler\reInitialize()</a>.</p>
+<p>References <a class="el" href="CLIHandler_8php_source.html#l00154">eZ\Publish\Core\MVC\Legacy\Kernel\CLIHandler\reInitialize()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">        $this-&gt;script-&gt;setIsInitialized( <span class="keyword">false</span> );</div>
 <div class="line">    }</div>
@@ -367,7 +378,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Not supported by <a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html">CLIHandler</a></p>
+<p>Runs a legacy script.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">\RuntimeException</td><td></td></tr>
@@ -375,9 +386,18 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00067">67</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00086">86</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
-<div class="line">        <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException( <span class="stringliteral">&#39;run() method is not supported by CLIHandler&#39;</span> );</div>
+<div class="line">        <span class="keywordflow">if</span> ( !isset( $this-&gt;embeddedScriptPath ) )</div>
+<div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException( <span class="stringliteral">&#39;No legacy script to run has been passed. Cannot run, aborting.&#39;</span> );</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> ( !file_exists( $this-&gt;embeddedScriptPath ) )</div>
+<div class="line">            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException( <span class="stringliteral">&#39;Passed legacy script does not exist. Please provide the correct script path, relative to the legacy root.&#39;</span> );</div>
+<div class="line"></div>
+<div class="line">        $this-&gt;sessionInit();</div>
+<div class="line">        <span class="comment">// Exposing $argv to embedded script</span></div>
+<div class="line">        $argv = $_SERVER[<span class="stringliteral">&#39;argv&#39;</span>];</div>
+<div class="line">        include $this-&gt;embeddedScriptPath;</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 </div>
@@ -415,8 +435,11 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>mixed The result of the callback </dd></dl>
 
-<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00082">82</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00125">125</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
 <div class="fragment"><div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> ( !$this-&gt;script-&gt;isInitialized() )</div>
+<div class="line">            $this-&gt;script-&gt;initialize();</div>
+<div class="line"></div>
 <div class="line">        $return = $callback();</div>
 <div class="line">        $this-&gt;script-&gt;shutdown();</div>
 <div class="line">        <span class="keywordflow">if</span> ( !$postReinitialize )</div>
@@ -425,6 +448,58 @@ Protected Attributes</h2></td></tr>
 <div class="line">        <span class="keywordflow">return</span> $return;</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="abc411bde2f8f4f3777344b9989e414ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eZ\Publish\Core\MVC\Legacy\Kernel\CLIHandler::setEmbeddedScriptPath </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$scriptPath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Injects path to script to run in legacy context (relative to legacy root).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$scriptPath</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00186">186</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
+
+<p>References <a class="el" href="CLIHandler_8php_source.html#l00186">eZ\Publish\Core\MVC\Legacy\Kernel\CLIHandler\setEmbeddedScriptPath()</a>.</p>
+<div class="fragment"><div class="line">    {</div>
+<div class="line">        $this-&gt;embeddedScriptPath = $scriptPath;</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler_abc411bde2f8f4f3777344b9989e414ec_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler_abc411bde2f8f4f3777344b9989e414ec_cgraph" alt=""/></div>
+<map name="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler_abc411bde2f8f4f3777344b9989e414ec_cgraph" id="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler_abc411bde2f8f4f3777344b9989e414ec_cgraph">
+</map>
+</div>
+</p>
+
+<p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler_abc411bde2f8f4f3777344b9989e414ec_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler_abc411bde2f8f4f3777344b9989e414ec_icgraph" alt=""/></div>
+<map name="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler_abc411bde2f8f4f3777344b9989e414ec_icgraph" id="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler_abc411bde2f8f4f3777344b9989e414ec_icgraph">
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a0cc34329642aba94eb0e10034a44be2a"></a>
@@ -454,28 +529,28 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00099">99</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00145">145</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
 
-<p>References <a class="el" href="CLIHandler_8php_source.html#l00099">eZ\Publish\Core\MVC\Legacy\Kernel\CLIHandler\setUseExceptions()</a>.</p>
+<p>References <a class="el" href="CLIHandler_8php_source.html#l00145">eZ\Publish\Core\MVC\Legacy\Kernel\CLIHandler\setUseExceptions()</a>.</p>
 <div class="fragment"><div class="line">    {</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler_a0cc34329642aba94eb0e10034a44be2a_cgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler_a0cc34329642aba94eb0e10034a44be2a_cgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler_a0cc34329642aba94eb0e10034a44be2a_cgraph" id="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler_a0cc34329642aba94eb0e10034a44be2a_cgraph">
 </map>
 </div>
 </p>
 
-<p><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler_a0cc34329642aba94eb0e10034a44be2a_icgraph.png" border="0" usemap="#classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler_a0cc34329642aba94eb0e10034a44be2a_icgraph" alt=""/></div>
 <map name="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler_a0cc34329642aba94eb0e10034a44be2a_icgraph" id="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler_a0cc34329642aba94eb0e10034a44be2a_icgraph">
 </map>
@@ -503,7 +578,29 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00029">29</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00031">31</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3c383a946c8baca37fea44816327480"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eZ\Publish\Core\MVC\Legacy\Kernel\CLIHandler::$embeddedScriptPath</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00041">41</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
 
 </div>
 </div>
@@ -525,7 +622,29 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00024">24</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
+<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00026">26</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4f072324ba80ae291cdedf5168def6f2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eZ\Publish\Core\MVC\Legacy\Kernel\CLIHandler::$sessionSettings</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="CLIHandler_8php_source.html#l00033">33</a> of file <a class="el" href="CLIHandler_8php_source.html">CLIHandler.php</a>.</p>
 
 </div>
 </div>
@@ -538,7 +657,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeZ.html">eZ</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish.html">Publish</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core.html">Core</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC.html">MVC</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy.html">Legacy</a></li><li class="navelem"><a class="el" href="namespaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel.html">Kernel</a></li><li class="navelem"><a class="el" href="classeZ_1_1Publish_1_1Core_1_1MVC_1_1Legacy_1_1Kernel_1_1CLIHandler.html">CLIHandler</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:56 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:54 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

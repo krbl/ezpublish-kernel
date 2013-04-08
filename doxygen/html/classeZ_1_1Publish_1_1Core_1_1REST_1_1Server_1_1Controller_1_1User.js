@@ -1,6 +1,6 @@
 var classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1User =
 [
-    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1User.html#ac97dd936150cca91591ad0b48b5db8a2", null ],
+    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1User.html#aa7025b4d25216d8a6716c8ed919c41ce", null ],
     [ "assignUserToUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1User.html#a2244b372290ee85d8067ea36ba23477d", null ],
     [ "createUser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1User.html#a73da1091856a4bf5b2d4969125e080e5", null ],
     [ "createUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1User.html#a0b47d829a276331d17b9cd8c0d104950", null ],
@@ -25,6 +25,7 @@ var classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1User =
     [ "updateUser", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1User.html#a01bac96f74687832c902303f04301d69", null ],
     [ "updateUserGroup", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1User.html#a41915d3dd5dc3450a2e3d074ca8c1c6c", null ],
     [ "$contentService", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1User.html#aa0d8c915e2519599e9f1e859e2fe24b3", null ],
+    [ "$contentTypeService", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1User.html#a2f5684783816d20454cb1d109a3e2095", null ],
     [ "$locationService", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1User.html#ac9e9be4ed243fe02ca1ccd60c7e65886", null ],
     [ "$repository", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1User.html#aceb152e913c8615e2789ff8ec11b6b0f", null ],
     [ "$roleService", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Controller_1_1User.html#a0f246dff61fe3369ac68eb99fb832fa9", null ],

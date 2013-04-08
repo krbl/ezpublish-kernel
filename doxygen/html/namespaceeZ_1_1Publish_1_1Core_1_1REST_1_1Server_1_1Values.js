@@ -1,5 +1,6 @@
 var namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values =
 [
+    [ "Conflict", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1Conflict.html", null ],
     [ "ContentList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentList" ],
     [ "ContentTypeGroupList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentTypeGroupList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentTypeGroupList" ],
     [ "ContentTypeGroupRefList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentTypeGroupRefList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1ContentTypeGroupRefList" ],
@@ -50,6 +51,8 @@ var namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values =
     [ "RoleAssignmentList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleAssignmentList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleAssignmentList" ],
     [ "RoleList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1RoleList" ],
     [ "SectionList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1SectionList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1SectionList" ],
+    [ "SeeOther", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1SeeOther.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1SeeOther" ],
+    [ "SessionInput", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1SessionInput.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1SessionInput" ],
     [ "TemporaryRedirect", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1TemporaryRedirect.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1TemporaryRedirect" ],
     [ "Trash", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1Trash.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1Trash" ],
     [ "URLAliasList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1URLAliasList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1URLAliasList" ],
@@ -59,6 +62,7 @@ var namespaceeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values =
     [ "UserGroupRefList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1UserGroupRefList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1UserGroupRefList" ],
     [ "UserList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1UserList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1UserList" ],
     [ "UserRefList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1UserRefList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1UserRefList" ],
+    [ "UserSession", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1UserSession.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1UserSession" ],
     [ "Version", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1Version.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1Version" ],
     [ "VersionList", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1VersionList.html", "classeZ_1_1Publish_1_1Core_1_1REST_1_1Server_1_1Values_1_1VersionList" ]
 ];

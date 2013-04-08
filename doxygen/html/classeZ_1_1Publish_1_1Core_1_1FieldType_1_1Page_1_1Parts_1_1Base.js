@@ -1,10 +1,9 @@
 var classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Base =
 [
-    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Base.html#acfb921ccd9cd50ecccc6687d7e1c3d74", null ],
-    [ "__get", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Base.html#a812199bb9ff29807abc6a44d6715a755", null ],
-    [ "__isset", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Base.html#a0ea14aee43bab56210d8417fd0e7c1ef", null ],
-    [ "__set", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Base.html#a9928951b43105c2089b27d572b76d1ac", null ],
-    [ "getProperties", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Base.html#a2f578c72d3b1413b6c4bcd69fec071cc", null ],
-    [ "$pageService", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Base.html#aef407501a75855ab74c1e9666d345b2c", null ],
-    [ "$properties", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Base.html#a98569e04b462e79f1fe56b8a18734d75", null ]
+    [ "__construct", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Base.html#ac16b4fd43ae5e4972f4c12247e3b5cf3", null ],
+    [ "getState", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Base.html#aa39fc567d0263a1bbd99e52199c4ac09", null ],
+    [ "$attributes", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Base.html#a679ce4423c2f2c8eaaebab6e93387c92", null ],
+    [ "ACTION_ADD", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Base.html#a3a08c08079d11a94d46a5bd1845c94c1", null ],
+    [ "ACTION_MODIFY", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Base.html#a247a227aae9520a187bcb2f7791e6de3", null ],
+    [ "ACTION_REMOVE", "classeZ_1_1Publish_1_1Core_1_1FieldType_1_1Page_1_1Parts_1_1Base.html#a803659343a0e3da10b480fb6a0cd4943", null ]
 ];

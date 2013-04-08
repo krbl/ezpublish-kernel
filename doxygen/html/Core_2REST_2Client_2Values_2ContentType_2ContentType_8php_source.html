@@ -120,69 +120,93 @@ $(document).ready(function(){initNavTree('Core_2REST_2Client_2Values_2ContentTyp
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#acce6399c49f77725efc27a10f05b9811">   62</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#acce6399c49f77725efc27a10f05b9811">$fieldDefinitionListReference</a>;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a372af9726fd113f8f2c0b2c15e3bd069">   68</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a372af9726fd113f8f2c0b2c15e3bd069">__construct</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html">ContentTypeService</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#acdec35f1f940ab1374a5f0f12957b7f9">$contentTypeService</a>, array $data = array() )</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        $this-&gt;contentTypeService = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#acdec35f1f940ab1374a5f0f12957b7f9">$contentTypeService</a>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">foreach</span> ( $data as $propertyName =&gt; $propertyValue )</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            $this-&gt;$propertyName = $propertyValue;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a27bc7274001db1efbe6e3c797a3eef7a">   89</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a27bc7274001db1efbe6e3c797a3eef7a">getNames</a>()</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a415716ccaab4023632f1fda09c9d5457">$this-&gt;names</a>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a9f72cedb190c837357f4bb8495ffc6bb">  101</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a9f72cedb190c837357f4bb8495ffc6bb">getName</a>( $languageCode )</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">return</span> $this-&gt;names[$languageCode];</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a7decdd8bb59939e36878d247fa4367fd">  116</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a7decdd8bb59939e36878d247fa4367fd">getDescriptions</a>()</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#aef7e1852dbecea54c002114f0299c343">$this-&gt;descriptions</a>;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a60195e4f46cbc376df9bca659051f393">  128</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a60195e4f46cbc376df9bca659051f393">getDescription</a>( $languageCode )</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">return</span> $this-&gt;descriptions[$languageCode];</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a41ffbbe4e20c6e3e9a3e9c913eb5ac35">  138</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a41ffbbe4e20c6e3e9a3e9c913eb5ac35">getContentTypeGroups</a>()</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    {</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="comment">// @todo: Implement!</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a505872ccb11ebce06b9ddffe09ec3174">  148</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a505872ccb11ebce06b9ddffe09ec3174">getFieldDefinitions</a>()</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    {</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        $fieldDefinitionList = $this-&gt;contentTypeService-&gt;loadFieldDefinitionList(</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            $this-&gt;fieldDefinitionListReference</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        );</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">return</span> $fieldDefinitionList-&gt;getFieldDefinitions();</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#aece2474b3c557e4dde1f3aebf5be1f07">  163</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#aece2474b3c557e4dde1f3aebf5be1f07">getFieldDefinition</a>( $fieldDefinitionIdentifier )</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    {</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        $fieldDefinitions = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a505872ccb11ebce06b9ddffe09ec3174">getFieldDefinitions</a>();</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">foreach</span> ( $fieldDefinitions as $fieldDefinition )</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        {</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="keywordflow">if</span> ( $fieldDefinition-&gt;identifier === $fieldDefinitionIdentifier )</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            {</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                <span class="keywordflow">return</span> $fieldDefinition;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            }</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        }</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">return</span> null;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#aebec4c20d7a296913d17a0b2e5b17e47">   69</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#aebec4c20d7a296913d17a0b2e5b17e47">$contentTypeGroupListReference</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a372af9726fd113f8f2c0b2c15e3bd069">   75</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a372af9726fd113f8f2c0b2c15e3bd069">__construct</a>( <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1ContentTypeService.html">ContentTypeService</a> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#acdec35f1f940ab1374a5f0f12957b7f9">$contentTypeService</a>, array $data = array() )</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        $this-&gt;contentTypeService = <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#acdec35f1f940ab1374a5f0f12957b7f9">$contentTypeService</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">foreach</span> ( $data as $propertyName =&gt; $propertyValue )</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            $this-&gt;$propertyName = $propertyValue;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a27bc7274001db1efbe6e3c797a3eef7a">   96</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a27bc7274001db1efbe6e3c797a3eef7a">getNames</a>()</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a415716ccaab4023632f1fda09c9d5457">$this-&gt;names</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a9f72cedb190c837357f4bb8495ffc6bb">  108</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a9f72cedb190c837357f4bb8495ffc6bb">getName</a>( $languageCode )</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">return</span> $this-&gt;names[$languageCode];</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a7decdd8bb59939e36878d247fa4367fd">  123</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a7decdd8bb59939e36878d247fa4367fd">getDescriptions</a>()</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#aef7e1852dbecea54c002114f0299c343">$this-&gt;descriptions</a>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a60195e4f46cbc376df9bca659051f393">  135</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a60195e4f46cbc376df9bca659051f393">getDescription</a>( $languageCode )</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">return</span> $this-&gt;descriptions[$languageCode];</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a41ffbbe4e20c6e3e9a3e9c913eb5ac35">  145</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a41ffbbe4e20c6e3e9a3e9c913eb5ac35">getContentTypeGroups</a>()</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        $contentTypeGroupList = $this-&gt;contentTypeService-&gt;loadContentTypeGroupList(</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            $this-&gt;contentTypeGroupListReference</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        );</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">return</span> $contentTypeGroupList-&gt;getContentTypeGroups();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a505872ccb11ebce06b9ddffe09ec3174">  158</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a505872ccb11ebce06b9ddffe09ec3174">getFieldDefinitions</a>()</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        $fieldDefinitionList = $this-&gt;contentTypeService-&gt;loadFieldDefinitionList(</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            $this-&gt;fieldDefinitionListReference</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        );</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">return</span> $fieldDefinitionList-&gt;getFieldDefinitions();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#aece2474b3c557e4dde1f3aebf5be1f07">  173</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#aece2474b3c557e4dde1f3aebf5be1f07">getFieldDefinition</a>( $fieldDefinitionIdentifier )</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        $fieldDefinitions = $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a505872ccb11ebce06b9ddffe09ec3174">getFieldDefinitions</a>();</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">foreach</span> ( $fieldDefinitions as $fieldDefinition )</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keywordflow">if</span> ( $fieldDefinition-&gt;identifier === $fieldDefinitionIdentifier )</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                <span class="keywordflow">return</span> $fieldDefinition;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">return</span> null;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#ac0a35ff498a6ffad92cb01dabcd2f0ae">  193</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#ac0a35ff498a6ffad92cb01dabcd2f0ae">__get</a>( $property )</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">switch</span> ( $property )</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="keywordflow">case</span> <span class="stringliteral">&quot;contentTypeGroups&quot;</span>:</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                <span class="keywordflow">return</span> $this-&gt;<a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#a41ffbbe4e20c6e3e9a3e9c913eb5ac35">getContentTypeGroups</a>();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#ac0a35ff498a6ffad92cb01dabcd2f0ae">parent::__get</a>( $property );</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#ab3f7e93530e3297cd85369f3b69fbb1f">  211</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#ab3f7e93530e3297cd85369f3b69fbb1f">__isset</a>( $property )</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">if</span> ( $property === <span class="stringliteral">&quot;contentTypeGroups&quot;</span> )</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classeZ_1_1Publish_1_1Core_1_1REST_1_1Client_1_1Values_1_1ContentType_1_1ContentType.html#ab3f7e93530e3297cd85369f3b69fbb1f">parent::__isset</a>( $property );</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2d402fa29e6cd3b6ca13957b8f90c436.html">var</a></li><li class="navelem"><a class="el" href="dir_9854ed422bddbda845d9be18e5812dbc.html">lib</a></li><li class="navelem"><a class="el" href="dir_fee575f580404996843cf55d4a8a21d6.html">jenkins</a></li><li class="navelem"><a class="el" href="dir_683fa19f4ae7fc58bc8e388b8359da60.html">jobs</a></li><li class="navelem"><a class="el" href="dir_f48434960bcb5285cc876ddd1f489f0f.html">PAPI-doxygen-master</a></li><li class="navelem"><a class="el" href="dir_72e96271246900b7af37d12c55ac2736.html">workspace</a></li><li class="navelem"><a class="el" href="dir_e9778d188d10be5d5154bce16f77c7a9.html">eZ</a></li><li class="navelem"><a class="el" href="dir_3e43a37e6368d6cca951293ebbbe8165.html">Publish</a></li><li class="navelem"><a class="el" href="dir_5e8f3a0266839337b4ef9162cf4cdcb2.html">Core</a></li><li class="navelem"><a class="el" href="dir_797398f06ec5dac6abf0352e0ae63d7a.html">REST</a></li><li class="navelem"><a class="el" href="dir_9cef613736a01ac9013b9c2ddd9ab4f7.html">Client</a></li><li class="navelem"><a class="el" href="dir_9b520300436caaac397a8ab237d82910.html">Values</a></li><li class="navelem"><a class="el" href="dir_f14ae2e96b8fc2cbdcc134d7578307e6.html">ContentType</a></li><li class="navelem"><a class="el" href="Core_2REST_2Client_2Values_2ContentType_2ContentType_8php.html">ContentType.php</a></li>
-    <li class="footer">Generated on Tue Feb 12 2013 00:02:49 for ezp-next by
+    <li class="footer">Generated on Mon Apr 8 2013 14:50:47 for ezp-next by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>
   </ul>

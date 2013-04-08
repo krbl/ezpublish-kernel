@@ -1,0 +1,4 @@
+var interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1FieldType_1_1View_1_1ParameterProviderInterface =
+[
+    [ "getViewParameters", "interfaceeZ_1_1Publish_1_1Core_1_1MVC_1_1Symfony_1_1FieldType_1_1View_1_1ParameterProviderInterface.html#a7d1078325f58312170eaa760af088167", null ]
+];

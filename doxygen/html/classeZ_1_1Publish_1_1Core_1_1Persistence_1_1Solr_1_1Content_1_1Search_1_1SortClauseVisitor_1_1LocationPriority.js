@@ -1,0 +1,5 @@
+var classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1SortClauseVisitor_1_1LocationPriority =
+[
+    [ "canVisit", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1SortClauseVisitor_1_1LocationPriority.html#a3d3e4b385d96b09f47e889c6b214d437", null ],
+    [ "visit", "classeZ_1_1Publish_1_1Core_1_1Persistence_1_1Solr_1_1Content_1_1Search_1_1SortClauseVisitor_1_1LocationPriority.html#a484b91f4d816d64fa57be28c2da1c079", null ]
+];
