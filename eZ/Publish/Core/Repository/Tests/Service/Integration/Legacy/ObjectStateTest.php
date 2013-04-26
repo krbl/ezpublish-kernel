@@ -16,7 +16,7 @@ use eZ\Publish\Core\Repository\Tests\Service\Integration\ObjectStateBase as Base
  */
 class ObjectStateTest extends BaseObjectStateServiceTest
 {
-    protected static function getRepository()
+    protected function getRepository()
     {
         return Utils::getRepository();
     }

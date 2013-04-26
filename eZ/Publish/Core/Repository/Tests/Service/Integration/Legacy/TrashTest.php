@@ -16,7 +16,7 @@ use eZ\Publish\Core\Repository\Tests\Service\Integration\TrashBase as BaseTrashS
  */
 class TrashTest extends BaseTrashServiceTest
 {
-    protected static function getRepository()
+    protected function getRepository()
     {
         try
         {

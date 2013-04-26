@@ -16,7 +16,7 @@ use eZ\Publish\Core\Repository\Tests\Service\Integration\SearchBase as BaseSearc
  */
 class SearchTest extends BaseSearchServiceTest
 {
-    protected static function getRepository()
+    protected function getRepository()
     {
         return Utils::getRepository();
     }

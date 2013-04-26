@@ -16,7 +16,7 @@ use eZ\Publish\Core\Repository\Tests\Service\Integration\UrlAliasBase as BaseUrl
  */
 class UrlAliasTest extends BaseUrlAliasTest
 {
-    protected static function getRepository()
+    protected function getRepository()
     {
         return Utils::getRepository();
     }

@@ -26,7 +26,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testLookupRootLocation()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
 
         $urlAlias = $urlAliasService->lookup( "" );
 
@@ -55,7 +55,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testLookupAlwaysAvailable()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
 
         $urlAlias = $urlAliasService->lookup( "Users" );
 
@@ -84,7 +84,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testLookupAlwaysAvailableAlwaysFound()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
         $configuration = array(
             "prioritizedLanguageList" => array( "ger-DE" ),
             "showAllTranslations" => false,
@@ -119,7 +119,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testLookupThrowsNotFoundExceptionUrl()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
 
         $urlAliasService->lookup( "jabberwocky" );
     }
@@ -131,7 +131,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testLookup()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
 
         $urlAlias = $urlAliasService->lookup( "Media/Multimedia" );
 
@@ -160,7 +160,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testLookupCaseInsensitive()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
 
         $urlAlias = $urlAliasService->lookup( "MEDIA/MULTIMEDIA" );
 
@@ -189,7 +189,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testLookupWithLanguageCode()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
 
         $urlAlias = $urlAliasService->lookup( "Media/Multimedia", "eng-US" );
 
@@ -219,7 +219,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testLookupThrowsNotFoundExceptionTranslation()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
 
         $urlAliasService->lookup( "Design/Plain-site", "eng-GB" );
     }
@@ -231,7 +231,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testLookupWithShowAllTranslations()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
         $configuration = array(
             "prioritizedLanguageList" => array( "ger-DE" ),
             "showAllTranslations" => true,
@@ -265,7 +265,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testLookupHistory()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
 
         $urlAlias = $urlAliasService->lookup( "Users/Guest-accounts" );
 
@@ -294,7 +294,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testReverseLookup()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
         $configuration = array(
             "prioritizedLanguageList" => array(
                 "eng-US"
@@ -332,7 +332,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testReverseLookupThrowsNotFoundException()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
         $configuration = array(
             "prioritizedLanguageList" => array(
                 "ger-DE"
@@ -361,7 +361,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testCreateUrlAlias( $path, $forwarding, $alwaysAvailable )
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
 
         $location = $this->getLocationStub( 53 );
         $urlAlias = $urlAliasService->createUrlAlias( $location, $path, "eng-GB", $forwarding, $alwaysAvailable );
@@ -397,7 +397,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testCreateUrlAliasThrowsInvalidArgumentException()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
 
         $location = $this->getLocationStub( 53 );
         $urlAliasService->createUrlAlias( $location, "some/path", "eng-GB", true, true );
@@ -420,7 +420,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testCreateGlobalUrlAlias( $path, $forwarding, $alwaysAvailable )
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
 
         $urlAlias = $urlAliasService->createGlobalUrlAlias( "module:content/search", $path, "eng-GB", $forwarding, $alwaysAvailable );
 
@@ -455,7 +455,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testCreateGlobalUrlAliasThrowsInvalidArgumentExceptionPath()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
 
         $urlAliasService->createGlobalUrlAlias( "module:content/search", "some/path", "eng-GB", true, true );
         $urlAliasService->createGlobalUrlAlias( "module:content/search", "some/path", "eng-GB", true, true );
@@ -469,7 +469,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testCreateGlobalUrlAliasThrowsInvalidArgumentExceptionResource()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
 
         $urlAliasService->createGlobalUrlAlias( "invalid/resource", "some/path", "eng-GB", true, true );
     }
@@ -481,7 +481,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testListGlobalAliases()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
         $count = 4;
 
         for ( $i = 0; $i < $count; $i++ )
@@ -521,7 +521,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testListGlobalAliasesWithLanguageCode()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
         $count = 4;
         $countFirst = 2;
 
@@ -563,7 +563,7 @@ abstract class UrlAliasBase extends BaseServiceTest
      */
     public function testListGlobalAliasesWithOffsetAndLimit()
     {
-        $urlAliasService = self::$repository->getURLAliasService();
+        $urlAliasService = $this->repository->getURLAliasService();
         $count = 6;
         $offset = 2;
         $limit = 3;

@@ -22,7 +22,7 @@ abstract class RepositoryTest extends BaseServiceTest
      */
     public function testRepositoryInstance()
     {
-        self::assertInstanceOf( 'eZ\\Publish\\API\\Repository\\Repository', self::$repository );
+        self::assertInstanceOf( 'eZ\\Publish\\API\\Repository\\Repository', $this->repository );
     }
 
     /**
@@ -67,7 +67,7 @@ abstract class RepositoryTest extends BaseServiceTest
      */
     public function testGetContentService()
     {
-        $service = self::$repository->getContentService();
+        $service = $this->repository->getContentService();
         self::assertInstanceOf( 'eZ\\Publish\\API\\Repository\\ContentService', $service );
     }
 
@@ -77,7 +77,7 @@ abstract class RepositoryTest extends BaseServiceTest
      */
     public function testGetContentTypeService()
     {
-        $service = self::$repository->getContentTypeService();
+        $service = $this->repository->getContentTypeService();
         self::assertInstanceOf( 'eZ\\Publish\\API\\Repository\\ContentTypeService', $service );
     }
 
@@ -87,7 +87,7 @@ abstract class RepositoryTest extends BaseServiceTest
      */
     public function testGetFieldTypeService()
     {
-        $service = self::$repository->getFieldTypeService();
+        $service = $this->repository->getFieldTypeService();
         self::assertInstanceOf( 'eZ\\Publish\\API\\Repository\\FieldTypeService', $service );
     }
 
@@ -97,7 +97,7 @@ abstract class RepositoryTest extends BaseServiceTest
      */
     public function testGetContentLanguageService()
     {
-        $service = self::$repository->getContentLanguageService();
+        $service = $this->repository->getContentLanguageService();
         self::assertInstanceOf( 'eZ\\Publish\\API\\Repository\\LanguageService', $service );
     }
 
@@ -107,7 +107,7 @@ abstract class RepositoryTest extends BaseServiceTest
      */
     public function testGetLocationService()
     {
-        $service = self::$repository->getLocationService();
+        $service = $this->repository->getLocationService();
         self::assertInstanceOf( 'eZ\\Publish\\API\\Repository\\LocationService', $service );
     }
 
@@ -117,7 +117,7 @@ abstract class RepositoryTest extends BaseServiceTest
      */
     public function testGetObjectStateService()
     {
-        $service = self::$repository->getObjectStateService();
+        $service = $this->repository->getObjectStateService();
         self::assertInstanceOf( 'eZ\\Publish\\API\\Repository\\ObjectStateService', $service );
     }
 
@@ -127,7 +127,7 @@ abstract class RepositoryTest extends BaseServiceTest
      */
     public function testGetRoleService()
     {
-        $service = self::$repository->getRoleService();
+        $service = $this->repository->getRoleService();
         self::assertInstanceOf( 'eZ\\Publish\\API\\Repository\\RoleService', $service );
     }
 
@@ -137,7 +137,7 @@ abstract class RepositoryTest extends BaseServiceTest
      */
     public function testGetSearchService()
     {
-        $service = self::$repository->getSearchService();
+        $service = $this->repository->getSearchService();
         self::assertInstanceOf( 'eZ\\Publish\\API\\Repository\\SearchService', $service );
     }
 
@@ -147,7 +147,7 @@ abstract class RepositoryTest extends BaseServiceTest
      */
     public function testGetSectionService()
     {
-        $service = self::$repository->getSectionService();
+        $service = $this->repository->getSectionService();
         self::assertInstanceOf( 'eZ\\Publish\\API\\Repository\\SectionService', $service );
     }
 
@@ -157,7 +157,7 @@ abstract class RepositoryTest extends BaseServiceTest
      */
     public function testGetTrashService()
     {
-        $service = self::$repository->getTrashService();
+        $service = $this->repository->getTrashService();
         self::assertInstanceOf( 'eZ\\Publish\\API\\Repository\\TrashService', $service );
     }
 
@@ -167,7 +167,7 @@ abstract class RepositoryTest extends BaseServiceTest
      */
     public function testGetURLAliasService()
     {
-        $service = self::$repository->getURLAliasService();
+        $service = $this->repository->getURLAliasService();
         self::assertInstanceOf( 'eZ\\Publish\\API\\Repository\\URLAliasService', $service );
     }
 
@@ -177,7 +177,7 @@ abstract class RepositoryTest extends BaseServiceTest
      */
     public function testGetURLWildcardService()
     {
-        $service = self::$repository->getURLWildcardService();
+        $service = $this->repository->getURLWildcardService();
         self::assertInstanceOf( 'eZ\\Publish\\API\\Repository\\URLWildcardService', $service );
     }
 
@@ -187,7 +187,7 @@ abstract class RepositoryTest extends BaseServiceTest
      */
     public function testGetUserService()
     {
-        $service = self::$repository->getUserService();
+        $service = $this->repository->getUserService();
         self::assertInstanceOf( 'eZ\\Publish\\API\\Repository\\UserService', $service );
     }
 }

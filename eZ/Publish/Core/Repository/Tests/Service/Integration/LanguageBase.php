@@ -110,7 +110,7 @@ abstract class LanguageBase extends BaseServiceTest
      */
     public function testCreateLanguage()
     {
-        $service = self::$repository->getContentLanguageService();
+        $service = $this->repository->getContentLanguageService();
 
         $languageCreateStruct = $service->newLanguageCreateStruct();
         $languageCreateStruct->languageCode = 'test-TEST';
@@ -139,7 +139,7 @@ abstract class LanguageBase extends BaseServiceTest
      */
     public function testCreateLanguageThrowsInvalidArgumentException()
     {
-        $service = self::$repository->getContentLanguageService();
+        $service = $this->repository->getContentLanguageService();
 
         $languageCreateStruct = $service->newLanguageCreateStruct();
         $languageCreateStruct->languageCode = 'eng-GB';
@@ -154,7 +154,7 @@ abstract class LanguageBase extends BaseServiceTest
      */
     public function testUpdateLanguageName()
     {
-        $languageService = self::$repository->getContentLanguageService();
+        $languageService = $this->repository->getContentLanguageService();
 
         $language = $languageService->loadLanguage( 'eng-GB' );
         self::assertEquals( 'English (United Kingdom)', $language->name );
@@ -181,7 +181,7 @@ abstract class LanguageBase extends BaseServiceTest
      */
     public function testUpdateLanguageNameThrowsInvalidArgumentException()
     {
-        $languageService = self::$repository->getContentLanguageService();
+        $languageService = $this->repository->getContentLanguageService();
 
         $language = $languageService->loadLanguage( 'eng-GB' );
         $languageService->updateLanguageName( $language, 1 );
@@ -193,7 +193,7 @@ abstract class LanguageBase extends BaseServiceTest
      */
     public function testEnableLanguage()
     {
-        $languageService = self::$repository->getContentLanguageService();
+        $languageService = $this->repository->getContentLanguageService();
 
         $language = $languageService->loadLanguage( 'eng-GB' );
         self::assertEquals( true, $language->enabled );
@@ -231,7 +231,7 @@ abstract class LanguageBase extends BaseServiceTest
      */
     public function testDisableLanguage()
     {
-        $languageService = self::$repository->getContentLanguageService();
+        $languageService = $this->repository->getContentLanguageService();
 
         $language = $languageService->loadLanguage( 'eng-GB' );
         self::assertEquals( true, $language->enabled );
@@ -257,7 +257,7 @@ abstract class LanguageBase extends BaseServiceTest
      */
     public function testLoadLanguage()
     {
-        $language = self::$repository->getContentLanguageService()->loadLanguage( 'eng-GB' );
+        $language = $this->repository->getContentLanguageService()->loadLanguage( 'eng-GB' );
 
         self::assertInstanceOf( '\\eZ\\Publish\\API\\Repository\\Values\\Content\\Language', $language );
         self::assertGreaterThan( 0, $language->id );
@@ -279,7 +279,7 @@ abstract class LanguageBase extends BaseServiceTest
      */
     public function testLoadLanguageThrowsInvalidArgumentException()
     {
-        self::$repository->getContentLanguageService()->loadLanguage( PHP_INT_MAX );
+        $this->repository->getContentLanguageService()->loadLanguage( PHP_INT_MAX );
     }
 
     /**
@@ -289,7 +289,7 @@ abstract class LanguageBase extends BaseServiceTest
      */
     public function testLoadLanguageThrowsNotFoundException()
     {
-        self::$repository->getContentLanguageService()->loadLanguage( 'ita-FR' );
+        $this->repository->getContentLanguageService()->loadLanguage( 'ita-FR' );
     }
 
     /**
@@ -298,7 +298,7 @@ abstract class LanguageBase extends BaseServiceTest
      */
     public function testLoadLanguages()
     {
-        $languageService = self::$repository->getContentLanguageService();
+        $languageService = $this->repository->getContentLanguageService();
 
         $languages = $languageService->loadLanguages();
 
@@ -317,7 +317,7 @@ abstract class LanguageBase extends BaseServiceTest
      */
     public function testLoadLanguageById()
     {
-        $language = self::$repository->getContentLanguageService()->loadLanguageById( 2 );
+        $language = $this->repository->getContentLanguageService()->loadLanguageById( 2 );
 
         self::assertInstanceOf( '\\eZ\\Publish\\API\\Repository\\Values\\Content\\Language', $language );
 
@@ -339,7 +339,7 @@ abstract class LanguageBase extends BaseServiceTest
      */
     public function testLoadLanguageByIdThrowsInvalidArgumentException()
     {
-        self::$repository->getContentLanguageService()->loadLanguageById( 'test' );
+        $this->repository->getContentLanguageService()->loadLanguageById( 'test' );
     }
 
     /**
@@ -349,7 +349,7 @@ abstract class LanguageBase extends BaseServiceTest
      */
     public function testLoadLanguageByIdThrowsNotFoundException()
     {
-        self::$repository->getContentLanguageService()->loadLanguageById( PHP_INT_MAX );
+        $this->repository->getContentLanguageService()->loadLanguageById( PHP_INT_MAX );
     }
 
     /**
@@ -358,7 +358,7 @@ abstract class LanguageBase extends BaseServiceTest
      */
     public function testDeleteLanguage()
     {
-        $languageService = self::$repository->getContentLanguageService();
+        $languageService = $this->repository->getContentLanguageService();
 
         $languageCreateStruct = $languageService->newLanguageCreateStruct();
         $languageCreateStruct->name = 'test';
@@ -384,7 +384,7 @@ abstract class LanguageBase extends BaseServiceTest
      */
     public function testDeleteLanguageThrowsInvalidArgumentException()
     {
-        $languageService = self::$repository->getContentLanguageService();
+        $languageService = $this->repository->getContentLanguageService();
 
         $language = $languageService->loadLanguage( 'eng-GB' );
         $languageService->deleteLanguage( $language );
@@ -396,7 +396,7 @@ abstract class LanguageBase extends BaseServiceTest
      */
     public function testGetDefaultLanguageCode()
     {
-        $defaultLanguageCode = self::$repository->getContentLanguageService()->getDefaultLanguageCode();
+        $defaultLanguageCode = $this->repository->getContentLanguageService()->getDefaultLanguageCode();
 
         self::assertEquals( 'eng-GB', $defaultLanguageCode );
     }
@@ -407,7 +407,7 @@ abstract class LanguageBase extends BaseServiceTest
      */
     public function testNewLanguageCreateStruct()
     {
-        $languageCreateStruct = self::$repository->getContentLanguageService()->newLanguageCreateStruct();
+        $languageCreateStruct = $this->repository->getContentLanguageService()->newLanguageCreateStruct();
 
         self::assertInstanceOf( '\\eZ\\Publish\\API\\Repository\\Values\\Content\\LanguageCreateStruct', $languageCreateStruct );
 

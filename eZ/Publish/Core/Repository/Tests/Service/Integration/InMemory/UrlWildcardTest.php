@@ -16,7 +16,7 @@ use eZ\Publish\Core\Repository\Tests\Service\Integration\UrlWildcardBase as Base
  */
 class UrlWildcardTest extends BaseUrlWildcardTest
 {
-    protected static function getRepository()
+    protected function getRepository()
     {
         return Utils::getRepository();
     }

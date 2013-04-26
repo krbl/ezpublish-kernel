@@ -16,7 +16,7 @@ use eZ\Publish\Core\Repository\Tests\Service\Integration\NameSchemaBase as BaseN
  */
 class NameSchemaTest extends BaseNameSchemaTest
 {
-    protected static function getRepository()
+    protected function getRepository()
     {
         return Utils::getRepository();
     }

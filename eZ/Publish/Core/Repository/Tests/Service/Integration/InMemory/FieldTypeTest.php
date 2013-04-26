@@ -16,7 +16,7 @@ use eZ\Publish\Core\Repository\Tests\Service\Integration\FieldTypeBase as BaseFi
  */
 class FieldTypeTest extends BaseFieldTypeTest
 {
-    protected static function getRepository()
+    protected function getRepository()
     {
         return Utils::getRepository();
     }

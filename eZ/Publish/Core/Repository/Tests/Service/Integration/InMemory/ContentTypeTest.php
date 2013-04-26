@@ -16,7 +16,7 @@ use eZ\Publish\Core\Repository\Tests\Service\Integration\ContentTypeBase as Base
  */
 class ContentTypeTest extends BaseContentTypeServiceTest
 {
-    protected static function getRepository()
+    protected function getRepository()
     {
         return Utils::getRepository();
     }

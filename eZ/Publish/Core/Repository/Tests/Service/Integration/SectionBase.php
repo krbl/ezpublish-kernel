@@ -109,7 +109,7 @@ abstract class SectionBase extends BaseServiceTest
      */
     public function testCreateSection()
     {
-        $sectionService = self::$repository->getSectionService();
+        $sectionService = $this->repository->getSectionService();
 
         $sectionCreateStruct = $sectionService->newSectionCreateStruct();
         $sectionCreateStruct->identifier = 'test';
@@ -133,7 +133,7 @@ abstract class SectionBase extends BaseServiceTest
      */
     public function testCreateSectionThrowsInvalidArgumentException()
     {
-        $sectionService = self::$repository->getSectionService();
+        $sectionService = $this->repository->getSectionService();
 
         $sectionCreateStruct = $sectionService->newSectionCreateStruct();
         $sectionCreateStruct->identifier = 'standard';
@@ -148,7 +148,7 @@ abstract class SectionBase extends BaseServiceTest
      */
     public function testUpdateSection()
     {
-        $sectionService = self::$repository->getSectionService();
+        $sectionService = $this->repository->getSectionService();
 
         $loadedSection = $sectionService->loadSection( 1 );
 
@@ -173,7 +173,7 @@ abstract class SectionBase extends BaseServiceTest
      */
     public function testUpdateSectionThrowsInvalidArgumentException()
     {
-        $sectionService = self::$repository->getSectionService();
+        $sectionService = $this->repository->getSectionService();
 
         $loadedSection = $sectionService->loadSectionByIdentifier( 'standard' );
 
@@ -190,7 +190,7 @@ abstract class SectionBase extends BaseServiceTest
      */
     public function testLoadSection()
     {
-        $sectionService = self::$repository->getSectionService();
+        $sectionService = $this->repository->getSectionService();
 
         $section = $sectionService->loadSection( 1 );
 
@@ -211,7 +211,7 @@ abstract class SectionBase extends BaseServiceTest
      */
     public function testLoadSectionThrowsNotFoundException()
     {
-        $sectionService = self::$repository->getSectionService();
+        $sectionService = $this->repository->getSectionService();
 
         $sectionService->loadSection( PHP_INT_MAX );
     }
@@ -222,7 +222,7 @@ abstract class SectionBase extends BaseServiceTest
      */
     public function testLoadSections()
     {
-        $sections = self::$repository->getSectionService()->loadSections();
+        $sections = $this->repository->getSectionService()->loadSections();
 
         self::assertInternalType( 'array', $sections );
         self::assertGreaterThan( 0, count( $sections ) );
@@ -239,7 +239,7 @@ abstract class SectionBase extends BaseServiceTest
      */
     public function testLoadSectionByIdentifier()
     {
-        $sectionService = self::$repository->getSectionService();
+        $sectionService = $this->repository->getSectionService();
 
         $section = $sectionService->loadSectionByIdentifier( 'standard' );
 
@@ -260,7 +260,7 @@ abstract class SectionBase extends BaseServiceTest
      */
     public function testLoadSectionByIdentifierThrowsNotFoundException()
     {
-        $sectionService = self::$repository->getSectionService();
+        $sectionService = $this->repository->getSectionService();
 
         $sectionService->loadSectionByIdentifier( 'non-existing' );
     }
@@ -271,7 +271,7 @@ abstract class SectionBase extends BaseServiceTest
      */
     public function testCountAssignedContents()
     {
-        $sectionService = self::$repository->getSectionService();
+        $sectionService = $this->repository->getSectionService();
 
         $section = $sectionService->loadSection( 1 );
         $contentCount = $sectionService->countAssignedContents( $section );
@@ -294,8 +294,8 @@ abstract class SectionBase extends BaseServiceTest
      */
     public function testAssignSection()
     {
-        $sectionService = self::$repository->getSectionService();
-        $contentService = self::$repository->getContentService();
+        $sectionService = $this->repository->getSectionService();
+        $contentService = $this->repository->getContentService();
 
         $section = $sectionService->loadSection( 1 );
         $contentInfo = $contentService->loadContentInfo( 4 );
@@ -315,7 +315,7 @@ abstract class SectionBase extends BaseServiceTest
      */
     public function testDeleteSection()
     {
-        $sectionService = self::$repository->getSectionService();
+        $sectionService = $this->repository->getSectionService();
 
         $sectionCreateStruct = $sectionService->newSectionCreateStruct();
         $sectionCreateStruct->identifier = 'test';
@@ -342,7 +342,7 @@ abstract class SectionBase extends BaseServiceTest
      */
     public function testDeleteSectionThrowsNotFoundException()
     {
-        $sectionService = self::$repository->getSectionService();
+        $sectionService = $this->repository->getSectionService();
 
         $section = new Section( array( 'id' => PHP_INT_MAX ) );
 
@@ -356,7 +356,7 @@ abstract class SectionBase extends BaseServiceTest
      */
     public function testDeleteSectionThrowsBadStateException()
     {
-        $sectionService = self::$repository->getSectionService();
+        $sectionService = $this->repository->getSectionService();
 
         $section = $sectionService->loadSection( 1 );
 
@@ -369,7 +369,7 @@ abstract class SectionBase extends BaseServiceTest
      */
     public function testNewSectionCreateStruct()
     {
-        $sectionService = self::$repository->getSectionService();
+        $sectionService = $this->repository->getSectionService();
 
         $sectionCreateStruct = $sectionService->newSectionCreateStruct();
 
@@ -390,7 +390,7 @@ abstract class SectionBase extends BaseServiceTest
      */
     public function testNewSectionUpdateStruct()
     {
-        $sectionService = self::$repository->getSectionService();
+        $sectionService = $this->repository->getSectionService();
 
         $sectionUpdateStruct = $sectionService->newSectionUpdateStruct();
 

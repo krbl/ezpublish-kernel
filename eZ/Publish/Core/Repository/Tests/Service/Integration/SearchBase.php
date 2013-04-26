@@ -31,7 +31,7 @@ abstract class SearchBase extends BaseServiceTest
     public function testFindContent()
     {
         /* BEGIN: Use Case */
-        $searchService = self::$repository->getSearchService();
+        $searchService = $this->repository->getSearchService();
         $query = new Query(
             array(
                 "criterion" => new Criterion\ContentId( array( 4 ) ),
@@ -67,7 +67,7 @@ abstract class SearchBase extends BaseServiceTest
     public function testFindContentWithLanguageFilter()
     {
         /* BEGIN: Use Case */
-        $searchService = self::$repository->getSearchService();
+        $searchService = $this->repository->getSearchService();
         $query = new Query(
             array(
                 "criterion" => new Criterion\ContentId( array( 4 ) ),
@@ -104,7 +104,7 @@ abstract class SearchBase extends BaseServiceTest
     public function testFindSingleThrowsNotFoundException()
     {
         /* BEGIN: Use Case */
-        $searchService = self::$repository->getSearchService();
+        $searchService = $this->repository->getSearchService();
 
         // Throws an exception because content with given id does not exist
         $searchResult = $searchService->findSingle(
@@ -124,7 +124,7 @@ abstract class SearchBase extends BaseServiceTest
     public function testFindSingleThrowsInvalidArgumentException()
     {
         /* BEGIN: Use Case */
-        $searchService = self::$repository->getSearchService();
+        $searchService = $this->repository->getSearchService();
 
         // Throws an exception because more than one result was returned for the given query
         $searchResult = $searchService->findSingle(

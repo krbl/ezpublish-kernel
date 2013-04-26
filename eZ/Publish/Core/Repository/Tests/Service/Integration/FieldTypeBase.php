@@ -25,7 +25,7 @@ abstract class FieldTypeBase extends BaseServiceTest
      */
     public function testGetFieldTypes()
     {
-        $fieldTypeService = self::$repository->getFieldTypeService();
+        $fieldTypeService = $this->repository->getFieldTypeService();
         $refObject = new \ReflectionObject( $fieldTypeService );
         $refProperty = $refObject->getProperty( 'settings' );
         $refProperty->setAccessible( true );
@@ -77,7 +77,7 @@ abstract class FieldTypeBase extends BaseServiceTest
      */
     public function testGetFieldType( $identifier )
     {
-        $fieldTypeService = self::$repository->getFieldTypeService();
+        $fieldTypeService = $this->repository->getFieldTypeService();
         $fieldType = $fieldTypeService->getFieldType( $identifier );
 
         self::assertInstanceOf( "eZ\\Publish\\API\\Repository\\FieldType", $fieldType );
@@ -102,7 +102,7 @@ abstract class FieldTypeBase extends BaseServiceTest
      */
     public function testGetFieldTypeThrowsNotFoundException( $identifier )
     {
-        $fieldTypeService = self::$repository->getFieldTypeService();
+        $fieldTypeService = $this->repository->getFieldTypeService();
         $fieldTypeService->getFieldType( $identifier );
     }
 
@@ -120,7 +120,7 @@ abstract class FieldTypeBase extends BaseServiceTest
     public function testHasFieldTypeTrue( $identifier )
     {
         self::assertTrue(
-            self::$repository->getFieldTypeService()->hasFieldType( $identifier )
+            $this->repository->getFieldTypeService()->hasFieldType( $identifier )
         );
     }
 
@@ -141,7 +141,7 @@ abstract class FieldTypeBase extends BaseServiceTest
     public function testHasFieldTypeFalse( $identifier )
     {
         self::assertFalse(
-            self::$repository->getFieldTypeService()->hasFieldType( $identifier )
+            $this->repository->getFieldTypeService()->hasFieldType( $identifier )
         );
     }
 
@@ -158,7 +158,7 @@ abstract class FieldTypeBase extends BaseServiceTest
      */
     public function testBuildFieldType( $identifier )
     {
-        $fieldTypeService = self::$repository->getFieldTypeService();
+        $fieldTypeService = $this->repository->getFieldTypeService();
         $fieldType = $fieldTypeService->buildFieldType( $identifier );
 
         self::assertInstanceOf( "eZ\\Publish\\Core\\FieldType\\FieldType", $fieldType );
@@ -184,7 +184,7 @@ abstract class FieldTypeBase extends BaseServiceTest
      */
     public function testBuildFieldTypeThrowsNotFoundException( $identifier )
     {
-        $fieldTypeService = self::$repository->getFieldTypeService();
+        $fieldTypeService = $this->repository->getFieldTypeService();
         $fieldTypeService->getFieldType( $identifier );
     }
 }

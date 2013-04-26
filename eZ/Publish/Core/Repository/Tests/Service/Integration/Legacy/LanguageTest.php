@@ -16,7 +16,7 @@ use eZ\Publish\Core\Repository\Tests\Service\Integration\LanguageBase as BaseLan
  */
 class LanguageTest extends BaseLanguageServiceTest
 {
-    protected static function getRepository()
+    protected function getRepository()
     {
         return Utils::getRepository();
     }
