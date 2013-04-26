@@ -25,7 +25,7 @@ abstract class UrlWildcardBase extends BaseServiceTest
      */
     public function testLoad()
     {
-        $service = $this->repository->getURLWildcardService();
+        $service = self::$repository->getURLWildcardService();
         $service->create( "/fruit/*", "/food/{1}", true );
 
         $urlWildcard = $service->load( 1 );
@@ -50,7 +50,7 @@ abstract class UrlWildcardBase extends BaseServiceTest
      */
     public function testLoadThrowsNotFoundException()
     {
-        $service = $this->repository->getURLWildcardService();
+        $service = self::$repository->getURLWildcardService();
 
         $service->load( 100 );
     }
@@ -79,7 +79,7 @@ abstract class UrlWildcardBase extends BaseServiceTest
      */
     public function testCreate( $sourceUrl, $destinationUrl, $forward )
     {
-        $service = $this->repository->getURLWildcardService();
+        $service = self::$repository->getURLWildcardService();
         $urlWildcard = $service->create( $sourceUrl, $destinationUrl, $forward );
 
         self::assertEquals(
@@ -105,7 +105,7 @@ abstract class UrlWildcardBase extends BaseServiceTest
      */
     public function testCreatedUrlWildcardIsLoadable( $sourceUrl, $destinationUrl, $forward )
     {
-        $service = $this->repository->getURLWildcardService();
+        $service = self::$repository->getURLWildcardService();
         $urlWildcard = $service->create( $sourceUrl, $destinationUrl, $forward );
 
         self::assertEquals(
@@ -124,11 +124,11 @@ abstract class UrlWildcardBase extends BaseServiceTest
      */
     public function testCreateWithRollback()
     {
-        $service = $this->repository->getURLWildcardService();
+        $service = self::$repository->getURLWildcardService();
 
-        $this->repository->beginTransaction();
+        self::$repository->beginTransaction();
         $service->create( "fruit/*", "food/{1}", true );
-        $this->repository->rollback();
+        self::$repository->rollback();
 
         $service->load( 1 );
     }
@@ -141,7 +141,7 @@ abstract class UrlWildcardBase extends BaseServiceTest
      */
     public function testCreateThrowsInvalidArgumentException()
     {
-        $service = $this->repository->getURLWildcardService();
+        $service = self::$repository->getURLWildcardService();
 
         $service->create( "fruit/*", "food/{1}", true );
         $service->create( "/fruit/*", "food/{1}", true );
@@ -168,7 +168,7 @@ abstract class UrlWildcardBase extends BaseServiceTest
      */
     public function testCreateThrowsContentValidationException( $sourceUrl, $destinationUrl, $forward )
     {
-        $service = $this->repository->getURLWildcardService();
+        $service = self::$repository->getURLWildcardService();
 
         $service->create( $sourceUrl, $destinationUrl, $forward );
     }
@@ -183,7 +183,7 @@ abstract class UrlWildcardBase extends BaseServiceTest
      */
     public function testRemove()
     {
-        $service = $this->repository->getURLWildcardService();
+        $service = self::$repository->getURLWildcardService();
 
         $service->create( "fruit/*", "food/{1}", true );
         $urlWildcard = $service->load( 1 );
@@ -200,14 +200,14 @@ abstract class UrlWildcardBase extends BaseServiceTest
      */
     public function testRemoveWithRollback()
     {
-        $service = $this->repository->getURLWildcardService();
+        $service = self::$repository->getURLWildcardService();
 
         $service->create( "fruit/*", "food/{1}", true );
         $urlWildcard = $service->load( 1 );
 
-        $this->repository->beginTransaction();
+        self::$repository->beginTransaction();
         $service->remove( $urlWildcard );
-        $this->repository->rollback();
+        self::$repository->rollback();
 
         self::assertEquals(
             $urlWildcard,
@@ -223,7 +223,7 @@ abstract class UrlWildcardBase extends BaseServiceTest
      */
     public function testLoadAll()
     {
-        $service = $this->repository->getURLWildcardService();
+        $service = self::$repository->getURLWildcardService();
         $service->create( "fruit/*", "food/{1}", true );
         $service->create( "vegetable/*", "food/{1}", true );
 
@@ -259,7 +259,7 @@ abstract class UrlWildcardBase extends BaseServiceTest
      */
     public function testLoadAllWithOffset()
     {
-        $service = $this->repository->getURLWildcardService();
+        $service = self::$repository->getURLWildcardService();
         $service->create( "fruit/*", "food/{1}", true );
         $service->create( "vegetable/*", "food/{1}", true );
         $service->create( "seed/*", "food/{1}", true );
@@ -296,7 +296,7 @@ abstract class UrlWildcardBase extends BaseServiceTest
      */
     public function testLoadAllWithOffsetAndLimit()
     {
-        $service = $this->repository->getURLWildcardService();
+        $service = self::$repository->getURLWildcardService();
         $service->create( "fruit/*", "food/{1}", true );
         $service->create( "vegetable/*", "food/{1}", true );
         $service->create( "seed/*", "food/{1}", true );
@@ -360,7 +360,7 @@ abstract class UrlWildcardBase extends BaseServiceTest
      */
     public function testTranslate( $createArray, $url, $uri )
     {
-        $service = $this->repository->getURLWildcardService();
+        $service = self::$repository->getURLWildcardService();
         list( $createSourceUrl, $createDestinationUrl, $createForward ) = $createArray;
         $service->create( $createSourceUrl, $createDestinationUrl, $createForward );
 
@@ -384,7 +384,7 @@ abstract class UrlWildcardBase extends BaseServiceTest
      */
     public function testTranslateUsesLongestMatchingWildcard()
     {
-        $service = $this->repository->getURLWildcardService();
+        $service = self::$repository->getURLWildcardService();
         $service->create( "/something/*", "/short", true );
         $service->create( "/something/something/*", "/long", false );
 
@@ -409,7 +409,7 @@ abstract class UrlWildcardBase extends BaseServiceTest
      */
     public function testTranslateThrowsNotFoundException()
     {
-        $service = $this->repository->getURLWildcardService();
+        $service = self::$repository->getURLWildcardService();
 
         $service->translate( "cant/get/there/from/here" );
     }

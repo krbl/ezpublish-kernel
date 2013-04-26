@@ -66,7 +66,7 @@ abstract class ContentBase extends BaseServiceTest
         if ( $draft )
         {
             //$values["id"] = 675;
-            $values["creatorId"] = $this->repository->getCurrentUser()->id;
+            $values["creatorId"] = self::$repository->getCurrentUser()->id;
             $values["versionNo"] = 2;
             $values["status"] = VersionInfo::STATUS_DRAFT;
             unset( $values["modificationDate"] );
@@ -115,7 +115,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadContentInfo()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentInfo = $contentService->loadContentInfo( 4 );
         /* END: Use Case */
@@ -157,7 +157,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadContentInfoThrowsNotFoundException()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         // Throws an exception because given contentId does not exist
         $contentInfo = $contentService->loadContentInfo( PHP_INT_MAX );
@@ -175,9 +175,9 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadContentInfoThrowsUnauthorizedException()
     {
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
-        $this->repository->getContentService()->loadContentInfo( 4 );
+        self::$repository->getContentService()->loadContentInfo( 4 );
     }
 
     /**
@@ -190,7 +190,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadContentInfoByRemoteId()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentInfo = $contentService->loadContentInfoByRemoteId( "f5c88a2209584891056f987fd965b0ba" );
         /* END: Use Case */
@@ -232,7 +232,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadContentInfoByRemoteIdThrowsNotFoundException()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         // Throws an exception because remoteId does not exist
         $contentInfo = $contentService->loadContentInfoByRemoteId( "this-remote-id-does-not-exist" );
@@ -250,9 +250,9 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadContentInfoByRemoteIdThrowsUnauthorizedException()
     {
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
-        $this->repository->getContentService()->loadContentInfoByRemoteId( "f5c88a2209584891056f987fd965b0ba" );
+        self::$repository->getContentService()->loadContentInfoByRemoteId( "f5c88a2209584891056f987fd965b0ba" );
     }
 
     /**
@@ -265,7 +265,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadVersionInfoById()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $versionInfo = $contentService->loadVersionInfoById( 4 );
         /* END: Use Case */
@@ -306,7 +306,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadVersionInfoByIdWithSecondParameter()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $versionInfo = $contentService->loadVersionInfoById( 4, 1 );
         /* END: Use Case */
@@ -348,7 +348,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadVersionInfoByIdThrowsNotFoundException()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         // Throws an exception because version with given number does not exists
         $versionInfo = $contentService->loadVersionInfoById( 4, PHP_INT_MAX );
@@ -366,9 +366,9 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadVersionInfoByIdThrowsUnauthorizedException()
     {
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
-        $this->repository->getContentService()->loadVersionInfoById( 4 );
+        self::$repository->getContentService()->loadVersionInfoById( 4 );
     }
 
     /**
@@ -401,7 +401,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadContent( $contentId, array $languages = null, $versionNo = null  )
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $content = $contentService->loadContent( $contentId, $languages, $versionNo );
         /* END: Use Case */
@@ -456,9 +456,9 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadContentThrowsUnauthorizedException()
     {
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
-        $this->repository->getContentService()->loadContent( 4 );
+        self::$repository->getContentService()->loadContent( 4 );
     }
 
     /**
@@ -470,7 +470,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadContentThrowsNotFoundExceptionContentNotFound()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         // Throws an exception because content with id PHP_INT_MAX does not exist
         $content = $contentService->loadContent( PHP_INT_MAX );
@@ -486,7 +486,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadContentThrowsNotFoundExceptionVersionNotFound()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         // Throws an exception because version number PHP_INT_MAX for content with id 4 does not exist
         $content = $contentService->loadContent( 4, null, PHP_INT_MAX );
@@ -502,7 +502,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadContentThrowsNotFoundExceptionLanguageNotFound()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         // Throws an exception because content does not exists in "eng-GB" language
         $content = $contentService->loadContent( 4, array( "eng-GB" ) );
@@ -518,7 +518,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadContentThrowsNotFoundExceptionLanguageNotFoundVariation()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         // Throws an exception because content does not exists in "eng-GB" language
         $content = $contentService->loadContent( 4, array( "eng-US", "eng-GB" ) );
@@ -555,7 +555,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadContentByRemoteId( $remoteId, $languages, $versionNo )
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $content = $contentService->loadContentByRemoteId( $remoteId, $languages, $versionNo );
         /* END: Use Case */
@@ -577,7 +577,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadContentByRemoteIdThrowsNotFoundException()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         // Throws an exception because given remoteId does not exist
         $content = $contentService->loadContentByRemoteId( "non-existent-remote-id" );
@@ -593,9 +593,9 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadContentByRemoteIdThrowsUnauthorizedException()
     {
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
-        $this->repository->getContentService()->loadContentByRemoteId( "f5c88a2209584891056f987fd965b0ba" );
+        self::$repository->getContentService()->loadContentByRemoteId( "f5c88a2209584891056f987fd965b0ba" );
     }
 
     /**
@@ -608,8 +608,8 @@ abstract class ContentBase extends BaseServiceTest
     public function testNewContentCreateStruct()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentService = self::$repository->getContentService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $folderContentType = $contentTypeService->loadContentType( 1 );
 
@@ -676,13 +676,13 @@ abstract class ContentBase extends BaseServiceTest
         $testContentType = $this->createTestContentType();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentCreate = $contentService->newContentCreateStruct( $testContentType, 'eng-GB' );
         $contentCreate->setField( "test_required_empty", "value for field definition with empty default value" );
         $contentCreate->setField( "test_translatable", "and thumbs opposable", "eng-US" );
         $contentCreate->sectionId = 1;
-        $contentCreate->ownerId = $this->repository->getCurrentUser()->id;
+        $contentCreate->ownerId = self::$repository->getCurrentUser()->id;
         $contentCreate->remoteId = 'abcdef0123456789abcdef0123456789';
         $contentCreate->alwaysAvailable = true;
 
@@ -951,13 +951,13 @@ abstract class ContentBase extends BaseServiceTest
     public function testCreateContentThrowsUnauthorizedException()
     {
         $testContentType = $this->createTestContentType();
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentCreate = $contentService->newContentCreateStruct( $testContentType, 'eng-GB' );
         $contentCreate->setField( "test_required_empty", "value for field definition with empty default value" );
         $contentCreate->setField( "test_translatable", "and thumbs opposable", "eng-US" );
         $contentCreate->sectionId = 1;
-        $contentCreate->ownerId = $this->repository->getCurrentUser()->id;
+        $contentCreate->ownerId = self::$repository->getCurrentUser()->id;
         $contentCreate->remoteId = 'abcdef0123456789abcdef0123456789';
         $contentCreate->alwaysAvailable = true;
 
@@ -971,7 +971,7 @@ abstract class ContentBase extends BaseServiceTest
         );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentService->createContent( $contentCreate, $locationCreates );
     }
@@ -985,18 +985,18 @@ abstract class ContentBase extends BaseServiceTest
     public function testCreateContentWithoutLocationsThrowsUnauthorizedException()
     {
         $testContentType = $this->createTestContentType();
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentCreate = $contentService->newContentCreateStruct( $testContentType, 'eng-GB' );
         $contentCreate->setField( "test_required_empty", "value for field definition with empty default value" );
         $contentCreate->setField( "test_translatable", "and thumbs opposable", "eng-US" );
         $contentCreate->sectionId = 1;
-        $contentCreate->ownerId = $this->repository->getCurrentUser()->id;
+        $contentCreate->ownerId = self::$repository->getCurrentUser()->id;
         $contentCreate->remoteId = 'abcdef0123456789abcdef0123456789';
         $contentCreate->alwaysAvailable = true;
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentService->createContent( $contentCreate, array() );
     }
@@ -1012,7 +1012,7 @@ abstract class ContentBase extends BaseServiceTest
         $testContentType = $this->createTestContentType();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentCreate = $contentService->newContentCreateStruct( $testContentType, 'eng-GB' );
         $contentCreate->setField( "test_required_empty", "value for field definition with empty default value" );
@@ -1039,7 +1039,7 @@ abstract class ContentBase extends BaseServiceTest
         $testContentType = $this->createTestContentType();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentCreate = $contentService->newContentCreateStruct( $testContentType, 'eng-GB' );
         $contentCreate->setField( "test_required_empty", "value for field definition with empty default value" );
@@ -1067,7 +1067,7 @@ abstract class ContentBase extends BaseServiceTest
         $testContentType = $this->createTestContentType();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentCreate = $contentService->newContentCreateStruct( $testContentType, 'eng-GB' );
         $contentCreate->setField( "test_required_empty", "value for field definition with empty default value" );
@@ -1096,7 +1096,7 @@ abstract class ContentBase extends BaseServiceTest
         $testContentType = $this->createTestContentType();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentCreate = $contentService->newContentCreateStruct( $testContentType, 'eng-GB' );
         $contentCreate->setField( "test_translatable", "Jabberwock" );
@@ -1121,7 +1121,7 @@ abstract class ContentBase extends BaseServiceTest
         $testContentType = $this->createTestContentType();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentCreate = $contentService->newContentCreateStruct( $testContentType, 'eng-GB' );
         $contentCreate->setField(
@@ -1148,7 +1148,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testNewContentMetadataUpdateStruct()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentMetadataUpdateStruct = $contentService->newContentMetadataUpdateStruct();
         /* END: Use Case */
@@ -1173,26 +1173,26 @@ abstract class ContentBase extends BaseServiceTest
     public function testUpdateContentMetadata()
     {
         // Create one additional location for content to be set as main location
-        $locationService = $this->repository->getLocationService();
-        $contentInfo = $this->repository->getContentService()->loadContentInfo( 12 );
+        $locationService = self::$repository->getLocationService();
+        $contentInfo = self::$repository->getContentService()->loadContentInfo( 12 );
         $locationCreateStruct = $locationService->newLocationCreateStruct( 44 );
         $locationCreateStruct->remoteId = "test-location-remote-id-1234";
         $newLocation = $locationService->createLocation(
             $contentInfo,
             $locationCreateStruct
         );
-        $newSectionId = $this->repository->getContentService()->loadContentInfo(
+        $newSectionId = self::$repository->getContentService()->loadContentInfo(
             $locationService->loadLocation( $newLocation->parentLocationId )->contentId
         )->sectionId;
         // Change content section to be different from new main location parent location content
-        $sectionService = $this->repository->getSectionService();
+        $sectionService = self::$repository->getSectionService();
         $sectionService->assignSection(
             $contentInfo,
             $sectionService->loadSection( $newSectionId === 1 ? $newSectionId + 1 : $newSectionId - 1 )
         );
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentInfo = $contentService->loadContentInfo( 12 );
 
@@ -1259,14 +1259,14 @@ abstract class ContentBase extends BaseServiceTest
      */
     public function testUpdateContentMetadataThrowsUnauthorizedException()
     {
-        $contentInfo = $this->repository->getContentService()->loadContentInfo( 12 );
-        $contentMetadataUpdateStruct = $this->repository->getContentService()->newContentMetadataUpdateStruct();
+        $contentInfo = self::$repository->getContentService()->loadContentInfo( 12 );
+        $contentMetadataUpdateStruct = self::$repository->getContentService()->newContentMetadataUpdateStruct();
         $contentMetadataUpdateStruct->remoteId = "the-all-new-remoteid";
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
-        $this->repository->getContentService()->updateContentMetadata( $contentInfo, $contentMetadataUpdateStruct );
+        self::$repository->getContentService()->updateContentMetadata( $contentInfo, $contentMetadataUpdateStruct );
     }
 
     /**
@@ -1279,7 +1279,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testUpdateContentMetadataThrowsInvalidArgumentExceptionDuplicateRemoteId()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
         $contentInfo = $contentService->loadContentInfo( 4 );
         $contentMetadataUpdateStruct = $contentService->newContentMetadataUpdateStruct();
         $contentMetadataUpdateStruct->remoteId = "9b47a45624b023b1a76c73b74d704acf";
@@ -1299,7 +1299,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testUpdateContentMetadataThrowsInvalidArgumentExceptionNoMetadataPropertiesSet()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
         $contentInfo = $contentService->loadContentInfo( 4 );
         $contentMetadataUpdateStruct = $contentService->newContentMetadataUpdateStruct();
 
@@ -1316,7 +1316,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testNewContentUpdateStruct()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentUpdateStruct = $contentService->newContentUpdateStruct();
         /* END: Use Case */
@@ -1350,7 +1350,7 @@ abstract class ContentBase extends BaseServiceTest
         $time = time();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $versionInfo = $contentService->loadVersionInfoById(
             $content->id,
@@ -1464,7 +1464,7 @@ abstract class ContentBase extends BaseServiceTest
         list( $content, $contentType ) = $this->createTestContent();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $versionInfo = $contentService->loadVersionInfoById(
             $content->id,
@@ -1515,14 +1515,14 @@ abstract class ContentBase extends BaseServiceTest
     {
         list( $content, $contentType ) = $this->createTestContent();
 
-        $contentUpdateStruct = $this->repository->getContentService()->newContentUpdateStruct();
+        $contentUpdateStruct = self::$repository->getContentService()->newContentUpdateStruct();
         $contentUpdateStruct->initialLanguageCode = "eng-US";
         $contentUpdateStruct->setField( "test_required_empty", "new value for test_required_empty" );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
-        $this->repository->getContentService()->updateContent(
+        self::$repository->getContentService()->updateContent(
             $content->versionInfo,
             $contentUpdateStruct
         );
@@ -1537,7 +1537,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testUpdateContentThrowsBadStateException()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $versionInfo = $contentService->loadVersionInfoById( 4 );
         $contentUpdateStruct = $contentService->newContentUpdateStruct();
@@ -1558,7 +1558,7 @@ abstract class ContentBase extends BaseServiceTest
         list( $content, $contentType ) = $this->createTestContent();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $versionInfo = $contentService->loadVersionInfoById(
             $content->id,
@@ -1589,7 +1589,7 @@ abstract class ContentBase extends BaseServiceTest
         list( $content, $contentType ) = $this->createTestContent();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $versionInfo = $contentService->loadVersionInfoById(
             $content->id,
@@ -1616,7 +1616,7 @@ abstract class ContentBase extends BaseServiceTest
         list( $content, $contentType ) = $this->createTestContent();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $versionInfo = $contentService->loadVersionInfoById(
             $content->id,
@@ -1646,7 +1646,7 @@ abstract class ContentBase extends BaseServiceTest
         list( $content, $contentType ) = $this->createTestContent();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $versionInfo = $contentService->loadVersionInfoById(
             $content->id,
@@ -1675,7 +1675,7 @@ abstract class ContentBase extends BaseServiceTest
         list( $draftContent, $contentType ) = $this->createTestContent();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $versionInfo = $contentService->loadVersionInfoById(
             $draftContent->id,
@@ -1701,7 +1701,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testPublishVersionThrowsBadStateException()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $versionInfo = $contentService->loadVersionInfoById( 4 );
 
@@ -1721,9 +1721,9 @@ abstract class ContentBase extends BaseServiceTest
         list( $draftContent, $contentType ) = $this->createTestContent();
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
-        $this->repository->getContentService()->publishVersion( $draftContent->versionInfo );
+        self::$repository->getContentService()->publishVersion( $draftContent->versionInfo );
     }
 
     /**
@@ -1738,7 +1738,7 @@ abstract class ContentBase extends BaseServiceTest
         $time = time();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentInfo = $contentService->loadContentInfo( 4 );
 
@@ -1801,7 +1801,7 @@ abstract class ContentBase extends BaseServiceTest
         $time = time();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
         $content = $contentService->loadContent( 4 );
 
         $draftContent = $contentService->createContentDraft(
@@ -1846,13 +1846,13 @@ abstract class ContentBase extends BaseServiceTest
         $time = time();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
         $content = $contentService->loadContent( 4 );
 
         $draftContent = $contentService->createContentDraft(
             $content->contentInfo,
             $content->getVersionInfo(),
-            $this->repository->getCurrentUser()
+            self::$repository->getCurrentUser()
         );
         /* END: Use Case */
 
@@ -1888,7 +1888,7 @@ abstract class ContentBase extends BaseServiceTest
      */
     public function testCreateContentDraftThrowsBadStateException()
     {
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
         $contentInfo = $contentService->loadContentInfo( 4 );
         $draftContent = $contentService->createContentDraft( $contentInfo );
 
@@ -1908,12 +1908,12 @@ abstract class ContentBase extends BaseServiceTest
      */
     public function testCreateContentDraftThrowsUnauthorizedException()
     {
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentInfo = $contentService->loadContentInfo( 4 );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentService->createContentDraft( $contentInfo );
     }
@@ -1925,7 +1925,7 @@ abstract class ContentBase extends BaseServiceTest
      */
     public function testLoadContentDrafts()
     {
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         // delete existing drafts before we begin
         $draftedVersions = $contentService->loadContentDrafts();
@@ -1988,10 +1988,10 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadContentDraftsThrowsUnauthorizedException()
     {
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         // Now $contentDrafts should contain two drafted versions
-        $this->repository->getContentService()->loadContentDrafts();
+        self::$repository->getContentService()->loadContentDrafts();
     }
 
     /**
@@ -2005,7 +2005,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadVersions()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentInfo = $contentService->loadContentInfo( 4 );
         $versions = $contentService->loadVersions( $contentInfo );
@@ -2046,7 +2046,7 @@ abstract class ContentBase extends BaseServiceTest
         $time = time();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentInfo = $contentService->loadContentInfo( 4 );
         // Create one additional version
@@ -2102,12 +2102,12 @@ abstract class ContentBase extends BaseServiceTest
      */
     public function testLoadVersionsThrowsUnauthorizedException()
     {
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentInfo = $contentService->loadContentInfo( 4 );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentService->loadVersions( $contentInfo );
     }
@@ -2120,7 +2120,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testDeleteVersion()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentInfo = $contentService->loadContentInfo( 4 );
 
@@ -2154,7 +2154,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testDeleteVersionThrowsBadStateException()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $versionInfo = $contentService->loadVersionInfoById( 4 );
 
@@ -2171,7 +2171,7 @@ abstract class ContentBase extends BaseServiceTest
      */
     public function testDeleteVersionThrowsUnauthorizedException()
     {
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $contentInfo = $contentService->loadContentInfo( 4 );
 
@@ -2179,7 +2179,7 @@ abstract class ContentBase extends BaseServiceTest
         $draftContent = $contentService->createContentDraft( $contentInfo );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentService->deleteVersion( $draftContent->versionInfo );
     }
@@ -2197,8 +2197,8 @@ abstract class ContentBase extends BaseServiceTest
         $time = time();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
-        $locationService = $this->repository->getLocationService();
+        $contentService = self::$repository->getContentService();
+        $locationService = self::$repository->getLocationService();
 
         $contentInfo = $contentService->loadContentInfo( 11 );
         $versionInfo = $contentService->loadVersionInfoById( 11, 1 );
@@ -2236,8 +2236,8 @@ abstract class ContentBase extends BaseServiceTest
         $time = time();
 
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
-        $locationService = $this->repository->getLocationService();
+        $contentService = self::$repository->getContentService();
+        $locationService = self::$repository->getLocationService();
 
         $contentInfo = $contentService->loadContentInfo( 11 );
         $destinationLocationCreateStruct = $locationService->newLocationCreateStruct( 5 );
@@ -2371,14 +2371,14 @@ abstract class ContentBase extends BaseServiceTest
      */
     public function testCopyContentThrowsUnauthorizedException()
     {
-        $contentService = $this->repository->getContentService();
-        $locationService = $this->repository->getLocationService();
+        $contentService = self::$repository->getContentService();
+        $locationService = self::$repository->getLocationService();
 
         $contentInfo = $contentService->loadContentInfo( 11 );
         $destinationLocationCreateStruct = $locationService->newLocationCreateStruct( 5 );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentService->copyContent( $contentInfo, $destinationLocationCreateStruct );
     }
@@ -2391,7 +2391,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testNewTranslationInfo()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $translationInfo = $contentService->newTranslationInfo();
         /* END: Use Case */
@@ -2413,7 +2413,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testNewTranslationValues()
     {
         /* BEGIN: Use Case */
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $translationValues = $contentService->newTranslationValues();
         /* END: Use Case */
@@ -2436,7 +2436,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadRelations()
     {
         list( $contentDraft, $contentType ) = $this->createTestContent();
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $mediaContentInfo = $contentService->loadContentInfoByRemoteId( 'a6e35cbcb7cd6ae4b691f3eee30cd262' );
 
@@ -2471,7 +2471,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadRelationsThrowsUnauthorizedException()
     {
         list( $contentDraft, $contentType ) = $this->createTestContent();
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $mediaContentInfo = $contentService->loadContentInfoByRemoteId( 'a6e35cbcb7cd6ae4b691f3eee30cd262' );
 
@@ -2481,7 +2481,7 @@ abstract class ContentBase extends BaseServiceTest
         );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentService->loadRelations( $contentDraft->versionInfo );
     }
@@ -2494,7 +2494,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadReverseRelations()
     {
         list( $contentDraft, $contentType ) = $this->createTestContent();
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $mediaContentInfo = $contentService->loadContentInfoByRemoteId( 'a6e35cbcb7cd6ae4b691f3eee30cd262' );
 
@@ -2517,7 +2517,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testLoadReverseRelationsThrowsUnauthorizedException()
     {
         list( $contentDraft, $contentType ) = $this->createTestContent();
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $mediaContentInfo = $contentService->loadContentInfoByRemoteId( 'a6e35cbcb7cd6ae4b691f3eee30cd262' );
 
@@ -2527,7 +2527,7 @@ abstract class ContentBase extends BaseServiceTest
         );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentService->loadReverseRelations( $mediaContentInfo );
     }
@@ -2541,12 +2541,12 @@ abstract class ContentBase extends BaseServiceTest
     public function testAddRelationThrowsUnauthorizedException()
     {
         list( $contentDraft, $contentType ) = $this->createTestContent();
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $mediaContentInfo = $contentService->loadContentInfoByRemoteId( 'a6e35cbcb7cd6ae4b691f3eee30cd262' );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentService->addRelation(
             $contentDraft->getVersionInfo(),
@@ -2562,7 +2562,7 @@ abstract class ContentBase extends BaseServiceTest
      */
     public function testAddRelationThrowsBadStateException()
     {
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
         list( $contentDraft, $contentType ) = $this->createTestContent();
         $publishedContent = $contentService->publishVersion( $contentDraft->versionInfo );
 
@@ -2582,7 +2582,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testDeleteRelation()
     {
         list( $contentDraft, $contentType ) = $this->createTestContent();
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $mediaContentInfo = $contentService->loadContentInfoByRemoteId( 'a6e35cbcb7cd6ae4b691f3eee30cd262' );
 
@@ -2610,7 +2610,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testDeleteRelationThrowsUnauthorizedException()
     {
         list( $contentDraft, $contentType ) = $this->createTestContent();
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $mediaContentInfo = $contentService->loadContentInfoByRemoteId( 'a6e35cbcb7cd6ae4b691f3eee30cd262' );
 
@@ -2620,7 +2620,7 @@ abstract class ContentBase extends BaseServiceTest
         );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentService->deleteRelation(
             $contentDraft->getVersionInfo(),
@@ -2636,7 +2636,7 @@ abstract class ContentBase extends BaseServiceTest
      */
     public function testDeleteRelationThrowsBadStateException()
     {
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
         list( $contentDraft, $contentType ) = $this->createTestContent();
 
         $mediaContentInfo = $contentService->loadContentInfoByRemoteId( 'a6e35cbcb7cd6ae4b691f3eee30cd262' );
@@ -2663,7 +2663,7 @@ abstract class ContentBase extends BaseServiceTest
     public function testDeleteRelationThrowsInvalidArgumentException()
     {
         list( $contentDraft, $contentType ) = $this->createTestContent();
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
 
         $mediaContentInfo = $contentService->loadContentInfoByRemoteId( 'a6e35cbcb7cd6ae4b691f3eee30cd262' );
 
@@ -2680,7 +2680,7 @@ abstract class ContentBase extends BaseServiceTest
      */
     protected function createTestContent()
     {
-        $contentService = $this->repository->getContentService();
+        $contentService = self::$repository->getContentService();
         $testContentType = $this->createTestContentType();
 
         $contentCreate = $contentService->newContentCreateStruct( $testContentType, 'eng-GB' );
@@ -2727,14 +2727,14 @@ abstract class ContentBase extends BaseServiceTest
      */
     protected function createTestContentType()
     {
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
         $typeCreateStruct = $contentTypeService->newContentTypeCreateStruct(
             "test-type"
         );
         $typeCreateStruct->names = array( "eng-US" => "Test type name" );
         $typeCreateStruct->descriptions = array( "eng-GB" => "Test type description" );
         $typeCreateStruct->remoteId = "test-type-remoteid";
-        $typeCreateStruct->creatorId = $this->repository->getCurrentUser()->id;
+        $typeCreateStruct->creatorId = self::$repository->getCurrentUser()->id;
         $typeCreateStruct->creationDate = $this->getDateTime( 0 );
         $typeCreateStruct->mainLanguageCode = "eng-GB";
         $typeCreateStruct->nameSchema = "<test_required_empty>";

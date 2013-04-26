@@ -170,7 +170,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testCreateGroup()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
 
         $groupCreateStruct = $objectStateService->newObjectStateGroupCreateStruct( 'test' );
         $groupCreateStruct->defaultLanguageCode = 'eng-GB';
@@ -204,7 +204,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testCreateGroupThrowsInvalidArgumentException()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
 
         $groupCreateStruct = $objectStateService->newObjectStateGroupCreateStruct( 'ez_lock' );
         $groupCreateStruct->defaultLanguageCode = 'eng-GB';
@@ -220,7 +220,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testLoadObjectStateGroup()
     {
-        $group = $this->repository->getObjectStateService()->loadObjectStateGroup( 2 );
+        $group = self::$repository->getObjectStateService()->loadObjectStateGroup( 2 );
 
         $this->assertInstanceOf(
             '\\eZ\\Publish\\API\\Repository\\Values\\ObjectState\\ObjectStateGroup',
@@ -247,7 +247,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testLoadObjectStateGroupThrowsNotFoundException()
     {
-        $this->repository->getObjectStateService()->loadObjectStateGroup( PHP_INT_MAX );
+        self::$repository->getObjectStateService()->loadObjectStateGroup( PHP_INT_MAX );
     }
 
     /**
@@ -256,7 +256,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testLoadObjectStateGroups()
     {
-        $groups = $this->repository->getObjectStateService()->loadObjectStateGroups();
+        $groups = self::$repository->getObjectStateService()->loadObjectStateGroups();
 
         $this->assertInternalType( 'array', $groups );
         $this->assertCount( 1, $groups );
@@ -276,9 +276,9 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testLoadObjectStates()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
         $group = $objectStateService->loadObjectStateGroup( 2 );
-        $states = $this->repository->getObjectStateService()->loadObjectStates( $group );
+        $states = self::$repository->getObjectStateService()->loadObjectStates( $group );
 
         $this->assertInternalType( 'array', $states );
         $this->assertCount( 2, $states );
@@ -303,7 +303,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testUpdateObjectStateGroup()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
 
         $groupUpdateStruct = $objectStateService->newObjectStateGroupUpdateStruct();
         $groupUpdateStruct->identifier = 'test';
@@ -339,7 +339,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testPartiallyUpdateObjectStateGroup()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
 
         $groupUpdateStruct = $objectStateService->newObjectStateGroupUpdateStruct();
         $groupUpdateStruct->defaultLanguageCode = 'eng-GB';
@@ -377,7 +377,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testUpdateObjectStateGroupThrowsInvalidArgumentException()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
 
         $groupCreateStruct = $objectStateService->newObjectStateGroupCreateStruct( 'test' );
         $groupCreateStruct->defaultLanguageCode = 'eng-GB';
@@ -398,7 +398,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testDeleteObjectStateGroup()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
 
         $group = $objectStateService->loadObjectStateGroup( 2 );
 
@@ -441,7 +441,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testCreateObjectState()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
 
         $group = $objectStateService->loadObjectStateGroup( 2 );
 
@@ -488,7 +488,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testCreateObjectStateInEmptyGroup()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
 
         $groupCreateStruct = $objectStateService->newObjectStateGroupCreateStruct( 'test' );
         $groupCreateStruct->defaultLanguageCode = 'eng-GB';
@@ -542,7 +542,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testCreateObjectStateThrowsInvalidArgumentException()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
 
         $group = $objectStateService->loadObjectStateGroup( 2 );
 
@@ -564,7 +564,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testLoadObjectState()
     {
-        $state = $this->repository->getObjectStateService()->loadObjectState( 1 );
+        $state = self::$repository->getObjectStateService()->loadObjectState( 1 );
 
         $this->assertInstanceOf(
             '\\eZ\\Publish\\API\\Repository\\Values\\ObjectState\\ObjectState',
@@ -599,7 +599,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testLoadObjectStateThrowsNotFoundException()
     {
-        $this->repository->getObjectStateService()->loadObjectState( PHP_INT_MAX );
+        self::$repository->getObjectStateService()->loadObjectState( PHP_INT_MAX );
     }
 
     /**
@@ -608,7 +608,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testUpdateObjectState()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
 
         $stateUpdateStruct = $objectStateService->newObjectStateUpdateStruct();
         $stateUpdateStruct->identifier = 'test';
@@ -652,7 +652,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testPartiallyUpdateObjectState()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
 
         $stateUpdateStruct = $objectStateService->newObjectStateUpdateStruct();
         $stateUpdateStruct->identifier = 'test';
@@ -696,7 +696,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testUpdateObjectStateThrowsInvalidArgumentException()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
 
         $stateUpdateStruct = $objectStateService->newObjectStateUpdateStruct();
         $stateUpdateStruct->identifier = 'locked';
@@ -712,7 +712,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testSetPriorityOfObjectState()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
 
         $state = $objectStateService->loadObjectState( 2 );
         $objectStateService->setPriorityOfObjectState( $state, 0 );
@@ -730,7 +730,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testDeleteObjectState()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
 
         $state = $objectStateService->loadObjectState( 1 );
         $objectStateService->deleteObjectState( $state );
@@ -760,11 +760,11 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testSetContentState()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
 
         $state = $objectStateService->loadObjectState( 2 );
         $group = $state->getObjectStateGroup();
-        $contentInfo = $this->repository->getContentService()->loadContentInfo( 4 );
+        $contentInfo = self::$repository->getContentService()->loadContentInfo( 4 );
         $objectStateService->setContentState(
             $contentInfo,
             $group,
@@ -788,7 +788,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testSetContentStateThrowsInvalidArgumentException()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
 
         $groupCreateStruct = $objectStateService->newObjectStateGroupCreateStruct( 'test' );
         $groupCreateStruct->defaultLanguageCode = 'eng-GB';
@@ -809,7 +809,7 @@ abstract class ObjectStateBase extends BaseServiceTest
         );
 
         $objectStateService->setContentState(
-            $this->repository->getContentService()->loadContentInfo( 4 ),
+            self::$repository->getContentService()->loadContentInfo( 4 ),
             $objectStateService->loadObjectStateGroup( 2 ),
             $createdState
         );
@@ -821,10 +821,10 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testGetContentState()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
 
         $objectState = $objectStateService->getContentState(
-            $this->repository->getContentService()->loadContentInfo( 4 ),
+            self::$repository->getContentService()->loadContentInfo( 4 ),
             $objectStateService->loadObjectStateGroup( 2 )
         );
 
@@ -860,7 +860,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testGetContentCount()
     {
-        $objectStateService = $this->repository->getObjectStateService();
+        $objectStateService = self::$repository->getObjectStateService();
         $state = $objectStateService->loadObjectState( 1 );
         $count = $objectStateService->getContentCount( $state );
 
@@ -873,7 +873,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testNewObjectStateCreateStruct()
     {
-        $objectStateCreateStruct = $this->repository->getObjectStateService()->newObjectStateCreateStruct( 'test' );
+        $objectStateCreateStruct = self::$repository->getObjectStateService()->newObjectStateCreateStruct( 'test' );
 
         $this->assertInstanceOf(
             '\\eZ\\Publish\\API\\Repository\\Values\\ObjectState\\ObjectStateCreateStruct',
@@ -898,7 +898,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testNewObjectStateUpdateStruct()
     {
-        $objectStateUpdateStruct = $this->repository->getObjectStateService()->newObjectStateUpdateStruct();
+        $objectStateUpdateStruct = self::$repository->getObjectStateService()->newObjectStateUpdateStruct();
 
         $this->assertInstanceOf(
             '\\eZ\\Publish\\API\\Repository\\Values\\ObjectState\\ObjectStateUpdateStruct',
@@ -922,7 +922,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testNewObjectStateGroupCreateStruct()
     {
-        $objectStateGroupCreateStruct = $this->repository->getObjectStateService()->newObjectStateGroupCreateStruct( 'test' );
+        $objectStateGroupCreateStruct = self::$repository->getObjectStateService()->newObjectStateGroupCreateStruct( 'test' );
 
         $this->assertInstanceOf(
             '\\eZ\\Publish\\API\\Repository\\Values\\ObjectState\\ObjectStateGroupCreateStruct',
@@ -946,7 +946,7 @@ abstract class ObjectStateBase extends BaseServiceTest
      */
     public function testNewObjectStateGroupUpdateStruct()
     {
-        $objectStateGroupUpdateStruct = $this->repository->getObjectStateService()->newObjectStateGroupUpdateStruct();
+        $objectStateGroupUpdateStruct = self::$repository->getObjectStateService()->newObjectStateGroupUpdateStruct();
 
         $this->assertInstanceOf(
             '\\eZ\\Publish\\API\\Repository\\Values\\ObjectState\\ObjectStateGroupUpdateStruct',

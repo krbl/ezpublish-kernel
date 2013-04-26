@@ -164,7 +164,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testCreateRole()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
         $roleCreateStruct = $roleService->newRoleCreateStruct( 'ultimate_permissions' );
         // @todo uncomment when support for multilingual names and descriptions is added
         // $roleCreateStruct->mainLanguageCode = 'eng-GB';
@@ -208,7 +208,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testCreateRoleThrowsInvalidArgumentException()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
         $roleCreateStruct = $roleService->newRoleCreateStruct( 'Anonymous' );
 
         // @todo uncomment when support for multilingual names and descriptions is added
@@ -225,7 +225,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testCreateRoleWithPolicies()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $limitation1 = new \eZ\Publish\API\Repository\Values\User\Limitation\ContentTypeLimitation();
         $limitation1->limitationValues = array( '12', '13', '14' );
@@ -345,7 +345,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testUpdateRole()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $role = $roleService->loadRoleByIdentifier( 'Anonymous' );
 
@@ -394,7 +394,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testUpdateRoleThrowsInvalidArgumentException()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $role = $roleService->loadRoleByIdentifier( 'Anonymous' );
 
@@ -410,7 +410,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testAddPolicy()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $role = $roleService->loadRole( 1 );
         $policyCount = count( $role->getPolicies() );
@@ -444,7 +444,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testRemovePolicy()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $role = $roleService->loadRole( 1 );
         $policies = $role->getPolicies();
@@ -463,7 +463,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testUpdatePolicy()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $role = $roleService->loadRole( 1 );
         $policies = $role->getPolicies();
@@ -501,7 +501,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testLoadRole()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $role = $roleService->loadRole( 1 );
         self::assertInstanceOf( '\\eZ\\Publish\\API\\Repository\\Values\\User\\Role', $role );
@@ -522,7 +522,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testLoadRoleThrowsNotFoundException()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $roleService->loadRole( PHP_INT_MAX );
     }
@@ -533,7 +533,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testLoadRoleByIdentifier()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $role = $roleService->loadRoleByIdentifier( 'Anonymous' );
         self::assertInstanceOf( '\\eZ\\Publish\\API\\Repository\\Values\\User\\Role', $role );
@@ -554,7 +554,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testLoadRoleByIdentifierThrowsNotFoundException()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $roleService->loadRoleByIdentifier( 'non-existing' );
     }
@@ -565,7 +565,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testLoadRoles()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $roles = $roleService->loadRoles();
         self::assertInternalType( 'array', $roles );
@@ -584,7 +584,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testDeleteRole()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $role = $roleService->loadRole( 1 );
         self::assertInstanceOf( '\\eZ\\Publish\\API\\Repository\\Values\\User\\Role', $role );
@@ -608,7 +608,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testLoadPoliciesByUserId()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $policies = $roleService->loadPoliciesByUserId( 10 );
         self::assertInternalType( 'array', $policies );
@@ -629,7 +629,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testLoadPoliciesByNonExistingUserId()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $roleService->loadPoliciesByUserId( PHP_INT_MAX );
     }
@@ -640,10 +640,10 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testAssignRoleToUserGroup()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $role = $roleService->loadRole( 1 );
-        $userGroup = $this->repository->getUserService()->loadUserGroup( 12 );
+        $userGroup = self::$repository->getUserService()->loadUserGroup( 12 );
 
         $originalAssignmentCount = count( $roleService->getRoleAssignmentsForUserGroup( $userGroup ) );
 
@@ -658,10 +658,10 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testUnassignRoleFromUserGroup()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $anonymousRole = $roleService->loadRole( 1 );
-        $anonymousUserGroup = $this->repository->getUserService()->loadUserGroup( 42 );
+        $anonymousUserGroup = self::$repository->getUserService()->loadUserGroup( 42 );
 
         $originalAssignmentCount = count( $roleService->getRoleAssignmentsForUserGroup( $anonymousUserGroup ) );
 
@@ -680,12 +680,12 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testUnassignRoleFromUserGroupUnauthorizedException()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         try
         {
             $adminRole = $roleService->loadRole( 2 );
-            $adminUserGroup = $this->repository->getUserService()->loadUserGroup( 12 );
+            $adminUserGroup = self::$repository->getUserService()->loadUserGroup( 12 );
             $roleService->getRoleAssignmentsForUserGroup( $adminUserGroup );
             $roleService->unassignRoleFromUserGroup( $adminRole, $adminUserGroup );
         }
@@ -704,10 +704,10 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testUnassignRoleFromUserGroupThrowsInvalidArgumentException()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $role = $roleService->loadRole( 1 );
-        $userGroup = $this->repository->getUserService()->loadUserGroup( 12 );
+        $userGroup = self::$repository->getUserService()->loadUserGroup( 12 );
 
         $roleService->unassignRoleFromUserGroup( $role, $userGroup );
     }
@@ -718,10 +718,10 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testAssignRoleToUser()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $role = $roleService->loadRole( 2 );
-        $user = $this->repository->getUserService()->loadUser( 14 );
+        $user = self::$repository->getUserService()->loadUser( 14 );
 
         $originalAssignmentCount = count( $roleService->getRoleAssignmentsForUser( $user ) );
 
@@ -736,10 +736,10 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testUnassignRoleFromUser()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $role = $roleService->loadRole( 2 );
-        $user = $this->repository->getUserService()->loadUser( 14 );
+        $user = self::$repository->getUserService()->loadUser( 14 );
 
         $originalAssignmentCount = count( $roleService->getRoleAssignmentsForUser( $user ) );
 
@@ -759,10 +759,10 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testUnassignRoleFromUserThrowsInvalidArgumentException()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $role = $roleService->loadRole( 2 );
-        $user = $this->repository->getUserService()->loadUser( 14 );
+        $user = self::$repository->getUserService()->loadUser( 14 );
 
         $roleService->unassignRoleFromUser( $role, $user );
     }
@@ -773,7 +773,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testGetRoleAssignments()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $role = $roleService->loadRole( 2 );
 
@@ -794,9 +794,9 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testGetRoleAssignmentsForUser()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
-        $user = $this->repository->getUserService()->loadUser( 14 );
+        $user = self::$repository->getUserService()->loadUser( 14 );
         $role = $roleService->loadRole( 2 );
         $roleService->assignRoleToUser( $role, $user );
 
@@ -817,9 +817,9 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testGetRoleAssignmentsForUserGroup()
     {
-        $userGroup = $this->repository->getUserService()->loadUserGroup( 12 );
+        $userGroup = self::$repository->getUserService()->loadUserGroup( 12 );
 
-        $userGroupAssignments = $this->repository->getRoleService()->getRoleAssignmentsForUserGroup( $userGroup );
+        $userGroupAssignments = self::$repository->getRoleService()->getRoleAssignmentsForUserGroup( $userGroup );
 
         self::assertInternalType( "array", $userGroupAssignments );
         self::assertNotEmpty( $userGroupAssignments );
@@ -836,7 +836,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testNewRoleCreateStruct()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $roleCreateStruct = $roleService->newRoleCreateStruct( "Ultimate permissions" );
 
@@ -864,7 +864,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testNewPolicyCreateStruct()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $policyCreateStruct = $roleService->newPolicyCreateStruct( "content", "read" );
 
@@ -888,7 +888,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testNewRoleUpdateStruct()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $roleUpdateStruct = $roleService->newRoleUpdateStruct();
 
@@ -912,7 +912,7 @@ abstract class RoleBase extends BaseServiceTest
      */
     public function testNewPolicyUpdateStruct()
     {
-        $roleService = $this->repository->getRoleService();
+        $roleService = self::$repository->getRoleService();
 
         $policyUpdateStruct = $roleService->newPolicyUpdateStruct();
 

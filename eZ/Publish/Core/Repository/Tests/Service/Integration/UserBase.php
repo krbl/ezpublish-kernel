@@ -170,7 +170,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testCreateUserGroup()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $parentGroup = $userService->loadUserGroup( 4 );
         $userGroupCreateStruct = $userService->newUserGroupCreateStruct( "eng-GB" );
@@ -191,7 +191,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testCreateUserGroupThrowsContentValidationException()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $parentGroup = $userService->loadUserGroup( 4 );
         $userGroupCreateStruct = $userService->newUserGroupCreateStruct( "eng-GB" );
@@ -209,7 +209,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testCreateUserGroupThrowsContentValidationExceptionVariation()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $parentGroup = $userService->loadUserGroup( 4 );
         $userGroupCreateStruct = $userService->newUserGroupCreateStruct( "eng-GB" );
@@ -223,7 +223,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testLoadUserGroup()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
         $userGroup = $userService->loadUserGroup( 4 );
         self::assertInstanceOf( '\\eZ\\Publish\\API\\Repository\\Values\\User\\UserGroup', $userGroup );
     }
@@ -235,7 +235,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testLoadUserGroupThrowsNotFoundException()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
         $userService->loadUserGroup( PHP_INT_MAX );
     }
 
@@ -245,7 +245,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testLoadSubUserGroups()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $parentGroup = $userService->loadUserGroup( 4 );
         $userGroupCreateStruct = $userService->newUserGroupCreateStruct( "eng-GB" );
@@ -269,7 +269,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testLoadSubUserGroupsThrowsNotFoundException()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $parentGroup = new UserGroup(
             array(
@@ -292,7 +292,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testDeleteUserGroup()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $userGroup = $userService->loadUserGroup( 12 );
         $userService->deleteUserGroup( $userGroup );
@@ -314,7 +314,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testDeleteUserGroupThrowsNotFoundException()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $userGroup = new UserGroup(
             array(
@@ -337,8 +337,8 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testMoveUserGroup()
     {
-        $userService = $this->repository->getUserService();
-        $locationService = $this->repository->getLocationService();
+        $userService = self::$repository->getUserService();
+        $locationService = self::$repository->getLocationService();
 
         $userGroupToMove = $userService->loadUserGroup( 42 );
         $parentUserGroup = $userService->loadUserGroup( 12 );
@@ -360,7 +360,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testMoveUserGroupThrowsNotFoundException()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $userGroupToMove = new UserGroup(
             array(
@@ -395,8 +395,8 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testUpdateUserGroup()
     {
-        $userService = $this->repository->getUserService();
-        $contentService = $this->repository->getContentService();
+        $userService = self::$repository->getUserService();
+        $contentService = self::$repository->getContentService();
 
         $userGroupUpdateStruct = $userService->newUserGroupUpdateStruct();
         $userGroupUpdateStruct->contentUpdateStruct = $contentService->newContentUpdateStruct();
@@ -419,8 +419,8 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testUpdateUserGroupThrowsContentValidationException()
     {
-        $userService = $this->repository->getUserService();
-        $contentService = $this->repository->getContentService();
+        $userService = self::$repository->getUserService();
+        $contentService = self::$repository->getContentService();
 
         $userGroup = $userService->loadUserGroup( 42 );
         $userGroupUpdateStruct = $userService->newUserGroupUpdateStruct();
@@ -437,7 +437,7 @@ abstract class UserBase extends BaseServiceTest
     public function testCreateUser()
     {
         self::markTestSkipped( "Breaks with InMemory storage, due to incorrect fixtures" );
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $userCreateStruct = $userService->newUserCreateStruct( "new_user", "new_user@ez.no", "password", "eng-GB" );
         $userCreateStruct->setField( "first_name", "New", "eng-GB" );
@@ -460,7 +460,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testCreateUserThrowsNotFoundException()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $userCreateStruct = $userService->newUserCreateStruct( "new_user", "new_user@ez.no", "password", "eng-GB" );
         $userCreateStruct->setField( "first_name", "New" );
@@ -490,7 +490,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testCreateUserThrowsContentValidationException()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $userCreateStruct = $userService->newUserCreateStruct( "new_user", "new_user@ez.no", "password", "eng-GB" );
         $userCreateStruct->setField( "first_name", "", "eng-GB" );
@@ -507,7 +507,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testCreateUserThrowsInvalidArgumentException()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $userCreateStruct = $userService->newUserCreateStruct( "admin", "new_user@ez.no", "password", "eng-GB" );
         $userCreateStruct->setField( "first_name", "", "eng-GB" );
@@ -523,7 +523,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testLoadUser()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $loadedUser = $userService->loadUser( 14 );
 
@@ -538,7 +538,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testLoadUserThrowsNotFoundException()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $userService->loadUser( PHP_INT_MAX );
     }
@@ -549,7 +549,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testLoadAnonymousUser()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $loadedUser = $userService->loadAnonymousUser();
 
@@ -563,7 +563,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testLoadUserByCredentials()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $loadedUser = $userService->loadUserByCredentials( 'admin', 'publish' );
         self::assertInstanceOf( '\\eZ\\Publish\\API\\Repository\\Values\\User\\User', $loadedUser );
@@ -589,7 +589,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testLoadUserByCredentialsThrowsNotFoundException()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $userService->loadUserByCredentials( 'non_existing_user', 'invalid_password' );
     }
@@ -601,7 +601,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testLoadUserByCredentialsThrowsNotFoundExceptionBadPassword()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $userService->loadUserByCredentials( 'admin', 'some_password' );
     }
@@ -613,10 +613,10 @@ abstract class UserBase extends BaseServiceTest
     public function testUpdateUser()
     {
         self::markTestSkipped( "Breaks with InMemory storage, due to incorrect fixtures" );
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $userUpdateStruct = $userService->newUserUpdateStruct();
-        $userUpdateStruct->contentUpdateStruct = $this->repository->getContentService()->newContentUpdateStruct();
+        $userUpdateStruct->contentUpdateStruct = self::$repository->getContentService()->newContentUpdateStruct();
         $userUpdateStruct->contentUpdateStruct->setField( "first_name", "New first name", "eng-US" );
         $userUpdateStruct->contentUpdateStruct->setField( "last_name", "New last name", "eng-US" );
 
@@ -644,8 +644,8 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testUpdateUserThrowsContentValidationException()
     {
-        $userService = $this->repository->getUserService();
-        $contentService = $this->repository->getContentService();
+        $userService = self::$repository->getUserService();
+        $contentService = self::$repository->getContentService();
 
         $user = $userService->loadUser( 14 );
         $userUpdateStruct = $userService->newUserUpdateStruct();
@@ -661,8 +661,8 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testAssignUserToUserGroup()
     {
-        $userService = $this->repository->getUserService();
-        $locationService = $this->repository->getLocationService();
+        $userService = self::$repository->getUserService();
+        $locationService = self::$repository->getLocationService();
 
         $user = $userService->loadUser( 14 );
         $userGroup = $userService->loadUserGroup( 42 );
@@ -695,7 +695,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testAssignUserToUserGroupThrowsInvalidArgumentException()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $user = $userService->loadUser( 14 );
         $userGroup = $userService->loadUserGroup( 12 );
@@ -708,8 +708,8 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testUnAssignUserFromUserGroup()
     {
-        $userService = $this->repository->getUserService();
-        $locationService = $this->repository->getLocationService();
+        $userService = self::$repository->getUserService();
+        $locationService = self::$repository->getLocationService();
 
         $user = $userService->loadUser( 14 );
         $userGroup = $userService->loadUserGroup( 12 );
@@ -752,7 +752,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testUnAssignUserFromUserGroupThrowsInvalidArgumentException()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $user = $userService->loadUser( 14 );
         $userGroup = $userService->loadUserGroup( 42 );
@@ -765,8 +765,8 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testLoadUserGroupsOfUser()
     {
-        $userService = $this->repository->getUserService();
-        $locationService = $this->repository->getLocationService();
+        $userService = self::$repository->getUserService();
+        $locationService = self::$repository->getLocationService();
 
         $user = $userService->loadUser( 14 );
         $userLocations = $locationService->loadLocations(
@@ -798,8 +798,8 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testLoadUsersOfUserGroup()
     {
-        $userService = $this->repository->getUserService();
-        $locationService = $this->repository->getLocationService();
+        $userService = self::$repository->getUserService();
+        $locationService = self::$repository->getLocationService();
 
         $userGroup = $userService->loadUserGroup( 12 );
         $users = $userService->loadUsersOfUserGroup( $userGroup );
@@ -826,7 +826,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testNewUserCreateStruct()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $userCreateStruct = $userService->newUserCreateStruct( "admin", "admin@ez.no", "password", "eng-GB" );
         self::assertInstanceOf( '\\eZ\\Publish\\API\\Repository\\Values\\User\\UserCreateStruct', $userCreateStruct );
@@ -850,7 +850,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testNewUserGroupCreateStruct()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $userGroupCreateStruct = $userService->newUserGroupCreateStruct( "eng-GB" );
         self::assertInstanceOf( '\\eZ\\Publish\\API\\Repository\\Values\\User\\UserGroupCreateStruct', $userGroupCreateStruct );
@@ -863,7 +863,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testNewUserUpdateStruct()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $userUpdateStruct = $userService->newUserUpdateStruct();
 
@@ -892,7 +892,7 @@ abstract class UserBase extends BaseServiceTest
      */
     public function testNewUserGroupUpdateStruct()
     {
-        $userService = $this->repository->getUserService();
+        $userService = self::$repository->getUserService();
 
         $userGroupUpdateStruct = $userService->newUserGroupUpdateStruct();
 

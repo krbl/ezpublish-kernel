@@ -119,8 +119,8 @@ abstract class TrashBase extends BaseServiceTest
      */
     public function testLoadTrashItem()
     {
-        $locationService = $this->repository->getLocationService();
-        $trashService = $this->repository->getTrashService();
+        $locationService = self::$repository->getLocationService();
+        $trashService = self::$repository->getTrashService();
 
         $trashItem = $location = $trashService->trash( $locationService->loadLocation( 44 ) );
         $loadedTrashItem = $trashService->loadTrashItem( $location->id );
@@ -152,7 +152,7 @@ abstract class TrashBase extends BaseServiceTest
      */
     public function testLoadTrashItemThrowsNotFoundException()
     {
-        $trashService = $this->repository->getTrashService();
+        $trashService = self::$repository->getTrashService();
         $trashService->loadTrashItem( 44 );
     }
 
@@ -162,8 +162,8 @@ abstract class TrashBase extends BaseServiceTest
      */
     public function testTrash()
     {
-        $locationService = $this->repository->getLocationService();
-        $trashService = $this->repository->getTrashService();
+        $locationService = self::$repository->getLocationService();
+        $trashService = self::$repository->getTrashService();
 
         $location = $locationService->loadLocation( 44 );
         $trashItem = $trashService->trash( $location );
@@ -194,9 +194,9 @@ abstract class TrashBase extends BaseServiceTest
      */
     public function testTrashUpdatesMainLocation()
     {
-        $contentService = $this->repository->getContentService();
-        $locationService = $this->repository->getLocationService();
-        $trashService = $this->repository->getTrashService();
+        $contentService = self::$repository->getContentService();
+        $locationService = self::$repository->getLocationService();
+        $trashService = self::$repository->getTrashService();
 
         $contentInfo = $contentService->loadContentInfo( 42 );
 
@@ -222,9 +222,9 @@ abstract class TrashBase extends BaseServiceTest
      */
     public function testTrashReturnsNull()
     {
-        $contentService = $this->repository->getContentService();
-        $locationService = $this->repository->getLocationService();
-        $trashService = $this->repository->getTrashService();
+        $contentService = self::$repository->getContentService();
+        $locationService = self::$repository->getLocationService();
+        $trashService = self::$repository->getTrashService();
 
         // Create additional location to trash
         $location = $locationService->createLocation(
@@ -243,8 +243,8 @@ abstract class TrashBase extends BaseServiceTest
      */
     public function testRecover()
     {
-        $locationService = $this->repository->getLocationService();
-        $trashService = $this->repository->getTrashService();
+        $locationService = self::$repository->getLocationService();
+        $trashService = self::$repository->getTrashService();
 
         $location = $locationService->loadLocation( 44 );
         $trashItem = $trashService->trash( $location );
@@ -283,7 +283,7 @@ abstract class TrashBase extends BaseServiceTest
      */
     public function testRecoverNonExistingTrashItem()
     {
-        $trashService = $this->repository->getTrashService();
+        $trashService = self::$repository->getTrashService();
 
         $trashItem = new TrashItem( array( "id" => PHP_INT_MAX, "parentLocationId" => PHP_INT_MAX ) );
         $trashService->recover( $trashItem );
@@ -301,8 +301,8 @@ abstract class TrashBase extends BaseServiceTest
         $recoverLocationId = $this->createTestContentLocation( 5 )->contentInfo->mainLocationId;
 
         /* BEGIN: Use Case */
-        $locationService = $this->repository->getLocationService();
-        $trashService = $this->repository->getTrashService();
+        $locationService = self::$repository->getLocationService();
+        $trashService = self::$repository->getTrashService();
 
         $location = $locationService->loadLocation( $deleteLocationId );
         $trashItem = $trashService->trash( $location );
@@ -345,8 +345,8 @@ abstract class TrashBase extends BaseServiceTest
      */
     public function testRecoverToNonExistingLocation()
     {
-        $locationService = $this->repository->getLocationService();
-        $trashService = $this->repository->getTrashService();
+        $locationService = self::$repository->getLocationService();
+        $trashService = self::$repository->getTrashService();
 
         $location = $locationService->loadLocation( 44 );
         $trashItem = $trashService->trash( $location );
@@ -366,8 +366,8 @@ abstract class TrashBase extends BaseServiceTest
      */
     public function testDeleteTrashItem()
     {
-        $locationService = $this->repository->getLocationService();
-        $trashService = $this->repository->getTrashService();
+        $locationService = self::$repository->getLocationService();
+        $trashService = self::$repository->getTrashService();
 
         $location = $locationService->loadLocation( 44 );
         $trashItem = $trashService->trash( $location );
@@ -392,7 +392,7 @@ abstract class TrashBase extends BaseServiceTest
      */
     public function testDeleteNonExistingTrashItem()
     {
-        $trashService = $this->repository->getTrashService();
+        $trashService = self::$repository->getTrashService();
 
         $trashItem = new TrashItem( array( "id" => PHP_INT_MAX ) );
         $trashService->deleteTrashItem( $trashItem );
@@ -408,8 +408,8 @@ abstract class TrashBase extends BaseServiceTest
         // @todo: remove creating test location when field types are fully functional
         $newLocationId = $this->createTestContentLocation( 5 )->contentInfo->mainLocationId;
 
-        $locationService = $this->repository->getLocationService();
-        $trashService = $this->repository->getTrashService();
+        $locationService = self::$repository->getLocationService();
+        $trashService = self::$repository->getTrashService();
 
         $searchResult = $trashService->findTrashItems( new Query() );
         $countBeforeTrashing = $searchResult->count;
@@ -435,8 +435,8 @@ abstract class TrashBase extends BaseServiceTest
      */
     protected function createTestContentLocation( $parentLocationId )
     {
-        $contentService = $this->repository->getContentService();
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentService = self::$repository->getContentService();
+        $contentTypeService = self::$repository->getContentTypeService();
         // User Group content type
         $contentType = $contentTypeService->loadContentType( 3 );
 

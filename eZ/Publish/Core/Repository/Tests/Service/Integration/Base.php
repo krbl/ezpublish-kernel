@@ -25,16 +25,17 @@ abstract class Base extends PHPUnit_Framework_TestCase
     /**
      * @var \eZ\Publish\API\Repository\Repository
      */
-    protected $repository;
+    protected static $repository;
 
-    /**
-     * Setup test
-     */
-    protected function setUp()
+    public static function setUpBeforeClass()
     {
-        parent::setUp();
-        $this->repository = static::getRepository();
-        $this->repository->setCurrentUser( $this->getStubbedUser( 14 ) );
+        static::$repository = static::getRepository();
+        static::$repository->setCurrentUser( static::getStubbedUser( 14 ) );
+    }
+
+    public static function tearDownAfterClass()
+    {
+        static::$repository = NULL;
     }
 
     /**
@@ -44,7 +45,7 @@ abstract class Base extends PHPUnit_Framework_TestCase
      *
      * @return \eZ\Publish\API\Repository\Values\User\User
      */
-    protected function getStubbedUser( $id )
+    protected static function getStubbedUser( $id )
     {
         return new User(
             array(
@@ -67,7 +68,7 @@ abstract class Base extends PHPUnit_Framework_TestCase
      */
     protected function createUserVersion1()
     {
-        $repository = $this->repository;
+        $repository = self::$repository;
 
         /* BEGIN: Inline */
         // ID of the "Editors" user group in an eZ Publish demo installation
@@ -99,22 +100,13 @@ abstract class Base extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Tear down test (properties)
-     */
-    protected function tearDown()
-    {
-        unset( $this->repository );
-        parent::tearDown();
-    }
-
-    /**
      * Generate \eZ\Publish\API\Repository\Repository
      *
      * Makes it possible to inject different Io / Persistence handlers
      *
      * @return \eZ\Publish\API\Repository\Repository
      */
-    abstract protected function getRepository();
+    abstract protected static function getRepository();
 
     /**
      * Asserts that properties given in $expectedValues are correctly set in

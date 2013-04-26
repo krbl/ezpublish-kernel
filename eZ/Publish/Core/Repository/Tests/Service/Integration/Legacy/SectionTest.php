@@ -16,7 +16,7 @@ use eZ\Publish\Core\Repository\Tests\Service\Integration\SectionBase as BaseSect
  */
 class SectionTest extends BaseSectionServiceTest
 {
-    protected function getRepository()
+    protected static function getRepository()
     {
         try
         {

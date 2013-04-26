@@ -16,7 +16,7 @@ use eZ\Publish\Core\Repository\Tests\Service\Integration\RoleBase as BaseRoleSer
  */
 class RoleTest extends BaseRoleServiceTest
 {
-    protected function getRepository()
+    protected static function getRepository()
     {
         try
         {

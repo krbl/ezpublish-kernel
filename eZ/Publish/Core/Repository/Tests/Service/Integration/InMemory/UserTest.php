@@ -16,7 +16,7 @@ use eZ\Publish\Core\Repository\Tests\Service\Integration\UserBase as BaseUserSer
  */
 class UserTest extends BaseUserServiceTest
 {
-    protected function getRepository()
+    protected static function getRepository()
     {
         return Utils::getRepository();
     }

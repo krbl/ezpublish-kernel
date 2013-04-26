@@ -16,7 +16,7 @@ use eZ\Publish\Core\Repository\Tests\Service\Integration\LocationBase as BaseLoc
  */
 class LocationTest extends BaseLocationServiceTest
 {
-    protected function getRepository()
+    protected static function getRepository()
     {
         return Utils::getRepository();
     }

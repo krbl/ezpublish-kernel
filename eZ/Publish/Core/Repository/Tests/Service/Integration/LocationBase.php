@@ -120,8 +120,8 @@ abstract class LocationBase extends BaseServiceTest
      */
     protected function createTestContentLocation( $parentLocationId )
     {
-        $contentService = $this->repository->getContentService();
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentService = self::$repository->getContentService();
+        $contentTypeService = self::$repository->getContentTypeService();
         // User Group content type
         $contentType = $contentTypeService->loadContentType( 3 );
 
@@ -161,8 +161,8 @@ abstract class LocationBase extends BaseServiceTest
      */
     protected function addNewMainLocation( $contentInfo, $parentLocationId )
     {
-        $locationService = $this->repository->getLocationService();
-        $contentService = $this->repository->getContentService();
+        $locationService = self::$repository->getLocationService();
+        $contentService = self::$repository->getContentService();
 
         $newLocation = $locationService->createLocation(
             $contentInfo,
@@ -209,7 +209,7 @@ abstract class LocationBase extends BaseServiceTest
         $lastLocationId = $this->addNewMainLocation( $subLocationContent21->contentInfo, $locationToCopyId );
 
         /* BEGIN: Use Case */
-        $locationService = $this->repository->getLocationService();
+        $locationService = self::$repository->getLocationService();
         $locationToCopy = $locationService->loadLocation( $locationToCopyId );
         $targetLocation = $locationService->loadLocation( $targetLocationId );
 
@@ -245,7 +245,7 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testCopySubtreeThrowsInvalidArgumentException()
     {
-        $locationService = $this->repository->getLocationService();
+        $locationService = self::$repository->getLocationService();
         $locationToCopy = $locationService->loadLocation( 5 );
         $targetLocation = $locationService->loadLocation( 44 );
 
@@ -258,7 +258,7 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testLoadLocation()
     {
-        $locationService = $this->repository->getLocationService();
+        $locationService = self::$repository->getLocationService();
         $loadedLocation = $locationService->loadLocation( 5 );
 
         self::assertInstanceOf( '\\eZ\\Publish\\API\\Repository\\Values\\Content\\Location', $loadedLocation );
@@ -272,7 +272,7 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testLoadLocationThrowsNotFoundException()
     {
-        $locationService = $this->repository->getLocationService();
+        $locationService = self::$repository->getLocationService();
         $locationService->loadLocation( PHP_INT_MAX );
     }
 
@@ -282,7 +282,7 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testLoadLocationByRemoteId()
     {
-        $location = $this->repository->getLocationService()->loadLocationByRemoteId( '769380b7aa94541679167eab817ca893' );
+        $location = self::$repository->getLocationService()->loadLocationByRemoteId( '769380b7aa94541679167eab817ca893' );
 
         self::assertInstanceOf( '\\eZ\\Publish\\API\\Repository\\Values\\Content\\Location', $location );
         self::assertGreaterThan( 0, $location->id );
@@ -296,14 +296,14 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testLoadLocationByRemoteIdThrowsNotFoundException()
     {
-        $this->repository->getLocationService()->loadLocationByRemoteId( "not-existing" );
+        self::$repository->getLocationService()->loadLocationByRemoteId( "not-existing" );
     }
 
     protected function createContentDraft()
     {
-        $contentTypeService = $this->repository->getContentTypeService();
-        $contentService = $this->repository->getContentService();
-        $locationService = $this->repository->getLocationService();
+        $contentTypeService = self::$repository->getContentTypeService();
+        $contentService = self::$repository->getContentService();
+        $locationService = self::$repository->getLocationService();
 
         $contentCreateStruct = $contentService->newContentCreateStruct(
             $contentTypeService->loadContentType( 3 ),
@@ -329,9 +329,9 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testLoadLocations()
     {
-        $contentInfo = $this->repository->getContentService()->loadContentInfo( 12 );
+        $contentInfo = self::$repository->getContentService()->loadContentInfo( 12 );
 
-        $locationService = $this->repository->getLocationService();
+        $locationService = self::$repository->getLocationService();
         $locations = $locationService->loadLocations( $contentInfo );
 
         self::assertInternalType( "array", $locations );
@@ -370,9 +370,9 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testLoadLocationsWithRootLocation()
     {
-        $contentInfo = $this->repository->getContentService()->loadContentInfo( 12 );
+        $contentInfo = self::$repository->getContentService()->loadContentInfo( 12 );
 
-        $locationService = $this->repository->getLocationService();
+        $locationService = self::$repository->getLocationService();
         $parentLocation = $locationService->loadLocation( 5 );
 
         $locations = $locationService->loadLocations( $contentInfo, $parentLocation );
@@ -401,7 +401,7 @@ abstract class LocationBase extends BaseServiceTest
     {
         $contentDraft = $this->createContentDraft();
 
-        $this->repository->getLocationService()->loadLocations(
+        self::$repository->getLocationService()->loadLocations(
             $contentDraft->getVersionInfo()->getContentInfo()
         );
     }
@@ -412,7 +412,7 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testLoadLocationChildren()
     {
-        $locationService = $this->repository->getLocationService();
+        $locationService = self::$repository->getLocationService();
 
         $rootLocation = $locationService->loadLocation( 5 );
         $childrenLocations = $locationService->loadLocationChildren( $rootLocation );
@@ -435,8 +435,8 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testCreateLocation()
     {
-        $locationService = $this->repository->getLocationService();
-        $contentService = $this->repository->getContentService();
+        $locationService = self::$repository->getLocationService();
+        $contentService = self::$repository->getContentService();
 
         $parentLocation = $locationService->loadLocation( 44 );
 
@@ -485,8 +485,8 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testCreateLocationThrowsInvalidArgumentExceptionLocationExistsBelowParent()
     {
-        $locationService = $this->repository->getLocationService();
-        $contentService = $this->repository->getContentService();
+        $locationService = self::$repository->getLocationService();
+        $contentService = self::$repository->getContentService();
 
         $locationCreateStruct = $locationService->newLocationCreateStruct( 5 );
         $contentInfo = $contentService->loadContentInfo( 12 );
@@ -500,8 +500,8 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testCreateLocationThrowsInvalidArgumentExceptionExistingRemoteId()
     {
-        $locationService = $this->repository->getLocationService();
-        $contentService = $this->repository->getContentService();
+        $locationService = self::$repository->getLocationService();
+        $contentService = self::$repository->getContentService();
 
         $locationCreateStruct = $locationService->newLocationCreateStruct( 2 );
         $locationCreateStruct->remoteId = '769380b7aa94541679167eab817ca893';
@@ -516,8 +516,8 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testCreateLocationThrowsInvalidArgumentExceptionParentIsASubLocation()
     {
-        $locationService = $this->repository->getLocationService();
-        $contentService = $this->repository->getContentService();
+        $locationService = self::$repository->getLocationService();
+        $contentService = self::$repository->getContentService();
 
         $locationCreateStruct = $locationService->newLocationCreateStruct( 44 );
         $contentInfo = $contentService->loadContentInfo( 4 );
@@ -530,7 +530,7 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testUpdateLocation()
     {
-        $locationService = $this->repository->getLocationService();
+        $locationService = self::$repository->getLocationService();
 
         $location = $locationService->loadLocation( 5 );
         $locationUpdateStruct = $locationService->newLocationUpdateStruct();
@@ -561,7 +561,7 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testUpdateLocationThrowsInvalidArgumentException()
     {
-        $locationService = $this->repository->getLocationService();
+        $locationService = self::$repository->getLocationService();
 
         $location = $locationService->loadLocation( 5 );
         $locationUpdateStruct = $locationService->newLocationUpdateStruct();
@@ -576,7 +576,7 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testSwapLocation()
     {
-        $locationService = $this->repository->getLocationService();
+        $locationService = self::$repository->getLocationService();
 
         $location1 = $locationService->loadLocation( 2 );
         $location2 = $locationService->loadLocation( 44 );
@@ -600,7 +600,7 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testHideUnhideLocation()
     {
-        $locationService = $this->repository->getLocationService();
+        $locationService = self::$repository->getLocationService();
 
         $location = $locationService->loadLocation( 5 );
         $location = $locationService->hideLocation( $location );
@@ -620,7 +620,7 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testMoveSubtree()
     {
-        $locationService = $this->repository->getLocationService();
+        $locationService = self::$repository->getLocationService();
 
         $locationToMove = $locationService->loadLocation( 13 );
         $newParent = $locationService->loadLocation( 44 );
@@ -636,7 +636,7 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testDeleteLocation()
     {
-        $locationService = $this->repository->getLocationService();
+        $locationService = self::$repository->getLocationService();
 
         $location = $locationService->loadLocation( 44 );
         $locationService->deleteLocation( $location );
@@ -658,7 +658,7 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testNewLocationCreateStruct()
     {
-        $locationService = $this->repository->getLocationService();
+        $locationService = self::$repository->getLocationService();
 
         $locationCreateStruct = $locationService->newLocationCreateStruct( 2 );
         self::assertInstanceOf( '\\eZ\\Publish\\API\\Repository\\Values\\Content\\LocationCreateStruct', $locationCreateStruct );
@@ -682,7 +682,7 @@ abstract class LocationBase extends BaseServiceTest
      */
     public function testNewLocationUpdateStruct()
     {
-        $locationService = $this->repository->getLocationService();
+        $locationService = self::$repository->getLocationService();
 
         $locationUpdateStruct = $locationService->newLocationUpdateStruct();
         self::assertInstanceOf( '\\eZ\\Publish\\API\\Repository\\Values\\Content\\LocationUpdateStruct', $locationUpdateStruct );

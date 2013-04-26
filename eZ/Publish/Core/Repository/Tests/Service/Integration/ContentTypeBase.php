@@ -32,7 +32,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testNewContentTypeGroupCreateStruct()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $groupCreate = $contentTypeService->newContentTypeGroupCreateStruct(
             'new-group'
@@ -82,12 +82,12 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testCreateContentTypeGroup()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $groupCreate = $contentTypeService->newContentTypeGroupCreateStruct(
             'new-group'
         );
-        $groupCreate->creatorId = $this->repository->getCurrentUser()->id;
+        $groupCreate->creatorId = self::$repository->getCurrentUser()->id;
         $groupCreate->creationDate = new \DateTime();
         // @todo uncomment when support for multilingual names and descriptions is added
         //$groupCreate->mainLanguageCode = 'eng-GB';
@@ -149,12 +149,12 @@ abstract class ContentTypeBase extends BaseServiceTest
      */
     public function testCreateContentTypeGroupThrowsUnauthorizedException()
     {
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $groupCreate = $contentTypeService->newContentTypeGroupCreateStruct(
             'new-group'
         );
-        $groupCreate->creatorId = $this->repository->getCurrentUser()->id;
+        $groupCreate->creatorId = self::$repository->getCurrentUser()->id;
         $groupCreate->creationDate = new \DateTime();
         // @todo uncomment when support for multilingual names and descriptions is added
         // $groupCreate->mainLanguageCode = 'eng-GB';
@@ -162,7 +162,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         // $groupCreate->descriptions = array( 'eng-US' => 'A description.' );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentTypeService->createContentTypeGroup( $groupCreate );
     }
@@ -178,7 +178,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testCreateContentTypeGroupThrowsInvalidArgumentException()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $groupCreate = $contentTypeService->newContentTypeGroupCreateStruct(
             'new-group'
@@ -210,12 +210,12 @@ abstract class ContentTypeBase extends BaseServiceTest
      */
     public function testLoadContentTypeGroup()
     {
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $groupCreate = $contentTypeService->newContentTypeGroupCreateStruct(
             'new-group'
         );
-        $groupCreate->creatorId = $this->repository->getCurrentUser()->id;
+        $groupCreate->creatorId = self::$repository->getCurrentUser()->id;
         $groupCreate->creationDate = new \DateTime();
         // @todo uncomment when support for multilingual names and descriptions is added
         //$groupCreate->mainLanguageCode = 'eng-GB';
@@ -267,7 +267,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testLoadContentTypeGroupThrowsNotFoundException()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         // Throws exception
         $loadedGroup = $contentTypeService->loadContentTypeGroup( PHP_INT_MAX );
@@ -285,7 +285,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     {
         /* BEGIN: Use Case */
         $storedGroup = $this->createContentTypeGroup();
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $loadedGroup = $contentTypeService->loadContentTypeGroupByIdentifier(
             $storedGroup->identifier
@@ -366,7 +366,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testLoadContentTypeGroupByIdentifierThrowsNotFoundException()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         // Throws an exception
         $loadedGroup = $contentTypeService->loadContentTypeGroupByIdentifier(
@@ -387,7 +387,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testLoadContentTypeGroups()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $loadedGroups = $contentTypeService->loadContentTypeGroups();
         /* END: Use Case */
@@ -463,7 +463,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testNewContentTypeGroupUpdateStruct()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $groupUpdate = $contentTypeService->newContentTypeGroupUpdateStruct();
         /* END: Use Case */
@@ -487,7 +487,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         $this->createContentTypeGroup();
 
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $group = $contentTypeService->loadContentTypeGroupByIdentifier( 'new-group' );
 
@@ -573,12 +573,12 @@ abstract class ContentTypeBase extends BaseServiceTest
      */
     protected function createContentTypeGroup()
     {
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $groupCreate = $contentTypeService->newContentTypeGroupCreateStruct(
             'new-group'
         );
-        $groupCreate->creatorId = $this->repository->getCurrentUser()->id;
+        $groupCreate->creatorId = self::$repository->getCurrentUser()->id;
         $groupCreate->creationDate = new \DateTime();
         // @todo uncomment when support for multilingual names and descriptions is added
         //$groupCreate->mainLanguageCode = 'eng-US';
@@ -599,7 +599,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testUpdateContentTypeGroupThrowsUnauthorizedException()
     {
         $this->createContentTypeGroup();
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $group = $contentTypeService->loadContentTypeGroupByIdentifier( 'new-group' );
 
@@ -621,7 +621,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         */
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentTypeService->updateContentTypeGroup( $group, $groupUpdate );
     }
@@ -641,12 +641,12 @@ abstract class ContentTypeBase extends BaseServiceTest
         $this->createContentTypeGroup();
 
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $groupCreate = $contentTypeService->newContentTypeGroupCreateStruct(
             'updated-group'
         );
-        $groupCreate->creatorId = $this->repository->getCurrentUser()->id;
+        $groupCreate->creatorId = self::$repository->getCurrentUser()->id;
         // @todo uncomment when support for multilingual names and descriptions is added
         //$groupCreate->names = array( 'eng-US' => 'Name' );
         //$groupCreate->descriptions = array( 'eng-US' => 'Description' );
@@ -677,7 +677,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         $this->createContentTypeGroup();
 
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $group = $contentTypeService->loadContentTypeGroupByIdentifier( 'new-group' );
 
@@ -708,7 +708,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         $this->createContentTypeGroup();
 
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
         // "Content" group
         $contentGroup = $contentTypeService->loadContentTypeGroup( 1 );
 
@@ -730,12 +730,12 @@ abstract class ContentTypeBase extends BaseServiceTest
         $this->createContentTypeGroup();
 
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $group = $contentTypeService->loadContentTypeGroupByIdentifier( 'new-group' );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentTypeService->deleteContentTypeGroup( $group );
     }
@@ -749,12 +749,12 @@ abstract class ContentTypeBase extends BaseServiceTest
     {
         if ( empty( $this->contentTypeGroups ) )
         {
-            $contentTypeService = $this->repository->getContentTypeService();
+            $contentTypeService = self::$repository->getContentTypeService();
 
             $groupCreate = $contentTypeService->newContentTypeGroupCreateStruct(
                 'first-group'
             );
-            $groupCreate->creatorId = $this->repository->getCurrentUser()->id;
+            $groupCreate->creatorId = self::$repository->getCurrentUser()->id;
             $groupCreate->creationDate = new \DateTime();
             // @todo uncomment when support for multilingual names and descriptions is added
             //$groupCreate->mainLanguageCode = 'de_DE';
@@ -779,7 +779,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testNewContentTypeUpdateStruct()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $contentTypeUpdateStruct = $contentTypeService->newContentTypeUpdateStruct();
         /* END: Use Case */
@@ -823,7 +823,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testNewContentTypeCreateStruct()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $contentTypeCreateStruct = $contentTypeService->newContentTypeCreateStruct(
             'new-type'
@@ -881,7 +881,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testNewFieldDefinitionCreateStruct()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $fieldDefinitionCreateStruct = $contentTypeService->newFieldDefinitionCreateStruct(
             "new-identifier",
@@ -939,7 +939,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testNewFieldDefinitionUpdateStruct()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $fieldDefinitionUpdateStruct = $contentTypeService->newFieldDefinitionUpdateStruct();
         /* END: Use Case */
@@ -983,8 +983,8 @@ abstract class ContentTypeBase extends BaseServiceTest
      */
     protected function createContentType( $publish = true, $creatorId = null )
     {
-        $contentTypeService = $this->repository->getContentTypeService();
-        if ( !isset( $creatorId ) ) $creatorId = $this->repository->getCurrentUser()->id;
+        $contentTypeService = self::$repository->getContentTypeService();
+        if ( !isset( $creatorId ) ) $creatorId = self::$repository->getCurrentUser()->id;
 
         $typeCreateStruct = $contentTypeService->newContentTypeCreateStruct(
             'new-type'
@@ -1104,7 +1104,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testCreateContentType()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
         $typeCreateStruct = $contentTypeService->newContentTypeCreateStruct(
             'new-type'
         );
@@ -1117,7 +1117,7 @@ abstract class ContentTypeBase extends BaseServiceTest
             'eng-GB' => 'British type description'
         );
         $typeCreateStruct->remoteId = "new-remoteid";
-        $typeCreateStruct->creatorId = $this->repository->getCurrentUser()->id;
+        $typeCreateStruct->creatorId = self::$repository->getCurrentUser()->id;
         $typeCreateStruct->creationDate = new \DateTime();
         $typeCreateStruct->mainLanguageCode = 'eng-GB';
         $typeCreateStruct->nameSchema = "<name>";
@@ -1310,7 +1310,7 @@ abstract class ContentTypeBase extends BaseServiceTest
             switch ( $propertyName )
             {
                 case "fieldSettings":
-                    $defaultSettings = $this->repository->getFieldTypeService()->getFieldType(
+                    $defaultSettings = self::$repository->getFieldTypeService()->getFieldType(
                         $fieldDefinitionCreateStruct->fieldTypeIdentifier
                     )->getSettingsSchema();
                     $fieldDefinitionPropertyValue = (array)$fieldDefinition->$propertyName + $defaultSettings;
@@ -1389,7 +1389,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testCreateContentTypeThrowsInvalidArgumentExceptionGroupsEmpty()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $typeCreateStruct = $contentTypeService->newContentTypeCreateStruct(
             'new-type'
@@ -1413,7 +1413,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testCreateContentTypeThrowsInvalidArgumentExceptionContentTypeExistsWithIdentifier()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         // Creates published content type with identifier "new-type"
         $this->createPublishedContentType();
@@ -1422,7 +1422,7 @@ abstract class ContentTypeBase extends BaseServiceTest
             'new-type'
         );
         $typeCreateStruct->remoteId = "other-remoteid";
-        $typeCreateStruct->creatorId = $this->repository->getCurrentUser()->id;
+        $typeCreateStruct->creatorId = self::$repository->getCurrentUser()->id;
         $typeCreateStruct->creationDate = new \DateTime();
         $typeCreateStruct->mainLanguageCode = 'eng-GB';
         $typeCreateStruct->names = array( 'eng-US' => 'A name.' );
@@ -1452,7 +1452,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testCreateContentTypeThrowsInvalidArgumentExceptionContentTypeExistsWithRemoteId()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
         // Creates published content type with remoteId "new-remoteid"
         $this->createPublishedContentType();
 
@@ -1460,7 +1460,7 @@ abstract class ContentTypeBase extends BaseServiceTest
             'other-type'
         );
         $typeCreateStruct->remoteId = "new-remoteid";
-        $typeCreateStruct->creatorId = $this->repository->getCurrentUser()->id;
+        $typeCreateStruct->creatorId = self::$repository->getCurrentUser()->id;
         $typeCreateStruct->creationDate = new \DateTime();
         $typeCreateStruct->mainLanguageCode = 'eng-GB';
         $typeCreateStruct->names = array( 'eng-US' => 'A name.' );
@@ -1490,7 +1490,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testCreateContentTypeThrowsInvalidArgumentExceptionNoFieldDefinitions()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
         // Creates published content type with remoteId "new-remoteid"
         $this->createPublishedContentType();
 
@@ -1498,7 +1498,7 @@ abstract class ContentTypeBase extends BaseServiceTest
             'other-type'
         );
         $typeCreateStruct->remoteId = "new-unique-remoteid";
-        $typeCreateStruct->creatorId = $this->repository->getCurrentUser()->id;
+        $typeCreateStruct->creatorId = self::$repository->getCurrentUser()->id;
         $typeCreateStruct->creationDate = new \DateTime();
         $typeCreateStruct->mainLanguageCode = 'eng-GB';
         $typeCreateStruct->names = array( 'eng-US' => 'A name.' );
@@ -1528,7 +1528,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testCreateContentTypeThrowsInvalidArgumentExceptionDuplicateFieldDefinitionIdentifier()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
         $typeCreateStruct = $contentTypeService->newContentTypeCreateStruct(
             'new-type'
         );
@@ -1541,7 +1541,7 @@ abstract class ContentTypeBase extends BaseServiceTest
             'eng-GB' => 'British type description'
         );
         $typeCreateStruct->remoteId = "new-remoteid";
-        $typeCreateStruct->creatorId = $this->repository->getCurrentUser()->id;
+        $typeCreateStruct->creatorId = self::$repository->getCurrentUser()->id;
         $typeCreateStruct->creationDate = new \DateTime();
         $typeCreateStruct->mainLanguageCode = 'eng-GB';
         $typeCreateStruct->nameSchema = "<name>";
@@ -1598,7 +1598,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         $storedContentType = $this->createPublishedContentType();
 
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $loadedContentType = $contentTypeService->loadContentType(
             $storedContentType->id
@@ -1774,7 +1774,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testLoadContentTypeThrowsNotFoundException()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $loadedContentType = $contentTypeService->loadContentType(
             PHP_INT_MAX
@@ -1794,7 +1794,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         $storedContentType = $this->createPublishedContentType();
 
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $loadedContentType = $contentTypeService->loadContentTypeByIdentifier(
             $storedContentType->identifier
@@ -1838,7 +1838,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testLoadContentTypeByIdentifierThrowsNotFoundException()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $loadedContentType = $contentTypeService->loadContentTypeByIdentifier(
             "non-existing-identifier"
@@ -1858,7 +1858,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         $storedContentType = $this->createPublishedContentType();
 
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $loadedContentType = $contentTypeService->loadContentTypeByRemoteId(
             $storedContentType->remoteId
@@ -1902,7 +1902,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testLoadContentTypeByRemoteIdThrowsNotFoundException()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $loadedContentType = $contentTypeService->loadContentTypeByRemoteId(
             "non-existing-remoteid"
@@ -1922,7 +1922,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         $storedContentTypeDraft = $this->createDraftContentType();
 
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $loadedContentTypeDraft = $contentTypeService->loadContentTypeDraft(
             $storedContentTypeDraft->id
@@ -1966,7 +1966,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testLoadContentTypeDraftThrowsNotFoundException()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $loadedContentType = $contentTypeService->loadContentTypeDraft(
             PHP_INT_MAX
@@ -1990,7 +1990,7 @@ abstract class ContentTypeBase extends BaseServiceTest
 
         /* BEGIN: Use Case */
         // $contentTypeDraft contains a ContentTypeDraft
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
         $contentTypeDraft = $contentTypeService->loadContentTypeDraft( $draftId );
 
         $contentTypeService->publishContentTypeDraft( $contentTypeDraft );
@@ -2024,7 +2024,7 @@ abstract class ContentTypeBase extends BaseServiceTest
 
         /* BEGIN: Use Case */
         // $contentTypeDraft contains a ContentTypeDraft
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
         $contentTypeDraft = $contentTypeService->loadContentTypeDraft( $draftId );
 
         $contentTypeService->publishContentTypeDraft( $contentTypeDraft );
@@ -2045,7 +2045,7 @@ abstract class ContentTypeBase extends BaseServiceTest
      */
     public function testPublishContentTypeDraftThrowsInvalidArgumentException()
     {
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
         $typeCreateStruct = $contentTypeService->newContentTypeCreateStruct( 'new-type' );
         $typeCreateStruct->names = array( 'eng-GB' => 'Type title' );
         $typeCreateStruct->mainLanguageCode = 'eng-GB';
@@ -2068,7 +2068,7 @@ abstract class ContentTypeBase extends BaseServiceTest
      */
     public function testPublishContentTypeDraftSetsNameSchema()
     {
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
         $typeCreateStruct = $contentTypeService->newContentTypeCreateStruct(
             'new-type'
         );
@@ -2106,11 +2106,11 @@ abstract class ContentTypeBase extends BaseServiceTest
         $contentTypeDraft = $this->createDraftContentType();
         $draftId = $contentTypeDraft->id;
 
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
         $contentTypeDraft = $contentTypeService->loadContentTypeDraft( $draftId );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentTypeService->publishContentTypeDraft( $contentTypeDraft );
     }
@@ -2132,12 +2132,12 @@ abstract class ContentTypeBase extends BaseServiceTest
      */
     public function testLoadContentTypes()
     {
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $groupCreate = $contentTypeService->newContentTypeGroupCreateStruct(
             'test-group-1'
         );
-        $groupCreate->creatorId = $this->repository->getCurrentUser()->id;
+        $groupCreate->creatorId = self::$repository->getCurrentUser()->id;
         $groupCreate->creationDate = new \DateTime();
         // @todo uncomment when support for multilingual names and descriptions is added
         //$groupCreate->mainLanguageCode = 'ger-DE';
@@ -2157,7 +2157,7 @@ abstract class ContentTypeBase extends BaseServiceTest
             'eng-GB' => 'British type description'
         );
         $typeCreateStruct->remoteId = "test-remoteid-1";
-        $typeCreateStruct->creatorId = $this->repository->getCurrentUser()->id;
+        $typeCreateStruct->creatorId = self::$repository->getCurrentUser()->id;
         $typeCreateStruct->creationDate = new \DateTime();
         $typeCreateStruct->mainLanguageCode = 'eng-GB';
         $typeCreateStruct->nameSchema = "<name>";
@@ -2256,7 +2256,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         $publishedType = $this->createPublishedContentType();
 
         /* BEGIN: Use case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $draftType = $contentTypeService->createContentTypeDraft( $publishedType );
         /* END: Use case */
@@ -2322,10 +2322,10 @@ abstract class ContentTypeBase extends BaseServiceTest
     {
         $publishedType = $this->createPublishedContentType();
 
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentTypeService->createContentTypeDraft( $publishedType );
     }
@@ -2343,11 +2343,11 @@ abstract class ContentTypeBase extends BaseServiceTest
     {
         $publishedType = $this->createPublishedContentType();
         // Create draft for current user
-        $this->repository->getContentTypeService()->createContentTypeDraft( $publishedType );
+        self::$repository->getContentTypeService()->createContentTypeDraft( $publishedType );
 
         /* BEGIN: Use case */
         // $publishedType contains a ContentType object
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         // Throws an exception because ContentType has an existing draft belonging to another user
         $draft = $contentTypeService->createContentTypeDraft( $publishedType );
@@ -2371,7 +2371,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         /* BEGIN: Use Case */
         // $contentTypeDraft contains a ContentTypeDraft
 
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $typeUpdate = $contentTypeService->newContentTypeUpdateStruct();
         $typeUpdate->identifier = 'news-article';
@@ -2381,7 +2381,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         $typeUpdate->isContainer = true;
         $typeUpdate->mainLanguageCode = 'eng-US';
         $typeUpdate->defaultAlwaysAvailable = false;
-        $typeUpdate->modifierId = $this->repository->getCurrentUser()->id;
+        $typeUpdate->modifierId = self::$repository->getCurrentUser()->id;
         $typeUpdate->modificationDate = new \DateTime();
         $typeUpdate->defaultSortField = Location::SORT_FIELD_PUBLISHED;
         $typeUpdate->defaultSortOrder = Location::SORT_ORDER_ASC;
@@ -2480,13 +2480,13 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testUpdateContentTypeDraftThrowsUnauthorizedException()
     {
         $contentTypeDraft = $this->createDraftContentType();
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $typeUpdate = $contentTypeService->newContentTypeUpdateStruct();
         $typeUpdate->identifier = 'news-article';
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentTypeService->updateContentTypeDraft( $contentTypeDraft, $typeUpdate );
     }
@@ -2507,7 +2507,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         /* BEGIN: Use Case */
         // $contentTypeDraft contains a ContentTypeDraft with identifier 'blog-post'
 
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $typeUpdate = $contentTypeService->newContentTypeUpdateStruct();
         $typeUpdate->identifier = 'folder';
@@ -2533,7 +2533,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         /* BEGIN: Use Case */
         // $contentTypeDraft contains a ContentTypeDraft with identifier 'blog-post'
 
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $typeUpdate = $contentTypeService->newContentTypeUpdateStruct();
         $typeUpdate->remoteId = 'a3d405b81be900468eb153d774f4f0d2';
@@ -2559,7 +2559,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         /* BEGIN: Use Case */
         // $contentTypeDraft contains a ContentTypeDraft with identifier 'blog-post', belonging to the user with id=28
 
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $typeUpdate = $contentTypeService->newContentTypeUpdateStruct();
 
@@ -2580,7 +2580,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testDeleteContentType()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $commentType = $contentTypeService->loadContentTypeByIdentifier( 'comment' );
 
@@ -2610,7 +2610,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testDeleteContentTypeThrowsBadStateException()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $commentType = $contentTypeService->loadContentTypeByIdentifier( "folder" );
 
@@ -2629,12 +2629,12 @@ abstract class ContentTypeBase extends BaseServiceTest
      */
     public function testDeleteContentTypeThrowsUnauthorizedException()
     {
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $commentType = $contentTypeService->loadContentTypeByIdentifier( 'comment' );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentTypeService->deleteContentType( $commentType );
     }
@@ -2651,7 +2651,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         $time = time();
 
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $commentType = $contentTypeService->loadContentTypeByIdentifier( 'comment' );
 
@@ -2662,7 +2662,7 @@ abstract class ContentTypeBase extends BaseServiceTest
             'originalType' => $commentType,
             'copiedType' => $copiedCommentType,
             "time" => $time,
-            "userId" => $this->repository->getCurrentUser()->id
+            "userId" => self::$repository->getCurrentUser()->id
         );
     }
 
@@ -2679,8 +2679,8 @@ abstract class ContentTypeBase extends BaseServiceTest
 
         /* BEGIN: Use Case */
         $user = $this->getStubbedUser( 14 );
-        $this->repository->setCurrentUser( $user );
-        $contentTypeService = $this->repository->getContentTypeService();
+        self::$repository->setCurrentUser( $user );
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $commentType = $contentTypeService->loadContentTypeByIdentifier( "comment" );
 
@@ -2782,12 +2782,12 @@ abstract class ContentTypeBase extends BaseServiceTest
      */
     public function testCopyContentTypeThrowsUnauthorizedException()
     {
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $commentType = $contentTypeService->loadContentTypeByIdentifier( 'comment' );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentTypeService->copyContentType( $commentType );
     }
@@ -2805,7 +2805,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testAssignContentTypeGroup()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $mediaGroup = $contentTypeService->loadContentTypeGroupByIdentifier( 'Media' );
         $folderType = $contentTypeService->loadContentTypeByIdentifier( 'folder' );
@@ -2840,13 +2840,13 @@ abstract class ContentTypeBase extends BaseServiceTest
      */
     public function testAssignContentTypeGroupThrowsUnauthorizedException()
     {
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $mediaGroup = $contentTypeService->loadContentTypeGroupByIdentifier( 'Media' );
         $folderType = $contentTypeService->loadContentTypeByIdentifier( 'folder' );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentTypeService->assignContentTypeGroup( $folderType, $mediaGroup );
     }
@@ -2863,7 +2863,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testAssignContentTypeGroupThrowsInvalidArgumentException()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $folderType = $contentTypeService->loadContentTypeByIdentifier( 'folder' );
         $assignedGroups = $folderType->contentTypeGroups;
@@ -2890,7 +2890,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testUnassignContentTypeGroup()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $folderType = $contentTypeService->loadContentTypeByIdentifier( 'folder' );
 
@@ -2929,7 +2929,7 @@ abstract class ContentTypeBase extends BaseServiceTest
      */
     public function testUnassignContentTypeGroupThrowsUnauthorizedException()
     {
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $folderType = $contentTypeService->loadContentTypeByIdentifier( 'folder' );
 
@@ -2940,7 +2940,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         $contentTypeService->assignContentTypeGroup( $folderType, $mediaGroup );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentTypeService->unassignContentTypeGroup( $folderType, $contentGroup );
     }
@@ -2957,7 +2957,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testUnassignContentTypeGroupThrowsInvalidArgumentException()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $folderType = $contentTypeService->loadContentTypeByIdentifier( 'folder' );
         $notAssignedGroup = $contentTypeService->loadContentTypeGroupByIdentifier( 'Media' );
@@ -2979,7 +2979,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testUnassignContentTypeGroupThrowsBadStateException()
     {
         /* BEGIN: Use Case */
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $folderType = $contentTypeService->loadContentTypeByIdentifier( 'folder' );
         $assignedGroups = $folderType->contentTypeGroups;
@@ -3004,7 +3004,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testAddFieldDefinitionWithValidators()
     {
         $contentTypeDraft = $this->createDraftContentType();
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $fieldDefCreate = $contentTypeService->newFieldDefinitionCreateStruct(
             'tags', 'ezstring'
@@ -3056,7 +3056,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testAddFieldDefinitionWithSettings()
     {
         $contentTypeDraft = $this->createDraftContentType();
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $fieldDefCreate = $contentTypeService->newFieldDefinitionCreateStruct(
             'body2', 'ezxmltext'
@@ -3130,7 +3130,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         // $contentTypeDraft contains a ContentTypeDraft
         // $contentTypeDraft has a field "title"
 
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $fieldDefCreate = $contentTypeService->newFieldDefinitionCreateStruct(
             'title', 'string'
@@ -3152,7 +3152,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testAddFieldDefinitionThrowsUnauthorizedException()
     {
         $contentTypeDraft = $this->createDraftContentType();
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $fieldDefCreate = $contentTypeService->newFieldDefinitionCreateStruct( 'tags', 'ezstring' );
         $fieldDefCreate->names = array( 'eng-US' => 'Tags' );
@@ -3167,7 +3167,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         $fieldDefCreate->isSearchable = true;
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentTypeService->addFieldDefinition( $contentTypeDraft, $fieldDefCreate );
     }
@@ -3188,7 +3188,7 @@ abstract class ContentTypeBase extends BaseServiceTest
 
         /* BEGIN: Use Case */
         // $draftId contains the ID of a content type draft
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $contentTypeDraft = $contentTypeService->loadContentTypeDraft( $draftId );
 
@@ -3254,7 +3254,7 @@ abstract class ContentTypeBase extends BaseServiceTest
 
         /* BEGIN: Use Case */
         // $draftId contains the ID of a content type draft
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $contentTypeDraft = $contentTypeService->loadContentTypeDraft( $draftId );
 
@@ -3282,7 +3282,7 @@ abstract class ContentTypeBase extends BaseServiceTest
 
         /* BEGIN: Use Case */
         // $draftId and $secondDraftId contain the ids of a different content type drafts that both have "body" field
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $contentTypeDraft = $contentTypeService->loadContentTypeDraft( $draftId );
         $secondContentTypeDraft = $contentTypeService->loadContentTypeDraft( $secondDraftId );
@@ -3308,9 +3308,9 @@ abstract class ContentTypeBase extends BaseServiceTest
         $bodyField = $contentTypeDraft->getFieldDefinition( 'body' );
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
-        $this->repository->getContentTypeService()->removeFieldDefinition( $contentTypeDraft, $bodyField );
+        self::$repository->getContentTypeService()->removeFieldDefinition( $contentTypeDraft, $bodyField );
     }
 
     /**
@@ -3325,7 +3325,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testUpdateFieldDefinition()
     {
         $draftId = $this->createDraftContentType()->id;
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
         $contentTypeDraft = $contentTypeService->loadContentTypeDraft( $draftId );
         $fieldDefinition = $contentTypeDraft->getFieldDefinition( "body" );
 
@@ -3382,7 +3382,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testUpdateFieldDefinitionWithValidatorConfiguration()
     {
         $draftId = $this->createDraftContentType()->id;
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
         $contentTypeDraft = $contentTypeService->loadContentTypeDraft( $draftId );
         $fieldDefinition = $contentTypeDraft->getFieldDefinition( "title" );
 
@@ -3424,7 +3424,7 @@ abstract class ContentTypeBase extends BaseServiceTest
     public function testUpdateFieldDefinitionWithEmptyStruct()
     {
         $draftId = $this->createDraftContentType()->id;
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
         $contentTypeDraft = $contentTypeService->loadContentTypeDraft( $draftId );
         $fieldDefinition = $contentTypeDraft->getFieldDefinition( 'body' );
         $fieldDefinitionUpdateStruct = $contentTypeService->newFieldDefinitionUpdateStruct();
@@ -3527,7 +3527,7 @@ abstract class ContentTypeBase extends BaseServiceTest
 
         /* BEGIN: Use Case */
         // $draftId contains the ID of a content type draft
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $contentTypeDraft = $contentTypeService->loadContentTypeDraft( $draftId );
 
@@ -3556,7 +3556,7 @@ abstract class ContentTypeBase extends BaseServiceTest
      */
     public function testUpdateFieldDefinitionThrowsUnauthorizedException()
     {
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
         $contentTypeDraft = $this->createDraftContentType();
         $fieldDefinition = $contentTypeDraft->getFieldDefinition( "body" );
 
@@ -3564,7 +3564,7 @@ abstract class ContentTypeBase extends BaseServiceTest
         $fieldDefinitionUpdateStruct->identifier = $fieldDefinition->identifier . "changed";
 
         // Set anonymous as current user
-        $this->repository->setCurrentUser( $this->getStubbedUser( 10 ) );
+        self::$repository->setCurrentUser( $this->getStubbedUser( 10 ) );
 
         $contentTypeService->updateFieldDefinition(
             $contentTypeDraft,
@@ -3589,7 +3589,7 @@ abstract class ContentTypeBase extends BaseServiceTest
 
         /* BEGIN: Use Case */
         // $draftId contains the ID of a content type draft
-        $contentTypeService = $this->repository->getContentTypeService();
+        $contentTypeService = self::$repository->getContentTypeService();
 
         $contentTypeDraft = $contentTypeService->loadContentTypeDraft( $draftId );
 

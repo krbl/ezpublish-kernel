@@ -16,7 +16,7 @@ use eZ\Publish\Core\Repository\Tests\Service\Integration\RepositoryTest as BaseR
  */
 class RepositoryTest extends BaseRepositoryTest
 {
-    protected function getRepository()
+    protected static function getRepository()
     {
         return Utils::getRepository();
     }
